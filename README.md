@@ -1,154 +1,257 @@
-# JIBAS Face Server 16.5 — Alat Lisensi (OpenCode)
+# JIBAS Generator — Diagnostik Berkas Lokal
 
-> **Lokasi terpasang**: `C:\YIM\JIBAS-License-Tool-OpenCode` (kopi kerja juga ada di
-> `C:\Users\Laptop Kantor - ASUS\agent-enhancements\unified-integration\JIBAS-License-Tool-OpenCode`).
-> Penempatan ke `C:\Program Files\YIM` ditolak oleh sistem karena butuh izin
-> administrator (Access denied); `C:\YIM` dipilih karena aman ditulis, bebas
-> spasi di path, dan tetap di dalam pohon instalasi JIBAS.
+Repository Python dengan arsip penelitian JIBAS dan antarmuka desktop **JIBAS
+Diagnostics** untuk membaca berkas yang sudah tersedia. GUI saat ini hanya
+menyediakan inspeksi dan pemeriksaan lokal; hasilnya **bukan konfirmasi aktivasi
+atau keaslian dari penerbit JIBAS**.
 
-Tool ini membaca, memeriksa, membuat, dan memperpanjang berkas lisensi
-JIBAS Face Server 16.5, mendeteksi Database ID / System ID instalasi
-secara otomatis memakai cara yang persis seperti aplikasi asli, dan (baru)
-memperbaiki pesan uji coba **JIBAS Face & Fingerprint Client 16.10** dengan
-menulis cache `licenseface.enc` dari baris lisensi efektif Face Server.
+Kode historis yang melakukan mutasi masih ada di repository dan CLI lama.
+Audit ini tidak mengembangkan, memperbaiki, atau menguji jalur tersebut.
 
-Berdasarkan analisa biner `FaceServer.exe`
-(SHA-256 `8a123015b2ee095ceda51ece6d47436e9760c88be8f92fb76ed7c120c923c364`)
-dan `FaceFgrClient.exe`
-(SHA-256 `6f5369df…ba546`, Versi 16.10.0.0)
-dan pembuktian runtime terhadap instalasi asli di mesin ini — lihat
-`Analisis.md`, `bukti/`, dan `bukti/variable_audit.json` (pemetaan seluruh
-variabel lisensi). Perbandingan fitur dengan tool pendahulu
-`C:\Program Files\YIM\JIBAS-License-Tool-16.5` ada di `bukti/audit_lawas_vs_baru.json`.
+## Tujuan dan status
 
-## Komponen
+Membantu pengguna memahami apakah berkas dapat dibaca oleh codec lokal, melihat
+metadata yang disamarkan, serta memahami hasil dan batas pemeriksaan offline.
+Tidak diperlukan aplikasi JIBAS yang berjalan atau akses database untuk alur
+GUI, `inspect`, dan `verify` dengan ID eksplisit.
 
-| Berkas | Isi |
+Status: implementasi diagnostik lokal telah diuji pada Linux/Python 3.12/Tk 9.0.
+Kompatibilitas Windows, aplikasi proprietary, dan aktivasi penerbit belum diuji
+ulang dalam audit ini. Detail ada di [TEST_REPORT.md](TEST_REPORT.md).
+
+## Fitur
+
+- Empat tab: Ringkasan, Inspektor Berkas, Diagnostik Lokal, Aktivitas & Hasil.
+- Pemilihan berkas melalui dialog sistem atau input path.
+- Metadata terstruktur, ukuran byte, dan sidik SHA-256 dari byte yang diperiksa.
+- Status per pemeriksaan lokal, cache kosong, kegagalan baca, dan batas hasil.
+- Pembacaan maksimum 4 MiB; input folder/perangkat ditolak.
+- Worker latar, indikator proses, pencegahan klik ganda, dan status operasi.
+- Salin laporan JSON yang disamarkan; output dan aktivitas dapat di-scroll.
+- Pembatalan penjadwalan GUI saat ditutup; hasil lama dibersihkan saat input berubah.
+
+## Teknologi dan arsitektur
+
+Python, Tkinter/ttk bawaan Python, dan `cryptography` untuk codec yang sudah ada.
+`PyMySQL` tetap tercantum di requirements untuk utilitas historis; tidak dipakai
+oleh jalur diagnostik dengan ID eksplisit. `pytest` adalah dependency pengujian.
+Tidak ada framework GUI atau dependency runtime baru.
+
+```mermaid
+flowchart TD
+    GUI["app.py: Tkinter"] --> D["diagnostics.py: pembacaan terbatas"]
+    CLI["cli.py: inspect / verify"] --> D
+    D --> S["Salinan sementara privat"]
+    S --> C["license_codec.py: baca / periksa lokal"]
+    C --> P["Laporan yang disamarkan"]
+    P --> GUI
+    P --> CLI
+```
+
+GUI membaca nilai input pada main thread. Worker hanya menghitung dan mengirim
+hasil ke antrean. Main thread mengambil hasil dengan `after()` dan memperbarui
+widget. Sumber dibuka read-only; salinan sementara dihapus setelah pemeriksaan.
+Inspeksi dan verifikasi menggunakan byte salinan yang sama, termasuk jika sumber
+berubah setelah pembacaan selesai. Tidak ada penulisan ke instalasi JIBAS.
+
+## Struktur repository
+
+| Path | Peran |
 |---|---|
-| `license_codec.py` | Codec lisensi server + dukungan cache klien 16.10 (`inspect_client_cache`, `write_client_cache`, `fix_client_cache`) |
-| `id_detect.py` | `DbIdDetector` (resep splang asli `0x06000AC3`) dan `SystemIdDetector` (WMI + MD5 `0x0600059B`) |
-| `dbid_recipe.py` | Konstanta resep Database ID terbukti |
-| `cli.py` + `cli.cmd` | CLI |
-| `app.py` + `Jalankan GUI.cmd` | GUI tkinter (dengan deteksi otomatis) |
-| `search_db.py` | Util audit: cari teks Database ID di seluruh basis data JIBAS (baca-saja) |
-| `schema.xml`, `format_profile.json` | Skema DataTable & profil kripto terbukti |
-| `contoh/` | Lisensi contoh `V4YNE-7738F.lic` + penjelasan |
-| `tests/` | 39 test pytest (vektor metode tanggal asli, fixture importer asli, dan uji cache klien 16.10) |
-| `bukti/` | Hasil pembuktian runtime terhadap metode asli (termasuk `bukti/e2e/client/`) |
-| `riset/` | Harness pembuktian (C#) yang dipakai saat analisa; `riset/client16/` untuk FaceFgrClient 16.10 (oracle string VM, probe validator/loader, probe predikat DB, probe dekriptor kata sandi config) |
+| `app.py` | Entry point GUI diagnostik read-only |
+| `diagnostics.py` | Validasi input, snapshot terbatas, penyamaran, pesan error |
+| `cli.py`, `cli.cmd` | CLI; dokumentasi ini hanya mencakup `inspect` dan `verify` dengan ID eksplisit |
+| `license_codec.py` | Codec dan fungsi historis; tidak diubah dalam audit |
+| `id_detect.py`, `dbid_recipe.py`, `search_db.py` | Deteksi/pencarian historis; tidak dipanggil GUI baru |
+| `schema.xml`, `format_profile.json` | Data format lokal yang sudah ada; dibiarkan utuh |
+| `requirements.txt` | Dependency runtime |
+| `tests/fixtures/` | Fixture historis, tidak dibuat ulang |
+| `tests/test_diagnostics.py`, `tests/test_cli_diagnostics.py`, `tests/test_gui.py` | Regression test diagnostik |
+| `contoh/`, `bukti/`, `riset/`, `db/` | Arsip historis; bukan dependency startup GUI; mungkin memuat data sensitif |
+| `AGENT_GUIDE.md`, `Analisis.md`, `MANIFEST.json` | Batas kerja, status analisis, inventaris saat ini |
+| `AUDIT_REPORT.md`, `GUI_REVIEW.md`, `TEST_REPORT.md` | Temuan, perubahan visual, dan bukti uji sesi ini |
+| `report/gui/` | Screenshot sebelum/sesudah pada Linux |
 
-## Cara pakai
+## Kebutuhan
 
-### CLI
+- Python 3.10 atau lebih baru; yang benar-benar diuji: **3.12.14**.
+- Tkinter dan desktop/display aktif untuk GUI.
+- Dependency pada `requirements.txt`.
+- Salinan berkas yang memang berhak Anda periksa; maksimum 4 MiB.
+- Tidak membutuhkan hak administrator untuk diagnostik berkas yang dapat dibaca.
 
-```cmd
-cli.cmd detect                          :: deteksi Database ID + System ID
-cli.cmd inspect lisensi.enc             :: baca isi berkas
-cli.cmd verify lisensi.enc --auto       :: periksa terhadap ID hasil deteksi
-cli.cmd generate --database-id V4YNE --system-id 7738F ^
-     --expires 2027-12-31 --capacity 100 --out baru.enc
-cli.cmd generate --database-id V4YNE --system-id 7738F ^
-     --expires 2028-03-31 --capacity 200 --previous-license lisensi-aktif.enc ^
-     --out perpanjang.enc
-cli.cmd tulis-cache-client              :: FIX TRIAL klien 16.10 (lihat bawah)
-cli.cmd tulis-cache-client --dari "C:\Program Files\YIM\JIBAS Face Server 16.5\license.enc" ^
-     --tujuan "C:\Program Files\YIM\JIBAS Face & Fingerprint Client 16.10" --overwrite
+Cek Tkinter dengan `python -m tkinter`. Pada distribusi Linux, Tkinter mungkin
+perlu disediakan terpisah oleh paket Python sistem.
+
+## Instalasi
+
+Jalankan di root repository. Contoh Windows:
+
+```bat
+py -3 -m venv .venv
+.venv\Scripts\activate
+python -m pip install -r requirements.txt
 ```
 
-Detail format output tiap perintah berbentuk JSON.
+Contoh Linux:
 
-### GUI
-
-Jalankan `Jalankan GUI.cmd`. Isi ID (atau tekan tombol deteksi), tentukan
-masa berlaku + kapasitas + lokasi simpan, lalu klik **Buat Lisensi**.
-Untuk perpanjangan pilih berkas lisensi sebelumnya.
-
-## Format lisensi (terbukti)
-
-`license.enc` / berkas impor:
-
-```
-base64( AES-128-CBC( ASCII(XML NewDataSet/JibasSptFaceLicense, 18 kolom),
-                     key = MD5("3477K3b3rS4mA4N"),
-                     iv  = "YaRAhM4nY4R4h1M#" ) ) + "\r\n"
+```sh
+python3 -m venv .venv
+. .venv/bin/activate
+python -m pip install -r requirements.txt
 ```
 
-Kolom: Versi, KlienId, Klien, Tanggal, Model, Seri, Size, Sequence, KodeRs,
-KodeTx, DbId, LicenseLimit, LicenseLimitDate, MaxClient, Keterangan, Info1,
-Info2, Info3. Importer asli `0x060006CC` menyalin 17 kolom (kolom `Model`
-tidak ikut), memaksa DbId sama dengan ID saat runtime, dan untuk perpanjangan
-menyuruh Sequence naik serta KlienId sama.
+Untuk pengujian saja:
 
-## Peta resep Database ID
-
-```
-   jbssat.splang01 ──CALL──▶ @uha @uhb @uhc @uhd @uhe @uhf @uhg @uhh @uhi
-                              ─── payload hex ──▶ ASCII ──▶ ambil posisi ─┐
-   jbssat.splang02 ──────────────────────────────────── posisi  5  (@uhf)  │
-   jbssat.splang04 ──────────────────────────────────── posisi 14  (@uhh)  │
-   jbssat.splang09 ──────────────────────────────────── posisi 25  (@uhc)  ├─▶ GABUNG ─▶ UPPER ─▶ Database ID
-   jbssat.splang11 ──────────────────────────────────── posisi 37  (@uhe)  │
-   jbssat.splang01 ──────────────────────────────────── posisi 47  (@uhb)  ┘
+```sh
+python -m pip install pytest
 ```
 
-Sistem asli juga memverifikasi ke-12 prosedur `splang01..splang12` lewat
-`information_schema.ROUTINES` — jika kurang maka aplikasi menolak beralasan
-"Licensing system has been altered!".
+## Menjalankan GUI
 
-## System ID
-
-```
-serial = Win32_PhysicalMedia.SerialNumber (disk yang memuat C:\, spasi
-         di akhir di-trim oleh kode asli)
-uuid   = Win32_ComputerSystemProduct.UUID
-System ID = LOWER(MD5(serial + uuid))[5,17,30,24,3] lalu UPPER
+```sh
+python app.py
 ```
 
-`Info1` lisensi (disalin dari `Seri` pembuatnya) dibanding dengan nilai ini
-oleh predikat runtime `0x06000913`/`0x0600090D`:
-ID lama `DDCB4` pada instalasi ini **tidak** cocok (nilai asli `7738F`).
+Di Windows, jalankan `Jalankan GUI.cmd`. Launcher mengutamakan Python dari
+`.venv`, kemudian `py -3`, kemudian `python` di PATH. Tidak bergantung pada
+lokasi runtime mesin pembuat. Console tetap tersedia agar kegagalan startup
+dapat dibaca. Launcher Windows ditinjau statis, belum dijalankan di Windows.
 
-## Client 16.10 — perkara "Tidak dapat menyimpan presensi wajah karena status lisensi trial"
+## Alur GUI
 
-Akar masalah (dibuktikan runtime di salinan sandbox; biner tidak diubah):
+1. **Ringkasan:** panduan, versi Python/Tk, dan batas hasil.
+2. **Inspektor Berkas:** pilih sumber lalu tekan **Baca berkas**. Metadata dan
+   hash tampil dalam tabel. Cache tanpa baris diberi status tersendiri.
+3. **Diagnostik Lokal:** isi Database ID, System ID, serta Client ID opsional
+   dari sumber resmi; tekan **Periksa lokal**. Tidak ada deteksi database.
+4. **Aktivitas & Hasil:** baca pesan, log sesi, dan salin laporan yang disamarkan.
 
-- Validator cache FACE `0x06000AF7` mendekripsi `licenseface.enc` folder klien
-  dengan pasangan `3477K3b3rS4mA4N`/`YaRAhM4nY4R4h1M#` (holder `0x04000375/76`,
-  diisi pre-init dinamis `0x06000AF2`), membaca **baris base64 pertama** berkas
-  lewat `UnicodeEncoding.ASCII + ReadLine` lalu `DataTable.ReadXml`.
-- Skeleton bawaan **tanpa baris** → `rows == 0` → validator FALSE → holder mode
-  global `0x040004C7..D1` tetap bernilai default cctor (`TRIAL` semua).
-- Handler simpan `0x0600051E` (pesan VM `-121135179` = "Tidak dapat menyimpan
-  presensi wajah karena ") menolak penyimpanan ketika mode masih `TRIAL`.
-- `licensefgr.enc` (skema `JSL`, pasangan berbeda `3477K3b3rS4ma4N`/
-  `YaRahM@nY4R4h1M#`, validator `0x060008C0`) sah meski tanpa baris — tidak
-  memberi kontribusi pada pesan trial dan **tidak disentuh tool**.
+| Shortcut | Aksi |
+|---|---|
+| `Ctrl+O` | Pilih berkas |
+| `Ctrl+Enter` | Periksa lokal |
+| `Ctrl+Shift+C` | Salin laporan yang disamarkan |
+| `Tab` / `Shift+Tab` | Berpindah kontrol |
 
-Fix: `cli.cmd tulis-cache-client` menyalin **satu baris** dari lisensi efektif
-Face Server (`license.enc` terpasang, atau berkas pilihan `--dari`) ke
-`licenseface.enc`. Terbukti runtime: validator `0x06000AF7` → TRUE, mode
-`0x040004C7` terisi KlienId, Klien/DbId sesuai (bukti:
-`bukti/e2e/client/licenseface_fix_runtime.json`). Pengaman:
+Jendela awal 1040 × 740; ukuran minimum 760 × 600. Tabel dan output menyediakan
+scrollbar. Identitas tetap terlihat pada input yang Anda ketik sendiri; input
+tersebut tidak disertakan dalam hasil yang disalin atau log aktivitas.
 
-- folder target wajib memuat `FaceFgrClient.exe`;
-- cache lama pindah ke `licenseface.enc.bak-<stempel>` saat timpa;
-- `licensefgr.enc` dan `config.ini` selalu utuh;
-- byte hasil dibaca ulang dan dibandingkan kolom demi kolom sebelum selesai.
+![GUI diagnostik lokal](report/gui/overview.png)
 
-Predikat registrasi klien (`0x0600052D`) tetap memerlukan MySQL JIBAS
-(read-only: `SELECT NOW()` + hitung skema `jbsakad/jbssdm/jbssms`) — dibuktikan
-TRUE terhadap server basis data lokal; tidak ada mutasi basis data.
-Penghitung wajah (`jbssat.fcface` aktif) saat pengujian 0, jadi kuota tidak
-menghambat.
+## Apa arti hasil pemeriksaan?
 
-## Batasan
+| Hasil | Arti |
+|---|---|
+| `license_row` | Codec lokal dapat membaca baris data; belum menyatakan validitas/aktivasi |
+| `empty_cache` | Codec tidak menemukan baris lisensi; bukan lisensi aktif |
+| `checks_passed` | Semua pemeriksaan offline yang tersedia lulus pada input dan waktu tersebut |
+| `checks_failed` | Sedikitnya satu pemeriksaan offline tidak lulus |
+| Error diagnostik | Input tidak dapat diperiksa; lihat kode dan pesan tindakan |
 
-- crypto tidak menandatangani apa pun: importer asli hanya memeriksa DbId,
-  Sequence, dan KlienId.
-- Alat ini tidak mengubah biner, tidak menjalankan engine/UI server, dan
-  tidak menyentuh `license.enc` yang sedang dipakai instalasi asli.
-- `verify_license` mengikuti aturan asli untuk tahun yang habis bagiannya
-  (perbandingan menit _legacy_), jam pakai Asia/Jakarta, bukan dari DB.
-- `tulis-cache-client` tidak pernah menyentuh biner klien; pengaturan data
-  (`licenseface.enc`) saat dipakai ke folder klien sebelumnya dibuat
-  cadangan timestamped dan baris harus lolos verifikasi kolom.
+`activation_proven` selalu `false`. Jumlah wajah aktif, waktu database, kondisi
+server, penerimaan importer proprietary, dan entitlement penerbit tidak
+dibuktikan. Pemeriksaan memakai aturan codec historis tanpa mengubahnya.
+Mengganti nama/ekstensi berkas tidak membuktikan jenis atau penerimaan berkas.
+
+Laporan memuat metadata dalam format yang dikenali, check boolean, dan batasan.
+Nama klien, ID, path, teks bebas, serta nama kolom tak dikenal tidak diterbitkan.
+Laporan masih memuat hash, tanggal, dan angka metadata; tinjau sebelum dibagikan.
+
+## CLI read-only
+
+Dari root repo, gunakan fixture yang sudah tersedia:
+
+```sh
+python -m cli inspect tests/fixtures/original-empty.enc
+python -m cli inspect tests/fixtures/original-imported.enc
+python -m cli verify tests/fixtures/original-empty.enc --database-id ABCDE --system-id 123AB
+```
+
+ID pada contoh terakhir adalah **contoh sintetis**, bukan ID instalasi.
+Perintah terakhir mengembalikan kegagalan pemeriksaan karena cache kosong.
+`--client-id` opsional membandingkan ID dari sumber resmi yang Anda miliki.
+Di Windows, `cli.cmd inspect FILE` juga tersedia. Launcher CLI mempertahankan
+working directory pemanggil sehingga path relatif tetap mengacu pada lokasi itu.
+
+| Exit code | `inspect` / `verify` |
+|---|---|
+| `0` | Pembacaan berhasil / semua pemeriksaan lokal lulus |
+| `1` | Berkas dapat diperiksa tetapi pemeriksaan lokal tidak lulus |
+| `2` | Input salah atau operasi diagnostik gagal |
+
+Output sukses dan hasil cek ada di stdout sebagai `ok`/`results`; error operasi
+ada di stderr sebagai `ok: false`, `error`, dan bila tersedia `error_code`.
+Kesalahan sintaks argparse tetap memakai help/teks standar argparse.
+
+Perubahan kompatibilitas: `inspect`/`verify` sekarang menyamarkan hasil; `path`
+tidak diterbitkan dan `detail` tidak lagi mengandung nilai ID. Konsumen JSON
+lama yang bergantung pada nilai mentah perlu disesuaikan. Command mutasi dan
+deteksi historis masih ada di CLI, tetapi berada di luar alur read-only ini;
+opsi deteksi otomatis tidak dibahas atau dijalankan dalam audit.
+
+## Konfigurasi
+
+GUI tidak memerlukan credential atau konfigurasi database. `schema.xml` dan
+`format_profile.json` adalah berkas runtime historis yang harus tersedia di
+samping codec. Jangan memodifikasinya untuk mengatasi kegagalan pemeriksaan.
+`MANIFEST.json` adalah inventaris dokumenter, bukan input runtime.
+
+`bukti/manifest_sha256.json` adalah snapshot historis; hash file yang diedit
+secara sah dalam audit akan berbeda. Arsip tersebut sengaja tidak ditulis ulang.
+
+## Error handling dan troubleshooting
+
+| Gejala/kode | Tindakan |
+|---|---|
+| `missing_path`, `not_found` | Pilih kembali salinan berkas yang tersedia |
+| `permission`, `read_failed` | Periksa izin akses dan lokasi, tanpa menimpa sumber |
+| `not_regular`, `too_large`, `empty_file` | Gunakan berkas biasa, lengkap, maksimum 4 MiB |
+| `unreadable_format`, `unsupported_structure` | Pastikan jenis berkas dan kelengkapannya; minta salinan resmi bila perlu |
+| `format_config` | Pastikan profil lokal repo tersedia dan tidak rusak |
+| Error ID | Database ID: 5 huruf/angka ASCII; System ID: 5 karakter heksadesimal |
+| `unexpected` | Periksa instalasi dan ulangi; detail exception internal disembunyikan |
+| Tkinter/display tidak tersedia | Cek instalasi Tk dan jalankan GUI pada sesi desktop |
+| Tidak ada kolom setelah input berubah | Hasil lama dibersihkan; jalankan ulang pemeriksaan |
+
+Pesan aplikasi target **“File terpilih bukan lisensi JIBAS Presensi Wajah”**
+belum dapat direproduksi persis: berkas pemicu dan binary target tidak tersedia
+dalam checkout. Jangan menyimpulkan bahwa berkas yang terbaca offline pasti
+akan diterima target. Investigasi dan batas bukti ada di
+[AUDIT_REPORT.md](AUDIT_REPORT.md#investigasi-bug-yang-dilaporkan).
+
+## Pengujian
+
+```sh
+python -m pytest -q tests/test_diagnostics.py tests/test_cli_diagnostics.py tests/test_gui.py
+```
+
+Tes GUI membutuhkan display; jika tidak tersedia, pytest menandainya **skip**.
+Audit ini menjalankan semuanya dengan display virtual, ditambah tiga tes baca
+fixture historis: **36 passed**, tidak ada skip. Lihat perintah dan environment
+rinci pada [TEST_REPORT.md](TEST_REPORT.md).
+
+Jangan memakai `pytest tests` sebagai pemeriksaan read-only: sejumlah tes lama
+memanggil jalur pembuatan lisensi/penulisan cache. Tes tersebut dipertahankan,
+namun tidak dijalankan dalam pekerjaan ini.
+
+## Keamanan dan batasan yang diketahui
+
+- Dokumentasi utama tidak memuat credential atau key. Arsip riset, fixture,
+  source historis, profil, dan dump SQL masih perlu penanganan sebagai data sensitif.
+- Audit tidak mengakses database/instalasi produksi atau menjalankan harness C#.
+- Dump `db/` berisi perintah restore destruktif dan data akun; jangan diimpor
+  ke produksi. Klaim lama bahwa dump pasti tidak sensitif telah ditarik.
+- Penyamaran GUI tidak mencakup source/arsip lama atau output command historis
+  di luar `inspect`/`verify`.
+- Perilaku parser dan aturan validasi codec tetap memiliki keterbatasan historis;
+  hasil offline bukan pembuktian keaslian, penerimaan impor, atau hak penggunaan.
+- Belum ada pembuktian Windows, DPI tinggi, screen reader, atau semua resolusi.
+
+## Lisensi dan pemberitahuan
+
+Tidak ditemukan berkas `LICENSE` pada baseline repository. Tidak ada klaim
+lisensi open-source atau hak redistribusi komponen JIBAS dalam audit ini.
+Hak atas software proprietary dan materi pihak ketiga tetap mengikuti ketentuan
+pemiliknya. Gunakan hanya data dan berkas yang Anda berhak periksa.

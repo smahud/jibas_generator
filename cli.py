@@ -1,12 +1,8 @@
 """Command-line interface for the JIBAS Face Server 16.5 license tool (OpenCode rebuild).
 
-Commands:
-  default    Detection readout of Database ID and System ID
-  inspect    Read the contents of a license file
-  verify     Check the license against the installation ID (can be detected automatically)
-  generate   Create a new license file or an extension
-  tulis-cache-client  Fix the client 16.10 trial notice: write licenseface.enc
-                      from the effective Face Server license row.
+inspect and verify use bounded reads and redacted diagnostic reports.
+Historical mutation and installation-detection commands remain unchanged and
+are outside the read-only desktop audit. No subcommand is selected by default.
 """
 from __future__ import annotations
 
@@ -18,6 +14,7 @@ import sys
 
 import id_detect
 import license_codec
+import diagnostics
 
 
 def positive_int(value: str) -> int:
@@ -161,7 +158,7 @@ def main(argv: list[str] | None = None) -> int:
         if args.command == "detect":
             run_detect(args, outcomes)
         elif args.command == "inspect":
-            outcomes.append(license_codec.inspect_license(args.file))
+            outcomes.append(diagnostics.inspect_file(args.file))
         elif args.command == "verify":
             database_id = (args.database_id or "").strip()
             system_id = (args.system_id or "").strip()
@@ -173,11 +170,9 @@ def main(argv: list[str] | None = None) -> int:
                 if not system_id:
                     system_id = id_detect.SystemIdDetector().detect()[0]
                     auto_used = True
-            if not database_id or not system_id:
-                raise SystemExit(2)
-            verify_result = license_codec.verify_license(
+            verify_result = diagnostics.verify_file(
                 args.file, database_id, system_id,
-                client_id=(args.client_id or "").strip() or None)
+                client_id=(args.client_id or "").strip())
             outcomes.append(verify_result)
             if auto_used:
                 outcomes.append({"auto_detection": True})
@@ -197,7 +192,17 @@ def main(argv: list[str] | None = None) -> int:
         if isinstance(exc.code, str):
             raise
         return 1 if exc.code is None else exc.code
+    except diagnostics.DiagnosticError as exc:
+        print(json.dumps({"ok": False, "error": str(exc), "error_code": exc.code},
+                         ensure_ascii=False), file=sys.stderr)
+        return 2
     except (OSError, ValueError) as exc:
+        if args.command in ("inspect", "verify"):
+            exc = diagnostics.DiagnosticError("unexpected")
         print(json.dumps({"ok": False, "error": str(exc)}, ensure_ascii=False),
               file=sys.stderr)
         return 2
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())

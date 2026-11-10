@@ -1,11 +1,18 @@
 @echo off
-setlocal
-rem NOTE: this python runtime silently refuses to run a quoted script path
-rem that contains spaces, so the tool is loaded as a module via -c instead.
-set "JIBAS_TOOL_PY=%USERPROFILE%\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\pythonw.exe"
-if exist "%JIBAS_TOOL_PY%" goto local_python
-start "" pyw -3 -c "import sys; sys.path.insert(0, r'%~dp0.'); import app; app.main()"
-exit /b 0
-:local_python
-start "" "%JIBAS_TOOL_PY%" -c "import sys; sys.path.insert(0, r'%~dp0.'); import app; app.main()"
-exit /b 0
+setlocal DisableDelayedExpansion
+pushd "%~dp0" || exit /b 2
+if exist ".venv\Scripts\python.exe" goto venv_python
+where py >nul 2>nul
+if not errorlevel 1 goto launcher_python
+python -m app
+goto done
+:venv_python
+".venv\Scripts\python.exe" -m app
+goto done
+:launcher_python
+py -3 -m app
+:done
+set "JIBAS_TOOL_EXIT=%errorlevel%"
+popd
+if not "%JIBAS_TOOL_EXIT%"=="0" pause
+exit /b %JIBAS_TOOL_EXIT%

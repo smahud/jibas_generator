@@ -1,314 +1,364 @@
-"""Windows desktop interface for the JIBAS Face Server 16.5 license tool.
+"""Read-only Tkinter diagnostics. Run with python app.py.
 
-Same layout as the proven 16.5-era tool, extended with automatic
-Database ID / System ID detection (jbssat splang recipe + WMI) and an
-overwrite switch. Runs the same engine as cli.py (license_codec, id_detect).
-Launch with "Jalankan GUI.cmd".
-
-Compact variant: identical features, tighter geometry (two field columns,
-row-height trimmed, tooltips carry the formerly inline hints).
+Workers only queue plain data. All Tk work, including after() scheduling, runs
+on the main thread. The legacy codec and verification rules are unchanged.
 """
 from __future__ import annotations
 
-from datetime import date, datetime, timedelta
+from datetime import datetime
 import json
-from pathlib import Path
+import platform
+import queue
+import sys
 import threading
 import tkinter as tk
-from tkinter import filedialog, messagebox, ttk
+from tkinter import filedialog, font, ttk
 
-import id_detect
-import license_codec
+import diagnostics
+
+STATUS_TEXT = {
+    "license_row": "Baris lisensi terbaca",
+    "empty_cache": "Cache kosong; tidak ada baris lisensi",
+    "checks_passed": "Pemeriksaan lokal lulus",
+    "checks_failed": "Pemeriksaan lokal belum lulus",
+}
 
 
-class _Tooltip:
-    """Show extra hint text near a widget while it is hovered."""
-
-    def __init__(self, widget: tk.Widget, text: str) -> None:
-        self.widget = widget
-        self.text = text
-        self.tip: tk.Toplevel | None = None
-        widget.bind("<Enter>", self._show, add="+")
-        widget.bind("<Leave>", self._hide, add="+")
-        widget.bind("<ButtonPress>", self._hide, add="+")
-
-    def _show(self, _event=None) -> None:
-        if self.tip is not None:
-            return
-        x = self.widget.winfo_rootx() + 10
-        y = self.widget.winfo_rooty() + self.widget.winfo_height() + 4
-        self.tip = tk.Toplevel(self.widget)
-        self.tip.wm_overrideredirect(True)
-        self.tip.wm_geometry(f"+{x}+{y}")
-        tk.Label(self.tip, text=self.text, justify="left",
-                 background="#fffbe6", foreground="#183153", relief="solid",
-                 borderwidth=1, font=("Segoe UI", 8), padx=7, pady=3).pack()
-
-    def _hide(self, _event=None) -> None:
-        if self.tip is not None:
-            self.tip.destroy()
-            self.tip = None
+def _work(action: str, values: dict[str, str], results: queue.Queue) -> None:
+    """No widgets, Tk variables, after(), raw exceptions, or logging here."""
+    try:
+        result = (diagnostics.inspect_file(values["file"]) if action == "inspect" else
+                  diagnostics.verify_file(values["file"], values["database_id"],
+                                          values["system_id"], values["client_id"]))
+        results.put({"ok": True, "result": result})
+    except diagnostics.DiagnosticError as exc:
+        results.put({"ok": False, "error": {"code": exc.code, "message": str(exc)}})
+    except Exception:
+        results.put({"ok": False, "error": {"code": "unexpected", "message": diagnostics.ERROR_MESSAGES["unexpected"]}})
 
 
 class LicenseApp(ttk.Frame):
+    """Keep the historical class name for existing launchers."""
+
     def __init__(self, window: tk.Tk) -> None:
-        super().__init__(window, padding=12)
+        super().__init__(window, padding=20)
         self.window = window
-        window.title("JIBAS Face Server 16.5 — Perangkat Lisensi (OpenCode)")
-        window.geometry("760x600")
-        window.minsize(660, 540)
-        window.configure(background="#f4f6fa")
+        self.busy = False
+        self.closed = False
+        self.last_result: dict | None = None
+        self._poll_id: str | None = None
+        self._results: queue.Queue = queue.Queue(maxsize=1)
+        self._active_values: dict[str, str] = {}
+        self.inputs = {name: tk.StringVar() for name in
+                       ("file", "database_id", "system_id", "client_id")}
+        self.status = tk.StringVar(value="Siap. Pilih berkas untuk mulai memeriksa.")
+        self.summary = tk.StringVar(value="Belum ada pemeriksaan")
+        self.metadata = tk.StringVar(value="Ukuran dan sidik SHA-256 akan tampil setelah berkas dibaca.")
+        window.title("JIBAS Diagnostics | Pemeriksaan lokal")
+        window.geometry("1040x740")
+        window.minsize(760, 600)
+        self._style()
         self.pack(fill="both", expand=True)
-        self.columnconfigure(1, weight=1)
-        self.columnconfigure(3, weight=1)
-        self.inputs = {
-            key: tk.StringVar() for key in
-            ("database_id", "system_id", "client_id", "client_name", "capacity",
-             "file", "previous_license", "sequence")
-        }
-        self.inputs["expires"] = tk.StringVar(
-            value=(date.today() + timedelta(days=365)).isoformat()
-        )
-        self.overwrite = tk.BooleanVar(value=False)
-        self.status = tk.StringVar(
-            value="Siap. Tombol deteksi mengisi Database ID dari MySQL jbssat "
-                  "dan System ID dari WMI, persis seperti aplikasi asli.")
-        style = ttk.Style(window)
-        style.theme_use("clam")
-        style.configure("TFrame", background="#f4f6fa")
-        style.configure("TLabel", background="#f4f6fa", font=("Segoe UI", 9))
-        style.configure("Title.TLabel", font=("Segoe UI", 15, "bold"), foreground="#183153")
-        style.configure("Hint.TLabel", foreground="#637085", font=("Segoe UI", 8))
-        style.configure("TEntry", padding=4, font=("Segoe UI", 9))
-        style.configure("TButton", padding=(8, 4), font=("Segoe UI", 9))
-        style.configure("Accent.TButton", foreground="white", background="#2463b4")
-        style.map("Accent.TButton", background=[("active", "#194e91")])
-        ttk.Label(self, text="Perangkat Lisensi", style="Title.TLabel").grid(
-            row=0, column=0, columnspan=2, sticky="w"
-        )
-        ttk.Label(self, text="JIBAS Face Server 16.5", style="Hint.TLabel").grid(
-            row=0, column=2, columnspan=2, sticky="e"
-        )
-        self._field(1, 0, "Database ID", "database_id", "Contoh: V4YNE")
-        self._field(1, 2, "System ID", "system_id", "Contoh: 7738F (bukan DDCB4)")
-        self._field(2, 0, "Client ID", "client_id", "Opsional; untuk perpanjangan")
-        self._field(2, 2, "Nama klien", "client_name", "Opsional")
-        self._field(3, 0, "Berlaku sampai", "expires", "Format YYYY-MM-DD")
-        self._field(3, 2, "Kapasitas wajah", "capacity", "Bilangan bulat > 0")
-        self._field(4, 0, "Sequence", "sequence", "Opsional; otomatis naik untuk perpanjangan")
-        ttk.Label(self, text="(mengosongkan = 1)", style="Hint.TLabel").grid(
-            row=4, column=2, columnspan=2, sticky="w", padx=(8, 0)
-        )
-        detect_row = ttk.Frame(self)
-        detect_row.grid(row=5, column=0, columnspan=4, sticky="w", pady=(4, 2))
-        db_button = ttk.Button(detect_row, text="Deteksi Database ID",
-                               command=self._detect_db)
-        db_button.grid(row=0, column=0, padx=(0, 6))
-        sys_button = ttk.Button(detect_row, text="Deteksi System ID",
-                                command=self._detect_sys)
-        sys_button.grid(row=0, column=1, padx=(0, 6))
-        ttk.Label(detect_row, text="Resep splang asli (0x06000AC3) + WMI (0x0600059B).",
-                  style="Hint.TLabel").grid(row=0, column=2, sticky="w")
-        _Tooltip(db_button, "Deteksi Database ID dari MySQL jbssat "
-                            "memakai resep prosedur splang asli (0x06000AC3); "
-                            "hasil mengisi kolom Database ID.")
-        _Tooltip(sys_button, "Deteksi System ID dari WMI (0x0600059B): "
-                             "serial fisik disk + UUID, persis prosedur asli.")
-        self._browse_row(6, "Lisensi lama", "previous_license",
-                         "Pilih untuk perpanjangan…", previous=True,
-                         hint="Berkas lisensi sebelumnya untuk perpanjangan; "
-                              "Client ID dan Sequence otomatis diambil dari "
-                              "berkas ini.")
-        ttk.Separator(self).grid(row=7, column=0, columnspan=4, sticky="ew", pady=(6, 6))
-        self._browse_row(8, "Berkas lisensi", "file",
-                         "Pilih…", previous=False,
-                         hint="Berkas yang dibaca/diperiksa; berisi juga "
-                              "lokasi simpan hasil Buat & simpan.")
-        output_frame = ttk.Frame(self)
-        output_frame.grid(row=9, column=0, columnspan=4, sticky="nsew", pady=(4, 4))
-        output_frame.columnconfigure(0, weight=1)
-        output_frame.rowconfigure(1, weight=1)
-        ttk.Label(output_frame, text="Hasil", style="Hint.TLabel").grid(
-            row=0, column=0, sticky="w")
-        self.output = tk.Text(
-            output_frame, wrap="word", height=6, state="disabled",
-            background="white", foreground="#22324b", relief="solid",
-            borderwidth=1, font=("Consolas", 9), padx=10, pady=8,
-        )
-        self.output.grid(row=1, column=0, sticky="nsew", pady=(3, 0))
-        scrollbar = ttk.Scrollbar(output_frame, orient="vertical", command=self.output.yview)
-        scrollbar.grid(row=1, column=1, sticky="ns", pady=(3, 0))
-        self.output.configure(yscrollcommand=scrollbar.set)
-        actions = ttk.Frame(self)
-        actions.grid(row=10, column=0, columnspan=4, sticky="ew")
-        actions.columnconfigure(2, weight=1)
-        ttk.Button(actions, text="Baca isi", command=lambda: self.run_action("inspect")).grid(
-            row=0, column=0, padx=(0, 6)
-        )
-        ttk.Button(actions, text="Periksa", command=lambda: self.run_action("verify")).grid(
-            row=0, column=1
-        )
-        ttk.Checkbutton(actions, text="Timpa berkas keluaran",
-                        variable=self.overwrite).grid(row=0, column=2, sticky="w", padx=(6, 6))
-        ttk.Button(actions, text="Buat & simpan…", style="Accent.TButton",
-                   command=lambda: self.run_action("generate")).grid(row=0, column=3)
-        ttk.Label(self, textvariable=self.status, style="Hint.TLabel",
-                  wraplength=720).grid(row=11, column=0, columnspan=4, sticky="w", pady=(8, 0))
-        self.rowconfigure(9, weight=1)
-        window.bind("<Control-o>", lambda event: self.choose_file())
+        self.columnconfigure(0, weight=1)
+        self.rowconfigure(2, weight=1)
+        header = ttk.Frame(self)
+        header.grid(row=0, column=0, sticky="ew", pady=(0, 16))
+        header.columnconfigure(0, weight=1)
+        ttk.Label(header, text="JIBAS Diagnostics", style="Title.TLabel").grid(row=0, column=0, sticky="w")
+        ttk.Label(header, text="PEMERIKSAAN LOKAL", style="Badge.TLabel").grid(row=0, column=1, sticky="e")
+        ttk.Label(header, text="Baca berkas, pahami hasil, dan periksa batasannya.",
+                  style="Muted.TLabel").grid(row=1, column=0, columnspan=2, sticky="w", pady=(4, 0))
+        self._file_bar()
+        self.tabs = ttk.Notebook(self)
+        self.tabs.grid(row=2, column=0, sticky="nsew", pady=(16, 12))
+        self.overview = self._page("Ringkasan")
+        self.inspector = self._page("Inspektor Berkas")
+        self.verification = self._page("Diagnostik Lokal")
+        self.activity_page = self._page("Aktivitas & Hasil")
+        self._overview_page()
+        self._inspector_page()
+        self._verification_page()
+        self._activity_page()
+        footer = ttk.Frame(self)
+        footer.grid(row=3, column=0, sticky="ew")
+        footer.columnconfigure(0, weight=1)
+        self.status_label = ttk.Label(footer, textvariable=self.status, style="Muted.TLabel", wraplength=700)
+        self.status_label.grid(row=0, column=0, sticky="w", padx=(0, 12))
+        self.progress = ttk.Progressbar(footer, mode="indeterminate", length=100)
+        self.progress.grid(row=0, column=1, sticky="e")
+        for variable in self.inputs.values():
+            variable.trace_add("write", self._input_changed)
+        window.bind("<Control-o>", lambda _event: self.choose_file())
+        window.bind("<Control-Return>", lambda _event: self.run_action("verify"))
+        window.bind("<Control-Shift-C>", lambda _event: self.copy_result())
+        window.bind("<Configure>", self._resize, add="+")
+        window.protocol("WM_DELETE_WINDOW", self.close)
+        self._sync_buttons()
+        self._log("Aplikasi siap; belum ada sumber data yang dibaca.")
+        self.file_entry.focus_set()
 
-    def _field(self, row: int, column: int, label: str, key: str, hint: str) -> None:
-        ttk.Label(self, text=label, width=13, anchor="w").grid(
-            row=row, column=column, sticky="w", pady=2
-        )
-        entry = ttk.Entry(self, textvariable=self.inputs[key])
-        entry.grid(row=row, column=column + 1, sticky="ew", padx=(0, 10), pady=2)
-        _Tooltip(entry, hint)
+    def _style(self) -> None:
+        families = set(font.families(self.window))
+        family = next((name for name in ("Segoe UI", "DejaVu Sans", "Liberation Sans")
+                       if name in families), font.nametofont("TkDefaultFont").actual("family"))
+        font.nametofont("TkDefaultFont").configure(family=family, size=10)
+        font.nametofont("TkTextFont").configure(family=family, size=10)
+        style = ttk.Style(self.window)
+        if "clam" in style.theme_names():
+            style.theme_use("clam")
+        self.window.configure(background="#f3f6fb")
+        style.configure(".", font=(family, 10))
+        style.configure("TFrame", background="#f3f6fb")
+        style.configure("TLabel", background="#f3f6fb", foreground="#182c46")
+        style.configure("Title.TLabel", font=(family, 22, "bold"))
+        style.configure("Heading.TLabel", font=(family, 14, "bold"))
+        style.configure("Muted.TLabel", foreground="#53657b")
+        style.configure("Badge.TLabel", foreground="#165a65", background="#dceff0", padding=(12, 6))
+        style.configure("TButton", padding=(12, 8))
+        style.configure("Accent.TButton", background="#215caa", foreground="#ffffff")
+        style.map("Accent.TButton", background=[("disabled", "#b1bdce"), ("active", "#174780")])
+        style.configure("TEntry", padding=7)
+        style.configure("TNotebook", background="#f3f6fb", borderwidth=0)
+        style.configure("TNotebook.Tab", padding=(12, 9))
+        style.map("TNotebook.Tab", background=[("selected", "#ffffff")])
+        style.configure("Treeview", rowheight=30, background="#ffffff", fieldbackground="#ffffff")
+        style.configure("Treeview.Heading", font=(family, 10, "bold"), padding=7)
 
-    def _browse_row(self, row: int, label: str, key: str, button_text: str,
-                    previous: bool, hint: str = "") -> None:
-        ttk.Label(self, text=label, width=13, anchor="w").grid(
-            row=row, column=0, sticky="w", pady=2
-        )
-        entry = ttk.Entry(self, textvariable=self.inputs[key])
-        entry.grid(row=row, column=1, columnspan=2, sticky="ew", padx=(0, 6), pady=2)
-        if hint:
-            _Tooltip(entry, hint)
-        ttk.Button(self, text=button_text,
-                   command=lambda: self.choose_file(previous=previous)).grid(
-            row=row, column=3, sticky="w"
-        )
+    def _file_bar(self) -> None:
+        bar = ttk.Frame(self)
+        bar.grid(row=1, column=0, sticky="ew")
+        bar.columnconfigure(0, weight=1)
+        ttk.Label(bar, text="Berkas sumber (.lic / .enc)").grid(row=0, column=0, columnspan=3, sticky="w", pady=(0, 6))
+        self.file_entry = ttk.Entry(bar, textvariable=self.inputs["file"])
+        self.file_entry.grid(row=1, column=0, sticky="ew", padx=(0, 8))
+        self.browse_button = ttk.Button(bar, text="Pilih berkas", command=self.choose_file)
+        self.browse_button.grid(row=1, column=1, padx=(0, 8))
+        self.inspect_button = ttk.Button(bar, text="Baca berkas", style="Accent.TButton",
+                                         command=lambda: self.run_action("inspect"))
+        self.inspect_button.grid(row=1, column=2)
 
-    def choose_file(self, previous: bool = False) -> None:
-        path = filedialog.askopenfilename(
-            parent=self.window,
-            title="Pilih lisensi sebelumnya" if previous else "Pilih berkas lisensi",
-            filetypes=[("Berkas lisensi", "*.lic *.enc"),
-                       ("Lisensi impor", "*.lic"), ("Cache lisensi", "*.enc"),
-                       ("Semua berkas", "*.*")],
-        )
+    def _page(self, title: str) -> ttk.Frame:
+        page = ttk.Frame(self.tabs, padding=18)
+        page.columnconfigure(0, weight=1)
+        self.tabs.add(page, text=title)
+        return page
+
+    def _overview_page(self) -> None:
+        ttk.Label(self.overview, text="Diagnostik berkas, tanpa mengubah sumber", style="Heading.TLabel").grid(row=0, column=0, sticky="w")
+        self.overview_body = ttk.Label(self.overview, justify="left", wraplength=880, text=(
+            "1. Pilih salinan berkas yang sudah tersedia, lalu tekan Baca berkas.\n\n"
+            "2. Lihat metadata pada Inspektor Berkas. Identitas dan teks bebas disembunyikan.\n\n"
+            "3. Untuk pemeriksaan lokal, isi ID dari sumber resmi pada tab Diagnostik Lokal.\n\n"
+            "4. Salin laporan yang sudah disamarkan dari Aktivitas & Hasil."))
+        self.overview_body.grid(row=1, column=0, sticky="nw", pady=(18, 20))
+        ttk.Separator(self.overview).grid(row=2, column=0, sticky="ew")
+        self.overview_note = ttk.Label(self.overview, text=diagnostics.LIMITATIONS[0],
+                                       style="Muted.TLabel", wraplength=880)
+        self.overview_note.grid(row=3, column=0, sticky="w", pady=(16, 12))
+        ttk.Label(self.overview, text=f"Python {sys.version_info.major}.{sys.version_info.minor}  |  "
+                  f"Tk {tk.TkVersion}  |  {platform.system()}", style="Muted.TLabel").grid(row=4, column=0, sticky="w")
+
+    def _tree(self, page: ttk.Frame, columns: tuple[str, ...], headings: tuple[str, ...], row: int) -> ttk.Treeview:
+        holder = ttk.Frame(page)
+        holder.grid(row=row, column=0, sticky="nsew", pady=(12, 0))
+        holder.columnconfigure(0, weight=1)
+        holder.rowconfigure(0, weight=1)
+        page.rowconfigure(row, weight=1)
+        tree = ttk.Treeview(holder, columns=columns, show="headings", height=6)
+        for column, heading in zip(columns, headings):
+            tree.heading(column, text=heading)
+            tree.column(column, width=240, minwidth=100, stretch=True)
+        tree.grid(row=0, column=0, sticky="nsew")
+        vertical = ttk.Scrollbar(holder, orient="vertical", command=tree.yview)
+        vertical.grid(row=0, column=1, sticky="ns")
+        horizontal = ttk.Scrollbar(holder, orient="horizontal", command=tree.xview)
+        horizontal.grid(row=1, column=0, sticky="ew")
+        tree.configure(yscrollcommand=vertical.set, xscrollcommand=horizontal.set)
+        return tree
+
+    def _inspector_page(self) -> None:
+        ttk.Label(self.inspector, textvariable=self.summary, style="Heading.TLabel").grid(row=0, column=0, sticky="w")
+        self.metadata_label = ttk.Label(self.inspector, textvariable=self.metadata, style="Muted.TLabel", wraplength=880)
+        self.metadata_label.grid(row=1, column=0, sticky="w", pady=(8, 0))
+        self.fields = self._tree(self.inspector, ("field", "value"), ("Kolom", "Nilai yang dapat ditampilkan"), 2)
+
+    def _verification_page(self) -> None:
+        form = ttk.Frame(self.verification)
+        form.grid(row=0, column=0, sticky="ew")
+        for column in range(3):
+            form.columnconfigure(column, weight=1)
+        self.id_entries = []
+        for column, (key, label) in enumerate((("database_id", "Database ID"), ("system_id", "System ID"),
+                                               ("client_id", "Client ID (opsional)"))):
+            ttk.Label(form, text=label).grid(row=0, column=column, sticky="w")
+            entry = ttk.Entry(form, textvariable=self.inputs[key], width=12)
+            entry.grid(row=1, column=column, sticky="ew", padx=(0, 8) if column < 2 else 0, pady=(6, 0))
+            self.id_entries.append(entry)
+        actions = ttk.Frame(self.verification)
+        actions.grid(row=1, column=0, sticky="ew", pady=(12, 0))
+        actions.columnconfigure(0, weight=1)
+        self.verify_hint = ttk.Label(actions, text="Gunakan ID dari sumber resmi; tidak ada deteksi basis data.",
+                                     style="Muted.TLabel", wraplength=600)
+        self.verify_hint.grid(row=0, column=0, sticky="w", padx=(0, 8))
+        self.verify_button = ttk.Button(actions, text="Periksa lokal", command=lambda: self.run_action("verify"))
+        self.verify_button.grid(row=0, column=1, sticky="e")
+        self.checks = self._tree(self.verification, ("check", "status"), ("Pemeriksaan", "Status"), 2)
+        self.checks.column("check", width=500)
+        self.checks.column("status", width=130)
+        self.checks.tag_configure("passed", foreground="#17633f")
+        self.checks.tag_configure("failed", foreground="#a22b30")
+        self.limitations_label = ttk.Label(self.verification, text="\n".join(diagnostics.LIMITATIONS[:4]),
+                                            style="Muted.TLabel", wraplength=880, justify="left")
+        self.limitations_label.grid(row=3, column=0, sticky="w", pady=(12, 0))
+
+    def _activity_page(self) -> None:
+        bar = ttk.Frame(self.activity_page)
+        bar.grid(row=0, column=0, sticky="ew")
+        bar.columnconfigure(0, weight=1)
+        ttk.Label(bar, text="Laporan yang disamarkan", style="Heading.TLabel").grid(row=0, column=0, sticky="w")
+        self.copy_button = ttk.Button(bar, text="Salin hasil", command=self.copy_result)
+        self.copy_button.grid(row=0, column=1, padx=(8, 0))
+        self.activity_page.rowconfigure(1, weight=1)
+        self.output = self._text(self.activity_page, 1, 7)
+        ttk.Label(self.activity_page, text="Aktivitas sesi", style="Muted.TLabel").grid(row=2, column=0, sticky="w", pady=(12, 0))
+        self.activity = self._text(self.activity_page, 3, 3)
+
+    def _text(self, page: ttk.Frame, row: int, height: int) -> tk.Text:
+        holder = ttk.Frame(page)
+        holder.grid(row=row, column=0, sticky="nsew", pady=(8, 0))
+        holder.columnconfigure(0, weight=1)
+        holder.rowconfigure(0, weight=1)
+        widget = tk.Text(holder, height=height, wrap="word", state="disabled", font="TkTextFont",
+                         background="#ffffff", foreground="#182c46", relief="flat", padx=12, pady=10)
+        widget.grid(row=0, column=0, sticky="nsew")
+        scrollbar = ttk.Scrollbar(holder, orient="vertical", command=widget.yview)
+        scrollbar.grid(row=0, column=1, sticky="ns")
+        widget.configure(yscrollcommand=scrollbar.set)
+        return widget
+
+    @staticmethod
+    def _set_text(widget: tk.Text, text: str) -> None:
+        widget.configure(state="normal")
+        widget.delete("1.0", "end")
+        widget.insert("1.0", text)
+        widget.configure(state="disabled")
+
+    def _log(self, message: str) -> None:
+        self.activity.configure(state="normal")
+        self.activity.insert("end", f"{datetime.now():%H:%M:%S}  {message}\n")
+        if int(self.activity.index("end-1c").split(".")[0]) > 200:
+            self.activity.delete("1.0", "2.0")
+        self.activity.see("end")
+        self.activity.configure(state="disabled")
+
+    def _resize(self, event) -> None:
+        if event.widget is self.window:
+            width = max(300, event.width - 90)
+            for label in (self.overview_body, self.overview_note, self.metadata_label, self.limitations_label):
+                label.configure(wraplength=width)
+            self.verify_hint.configure(wraplength=max(200, width - 160))
+            self.status_label.configure(wraplength=max(250, width - 120))
+
+    def _clear_result(self) -> None:
+        self.last_result = None
+        self.fields.delete(*self.fields.get_children())
+        self.checks.delete(*self.checks.get_children())
+        self.summary.set("Belum ada pemeriksaan untuk input ini")
+        self.metadata.set("Baca ulang setelah mengubah berkas atau ID.")
+        self._set_text(self.output, "")
+
+    def _input_changed(self, *_args) -> None:
+        self._clear_result()
+        self.status.set("Input berubah. Jalankan pemeriksaan untuk input ini.")
+        self._sync_buttons()
+
+    def _sync_buttons(self) -> None:
+        has_file = bool(self.inputs["file"].get().strip())
+        for widget in (self.file_entry, self.browse_button, *self.id_entries):
+            widget.configure(state="disabled" if self.busy else "normal")
+        self.inspect_button.configure(state="normal" if has_file and not self.busy else "disabled")
+        self.verify_button.configure(state="normal" if has_file and not self.busy else "disabled")
+        self.copy_button.configure(state="normal" if self.last_result and not self.busy else "disabled")
+
+    def choose_file(self) -> None:
+        if self.busy or self.closed:
+            return
+        path = filedialog.askopenfilename(parent=self.window, title="Pilih berkas untuk pemeriksaan lokal",
+                                         filetypes=[("Berkas lisensi", "*.lic *.enc"), ("Semua berkas", "*.*")])
         if path:
-            self.inputs["previous_license" if previous else "file"].set(path)
-            self.status.set(
-                "Lisensi sebelumnya dipilih; Client ID dan Sequence diambil dari berkas ini."
-                if previous else "Berkas dipilih. Klik Baca isi atau Periksa.")
+            self.inputs["file"].set(path)
+            self._log("Berkas dipilih. Path tidak dicatat dalam log.")
 
-    def show_result(self, result: dict) -> None:
-        self.output.configure(state="normal")
-        self.output.delete("1.0", "end")
-        self.output.insert(
-            "1.0", json.dumps(result, ensure_ascii=False, indent=2, default=str))
-        self.output.configure(state="disabled")
-
-    # ---------- detection ----------
-    def _detect_db(self) -> None:
-        def work():
-            try:
-                dbid, info = id_detect.DbIdDetector().detect()
-                self.window.after(0, self._apply_db, dbid, info)
-            except id_detect.DetectError as exc:
-                self.window.after(0, messagebox.showwarning,
-                                  "Deteksi Database ID", str(exc))
-        threading.Thread(target=work, daemon=True).start()
-        self.status.set("Membaca prosedur splang jbssat…")
-
-    def _apply_db(self, dbid, info):
-        self.inputs["database_id"].set(dbid)
-        pieces = ", ".join("%s[%d]=%s" % (p["variable"], p["position"], p["character"])
-                           for p in info["pieces"])
-        self.status.set("Database ID: %s (%s)" % (dbid, pieces))
-        self.show_result(info)
-
-    def _detect_sys(self) -> None:
-        def work():
-            try:
-                sysid, info = id_detect.SystemIdDetector().detect()
-                self.window.after(0, self._apply_sys, sysid, info)
-            except id_detect.DetectError as exc:
-                self.window.after(0, messagebox.showwarning,
-                                  "Deteksi System ID", str(exc))
-        threading.Thread(target=work, daemon=True).start()
-        self.status.set("Membaca WMI (serial fisik disk + UUID)…")
-
-    def _apply_sys(self, sysid, info):
-        self.inputs["system_id"].set(sysid)
-        self.status.set("System ID: %s — disk %s, UUID %s"
-                        % (sysid, info["disk_serial_raw"], info["csproduct_uuid"]))
-        self.show_result(info)
-
-    # ---------- actions ----------
     def run_action(self, action: str) -> None:
-        values = {key: variable.get().strip() for key, variable in self.inputs.items()}
+        if self.busy or self.closed or action not in ("inspect", "verify"):
+            return
+        self._active_values = {key: value.get().strip() for key, value in self.inputs.items()}
+        self._clear_result()
+        self.busy = True
+        self._sync_buttons()
+        self.status.set("Membaca berkas..." if action == "inspect" else "Menjalankan pemeriksaan lokal...")
+        self._log("Pembacaan berkas dimulai." if action == "inspect" else "Pemeriksaan lokal dimulai.")
+        self.progress.start(12)
+        self.tabs.select(self.inspector if action == "inspect" else self.verification)
         try:
-            if action in ("verify", "generate"):
-                if not values["database_id"] or not values["system_id"]:
-                    raise ValueError("Database ID dan System ID harus diisi "
-                                     "(atau pakai tombol deteksi).")
-            if action in ("inspect", "verify"):
-                if not values["file"]:
-                    raise ValueError("Pilih berkas lisensi terlebih dahulu.")
-            sequence = None
-            capacity = None
-            if action == "generate":
-                datetime.strptime(values["expires"], "%Y-%m-%d")
-                try:
-                    capacity = int(values["capacity"])
-                except ValueError as exc:
-                    raise ValueError("Kapasitas harus berupa bilangan bulat lebih dari nol.") from exc
-                if capacity < 1:
-                    raise ValueError("Kapasitas harus lebih dari nol.")
-                if values["sequence"]:
-                    try:
-                        sequence = int(values["sequence"])
-                    except ValueError as exc:
-                        raise ValueError("Sequence harus berupa bilangan bulat.") from exc
-                    if not 1 <= sequence <= 2_147_483_647:
-                        raise ValueError("Sequence harus antara 1 dan 2147483647.")
-            if action == "inspect":
-                result = license_codec.inspect_license(Path(values["file"]))
-                self.status.set("Isi berkas berhasil dibaca. Lihat hasil pemeriksaan untuk status validitas.")
-            elif action == "verify":
-                result = license_codec.verify_license(
-                    Path(values["file"]), values["database_id"], values["system_id"],
-                    client_id=values["client_id"] or None,
-                )
-                self.status.set(
-                    "Pemeriksaan berkas offline berhasil; aktivasi server belum dibuktikan."
-                    if result.get("valid") is True
-                    else "Pemeriksaan berkas gagal atau belum lengkap. Lihat rincian hasil.")
+            threading.Thread(target=_work, args=(action, dict(self._active_values), self._results), daemon=True).start()
+        except RuntimeError:
+            self._results.put({"ok": False, "error": {"code": "unexpected", "message": diagnostics.ERROR_MESSAGES["unexpected"]}})
+        self._poll_id = self.window.after(40, self._poll)
+
+    def _poll(self) -> None:
+        self._poll_id = None
+        if self.closed:
+            return
+        try:
+            outcome = self._results.get_nowait()
+        except queue.Empty:
+            self._poll_id = self.window.after(40, self._poll)
+            return
+        self.progress.stop()
+        self.busy = False
+        current = {key: value.get().strip() for key, value in self.inputs.items()}
+        if current != self._active_values:
+            self.status.set("Input berubah selama pemeriksaan. Jalankan ulang.")
+        else:
+            self.last_result = outcome
+            self._set_text(self.output, json.dumps(outcome, ensure_ascii=False, indent=2))
+            if outcome["ok"]:
+                result = outcome["result"]
+                self.summary.set(STATUS_TEXT[result["status"]])
+                self.metadata.set(f"Ukuran: {result['size_bytes']:,} byte\nSHA-256: {result['sha256']}")
+                for key, value in result["fields"].items():
+                    self.fields.insert("", "end", values=(key, value))
+                for check in result["checks"]:
+                    passed = check["passed"]
+                    self.checks.insert("", "end", values=(check["detail"], "Lulus" if passed else "Belum lulus"),
+                                       tags=("passed" if passed else "failed",))
+                self.status.set(self.summary.get() + ". Aktivasi penerbit belum diverifikasi.")
+                self._log(self.summary.get() + ".")
             else:
-                destination = values["file"] or filedialog.asksaveasfilename(
-                    parent=self.window, title="Simpan lisensi baru",
-                    initialfile="license-baru.lic", defaultextension=".lic",
-                    filetypes=[("Lisensi impor", "*.lic"), ("Cache lisensi", "*.enc"),
-                               ("Semua berkas", "*.*")],
-                )
-                if not destination:
-                    return
-                if Path(destination).exists() and not self.overwrite.get():
-                    raise ValueError("Berkas keluaran sudah ada. Pilih nama berkas baru "
-                                     "atau centang Timpa berkas keluaran.")
-                result = license_codec.generate_license(
-                    database_id=values["database_id"], system_id=values["system_id"],
-                    client_id=values["client_id"] or None, expires=values["expires"],
-                    capacity=capacity, output_path=destination,
-                    client_name=values["client_name"],
-                    previous_license_path=(Path(values["previous_license"])
-                                           if values["previous_license"] else None),
-                    sequence=sequence,
-                    overwrite=self.overwrite.get(),
-                )
-                self.inputs["file"].set(str(result.get("path", destination)))
-                verification = result.get("verification", {})
-                self.status.set(
-                    "Berkas dibuat; pemeriksaan offline berhasil. Aktivasi server belum dibuktikan."
-                    if verification.get("valid") is True
-                    else "Berkas dibuat. Periksa rincian status verifikasi sebelum digunakan.")
-            self.show_result(result)
-        except (license_codec.LicenseError, ValueError, TypeError, OSError) as exc:
-            self.status.set("Operasi belum berhasil.")
-            self.show_result({"error": str(exc)})
-            messagebox.showerror("Operasi belum berhasil", str(exc), parent=self.window)
+                self.summary.set("Berkas belum dapat diperiksa")
+                self.status.set(outcome["error"]["message"])
+                self._log("Operasi belum berhasil (" + outcome["error"]["code"] + ").")
+                self.tabs.select(self.activity_page)
+        self._sync_buttons()
+
+    def copy_result(self) -> None:
+        if self.busy or self.closed or self.last_result is None:
+            return
+        try:
+            self.window.clipboard_clear()
+            self.window.clipboard_append(json.dumps(self.last_result, ensure_ascii=False, indent=2))
+            self.status.set("Laporan yang disamarkan disalin ke clipboard.")
+        except tk.TclError:
+            self.status.set("Clipboard tidak tersedia. Pilih dan salin teks pada tab hasil.")
+
+    def close(self) -> None:
+        self.closed = True
+        if self._poll_id is not None:
+            self.window.after_cancel(self._poll_id)
+            self._poll_id = None
+        self.progress.stop()
+        self.window.destroy()
 
 
 def main() -> None:

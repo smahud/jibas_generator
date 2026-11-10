@@ -1,121 +1,54 @@
-# Analisis Lisensi JIBAS Face Server 16.5 — Rebuild OpenCode
+# Status Analisis — Diagnostik Read-only JIBAS
 
-Dokumen ini merangkum jawaban atas tiga pertanyaan riset dengan pembuktian
-runtime terhadap metode asli (semua runtime menjalankan kode asli
-`FaceServer.exe` via reflection; biner tidak diubah). Analisa statis lengkap
-per metode ada di tool pendahulu: `C:\Program Files\YIM\JIBAS-License-Tool-16.5\Analisis_Lisensi.md`
-dan `bukti\verification_findings.md` miliknya.
+Dokumen ini menggantikan panduan operasional riset lama yang memuat data mesin,
+credential, serta prosedur mutasi lisensi/cache. Perubahan dilakukan untuk
+menyesuaikan dokumentasi aktif dengan ruang lingkup diagnostik. Arsip riset dan
+fixture tetap utuh; versi dokumentasi terdahulu tetap ada dalam riwayat Git.
 
-## 1. Bagaimana Database ID dibentuk?
+## Fakta yang dapat diperiksa pada checkout
 
-Database ID **bukan data statis**. Sebelum dipakai, `FaceServer.exe` memeriksa
-skema `jbssat`: harus ada 12 prosedur `splang01..splang12` di
-`information_schema.ROUTINES`, jika jumlahnya tidak 12 aplikasi menolak dengan
-"Licensing system has been altered!". Lalu metode `0x06000AC3` menjalankan
-`USE jbssat`, memanggil prosedur-prosedur itu (9 parameter OUT `@uha..@uhi`),
-dekode hex→ASCII payload, dan mengambil karakter pada posisi tetap:
+- `app.py` adalah GUI Tkinter read-only dengan empat tab. Tidak memanggil deteksi
+  database/hardware, pembuatan lisensi, atau penulisan cache.
+- `diagnostics.py` membatasi input, memproses snapshot sementara, dan menyamarkan
+  laporan. Semua pembaruan widget berlangsung pada main thread GUI.
+- `cli.py` menyediakan `inspect` dan `verify` melalui facade yang sama. CLI masih
+  memuat command historis lain; command tersebut di luar audit aktif.
+- `license_codec.py` memuat fungsi baca/periksa dan fungsi mutasi historis.
+  Seluruh berkas codec dibiarkan tidak berubah; hasil verifikasi offline tidak
+  membuktikan penerimaan importer atau aktivasi penerbit.
+- `id_detect.py` mempunyai pembacaan WMI dan pemanggilan stored procedure;
+  `search_db.py` melakukan pencarian lintas skema. Keduanya tidak dijalankan.
+- Tidak ada binary target proprietary di checkout ini.
 
-```
-DbId = UPPER( hex_decode(@uhh)[14]  splang04
-            + hex_decode(@uhf)[5]   splang02
-            + hex_decode(@uhc)[25]  splang09
-            + hex_decode(@uhe)[37]  splang11
-            + hex_decode(@uhb)[47] ) splang01
-```
+## Bukti historis dan batas penggunaannya
 
-Pembuktian runtime (bukti `bukti/detector_provenance.json`,
-`bukti/import_results/*.json`):
-
-- Dekripsi cache terpasang → DbId `V4YNE`.
-- Menjalankan `0x06000AC3` asli terhadap MySQL live → `V4YNE` ✔.
-- Payload prosedur splang di-ubah (`splang01/02/04/09/11` ditulis ulang),
-  `0x06000AC3` asli → berubah menjadi `WRK9T`, dan resep Python
-  (`DbIdDetector`) menghitung `WRK9T` juga ✔ — membuktikan rumus, bukan
-  kebetulan.
-- Database dipulihkan ke kondisi `V4YNE`; metode asli kembali `V4YNE` ✔.
-
-Karena aplikasi membaca DB, perubahan isi prosedur mengganti Database ID dari
-sudut pandang aplikasi — itulah yang memungkinkan uji "Database ID berbeda"
-tanpa mengubah biner.
-
-## 2. Apakah tool agent lama benar untuk ID berbeda?
-
-Ya. Lisensi dibuat dengan generator ini untuk `WRK9T/7738F` (kondisi DB yang
-sudah diubah), lalu **importer asli `0x060006CC`** dijalankan di sandbox pada
-proses terpisah — field `0x040004DB` diisi hasil `0x06000AC3` asli (bukan
-injeksi manual) dan `0x040004E7` diisi `0x0600059B` asli:
-
-- `lic_wrk9t_match.enc` (WRK9T + Info1 7738F) → **diterima**, cache
-  `license.enc` tertulis, semua field terisi (KlienId, Sequence=1,
-  MaxClient=100000, LicenseLimitDate 31/12/2027 23:59).
-- `lic_v4yne_dbid.enc` (DbId `V4YNE`, beda dengan live `WRK9T`) → **ditolak**
-  dengan `System.Exception: Database Id tidak sama dengan lisensi (V4YNE)`;
-  cache tidak dibuat.
-- `lic_wrong_sysid.enc` (Info1 `DDCB4` ≠ `7738F`) → **diterima** oleh importer
-  → membuktikan Info1/System ID **tidak** diverifikasi saat impor; hanya saat
-  runtime.
-
-## 3. Berapa System ID yang benar, dan bagaimana status lisensi terpasang?
-
-`0x0600059B` asli menjalankan:
-`SystemId = LOWER(MD5(Win32_PhysicalMedia.SerialNumber(disk C:) +
-Win32_ComputerSystemProduct.UUID))[5,17,30,24,3].UPPER()` — serial mentah,
-spasi dibelakang di-trim. Di mesin ini: `30029941042` +
-`E0813C3C-120B-02FE-5F00-BCAEC5319E78` → **7738F** (bukan `DDCB4`).
-
-Hasil predikat runtime `0x06000913`/`0x0600090D` terhadap cache generator ini
-(bukti `bukti/verification_runtime_predicate.json`, 8 skenario):
-
-| Skenario | Hasil | Status teks asli |
+| Arsip | Peran | Batas |
 |---|---|---|
-| valid (WRK9T/7738F) | diterima | Aktif |
-| wrong_database (ZZZZZ) | ditolak | Database id (ZZZZZ) tidak sesuai dengan lisensi (WRK9T) |
-| wrong_system (ZZZZZ) | ditolak | (jalur online dihentikan guard) |
-| **Info1 = DDCB4 (cache lama)** | **ditolak** | — |
-| expired | ditolak | Jangka waktu lisensi telah berakhir |
-| at_capacity (100000) | diterima | Aktif |
-| over_capacity (100001) | ditolak | Jumlah wajah yang aktif (100001) melebihi lisensi (100000) |
-| TRIAL | ditolak | TRIAL |
+| `bukti/import_results/`, `bukti/e2e/` | Catatan hasil sesi runtime terdahulu | Tidak dieksekusi ulang atau dianggap konfirmasi kondisi live saat ini |
+| `bukti/detector_provenance.json`, `bukti/variable_audit.json` | Provenance dan pencatatan pemetaan historis | Dapat mengandung identitas/data sensitif; jangan salin nilainya ke laporan baru |
+| `bukti/client16/` | Hasil ekstraksi string dan lokasi panggilan | Bukan seluruh source/binary target; ketiadaan string tidak meniadakan jalur lain |
+| `bukti/manifest_sha256.json` | Hash snapshot terdahulu | Bukan checksum rilis source setelah audit |
+| `tests/fixtures/`, `contoh/` | Berkas yang sudah tersedia | Keberhasilan pembacaan bukan bukti keaslian/entitlement |
+| `riset/` | Harness C# historis | Tidak dijalankan; sebagian berpotensi menulis atau mengakses instalasi |
+| `db/` | Dump SQL historis | Memuat data akun dan restore destruktif; tidak diimpor |
 
-Implikasinya: lisensi cache terpasang lama ber-Info1 `DDCB4` **tidak pernah
-aktif** di mesin ini pada jalur predikat lokal. `DDCB4` berasal dari replay
-predikat oleh tool agent lama yang meng-inject field `0x040004E7` dengan
-Info1 lisensinya sendiri (lingkaran tertutup), sedangkan hasil metode asli
-`0x0600059B` adalah `7738F`. Lisensi baru yang benar harus memakai
-Info1 `7738F`.
+## Error “File terpilih bukan lisensi JIBAS Presensi Wajah”
 
-## Audit end-to-end (2026-11-10, sesi kedua)
+Pencarian literal pesan dan dua nama obfuscated pada laporan pengguna tidak
+menemukan kecocokan di checkout. Arsip string klien memuat filter pemilihan
+berkas berlabel presensi wajah, tetapi tidak cukup untuk memetakan exception
+tersebut ke metode tertentu.
 
-Perbandingan penuh dengan tool lawas (`C:\Program Files\YIM\JIBAS-License-Tool-16.5`)
-dan pemetaan seluruh variabel: lihat `bukti/audit_lawas_vs_baru.json` dan
-`bukti/variable_audit.json` (password asli 3477K3b3rS4mA4N / IV YaRAhM4nY4R4h1M#
-didekode dari profil, bukan dari catatan). Implementasi kernel codec identik
-baris-per-baris dengan lawas; semua 18 kolom terimplementasi; baru merupakan
-superset (detect CLI/GUI, --overwrite, auto-verify).
+Fixture yang tersedia dapat dibaca oleh codec lokal. Tidak tersedia berkas
+pemicu yang terkonfirmasi, versi lengkap binary pemicu, atau log lengkap proses
+asli. Karena itu root cause pada target masih **belum terkonfirmasi**. Dugaan
+ketidakcocokan jenis/struktur berkas tetap hipotesis, bukan kesimpulan.
 
-Hasil E2E dari lisensi yang dihasilkan tool ini, terhadap kode asli:
+Perbaikan sesi ini menangani masalah diagnostik yang terbukti: pembacaan sinkron
+pada GUI lama, pesan error mentah, tampilan JSON saja, CLI tanpa entry point,
+dan hasil yang perlu dibersihkan ketika input berubah. Tidak ada klaim bahwa
+perubahan ini memperbaiki penolakan oleh aplikasi target.
 
-| Kasus importer asli 0x060006CC | Hasil |
-|---|---|
-| baru, DbId sama (V4YNE), Info1 7738F | diterima, cache tertulis |
-| baru, DbId WRK9T (beda dgn asli) | ditolak — "Database Id tidak sama dengan lisensi (WRK9T)" |
-| perpanjangan, KlienId sama, Sequence 1→5 | diterima (Sequence/MaxClient/Info1 ikut baru) |
-| perpanjangan, KlienId sama, Sequence 1→1 (sama) | ditolak — pesan asli "Sequence lisensi sama dengan lisensi yang terdaftar!" |
-| perpanjangan, KlienId berbeda, Sequence naik | diterima namun KlienId aktif tetap nilai cache lama (nuansa merge asli; generator tool ini lebih ketat) |
-| baru, Info1/DDCB4 untuk info | diterima → Info1 memang tidak diperiksa saat impor, hanya saat runtime |
-
-Predikat runtime asli 8/8 sesuai (valid aktif, salah DB/Info1/expired/kapasitas/TRIAL ditolak).
-Semua rincian ada di `bukti/e2e/`.
-
-Penempatan: `C:\Program Files\YIM` menolak penulisan (butuh admin), sehingga
-tool dipasang di `C:\YIM\JIBAS-License-Tool-OpenCode`.
-
-## Catatan keamanan
-
-- Tidak ada tanda tangan digital; format hanya AES dengan kunci dari password
-  konstan + XML. Keaslian berkas bergantung pada tiga cek importer (DbId,
-  Sequence, KlienId) dan cek runtime (Info1, masa berlaku, kapasitas,
-  status TRIAL).
-- Selama pembuktian: semua pengujian memakai sandbox `%TEMP%\opencode\import_*`;
-  `license.enc` aktif hanya dibaca, tidak diganti; DB eksperimen dipulihkan ke
-  `V4YNE` dan diverifikasi dengan metode asli.
+Rincian reproduksi aman, severity, dan temuan lanjutan:
+[AUDIT_REPORT.md](AUDIT_REPORT.md). Bukti uji saat ini:
+[TEST_REPORT.md](TEST_REPORT.md).
