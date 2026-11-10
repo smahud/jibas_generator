@@ -13,8 +13,8 @@
   "files": [
     {
       "path": ".gitattributes",
-      "bytes": 151,
-      "sha256": "99198bd3a6272f8d0c73a669121efa08acf46f3b23d9a3d3d5c0536f756b5c92"
+      "bytes": 359,
+      "sha256": "f684f29abe395f59892275012dbb43aa600f32666e462adad951025ba286f3d1"
     },
     {
       "path": ".gitignore",
