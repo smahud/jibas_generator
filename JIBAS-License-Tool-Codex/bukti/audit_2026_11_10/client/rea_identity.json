@@ -1,0 +1,217 @@
+{
+  "evidence_id": "ev_db48039a22db99e86e21729a6a5c8c9379ff538ee0d00b915c6de7f92dd0659d",
+  "subject": {
+    "name": "FaceFgrClient.exe",
+    "digest": {
+      "sha256": "6f5369df4d854c467d24fb067d8b79c573b35699c7b1ce7f19a310669f1ba546"
+    },
+    "local_path": "C:\\Program Files\\YIM\\JIBAS Face & Fingerprint Client 16.10\\FaceFgrClient.exe",
+    "format": "pe",
+    "architecture": "x86_64"
+  },
+  "provider": {
+    "id": "rea-analysis-view",
+    "name": "REA analysis view projection",
+    "version": "1"
+  },
+  "analysis_profile": null,
+  "predicate_type": "rea.analysis-view",
+  "operation": "inspect_analysis_view",
+  "parameters": {
+    "parent_evidence_id": "ev_85272d051356cb1f9372b3689a32f4663d0152f1c86fece45ab897ed3e4d77ed",
+    "view": {
+      "kind": "summary"
+    }
+  },
+  "raw_result": null,
+  "normalized_result": {
+    "kind": "summary",
+    "view": {
+      "kind": "summary"
+    },
+    "parent_evidence_id": "ev_85272d051356cb1f9372b3689a32f4663d0152f1c86fece45ab897ed3e4d77ed",
+    "parent_operation": "inspect_managed_artifact",
+    "parent_digest": "85272d051356cb1f9372b3689a32f4663d0152f1c86fece45ab897ed3e4d77ed",
+    "view_digest": "bee2460c1b69987082e29c41ec5e3a1bd4c1936e938e6303ce1f21d1b0a3af08",
+    "artifact": {
+      "path": "C:\\Program Files\\YIM\\JIBAS Face & Fingerprint Client 16.10\\FaceFgrClient.exe",
+      "sha256": "6f5369df4d854c467d24fb067d8b79c573b35699c7b1ce7f19a310669f1ba546"
+    },
+    "coverage": {
+      "status": "complete-within-view",
+      "examined": 116,
+      "total": 116,
+      "next_offset": null,
+      "exhausted": true
+    },
+    "limitations": [
+      "Static inspection did not load the assembly, resolve dependencies through a CLR, decompile C#, or execute target code."
+    ],
+    "unknowns": [
+      "Collection counts and pages cover producer-returned rows; metadata completeness remains the original metadata status and coverage, not an absence claim about unreturned rows.",
+      "Metadata tokens are build-local coordinates bound to the recorded artifact SHA-256 and module MVID; this view does not load or execute the assembly."
+    ],
+    "summary": {
+      "artifact": {
+        "path": "C:\\Program Files\\YIM\\JIBAS Face & Fingerprint Client 16.10\\FaceFgrClient.exe",
+        "sha256": "6f5369df4d854c467d24fb067d8b79c573b35699c7b1ce7f19a310669f1ba546",
+        "byte_length": 1154560,
+        "format": "pe"
+      },
+      "pe": {
+        "machine": 34404,
+        "machine_hex": "0x8664",
+        "architecture": "x86_64",
+        "optional_header": "pe32-plus",
+        "section_count": 3,
+        "characteristics": 46,
+        "cli": {
+          "header_offset": 520,
+          "header_size": 72,
+          "runtime_version": "2.5",
+          "flags": 1,
+          "flag_names": [
+            "il-only"
+          ],
+          "entry_point": {
+            "kind": "metadata-token",
+            "value": "0x06000972"
+          },
+          "metadata_rva": 886472,
+          "metadata_size": 271536,
+          "resources_rva": 462832,
+          "resources_size": 423640,
+          "strong_name_rva": 0,
+          "strong_name_size": 0,
+          "managed_native_header_rva": 0,
+          "managed_native_header_size": 0,
+          "ready_to_run_signature": false
+        }
+      },
+      "classification": {
+        "status": "managed",
+        "container": "pe",
+        "runtime_family": "dotnet-framework",
+        "implementation": "cil",
+        "managed_architecture": "x86_64",
+        "evidence": [
+          {
+            "code": "cli-header-observed",
+            "detail": "A file-backed PE CLI header and metadata root were admitted.",
+            "file_offset": 520
+          },
+          {
+            "code": "target-framework-observed",
+            "detail": "An assembly-level TargetFrameworkAttribute names .NET Framework.",
+            "file_offset": 999944
+          },
+          {
+            "code": "managed-architecture-derived",
+            "detail": "Managed architecture x86_64 is derived from PE machine and CLI flags.",
+            "file_offset": 536
+          }
+        ]
+      },
+      "metadata": {
+        "status": "complete",
+        "version": "v4.0.30319",
+        "stream_names": [
+          "#Blob",
+          "#GUID",
+          "#Strings",
+          "#US",
+          "#~"
+        ],
+        "table_row_counts": {
+          "Module": 1,
+          "TypeRef": 463,
+          "TypeDef": 366,
+          "Field": 2380,
+          "MethodDef": 2870,
+          "Param": 4053,
+          "InterfaceImpl": 41,
+          "MemberRef": 1495,
+          "Constant": 29,
+          "CustomAttribute": 62,
+          "FieldMarshal": 22,
+          "ClassLayout": 6,
+          "StandAloneSig": 551,
+          "PropertyMap": 8,
+          "Property": 22,
+          "MethodSemantics": 25,
+          "MethodImpl": 24,
+          "ModuleRef": 3,
+          "TypeSpec": 125,
+          "ImplMap": 33,
+          "FieldRVA": 10,
+          "Assembly": 1,
+          "AssemblyRef": 22,
+          "ManifestResource": 32,
+          "NestedClass": 130,
+          "GenericParam": 105,
+          "MethodSpec": 44
+        }
+      },
+      "module": {
+        "name": "FaceFgrClient.exe",
+        "generation": 0,
+        "mvid": "0ec4d2e7-40e6-4d47-2b18-cbedb1259d09",
+        "enc_id": null,
+        "enc_base_id": null,
+        "token": "0x00000001",
+        "row_offset": 879032
+      },
+      "assembly": {
+        "name": "FaceFgrClient",
+        "version": "16.10.0.0",
+        "culture": null,
+        "flags": 0,
+        "hash_algorithm": 32772,
+        "public_key": {
+          "kind": "none",
+          "byte_length": 0,
+          "sha256": null,
+          "token": null
+        },
+        "token": "0x20000001",
+        "row_offset": 1002832
+      },
+      "target_frameworks": [
+        ".NETFramework,Version=v4.8"
+      ],
+      "coverage": {
+        "state": "complete",
+        "issues": []
+      },
+      "limitations": [
+        "Static inspection did not load the assembly, resolve dependencies through a CLR, decompile C#, or execute target code."
+      ],
+      "reported_counts": {
+        "references": 22,
+        "resources": 32,
+        "attributes": 62
+      },
+      "identity_scope": {
+        "token_identity": "build-local",
+        "requires_artifact_sha256": "6f5369df4d854c467d24fb067d8b79c573b35699c7b1ce7f19a310669f1ba546",
+        "requires_mvid": "0ec4d2e7-40e6-4d47-2b18-cbedb1259d09"
+      }
+    }
+  },
+  "confidence": "derived",
+  "authority": "shipped-artifact",
+  "environment": null,
+  "limitations": [
+    "Static inspection did not load the assembly, resolve dependencies through a CLR, decompile C#, or execute target code."
+  ],
+  "relationship_coverage": null,
+  "locations": [
+    {
+      "kind": "artifact-path",
+      "path": "C:\\Program Files\\YIM\\JIBAS Face & Fingerprint Client 16.10\\FaceFgrClient.exe"
+    }
+  ],
+  "evidence_links": [
+    "ev_85272d051356cb1f9372b3689a32f4663d0152f1c86fece45ab897ed3e4d77ed"
+  ]
+}

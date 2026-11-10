@@ -1,11 +1,20 @@
 using System;
 using System.IO;
 using System.Reflection;
+using System.Data.Common;
 
 // Runs the ORIGINAL FaceServer.exe DatabaseId getter (0x06000AC3) against the live MySQL
 // on localhost to prove how the Database ID is computed by the application itself.
 public static class RuntimeDbId {
     static Module module;
+    static string ConnectionString() {
+        string password = Environment.GetEnvironmentVariable("JIBAS_DB_PASSWORD");
+        if (password == null) throw new InvalidOperationException("JIBAS_DB_PASSWORD belum tersedia.");
+        var builder = new DbConnectionStringBuilder();
+        builder.ConnectionString = "server=127.0.0.1;port=3434;user id=root;persistsecurityinfo=false;charset=utf8mb4";
+        builder["password"] = password;
+        return builder.ConnectionString;
+    }
 
     static int Main(string[] args) {
         string sandbox = Path.Combine(Path.GetTempPath(), "opencode", "runtime_dbid");
@@ -26,7 +35,7 @@ public static class RuntimeDbId {
             };
             Assembly mysqlAsm = Assembly.LoadFrom(Path.Combine(targetDir, "MySql.Data.dll"));
             Type connType = mysqlAsm.GetType("MySql.Data.MySqlClient.MySqlConnection");
-            object conn = Activator.CreateInstance(connType, "server=127.0.0.1;port=3434;user id=root;password=kebersamaan;persistsecurityinfo=false;charset=utf8mb4");
+            object conn = Activator.CreateInstance(connType, ConnectionString());
             object open = connType.GetMethod("Open").Invoke(conn, null);
             string dbid = (string)module.ResolveMethod(0x06000AC3).Invoke(null, new object[] { conn });
             Console.WriteLine("Original AC3 DatabaseId: [" + dbid + "]");

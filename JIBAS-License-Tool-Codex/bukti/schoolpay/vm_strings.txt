@@ -1,0 +1,1667 @@
+# oracle=warm ok: C:\YIM\JIBAS Generator\JIBAS-License-Tool-Codex\bukti\schoolpay\license.enc
+110362735	SELECT LAST_INSERT_ID()
+110362765	INSERT INTO jbsfina.jurnaldetail SET idjurnal = {0}, koderek = '{1}', debet = {2}
+110362869	INSERT INTO jbsfina.jurnaldetail SET idjurnal = {0}, koderek = '{1}', kredit = {2}
+110362918	SchoolPay Server: Tidak ditemukan informasi data tahun buku!
+110362979	awalan
+110363018	INSERT INTO jbsfina.jurnal\r\n                       SET idtahunbuku = {0}, tanggal = NOW(), transaksi = '{1}', nokas = '{2}', keterangan = '{3}',\r\n                           idpetugas = null, petugas = 'Administrator JIBAS', sumber = 'schoolpay'
+110363030	cacah
+110363261	SchoolPay Server: Saldo Tabungan tidak mencukup untuk melakukan pembayaran (STS:002)
+110363302	SELECT IFNULL(lokasidana, '***') AS flokasidana, SUM(kredit - debet) AS saldo\r\n                      FROM jbsfina.tabungan\r\n                     WHERE nis = '{0}'\r\n                       AND idtabungan = {1}\r\n                     GROUP BY lokasidana\r\n                     ORDER BY saldo DESC
+110363484	UPDATE jbsfina.tahunbuku SET cacah = cacah + 1 WHERE replid = {0}
+110363540	SchoolPay Server: Kode transaksi 
+110363564	 sudah digunakan (STS:001)
+110363599	SELECT SUM(kredit - debet)\r\n                      FROM jbsfina.tabungan\r\n                     WHERE nis = '{0}'\r\n                       AND idtabungan = {1}
+110363691	SchoolPay Server: Tidak ditemukan informasi data tabungan (STS:003)
+110363777	***
+110363792	rekutang
+110363805	rekkas
+110363808	Penarikan Tabungan {0} dari {1} oleh siswa {2} ({3}) untuk transaksi {4}
+110363820	(TAD)
+110363835	NULL
+110364039	flokasidana
+110364069	SELECT rekkas, rekutang, nama\r\n                      FROM jbsfina.datatabungan\r\n                     WHERE replid = {0}
+110364081	saldo
+110364213	INSERT INTO jbsfina.paymenttrans\r\n                               SET sessionid = '{0}', transactionid = '{1}', waktu = NOW(), tanggal = CURDATE(),\r\n                                   userid = '{2}', jenis = {3}, {4} = '{5}', jumlah = {6}, keterangan = '{7}', \r\n                                   idjurnaltabcust = {8}, idjurnalvendor = {9}, jenistrans = {10}, \r\n                                   idpenerimaanjtt = null, idpenerimaaniuran = null, iddatapenerimaan = null, \r\n                                   vendorid = '{11}', transactionno = {14}, idtabungan = {12}, valmethod = {13}, \r\n                                   lokasidana = {15} 
+110364433	Penerimaan vendor {3} dari siswa {0} ({1}) untuk transaksi {2}
+110364492	INSERT INTO jbsfina.tabungan\r\n                               SET nis = '{0}', idtabungan = '{1}', debet = {2}, kredit = 0,\r\n                                   keterangan = '{3}', petugas = '{4}', idjurnal = '{5}', tanggal = NOW(), ispayment = 1,\r\n                                   lokasidana = {6}, sumberdana = NULL
+110365090	SELECT md.kategori, jd.debet, IFNULL(pj.replid, 0) AS idpenerimaanjtt, IFNULL(pi.replid, 0) AS idpenerimaaniuran,\r\n                                   IFNULL(dp1.replid, 0) AS iddatapenerimaanjtt, IFNULL(dp2.replid, 0) AS iddatapenerimaaniuran, \r\n                                   j.replid AS idjurnal\r\n                              FROM jbsfina.multitransdata md\r\n                             INNER JOIN jbsfina.jurnal j ON md.notrans = j.nokas\r\n                             INNER JOIN jbsfina.jurnaldetail jd ON j.replid = jd.idjurnal\r\n                             INNER JOIN jbsfina.rekakun r ON jd.koderek = r.kode AND r.kategori = 'HARTA'\r\n                              LEFT JOIN jbsfina.penerimaanjtt pj ON pj.idjurnal = j.replid\r\n                              LEFT JOIN jbsfina.besarjtt bj ON pj.idbesarjtt = bj.replid\r\n                              LEFT JOIN jbsfina.datapenerimaan dp1 ON bj.idpenerimaan = dp1.replid\r\n                              LEFT JOIN jbsfina.penerimaaniuran pi ON pi.idjurnal = j.replid\r\n                              LEFT JOIN jbsfina.datapenerimaan dp2 ON pi.idpenerimaan = dp2.replid\r\n                             WHERE md.idinfo = {0}
+110365196	idjurnal
+110365208	debet
+110365245	SELECT nama\r\n                              FROM jbsfina.datapenerimaan\r\n                             WHERE replid = {0}
+110365315	SET @DISABLE_TRIGER  = 1
+110365344	UPDATE jbsfina.penerimaanjtt SET paymentid = '{0}' WHERE replid = {1}
+110365578	JTT
+110365589	kategori
+110365604	idpenerimaanjtt
+110365628	idpenerimaaniuran
+110365650	iddatapenerimaaniuran
+110365686	iddatapenerimaanjtt
+110365875	INSERT INTO jbsfina.paymenttrans\r\n                                   SET sessionid = '{0}', transactionid = '{1}', waktu = NOW(), tanggal = CURDATE(),\r\n                                       userid = '{2}', jenis = {3}, {4} = '{5}', jumlah = {6}, keterangan = '{7}', \r\n                                       idjurnaltabcust = {8}, idjurnalvendor = {9}, jenistrans = {10}, \r\n                                       idpenerimaanjtt = {11}, idpenerimaaniuran = {12}, iddatapenerimaan = {13}, \r\n                                       vendorid = '{14}', transactionno = {15}, idtabungan = {16}, valmethod = {17},\r\n                                       lokasidana = {18}
+110365886	null
+110365972	UPDATE jbsfina.penerimaaniuran SET paymentid = '{0}' WHERE replid = {1}
+110366026	SET @DISABLE_TRIGER  = NULL
+110366052	Penarikan tabungan {0} dari {1} oleh siswa {2} ({3}) untuk {4} transaksi {5}
+110366161	INSERT INTO jbsfina.tabungan\r\n                                   SET nis = '{0}', idtabungan = '{1}', debet = {2}, kredit = 0,\r\n                                       keterangan = '{3}', petugas = '{4}', idjurnal = '{5}', tanggal = NOW(), ispayment = 1,\r\n                                       lokasidana = {6}, sumberdana = NULL
+110366303	UPDATE jbsfina.multitransinfo \r\n                               SET paymentstatus = 1, paymentdate = NOW() \r\n                             WHERE replid = {0}
+110366457	SELECT IF(s.hportu IS NULL, '', TRIM(s.hportu)) AS hp1,\r\n                               IF(s.info1 IS NULL, '', TRIM(s.info1)) AS hp2,\r\n                               IF(s.info2 IS NULL, '', TRIM(s.info2)) AS hp3\r\n                          FROM jbsakad.siswa s\r\n                         WHERE s.nis = '{0}'
+110366735	ClientManager.GetServerDateTime()
+110366759	Sesi ditutup karena koneksi tidak aktif
+110366837	HttpServerSpay.OnError
+110366872	text/plain; charset=UTF-8
+110366904	HttpSessionSpay.OnReceivedRequest
+110366928	HttpSessionSpay.OnReceivedRequestError
+110366951	HttpSessionSpay.OnError
+110367008	C:
+110367051	select * from Win32_ComputerSystemProduct
+110367067	NOT FOUND
+110367116	SELECT YEAR(NOW()), MONTH(NOW()), DAY(NOW()),\r\n                               HOUR(NOW()), MINUTE(NOW()), SECOND(NOW())
+110367131	UUID
+110367209	DeadClientWatcher.Run()
+110367302	PaymentProcessorBase.GetServerDateTime()
+110367383	SchoolPay Server: Maaf, sesi anda telah berakhir. Silahkan login kembali
+110367428	SELECT COUNT(replid) FROM jbsfina.paymenttrans WHERE transactionid = '{0}'
+110367493	1
+110367526	-1
+110367549	DEFAULT CASE REACHED
+110367552	SELECT YEAR(DATE_SUB(CURDATE(), INTERVAL {0} DAY)), \r\n                                   MONTH(DATE_SUB(CURDATE(), INTERVAL {0} DAY)), \r\n                                   DAY(DATE_SUB(CURDATE(), INTERVAL {0} DAY)), \r\n                                   YEAR(CURDATE()), MONTH(CURDATE()), DAY(CURDATE())
+110367577	SchoolPay Server: 
+110367717	SELECT YEAR(NOW()), MONTH(NOW()), DAY(NOW()),\r\n                                           HOUR(NOW()), MINUTE(NOW()), SECOND(NOW())
+110368055	SELECT COUNT(replid) FROM jbsfina.transgen WHERE transactionid = '{0}'
+110368106	INSERT INTO jbsfina.transgen SET transactionid = '{0}'
+110368169	SELECT p.aktif, p.jenis, p.nis, p.nip, \r\n                               s.nama AS namasiswa, s.foto as fotosiswa, s.pinsiswa, s.aktif AS aktifsiswa, \r\n                               s.idkelas, CONCAT(t.tingkat, ' - ', k.kelas) AS kelas, t.departemen,\r\n                               pg.nama AS namapegawai, pg.foto AS fotopegawai, pg.pinpegawai, pg.aktif AS aktifpegawai\r\n                          FROM jbsfina.paymentid p\r\n                          LEFT JOIN jbsakad.siswa s ON p.nis = s.nis\r\n                          LEFT JOIN jbsakad.kelas k ON s.idkelas = k.replid\r\n                          LEFT JOIN jbsakad.tingkat t ON k.idtingkat = t.replid\r\n                          LEFT JOIN jbssdm.pegawai pg ON p.nip = pg.nip\r\n                         WHERE p.paymentid = '{0}'\r\n                         LIMIT 1
+110368289	fotosiswa
+110368326	idkelas
+110368337	pinsiswa
+110368360	departemen
+110368372	kelas
+110368394	pegawai
+110368411	aktifsiswa
+110368417	 tidak aktif!
+110368435	Status 
+110368440	-3
+110368452	Scan QR-Code 
+110368461	-4
+110368496	SELECT idtabungan, idtabunganp\r\n                          FROM jbsfina.paymenttabungan\r\n                         WHERE jenis = {0}\r\n                           AND departemen = '{1}'
+110368593	SchoolPay Server: Tidak ditemukan data QR Code!
+110368662	SchoolPay Server: Kartu Pembayaran tidak aktif!
+110368671	-2
+110368718	pinpegawai
+110368732	fotopegawai
+110368746	SELECT departemen FROM jbsfina.paymenttabungan WHERE jenis = 1
+110368761	aktifpegawai
+110368788	SELECT SUM(kredit) - SUM(debet)\r\n                          FROM jbsfina.tabunganp\r\n                         WHERE nip = '{0}'\r\n                           AND idtabungan = '{1}'
+110368956	SELECT SUM(kredit) - SUM(debet)\r\n                          FROM jbsfina.tabungan\r\n                         WHERE nis = '{0}'\r\n                           AND idtabungan = '{1}'
+110369120	SchoolPay Server: Atur dahulu Tabungan yang digunakan sebagai sumber Pembayaran di JIBAS Keuangan!
+110369258	idtabunganp
+110369275	idtabungan
+110369292	rekkasvendor
+110369316	maxtransvendor
+110369337	rekutangvendor
+110369363	SELECT IFNULL(SUM(jumlah), 0)\r\n                      FROM jbsfina.paymenttrans\r\n                     WHERE {0} = '{1}'\r\n                       AND jenistrans = 0\r\n                       AND tanggal = CURDATE()
+110369573	 belum memiliki saldo tabungan!
+110369603	SELECT idtabungan, idtabunganp, rekkasvendor, rekutangvendor, maxtransvendor\r\n                          FROM jbsfina.paymenttabungan\r\n                         WHERE jenis = {0}\r\n                           AND departemen = '{1}'
+110369823	SELECT COUNT(replid)\r\n                              FROM jbsfina.paymenttrans\r\n                             WHERE tanggal = CURDATE()
+110369939	SchoolPay Server: Maaf, tidak dapat menyimpan transaksi, untuk versi TRIAL dibatasi hanya 
+110370034	 transaksi per hari (ST:003)
+110370077	SELECT maxtrans\r\n                      FROM jbsfina.paymentmaxtrans\r\n                     WHERE {0} = '{1}'
+110370159	SchoolPay Server: Maaf, sesi anda telah berakhir. Silahkan login kembali (ST:001)
+110370263	SchoolPay Server: Invalid Request Length (ST:002)
+110370409	Pembayaran dari 
+110370438	SELECT replid, awalan, cacah \r\n                          FROM jbsfina.tahunbuku \r\n                         WHERE departemen = '{0}'\r\n                           AND aktif = 1\r\n                         LIMIT 1
+110370454	 berhasil
+110370575	SELECT kirimpesan, nama\r\n                          FROM jbsfina.vendor\r\n                         WHERE vendorid = '{0}'
+110370701	DELETE FROM jbsfina.transgen WHERE transactionid = '{0}'
+110370770	SELECT DATE_FORMAT(waktu, '%d.%b.%Y %H:%i') \r\n                          FROM jbsfina.paymenttrans\r\n                         WHERE transactionid = '{0}'\r\n                         LIMIT 1
+110370922	SELECT replid\r\n                          FROM jbssms.smsgeninfo\r\n                         WHERE tanggal = CURDATE()\r\n                           AND tipe = 0\r\n                           AND info LIKE '[PAYMENT.{0}]%'\r\n                         LIMIT 1
+110371193	INSERT INTO jbssms.smsgeninfo\r\n                           SET tanggal = CURDATE(), tipe = 0,\r\n                               info = '[PAYMENT.{0}] Pengiriman Otomatis SMS Informasi Transaksi Payment departemen {1}',\r\n                               pengirim = 'KEU.{0}'
+110371497	INSERT INTO jbssms.outboxhistory\r\n                           SET InsertIntoDB = NOW(),\r\n                               SendingDateTime = NOW(),\r\n                               Text = '{0}',\r\n                               DestinationNumber = '{1}',\r\n                               idsmsgeninfo = '{2}',\r\n                               status = 0,\r\n                               SenderID = 'JIBAS.KEU'
+110371646	INSERT INTO jbssms.outbox \r\n                           SET UpdatedInDB = NOW(), InsertIntoDB = NOW(), SendingDateTime = NOW(),\r\n                               Text = '{0}', DestinationNumber = '{1}', Coding = '8bit', UDH = NULL,\r\n                               Class = -1, TextDecoded = '', MultiPart = 'false', RelativeValidity = -1, SenderID = 'JIBAS.KEU', \r\n                               SendingTimeOut = '0000-00-00 00:00:00', DeliveryReport = 'default', CreatorID = 'JIBAS.KEU',\r\n                               idsmsgeninfo = '{2}', status = 0
+110372227	SchoolPay Server: Maaf, sesi anda telah berakhir. Silahkan login kembali (DMPS:001)
+110372325	SELECT m.replid, DATE_FORMAT(m.tanggal, '%d-%b-%Y %H:%i') AS tanggal, m.petugas, m.keterangan \r\n                              FROM jbsfina.multitransinfo m, jbsfina.tahunbuku t\r\n                             WHERE m.idtahunbuku = t.replid\r\n                               AND nis = '{0}'\r\n                               AND t.aktif = 1\r\n                               AND m.paymentstatus = 0 \r\n                             ORDER BY m.tanggal DESC
+110372400	SELECT dp.nama\r\n                          FROM jbsfina.multitransdata mt\r\n                         INNER JOIN jbsfina.jurnal j ON mt.notrans = j.nokas AND kategori = 'JTT'\r\n                         INNER JOIN jbsfina.penerimaanjtt p ON j.replid = p.idjurnal\r\n                         INNER JOIN jbsfina.besarjtt b ON p.idbesarjtt = b.replid\r\n                         INNER JOIN jbsfina.datapenerimaan dp ON b.idpenerimaan = dp.replid\r\n                         WHERE mt.idinfo = '{0}'
+110372671	SELECT SUM(jd.debet) AS jumlah\r\n                          FROM jbsfina.multitransdata md, jbsfina.jurnal j, jbsfina.jurnaldetail jd, jbsfina.rekakun r\r\n                         WHERE md.notrans = j.nokas \r\n                           AND j.replid = jd.idjurnal\r\n                           AND jd.koderek = r.kode\r\n                           AND r.kategori = 'HARTA'\r\n                           AND md.idinfo = '{0}'
+110372946	SchoolPay Server: Invalid Request
+110372970	SELECT p.replid AS idpenerimaan, DATE_FORMAT(p.tanggal, '%d-%b-%Y') AS tanggal, p.jumlah, p.info1 AS diskon, \r\n                                   b.idpenerimaan AS idiuran, dp.nama, p.idjurnal, j.transaksi, dp.replid AS iddatapenerimaan, \r\n                                   IFNULL(md.idinfo, 0) AS idmultitransinfo  \r\n                              FROM jbsfina.penerimaanjtt p\r\n                             INNER JOIN jbsfina.besarjtt b ON p.idbesarjtt = b.replid\r\n                             INNER JOIN jbsfina.datapenerimaan dp ON b.idpenerimaan = dp.replid\r\n                             INNER JOIN jbsfina.jurnal j ON p.idjurnal = j.replid\r\n                             INNER JOIN jbsfina.tahunbuku tb ON j.idtahunbuku = tb.replid AND tb.aktif = 1\r\n                              LEFT JOIN jbsfina.multitransdata md ON j.nokas = md.notrans\r\n                             WHERE b.nis = '{0}'\r\n                               AND p.jumlah <> 0 \r\n                               AND p.paymentid IS NULL\r\n                               AND p.isschoolpay = 1 \r\n                             ORDER BY p.replid DESC
+110373211	SELECT dp.nama\r\n                               FROM jbsfina.multitransdata mt\r\n                              INNER JOIN jbsfina.jurnal j ON mt.notrans = j.nokas AND kategori = 'SKR'\r\n                              INNER JOIN jbsfina.penerimaaniuran p ON j.replid = p.idjurnal\r\n                              INNER JOIN jbsfina.datapenerimaan dp ON p.idpenerimaan = dp.replid\r\n                              WHERE mt.idinfo = '{0}'
+110373530	SELECT p.replid AS idpenerimaan, DATE_FORMAT(p.tanggal, '%d-%b-%Y') AS tanggal, p.jumlah, 0 AS diskon, \r\n                                   p.idpenerimaan AS idiuran, dp.nama, p.idjurnal, j.transaksi, dp.replid AS iddatapenerimaan,\r\n                                   IFNULL(md.idinfo, 0) AS idmultitransinfo   \r\n                              FROM jbsfina.penerimaaniuran p\r\n                             INNER JOIN jbsfina.datapenerimaan dp ON p.idpenerimaan = dp.replid\r\n                             INNER JOIN jbsfina.jurnal j ON p.idjurnal = j.replid\r\n                             INNER JOIN jbsfina.tahunbuku tb ON j.idtahunbuku = tb.replid AND tb.aktif = 1 \r\n                              LEFT JOIN jbsfina.multitransdata md ON j.nokas = md.notrans\r\n                             WHERE p.nis = '{0}'\r\n                               AND p.paymentid IS NULL\r\n                               AND p.isschoolpay = 1\r\n                             ORDER BY p.replid DESC
+110373997	idmultitransinfo
+110374025	idiuran
+110374042	diskon
+110374056	iddatapenerimaan
+110374079	idpenerimaan
+110374097	SchoolPay Server: Maaf, sesi anda telah berakhir. Silahkan login kembali (SET:001)
+110374449	SchoolPay Server: Tidak ditemukan konfigurasi pembayaran tabungan (SETP:001)
+110374498	SELECT rekkas, rekutang\r\n                      FROM jbsfina.datatabunganp\r\n                     WHERE replid = {0}
+110374629	SchoolPay Server: Tidak ditemukan informasi data tabungan (SETP:002)
+110374712	SchoolPay Server: Invalid Request Data (SET:002)
+110374721	2
+110374777	melakukan perubahan transaksi
+110374805	SELECT idtabunganp, rekkasvendor, rekutangvendor\r\n                          FROM jbsfina.paymenttabungan\r\n                         WHERE jenis = 1\r\n                           AND departemen = '{0}'
+110374970	SELECT token\r\n                          FROM jbsjs.usertoken\r\n                         WHERE nis = '{0}'\r\n                           AND aktif = 1\r\n                           AND loggedin = 1
+110375085	 sudah digunakan (STP:001)
+110375116	SELECT SUM(kredit - debet)\r\n                      FROM jbsfina.tabunganp\r\n                     WHERE nip = '{0}'\r\n                       AND idtabungan = {1}
+110375303	hp2
+110375309	hp1
+110375347	SELECT chatid\r\n                         FROM jbstgram.member\r\n                        WHERE nis = '{0}'\r\n                          AND aktif = 1
+110375353	hp3
+110375558	SELECT rekkas, rekutang, nama\r\n                      FROM jbsfina.datatabunganp\r\n                     WHERE replid = {0}
+110375805	SchoolPay Server: Saldo Tabungan tidak mencukup untuk melakukan pembayaran (STP:002)
+110375846	SELECT IFNULL(lokasidana, '***') AS flokasidana, SUM(kredit - debet) AS saldo\r\n                      FROM jbsfina.tabunganp\r\n                     WHERE nip = '{0}'\r\n                       AND idtabungan = {1}\r\n                     GROUP BY lokasidana\r\n                     ORDER BY saldo DESC
+110376136	INSERT INTO jbsfina.paymenttrans\r\n                           SET sessionid = '{0}', transactionid = '{1}', waktu = NOW(), tanggal = CURDATE(),\r\n                               userid = '{2}', jenis = {3}, {4} = '{5}', jumlah = {6}, keterangan = '{7}', \r\n                               idjurnaltabcust = {8}, idjurnalvendor = {9}, vendorid = '{10}', idtabunganp = {11}, \r\n                               jenistrans = 0, idpenerimaanjtt = null, idpenerimaaniuran = null, \r\n                               iddatapenerimaan = null, transactionno = {13}, valmethod = {12},\r\n                               lokasidana = {14}
+110376199	SchoolPay Server: Tidak ditemukan informasi data tabungan (STP:003)
+110376313	Penarikan tabungan {0} dari {1} oleh pegawai {2} ({3}) untuk transaksi {4}
+110376360	Penerimaan vendor {3} dari pegawai {0} ({1}) untuk transaksi {2}
+110376417	INSERT INTO jbsfina.tabunganp\r\n                           SET nip = '{0}', idtabungan = '{1}', debet = {2}, kredit = 0,\r\n                               keterangan = '{3}', petugas = '{4}', idjurnal = '{5}', tanggal = NOW(), ispayment = 1,\r\n                               lokasidana = {6}, sumberdana = NULL
+110376571	SELECT IF(p.handphone IS NULL, '', TRIM(p.handphone)) AS hp\r\n                          FROM jbssdm.pegawai p\r\n                          WHERE p.nip = '{0}'
+110376968	SELECT COUNT(*)\r\n                          FROM jbsfina.formatsms\r\n                         WHERE jenis = 'SCHOOLPAY'\r\n                           AND departemen = '{0}'
+110377146	Kami informasikan transaksi pembayaran non tunai dari {NAMA} tanggal {TANGGAL} sebesar {BESAR}, saldo tersisa {SALDO}, nomor {TRANSID}
+110377228	SELECT chatid\r\n                          FROM jbstgram.member\r\n                         WHERE nip = '{0}'\r\n                           AND aktif = 1
+110377237	hp
+110377361	SELECT token\r\n                          FROM jbsjs.usertoken\r\n                         WHERE nip = '{0}'\r\n                           AND aktif = 1\r\n                           AND loggedin = 1
+110377510	SELECT DATE_FORMAT(NOW(), '%d-%b')
+110377580	{TANGGAL}
+110377593	{NAMA}
+110377600	{TRANSID}
+110377618	{SALDO}
+110377628	{BESAR}
+110377648	INSERT INTO jbstgram.send\r\n                               SET msgdate = NOW(), destchatid = {0}, destname = '{1}', srcchatid = 0, \r\n                                   msgtext = '{2}', msgtype = 1, msgsource = 'SCHOOLPAY'
+110377769	INSERT INTO jbsfina.formatsms\r\n                           SET jenis = 'SCHOOLPAY', departemen = '{0}', format = '{1}'
+110377901	SELECT format\r\n                          FROM jbsfina.formatsms\r\n                         WHERE jenis = 'SCHOOLPAY'\r\n                           AND departemen = '{0}'
+110378037	INSERT INTO jbsjs.notif\r\n                           SET msgdate = NOW(), desttoken = '{0}', topicid = '',  msgtitle = '{1}', msgbody = '{2}', msgsource = '{3}'
+110378195	Transaksi Non Tunai
+110378213	INSERT INTO jbsjs.notifmessage\r\n                           SET {0} = '{1}', topicid = null, message = '{2}', notifdate = NOW(), source = '{3}', title = '{4}'
+110378229	SCHOOLPAY
+110378304	INSERT INTO jbstgram.sendhistory\r\n                               SET idsend = {0}, msgdate = NOW(), destchatid = {1}, destname = '{2}', \r\n                                   srcchatid = 0, msgtext = '{3}', msgtype = 1, msgsource = 'SCHOOLPAY'
+110378586	SELECT replid\r\n                      FROM jbsakad.departemen\r\n                     WHERE departemen = '{0}'
+110378660	SELECT COUNT(replid)\r\n                      FROM jbssms.smsgeninfo\r\n                     WHERE tanggal = CURDATE()\r\n                       AND tipe = 0\r\n                       AND info LIKE '[PAYMENT.{0}]%'
+110378881	INSERT INTO jbsjs.notifmessagehistory\r\n                           SET {0} = '{1}', topicid = null, message = '{2}', notifdate = NOW(), source = '{3}', title = '{4}'
+110379285	SELECT IFNULL(SUM(pt.jumlah), 0)\r\n                                     FROM jbsfina.paymenttrans pt\r\n                                    WHERE pt.transactionid = '{0}'
+110379421	SELECT DATE_FORMAT(p.waktu, '%d-%b-%Y %H:%i') as waktu, p.jenis, \r\n                                   IFNULL(p.nis, '') AS nis, IFNULL(p.nip, '') AS nip, \r\n                                   IFNULL(s.nama, '') AS namasiswa, IFNULL(pg.nama, '') AS namapegawai,\r\n                                   IFNULL(CONCAT(t.tingkat, ' - ', k.kelas), '') AS bagsiswa, \r\n                                   IFNULL(pg.bagian, '')  AS bagpegawai,\r\n                                   p.jumlah, IFNULL(p.keterangan, '') AS keterangan,\r\n                                   p.jenistrans, IFNULL(p.idpenerimaanjtt, 0) AS idpenerimaanjtt, \r\n                                   IFNULL(p.idpenerimaaniuran, 0) AS idpenerimaaniuran,\r\n                                   IFNULL(p.iddatapenerimaan, 0) AS iddatapenerimaan,\r\n                                   IFNULL(dp.nama, '') AS penerimaan,\r\n                                   IFNULL(t.departemen, '') AS depsiswa,\r\n                                   p.idjurnaltabcust, p.idjurnalvendor,\r\n                                   IFNULL(s.pinsiswa, '') AS pinsiswa,\r\n                                   IFNULL(pg.pinpegawai, '') AS pinpegawai                                   \r\n                              FROM jbsfina.paymenttrans p\r\n                              LEFT JOIN jbsakad.siswa s ON p.nis = s.nis\r\n                              LEFT JOIN jbsakad.kelas k ON s.idkelas = k.replid\r\n                              LEFT JOIN jbsakad.tingkat t ON k.idtingkat = t.replid\r\n                              LEFT JOIN jbssdm.pegawai pg ON p.nip = pg.nip\r\n                              LEFT JOIN jbsfina.datapenerimaan dp ON p.iddatapenerimaan = dp.replid  \r\n                             WHERE p.replid = {0}
+110379551	SchoolPay Server: Tidak ditemukan data transaksi
+110379556	bagpegawai
+110379588	idjurnaltabcust
+110379607	bagsiswa
+110379634	idjurnalvendor
+110379662	SchoolPay Server: Maaf, sesi anda telah berakhir. Silahkan login kembali (TRS:001)
+110379673	depsiswa
+110379761	SELECT COUNT(DISTINCT transactionid), IFNULL(SUM(jumlah), 0)\r\n                              FROM jbsfina.paymenttrans\r\n                             WHERE vendorid = '{0}'\r\n                               AND userid = '{1}'\r\n                               AND tanggal = CURDATE()
+110380038	SELECT s.nama, a.departemen \r\n                              FROM jbsakad.siswa s, jbsakad.angkatan a\r\n                             WHERE s.idangkatan = a.replid\r\n                               AND nis = '{0}'
+110380240	SELECT nama FROM jbssdm.pegawai WHERE nip = '{0}'
+110380253	Siswa 
+110380511	SchoolPay Server: Maaf, sesi anda telah berakhir. Silahkan login kembali (CTR:001)
+110380809	SchoolPay Server: Tidak ditemukan data pelanggan dengan NIS / NIP 
+110380824	Pegawai 
+110380864	 (CTR:001)
+110380915	SELECT p.replid, DATE_FORMAT(p.waktu, '%d-%b-%Y %H:%i') AS waktu, v.nama AS vendor, u.nama AS petugas, \r\n                               p.jumlah, p.jenistrans, p.keterangan, IFNULL(dp.nama, '') AS penerimaan,\r\n                               IF(p.valmethod = 1, 'PIN', 'Agreement') AS valmethod, p.transactionid,\r\n                               IFNULL(p.idrefund, 0) AS idrefund,  \r\n                               IF(r.waktu IS NULL, '(belum refund)', \r\n                               DATE_FORMAT(r.waktu, '%d-%b-%Y %H:%i')) AS refund,\r\n                               IFNULL(p.lokasidana, '***') AS flokasidana,\r\n                               p.transactionno    \r\n                          FROM jbsfina.paymenttrans p\r\n                         INNER JOIN jbsfina.vendor v ON p.vendorid = v.vendorid\r\n                         INNER JOIN jbsfina.userpos u ON p.userid = u.userid\r\n                          LEFT JOIN jbsfina.datapenerimaan dp ON p.iddatapenerimaan = dp.replid\r\n                          LEFT JOIN jbsfina.refund r ON p.idrefund = r.replid\r\n                         WHERE p.{0} = '{1}'\r\n                           AND p.vendorid = '{3}' \r\n                         ORDER BY p.waktu DESC\r\n                         LIMIT {2}
+110381170	SELECT IFNULL(SUM(pt.jumlah), 0)\r\n                                 FROM jbsfina.paymenttrans pt\r\n                                WHERE pt.transactionid = '{0}'
+110381482	SELECT dp.nama\r\n                          FROM jbsfina.paymenttrans pt\r\n                         INNER JOIN jbsfina.datapenerimaan dp ON pt.iddatapenerimaan = dp.replid\r\n                         WHERE pt.transactionid = '{0}'
+110381832	SchoolPay Server: Maaf, sesi anda telah berakhir. Silahkan login kembali (NRR:001)
+110381939	SELECT p.replid, DATE_FORMAT(p.waktu, '%d-%b-%Y %H:%i') AS waktu, v.nama AS vendor, u.nama AS petugas, \r\n                               p.jumlah, p.jenistrans, p.keterangan, IFNULL(dp.nama, '') AS penerimaan,\r\n                               IF(p.valmethod = 1, 'PIN', 'Agreement') AS valmethod, p.transactionid,\r\n                               IFNULL(p.idrefund, 0) AS idrefund,  \r\n                               IF(r.waktu IS NULL, '(belum refund)', DATE_FORMAT(r.waktu, '%d-%b-%Y %H:%i')) AS refund,\r\n                               p.jenis, \r\n                               IFNULL(p.nis, '') AS nis, IFNULL(p.nip, '') AS nip, p.jumlah, \r\n                               IFNULL(s.nama, '') AS namasiswa, IFNULL(pg.nama, '') AS namapegawai\r\n                          FROM jbsfina.paymenttrans p\r\n                         INNER JOIN jbsfina.vendor v ON p.vendorid = v.vendorid\r\n                         INNER JOIN jbsfina.userpos u ON p.userid = u.userid\r\n                          LEFT JOIN jbsakad.siswa s ON p.nis = s.nis\r\n                          LEFT JOIN jbssdm.pegawai pg ON p.nip = pg.nip\r\n                          LEFT JOIN jbsfina.datapenerimaan dp ON p.iddatapenerimaan = dp.replid\r\n                          LEFT JOIN jbsfina.refund r ON p.idrefund = r.replid\r\n                         WHERE p.vendorid = '{0}'\r\n                           AND p.jenistrans = 0\r\n                           AND p.idrefund IS NULL  \r\n                         ORDER BY p.waktu DESC\r\n                         LIMIT {1}
+110382093	SELECT IFNULL(COUNT(DISTINCT CONCAT(p.transactionid, p.transactionno)), 0) AS count,\r\n                               IFNULL(SUM(p.jumlah), 0) AS jumlah\r\n                          FROM jbsfina.paymenttrans p\r\n                         WHERE p.vendorid = '{0}'\r\n                           AND p.jenistrans = 0\r\n                           AND p.idrefund IS NULL
+110382728	flogtime
+110382777	SchoolPay Server: Maaf, sesi anda telah berakhir. Silahkan login kembali (RUR:001)
+110382816	SELECT vu.userid, vu.tingkat, u.nama\r\n                          FROM jbsfina.vendoruser vu, jbsfina.userpos u \r\n                         WHERE vu.userid = u.userid\r\n                           AND vu.vendorid = '{0}'\r\n                         ORDER BY vu.tingkat, u.nama
+110382861	SchoolPay Server: Maaf, sesi anda telah berakhir. Silahkan login kembali (ULR:001)
+110382964	SELECT v.nama AS vendor, u.nama AS petugas, DATE_FORMAT(ul.logtime, '%d-%b-%Y %H:%i') AS flogtime, ul.localip, ul.device\r\n                              FROM jbsfina.userposlog ul, jbsfina.vendor v, jbsfina.userpos u\r\n                             WHERE ul.vendorid = v.vendorid\r\n                               AND ul.userid = u.userid\r\n                               AND v.vendorid = '{0}' \r\n                             ORDER BY ul.logtime DESC\r\n                             LIMIT {1}
+110383104	SELECT debet\r\n                      FROM jbsfina.tabunganp\r\n                     WHERE nip = '{0}'\r\n                       AND idjurnal = {1}
+110383239	SchoolPay Server: Tidak ditemukan data tabungan pegawai (SETP:004)
+110383358	SchoolPay Server: Saldo tabungan tidak mencukupi untuk melakukan perubahan pembayaran transaksi (SETP:005)
+110383454	SELECT SUM(kredit) - SUM(debet) \r\n                      FROM jbsfina.tabunganp\r\n                     WHERE nip = '{0}'\r\n                       AND idtabungan = {1}
+110383561	SchoolPay Server: Tidak ditemukan data tabungan pegawai (SETP:003)
+110383626	UPDATE jbsfina.jurnaldetail\r\n                       SET debet = '{0}', kredit = '{1}'\r\n                     WHERE idjurnal = '{2}'\r\n                       AND koderek = '{3}'
+110383790	UPDATE jbsfina.jurnaldetail\r\n                           SET debet = '{0}', kredit = '{1}'\r\n                         WHERE idjurnal = '{2}'\r\n                           AND koderek = '{3}'
+110383945	UPDATE jbsfina.tabunganp\r\n				       SET alasan = '{0}',\r\n					       petugas = '{1}',\r\n                           debet = {2},\r\n                           kredit = {3}\r\n				     WHERE nip = '{4}'\r\n                       AND idjurnal = {5}
+110384246	SchoolPay Server: Tidak ditemukan konfigurasi pembayaran tabungan (ETS:001)
+110384288	SELECT rekkas, rekutang\r\n                      FROM jbsfina.datatabungan\r\n                     WHERE replid = {0}
+110384457	UPDATE jbsfina.paymenttrans\r\n                       SET jumlah = {0}\r\n                     WHERE replid = {1}
+110384597	SELECT idtabungan, rekkasvendor, rekutangvendor\r\n                          FROM jbsfina.paymenttabungan\r\n                         WHERE jenis = 2\r\n                           AND departemen = '{0}'
+110384700	SchoolPay Server: Tidak ditemukan data tabungan siswa (ETS:004)
+110384751	 IS NULL 
+110384762	 = '
+110384799	SELECT SUM(kredit) - SUM(debet) \r\n                      FROM jbsfina.tabungan\r\n                     WHERE nis = '{0}'\r\n                       AND idtabungan = {1}\r\n                       AND lokasidana {2}
+110384936	SchoolPay Server: Tidak ditemukan informasi data tabungan (ETS:002)
+110384994	SELECT debet, IFNULL(lokasidana, '***') AS flokasidana\r\n                      FROM jbsfina.tabungan\r\n                     WHERE nis = '{0}'\r\n                       AND idjurnal = {1}
+110385343	SELECT u.userid, u.nama\r\n                              FROM jbsfina.vendoruser v, jbsfina.userpos u\r\n                             WHERE v.userid = u.userid\r\n                               AND u.aktif = 1\r\n                               AND v.vendorid = '{0}'\r\n                             ORDER BY u.nama
+110385463	SchoolPay Server: Tidak ditemukan data tabungan siswa (ETS:003)
+110385517	SchoolPay Server: Saldo tabungan tidak mencukupi untuk melakukan perubahan pembayaran transaksi (ETS:005)
+110385661	UPDATE jbsfina.tabungan\r\n				       SET alasan = '{0}',\r\n					       petugas = '{1}',\r\n                           debet = {2},\r\n                           kredit = {3}\r\n				     WHERE nis = '{4}'\r\n                       AND idjurnal = {5}
+110385861	SELECT p.replid, DATE_FORMAT(p.waktu, '%H:%i') as waktu, p.jenis, \r\n                                   IFNULL(p.nis, '') AS nis, IFNULL(p.nip, '') AS nip, p.jumlah, \r\n                                   IFNULL(p.keterangan, '') AS keterangan, \r\n                                   IFNULL(s.nama, '') AS namasiswa, IFNULL(pg.nama, '') AS namapegawai,\r\n                                   IFNULL(p.jenistrans, 0) AS jenistrans,\r\n                                   IFNULL(dp.nama, '') AS penerimaan,\r\n                                   IF(p.valmethod = 1, 'PIN', 'Agreement') AS valmethod,\r\n                                   p.transactionid,\r\n                                   IFNULL(p.idrefund, 0) AS idrefund,\r\n                                   IF(r.waktu IS NULL, '(belum refund)', DATE_FORMAT(r.waktu, '%d-%b-%Y %H:%i')) AS refund,\r\n                                   DATE_FORMAT(p.waktu, '%d.%b.%Y %H:%i') AS waktutrans, \r\n                                   up.nama AS staf, \r\n                                   IFNULL(ak.departemen, '') AS deptsiswa,\r\n                                   IFNULL(p.lokasidana, '***') AS flokasidana,\r\n                                   p.transactionno\r\n                              FROM jbsfina.paymenttrans p\r\n                              LEFT JOIN jbsakad.siswa s ON p.nis = s.nis\r\n                              LEFT JOIN jbsakad.angkatan ak ON s.idangkatan = ak.replid \r\n                              LEFT JOIN jbssdm.pegawai pg ON p.nip = pg.nip\r\n                              LEFT JOIN jbsfina.datapenerimaan dp ON p.iddatapenerimaan = dp.replid\r\n                              LEFT JOIN jbsfina.refund r ON p.idrefund = r.replid\r\n                             INNER JOIN jbsfina.userpos up ON p.userid = up.userid\r\n                             WHERE p.vendorid = '{0}'\r\n                               AND p.userid = '{1}'\r\n                               AND p.tanggal = '{2}'\r\n                             ORDER BY p.waktu DESC
+110386047	SchoolPay Server: Maaf, sesi anda telah berakhir. Silahkan login kembali (DTR:001)
+110386086	SchoolPay Server: Invalid Request Data
+110386165	SELECT COUNT(DISTINCT CONCAT(p.transactionid, p.transactionno)), IFNULL(SUM(p.jumlah), 0)\r\n                              FROM jbsfina.paymenttrans p\r\n                             WHERE p.vendorid = '{0}'\r\n                               AND p.userid = '{1}'\r\n                               AND p.tanggal = '{2}'
+110386688	staf
+110386705	waktutrans
+110386725	transactionno
+110386741	deptsiswa
+110386769	SELECT dp.nama\r\n                              FROM jbsfina.paymenttrans pt\r\n                             INNER JOIN jbsfina.datapenerimaan dp ON pt.iddatapenerimaan = dp.replid\r\n                             WHERE pt.transactionid = '{0}'
+110387138	penerimaan
+110387170	refund
+110387181	idrefund
+110387205	maret
+110387220	desember
+110387239	juni
+110387245	mei
+110387257	april
+110387277	september
+110387288	juli
+110387298	{0}:{1}
+110387312	{0}:{1}:{2}
+110387325	:00:00
+110387344	abcdefghijklmnopqrstuvwxyz0123456789
+110387365	0123456789
+110387412	SELECT s.nis, s.nama, k.kelas, s.foto, t.departemen, k.idtingkat, s.idkelas\r\n                          FROM jbsakad.siswa s, jbsakad.kelas k, jbsakad.tingkat t\r\n                         WHERE s.idkelas = k.replid\r\n                           AND k.idtingkat = t.replid\r\n                           AND s.idkelas = {0}\r\n                           AND s.aktif = 1 \r\n                           AND s.alumni = 0\r\n                         ORDER BY s.nama 
+110387467	Sabtu
+110387481	{0} {1} {2}
+110387490	Maret
+110387501	Februari
+110387519	Januari
+110387530	Mei
+110387542	April
+110387562	Agustus
+110387569	Juli
+110387580	Juni
+110387592	Oktober
+110387608	September
+110387631	Desember
+110387646	Nopember
+110387648	oktober
+110387666	agustus
+110387676	januari
+110387687	nopember
+110387702	februari
+110388191	SearchUserFactory:DoSearchStudentByClass()
+110388206	SELECT s.nis, s.nama, k.kelas, s.foto, t.departemen, k.idtingkat, s.idkelas\r\n                          FROM jbsakad.siswa s, jbsakad.kelas k, jbsakad.tingkat t\r\n                         WHERE s.idkelas = k.replid\r\n                           AND k.idtingkat = t.replid\r\n                           AND t.departemen IN ({0})  \r\n                           AND {1} LIKE '%{2}%' \r\n                           AND s.aktif = 1 \r\n                           AND s.alumni = 0\r\n                         ORDER BY s.nama 
+110388263	SearchUserFactory:DoSearchEmployee()
+110388344	SELECT p.nip, p.nama, p.bagian, p.foto\r\n                          FROM jbssdm.pegawai p\r\n                         WHERE {0} LIKE '%{1}%' \r\n                           AND p.aktif = 1 \r\n                         ORDER BY p.nama
+110388507	SearchUserFactory:DoSearchStudent()
+110388514	 p.bagian = 'Akademik'
+110388525	akademik
+110388545	non akademik
+110388594	 p.bagian = 'Non Akademik'
+110388608	SELECT p.nip, p.nama, p.bagian, p.foto\r\n                          FROM jbssdm.pegawai p\r\n                         WHERE p.aktif = 1 \r\n                           AND {0}\r\n                         ORDER BY p.nama
+110388621	 1 = 1
+110388776	# JIBAS SCHOOLPAY SECURE SERVER CONFIGURATION         
+110388847	DBSERVER = 
+110388873	DBUSER = 
+110388889	DBPORT = 
+110388901	SERVER = 
+110388921	DBPASSWORD = 
+110388931	REMOVECLIENTTIME = 
+110388949	RUNONSTARTUP = 
+110388965	ALLOWCLEARCONN = 
+110388994	Input length is invalid
+110389006	{0:X}
+110389024	config.ini
+110389075	Configuration file (config.ini) not found!
+110389090	DBSERVER
+110389126	DBUSER
+110389139	DBPORT
+110389156	RUNONSTARTUP
+110389173	DBPASSWORD
+110389201	REMOVECLIENTTIME
+110389221	#-----------------------------------------------------
+110389246	ALLOWCLEARCONN
+110389259	CREATE TABLE `jbsfina`.`lokasidana` (\r\n                          `id` int(10) unsigned NOT NULL AUTO_INCREMENT,\r\n                          `kode` varchar(20) NOT NULL,\r\n                          `nama` varchar(100) NOT NULL,\r\n                          `kelompok` varchar(50) NOT NULL,\r\n                          `keterangan` varchar(255) NOT NULL,\r\n                          `urutan` int(11) NOT NULL,\r\n                          `aktif` tinyint(4) DEFAULT 1,\r\n                          PRIMARY KEY (`id`),\r\n                          UNIQUE KEY `UX_lokasidana` (`kode`),\r\n                          KEY `IX_lokasidana` (`kelompok`,`aktif`,`urutan`)\r\n                        ) ENGINE=InnoDB  DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_general_ci
+110389517	ConfigManager.TryDecrypt
+110389554	ConfigManager.TryEncrypt
+110389587	DatabaseCreator.ExecIgnore()
+110389612	SELECT COUNT(*)\r\n                          FROM information_schema.TABLES\r\n                         WHERE TABLE_SCHEMA = 'jbsfina'\r\n                           AND TABLE_NAME = 'lokasidana'
+110389817	SELECT COUNT(*)\r\n                      FROM information_schema.TABLES\r\n                     WHERE TABLE_SCHEMA = 'jbsfina'\r\n                       AND TABLE_NAME = 'sumberdana'
+110389958	CREATE TABLE `jbsfina`.`sumberdana` (\r\n                          `id` int(10) unsigned NOT NULL AUTO_INCREMENT,\r\n                          `kode` varchar(20) NOT NULL,\r\n                          `nama` varchar(100) NOT NULL,\r\n                          `kelompok` varchar(50) NOT NULL,\r\n                          `keterangan` varchar(255) NOT NULL,\r\n                          `urutan` int(11) NOT NULL,\r\n                          `aktif` tinyint(4) DEFAULT 1,\r\n                          PRIMARY KEY (`id`),\r\n                          UNIQUE KEY `UX_sumberdana` (`kode`),\r\n                          KEY `IX_sumberdana` (`kelompok`,`aktif`,`urutan`)\r\n                        ) ENGINE=InnoDB  DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_general_ci
+110390118	INSERT INTO `jbsfina`.`lokasidana` (`kode`, `nama`, `kelompok`, `keterangan`, `urutan`) \r\n                        VALUES ('KAS', 'Kas Sekolah', 'TUNAI', ' ', '1')
+110390365	INSERT INTO `jbsfina`.`sumberdana` (`kode`, `nama`, `kelompok`, `keterangan`, `urutan`) \r\n                        VALUES ('TUNAI', 'Pembayaran Tunai', 'TUNAI', ' ', '1')
+110390509	SELECT COUNT(*)\r\n                      FROM information_schema.COLUMNS\r\n                     WHERE TABLE_SCHEMA = 'jbsfina'\r\n                       AND TABLE_NAME = 'tabungan'\r\n                       AND COLUMN_NAME = 'lokasidana'
+110390848	ALTER TABLE `jbsfina`.`tabungan` \r\n                          ADD INDEX `IX_tabungan_lokasidana` (`lokasidana` ASC)
+110390987	ALTER TABLE `jbsfina`.`tabungan` \r\n                          ADD CONSTRAINT `FK_tabungan_lokasidana`\r\n                              FOREIGN KEY (`lokasidana`)\r\n                              REFERENCES `jbsfina`.`lokasidana` (`kode`)\r\n                              ON DELETE RESTRICT\r\n                              ON UPDATE CASCADE
+110391212	ALTER TABLE `jbsfina`.`tabungan` \r\n                          ADD COLUMN `lokasidana` VARCHAR(20) CHARACTER SET 'utf8' COLLATE 'utf8_general_ci' NULL AFTER `idjurnal`
+110391316	SELECT DISTINCT DATE_FORMAT(tanggal, '%d-%b-%Y') AS ftanggal, \r\n                               DATE_FORMAT(tanggal, '%Y-%m-%d') AS tanggal\r\n                          FROM jbsfina.paymenttrans\r\n                         WHERE vendorid = '{0}'\r\n                           AND tanggal BETWEEN '{1}' AND '{2}'\r\n                         ORDER BY tanggal DESC
+110391527	SchoolPay Server: Belum ada data transaksi (RUR:003)
+110391763	SchoolPay Server: Belum ada data transaksi (RUR:002)
+110391774	 (M)
+110391886	SELECT r.replid, DATE_FORMAT(r.waktu, '%d-%b-%Y %H:%i') AS waktu, IFNULL(pg.nama, 'Administrator JIBAS') AS petugas, \r\n                                   u.nama AS penerima, r.jumlah, r.keterangan\r\n                              FROM jbsfina.refund r\r\n                              LEFT JOIN jbssdm.pegawai pg ON r.nip = pg.nip\r\n                              LEFT JOIN jbsfina.userpos u ON r.idpenerima = u.userid\r\n                             WHERE r.vendorid = '{0}' \r\n                               AND YEAR(r.waktu) = {1}\r\n                               AND MONTH(r.waktu) = {2} \r\n                             ORDER BY r.waktu DESC
+110392104	SELECT IFNULL(SUM(jumlah), 0)\r\n                                  FROM jbsfina.paymenttrans\r\n                                 WHERE vendorid = '{0}'\r\n                                   AND userid = '{1}'\r\n                                   AND tanggal = '{2}'
+110392295	SchoolPay Server: Maaf, sesi anda telah berakhir. Silahkan login kembali (RDR:001)
+110392307	TOTAL
+110392500	SchoolPay Server: Versi aplikasi {0} tidak kompatibel dengan versi JIBAS SchoolPay Secure Server {1}. Mohon update dahulu aplikasinya ke versi terbaru.
+110392807	SELECT DATE_FORMAT(tanggal, '%d-%b-%Y') AS tanggal\r\n                                  FROM jbsfina.refunddate\r\n                                 WHERE idrefund = {0}\r\n                                 ORDER BY tanggal
+110392813	---
+110392828	penerima
+110392935	SELECT nama, aktif, terimaiuran, valmethod FROM jbsfina.vendor WHERE vendorid = @vendorid
+110393031	@vendorid
+110393079	SchoolPay Server: Tidak ditemukan data vendor 
+110393178	SchoolPay Server: Maaf, tidak dapat melakukan login karena koneksi dibatasi hanya untuk 
+110393275	 pengguna yang aktif dalam satu waktu
+110393295	SchoolPay Server: User sudah login di sesi lain. Atau ada riwayat koneksi sebelumnya yang belum tertutup. Tunggu beberapa menit atau hubungi Administrator JIBAS.
+110393353	SchoolPay Server: Password tidak sesuai
+110393439	SELECT tingkat FROM jbsfina.vendoruser WHERE vendorid = @vendorid AND userid = @userid
+110393474	SchoolPay Server: User tidak terdaftar sebagai pengelola vendor
+110393592	SELECT DATE_FORMAT(NOW(), '%Y-%m-%d %H:%i:%s')
+110393602	SchoolPay Server: Status vendor 
+110393668	SELECT nama, password, aktif, foto FROM jbsfina.userpos WHERE userid = @userid
+110393691	 tidak aktif
+110393761	SchoolPay Server: Tidak ditemukan data user 
+110393779	@userid
+110393842	SchoolPay Server: Status user 
+110393857	SchoolPay Server: Login diterima
+110393874	 from 
+110393933	UPDATE jbsfina.userpos \r\n                               SET password = md5('{0}')\r\n                             WHERE userid = '{1}'
+110393950	LOGOUT
+110394054	UPDATE jbsfina.userpos \r\n                               SET foto = @foto\r\n                             WHERE userid = @userid
+110394119	INSERT INTO jbsfina.userposlog \r\n                           SET userid = @userid, vendorid = @vendorid, sessionid = @sessionid, \r\n                               localip = @localip, device = @device, logtime = NOW()
+110394273	@sessionid
+110394305	@device
+110394320	@localip
+110394359	 login to SchoolPay POS using 
+110394372	SELECT password, aktif FROM jbsfina.userpos WHERE userid = @userid
+110394495	SchoolPay Server: Tidak ditemukan informasi login sebelumnya
+110394552	CLEAR LOGIN CONNETION
+110394588	SchoolPay Server: Informasi koneksi berhasil dihapus. Silahkan coba login kembali.
+110394690	@foto
+110394742	SchoolPay Server: Pengguna tidak diperbolehkan menghapus informasi login. Hubungi Administrator JIBAS
+110394826	SELECT aktif FROM jbsfina.vendor WHERE vendorid = @vendorid
+110394887	DeviceAddr = 
+110394907	DeviceName = 
+110394913	Info = 
+110394931	Data = 
+110394950	(Rp 
+110394967	UserKey = 
+110394980	DataManager.ExecuteNonQuery()
+110394989	Rp
+110395003	Rp 
+110395008	DataManager.ExecuteScalar()
+110395042	DataManager.ExecuteTable()
+110395133	DataManager.ExecuteBatchSql()
+110395143	Payment Server already started
+110395170	Payment Server started
+110395201	PaymentServer.StartServer()
+110395235	SessionId = 
+110395276	TransactionId = 
+110395303	VendorId = 
+110395317	Protocol = 
+110395329	AppVer = 
+110395345	UserId = 
+110395377	CompatibilityVer = 
+110395405	lbLogoutFirst
+110395422	label9
+110395449	(Logout dahulu untuk mengubah konfigurasi Basis Data)
+110395507	BasisDataForm
+110395517	pbClose
+110395534	fw.bat
+110395551	Basis Data
+110395581	File fw.bat tidak ditemukan. File ini diperlukan untuk mengatur firewall
+110395616	Tutup
+110395634	btTutup
+110395685	label1
+110395702	txDbId
+110395720	System Id
+110395736	groupBox2
+110395754	btGetSystemId
+110395768	lnCopySysId
+110395798	Ambil System Id
+110395827	Gunakan System Id ini untuk melakukan registrasi JIBAS SchoolPay
+110395836	label8
+110395880	txSysId
+110395910	Tanggal
+110395931	Kode Transaksi
+110395936	Tanggal Berakhir
+110395956	Waktu Lisensi
+110395977	Max Vendor
+110396009	Keterangan
+110396024	Sequence
+110396056	JIBAS SchoolPay License|*.lic
+110396084	Kode lisensi diterima
+110396120	LisensiForm.btLicense_Click()
+110396138	System.String
+110396148	KlienId
+110396171	Atur
+110396180	btAtur
+110396220	Buka koneksi FIrewall untuk port yang digunakan JIBAS, yaitu: 80, 3434, 8100-8107
+110396260	KONFIGURASI FIREWALL
+110396297	txOutput
+110396329	FirewallSettingForm
+110396350	$this.Icon
+110396371	Konfigurasi Firewall
+110396388	Client
+110396404	Client Id
+110396431	lnClearLicense
+110396450	LISENSI
+110396474	clear license ...
+110396480	Tambah Lisensi
+110396496	btLicense
+110396527	openFileDialog1
+110396548	LisensiForm
+110396565	dgvLicense
+110396580	ALUR INTERAKSI
+110396598	Lisensi
+110396627	pictureBox1
+110396656	PetunjukForm
+110396669	panel1
+110396682	KodeTx
+110396694	Klien
+110396710	LicenseLimit
+110396722	SysId
+110396729	DbId
+110396755	LicenseLimitDate
+110396776	SystemId
+110396792	MaxVendor
+110396803	LisensiForm.ShowRegistrationData()
+110396825	dd-MM-yyyy HH:mm:ss
+110396890	Apakah anda akan menghapus lisensi?
+110396908	lnClearLicense_LinkClicked
+110396962	Alamat IP dan Port
+110396981	SCHOOLPAY SERVER
+110396997	label12
+110397051	Gunakan IP Address atau Hostname supaya SchoolPay Server bisa diakses di jaringan LAN
+110397133	Petunjuk:
+110397151	label13
+110397163	Alamat IP dan Port yang digunakan untuk menerima koneksi dari JIBAS SchoolPay POS
+110397181	cbServerAddress
+110397187	textBox1.Text
+110397202	textBox1
+110397213	Petunjuk
+110397231	RIWAYAT APLIKASI
+110397254	Riwayat Aplikasi
+110397268	RiwayatForm
+110397295	Konfigurasi JIBAS SchoolPay Secure Server telah berubah.\r\nLayanan JIBAS SchoolPay Server perlu dihidupkan ulang.
+110397428	Konfigurasi JIBAS SchoolPay Secure Server telah berubah.
+110397461	Pengguna dapat menghapus informasi login sebelumnya
+110397504	btSaveApplyApp
+110397535	btSaveApplyApp.Image
+110397551	label21
+110397582	label11
+110397597	Koneksi Idle
+110397600	5
+110397628	menit tanpa aktifitas
+110397642	20
+110397651	15
+110397656	10
+110397679	cbRemoveTime
+110397684	30
+110397693	25
+110397763	8103
+110397779	txCbePort
+110397812	Aplikasi JIBAS SchoolPay Secure Server
+110397835	chClearConn
+110397877	Allow User to Clear Previous Login History
+110397892	label37
+110397927	label35
+110397946	label37.Text
+110397964	btAddFirewall.Image
+110397986	Tambah Aturan Firewall
+110398006	btAddFirewall
+110398017	SchoolPayServerForm
+110398059	SchoolPay Server
+110398096	http://www.jibas.net
+110398133	http://www.indonesiamembaca.net
+110398148	InitTrans
+110398163	POST
+110398181	SPAY
+110398196	Validate
+110398222	Hapus otomatis koneksi client setelah 
+110398232	label10
+110398288	Mulai layanan JIBAS SchoolPay Secure Server ketika aplikasi berjalan
+110398301	label7
+110398341	chRunOnStartup
+110398384	Run On Startup
+110398412	Tambah aturan firewall yang digunakan oleh aplikasi JIBAS
+110398431	Firewall
+110398481	lbTestInvalidate
+110398500	Test Valid
+110398526	Test Invalidate
+110398529	Tentang
+110398551	TentangForm
+110398565	user
+110398583	tanggal
+110398592	jumlah
+110398605	client
+110398622	vendor
+110398635	valmethod
+110398647	jenis
+110398666	Petugas
+110398683	keterangan
+110398703	Pelanggan
+110398712	Vendor
+110398729	Verdana
+110398750	1083575359
+110398766	Yayasan Indonesia Membaca
+110398783	linkLabel2
+110398798	TENTANG APLIKASI
+110398822	Label21
+110398839	LinkLabel1
+110398868	Jaringan Informasi Bersama Antar Sekolah
+110398885	pictureBox6
+110398913	lbTestLicServer
+110398935	pictureBox4
+110398959	Test License Server
+110399238	Validasi
+110399250	Jenis
+110399263	Jumlah
+110399287	SELECT YEAR(NOW()), MONTH(NOW()), DAY(NOW())
+110399296	nip
+110399340	SELECT p.transactionid, DATE_FORMAT(p.waktu, '%d-%b-%Y %H:%i') AS waktu,\r\n                                   v.nama as namavendor, u.nama AS namauser, p.jenis, IFNULL(p.nis, '') AS nis, IFNULL(s.nama, '') AS namasiswa,\r\n                                   IFNULL(p.nip, '') AS nip, IFNULL(pg.nama, '') AS namapegawai, p.jumlah, p.keterangan, p.jenistrans, p.iddatapenerimaan,\r\n                                   IFNULL(dp.nama, '') AS namapenerimaan,\r\n                                   IF(p.valmethod = 1, 'PIN', 'Agreement') AS valmethod   \r\n                              FROM jbsfina.paymenttrans p\r\n                             INNER JOIN jbsfina.vendor v ON p.vendorid = v.vendorid\r\n                             INNER JOIN jbsfina.userpos u ON p.userid = u.userid\r\n                              LEFT JOIN jbsakad.siswa s ON p.nis = s.nis\r\n                              LEFT JOIN jbssdm.pegawai pg ON p.nip = pg.nip\r\n                              LEFT JOIN jbsfina.datapenerimaan dp ON p.iddatapenerimaan = dp.replid\r\n                             WHERE YEAR(p.tanggal) = {0}\r\n                               AND MONTH(p.tanggal) = {1}\r\n                               AND p.{2} = '{3}'\r\n                             ORDER BY p.waktu DESC, p.transactionid
+110399354	nis
+110399635	Mono.Runtime
+110399676	System.Security.SecurityRulesAttribute
+110399681	#=ztEpmgus=
+110399699	RuleSet
+110399727	transform
+110399738	#=za_ORS7Q=
+110399748	#=ztEpmgus=
+110399769	Invalid block.
+110399794	iterationCount
+110399801	#=za_ORS7Q=
+110399823	exponent
+110399833	modulus
+110399850	#=ztEpmgus=
+110399857	#=zWk6G_3s=
+110399868	data
+110399873	parameters
+110399903	ArgumentNull_Buffer
+110399911	#=ztEpmgus=
+110399920	stream
+110399942	9LLzz0PCd+FHvWd0mgLkwi3UF9HgDJwIwWh6+LaHi1w4UILG2m4sa5niHrQwHHHRHjeQzjXxpVTZ1Cf7/B3m9YsL+bQ2VgppPUQRAxkZq37Nas3ZjZHTAPTwsydqu4Vibo9i6/9DTThASeLnC4u+fPvSKR15E6WphrpNRS44Cck=
+110399949	#=zCX$KRjw=
+110399960	#=za_ORS7Q=
+110400006	Assembly '
+110400017	 failed.
+110400049	' is marked with the AllowPartiallyTrustedCallersAttribute, and uses the level 2 security transparency model. Level 2 transparency causes all methods in AllowPartiallyTrustedCallers assemblies to become security transparent by default, which may be the cause of this exception.
+110400261	Cannot create delegate for a method. Unsupported number of parameters: {0}.
+110400272	#=zCX$KRjw=
+110400287	#=za_ORS7Q=
+110400375	Cannot create delegate for a method with parameters passed by reference.
+110400420	Invoke
+110400475	Refanyval is not supported.
+110400487	 to access 
+110400501	Attempt by 
+110400550	Void InitializeArray(System.Array, System.RuntimeFieldHandle)
+110400568	InitializeArray
+110400610	{0} {1}
+110400643	)
+110400651	(
+110400656	, 
+110400687	Cannot bind method: {0}.{1}
+110400699	.ctor
+110400713	Cpblk not supported.
+110400754	Refanytype is not supported.
+110400771	Mkrefany is not supported.
+110400802	Address
+110400848	Arglist is not supported.
+110400880	System.Security.SecurityCriticalAttribute
+110400896	System.Security.SecuritySafeCriticalAttribute
+110400964	A caller does not have the permissions required to access a resource.
+110400972	.
+110401032	Localloc not supported.
+110401070	EF-VM-0521
+110401096	<PrivateImplementationDetails><
+110401113	EF-VM-0522
+110401126	Cannot load type '{0}'.
+110401156	Unknown operand type.
+110401192	security critical type '
+110401225	security critical field '
+110401257	Object of type {0} cannot be converted to type {1}.
+110401295	security transparent method '
+110401315	security critical method '
+110401323	'
+110401346	obj
+110401396	Unexpected value on the stack.
+110401427	The value is not finite real number.
+110401444	Initblk not supported.
+110401483	Cpobj is not supported.
+110401542	Span`1
+110401555	System
+110401566	Read
+110401568	&
+110401589	ReadOnlySpan`1
+110401602	VM-3012
+110401611	,]
+110401616	[]
+110401624	*
+110401638	Invalid key size.
+110401648	VM-3014
+110401667	Invalid IV size.
+110401678	#=ztEpmgus=
+110401704	#=za_ORS7Q=
+110401757	Microsoft Software Key Storage Provider
+110401779	RSAPUBLICBLOB
+110401843	get_HasValue
+110401868	GetValueOrDefault
+110401884	get_Value
+110401908	GetExecutingAssembly
+110401920	GetCurrentMethod
+110401945	GetCallingAssembly
+110401955	CompareExchange
+110401961	Add
+110401993	Decrement
+110402030	Increment
+110402041	Exchange
+110402057	Tidak dapat menghubungi basis data JIBAS:\r\n
+110402139	Berhasil terhubung dengan basis data JIBAS
+110402154	{0}.{1}
+110402200	Alamat IP tidak boleh kosong!
+110402228	Port tidak boleh kosong!
+110402261	User tidak boleh kosong!
+110402298	Password tidak boleh kosong!
+110402320	GenericReturn.FromJson
+110402335	blob
+110402338	INFO
+110402344	ERR
+110402359	CONN
+110402370	SERV
+110402376	PAY
+110402391	SCAN
+110402401	ActivityListBox.OnDrawItem()
+110402423	Courier New
+110402434	0
+110402470	Arial
+110402490	System.Object
+110402508	Tidak dapat mengubah konfigurasi saat Server telah berjalan!
+110402522	 - 
+110402595	Tidak ditemukan basis data Sistem Informasi Sekolah JIBAS di 
+110402702	Server={0};Port={1};User Id={2};Password={3};
+110402711	OK
+110402719	:
+110402778	BasisDataForm.btGetDatabaseId_Click
+110402796	BasisDataForm.btGetSystemId_Click
+110402823	127.0.0.1
+110402839	localhost
+110402871	Format alamat IP tidak benar!
+110402899	Port harus bilangan!
+110402932	Server={0};Port={1};User Id={2};Password={3}
+110402945	SELECT NOW()
+110402994	SELECT COUNT(TABLE_SCHEMA)\r\n                              FROM `information_schema`.`TABLES`\r\n                             WHERE TABLE_SCHEMA IN ('jbsakad', 'jbssdm', 'jbssms')
+110403088	txDBPassword
+110403104	Server
+110403122	label29
+110403133	txDBUser
+110403142	groupBox1
+110403159	txDBServer
+110403168	lnCopyDbId
+110403190	Database Id
+110403219	copy to clipboard 
+110403232	Ambil Database Id
+110403258	btGetDatabaseId
+110403272	label3
+110403327	Gunakan Database Id ini untuk melakukan registrasi JIBAS SchoolPay
+110403332	Microsoft Sans Serif
+110403369	label2
+110403407	gbDBConfig
+110403420	BASIS DATA
+110403454	Alamat Basis Data JIBAS
+110403469	btSaveApply.Image
+110403484	txDBPort
+110403495	Simpan dan Terapkan
+110403509	btSaveApply
+110403529	label26
+110403554	User ID
+110403564	label27
+110403583	Password
+110403592	Kartu Pembayaran Siswa
+110403613	KartuSiswaForm
+110403619	IP
+110403631	Login
+110403658	Vendor Id
+110403674	Last Ping
+110403684	User Id
+110403706	Vendor Name
+110403722	Session Id
+110403738	User Name
+110403744	select
+110403752	 
+110403765	Device
+110403778	lastping
+110403787	ip
+110403799	login
+110403808	vendorname
+110403827	vendorid
+110403890	DAFTAR KARTU PEMBAYARAN SISWA
+110403918	cbDepartemen
+110403938	KARTU PEMBAYARAN SISWA
+110403950	Kelas
+110403963	label5
+110403969	cbKelas
+110404006	cbTingkat
+110404023	Departemen
+110404035	Tingkat
+110404054	Tahun Ajaran
+110404081	cbTahunAjaran
+110404098	dgvUserList
+110404109	lbJumlah
+110404140	ClientListForm
+110404187	Daftar Koneksi Client
+110404197	server.started
+110404223	server.starting
+110404240	server.stopped
+110404268	Hanya dapat dilakukan oleh Administrator JIBAS.\r\nSilahkan login sebagai Administrator JIBAS
+110404287	HH:mm:ss
+110404358	username
+110404371	userid
+110404391	device
+110404407	sessionid
+110404430	userkey
+110404442	tutup
+110404476	Login dahulu untuk menghapus client
+110404502	Hapus koneksi client ini?
+110404520	dd-MM HH:mm:ss
+110404534	###
+110404555	DAFTAR KONEKSI PENGGUNA
+110404567	hapus
+110404585	DAFTAR KONEKSI CLIENT
+110404610	btStopServer
+110404627	PEMANTAUAN
+110404655	Stop Server
+110404677	Start Server
+110404697	btStartServer
+110404704	Clear Conn
+110404726	btClearConn
+110404742	lnClear
+110404755	lsInfo
+110404768	MonitoringForm
+110404788	hapus riwayat
+110404815	Pemantauan
+110404834	ipaddress
+110404844	petugas
+110404862	logtime
+110404878	PERINGATAN:\r\nTerdapat 
+110404909	 pengguna yang aktif!\r\nBila layanan SchoolPay Server dihentikan, koneksi pengguna tersebut akan terputus!\r\nLanjutkan?
+110405041	Hentikan layanan SCHOOLPAY SECURE SERVER?
+110405057	Clear Conn?
+110405107	Hapus riwayat pemantauan?
+110405231	belum ada data riwayat login
+110405241	localip
+110405256	 data riwayat login
+110405298	RIWAYAT LOGIN
+110405319	Riwayat Login
+110405342	RiwayatLoginForm
+110405363	SELECT * FROM jbsfina.userpos WHERE replid = 
+110405379	IP Address
+110405394	Log Time
+110405426	SELECT v.nama AS vendor, u.nama AS petugas, DATE_FORMAT(ul.logtime, '%d-%b-%Y %H:%i') AS logtime, ul.localip, ul.device\r\n                              FROM jbsfina.userposlog ul, jbsfina.vendor v, jbsfina.userpos u\r\n                             WHERE ul.vendorid = v.vendorid\r\n                               AND ul.userid = u.userid\r\n                               AND YEAR(ul.logtime) = {0} \r\n                               AND MONTH(ul.logtime) = {1}\r\n                               AND DAY(ul.logtime) = {2}\r\n                             ORDER BY logtime DESC
+110405670	 sudah digunakan. Gunakan user id yang lain
+110405681	User Id 
+110405744	UPDATE jbsfina.userpos\r\n                               SET userid = '{0}', nama = '{1}', aktif = 1, keterangan = '{2}', passlength = {4}\r\n                             WHERE replid = {3}
+110405934	password
+110405951	passlength
+110405983	Panjang user id minimal 3 karalter
+110406006	Panjang nama minimal 5 karalter
+110406028	Panjang password minimal 5 karalter
+110406054	Password tidak sama
+110406088	SELECT COUNT(replid) FROM jbsfina.userpos WHERE userid = '{0}' AND replid <> {1}
+110406169	SELECT COUNT(replid) FROM jbsfina.userpos WHERE userid = '{0}'
+110406228	INSERT INTO jbsfina.userpos\r\n                           SET userid = '{0}', nama = '{1}', password = md5('{2}'), aktif = 1, keterangan = '{3}', passlength = {4}
+110406370	txUserName
+110406381	txUserId
+110406448	UPDATE jbsfina.userpos\r\n                               SET userid = '{0}', nama = '{1}', aktif = 1, keterangan = '{2}', password = md5('{3}'), passlength = {5}\r\n                             WHERE replid = {4}
+110406716	Tidak dapat menghapus user ini karena sudah melakukan transaksi!
+110406755	DELETE FROM jbsfina.vendoruser WHERE userid = '{0}'
+110406773	Hapus user ini?
+110406821	DELETE FROM jbsfina.userpos WHERE replid = {0}
+110406896	UPDATE jbsfina.userpos SET aktif = {0} WHERE replid = {1}
+110406925	txKeterangan
+110406946	txPassword1
+110406959	Simpan
+110406974	btSimpan
+110406988	txPassword2
+110407008	UserPosDialogForm
+110407038	Konfirmasi Password
+110407048	Staf Vendor
+110407080	edit
+110407098	aktifid
+110407114	SELECT COUNT(replid) FROM jbsfina.paymenttrans WHERE userid = '{0}'
+110407126	Hapus
+110407133	Edit
+110407172	tingkat
+110407211	Manager
+110407226	Operator
+110407248	belum ada data vendor
+110407257	. 
+110407267	DAFTAR PENGGUNA SCHOOLPAY POS
+110407284	\r\nKeterangan: 
+110407337	btAddUser
+110407359	STAF VENDOR
+110407371	UserPosForm
+110407385	Tambah Staf
+110407413	SELECT * FROM jbsfina.vendor WHERE replid = 
+110407472	Set Non Aktif
+110407516	SELECT * FROM jbsfina.userpos
+110407544	SELECT v.nama, vu.tingkat \r\n                              FROM jbsfina.vendor v, jbsfina.vendoruser vu\r\n                             WHERE vu.vendorid = v.vendorid\r\n                               AND vu.userid = '{0}'\r\n                             ORDER BY v.nama
+110407685	namasiswa
+110407703	Siswa: 
+110407708	 (
+110407716	Pembayaran Vendor
+110407733	jenistrans
+110407756	Pembayaran Iuran Wajib 
+110407794	namapenerimaan
+110407833	Pembayaran Iuran Sukarela 
+110407847	Id Trans: 
+110407852	\r\n
+110407864	Ket: 
+110407874	tidak ditemukan ditemukan data transaksi
+110407894	transactionid
+110408098	namauser
+110408110	waktu
+110408130	Pegawai: 
+110408147	namavendor
+110408178	namapegawai
+110408193	CSV
+110408205	btCsv
+110408217	lihat
+110408235	muat ulang
+110408251	lnRefresh
+110408264	Cetak
+110408282	btCetak
+110408300	btCloseForm
+110408316	dgvDaftar
+110408325	ClientTransForm
+110408333	-
+110408350	lbInfo
+110408371	(Semua Petugas)
+110408403	SELECT userid, nama FROM jbsfina.userpos WHERE aktif = 1 ORDER BY nama
+110408409	@0#
+110408450	 data transaksi
+110408467	ditemukan 
+110408488	LAPORAN TRANSAKSI PELANGGAN
+110408522	Tahoma
+110408556	RIWAYAT TRANSAKSI PELANGGAN
+110408569	label4
+110408590	txClientId
+110408618	vtCari
+110408633	txClientName
+110408647	cbBulan
+110408659	Bulan
+110408665	...
+110408683	btLihat
+110408693	cbTahun
+110408966	{Semua Vendor}
+110409005	SELECT DISTINCT vu.vendorid, v.nama\r\n                              FROM jbsfina.vendoruser vu, jbsfina.vendor v\r\n                             WHERE vu.vendorid = v.vendorid\r\n                               AND vu.userid = '{0}'\r\n                             ORDER BY v.nama
+110409190	SELECT p.transactionid, DATE_FORMAT(p.waktu, '%d-%b-%Y %H:%i') AS waktu,\r\n                                   v.nama as namavendor, u.nama AS namauser, p.jenis, IFNULL(p.nis, '') AS nis, IFNULL(s.nama, '') AS namasiswa,\r\n                                   IFNULL(p.nip, '') AS nip, IFNULL(pg.nama, '') AS namapegawai, p.jumlah, p.keterangan, p.jenistrans, p.iddatapenerimaan,\r\n                                   IFNULL(dp.nama, '') AS namapenerimaan,\r\n                                   IF(p.valmethod = 1, 'PIN', 'Agreement') AS valmethod   \r\n                              FROM jbsfina.paymenttrans p\r\n                             INNER JOIN jbsfina.vendor v ON p.vendorid = v.vendorid\r\n                             INNER JOIN jbsfina.userpos u ON p.userid = u.userid\r\n                              LEFT JOIN jbsakad.siswa s ON p.nis = s.nis\r\n                              LEFT JOIN jbssdm.pegawai pg ON p.nip = pg.nip\r\n                              LEFT JOIN jbsfina.datapenerimaan dp ON p.iddatapenerimaan = dp.replid\r\n                             WHERE p.tanggal = '{0}'
+110409204	{0}-{1}-{2}
+110409234	 AND p.userid = '{0}'
+110409270	 AND p.vendorid = '{0}'
+110409300	 ORDER BY p.waktu DESC, p.transactionid
+110409322	LAPORAN TRANSAKSI HARIAN
+110409355	RIWAYAT TRANSAKSI HARIAN
+110409384	cbTanggal
+110409423	cbVendor
+110409432	cbUser
+110409451	Riwayat Transaksi Harian
+110409468	DailyTransForm
+110409754	Kartu telah di non-aktif kan. Kartu yang baru dapat dibuat di JIBAS Card Maker
+110409793	SELECT p.nip, max(p.replid) \r\n                              FROM jbsfina.paymentid p, jbssdm.pegawai pg\r\n                             WHERE p.nip = pg.nip\r\n                             GROUP BY p.nip\r\n                             ORDER BY pg.nama
+110409992	replid
+110410024	aktif
+110410047	System.Int32
+110410049	status
+110410065	paymentid
+110410076	nama
+110410083	Nama
+110410089	NIP
+110410100	ubah
+110410119	Tanggal Buat
+110410132	Payment Id
+110410151	Ubah
+110410160	Status
+110410200	UPDATE jbsfina.paymentid SET aktif = {0} WHERE replid = {1}
+110410243	Set Non AKtif
+110410259	Set Aktif
+110410271	Aktif
+110410287	DAFTAR KARTU PEMBAYARAN PEGAWAI
+110410309	KARTU PEMBAYARAN PEGAWAI
+110410346	KartuPegawaiForm
+110410387	Kartu Pembayaran Pegawai
+110410410	HasilUjianKelasForm.InitComboBox
+110410416	NIS
+110410435	SELECT departemen \r\n                          FROM jbsakad.departemen\r\n                         WHERE aktif = 1\r\n                         ORDER BY urutan
+110410508	SELECT pg.nama, p.paymentid, DATE_FORMAT(p.tanggal, '%d-%b-%Y %H:%i') as tanggal, p.aktif\r\n                              FROM jbsfina.paymentid p, jbssdm.pegawai pg\r\n                             WHERE p.nip = pg.nip\r\n                               AND p.replid = {0}
+110410735	Non Aktif
+110410753	SELECT replid, tingkat\r\n                              FROM jbsakad.tingkat\r\n                             WHERE departemen = '{0}'\r\n                               AND aktif = 1 \r\n                             ORDER BY urutan
+110410764	 (A)
+110410917	SELECT replid, kelas\r\n                              FROM jbsakad.kelas\r\n                             WHERE idtahunajaran = {0}\r\n                               AND idtingkat = {1}\r\n                               AND aktif = 1 \r\n                             ORDER BY kelas
+110411083	SELECT replid, tahunajaran, aktif\r\n                              FROM jbsakad.tahunajaran\r\n                             WHERE departemen = '{0}'\r\n                               AND aktif = 1 \r\n                             ORDER BY aktif DESC, tglmulai DESC
+110411341	SELECT s.nama, p.paymentid, DATE_FORMAT(p.tanggal, '%d-%b-%Y %H:%i') as tanggal, p.aktif\r\n                              FROM jbsfina.paymentid p, jbsakad.siswa s\r\n                             WHERE p.nis = s.nis\r\n                               AND p.replid = {0}
+110411586	HasilUjianKelasForm.LoadComboBoxes
+110411669	SELECT p.nis, max(p.replid) \r\n                              FROM jbsfina.paymentid p, jbsakad.siswa s\r\n                             WHERE p.nis = s.nis \r\n                               AND s.idkelas = {0}\r\n                             GROUP BY p.nis\r\n                             ORDER BY s.nama
+110411779	tabPage2
+110411793	txSearchKey
+110411810	pnSiswa
+110411824	Pilih Siswa
+110411856	btPilihSiswa
+110411890	Pilih Pegawai
+110411901	tabPage3
+110411918	btPilihPegawai
+110411934	pnPegawai
+110411947	cbBagian
+110411957	Bagian:
+110411975	SearchUserForm
+110411992	lbSearchResult
+110412018	/af775uticl
+110412042	siswa
+110412094	SearchUserForm.btPilihSiswa_Click()
+110412098	tabPage1
+110412112	tabControl1
+110412147	Cari Siswa / Pegawai
+110412167	cbDepartemenCari
+110412180	Kata Kunci
+110412192	Pegawai
+110412204	Siswa
+110412227	Cari
+110412246	cbSearchFrom
+110412262	cbSearchBy
+110412276	Nomor Induk
+110412306	/n1egm9qxlf
+110412334	/n109q0uctq
+110412348	/mnj3s2cz93
+110412362	JIBAS SchoolPay Secure Server
+110412376	/jdrwd28u94
+110412390	10.5
+110412421	4589
+110412443	27.JUL.2026
+110412464	192.168.1.20
+110412478	6.0
+110412491	kebersamaan
+110412502	root
+110412509	7001
+110412523	Server={0};Port={1};Protocol=TCP;User Id={2};Password={3};Database={4};Connection Timeout=3600;Allow User Variables=True;
+110412533	jbsfina
+110412558	/nd0c2nuxd2
+110412572	/sakq6sb1gp
+110412586	/8k02vkwnrf
+110412600	/sn1pavbz2e
+110412614	/c3hgdm87w6
+110412628	/bgjgqwz7tj
+110412642	/n7brlwjco9
+110412656	/4x0qcivsqb
+110412684	/81f6u6yu3w
+110412712	/no3j712c73
+110412734	/lnddcc9wh5
+110412740	/wzxrru1mpz
+110412762	/2bks7ro81y
+110412768	/po95tscryz
+110412790	/nd49tx68w2
+110412816	Koneksi ke Server Lisensi terhubung kembali
+110412834	KONEKSI KE SERVER LISENSI TERPUTUS
+110412917	Tidak dapat menghubungi server registrasi online
+110412930	SELECT YEAR(NOW()), MONTH(NOW()), DAY(NOW()), HOUR(NOW()), MINUTE(NOW()), SECOND(NOW())
+110413024	Runtime.Application.CurrentTime
+110413163	Temp
+110413212	Config.Environtment.InitSysPath
+110413231	Lisensi aktif (Online)
+110413242	Stop
+110413266	Lisensi sebelumnya masih aktif (Online)
+110413280	KeepAlive
+110413335	Request method: 
+110413343	/
+110413352	Request protocol: 
+110413372	Request URL: 
+110413395	Request headers: {0}
+110413422	Request body: {0}
+110413428	 : 
+110413449	Cookie
+110413462	: 
+110413487	Content-Length
+110413492	; 
+110413500	=
+110413519	HTTP/1.1
+110413530	HEAD
+110413539	PUT
+110413558	Content-Type
+110413564	GET
+110413605	{0} ({1} x {2})
+110413618	A4
+110413630	TRIAL
+110413651	krakatau.jibas.net
+110413679	Server Lisensi
+110413690	7007
+110413704	{NODEPT}
+110413722	http://
+110413753	Invalid offset & size!
+110413770	Invalid reserve capacity!
+110413777	#=zaSk35TA=
+110413788	#=zaSk35TA=
+110413802	#=zQuAdL2I=
+110413829	No Content
+110413856	Partial Content
+110413876	Reset Content
+110413902	Multi-Status
+110413920	IM Used
+110413947	Already Reported
+110413974	Multiple Choices
+110413991	Found
+110414015	Moved Permanently
+110414027	Not Modified
+110414043	See Other
+110414052	Switch Proxy
+110414068	Use Proxy
+110414088	OPTIONS
+110414101	DELETE
+110414130	Status: {0}
+110414142	TRACE
+110414154	Protocol: 
+110414172	Status phrase: 
+110414182	Body: {0}
+110414197	Headers: {0}
+110414215	Switching Protocols
+110414230	Continue
+110414249	Processing
+110414282	Created
+110414296	Early Hints
+110414313	Non-Authoritative Information
+110414328	Accepted
+110414337	Length Required
+110414348	Gone
+110414367	Conflict
+110414383	Precondition Failed
+110414417	Payload Too Large
+110414442	Unsupported Media Type
+110414457	URI Too Long
+110414473	Range Not Satisfiable
+110414509	Expectation Failed
+110414548	Misdirected Request
+110414563	Locked
+110414590	Unprocessable Entity
+110414609	Temporary Redirect
+110414627	Bad Request
+110414648	Permanent Redirect
+110414669	Unauthorized
+110414695	Forbidden
+110414718	Payment Required
+110414727	Method Not Allowed
+110414743	Not Found
+110414766	Not Acceptable
+110414805	Proxy Authentication Required
+110414833	Request Timeout
+110414848	Service Unavailable
+110414870	Bad Gateway
+110414890	Gateway Timeout
+110414928	HTTP Version Not Supported
+110414963	Variant Also Negotiates
+110414993	Insufficient Storage
+110415014	Not Extended
+110415034	Loop Detected
+110415059	Network Authentication Required
+110415081	Unknown
+110415126	Failed Dependency
+110415150	Upgrade Required
+110415166	Too Early
+110415174	Precondition Required
+110415191	Unassigned
+110415210	Too Many Requests
+110415250	Request Header Fields Too Large
+110415272	Unavailable For Legal Reasons
+110415300	Internal Server Error
+110415336	Not Implemented
+110415373	audio/mpeg
+110415384	.mp3
+110415392	image/gif
+110415407	.gif
+110415420	image/jpeg
+110415429	image/png
+110415440	.png
+110415470	image/svg+xml
+110415477	.svg
+110415503	video/mp4
+110415514	.mp4
+110415539	application/atom+xml
+110415551	.atom
+110415556	application/fastsoap
+110415572	.fastsoap
+110415587	application/postscript
+110415593	.ps
+110415619	.css
+110415635	text/html
+110415647	.html
+110415653	.js
+110415668	text/css
+110415685	.xml
+110415711	text/javascript
+110415715	application/gzip
+110415727	.gzip
+110415742	text/xml
+110415752	.json
+110415781	.map
+110415804	application/json
+110415827	application/pdf
+110415838	.pdf
+110415858	application/zip
+110415865	.zip
+110415918	UPDATE jbsfina.vendor\r\n                           SET vendorid = '{0}', nama = '{1}', keterangan = '{2}', terimaiuran = {4}, kirimpesan = {5}\r\n                         WHERE replid = {3}
+110416105	SELECT COUNT(replid) FROM jbsfina.vendor WHERE vendorid = '{0}'
+110416134	terimaiuran
+110416163	Panjang Vendor Id minimal 3 karakter
+110416176	kirimpesan
+110416244	Panjang nama Vendor minimal 5 karakter
+110416267	SELECT COUNT(replid) FROM jbsfina.vendor WHERE vendorid = '{0}' AND replid <> {1}
+110416354	 sudah digunakan. Gunakan vendor id yang lain
+110416371	Vendor Id 
+110416391	Kirim Pesan
+110416410	Terima Iuran
+110416433	chTerimaIuran
+110416477	vendor bisa menerima pembayaran iuran siswa 
+110416494	chKirimPesan
+110416539	kirim pesan Telegram / SMS kepada Siswa / Pegawai setiap terjadi transaksi di vendor ini
+110416609	Hapus petugas ini?
+110416632	VendorDialogForm
+110416679	INSERT INTO jbsfina.vendor\r\n                           SET vendorid = '{0}', nama = '{1}', tanggal = NOW(), aktif = 1, keterangan = '{2}',\r\n                               terimaiuran = {3}, kirimpesan = {4}
+110416873	txVendorName
+110416894	txVendorId
+110417083	SELECT COUNT(replid) FROM jbsfina.paymenttrans WHERE vendorid = '{0}'
+110417135	Tidak dapat menghapus vendor ini karena sudah melakukan transaksi!
+110417160	DELETE FROM jbsfina.vendoruser WHERE vendorid = '{0}' AND userid = '{1}'
+110417273	SELECT userid, nama \r\n                              FROM jbsfina.userpos\r\n                             WHERE aktif = 1\r\n                             ORDER BY nama
+110417390	SELECT u.userid, u.nama, vu.tingkat\r\n                              FROM jbsfina.vendoruser vu, jbsfina.userpos u\r\n                             WHERE vu.userid = u.userid\r\n                               AND vu.vendorid = '{0}'
+110417401	Petugas 
+110417439	SELECT * FROM jbsfina.vendor
+110417451	SELECT COUNT(replid) FROM jbsfina.vendoruser WHERE vendorid = '{0}' AND userid = '{1}'
+110417464	Petugas > 
+110417550	User sudah didaftarkan sebagai petugas
+110417629	INSERT INTO jbsfina.vendoruser\r\n                           SET vendorid = '{0}', userid = '{1}', tingkat = {2}
+110417702	Hapus vendor ini?
+110417742	DELETE FROM jbsfina.vendoruser WHERE vendorid = '{0}'
+110417810	DELETE FROM jbsfina.vendor WHERE replid = {0}
+110417886	UPDATE jbsfina.vendor SET aktif = {0} WHERE replid = {1}
+110417930	rbManager
+110417947	rbOperator
+110417962	Pilih Staf
+110417978	cbPetugas
+110417988	SELECT COUNT(*)\r\n                              FROM jbsuser.landlord\r\n                             WHERE password = md5('{0}')
+110418005	VendorForm
+110418115	Password salah!
+110418153	jibas
+110418216	VENDOR
+110418245	btAddVendor
+110418271	splitContainer1
+110418275	dgvVendor
+110418295	Tambah Vendor
+110418307	panel3
+110418323	pnPetugas
+110418358	lbPetugasVendor
+110418368	panel2
+110418385	dgvPetugas
+110418396	Staf
+110418404	Tambah
+110418423	btTambah
+110418447	File telah disimpan!
+110418458	.jpg
+110418466	Direktori:
+110418480	txDirectory
+110418497	DPI:
+110418509	cbDpi
+110418537	Ukuran
+110418554	label6
+110418563	txFileName
+110418573	cbPaper
+110418588	btSaveTo
+110418598	cbOrientation
+110418610	File:
+110418624	Orientasi:
+110418642	Ukuran:
+110418675	JPG files|*.jpg|All files|*.*
+110418695	txPassword
+110418717	Administrator JIBAS
+110418730	Label1
+110418742	txNip
+110418767	btClose
+110418777	btLogin
+110418787	Landscape
+110418797	Potrait
+110418813	LoginForm
+110418826	150
+110418835	96
+110418870	PrintSaveDialogForm.LoadPrinterSetting
+110418876	300
+110418885	Nama file belum diisi!
+110418920	Keterangan:
+110418950	Akademik
+110418968	(Semua Pegawai)
+110418976	SearchUserForm.InitComboBoxesSiswa()
+110418999	Non Akademik
+110419061	SELECT replid, tingkat\r\n                              FROM jbsakad.tingkat \r\n                             WHERE departemen = '{0}'\r\n                               AND aktif = 1\r\n                             ORDER BY urutan ASC
+110419202	btPrint
+110419215	btSave
+110419236	PrintSaveDialogForm
+110419248	Print
+110419278	Cetak & Simpan
+110419317	SELECT departemen FROM jbsakad.departemen WHERE aktif = 1 ORDER BY urutan
+110419365	,
+110419421	SearchUserForm.InitCbDepartemenCari()
+110419441	(Semua Departemen)
+110419470	success
+110419487	Cari Siswa
+110419492	Panjang kata kunci minimal 3 karakter
+110419507	info
+110419516	failed
+110419555	p.nip
+110419564	s.nama
+110419576	s.nis
+110419594	SearchUserForm.DoSearch()
+110419607	p.nama
+110419626	Data tidak ditemukan
+110419663	Ditemukan 
+110419698	SearchUserForm.ShowSearchResult()
+110419710	 data
+110419729	SELECT k.replid, k.kelas\r\n                              FROM jbsakad.kelas k, jbsakad.tahunajaran ta\r\n                             WHERE k.idtahunajaran = ta.replid  \r\n                               AND ta.departemen = '{0}'\r\n                               AND ta.aktif = 1\r\n                               AND k.idtingkat = {1}\r\n                               AND k.aktif = 1\r\n                             ORDER BY kelas
+110419954	Cari Pegawai
+110420027	JIBAS SCHOOLPAY SECURE SERVER AKTIF
+110420045	- Basis Data terhubung ke {0}:{1}
+110420069	- Koneksi SchoolPay POS Android tersedia di {0}:{1}
+110420143	Gagal memulai JIBAS SCHOOLPAY SECURE SERVER!
+110420216	Invalid Response Length
+110420237	MainManager.StopServer()
+110420274	Gagal memulai JIBAS SchoolPay Secure Server!
+110420351	Tidak dapat menghubungi basis data JIBAS!
+110420367	tidak terhubung
+110420405	Tunggu beberapa menit sampai port {0} tersedia kembali
+110420472	Tidak dapat memulai server karena port {0} tidak tersedia!
+110420498	bt-loghistory
+110420520	bt-play16
+110420542	bt-petunjuk
+110420553	bt-ruangan
+110420568	bt_print
+110420584	bt-save161
+110420600	bt-save16
+110420613	bt-welcome
+110420635	bt_timadmin
+110420645	info0
+110420660	database
+110420673	info3
+110420685	info2
+110420697	info1
+110420713	info5
+110420725	info4
+110420748	ERROR: Invalid Response (
+110420766	SUCCESS
+110420769	andr_user_48
+110420780	Yim.Jibas.SchoolPay.Server.Properties.Resources
+110420803	bt-card44
+110420818	bt-audit
+110420851	bt-clientlist32
+110420871	bt-close16
+110420889	bt-clientlist44
+110420896	bt-closeform16
+110420918	bt-close161
+110420943	bt-closeform161
+110420971	bt-daftarsoal-tema
+110420981	bt_csv2
+110421019	R34tPpzdoRAgz27nAiUm5MZHOl56xf3NEY0rYluMSO1CXxr7xjGpqRa4UnVdktf9NmRR1GEPo8JgLMjQtx8EPDXmyvMlFGbZispkVQ6gVq1h8tj835kmkRj9FeS6uS9Y
+110421136	DatabaseIdFinder.DoGetCurrentDatabaseId()
+110421152	splang01
+110421190	splang03
+110421201	splang02
+110421220	splang05
+110421239	splang04
+110421253	kelompok
+110421265	info7
+110421277	info6
+110421292	license32
+110421306	key
+110421319	logo-jibas-2015-44
+110421340	logo-jibas-2015-20
+110421358	logo-schoolpay-server
+110421379	petunjuk
+110421394	logout24
+110421408	service44
+110421424	riwayat44
+110421442	totray
+110421456	supportware
+110421489	yim-logo-new-notext
+110421545	CREATE TABLE `jbsfina`.`splang00` ( \r\n                      `tipe` varchar(20) NOT NULL, \r\n                      `nilai` varchar(100) NOT NULL, \r\n                      `keterangan` varchar(255) default NULL, \r\n                      PRIMARY KEY  (`tipe`)\r\n                    ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+110421770	splang07
+110421781	splang06
+110421800	splang09
+110421819	splang08
+110421838	splang11
+110421849	splang10
+110421868	ABCDEFGHJKLMNPQRSTUVWXYZ123456789
+110421887	splang12
+110421892	SELECT COUNT(*) \r\n                          FROM information_schema.tables \r\n                         WHERE table_schema='jbsfina' \r\n                           AND table_name='splang00'
+110422026	@uha
+110422040	USE jbsfina
+110422053	@uhd
+110422064	@uhc
+110422079	@uhb
+110422084	@uhg
+110422099	@uhf
+110422110	@uhe
+110422119	SELECT COUNT(*) \r\n                                         FROM `information_schema`.`routines` \r\n                                        WHERE specific_name = '{0}' \r\n                                          AND routine_schema = 'jbsfina' \r\n                                          AND routine_type = 'PROCEDURE'
+110422130	@uhi
+110422137	@uhh
+110422290	INSERT INTO `jbsfina`.`splang00` \r\n                       SET tipe='{0}', nilai='{1}', \r\n                           keterangan='Please Don\'t Change OR Delete This Value'
+110422432	DBID3
+110422444	DBID2
+110422456	DBID1
+110422472	DBID5
+110422484	DBID4
+110422500	DBID8
+110422512	DBID7
+110422524	DBID6
+110422531	jbsfina.splang02
+110422568	jbsfina.splang07
+110422609	jbsfina.splang10
+110422631	jbsfina.splang09
+110422654	jbsfina.splang01
+110422668	SELECT YEAR(NOW()), MONTH(NOW()), DAY(NOW()), \r\n                                        HOUR(NOW()), MINUTE(NOW()), SECOND(NOW())
+110422761	CREATE DEFINER=`root`@`%` PROCEDURE `
+110422792	Licensing system has been altered!
+110422819	SHOW VARIABLES LIKE 'max_allowed_packet'
+110422896	DbIdEngine.GetMaxAllowedPacket
+110422927	DbIdEngine.GetDatabaseId
+110422956	SELECT COUNT(*) \r\n                                        FROM `information_schema`.`TABLES` \r\n                                       WHERE TABLE_SCHEMA = 'jbsfina'
+110423051	  SET uha = "
+110423063	BEGIN
+110423086	  SET uhb = "
+110423095	";
+110423110	  SET uhd = "
+110423130	  SET uhc = "
+110423154	  SET uhe = "
+110423178	  SET uhg = "
+110423198	  SET uhf = "
+110423202	  SET uhi = "
+110423222	  SET uhh = "
+110423232	x2
+110423246	END
+110423269	JibasSchoolPayLicense
+110423291	license.enc
+110423348	 (OUT uha VARCHAR(128), OUT uhb VARCHAR(128), OUT uhc VARCHAR(128), 
+110423357	` 
+110423401	  OUT uhd VARCHAR(128), OUT uhe VARCHAR(128), OUT uhf VARCHAR(128), 
+110423458	  OUT uhg VARCHAR(128), OUT uhh VARCHAR(128), OUT uhi VARCHAR(128)) 
+110423719	MaxTrans
+110423764	ResManager.ReadResource
+110423802	select * from Win32_DiskDrive where InterfaceType='SCSI' or InterfaceType='IDE'
+110423817	Versi
+110423850	Size
+110423857	Seri
+110423869	Model
+110423890	System.DateTime
+110423903	KodeRs
+110423904	Info3
+110423916	Info2
+110423928	Info1
+110423956	#
+110424069	.bmp
+110424084	font/ttf
+110424099	image/jpm
+110424110	.jpm
+110424126	image/bmp
+110424132	image/jpx
+110424147	.jpx
+110424169	image/jrx
+110424180	.jrx
+110424205	image/tiff
+110424217	.tiff
+110424225	.wmf
+110424241	image/emf
+110424252	.emf
+110424266	.http
+110424282	image/wmf
+110424299	.s-http
+110424318	message/http
+110424326	.soap
+110424378	application/soap+xml
+110424400	application/sql
+110424415	.sql
+110424434	application/xslt+xml
+110424446	.xslt
+110424459	application/zlib
+110424471	.zlib
+110424485	audio/aac
+110424496	.aac
+110424526	audio/ac3
+110424533	.ac3
+110424547	.ttf
+110424563	audio/ogg
+110424574	.ogg
+110424595	text/strings
+110424625	text/uri-list
+110424636	.url
+110424640	.H265
+110424657	video/H264
+110424669	.H264
+110424679	.mpeg
+110424692	video/H265
+110424714	.raw
+110424731	video/mpeg
+110424751	Set-Cookie
+110424767	video/raw
+110424777	; Domain=
+110424798	; Max-Age=
+110424815	; Secure
+110424825	; Path=
+110424836	.mesh
+110424857	message/s-http
+110424875	.vrml
+110424888	model/mesh
+110424899	text/csv
+110424910	.csv
+110424927	model/vrml
+110424935	text/plain
+110424944	.plain
+110424966	text/richtext
+110424982	.richtext
+110424999	text/rtf
+110425010	.rtf
+110425033	text/rtx
+110425044	.rtx
+110425058	.strings
+110425074	text/sgml
+110425086	.sgml
+110425091	The last operation completed on the socket was not a receive or send
+110425114	TcpServer.Stop()
+110425204	0123456789abcdefghijklmnopqrstuvwxyz
+110425225	NotSet
+110425255	Image Error
+110425267	right
+110425276	center
+110425280	"""
+110425288	"
+110425297	No
+110425338	dd/MM/yyyy HH:mm:ss
+110425347	Cache-Control
+110425359	Allow
+110425372	; HttpOnly
+110425391	max-age={0}
+110425433	Invalid HTTP request!
+110425469	TCP server is already started!
+110425475	TcpServer.Start()
+110425496	TCP Server started
+110425515	Android Server: 
+110425552	TCP server is not started!
+110425587	TCP Server stopped
+110425609	DriveDetectorForm
+110425649	SELECT * FROM Win32_DiskDrive WHERE InterfaceType='USB'
+110425700	ASSOCIATORS OF {Win32_DiskDrive.DeviceID='
+110425719	DeviceID
+110425783	'} WHERE AssocClass = Win32_DiskDriveToDiskPartition
+110425848	ASSOCIATORS OF {Win32_DiskPartition.DeviceID='
+110425863	Selasa
+110425875	Senin
+110425884	Minggu
+110425891	Jum'at
+110425903	Kamis
+110425914	Rabu
+110425927	Drive path must be supplied to register for Query remove.
+110425942	Saturday
+110425991	\
+110426038	ABCDEFGHIJKLMNOPQRSTUVWXYZ
+110426047	:\
+110426065	This is invisible form. To see DriveDetector code click View Code
+110426152	logged.in
+110426169	logged.out
+110426191	Waktu server: -
+110426200	Sesi: 
+110426214	Jumlah Client: 
+110426229	Registrasi: 
+110426242	Registrasi: -
+110426252	Sesi: -
+110426286	Jumlah Client: -
+110426311	Basis data: {0}@{1}:{2}
+110426327	User: {0}
+110426341	Versi: {0}.{1} - {2}
+110426375	'} WHERE AssocClass = Win32_LogicalDiskToPartition
+110426435	Win32_PhysicalMedia.Tag='
+110426446	Name
+110426467	SerialNumber
+110426508	signature
+110426556	UsbDiskFinder.DoSearchAllUsbDisk
+110426581	Aplikasi JIBAS SchoolPay Secure Server telah berjalan. Periksa di System Tray Windows
+110426627	Basis data: -
+110426640	lbDatabase
+110426671	toolStripStatusLabel1
+110426691	Versi: -
+110426707	lbVersion
+110426736	toolStripStatusLabel2
+110426763	toolStripStatusLabel3
+110426772	lbUser
+110426799	lbServerTime
+110426840	toolStripStatusLabel4
+110426860	toolStripStatusLabel5
+110426876	lbRegInfo
+110426894	Basis data: 
+110426918	Logout?
+110426939	Waktu server: 
+110426954	Silahkan login sebagai Administrator JIBAS untuk menutup aplikasi dan layanan JIBAS SchoolPay Secure Server
+110426964	User: -
+110427092	Keluar dari JIBAS SchoolPay Secure Server?
+110427111	statusStrip1
+110427169	rbnBtnTransaksiPelanggan.SmallImage
+110427192	Transaksi Harian
+110427259	Transaksi Pelanggan
+110427282	rbnBtnUserPos.SmallImage
+110427293	Pengguna
+110427315	rbnBtnVendor.SmallImage
+110427345	Daftar Vendor
+110427389	rbnBtnRiwayatLogin.SmallImage
+110427393	SchoolPay
+110427408	lbRegMax
+110427441	rbnBtnService.SmallImage
+110427478	rbnBtnDaftarClient.SmallImage
+110427506	Daftar Koneksi
+110427535	rbnBtnKartuSiswa.SmallImage
+110427545	Laporan
+110427561	Kartu Siswa
+110427611	rbnBtnKartuPegawai.SmallImage
+110427619	rbnBtnTransaksiHarian.SmallImage
+110427639	Kartu Pegawai
+110427651	Trebuchet MS
+110427661	ribbon1
+110427676	Segoe UI
+110427683	rbnBtnToTray.Image
+110427692	Logout
+110427722	ribbonButton1
+110427766	notifyIcon1.Icon
+110427776	SERVER
+110427788	Form1
+110427807	MainForm
+110427831	JIBAS SchoolPay Secure Server NON AKTIF
+110427845	Gagal menghentikan JIBAS SchoolPay Secure Server!
+110427915	Pengaturan
+110427929	Konfigurasi
+110427962	rbnBtnBasisData.SmallImage
+110427989	rbnBtnServer.SmallImage
+110428027	rbnBtnLisensi.SmallImage
+110428040	rbnBtnPetunjuk.SmallImage
+110428056	Informasi
+110428072	rbnBtnRiwayat.SmallImage
+110428105	Riwayat
+110428159	rbnBtnTentang.SmallImage
+110461043	CREATE TABLE  `jbsfina`.`datatabunganp` (\r\n                          `replid` int(10) unsigned NOT NULL AUTO_INCREMENT,\r\n                          `nama` varchar(100) NOT NULL,\r\n                          `rekkas` varchar(15) NOT NULL,\r\n                          `rekutang` varchar(15) DEFAULT NULL,\r\n                          `aktif` tinyint(1) unsigned NOT NULL DEFAULT '1',\r\n                          `keterangan` varchar(255) DEFAULT NULL,\r\n                          `departemen` varchar(50) NOT NULL,\r\n                          `info1` varchar(255) DEFAULT NULL,\r\n                          `info2` varchar(255) DEFAULT NULL,\r\n                          `info3` varchar(255) DEFAULT NULL,\r\n                          `ts` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,\r\n                          `token` smallint(5) unsigned NOT NULL DEFAULT '0',\r\n                          `issync` tinyint(1) unsigned NOT NULL DEFAULT '0',\r\n                          PRIMARY KEY (`replid`),\r\n                          KEY `FK_datatabunganp_rekakun_kas` (`rekkas`),\r\n                          KEY `FK_datatabunganp_rekakun_utang` (`rekutang`),\r\n                          KEY `FK_datatabunganp_departemen` (`departemen`),\r\n                          KEY `IX_datatabunganp_ts` (`ts`,`issync`),\r\n                          CONSTRAINT `FK_datatabunganp_departemen` FOREIGN KEY (`departemen`) REFERENCES `jbsakad`.`departemen` (`departemen`) ON UPDATE CASCADE,\r\n                          CONSTRAINT `FK_datatabunganp_rekakun_kas` FOREIGN KEY (`rekkas`) REFERENCES `rekakun` (`kode`) ON UPDATE CASCADE,\r\n                          CONSTRAINT `FK_datatabunganp_rekakun_utang` FOREIGN KEY (`rekutang`) REFERENCES `rekakun` (`kode`) ON UPDATE CASCADE\r\n                        ) ENGINE=InnoDB DEFAULT CHARSET=utf8
+110461219	ALTER TABLE `jbsfina`.`multitransdata` ADD INDEX `IX_multitransdata`(`notrans`, `kategori`)
+110461353	SELECT COUNT(*)\r\n                      FROM information_schema.TABLES\r\n                     WHERE TABLE_SCHEMA = 'jbsfina'\r\n                       AND TABLE_NAME = 'datatabunganp'
+110461373	USE `jbsfina`
+110461646	SELECT COUNT(*)\r\n                      FROM information_schema.TABLES\r\n                     WHERE TABLE_SCHEMA = 'jbsfina'\r\n                       AND TABLE_NAME = 'tabunganp'
+110462356	CREATE TABLE  `jbsfina`.`tabunganp` (\r\n                          `replid` int(10) unsigned NOT NULL AUTO_INCREMENT,\r\n                          `idtabungan` int(10) unsigned NOT NULL,\r\n                          `idjurnal` int(10) unsigned NOT NULL,\r\n                          `tanggal` datetime NOT NULL,\r\n                          `nip` varchar(30) CHARACTER SET utf8 NOT NULL,\r\n                          `debet` decimal(15,0) NOT NULL,\r\n                          `kredit` decimal(15,0) NOT NULL,\r\n                          `petugas` varchar(30) CHARACTER SET utf8 NOT NULL,\r\n                          `keterangan` varchar(255) DEFAULT NULL,\r\n                          `alasan` varchar(500) DEFAULT NULL,\r\n                          `ispayment` tinyint(1) unsigned NOT NULL DEFAULT '0',\r\n                          `info1` varchar(255) DEFAULT NULL,\r\n                          `info2` varchar(255) DEFAULT NULL,\r\n                          `info3` varchar(255) DEFAULT NULL,\r\n                          `ts` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,\r\n                          `token` smallint(5) unsigned NOT NULL DEFAULT '0',\r\n                          `issync` tinyint(1) unsigned NOT NULL DEFAULT '0',\r\n                          PRIMARY KEY (`replid`),\r\n                          KEY `FK_tabunganp_datatabunganp` (`idtabungan`),\r\n                          KEY `FK_tabunganp_jurnal` (`idjurnal`),\r\n                          KEY `FK_tabunganp_pegawai` (`nip`),\r\n                          CONSTRAINT `FK_tabunganp_datatabunganp` FOREIGN KEY (`idtabungan`) REFERENCES `datatabunganp` (`replid`) ON UPDATE CASCADE,\r\n                          CONSTRAINT `FK_tabunganp_jurnal` FOREIGN KEY (`idjurnal`) REFERENCES `jurnal` (`replid`) ON UPDATE CASCADE,\r\n                          CONSTRAINT `FK_tabunganp_pegawai` FOREIGN KEY (`nip`) REFERENCES `jbssdm`.`pegawai` (`nip`) ON UPDATE CASCADE\r\n                        ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+110462515	CREATE DEFINER=`root`@`%` TRIGGER `trins_tabunganp_100` AFTER INSERT ON `jbsfina`.`tabunganp`\r\n                        FOR EACH ROW BEGIN\r\n	                        declare xinfo varchar(255);\r\n	                        declare xnokas varchar(100);\r\n	                        declare xidtahunbuku int;\r\n	                        declare xketerangan varchar(255);\r\n	                        declare xdepartemen varchar(25);\r\n\r\n	                        select transaksi, nokas, idtahunbuku, keterangan\r\n	                        into xinfo, xnokas, xidtahunbuku, xketerangan\r\n	                        from jurnal where replid = new.idjurnal;\r\n\r\n	                        select p.departemen into xdepartemen\r\n	                        from datatabunganp p\r\n	                        where p.replid = new.idtabungan;\r\n\r\n	                        insert into transaksilog set sumber='tabunganp', idsumber=new.replid,\r\n	                        tanggal=new.tanggal, transaksi=xinfo, petugas=new.petugas, nokas=xnokas,\r\n	                        idtahunbuku=xidtahunbuku, keterangan=xketerangan, debet=new.debet, kredit=new.kredit, departemen=xdepartemen;\r\n                        END 
+110463050	CREATE DEFINER=`root`@`%` TRIGGER trupd_tabunganp_102 AFTER UPDATE ON `jbsfina`.`tabunganp`\r\n                        FOR EACH ROW BEGIN\r\n	                        declare xinfo varchar(255);\r\n	                        declare xnokas varchar(100);\r\n	                        declare xidtahunbuku int;\r\n	                        declare xketerangan varchar(255);\r\n	                        declare xidaudit int;\r\n	                        declare xdepartemen varchar(25);\r\n\r\n	                        IF @DISABLE_TRIGER IS NULL THEN\r\n\r\n		                        select transaksi, nokas, idtahunbuku, keterangan\r\n		                        into xinfo, xnokas, xidtahunbuku, xketerangan\r\n		                        from jurnal where replid = new.idjurnal;\r\n\r\n		                        select p.departemen into xdepartemen\r\n		                        from datatabunganp p\r\n		                        where p.replid = new.idtabungan;\r\n\r\n		                        update transaksilog set tanggal = new.tanggal, transaksi = xinfo, petugas = new.petugas, nokas = xnokas,\r\n		                        idtahunbuku = xidtahunbuku, keterangan = xketerangan, debet = new.debet, kredit = new.kredit\r\n		                        where sumber='tabunganp' and idsumber=new.replid;\r\n\r\n		                        IF new.tanggal <> old.tanggal THEN\r\n		                        update jurnal set tanggal = new.tanggal where replid = new.idjurnal;\r\n		                        END IF;\r\n\r\n		                        insert into auditinfo set departemen=xdepartemen, sumber='tabunganp',\r\n		                        idsumber=new.replid, tanggal=now(), petugas=new.petugas, alasan=new.alasan;\r\n\r\n		                        select last_insert_id() into xidaudit;\r\n\r\n		                        insert into audittabunganp set statusdata=0, idaudit=xidaudit, idtabungan=old.idtabungan,\r\n		                        idjurnal=old.idjurnal, tanggal=old.tanggal, nip=old.nip, debet=old.debet,\r\n		                        kredit=old.kredit, petugas=old.petugas, keterangan=old.keterangan,\r\n		                        info1=old.info1, info2=old.info2, info3=old.info3;\r\n\r\n		                        insert into audittabunganp set statusdata=1, idaudit=xidaudit, idtabungan=new.idtabungan,\r\n		                        idjurnal=new.idjurnal, tanggal=new.tanggal, nip=new.nip, debet=new.debet,\r\n		                        kredit=new.kredit, petugas=new.petugas, keterangan=new.keterangan,\r\n		                        info1=new.info1, info2=new.info2, info3=new.info3;\r\n\r\n	                        END IF;\r\n                        END 
+110464027	SELECT COUNT(*)\r\n                      FROM information_schema.TABLES\r\n                     WHERE TABLE_SCHEMA = 'jbsfina'\r\n                       AND TABLE_NAME = 'audittabunganp'
+110464220	CREATE TABLE  `jbsfina`.`audittabunganp` (\r\n                          `statusdata` tinyint(1) unsigned NOT NULL,\r\n                          `idaudit` int(10) unsigned NOT NULL,\r\n                          `idtabungan` int(10) unsigned NOT NULL,\r\n                          `idjurnal` int(10) unsigned NOT NULL,\r\n                          `tanggal` datetime NOT NULL,\r\n                          `nip` varchar(20) CHARACTER SET utf8 NOT NULL,\r\n                          `debet` decimal(15,0) NOT NULL,\r\n                          `kredit` decimal(15,0) NOT NULL,\r\n                          `petugas` varchar(30) CHARACTER SET utf8 NOT NULL,\r\n                          `keterangan` varchar(255) DEFAULT NULL,\r\n                          `alasan` varchar(500) DEFAULT NULL,\r\n                          `info1` varchar(255) DEFAULT NULL,\r\n                          `info2` varchar(255) DEFAULT NULL,\r\n                          `info3` varchar(255) DEFAULT NULL,\r\n                          `ts` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,\r\n                          `token` smallint(5) unsigned NOT NULL DEFAULT '0',\r\n                          `issync` tinyint(1) unsigned NOT NULL DEFAULT '0',\r\n                          KEY `FK_audittabunganp_auditinfo` (`idaudit`),\r\n                          CONSTRAINT `FK_audittabunganp_auditinfo` FOREIGN KEY (`idaudit`) REFERENCES `auditinfo` (`replid`) ON DELETE CASCADE ON UPDATE CASCADE\r\n                        ) ENGINE=InnoDB DEFAULT CHARSET=latin1
+110465138	ALTER TABLE `jbsfina`.`tabungan` \r\n                          ADD COLUMN `sumberdana` VARCHAR(20) CHARACTER SET 'utf8' COLLATE 'utf8_general_ci' NULL AFTER `idjurnal`
+110465459	SELECT COUNT(*)\r\n                      FROM information_schema.COLUMNS\r\n                     WHERE TABLE_SCHEMA = 'jbsfina'\r\n                       AND TABLE_NAME = 'tabungan'\r\n                       AND COLUMN_NAME = 'sumberdana'
+110465649	SELECT COUNT(*)\r\n                      FROM information_schema.COLUMNS\r\n                     WHERE TABLE_SCHEMA = 'jbsfina'\r\n                       AND TABLE_NAME = 'tabunganp'\r\n                       AND COLUMN_NAME = 'lokasidana'
+110465798	ALTER TABLE `jbsfina`.`tabungan` \r\n                          ADD INDEX `IX_tabungan_sumberdana` (`sumberdana` ASC)
+110465929	ALTER TABLE `jbsfina`.`tabungan` \r\n                          ADD CONSTRAINT `FK_tabungan_sumberdana`\r\n                              FOREIGN KEY (`sumberdana`)\r\n                              REFERENCES `jbsfina`.`sumberdana` (`kode`)\r\n                              ON DELETE RESTRICT\r\n                              ON UPDATE CASCADE
+110466123	ALTER TABLE `jbsfina`.`tabunganp` \r\n                          ADD CONSTRAINT `FK_tabunganp_lokasidana`\r\n                              FOREIGN KEY (`lokasidana`)\r\n                              REFERENCES `jbsfina`.`lokasidana` (`kode`)\r\n                              ON DELETE RESTRICT\r\n                              ON UPDATE CASCADE
+110466355	ALTER TABLE `jbsfina`.`tabunganp` \r\n                          ADD COLUMN `lokasidana` VARCHAR(20) CHARACTER SET 'utf8' COLLATE 'utf8_general_ci' NULL AFTER `idjurnal`
+110466502	ALTER TABLE `jbsfina`.`tabunganp` \r\n                          ADD INDEX `IX_tabunganp_lokasidana` (`lokasidana` ASC)
+110466691	ALTER TABLE `jbsfina`.`tabunganp` \r\n                          ADD INDEX `IX_tabunganp_sumberdana` (`sumberdana` ASC)
+110466866	SELECT COUNT(*)\r\n                      FROM information_schema.COLUMNS\r\n                     WHERE TABLE_SCHEMA = 'jbsfina'\r\n                       AND TABLE_NAME = 'tabunganp'\r\n                       AND COLUMN_NAME = 'sumberdana'
+110467052	ALTER TABLE `jbsfina`.`tabunganp` \r\n                          ADD COLUMN `sumberdana` VARCHAR(20) CHARACTER SET 'utf8' COLLATE 'utf8_general_ci' NULL AFTER `idjurnal`
+110467237	ALTER TABLE `jbsfina`.`paymenttrans`\r\n                          ADD COLUMN `lokasidana` VARCHAR(20) CHARACTER SET 'utf8' COLLATE 'utf8_general_ci' NULL AFTER `idtabunganp`
+110467332	ALTER TABLE `jbsfina`.`tabunganp` \r\n                          ADD CONSTRAINT `FK_tabunganp_sumberdana`\r\n                              FOREIGN KEY (`sumberdana`)\r\n                              REFERENCES `jbsfina`.`sumberdana` (`kode`)\r\n                              ON DELETE RESTRICT\r\n                              ON UPDATE CASCADE
+110467567	SELECT COUNT(*)\r\n                      FROM information_schema.COLUMNS\r\n                     WHERE TABLE_SCHEMA = 'jbsfina'\r\n                       AND TABLE_NAME = 'paymenttrans'\r\n                       AND COLUMN_NAME = 'lokasidana'
+110467800	SELECT COUNT(*)\r\n                          FROM information_schema.COLUMNS\r\n                         WHERE TABLE_SCHEMA = 'jbsfina'\r\n                           AND TABLE_NAME = 'vendor'\r\n                           AND COLUMN_NAME = 'valmethod'
+110467959	ALTER TABLE `jbsfina`.`paymenttrans`\r\n                          ADD INDEX `IX_paymenttrans_lokasidana` (`lokasidana` ASC)
+110468087	ALTER TABLE `jbsfina`.`paymenttrans`\r\n                          ADD CONSTRAINT `FK_paymenttrans_lokasidana`\r\n                              FOREIGN KEY (`lokasidana`)\r\n                              REFERENCES `jbsfina`.`lokasidana` (`kode`)\r\n                              ON DELETE RESTRICT\r\n                              ON UPDATE CASCADE
+110468191	SELECT COUNT(*)\r\n                          FROM information_schema.TABLES\r\n                         WHERE TABLE_SCHEMA = 'jbsfina'\r\n                           AND TABLE_NAME = 'paymentmaxtrans'
+110468336	CREATE TABLE  `jbsfina`.`paymentmaxtrans` (\r\n                          `replid` int(10) unsigned NOT NULL AUTO_INCREMENT,\r\n                          `nis` varchar(20) CHARACTER SET utf8 DEFAULT NULL,\r\n                          `nip` varchar(30) CHARACTER SET utf8 DEFAULT NULL,\r\n                          `maxtrans` int(10) unsigned NOT NULL DEFAULT '0',\r\n                          PRIMARY KEY (`replid`),\r\n                          KEY `FK_paymentmaxtrans_siswa` (`nis`),\r\n                          KEY `FK_paymentmaxtrans_pegawai` (`nip`),\r\n                          CONSTRAINT `FK_paymentmaxtrans_pegawai` FOREIGN KEY (`nip`) REFERENCES `jbssdm`.`pegawai` (`nip`) ON UPDATE CASCADE,\r\n                          CONSTRAINT `FK_paymentmaxtrans_siswa` FOREIGN KEY (`nis`) REFERENCES `jbsakad`.`siswa` (`nis`) ON UPDATE CASCADE\r\n                        ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+110468506	ALTER TABLE `jbsfina`.`vendor` \r\n                          ADD COLUMN `valmethod` TINYINT UNSIGNED NOT NULL DEFAULT 2 COMMENT '1 PIN Only, 2 PIN and Agreement' AFTER `terimaiuran`;
+110468745	SELECT COUNT(*)\r\n                          FROM information_schema.statistics\r\n                         WHERE table_schema = 'jbsfina'\r\n                           AND table_name = 'multitransdata'\r\n                           AND index_name = 'IX_multitransdata'
+110469134	CREATE TABLE  `jbsfina`.`refund` (\r\n                          `replid` int(10) unsigned NOT NULL AUTO_INCREMENT,\r\n                          `idtahunbuku` int(10) unsigned NOT NULL,\r\n                          `vendorid` varchar(5) NOT NULL,\r\n                          `waktu` datetime NOT NULL,\r\n                          `nip` varchar(30) CHARACTER SET utf8 DEFAULT NULL,\r\n                          `jumlah` decimal(15,0) NOT NULL,\r\n                          `idpenerima` varchar(50) NOT NULL,\r\n                          `keterangan` varchar(255) NOT NULL,\r\n                          `idjurnalsiswa` int(10) unsigned NOT NULL DEFAULT '0',\r\n                          `idjurnalpegawai` int(10) unsigned NOT NULL DEFAULT '0',\r\n                          PRIMARY KEY (`replid`),\r\n                          KEY `FK_refund_tahunbuku` (`idtahunbuku`),\r\n                          KEY `FK_refund_vendor` (`vendorid`),\r\n                          KEY `FK_refund_pegawai` (`nip`),\r\n                          KEY `FK_refund_userpos` (`idpenerima`),\r\n                          CONSTRAINT `FK_refund_pegawai` FOREIGN KEY (`nip`) REFERENCES `jbssdm`.`pegawai` (`nip`) ON UPDATE CASCADE,\r\n                          CONSTRAINT `FK_refund_tahunbuku` FOREIGN KEY (`idtahunbuku`) REFERENCES `tahunbuku` (`replid`) ON UPDATE CASCADE,\r\n                          CONSTRAINT `FK_refund_userpos` FOREIGN KEY (`idpenerima`) REFERENCES `userpos` (`userid`) ON UPDATE CASCADE,\r\n                          CONSTRAINT `FK_refund_vendor` FOREIGN KEY (`vendorid`) REFERENCES `vendor` (`vendorid`) ON UPDATE CASCADE\r\n                        ) ENGINE=InnoDB DEFAULT CHARSET=latin1
+110469482	SELECT COUNT(*)\r\n                      FROM information_schema.TABLES\r\n                     WHERE TABLE_SCHEMA = 'jbsfina'\r\n                       AND TABLE_NAME = 'refund'
+110469732	SELECT COUNT(*)\r\n                      FROM information_schema.TABLES\r\n                     WHERE TABLE_SCHEMA = 'jbsfina'\r\n                       AND TABLE_NAME = 'refunddate'
+110470249	SELECT COUNT(*)\r\n                      FROM information_schema.TABLES\r\n                     WHERE TABLE_SCHEMA = 'jbsfina'\r\n                       AND TABLE_NAME = 'paymenttrans'
+110470445	CREATE TABLE  `jbsfina`.`refunddate` (\r\n                          `replid` int(10) unsigned NOT NULL AUTO_INCREMENT,\r\n                          `idrefund` int(10) unsigned NOT NULL,\r\n                          `tanggal` date NOT NULL,\r\n                          PRIMARY KEY (`replid`),\r\n                          KEY `FK_refunddate_refund` (`idrefund`),\r\n                          CONSTRAINT `FK_refunddate_refund` FOREIGN KEY (`idrefund`) REFERENCES `refund` (`replid`) ON UPDATE CASCADE\r\n                        ) ENGINE=InnoDB DEFAULT CHARSET=latin1
+110470960	CREATE TABLE  `jbsfina`.`paymenttrans` (\r\n                          `replid` int(10) unsigned NOT NULL AUTO_INCREMENT,\r\n                          `sessionid` varchar(20) NOT NULL,\r\n                          `transactionid` varchar(20) NOT NULL,\r\n                          `transactionno` int(10) unsigned NOT NULL DEFAULT '0',\r\n                          `waktu` datetime NOT NULL,\r\n                          `tanggal` date NOT NULL,\r\n                          `vendorid` varchar(5) NOT NULL,\r\n                          `userid` varchar(50) NOT NULL,\r\n                          `jenis` tinyint(3) unsigned NOT NULL COMMENT '1 Pegawai, 2 Siswa',\r\n                          `nis` varchar(20) CHARACTER SET utf8 DEFAULT NULL,\r\n                          `nip` varchar(30) CHARACTER SET utf8 DEFAULT NULL,\r\n                          `jumlah` decimal(15,0) NOT NULL,\r\n                          `valmethod` tinyint(3) unsigned NOT NULL DEFAULT '1' COMMENT '1 PIN, 2 Check',\r\n                          `keterangan` varchar(255) NOT NULL,\r\n                          `idjurnaltabcust` int(10) unsigned NOT NULL,\r\n                          `idjurnalvendor` int(10) unsigned NOT NULL,\r\n                          `jenistrans` tinyint(3) unsigned NOT NULL DEFAULT '0' COMMENT '0 Vendor, 1 Iuran Wajib, 2 Iuran Sukarela',\r\n                          `idpenerimaanjtt` int(10) unsigned DEFAULT NULL,\r\n                          `idpenerimaaniuran` int(10) unsigned DEFAULT NULL,\r\n                          `iddatapenerimaan` int(10) unsigned DEFAULT NULL,\r\n                          `idrefund` int(10) unsigned DEFAULT NULL,\r\n                          `idtabungan` int(10) unsigned DEFAULT NULL,\r\n                          `idtabunganp` int(10) unsigned DEFAULT NULL,\r\n                          PRIMARY KEY (`replid`),\r\n                          UNIQUE KEY `UX_paymenttrans` (`transactionid`,`transactionno`) USING BTREE,\r\n                          KEY `FK_paymenttrans_siswa` (`nis`),\r\n                          KEY `FK_paymenttrans_pegawai` (`nip`),\r\n                          KEY `FK_paymenttrans_jurnaltabcust` (`idjurnaltabcust`),\r\n                          KEY `FK_paymenttrans_jurnalvendor` (`idjurnalvendor`),\r\n                          KEY `FK_paymenttrans_penerimaanjtt` (`idpenerimaanjtt`),\r\n                          KEY `FK_paymenttrans_penerimaaniuran` (`idpenerimaaniuran`),\r\n                          KEY `FK_paymenttrans_datapenerimaan` (`iddatapenerimaan`),\r\n                          KEY `FK_paymenttrans_vendor` (`vendorid`),\r\n                          KEY `FK_paymenttrans_refund` (`idrefund`),\r\n                          KEY `FK_paymenttrans_tabungan` (`idtabungan`),\r\n                          KEY `FK_paymenttrans_tabunganp` (`idtabunganp`),\r\n                          KEY `IX_paymenttrans` (`userid`,`waktu`,`tanggal`,`jenis`,`jenistrans`) USING BTREE,\r\n                          CONSTRAINT `FK_paymenttrans_datapenerimaan` FOREIGN KEY (`iddatapenerimaan`) REFERENCES `datapenerimaan` (`replid`) ON UPDATE CASCADE,\r\n                          CONSTRAINT `FK_paymenttrans_jurnaltabcust` FOREIGN KEY (`idjurnaltabcust`) REFERENCES `jurnal` (`replid`) ON UPDATE CASCADE,\r\n                          CONSTRAINT `FK_paymenttrans_jurnalvendor` FOREIGN KEY (`idjurnalvendor`) REFERENCES `jurnal` (`replid`),\r\n                          CONSTRAINT `FK_paymenttrans_pegawai` FOREIGN KEY (`nip`) REFERENCES `jbssdm`.`pegawai` (`nip`) ON UPDATE CASCADE,\r\n                          CONSTRAINT `FK_paymenttrans_penerimaaniuran` FOREIGN KEY (`idpenerimaaniuran`) REFERENCES `penerimaaniuran` (`replid`) ON UPDATE CASCADE,\r\n                          CONSTRAINT `FK_paymenttrans_penerimaanjtt` FOREIGN KEY (`idpenerimaanjtt`) REFERENCES `penerimaanjtt` (`replid`) ON UPDATE CASCADE,\r\n                          CONSTRAINT `FK_paymenttrans_refund` FOREIGN KEY (`idrefund`) REFERENCES `refund` (`replid`) ON UPDATE CASCADE,\r\n                          CONSTRAINT `FK_paymenttrans_siswa` FOREIGN KEY (`nis`) REFERENCES `jbsakad`.`siswa` (`nis`) ON UPDATE CASCADE,\r\n                          CONSTRAINT `FK_paymenttrans_tabungan` FOREIGN KEY (`idtabungan`) REFERENCES `tabungan` (`replid`) ON UPDATE CASCADE,\r\n                          CONSTRAINT `FK_paymenttrans_tabunganp` FOREIGN KEY (`idtabunganp`) REFERENCES `tabunganp` (`replid`) ON UPDATE CASCADE,\r\n                          CONSTRAINT `FK_paymenttrans_userpos` FOREIGN KEY (`userid`) REFERENCES `userpos` (`userid`) ON UPDATE CASCADE,\r\n                          CONSTRAINT `FK_paymenttrans_vendor` FOREIGN KEY (`vendorid`) REFERENCES `vendor` (`vendorid`) ON UPDATE CASCADE\r\n                        ) ENGINE=InnoDB DEFAULT CHARSET=latin1
+110471733	SELECT COUNT(*)\r\n                      FROM information_schema.TABLES\r\n                     WHERE TABLE_SCHEMA = 'jbsfina'\r\n                       AND TABLE_NAME = 'paymenttabungan'
+110471929	CREATE TABLE  `jbsfina`.`paymenttabungan` (\r\n                          `replid` int(10) unsigned NOT NULL AUTO_INCREMENT,\r\n                          `jenis` tinyint(1) unsigned NOT NULL COMMENT '1 Pegawai, 2 Siswa',\r\n                          `departemen` varchar(50) CHARACTER SET utf8 NOT NULL,\r\n                          `idtabungan` int(10) unsigned DEFAULT NULL,\r\n                          `idtabunganp` int(10) unsigned DEFAULT NULL,\r\n                          `rekkasvendor` varchar(15) CHARACTER SET utf8 NOT NULL,\r\n                          `rekutangvendor` varchar(15) CHARACTER SET utf8 NOT NULL,\r\n                          `maxtransvendor` int(10) unsigned NOT NULL DEFAULT '0',\r\n                          PRIMARY KEY (`replid`),\r\n                          KEY `FK_paymenttabungan_departemen` (`departemen`),\r\n                          KEY `FK_paymenttabungan_tabungan` (`idtabungan`),\r\n                          KEY `FK_paymenttabungan_tabunganp` (`idtabunganp`),\r\n                          KEY `FK_paymenttabungan_rekkas` (`rekkasvendor`),\r\n                          KEY `FK_paymenttabungan_rekutang` (`rekutangvendor`),\r\n                          CONSTRAINT `FK_paymenttabungan_departemen` FOREIGN KEY (`departemen`) REFERENCES `jbsakad`.`departemen` (`departemen`) ON UPDATE CASCADE,\r\n                          CONSTRAINT `FK_paymenttabungan_rekkas` FOREIGN KEY (`rekkasvendor`) REFERENCES `rekakun` (`kode`) ON UPDATE CASCADE,\r\n                          CONSTRAINT `FK_paymenttabungan_rekutang` FOREIGN KEY (`rekutangvendor`) REFERENCES `rekakun` (`kode`) ON UPDATE CASCADE,\r\n                          CONSTRAINT `FK_paymenttabungan_tabungan` FOREIGN KEY (`idtabungan`) REFERENCES `datatabungan` (`replid`) ON UPDATE CASCADE,\r\n                          CONSTRAINT `FK_paymenttabungan_tabunganp` FOREIGN KEY (`idtabunganp`) REFERENCES `datatabunganp` (`replid`) ON UPDATE CASCADE\r\n                        ) ENGINE=InnoDB DEFAULT CHARSET=latin1
+110472724	CREATE TABLE  `jbsfina`.`transgen` (\r\n                          `replid` int(10) unsigned NOT NULL AUTO_INCREMENT,\r\n                          `transactionid` varchar(20) NOT NULL,\r\n                          PRIMARY KEY (`replid`),\r\n                          KEY `IX_transgen` (`transactionid`)\r\n                        ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+110473078	SELECT COUNT(*)\r\n                      FROM information_schema.TABLES\r\n                     WHERE TABLE_SCHEMA = 'jbsfina'\r\n                       AND TABLE_NAME = 'transgen'
+110473497	SELECT COUNT(*)\r\n                      FROM information_schema.TABLES\r\n                     WHERE TABLE_SCHEMA = 'jbsfina'\r\n                       AND TABLE_NAME = 'multitransinfo'
+110473634	CREATE TABLE  `jbsfina`.`multitransinfo` (\r\n                          `replid` int(10) unsigned NOT NULL AUTO_INCREMENT,\r\n                          `idtahunbuku` int(10) unsigned NOT NULL,\r\n                          `tanggal` datetime NOT NULL,\r\n                          `nis` varchar(20) CHARACTER SET utf8 DEFAULT NULL,\r\n                          `nic` varchar(20) CHARACTER SET utf8 DEFAULT NULL,\r\n                          `petugas` varchar(100) NOT NULL,\r\n                          `keterangan` varchar(255) NOT NULL,\r\n                          `paymentstatus` tinyint(3) unsigned NOT NULL DEFAULT '0',\r\n                          `paymentdate` datetime DEFAULT NULL,\r\n                          PRIMARY KEY (`replid`),\r\n                          KEY `FK_multitransinfo_siswa` (`nis`),\r\n                          KEY `FK_multitransinfo_calonsiswa` (`nic`),\r\n                          KEY `FK_multitransinfo_tahunbuku` (`idtahunbuku`),\r\n                          CONSTRAINT `FK_multitransinfo_calonsiswa` FOREIGN KEY (`nic`) REFERENCES `jbsakad`.`calonsiswa` (`nopendaftaran`) ON UPDATE CASCADE,\r\n                          CONSTRAINT `FK_multitransinfo_siswa` FOREIGN KEY (`nis`) REFERENCES `jbsakad`.`siswa` (`nis`) ON UPDATE CASCADE,\r\n                          CONSTRAINT `FK_multitransinfo_tahunbuku` FOREIGN KEY (`idtahunbuku`) REFERENCES `tahunbuku` (`replid`) ON UPDATE CASCADE\r\n                        ) ENGINE=InnoDB DEFAULT CHARSET=latin1
+110473749	SELECT COUNT(*)\r\n                      FROM information_schema.TABLES\r\n                     WHERE TABLE_SCHEMA = 'jbsfina'\r\n                       AND TABLE_NAME = 'multitransdata'
+110473950	CREATE TABLE  `jbsfina`.`multitransdata` (\r\n                          `replid` int(10) unsigned NOT NULL AUTO_INCREMENT,\r\n                          `idinfo` int(10) unsigned NOT NULL,\r\n                          `notrans` varchar(100) NOT NULL,\r\n                          `kategori` varchar(20) NOT NULL,\r\n                          PRIMARY KEY (`replid`),\r\n                          KEY `FK_multitransdata_multitransinfo` (`idinfo`),\r\n                          CONSTRAINT `FK_multitransdata_multitransinfo` FOREIGN KEY (`idinfo`) REFERENCES `multitransinfo` (`replid`) ON UPDATE CASCADE\r\n                        ) ENGINE=InnoDB DEFAULT CHARSET=latin1
+110474242	SELECT COUNT(*)\r\n                      FROM information_schema.TABLES\r\n                     WHERE TABLE_SCHEMA = 'jbsfina'\r\n                       AND TABLE_NAME = 'paymentid'
+110474440	CREATE TABLE  `jbsfina`.`paymentid` (\r\n                          `replid` int(10) unsigned NOT NULL AUTO_INCREMENT,\r\n                          `jenis` tinyint(3) unsigned NOT NULL COMMENT '1 Pegawai, 2 Siswa',\r\n                          `nis` varchar(20) CHARACTER SET utf8 DEFAULT NULL,\r\n                          `nip` varchar(30) CHARACTER SET utf8 DEFAULT NULL,\r\n                          `paymentid` varchar(10) NOT NULL,\r\n                          `tanggal` datetime NOT NULL,\r\n                          `aktif` tinyint(3) unsigned NOT NULL DEFAULT '1',\r\n                          PRIMARY KEY (`replid`),\r\n                          KEY `FK_paymentid_siswa` (`nis`),\r\n                          KEY `FK_paymentid_pegawai` (`nip`),\r\n                          CONSTRAINT `FK_paymentid_pegawai` FOREIGN KEY (`nip`) REFERENCES `jbssdm`.`pegawai` (`nip`) ON UPDATE CASCADE,\r\n                          CONSTRAINT `FK_paymentid_siswa` FOREIGN KEY (`nis`) REFERENCES `jbsakad`.`siswa` (`nis`) ON UPDATE CASCADE\r\n                        ) ENGINE=InnoDB DEFAULT CHARSET=latin1
+110474915	SELECT COUNT(*)\r\n                      FROM information_schema.TABLES\r\n                     WHERE TABLE_SCHEMA = 'jbsfina'\r\n                       AND TABLE_NAME = 'vendor'
+110475428	SELECT COUNT(*)\r\n                      FROM information_schema.TABLES\r\n                     WHERE TABLE_SCHEMA = 'jbsfina'\r\n                       AND TABLE_NAME = 'userpos'
+110475591	CREATE TABLE  `jbsfina`.`vendor` (\r\n                          `replid` int(10) unsigned NOT NULL AUTO_INCREMENT,\r\n                          `vendorid` varchar(5) NOT NULL,\r\n                          `nama` varchar(255) NOT NULL,\r\n                          `aktif` tinyint(1) unsigned NOT NULL DEFAULT '1',\r\n                          `terimaiuran` tinyint(3) unsigned NOT NULL DEFAULT '0',\r\n                          `kirimpesan` tinyint(3) unsigned NOT NULL DEFAULT '0',\r\n                          `tanggal` datetime NOT NULL,\r\n                          `keterangan` varchar(255) NOT NULL,\r\n                          PRIMARY KEY (`replid`),\r\n                          KEY `UX_vendor` (`vendorid`)\r\n                        ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+110475944	SELECT COUNT(*)\r\n                      FROM information_schema.TABLES\r\n                     WHERE TABLE_SCHEMA = 'jbsfina'\r\n                       AND TABLE_NAME = 'vendoruser'
+110476107	CREATE TABLE  `jbsfina`.`userpos` (\r\n                          `replid` int(10) unsigned NOT NULL AUTO_INCREMENT,\r\n                          `userid` varchar(50) NOT NULL,\r\n                          `nama` varchar(255) NOT NULL,\r\n                          `password` varchar(255) NOT NULL,\r\n                          `passlength` tinyint(3) unsigned NOT NULL,\r\n                          `aktif` tinyint(3) unsigned NOT NULL DEFAULT '1',\r\n                          `foto` mediumtext,\r\n                          `keterangan` varchar(255) NOT NULL,\r\n                          PRIMARY KEY (`replid`),\r\n                          KEY `UX_userpos` (`userid`)\r\n                        ) ENGINE=InnoDB DEFAULT CHARSET=latin1
+110476657	CREATE TABLE  `jbsfina`.`vendoruser` (\r\n                          `replid` int(10) unsigned NOT NULL AUTO_INCREMENT,\r\n                          `vendorid` varchar(5) NOT NULL,\r\n                          `userid` varchar(50) NOT NULL,\r\n                          `tingkat` tinyint(3) unsigned NOT NULL COMMENT '1 Manager, 2 User',\r\n                          PRIMARY KEY (`replid`),\r\n                          KEY `FK_vendoruser_vendor` (`vendorid`),\r\n                          KEY `FK_vendoruser_userpos` (`userid`),\r\n                          CONSTRAINT `FK_vendoruser_userpos` FOREIGN KEY (`userid`) REFERENCES `userpos` (`userid`) ON UPDATE CASCADE,\r\n                          CONSTRAINT `FK_vendoruser_vendor` FOREIGN KEY (`vendorid`) REFERENCES `vendor` (`vendorid`) ON UPDATE CASCADE\r\n                        ) ENGINE=InnoDB DEFAULT CHARSET=latin1
+110477071	SELECT COUNT(*)\r\n                      FROM information_schema.TABLES\r\n                     WHERE TABLE_SCHEMA = 'jbsfina'\r\n                       AND TABLE_NAME = 'userposlog'
+110477268	CREATE TABLE  `jbsfina`.`userposlog` (\r\n                          `replid` int(10) unsigned NOT NULL AUTO_INCREMENT,\r\n                          `vendorid` varchar(5) NOT NULL,\r\n                          `userid` varchar(50) NOT NULL,\r\n                          `logtime` datetime NOT NULL,\r\n                          `sessionid` varchar(15) NOT NULL,\r\n                          `localip` varchar(15) NOT NULL,\r\n                          `device` varchar(255) NOT NULL,\r\n                          PRIMARY KEY (`replid`),\r\n                          KEY `FK_userposlog_vendor` (`vendorid`),\r\n                          KEY `FK_userposlog_userpos` (`userid`),\r\n                          CONSTRAINT `FK_userposlog_userpos` FOREIGN KEY (`userid`) REFERENCES `userpos` (`userid`) ON UPDATE CASCADE,\r\n                          CONSTRAINT `FK_userposlog_vendor` FOREIGN KEY (`vendorid`) REFERENCES `vendor` (`vendorid`) ON UPDATE CASCADE\r\n                        ) ENGINE=InnoDB DEFAULT CHARSET=latin1
+110477532	CREATE TABLE  `jbsjs`.`clientservice` (\r\n                          `id` int(10) unsigned NOT NULL AUTO_INCREMENT,\r\n                          `idservice` varchar(10) NOT NULL,\r\n                          `status` tinyint(3) unsigned NOT NULL,\r\n                          PRIMARY KEY (`id`),\r\n                          KEY `IX_clientservice` (`idservice`)\r\n                        ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+110477648	CREATE TABLE  `jbsjs`.`beritakelompok` (\r\n                          `id` int(10) unsigned NOT NULL AUTO_INCREMENT,\r\n                          `idberita` varchar(30) NOT NULL,\r\n                          `idkelompok` int(10) unsigned NOT NULL,\r\n                          PRIMARY KEY (`id`),\r\n                          KEY `FK_beritakelompok_berita` (`idberita`),\r\n                          KEY `FK_beritakelompok_kelompoktujuan` (`idkelompok`),\r\n                          CONSTRAINT `FK_beritakelompok_berita` FOREIGN KEY (`idberita`) REFERENCES `berita` (`idberita`) ON UPDATE CASCADE,\r\n                          CONSTRAINT `FK_beritakelompok_kelompoktujuan` FOREIGN KEY (`idkelompok`) REFERENCES `kelompoktujuan` (`replid`) ON UPDATE CASCADE\r\n                        ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+110478302	CREATE TABLE  `jbsjs`.`jsuserinfo` (\r\n                          `id` int(10) unsigned NOT NULL AUTO_INCREMENT,\r\n                          `devid` varchar(20) NOT NULL,\r\n                          `devname` varchar(255) NOT NULL,\r\n                          `jsuserid` varchar(20) NOT NULL,\r\n                          `jsusername` varchar(255) NOT NULL,\r\n                          `jsusernik` varchar(25) NOT NULL,\r\n                          `jsuserrole` tinyint(3) unsigned NOT NULL,\r\n                          `jsuserphone` varchar(15) NOT NULL,\r\n                          `jsuseremail` varchar(255) NOT NULL,\r\n                          `jsuserbday` date NOT NULL,\r\n                          PRIMARY KEY (`id`),\r\n                          KEY `IX_jsuserinfo` (`devid`,`jsuserid`) USING BTREE\r\n                        ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+110478513	CREATE TABLE  `jbsjs`.`notifmessage` (\r\n                          `id` int(10) unsigned NOT NULL AUTO_INCREMENT,\r\n                          `nis` varchar(20) CHARACTER SET utf8 DEFAULT NULL,\r\n                          `nip` varchar(30) CHARACTER SET utf8 DEFAULT NULL,\r\n                          `nic` varchar(20) CHARACTER SET utf8 DEFAULT NULL,\r\n                          `topicid` varchar(255) DEFAULT NULL,\r\n                          `title` varchar(100) NOT NULL,\r\n                          `message` varchar(1000) NOT NULL,\r\n                          `notifdate` datetime NOT NULL,\r\n                          `source` varchar(20) NOT NULL,\r\n                          `issending` tinyint(3) unsigned NOT NULL DEFAULT '0',\r\n                          `priority` tinyint(3) unsigned NOT NULL DEFAULT '1',\r\n                          PRIMARY KEY (`id`),\r\n                          KEY `FK_notifmessage_siswa` (`nis`),\r\n                          KEY `FK_notifmessage_pegawai` (`nip`),\r\n                          KEY `FK_notifmessage_calonsiswa` (`nic`),\r\n                          KEY `IX_notifmessage` (`notifdate`,`issending`,`priority`),\r\n                          CONSTRAINT `FK_notifmessage_calonsiswa` FOREIGN KEY (`nic`) REFERENCES `jbsakad`.`calonsiswa` (`nopendaftaran`) ON UPDATE CASCADE,\r\n                          CONSTRAINT `FK_notifmessage_pegawai` FOREIGN KEY (`nip`) REFERENCES `jbssdm`.`pegawai` (`nip`) ON UPDATE CASCADE,\r\n                          CONSTRAINT `FK_notifmessage_siswa` FOREIGN KEY (`nis`) REFERENCES `jbsakad`.`siswa` (`nis`) ON UPDATE CASCADE\r\n                        ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COMMENT='SchoolData Notif Message';
+110478653	CREATE TABLE  `jbsjs`.`notif` (\r\n                          `id` int(10) unsigned NOT NULL AUTO_INCREMENT,\r\n                          `msgdate` datetime NOT NULL,\r\n                          `desttoken` mediumtext NOT NULL,\r\n                          `topicid` varchar(255) NOT NULL,\r\n                          `msgtitle` varchar(255) NOT NULL,\r\n                          `msgbody` mediumtext,\r\n                          `msgsource` varchar(50) NOT NULL,\r\n                          `issending` tinyint(3) unsigned NOT NULL DEFAULT '0',\r\n                          `priority` tinyint(3) unsigned NOT NULL DEFAULT '1',\r\n                          PRIMARY KEY (`id`),\r\n                          KEY `IX_notif` (`msgdate`,`issending`,`priority`) USING BTREE\r\n                        ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COMMENT='FCM Notif Data';
+110479617	CREATE TABLE  `jbsjs`.`notifmessagehistory` (\r\n                          `id` int(10) unsigned NOT NULL AUTO_INCREMENT,\r\n                          `nis` varchar(20) CHARACTER SET utf8 DEFAULT NULL,\r\n                          `nip` varchar(30) CHARACTER SET utf8 DEFAULT NULL,\r\n                          `nic` varchar(20) CHARACTER SET utf8 DEFAULT NULL,\r\n                          `topicid` varchar(255) DEFAULT NULL,\r\n                          `title` varchar(100) NOT NULL,\r\n                          `message` varchar(1000) NOT NULL,\r\n                          `notifdate` datetime NOT NULL,\r\n                          `source` varchar(20) NOT NULL,\r\n                          PRIMARY KEY (`id`),\r\n                          KEY `FK_notifmessagehistory_siswa` (`nis`),\r\n                          KEY `FK_notifmessagehistory_pegawai` (`nip`),\r\n                          KEY `FK_notifmessagehistory_calonsiswa` (`nic`),\r\n                          KEY `IX_notifmessagehistory` (`topicid`,`source`,`notifdate`) USING BTREE,\r\n                          CONSTRAINT `FK_notifmessagehistory_calonsiswa` FOREIGN KEY (`nic`) REFERENCES `jbsakad`.`calonsiswa` (`nopendaftaran`) ON UPDATE CASCADE,\r\n                          CONSTRAINT `FK_notifmessagehistory_pegawai` FOREIGN KEY (`nip`) REFERENCES `jbssdm`.`pegawai` (`nip`) ON UPDATE CASCADE,\r\n                          CONSTRAINT `FK_notifmessagehistory_siswa` FOREIGN KEY (`nis`) REFERENCES `jbsakad`.`siswa` (`nis`) ON UPDATE CASCADE\r\n                        ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+110479936	CREATE TABLE  `jbsjs`.`reqstatproto` (\r\n                          `id` int(10) unsigned NOT NULL AUTO_INCREMENT,\r\n                          `reqdate` date NOT NULL,\r\n                          `reqproto` int(10) unsigned NOT NULL,\r\n                          `counter` int(10) unsigned NOT NULL,\r\n                          PRIMARY KEY (`id`),\r\n                          UNIQUE KEY `UX_reqstat` (`reqdate`,`reqproto`)\r\n                        ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+110480193	CREATE TABLE  `jbsjs`.`reqstatdaily` (\r\n                          `id` int(10) unsigned NOT NULL AUTO_INCREMENT,\r\n                          `reqdate` date NOT NULL,\r\n                          `counter` int(10) unsigned NOT NULL,\r\n                          PRIMARY KEY (`id`),\r\n                          UNIQUE KEY `UX_reqstatdaily` (`reqdate`)\r\n                        ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+110480753	CREATE TABLE  `jbsjs`.`requestremoveaccess` (\r\n                          `id` int(10) unsigned NOT NULL AUTO_INCREMENT,\r\n                          `tanggal` datetime NOT NULL,\r\n                          `jibasid` varchar(50) NOT NULL,\r\n                          `devid` varchar(20) NOT NULL,\r\n                          `hp` varchar(45) NOT NULL,\r\n                          `alasan` varchar(255) NOT NULL,\r\n                          `bydevid` varchar(20) NOT NULL,\r\n                          `approve` tinyint(3) unsigned NOT NULL DEFAULT '0',\r\n                          `approvedate` datetime DEFAULT NULL,\r\n                          `approveby` varchar(30) DEFAULT NULL,\r\n                          `approvedesc` varchar(500) DEFAULT NULL,\r\n                          PRIMARY KEY (`id`),\r\n                          KEY `IX_requestremoveaccess` (`tanggal`,`approve`,`jibasid`,`devid`,`bydevid`) USING BTREE\r\n                        ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+110481085	CREATE TABLE  `jbsjs`.`splang00` (\r\n                          `tipe` varchar(20) NOT NULL,\r\n                          `nilai` varchar(100) NOT NULL,\r\n                          `keterangan` varchar(255) DEFAULT NULL,\r\n                          PRIMARY KEY (`tipe`)\r\n                        ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+110481172	CREATE TABLE  `jbsjs`.`runtext` (\r\n                          `id` int(10) unsigned NOT NULL AUTO_INCREMENT,\r\n                          `idruntext` varchar(15) NOT NULL,\r\n                          `runtext` varchar(255) NOT NULL,\r\n                          `penulis` varchar(30) CHARACTER SET utf8 DEFAULT NULL,\r\n                          `tglbuat` datetime NOT NULL,\r\n                          `urutan` int(10) unsigned NOT NULL DEFAULT '0',\r\n                          PRIMARY KEY (`id`),\r\n                          KEY `FK_runtext_pegawai` (`penulis`),\r\n                          CONSTRAINT `FK_runtext_pegawai` FOREIGN KEY (`penulis`) REFERENCES `jbssdm`.`pegawai` (`nip`) ON UPDATE CASCADE\r\n                        ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+110481557	SET @DISABLE_TRIGER = 1
+110481595	UPDATE `jbsfina`.`penerimaanjtt` SET isschoolpay = 0
+110481660	SET @DISABLE_TRIGER = NULL
+110481689	SELECT COUNT(*)\r\n                      FROM information_schema.COLUMNS\r\n                     WHERE TABLE_SCHEMA = 'jbsfina'\r\n                       AND TABLE_NAME = 'penerimaanjtt'\r\n                       AND COLUMN_NAME = 'paymentid'
+110481879	ALTER TABLE `jbsfina`.`penerimaanjtt` \r\n                          ADD COLUMN `paymentid` VARCHAR(20) AFTER `alasan`,\r\n                          ADD COLUMN `isschoolpay` TINYINT UNSIGNED NOT NULL DEFAULT 1 AFTER `paymentid`
+110482068	UPDATE `jbsfina`.`penerimaaniuran` SET isschoolpay = 0
+110482139	SELECT COUNT(*)\r\n                      FROM information_schema.COLUMNS\r\n                     WHERE TABLE_SCHEMA = 'jbsfina'\r\n                       AND TABLE_NAME = 'tabungan'\r\n                       AND COLUMN_NAME = 'ispayment'
+110482207	SELECT COUNT(*)\r\n                      FROM information_schema.COLUMNS\r\n                     WHERE TABLE_SCHEMA = 'jbsfina'\r\n                       AND TABLE_NAME = 'penerimaaniuran'\r\n                       AND COLUMN_NAME = 'paymentid'
+110482391	ALTER TABLE `jbsfina`.`penerimaaniuran` \r\n                          ADD COLUMN `paymentid` VARCHAR(20) AFTER `alasan`,\r\n                          ADD COLUMN `isschoolpay` TINYINT UNSIGNED NOT NULL DEFAULT 1 AFTER `paymentid`
+110482433	CREATE DATABASE `jbsjs`
+110482471	USE `jbsjs`
+110482513	CREATE TABLE  `jbsjs`.`kelompoktujuan` (\r\n                          `replid` int(10) unsigned NOT NULL AUTO_INCREMENT,\r\n                          `kelompok` varchar(100) NOT NULL,\r\n                          `departemen` varchar(50) CHARACTER SET utf8 NOT NULL,\r\n                          `deskripsi` varchar(2555) DEFAULT NULL,\r\n                          `aktif` tinyint(1) unsigned NOT NULL DEFAULT '1',\r\n                          `pemilik` varchar(30) CHARACTER SET utf8 DEFAULT NULL,\r\n                          PRIMARY KEY (`replid`) USING BTREE,\r\n                          KEY `FK_kelompoktujuan_departemen` (`departemen`),\r\n                          KEY `FK_kelompoktujuan_pegawai` (`pemilik`),\r\n                          CONSTRAINT `FK_kelompoktujuan_departemen` FOREIGN KEY (`departemen`) REFERENCES `jbsakad`.`departemen` (`departemen`) ON UPDATE CASCADE,\r\n                          CONSTRAINT `FK_kelompoktujuan_pegawai` FOREIGN KEY (`pemilik`) REFERENCES `jbssdm`.`pegawai` (`nip`) ON UPDATE CASCADE\r\n                        ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+110482843	ALTER TABLE `jbsfina`.`tabungan` ADD COLUMN `ispayment` TINYINT(1) UNSIGNED NOT NULL DEFAULT 0 AFTER `alasan`
+110482919	SHOW DATABASES LIKE 'jbsjs'
+110483032	CREATE TABLE  `jbsjs`.`anggota` (\r\n                          `replid` int(10) unsigned NOT NULL AUTO_INCREMENT,\r\n                          `idkelompok` int(10) unsigned NOT NULL,\r\n                          `jenis` tinyint(1) unsigned NOT NULL COMMENT '0 Siswa, 1 Pegawai, 2 Other, 3 Calon Siswa',\r\n                          `nis` varchar(20) CHARACTER SET utf8 DEFAULT NULL,\r\n                          `nip` varchar(30) CHARACTER SET utf8 DEFAULT NULL,\r\n                          `nic` varchar(20) CHARACTER SET utf8 DEFAULT NULL,\r\n                          `nouser` varchar(30) DEFAULT NULL,\r\n                          `aktif` tinyint(1) unsigned NOT NULL DEFAULT '1',\r\n                          PRIMARY KEY (`replid`),\r\n                          KEY `FK_anggota_kelompokpeserta` (`idkelompok`),\r\n                          KEY `FK_anggota_siswa` (`nis`),\r\n                          KEY `FK_anggota_pegawai` (`nip`),\r\n                          KEY `FK_anggota_calonsiswa` (`nic`),\r\n                          CONSTRAINT `FK_anggota_calonsiswa` FOREIGN KEY (`nic`) REFERENCES `jbsakad`.`calonsiswa` (`nopendaftaran`) ON UPDATE CASCADE,\r\n                          CONSTRAINT `FK_anggota_kelompokpeserta` FOREIGN KEY (`idkelompok`) REFERENCES `kelompoktujuan` (`replid`) ON DELETE CASCADE ON UPDATE CASCADE,\r\n                          CONSTRAINT `FK_anggota_pegawai` FOREIGN KEY (`nip`) REFERENCES `jbssdm`.`pegawai` (`nip`) ON UPDATE CASCADE,\r\n                          CONSTRAINT `FK_anggota_siswa` FOREIGN KEY (`nis`) REFERENCES `jbsakad`.`siswa` (`nis`) ON UPDATE CASCADE\r\n                        ) ENGINE=InnoDB DEFAULT CHARSET=latin1 ROW_FORMAT=DYNAMIC;
+110483639	CREATE TABLE  `jbsjs`.`bantuan` (\r\n                          `id` int(10) unsigned NOT NULL AUTO_INCREMENT,\r\n                          `bantuan` varchar(2000) NOT NULL,\r\n                          PRIMARY KEY (`id`)\r\n                        ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+110484376	CREATE TABLE  `jbsjs`.`berita` (\r\n                          `id` int(10) unsigned NOT NULL AUTO_INCREMENT,\r\n                          `idberita` varchar(30) NOT NULL,\r\n                          `target` varchar(5) NOT NULL,\r\n                          `departemen` varchar(50) CHARACTER SET utf8 DEFAULT NULL,\r\n                          `idtingkat` int(10) unsigned DEFAULT NULL,\r\n                          `judul` varchar(255) NOT NULL,\r\n                          `deskripsi` varchar(2000) NOT NULL,\r\n                          `berita` mediumtext NOT NULL,\r\n                          `tgltayang` datetime NOT NULL,\r\n                          `penulis` varchar(30) CHARACTER SET utf8 DEFAULT NULL,\r\n                          `tglbuat` datetime NOT NULL,\r\n                          PRIMARY KEY (`id`),\r\n                          KEY `UX_berita` (`idberita`),\r\n                          KEY `FK_berita_departemen` (`departemen`),\r\n                          KEY `FK_berita_tingkat` (`idtingkat`),\r\n                          KEY `FK_berita_pegawai` (`penulis`),\r\n                          CONSTRAINT `FK_berita_departemen` FOREIGN KEY (`departemen`) REFERENCES `jbsakad`.`departemen` (`departemen`) ON UPDATE CASCADE,\r\n                          CONSTRAINT `FK_berita_pegawai` FOREIGN KEY (`penulis`) REFERENCES `jbssdm`.`pegawai` (`nip`) ON UPDATE CASCADE,\r\n                          CONSTRAINT `FK_berita_tingkat` FOREIGN KEY (`idtingkat`) REFERENCES `jbsakad`.`tingkat` (`replid`) ON UPDATE CASCADE\r\n                        ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+110484950	CREATE TABLE  `jbsjs`.`beritaanggota` (\r\n                          `id` int(10) unsigned NOT NULL AUTO_INCREMENT,\r\n                          `idberita` varchar(30) NOT NULL,\r\n                          `jenis` tinyint(3) unsigned NOT NULL,\r\n                          `nis` varchar(20) CHARACTER SET utf8 DEFAULT NULL,\r\n                          `nip` varchar(30) CHARACTER SET utf8 DEFAULT NULL,\r\n                          `nic` varchar(20) CHARACTER SET utf8 DEFAULT NULL,\r\n                          PRIMARY KEY (`id`),\r\n                          KEY `FK_beritaanggota_berita` (`idberita`),\r\n                          KEY `FK_beritaanggota_siswa` (`nis`),\r\n                          KEY `FK_beritaanggota_pegawai` (`nip`),\r\n                          KEY `FK_beritaanggota_calonsiswa` (`nic`),\r\n                          CONSTRAINT `FK_beritaanggota_berita` FOREIGN KEY (`idberita`) REFERENCES `berita` (`idberita`) ON UPDATE CASCADE,\r\n                          CONSTRAINT `FK_beritaanggota_calonsiswa` FOREIGN KEY (`nic`) REFERENCES `jbsakad`.`calonsiswa` (`nopendaftaran`) ON UPDATE CASCADE,\r\n                          CONSTRAINT `FK_beritaanggota_pegawai` FOREIGN KEY (`nip`) REFERENCES `jbssdm`.`pegawai` (`nip`) ON UPDATE CASCADE,\r\n                          CONSTRAINT `FK_beritaanggota_siswa` FOREIGN KEY (`nis`) REFERENCES `jbsakad`.`siswa` (`nis`) ON UPDATE CASCADE\r\n                        ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+110485501	CREATE TABLE  `jbsjs`.`beritakelas` (\r\n                          `id` int(10) unsigned NOT NULL AUTO_INCREMENT,\r\n                          `idberita` varchar(30) NOT NULL,\r\n                          `idkelas` int(10) unsigned NOT NULL,\r\n                          PRIMARY KEY (`id`),\r\n                          KEY `FK_beritakelas_berita` (`idberita`),\r\n                          KEY `FK_beritakelas_kelas` (`idkelas`),\r\n                          CONSTRAINT `FK_beritakelas_berita` FOREIGN KEY (`idberita`) REFERENCES `berita` (`idberita`) ON UPDATE CASCADE,\r\n                          CONSTRAINT `FK_beritakelas_kelas` FOREIGN KEY (`idkelas`) REFERENCES `jbsakad`.`kelas` (`replid`) ON UPDATE CASCADE\r\n                        ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+110489679	CREATE TABLE  `jbsjs`.`useraccess` (\r\n                          `id` int(10) unsigned NOT NULL AUTO_INCREMENT,\r\n                          `jibasid` varchar(50) NOT NULL,\r\n                          `jibasidtype` tinyint(3) unsigned NOT NULL DEFAULT '2' COMMENT '1 Pegawai, 2 Siswa, 3 Calon Siswa',\r\n                          `nis` varchar(20) CHARACTER SET utf8 DEFAULT NULL,\r\n                          `nip` varchar(30) CHARACTER SET utf8 DEFAULT NULL,\r\n                          `nic` varchar(20) CHARACTER SET utf8 DEFAULT NULL,\r\n                          `regdate` datetime NOT NULL,\r\n                          `appname` varchar(45) NOT NULL,\r\n                          `appver` varchar(10) NOT NULL,\r\n                          `compver` varchar(10) NOT NULL,\r\n                          `devname` varchar(255) NOT NULL,\r\n                          `devaddr` varchar(255) NOT NULL,\r\n                          `devid` varchar(20) NOT NULL,\r\n                          `status` tinyint(3) unsigned NOT NULL DEFAULT '1',\r\n                          `statusdesc` varchar(255) NOT NULL,\r\n                          `loggedin` tinyint(3) unsigned NOT NULL DEFAULT '1',\r\n                          PRIMARY KEY (`id`),\r\n                          KEY `FK_useraccess_siswa` (`nis`),\r\n                          KEY `FK_useraccess_pegawai` (`nip`),\r\n                          KEY `FK_useraccess_calonsiswa` (`nic`),\r\n                          KEY `IX_useraccess` (`jibasid`,`devid`,`status`,`loggedin`) USING BTREE,\r\n                          CONSTRAINT `FK_useraccess_calonsiswa` FOREIGN KEY (`nic`) REFERENCES `jbsakad`.`calonsiswa` (`nopendaftaran`) ON UPDATE CASCADE,\r\n                          CONSTRAINT `FK_useraccess_pegawai` FOREIGN KEY (`nip`) REFERENCES `jbssdm`.`pegawai` (`nip`) ON UPDATE CASCADE,\r\n                          CONSTRAINT `FK_useraccess_siswa` FOREIGN KEY (`nis`) REFERENCES `jbsakad`.`siswa` (`nis`) ON UPDATE CASCADE\r\n                        ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+110489958	CREATE TABLE  `jbsjs`.`tentang` (\r\n                          `id` int(10) unsigned NOT NULL AUTO_INCREMENT,\r\n                          `tentang` mediumtext NOT NULL,\r\n                          PRIMARY KEY (`id`)\r\n                        ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+110490884	CREATE TABLE  `jbsjs`.`usertoken` (\r\n                          `id` int(10) unsigned NOT NULL AUTO_INCREMENT,\r\n                          `jibasid` varchar(50) NOT NULL,\r\n                          `nis` varchar(20) CHARACTER SET utf8 DEFAULT NULL,\r\n                          `nip` varchar(30) CHARACTER SET utf8 DEFAULT NULL,\r\n                          `nic` varchar(20) CHARACTER SET utf8 DEFAULT NULL,\r\n                          `devid` varchar(20) NOT NULL,\r\n                          `token` varchar(255) NOT NULL,\r\n                          `lastuse` datetime NOT NULL,\r\n                          `aktif` tinyint(3) unsigned NOT NULL DEFAULT '1',\r\n                          `loggedin` tinyint(3) unsigned NOT NULL DEFAULT '1',\r\n                          PRIMARY KEY (`id`),\r\n                          KEY `FK_usertoken_siswa` (`nis`),\r\n                          KEY `FK_usertoken_pegawai` (`nip`),\r\n                          KEY `FK_usertokencalonsiswa` (`nic`),\r\n                          KEY `IX_usertoken` (`nis`,`nip`,`nic`,`devid`,`token`,`jibasid`,`aktif`,`loggedin`) USING BTREE,\r\n                          CONSTRAINT `FK_usertoken_calonsiswa` FOREIGN KEY (`nic`) REFERENCES `jbsakad`.`calonsiswa` (`nopendaftaran`) ON UPDATE CASCADE,\r\n                          CONSTRAINT `FK_usertoken_pegawai` FOREIGN KEY (`nip`) REFERENCES `jbssdm`.`pegawai` (`nip`) ON UPDATE CASCADE,\r\n                          CONSTRAINT `FK_usertoken_siswa` FOREIGN KEY (`nis`) REFERENCES `jbsakad`.`siswa` (`nis`) ON UPDATE CASCADE\r\n                        ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+110491148	Tidak ditemukan basis data Sistem Informasi Sekolah JIBAS di {0}:{1}
+110491201	DELETE FROM jbsfina.transgen
+110491234	DatabaseTester.Run()
+110491271	KESALAHAN:\n\n
+110491312	KONFIRMASI:\n\n
+110491336	INFORMASI:\n\n
+110491356	PERINGATAN:\n\n
+110491366	maintenance.txt
+110491381	PERHATIAN:\n\n
+110491551	SELECT COUNT(TABLE_SCHEMA)\r\n                                  FROM `information_schema`.`TABLES`\r\n                                 WHERE TABLE_SCHEMA IN ('jbsakad', 'jbssdm', 'jbssms')
+110491916	yyyy-MM-dd HH:mm:ss
+110491958	-------- {0} {1} at {2} --------
+110491983	{0} [{1}]: {2}

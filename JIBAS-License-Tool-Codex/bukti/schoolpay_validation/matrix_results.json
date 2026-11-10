@@ -1,0 +1,911 @@
+[
+  {
+    "artifact_sha256": "ca112352f1160ead541ff404354aecb3a83165798e562dea5ca3ef68191cd2f8",
+    "mvid": "3f7d530d-8b12-4c29-229b-d7a7bd599cf1",
+    "authority": "controlled replay: current ID holders supplied; original methods unmodified, no Main/UI/network",
+    "importer_token": "06000757",
+    "current_database_id": "7VJM4",
+    "current_system_id": "DDCB4",
+    "attempts": [
+      {
+        "input": "C:\\YIM\\JIBAS Generator\\JIBAS-License-Tool-Codex\\bukti\\schoolpay_validation\\generated\\7VJM4_new.lic",
+        "before_client": "TRIAL",
+        "before_sequence": 0,
+        "accepted": true,
+        "after_client": "9555E922490645D1AAF098C42DACD942",
+        "after_sequence": 1,
+        "after_dbid": "7VJM4",
+        "after_systemid": "DDCB4",
+        "max_vendor": 100,
+        "cache_exists": true,
+        "cache_loader_returned": true
+      }
+    ],
+    "label": "7VJM4_fresh"
+  },
+  {
+    "artifact_sha256": "ca112352f1160ead541ff404354aecb3a83165798e562dea5ca3ef68191cd2f8",
+    "mvid": "3f7d530d-8b12-4c29-229b-d7a7bd599cf1",
+    "authority": "controlled replay: current ID holders supplied; original methods unmodified, no Main/UI/network",
+    "importer_token": "06000757",
+    "current_database_id": "7VJM4",
+    "current_system_id": "DDCB4",
+    "attempts": [
+      {
+        "input": "C:\\YIM\\JIBAS Generator\\JIBAS-License-Tool-Codex\\bukti\\schoolpay_validation\\generated\\7VJM4_new.lic",
+        "before_client": "TRIAL",
+        "before_sequence": 0,
+        "accepted": true,
+        "after_client": "9555E922490645D1AAF098C42DACD942",
+        "after_sequence": 1,
+        "after_dbid": "7VJM4",
+        "after_systemid": "DDCB4",
+        "max_vendor": 100,
+        "cache_exists": true,
+        "cache_loader_returned": true
+      },
+      {
+        "input": "C:\\YIM\\JIBAS Generator\\JIBAS-License-Tool-Codex\\bukti\\schoolpay_validation\\generated\\7VJM4_renew.lic",
+        "before_client": "9555E922490645D1AAF098C42DACD942",
+        "before_sequence": 1,
+        "accepted": true,
+        "after_client": "9555E922490645D1AAF098C42DACD942",
+        "after_sequence": 2,
+        "after_dbid": "7VJM4",
+        "after_systemid": "DDCB4",
+        "max_vendor": 100,
+        "cache_exists": true,
+        "cache_loader_returned": true
+      }
+    ],
+    "label": "7VJM4_renewal"
+  },
+  {
+    "artifact_sha256": "ca112352f1160ead541ff404354aecb3a83165798e562dea5ca3ef68191cd2f8",
+    "mvid": "3f7d530d-8b12-4c29-229b-d7a7bd599cf1",
+    "authority": "controlled replay: current ID holders supplied; original methods unmodified, no Main/UI/network",
+    "importer_token": "06000757",
+    "current_database_id": "7VJM4",
+    "current_system_id": "DDCB4",
+    "attempts": [
+      {
+        "input": "C:\\YIM\\JIBAS Generator\\JIBAS-License-Tool-Codex\\bukti\\schoolpay_validation\\generated\\7VJM4_new.lic",
+        "before_client": "TRIAL",
+        "before_sequence": 0,
+        "accepted": true,
+        "after_client": "9555E922490645D1AAF098C42DACD942",
+        "after_sequence": 1,
+        "after_dbid": "7VJM4",
+        "after_systemid": "DDCB4",
+        "max_vendor": 100,
+        "cache_exists": true,
+        "cache_loader_returned": true
+      },
+      {
+        "input": "C:\\YIM\\JIBAS Generator\\JIBAS-License-Tool-Codex\\bukti\\schoolpay_validation\\generated\\7VJM4_new.lic",
+        "before_client": "9555E922490645D1AAF098C42DACD942",
+        "before_sequence": 1,
+        "accepted": false,
+        "exception": "System.Exception: Sequence lisensi sama dengan lisensi yang terdaftar!",
+        "after_client": "9555E922490645D1AAF098C42DACD942",
+        "after_sequence": 1,
+        "after_dbid": "7VJM4",
+        "after_systemid": "DDCB4",
+        "max_vendor": 100,
+        "cache_exists": true,
+        "cache_loader_returned": true
+      }
+    ],
+    "label": "7VJM4_same_sequence"
+  },
+  {
+    "artifact_sha256": "ca112352f1160ead541ff404354aecb3a83165798e562dea5ca3ef68191cd2f8",
+    "mvid": "3f7d530d-8b12-4c29-229b-d7a7bd599cf1",
+    "authority": "controlled replay: current ID holders supplied; original methods unmodified, no Main/UI/network",
+    "importer_token": "06000757",
+    "current_database_id": "7VJM4",
+    "current_system_id": "DDCB4",
+    "attempts": [
+      {
+        "input": "C:\\YIM\\JIBAS Generator\\JIBAS-License-Tool-Codex\\bukti\\schoolpay_validation\\generated\\7VJM4_new.lic",
+        "before_client": "TRIAL",
+        "before_sequence": 0,
+        "accepted": true,
+        "after_client": "9555E922490645D1AAF098C42DACD942",
+        "after_sequence": 1,
+        "after_dbid": "7VJM4",
+        "after_systemid": "DDCB4",
+        "max_vendor": 100,
+        "cache_exists": true,
+        "cache_loader_returned": true
+      },
+      {
+        "input": "C:\\YIM\\JIBAS Generator\\JIBAS-License-Tool-Codex\\bukti\\schoolpay_validation\\generated\\7VJM4_lowerseq.lic",
+        "before_client": "9555E922490645D1AAF098C42DACD942",
+        "before_sequence": 1,
+        "accepted": false,
+        "exception": "System.Exception: Sequence lisensi lebih kecil daripada lisensi yang terdaftar!",
+        "after_client": "9555E922490645D1AAF098C42DACD942",
+        "after_sequence": 1,
+        "after_dbid": "7VJM4",
+        "after_systemid": "DDCB4",
+        "max_vendor": 100,
+        "cache_exists": true,
+        "cache_loader_returned": true
+      }
+    ],
+    "label": "7VJM4_decreased_sequence"
+  },
+  {
+    "artifact_sha256": "ca112352f1160ead541ff404354aecb3a83165798e562dea5ca3ef68191cd2f8",
+    "mvid": "3f7d530d-8b12-4c29-229b-d7a7bd599cf1",
+    "authority": "controlled replay: current ID holders supplied; original methods unmodified, no Main/UI/network",
+    "importer_token": "06000757",
+    "current_database_id": "7VJM4",
+    "current_system_id": "DDCB4",
+    "attempts": [
+      {
+        "input": "C:\\YIM\\JIBAS Generator\\JIBAS-License-Tool-Codex\\bukti\\schoolpay_validation\\generated\\7VJM4_new.lic",
+        "before_client": "TRIAL",
+        "before_sequence": 0,
+        "accepted": true,
+        "after_client": "9555E922490645D1AAF098C42DACD942",
+        "after_sequence": 1,
+        "after_dbid": "7VJM4",
+        "after_systemid": "DDCB4",
+        "max_vendor": 100,
+        "cache_exists": true,
+        "cache_loader_returned": true
+      },
+      {
+        "input": "C:\\YIM\\JIBAS Generator\\JIBAS-License-Tool-Codex\\bukti\\schoolpay_validation\\generated\\7VJM4_otherclient.lic",
+        "before_client": "9555E922490645D1AAF098C42DACD942",
+        "before_sequence": 1,
+        "accepted": false,
+        "exception": "System.Exception: Client Id tidak sama dengan lisensi sebelumnya!",
+        "after_client": "9555E922490645D1AAF098C42DACD942",
+        "after_sequence": 1,
+        "after_dbid": "7VJM4",
+        "after_systemid": "DDCB4",
+        "max_vendor": 100,
+        "cache_exists": true,
+        "cache_loader_returned": true
+      }
+    ],
+    "label": "7VJM4_different_client"
+  },
+  {
+    "artifact_sha256": "ca112352f1160ead541ff404354aecb3a83165798e562dea5ca3ef68191cd2f8",
+    "mvid": "3f7d530d-8b12-4c29-229b-d7a7bd599cf1",
+    "authority": "controlled replay: current ID holders supplied; original methods unmodified, no Main/UI/network",
+    "importer_token": "06000757",
+    "current_database_id": "ZZZZZ",
+    "current_system_id": "DDCB4",
+    "attempts": [
+      {
+        "input": "C:\\YIM\\JIBAS Generator\\JIBAS-License-Tool-Codex\\bukti\\schoolpay_validation\\generated\\7VJM4_new.lic",
+        "before_client": "TRIAL",
+        "before_sequence": 0,
+        "accepted": false,
+        "exception": "System.Exception: Database Id tidak sama dengan lisensi (7VJM4)",
+        "after_client": "TRIAL",
+        "after_sequence": 0,
+        "after_dbid": "",
+        "after_systemid": "",
+        "max_vendor": 20,
+        "cache_exists": false
+      }
+    ],
+    "label": "7VJM4_wrong_database"
+  },
+  {
+    "artifact_sha256": "ca112352f1160ead541ff404354aecb3a83165798e562dea5ca3ef68191cd2f8",
+    "mvid": "3f7d530d-8b12-4c29-229b-d7a7bd599cf1",
+    "authority": "controlled replay: current ID holders supplied; original methods unmodified, no Main/UI/network",
+    "importer_token": "06000757",
+    "current_database_id": "7VJM4",
+    "current_system_id": "00000",
+    "attempts": [
+      {
+        "input": "C:\\YIM\\JIBAS Generator\\JIBAS-License-Tool-Codex\\bukti\\schoolpay_validation\\generated\\7VJM4_new.lic",
+        "before_client": "TRIAL",
+        "before_sequence": 0,
+        "accepted": true,
+        "after_client": "9555E922490645D1AAF098C42DACD942",
+        "after_sequence": 1,
+        "after_dbid": "7VJM4",
+        "after_systemid": "DDCB4",
+        "max_vendor": 100,
+        "cache_exists": true,
+        "cache_loader_returned": true
+      }
+    ],
+    "label": "7VJM4_wrong_system"
+  },
+  {
+    "artifact_sha256": "ca112352f1160ead541ff404354aecb3a83165798e562dea5ca3ef68191cd2f8",
+    "mvid": "3f7d530d-8b12-4c29-229b-d7a7bd599cf1",
+    "authority": "controlled replay: current ID holders supplied; original methods unmodified, no Main/UI/network",
+    "importer_token": "06000757",
+    "current_database_id": "ABCDE",
+    "current_system_id": "ABCDE",
+    "attempts": [
+      {
+        "input": "C:\\YIM\\JIBAS Generator\\JIBAS-License-Tool-Codex\\bukti\\schoolpay_validation\\generated\\ABCDE_new.lic",
+        "before_client": "TRIAL",
+        "before_sequence": 0,
+        "accepted": true,
+        "after_client": "1661522E82E246B681E8D33F4B04A681",
+        "after_sequence": 1,
+        "after_dbid": "ABCDE",
+        "after_systemid": "ABCDE",
+        "max_vendor": 100,
+        "cache_exists": true,
+        "cache_loader_returned": true
+      }
+    ],
+    "label": "ABCDE_fresh"
+  },
+  {
+    "artifact_sha256": "ca112352f1160ead541ff404354aecb3a83165798e562dea5ca3ef68191cd2f8",
+    "mvid": "3f7d530d-8b12-4c29-229b-d7a7bd599cf1",
+    "authority": "controlled replay: current ID holders supplied; original methods unmodified, no Main/UI/network",
+    "importer_token": "06000757",
+    "current_database_id": "ABCDE",
+    "current_system_id": "ABCDE",
+    "attempts": [
+      {
+        "input": "C:\\YIM\\JIBAS Generator\\JIBAS-License-Tool-Codex\\bukti\\schoolpay_validation\\generated\\ABCDE_new.lic",
+        "before_client": "TRIAL",
+        "before_sequence": 0,
+        "accepted": true,
+        "after_client": "1661522E82E246B681E8D33F4B04A681",
+        "after_sequence": 1,
+        "after_dbid": "ABCDE",
+        "after_systemid": "ABCDE",
+        "max_vendor": 100,
+        "cache_exists": true,
+        "cache_loader_returned": true
+      },
+      {
+        "input": "C:\\YIM\\JIBAS Generator\\JIBAS-License-Tool-Codex\\bukti\\schoolpay_validation\\generated\\ABCDE_renew.lic",
+        "before_client": "1661522E82E246B681E8D33F4B04A681",
+        "before_sequence": 1,
+        "accepted": true,
+        "after_client": "1661522E82E246B681E8D33F4B04A681",
+        "after_sequence": 2,
+        "after_dbid": "ABCDE",
+        "after_systemid": "ABCDE",
+        "max_vendor": 100,
+        "cache_exists": true,
+        "cache_loader_returned": true
+      }
+    ],
+    "label": "ABCDE_renewal"
+  },
+  {
+    "artifact_sha256": "ca112352f1160ead541ff404354aecb3a83165798e562dea5ca3ef68191cd2f8",
+    "mvid": "3f7d530d-8b12-4c29-229b-d7a7bd599cf1",
+    "authority": "controlled replay: current ID holders supplied; original methods unmodified, no Main/UI/network",
+    "importer_token": "06000757",
+    "current_database_id": "ABCDE",
+    "current_system_id": "ABCDE",
+    "attempts": [
+      {
+        "input": "C:\\YIM\\JIBAS Generator\\JIBAS-License-Tool-Codex\\bukti\\schoolpay_validation\\generated\\ABCDE_new.lic",
+        "before_client": "TRIAL",
+        "before_sequence": 0,
+        "accepted": true,
+        "after_client": "1661522E82E246B681E8D33F4B04A681",
+        "after_sequence": 1,
+        "after_dbid": "ABCDE",
+        "after_systemid": "ABCDE",
+        "max_vendor": 100,
+        "cache_exists": true,
+        "cache_loader_returned": true
+      },
+      {
+        "input": "C:\\YIM\\JIBAS Generator\\JIBAS-License-Tool-Codex\\bukti\\schoolpay_validation\\generated\\ABCDE_new.lic",
+        "before_client": "1661522E82E246B681E8D33F4B04A681",
+        "before_sequence": 1,
+        "accepted": false,
+        "exception": "System.Exception: Sequence lisensi sama dengan lisensi yang terdaftar!",
+        "after_client": "1661522E82E246B681E8D33F4B04A681",
+        "after_sequence": 1,
+        "after_dbid": "ABCDE",
+        "after_systemid": "ABCDE",
+        "max_vendor": 100,
+        "cache_exists": true,
+        "cache_loader_returned": true
+      }
+    ],
+    "label": "ABCDE_same_sequence"
+  },
+  {
+    "artifact_sha256": "ca112352f1160ead541ff404354aecb3a83165798e562dea5ca3ef68191cd2f8",
+    "mvid": "3f7d530d-8b12-4c29-229b-d7a7bd599cf1",
+    "authority": "controlled replay: current ID holders supplied; original methods unmodified, no Main/UI/network",
+    "importer_token": "06000757",
+    "current_database_id": "ABCDE",
+    "current_system_id": "ABCDE",
+    "attempts": [
+      {
+        "input": "C:\\YIM\\JIBAS Generator\\JIBAS-License-Tool-Codex\\bukti\\schoolpay_validation\\generated\\ABCDE_new.lic",
+        "before_client": "TRIAL",
+        "before_sequence": 0,
+        "accepted": true,
+        "after_client": "1661522E82E246B681E8D33F4B04A681",
+        "after_sequence": 1,
+        "after_dbid": "ABCDE",
+        "after_systemid": "ABCDE",
+        "max_vendor": 100,
+        "cache_exists": true,
+        "cache_loader_returned": true
+      },
+      {
+        "input": "C:\\YIM\\JIBAS Generator\\JIBAS-License-Tool-Codex\\bukti\\schoolpay_validation\\generated\\ABCDE_lowerseq.lic",
+        "before_client": "1661522E82E246B681E8D33F4B04A681",
+        "before_sequence": 1,
+        "accepted": false,
+        "exception": "System.Exception: Sequence lisensi lebih kecil daripada lisensi yang terdaftar!",
+        "after_client": "1661522E82E246B681E8D33F4B04A681",
+        "after_sequence": 1,
+        "after_dbid": "ABCDE",
+        "after_systemid": "ABCDE",
+        "max_vendor": 100,
+        "cache_exists": true,
+        "cache_loader_returned": true
+      }
+    ],
+    "label": "ABCDE_decreased_sequence"
+  },
+  {
+    "artifact_sha256": "ca112352f1160ead541ff404354aecb3a83165798e562dea5ca3ef68191cd2f8",
+    "mvid": "3f7d530d-8b12-4c29-229b-d7a7bd599cf1",
+    "authority": "controlled replay: current ID holders supplied; original methods unmodified, no Main/UI/network",
+    "importer_token": "06000757",
+    "current_database_id": "ABCDE",
+    "current_system_id": "ABCDE",
+    "attempts": [
+      {
+        "input": "C:\\YIM\\JIBAS Generator\\JIBAS-License-Tool-Codex\\bukti\\schoolpay_validation\\generated\\ABCDE_new.lic",
+        "before_client": "TRIAL",
+        "before_sequence": 0,
+        "accepted": true,
+        "after_client": "1661522E82E246B681E8D33F4B04A681",
+        "after_sequence": 1,
+        "after_dbid": "ABCDE",
+        "after_systemid": "ABCDE",
+        "max_vendor": 100,
+        "cache_exists": true,
+        "cache_loader_returned": true
+      },
+      {
+        "input": "C:\\YIM\\JIBAS Generator\\JIBAS-License-Tool-Codex\\bukti\\schoolpay_validation\\generated\\ABCDE_otherclient.lic",
+        "before_client": "1661522E82E246B681E8D33F4B04A681",
+        "before_sequence": 1,
+        "accepted": false,
+        "exception": "System.Exception: Client Id tidak sama dengan lisensi sebelumnya!",
+        "after_client": "1661522E82E246B681E8D33F4B04A681",
+        "after_sequence": 1,
+        "after_dbid": "ABCDE",
+        "after_systemid": "ABCDE",
+        "max_vendor": 100,
+        "cache_exists": true,
+        "cache_loader_returned": true
+      }
+    ],
+    "label": "ABCDE_different_client"
+  },
+  {
+    "artifact_sha256": "ca112352f1160ead541ff404354aecb3a83165798e562dea5ca3ef68191cd2f8",
+    "mvid": "3f7d530d-8b12-4c29-229b-d7a7bd599cf1",
+    "authority": "controlled replay: current ID holders supplied; original methods unmodified, no Main/UI/network",
+    "importer_token": "06000757",
+    "current_database_id": "ZZZZZ",
+    "current_system_id": "ABCDE",
+    "attempts": [
+      {
+        "input": "C:\\YIM\\JIBAS Generator\\JIBAS-License-Tool-Codex\\bukti\\schoolpay_validation\\generated\\ABCDE_new.lic",
+        "before_client": "TRIAL",
+        "before_sequence": 0,
+        "accepted": false,
+        "exception": "System.Exception: Database Id tidak sama dengan lisensi (ABCDE)",
+        "after_client": "TRIAL",
+        "after_sequence": 0,
+        "after_dbid": "",
+        "after_systemid": "",
+        "max_vendor": 20,
+        "cache_exists": false
+      }
+    ],
+    "label": "ABCDE_wrong_database"
+  },
+  {
+    "artifact_sha256": "ca112352f1160ead541ff404354aecb3a83165798e562dea5ca3ef68191cd2f8",
+    "mvid": "3f7d530d-8b12-4c29-229b-d7a7bd599cf1",
+    "authority": "controlled replay: current ID holders supplied; original methods unmodified, no Main/UI/network",
+    "importer_token": "06000757",
+    "current_database_id": "ABCDE",
+    "current_system_id": "00000",
+    "attempts": [
+      {
+        "input": "C:\\YIM\\JIBAS Generator\\JIBAS-License-Tool-Codex\\bukti\\schoolpay_validation\\generated\\ABCDE_new.lic",
+        "before_client": "TRIAL",
+        "before_sequence": 0,
+        "accepted": true,
+        "after_client": "1661522E82E246B681E8D33F4B04A681",
+        "after_sequence": 1,
+        "after_dbid": "ABCDE",
+        "after_systemid": "ABCDE",
+        "max_vendor": 100,
+        "cache_exists": true,
+        "cache_loader_returned": true
+      }
+    ],
+    "label": "ABCDE_wrong_system"
+  },
+  {
+    "artifact_sha256": "ca112352f1160ead541ff404354aecb3a83165798e562dea5ca3ef68191cd2f8",
+    "mvid": "3f7d530d-8b12-4c29-229b-d7a7bd599cf1",
+    "authority": "controlled replay: current ID holders supplied; original methods unmodified, no Main/UI/network",
+    "importer_token": "06000757",
+    "current_database_id": "12345",
+    "current_system_id": "12345",
+    "attempts": [
+      {
+        "input": "C:\\YIM\\JIBAS Generator\\JIBAS-License-Tool-Codex\\bukti\\schoolpay_validation\\generated\\12345_new.lic",
+        "before_client": "TRIAL",
+        "before_sequence": 0,
+        "accepted": true,
+        "after_client": "70BEABA8602B47C08CD3766EE8CCBF89",
+        "after_sequence": 1,
+        "after_dbid": "12345",
+        "after_systemid": "12345",
+        "max_vendor": 100,
+        "cache_exists": true,
+        "cache_loader_returned": true
+      }
+    ],
+    "label": "12345_fresh"
+  },
+  {
+    "artifact_sha256": "ca112352f1160ead541ff404354aecb3a83165798e562dea5ca3ef68191cd2f8",
+    "mvid": "3f7d530d-8b12-4c29-229b-d7a7bd599cf1",
+    "authority": "controlled replay: current ID holders supplied; original methods unmodified, no Main/UI/network",
+    "importer_token": "06000757",
+    "current_database_id": "12345",
+    "current_system_id": "12345",
+    "attempts": [
+      {
+        "input": "C:\\YIM\\JIBAS Generator\\JIBAS-License-Tool-Codex\\bukti\\schoolpay_validation\\generated\\12345_new.lic",
+        "before_client": "TRIAL",
+        "before_sequence": 0,
+        "accepted": true,
+        "after_client": "70BEABA8602B47C08CD3766EE8CCBF89",
+        "after_sequence": 1,
+        "after_dbid": "12345",
+        "after_systemid": "12345",
+        "max_vendor": 100,
+        "cache_exists": true,
+        "cache_loader_returned": true
+      },
+      {
+        "input": "C:\\YIM\\JIBAS Generator\\JIBAS-License-Tool-Codex\\bukti\\schoolpay_validation\\generated\\12345_renew.lic",
+        "before_client": "70BEABA8602B47C08CD3766EE8CCBF89",
+        "before_sequence": 1,
+        "accepted": true,
+        "after_client": "70BEABA8602B47C08CD3766EE8CCBF89",
+        "after_sequence": 2,
+        "after_dbid": "12345",
+        "after_systemid": "12345",
+        "max_vendor": 100,
+        "cache_exists": true,
+        "cache_loader_returned": true
+      }
+    ],
+    "label": "12345_renewal"
+  },
+  {
+    "artifact_sha256": "ca112352f1160ead541ff404354aecb3a83165798e562dea5ca3ef68191cd2f8",
+    "mvid": "3f7d530d-8b12-4c29-229b-d7a7bd599cf1",
+    "authority": "controlled replay: current ID holders supplied; original methods unmodified, no Main/UI/network",
+    "importer_token": "06000757",
+    "current_database_id": "12345",
+    "current_system_id": "12345",
+    "attempts": [
+      {
+        "input": "C:\\YIM\\JIBAS Generator\\JIBAS-License-Tool-Codex\\bukti\\schoolpay_validation\\generated\\12345_new.lic",
+        "before_client": "TRIAL",
+        "before_sequence": 0,
+        "accepted": true,
+        "after_client": "70BEABA8602B47C08CD3766EE8CCBF89",
+        "after_sequence": 1,
+        "after_dbid": "12345",
+        "after_systemid": "12345",
+        "max_vendor": 100,
+        "cache_exists": true,
+        "cache_loader_returned": true
+      },
+      {
+        "input": "C:\\YIM\\JIBAS Generator\\JIBAS-License-Tool-Codex\\bukti\\schoolpay_validation\\generated\\12345_new.lic",
+        "before_client": "70BEABA8602B47C08CD3766EE8CCBF89",
+        "before_sequence": 1,
+        "accepted": false,
+        "exception": "System.Exception: Sequence lisensi sama dengan lisensi yang terdaftar!",
+        "after_client": "70BEABA8602B47C08CD3766EE8CCBF89",
+        "after_sequence": 1,
+        "after_dbid": "12345",
+        "after_systemid": "12345",
+        "max_vendor": 100,
+        "cache_exists": true,
+        "cache_loader_returned": true
+      }
+    ],
+    "label": "12345_same_sequence"
+  },
+  {
+    "artifact_sha256": "ca112352f1160ead541ff404354aecb3a83165798e562dea5ca3ef68191cd2f8",
+    "mvid": "3f7d530d-8b12-4c29-229b-d7a7bd599cf1",
+    "authority": "controlled replay: current ID holders supplied; original methods unmodified, no Main/UI/network",
+    "importer_token": "06000757",
+    "current_database_id": "12345",
+    "current_system_id": "12345",
+    "attempts": [
+      {
+        "input": "C:\\YIM\\JIBAS Generator\\JIBAS-License-Tool-Codex\\bukti\\schoolpay_validation\\generated\\12345_new.lic",
+        "before_client": "TRIAL",
+        "before_sequence": 0,
+        "accepted": true,
+        "after_client": "70BEABA8602B47C08CD3766EE8CCBF89",
+        "after_sequence": 1,
+        "after_dbid": "12345",
+        "after_systemid": "12345",
+        "max_vendor": 100,
+        "cache_exists": true,
+        "cache_loader_returned": true
+      },
+      {
+        "input": "C:\\YIM\\JIBAS Generator\\JIBAS-License-Tool-Codex\\bukti\\schoolpay_validation\\generated\\12345_lowerseq.lic",
+        "before_client": "70BEABA8602B47C08CD3766EE8CCBF89",
+        "before_sequence": 1,
+        "accepted": false,
+        "exception": "System.Exception: Sequence lisensi lebih kecil daripada lisensi yang terdaftar!",
+        "after_client": "70BEABA8602B47C08CD3766EE8CCBF89",
+        "after_sequence": 1,
+        "after_dbid": "12345",
+        "after_systemid": "12345",
+        "max_vendor": 100,
+        "cache_exists": true,
+        "cache_loader_returned": true
+      }
+    ],
+    "label": "12345_decreased_sequence"
+  },
+  {
+    "artifact_sha256": "ca112352f1160ead541ff404354aecb3a83165798e562dea5ca3ef68191cd2f8",
+    "mvid": "3f7d530d-8b12-4c29-229b-d7a7bd599cf1",
+    "authority": "controlled replay: current ID holders supplied; original methods unmodified, no Main/UI/network",
+    "importer_token": "06000757",
+    "current_database_id": "12345",
+    "current_system_id": "12345",
+    "attempts": [
+      {
+        "input": "C:\\YIM\\JIBAS Generator\\JIBAS-License-Tool-Codex\\bukti\\schoolpay_validation\\generated\\12345_new.lic",
+        "before_client": "TRIAL",
+        "before_sequence": 0,
+        "accepted": true,
+        "after_client": "70BEABA8602B47C08CD3766EE8CCBF89",
+        "after_sequence": 1,
+        "after_dbid": "12345",
+        "after_systemid": "12345",
+        "max_vendor": 100,
+        "cache_exists": true,
+        "cache_loader_returned": true
+      },
+      {
+        "input": "C:\\YIM\\JIBAS Generator\\JIBAS-License-Tool-Codex\\bukti\\schoolpay_validation\\generated\\12345_otherclient.lic",
+        "before_client": "70BEABA8602B47C08CD3766EE8CCBF89",
+        "before_sequence": 1,
+        "accepted": false,
+        "exception": "System.Exception: Client Id tidak sama dengan lisensi sebelumnya!",
+        "after_client": "70BEABA8602B47C08CD3766EE8CCBF89",
+        "after_sequence": 1,
+        "after_dbid": "12345",
+        "after_systemid": "12345",
+        "max_vendor": 100,
+        "cache_exists": true,
+        "cache_loader_returned": true
+      }
+    ],
+    "label": "12345_different_client"
+  },
+  {
+    "artifact_sha256": "ca112352f1160ead541ff404354aecb3a83165798e562dea5ca3ef68191cd2f8",
+    "mvid": "3f7d530d-8b12-4c29-229b-d7a7bd599cf1",
+    "authority": "controlled replay: current ID holders supplied; original methods unmodified, no Main/UI/network",
+    "importer_token": "06000757",
+    "current_database_id": "ZZZZZ",
+    "current_system_id": "12345",
+    "attempts": [
+      {
+        "input": "C:\\YIM\\JIBAS Generator\\JIBAS-License-Tool-Codex\\bukti\\schoolpay_validation\\generated\\12345_new.lic",
+        "before_client": "TRIAL",
+        "before_sequence": 0,
+        "accepted": false,
+        "exception": "System.Exception: Database Id tidak sama dengan lisensi (12345)",
+        "after_client": "TRIAL",
+        "after_sequence": 0,
+        "after_dbid": "",
+        "after_systemid": "",
+        "max_vendor": 20,
+        "cache_exists": false
+      }
+    ],
+    "label": "12345_wrong_database"
+  },
+  {
+    "artifact_sha256": "ca112352f1160ead541ff404354aecb3a83165798e562dea5ca3ef68191cd2f8",
+    "mvid": "3f7d530d-8b12-4c29-229b-d7a7bd599cf1",
+    "authority": "controlled replay: current ID holders supplied; original methods unmodified, no Main/UI/network",
+    "importer_token": "06000757",
+    "current_database_id": "12345",
+    "current_system_id": "00000",
+    "attempts": [
+      {
+        "input": "C:\\YIM\\JIBAS Generator\\JIBAS-License-Tool-Codex\\bukti\\schoolpay_validation\\generated\\12345_new.lic",
+        "before_client": "TRIAL",
+        "before_sequence": 0,
+        "accepted": true,
+        "after_client": "70BEABA8602B47C08CD3766EE8CCBF89",
+        "after_sequence": 1,
+        "after_dbid": "12345",
+        "after_systemid": "12345",
+        "max_vendor": 100,
+        "cache_exists": true,
+        "cache_loader_returned": true
+      }
+    ],
+    "label": "12345_wrong_system"
+  },
+  {
+    "artifact_sha256": "ca112352f1160ead541ff404354aecb3a83165798e562dea5ca3ef68191cd2f8",
+    "mvid": "3f7d530d-8b12-4c29-229b-d7a7bd599cf1",
+    "authority": "controlled replay: current ID holders supplied; original methods unmodified, no Main/UI/network",
+    "importer_token": "06000757",
+    "current_database_id": "7VJM4",
+    "current_system_id": "DDCB4",
+    "attempts": [
+      {
+        "input": "C:\\YIM\\JIBAS Generator\\JIBAS-License-Tool-Codex\\bukti\\schoolpay_validation\\generated\\noheader.lic",
+        "before_client": "TRIAL",
+        "before_sequence": 0,
+        "accepted": true,
+        "after_client": "9555E922490645D1AAF098C42DACD942",
+        "after_sequence": 1,
+        "after_dbid": "7VJM4",
+        "after_systemid": "DDCB4",
+        "max_vendor": 100,
+        "cache_exists": true,
+        "cache_loader_returned": true
+      }
+    ],
+    "label": "no_header"
+  },
+  {
+    "artifact_sha256": "ca112352f1160ead541ff404354aecb3a83165798e562dea5ca3ef68191cd2f8",
+    "mvid": "3f7d530d-8b12-4c29-229b-d7a7bd599cf1",
+    "authority": "controlled replay: current ID holders supplied; original methods unmodified, no Main/UI/network",
+    "importer_token": "06000757",
+    "current_database_id": "7VJM4",
+    "current_system_id": "DDCB4",
+    "attempts": [
+      {
+        "input": "C:\\YIM\\JIBAS Generator\\JIBAS-License-Tool-Codex\\bukti\\schoolpay_validation\\generated\\wrongheader.lic",
+        "before_client": "TRIAL",
+        "before_sequence": 0,
+        "accepted": true,
+        "after_client": "9555E922490645D1AAF098C42DACD942",
+        "after_sequence": 1,
+        "after_dbid": "7VJM4",
+        "after_systemid": "DDCB4",
+        "max_vendor": 100,
+        "cache_exists": true,
+        "cache_loader_returned": true
+      }
+    ],
+    "label": "arbitrary_comment_header"
+  },
+  {
+    "artifact_sha256": "ca112352f1160ead541ff404354aecb3a83165798e562dea5ca3ef68191cd2f8",
+    "mvid": "3f7d530d-8b12-4c29-229b-d7a7bd599cf1",
+    "authority": "controlled replay: current ID holders supplied; original methods unmodified, no Main/UI/network",
+    "importer_token": "06000757",
+    "current_database_id": "7VJM4",
+    "current_system_id": "DDCB4",
+    "attempts": [
+      {
+        "input": "C:\\YIM\\JIBAS Generator\\JIBAS-License-Tool-Codex\\bukti\\schoolpay_validation\\generated\\broken.lic",
+        "before_client": "TRIAL",
+        "before_sequence": 0,
+        "accepted": false,
+        "exception": "System.FormatException: The input is not a valid Base-64 string as it contains a non-base 64 character, more than two padding characters, or an illegal character among the padding characters. ",
+        "after_client": "TRIAL",
+        "after_sequence": 0,
+        "after_dbid": "",
+        "after_systemid": "",
+        "max_vendor": 20,
+        "cache_exists": false
+      }
+    ],
+    "label": "broken_ciphertext"
+  },
+  {
+    "artifact_sha256": "ca112352f1160ead541ff404354aecb3a83165798e562dea5ca3ef68191cd2f8",
+    "mvid": "3f7d530d-8b12-4c29-229b-d7a7bd599cf1",
+    "authority": "controlled replay: current ID holders supplied; original methods unmodified, no Main/UI/network",
+    "importer_token": "06000757",
+    "current_database_id": "7VJM4",
+    "current_system_id": "DDCB4",
+    "attempts": [
+      {
+        "input": "C:\\YIM\\JIBAS Generator\\JIBAS-License-Tool-Codex\\bukti\\schoolpay_validation\\generated\\no_flag.lic",
+        "before_client": "TRIAL",
+        "before_sequence": 0,
+        "accepted": false,
+        "exception": "System.ArgumentException: Column 'ForSchoolPay' does not belong to table JibasSchoolPayLicense.",
+        "after_client": "9555E922490645D1AAF098C42DACD942",
+        "after_sequence": 1,
+        "after_dbid": "7VJM4",
+        "after_systemid": "DDCB4",
+        "max_vendor": 100,
+        "cache_exists": false
+      }
+    ],
+    "label": "no_for_schoolpay"
+  },
+  {
+    "artifact_sha256": "ca112352f1160ead541ff404354aecb3a83165798e562dea5ca3ef68191cd2f8",
+    "mvid": "3f7d530d-8b12-4c29-229b-d7a7bd599cf1",
+    "authority": "controlled replay: current ID holders supplied; original methods unmodified, no Main/UI/network",
+    "importer_token": "06000757",
+    "current_database_id": "7VJM4",
+    "current_system_id": "DDCB4",
+    "attempts": [
+      {
+        "input": "C:\\YIM\\JIBAS Generator\\JIBAS-License-Tool-Codex\\bukti\\schoolpay_validation\\generated\\flag_zero.lic",
+        "before_client": "TRIAL",
+        "before_sequence": 0,
+        "accepted": true,
+        "after_client": "9555E922490645D1AAF098C42DACD942",
+        "after_sequence": 1,
+        "after_dbid": "7VJM4",
+        "after_systemid": "DDCB4",
+        "max_vendor": 100,
+        "cache_exists": true,
+        "cache_loader_returned": true
+      }
+    ],
+    "label": "flag_zero"
+  },
+  {
+    "artifact_sha256": "ca112352f1160ead541ff404354aecb3a83165798e562dea5ca3ef68191cd2f8",
+    "mvid": "3f7d530d-8b12-4c29-229b-d7a7bd599cf1",
+    "authority": "controlled replay: current ID holders supplied; original methods unmodified, no Main/UI/network",
+    "importer_token": "06000757",
+    "current_database_id": "7VJM4",
+    "current_system_id": "DDCB4",
+    "attempts": [
+      {
+        "input": "C:\\YIM\\JIBAS Generator\\JIBAS-License-Tool-Codex\\bukti\\schoolpay_validation\\generated\\flag_false.lic",
+        "before_client": "TRIAL",
+        "before_sequence": 0,
+        "accepted": true,
+        "after_client": "9555E922490645D1AAF098C42DACD942",
+        "after_sequence": 1,
+        "after_dbid": "7VJM4",
+        "after_systemid": "DDCB4",
+        "max_vendor": 100,
+        "cache_exists": true,
+        "cache_loader_returned": true
+      }
+    ],
+    "label": "flag_false"
+  },
+  {
+    "artifact_sha256": "ca112352f1160ead541ff404354aecb3a83165798e562dea5ca3ef68191cd2f8",
+    "mvid": "3f7d530d-8b12-4c29-229b-d7a7bd599cf1",
+    "authority": "controlled replay: current ID holders supplied; original methods unmodified, no Main/UI/network",
+    "importer_token": "06000757",
+    "current_database_id": "7VJM4",
+    "current_system_id": "DDCB4",
+    "attempts": [
+      {
+        "input": "C:\\YIM\\JIBAS Generator\\JIBAS-License-Tool-Codex\\bukti\\schoolpay_validation\\generated\\flag_empty.lic",
+        "before_client": "TRIAL",
+        "before_sequence": 0,
+        "accepted": true,
+        "after_client": "9555E922490645D1AAF098C42DACD942",
+        "after_sequence": 1,
+        "after_dbid": "7VJM4",
+        "after_systemid": "DDCB4",
+        "max_vendor": 100,
+        "cache_exists": true,
+        "cache_loader_returned": true
+      }
+    ],
+    "label": "flag_empty"
+  },
+  {
+    "artifact_sha256": "ca112352f1160ead541ff404354aecb3a83165798e562dea5ca3ef68191cd2f8",
+    "mvid": "3f7d530d-8b12-4c29-229b-d7a7bd599cf1",
+    "authority": "controlled replay: current ID holders supplied; original methods unmodified, no Main/UI/network",
+    "importer_token": "06000757",
+    "current_database_id": "7VJM4",
+    "current_system_id": "DDCB4",
+    "attempts": [
+      {
+        "input": "C:\\YIM\\JIBAS Generator\\JIBAS-License-Tool-Codex\\bukti\\schoolpay_validation\\generated\\flag_schema_only.lic",
+        "before_client": "TRIAL",
+        "before_sequence": 0,
+        "accepted": true,
+        "after_client": "9555E922490645D1AAF098C42DACD942",
+        "after_sequence": 1,
+        "after_dbid": "7VJM4",
+        "after_systemid": "DDCB4",
+        "max_vendor": 100,
+        "cache_exists": true,
+        "cache_loader_returned": true
+      }
+    ],
+    "label": "flag_schema_only"
+  },
+  {
+    "artifact_sha256": "ca112352f1160ead541ff404354aecb3a83165798e562dea5ca3ef68191cd2f8",
+    "mvid": "3f7d530d-8b12-4c29-229b-d7a7bd599cf1",
+    "authority": "controlled replay: current ID holders supplied; original methods unmodified, no Main/UI/network",
+    "importer_token": "06000757",
+    "current_database_id": "7VJM4",
+    "current_system_id": "DDCB4",
+    "attempts": [
+      {
+        "input": "C:\\YIM\\JIBAS Generator\\JIBAS-License-Tool-Codex\\bukti\\schoolpay_validation\\generated\\capacity_overflow.lic",
+        "before_client": "TRIAL",
+        "before_sequence": 0,
+        "accepted": false,
+        "exception": "System.OverflowException: Value was either too large or too small for an Int32.",
+        "after_client": "9555E922490645D1AAF098C42DACD942",
+        "after_sequence": 0,
+        "after_dbid": "7VJM4",
+        "after_systemid": "DDCB4",
+        "max_vendor": 20,
+        "cache_exists": false
+      }
+    ],
+    "label": "capacity_int32_overflow"
+  },
+  {
+    "artifact_sha256": "ca112352f1160ead541ff404354aecb3a83165798e562dea5ca3ef68191cd2f8",
+    "mvid": "3f7d530d-8b12-4c29-229b-d7a7bd599cf1",
+    "authority": "controlled replay: current ID holders supplied; original methods unmodified, no Main/UI/network",
+    "importer_token": "06000757",
+    "current_database_id": "7VJM4",
+    "current_system_id": "DDCB4",
+    "attempts": [
+      {
+        "input": "C:\\YIM\\JIBAS Generator\\JIBAS-License-Tool-Codex\\bukti\\schoolpay_validation\\generated\\expired.lic",
+        "before_client": "TRIAL",
+        "before_sequence": 0,
+        "accepted": true,
+        "after_client": "9555E922490645D1AAF098C42DACD942",
+        "after_sequence": 1,
+        "after_dbid": "7VJM4",
+        "after_systemid": "DDCB4",
+        "max_vendor": 100,
+        "cache_exists": true,
+        "cache_loader_returned": true
+      }
+    ],
+    "label": "already_expired"
+  }
+]

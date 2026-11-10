@@ -1,0 +1,38 @@
+{
+  "artifact_sha256": "ca112352f1160ead541ff404354aecb3a83165798e562dea5ca3ef68191cd2f8",
+  "mvid": "3f7d530d-8b12-4c29-229b-d7a7bd599cf1",
+  "authority": "controlled replay: current ID holders supplied; original methods unmodified, no Main/UI/network",
+  "importer_token": "06000757",
+  "current_database_id": "7VJM4",
+  "current_system_id": "DDCB4",
+  "attempts": [
+    {
+      "input": "C:\\YIM\\JIBAS Generator\\JIBAS-License-Tool-Codex\\bukti\\schoolpay_validation\\generated\\7VJM4_new.lic",
+      "before_client": "TRIAL",
+      "before_sequence": 0,
+      "accepted": true,
+      "after_client": "9555E922490645D1AAF098C42DACD942",
+      "after_sequence": 1,
+      "after_dbid": "7VJM4",
+      "after_systemid": "DDCB4",
+      "max_vendor": 100,
+      "cache_exists": true,
+      "cache_loader_returned": true
+    },
+    {
+      "input": "C:\\YIM\\JIBAS Generator\\JIBAS-License-Tool-Codex\\bukti\\schoolpay_validation\\generated\\7VJM4_otherclient.lic",
+      "before_client": "9555E922490645D1AAF098C42DACD942",
+      "before_sequence": 1,
+      "accepted": false,
+      "exception": "System.Exception: Client Id tidak sama dengan lisensi sebelumnya!",
+      "after_client": "9555E922490645D1AAF098C42DACD942",
+      "after_sequence": 1,
+      "after_dbid": "7VJM4",
+      "after_systemid": "DDCB4",
+      "max_vendor": 100,
+      "cache_exists": true,
+      "cache_loader_returned": true
+    }
+  ],
+  "label": "7VJM4_different_client"
+}

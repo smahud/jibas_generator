@@ -1,0 +1,37 @@
+{
+  "test_command": "python -X utf8 -m pytest tests/test_unified_gui.py -q",
+  "result": "8 passed",
+  "duration_seconds": 2.71,
+  "platform": "Windows",
+  "framework": "real Tk / ttk.Notebook",
+  "tabs": ["Absensi Wajah", "SchoolPay"],
+  "checks": [
+    "Exact tab names and independent product input/result state",
+    "Selected tab resolves to the correct product panel",
+    "FACE and SchoolPay backend tasks run off the Tk thread",
+    "Result application and Tk state updates remain on the Tk thread",
+    "Tk heartbeat runs while backend is blocked",
+    "Duplicate task is rejected while panel is busy",
+    "Database detector receives a plain snapshot of shared connection settings",
+    "Connector errors redact supplied password",
+    "Close during running task cancels polling without worker Tk calls",
+    "Database connection dialog masks password and stores settings in memory",
+    "Actual FACE codec generate-inspect-verify through GUI",
+    "Actual SchoolPay codec generate-inspect-verify through GUI"
+  ],
+  "scope": "GUI routing, lifecycle, and offline codec integration; generated files used pytest temporary directories",
+  "limitations": [
+    "No full native JIBAS GUI activation is claimed by these GUI tests",
+    "No connection to the live database was made by these tests",
+    "Database dialog persistence means application memory only; no credential file is written"
+  ],
+  "visual_qa": {
+    "screenshots": ["gui_absensi.png", "gui_schoolpay.png", "gui_absensi_min.png", "gui_schoolpay_min.png"],
+    "sizes_checked": [[880, 710], [760, 650]],
+    "screen_size": [1366, 768],
+    "result": "Both products readable with full capacity labels, bottom actions and status; no clipped widgets",
+    "capture_scope": "Exact client region of the owned QA window with synthetic data only",
+    "method": "Tk self-rendering + Pillow region capture after Computer Use native pipe unavailable persisted across retry/reset",
+    "default_window": "Initial height is clamped to screen height minus 80 pixels; minimum height is clamped too"
+  }
+}

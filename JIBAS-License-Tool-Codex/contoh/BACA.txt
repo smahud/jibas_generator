@@ -4,3 +4,8 @@ Jangan gunakan sebagai perpanjangan instalasi yang sudah berlisensi.
 Perpanjangan: gunakan --previous-license agar Client ID sama dan Sequence naik.
 Contoh lama V4YNE-7738F.lic dipindah ke bukti/historical_example_V4YNE-7738F.lic.
 File lama sengaja dipertahankan untuk membuktikan bug header dan detector.
+
+SchoolPay-7VJM4-DDCB4-baru.lic adalah contoh LISENSI BARU SchoolPay:
+Sequence1, kapasitas vendor10, berlaku2030-12-31; skema impor20 kolom.
+Pilih tab SchoolPay atau --product schoolpay untuk membacanya.
+File ini diuji sebagai format importer, bukan bukti aktivasi runtime online.

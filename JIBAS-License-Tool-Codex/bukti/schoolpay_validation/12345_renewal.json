@@ -1,0 +1,37 @@
+{
+  "artifact_sha256": "ca112352f1160ead541ff404354aecb3a83165798e562dea5ca3ef68191cd2f8",
+  "mvid": "3f7d530d-8b12-4c29-229b-d7a7bd599cf1",
+  "authority": "controlled replay: current ID holders supplied; original methods unmodified, no Main/UI/network",
+  "importer_token": "06000757",
+  "current_database_id": "12345",
+  "current_system_id": "12345",
+  "attempts": [
+    {
+      "input": "C:\\YIM\\JIBAS Generator\\JIBAS-License-Tool-Codex\\bukti\\schoolpay_validation\\generated\\12345_new.lic",
+      "before_client": "TRIAL",
+      "before_sequence": 0,
+      "accepted": true,
+      "after_client": "70BEABA8602B47C08CD3766EE8CCBF89",
+      "after_sequence": 1,
+      "after_dbid": "12345",
+      "after_systemid": "12345",
+      "max_vendor": 100,
+      "cache_exists": true,
+      "cache_loader_returned": true
+    },
+    {
+      "input": "C:\\YIM\\JIBAS Generator\\JIBAS-License-Tool-Codex\\bukti\\schoolpay_validation\\generated\\12345_renew.lic",
+      "before_client": "70BEABA8602B47C08CD3766EE8CCBF89",
+      "before_sequence": 1,
+      "accepted": true,
+      "after_client": "70BEABA8602B47C08CD3766EE8CCBF89",
+      "after_sequence": 2,
+      "after_dbid": "12345",
+      "after_systemid": "12345",
+      "max_vendor": 100,
+      "cache_exists": true,
+      "cache_loader_returned": true
+    }
+  ],
+  "label": "12345_renewal"
+}

@@ -1,0 +1,16 @@
+{
+  "product": "schoolpay",
+  "size": [
+    760,
+    650
+  ],
+  "screen_size": [
+    1366,
+    768
+  ],
+  "client_origin": [
+    28,
+    31
+  ],
+  "clipped_widgets": []
+}

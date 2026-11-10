@@ -14,15 +14,20 @@ import sys
 HERE = Path(__file__).resolve().parent
 TOOL = HERE.parent.parent
 sys.path.insert(0, str(TOOL))
-from id_detect import DbIdDetector, SystemIdDetector
+from id_detect import DbIdDetector, SystemIdDetector, database_password
 from dbid_recipe import RECIPE
 import pymysql
 
 PORT = 3435
-PASSWORD = "codex_isolated_test"
+
+def sandbox_password():
+    password = os.environ.get("ID_AUDIT_MYSQL_PASSWORD")
+    if password is None:
+        raise ValueError("Atur ID_AUDIT_MYSQL_PASSWORD untuk MariaDB sandbox.")
+    return password
 
 def oracle():
-    env = dict(os.environ, ID_AUDIT_MYSQL_PASSWORD=PASSWORD)
+    env = dict(os.environ, ID_AUDIT_MYSQL_PASSWORD=sandbox_password())
     p = subprocess.run([str(HERE / "IdOracle.exe"), "db", str(PORT)],
                        capture_output=True, text=True, env=env)
     if p.returncode:
@@ -37,16 +42,17 @@ def snapshot(conn):
                 for n, body in cur.fetchall()]
 
 def main():
+    password = sandbox_password()
     # All live-db operations in this script are SELECT statements.
     live = pymysql.connect(host="127.0.0.1", port=3434, user="root",
-                           password="kebersamaan", charset="utf8mb4")
+                           password=database_password(), charset="utf8mb4")
     before = snapshot(live)
     result = {"live_port":3434, "isolated_port":PORT,
               "live_routines_before": before, "cases":[]}
-    db = pymysql.connect(host="127.0.0.1", port=PORT, user="root", password=PASSWORD,
+    db = pymysql.connect(host="127.0.0.1", port=PORT, user="root", password=password,
                          charset="utf8mb4", autocommit=True)
     with db.cursor() as cur:
-        cur.execute("CREATE USER IF NOT EXISTS 'root'@'%%' IDENTIFIED BY %s", (PASSWORD,))
+        cur.execute("CREATE USER IF NOT EXISTS 'root'@'%%' IDENTIFIED BY %s", (password,))
         cur.execute("GRANT ALL PRIVILEGES ON jbssat.* TO 'root'@'%'")
         # This destructive reset is confined to our freshly created sandbox.
         cur.execute("DROP DATABASE IF EXISTS jbssat")
@@ -57,7 +63,7 @@ def main():
         result["bootstrap_original"] = oracle()
         cur.execute("SELECT COUNT(*) FROM information_schema.ROUTINES WHERE ROUTINE_SCHEMA='jbssat'")
         result["bootstrap_routine_count"] = cur.fetchone()[0]
-        result["bootstrap_detector"] = DbIdDetector(port=PORT,password=PASSWORD).detect()[0]
+        result["bootstrap_detector"] = DbIdDetector(port=PORT,password=password).detect()[0]
         for wanted in ["V4YNE", "ABCDE", "WRK9T", "Z9X8W", "a1b2c"]:
             for proc in range(1,13):
                 cur.execute(f"DROP PROCEDURE IF EXISTS jbssat.splang{proc:02}")
@@ -69,7 +75,7 @@ def main():
                                      for i,c in enumerate("abcdefghi"))
                 cur.execute(f"CREATE PROCEDURE jbssat.splang{proc:02}({outputs}) BEGIN {assignments}; END")
             real=oracle()
-            python_id,details=DbIdDetector(port=PORT,password=PASSWORD).detect()
+            python_id,details=DbIdDetector(port=PORT,password=password).detect()
             result["cases"].append({"fixture_id":wanted,"original":real,"python":python_id,
                                     "match":real.get('original_AC3')==python_id==wanted.upper(),
                                     "recipe_pieces":details['pieces']})

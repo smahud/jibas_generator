@@ -1,0 +1,43 @@
+﻿{
+    "recorded_at_utc":  "2026-11-10T11:39:46.2445177Z",
+    "scope":  "Fresh negative importer replay; existing positive matrix reviewed, not rerun",
+    "hashes":  {
+                   "C:\\YIM\\JIBAS Generator\\JIBAS-License-Tool-Codex\\bukti\\client_import\\inputs\\missing_header.lic":  "f4e1b9d31da757a2766d36551ad1077349d7f4a54475cbf06b5fc2f08a4e0c99",
+                   "C:\\YIM\\JIBAS Generator\\JIBAS Face \u0026 Fingerprint Client 16.10\\FaceFgrClient.exe":  "6f5369df4d854c467d24fb067d8b79c573b35699c7b1ce7f19a310669f1ba546",
+                   "C:\\YIM\\JIBAS Generator\\JIBAS-License-Tool-Codex\\bukti\\client_import\\ClientImportVerify.cs":  "5d5d1700ec38126f14385bf8bb33f86826f4daee455343cdcdf763bd03321cbd",
+                   "C:\\YIM\\JIBAS Generator\\JIBAS-License-Tool-Codex\\bukti\\client_import\\matrix_results.json":  "5173f8cfae6daee7e46800edbbed0493331bfccad54ac0b9a5f19a760d586ff4",
+                   "C:\\YIM\\JIBAS Generator\\JIBAS-License-Tool-Codex\\bukti\\client_import\\run_client_matrix.py":  "a0205b18b1e17d8b51562af0179d54f884420eb48df2acaebaae23ae70b58e10",
+                   "C:\\Program Files\\YIM\\JIBAS Face \u0026 Fingerprint Client 16.10\\FaceFgrClient.exe":  "6f5369df4d854c467d24fb067d8b79c573b35699c7b1ce7f19a310669f1ba546",
+                   "C:\\YIM\\JIBAS Generator\\JIBAS-License-Tool-Codex\\bukti\\audit_2026_11_10\\client\\ClientImportVerify.exe":  "84cfa75a658e381aa790408f7d41ba06dd84b7a6bac82f603cb22c637589a5e8"
+               },
+    "current_installed_binary_unchanged":  true,
+    "historical_scenario_count":  8,
+    "historical_attempt_count":  11,
+    "preserved_payload_checks":  {
+                                     "lowercase_header_payload_identical_to_headerless":  true,
+                                     "v4yne_new_payload_identical_to_headerless":  true,
+                                     "wrong_header_payload_identical_to_headerless":  true
+                                 },
+    "negative_replay":  {
+                            "target_sha256":  "6f5369df4d854c467d24fb067d8b79c573b35699c7b1ce7f19a310669f1ba546",
+                            "mvid":  "0ec4d2e7-40e6-4d47-2b18-cbedb1259d09",
+                            "authority":  "controlled-replay: runtime identity holder supplied; original importer and validator unmodified",
+                            "sandbox":  "C:\\YIM\\JIBAS Generator\\JIBAS-License-Tool-Codex\\bukti\\audit_2026_11_10\\client\\negative_header_4fe81370c513473e88a88f28c49fd044",
+                            "attempts":  [
+                                             {
+                                                 "input":  "C:\\YIM\\JIBAS Generator\\JIBAS-License-Tool-Codex\\bukti\\client_import\\inputs\\missing_header.lic",
+                                                 "current_database_id":  "V4YNE",
+                                                 "before_sequence":  0,
+                                                 "before_client_id":  "TRIAL",
+                                                 "accepted":  false,
+                                                 "exception":  "System.Exception: File terpilih bukan lisensi JIBAS Presensi Wajah",
+                                                 "cache_exists":  false,
+                                                 "after_sequence":  0,
+                                                 "after_client_id":  "TRIAL",
+                                                 "after_database_id":  "",
+                                                 "after_info1":  "",
+                                                 "cache_validator_returned":  false
+                                             }
+                                         ]
+                        }
+}

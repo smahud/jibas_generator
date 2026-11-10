@@ -1,0 +1,32 @@
+﻿[
+    {
+        "Method":  "0600066A",
+        "Offset":  0,
+        "Op":  "newobj",
+        "Operand":  "System.Security.Cryptography.MD5CryptoServiceProvider::Void .ctor()"
+    },
+    {
+        "Method":  "06000671",
+        "Offset":  12,
+        "Op":  "newobj",
+        "Operand":  "System.Security.Cryptography.MD5CryptoServiceProvider::Void .ctor()"
+    },
+    {
+        "Method":  "06000943",
+        "Offset":  10,
+        "Op":  "newobj",
+        "Operand":  "System.Management.ManagementObjectSearcher::Void .ctor(System.String)"
+    },
+    {
+        "Method":  "06000944",
+        "Offset":  10,
+        "Op":  "newobj",
+        "Operand":  "System.Management.ManagementObjectSearcher::Void .ctor(System.String)"
+    },
+    {
+        "Method":  "060009A9",
+        "Offset":  15,
+        "Op":  "newobj",
+        "Operand":  "System.Management.ManagementObjectSearcher::Void .ctor(System.String)"
+    }
+]

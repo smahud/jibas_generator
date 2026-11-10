@@ -1,38 +1,50 @@
-# Pengujian akhir — Windows, 10 November 2026
+# Pengujian aplikasi terpadu — Windows, 10 November 2026
 
-Python 3.12, cryptography 50.0.2, PyMySQL 1.2.4, pytest 9.2.0.
+Python 3.12.14, cryptography 50.0.2, PyMySQL 1.2.4, pytest 9.2.0.
 
-`python -X utf8 -m pytest tests -q`: **49 passed**, 3.57 detik.
-Termasuk regresi header impor/cache, ID berbeda, entrypoint subprocess,
-perpanjangan eksplisit, Int32 overflow, serta spasi serial dan ASCII .NET.
+```text
+python -X utf8 -m pytest tests -q -W error::pytest.PytestUnraisableExceptionWarning
+101 passed in 6.82s
+```
 
-GUI: Tkinter root dibuat, LicenseApp berhasil dibangun (28 child widgets),
-update layout dan destroy berhasil. Ini smoke test, bukan klik-through lengkap.
-Launcher CLI dijalankan di path yang mengandung spasi; detect menghasilkan
-V4YNE/DDCB4 dan generate menghasilkan file .lic berheader, valid offline.
+Suite mencakup regresi Face sebelumnya, diagnostik, codec SchoolPay (17 tes),
+detector SchoolPay (5), CLI kedua produk (2), serta GUI/worker (9).
+CLI dijalankan melalui subprocess di path dengan spasi; routing generate,
+inspect, verify, mismatch produk, dan renewal kedua produk diuji end-to-end.
 
-Integrasi repository remote main: **71 passed, 1 skipped** di Windows,
-8.58 detik. Satu bug lama ditemukan: os.open(folder) melempar PermissionError
-di Windows sebelum fstat sehingga kode error salah. Ditambahkan pemeriksaan
-direktori awal tanpa menghapus fstat pasca-open; patch disalin ke
-`patches/diagnostics_windows.patch`. Root pytest.ini memisahkan suite diagnostik
-dari suite tool standalone agar nama modul tes yang sama tidak berbenturan.
+GUI diuji memakai Tk nyata: nama tab, state terpisah, backend/detector tepat,
+worker data biasa, heartbeat, pencegahan klik ganda, masking password, dan close
+saat worker berjalan. Satu masalah finalizer Tk lintas thread yang muncul pada
+suite gabungan telah diperbaiki dengan worker top-level tanpa closure widget
+serta pelepasan referensi variabel Tk di main thread. Regresi mengamati finalizer
+dan semua jenis worker; timeout tes tidak dinaikkan.
 
-Oracle eksternal: executable asli .NET Framework 4.8, tidak dipatch.
+Tampilan dua tab diperiksa pada 880x710 dan 760x650, tanpa widget terpotong.
+Ukuran awal menyesuaikan tinggi layar. Screenshot di bukti/schoolpay memakai
+data sintetis dan hanya region client jendela QA. Pillow diperlukan hanya untuk
+skrip screenshot opsional, bukan dependency runtime generator.
+
+## Oracle executable asli
 
 | Pengujian | Hasil | Evidence |
 |---|---|---|
-| Server importer | 31/31 skenario sesuai | bukti/server_matrix/matrix_summary.json |
-| Server predicate runtime | 117 kasus sesuai | JSON per skenario server_matrix |
-| Client importer + cache validator | 8 skenario, 11 percobaan sesuai | bukti/client_import/matrix_results.json |
-| Database ID original vs Python | 5 ID cocok + bootstrap cocok | bukti/id_audit/isolated_db_matrix.json |
-| Hardware/hash original vs Python | 6 vector cocok; live DDCB4 | bukti/id_audit/original_hardware_vectors.json |
+| SchoolPay importer0757 + loader0756 |31 skenario /43 percobaan sesuai | bukti/schoolpay_validation/matrix_summary.json |
+| SchoolPay ID dan tanggal | live7VJM4/DDCB4;9 vector tanggal cocok | bukti/schoolpay_validation/id_date_oracle.json |
+| Integritas instalasi SchoolPay | seluruh12 file identik | bukti/schoolpay_integrity.json |
+| Face Server importer (sesi sebelumnya) |31/31 sesuai | bukti/server_matrix/matrix_summary.json |
+| Face Server predicate runtime (sebelumnya) |117 kasus sesuai | JSON per skenario server_matrix |
+| Face client importer+cache (sebelumnya) |8 skenario/11 percobaan sesuai | bukti/client_import/matrix_results.json |
+| Face ID (sebelumnya) |5 Database ID + bootstrap cocok | bukti/id_audit/isolated_db_matrix.json |
 
-Multi-ID dilakukan dengan kontrol lingkungan per proses, sedangkan Database ID
-dibuktikan juga lewat instance MariaDB sandbox port3435. Tidak ada penggantian
-ID atau routine live. Sandbox telah dihentikan. JIBAS-Database dan WebService
-tetap running. Hash file instalasi/routine dibandingkan sebelum dan sesudah.
-Seluruh 818 file instalasi identik; tidak ada path berubah pada live_integrity.json.
+Semua oracle memakai metode executable yang tidak dipatch. Multi-ID importer
+menggunakan field identitas lingkungan terkontrol dalam proses terpisah.
+Database/routine/config/cache produksi tidak dimodifikasi. SchoolPay menjalankan
+0757 dan0756, tetapi runtime VM09D0 tidak dieksekusi karena guard jaringan/SQL
+belum dipastikan. Importer menerima SystemId salah dan tanggal lampau, sehingga
+hasil ini tidak membuktikan aktivasi runtime, online, atau transaksi pembayaran.
 
-Tidak menguji aktivasi GUI penuh, seluruh workflow presensi, fingerprint, atau
-layanan validasi online. Hasil `valid`/`ready` dari Python tetap pemeriksaan lokal.
+Suite diagnostik repository root dipisahkan dari suite tool standalone melalui
+pytest.ini. Pengujian root release: **79 passed,2 skipped** (8.35 detik).
+Paket hasil salinan release juga lulus **101 tes** dengan warning finalizer
+Tk dianggap error (8.76 detik). Kode lama di root dipertahankan; launcher utama sekarang
+membuka aplikasi terpadu di subdirektori Codex.

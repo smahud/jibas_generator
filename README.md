@@ -1,10 +1,16 @@
-# JIBAS Generator — Diagnostik Berkas Lokal
+# JIBAS Generator — Absensi Wajah dan SchoolPay
 
-Pembaruan REA Windows 10 November 2026 tersedia terpisah di
-[JIBAS-License-Tool-Codex](JIBAS-License-Tool-Codex/README.md).
-Temuan baru membuktikan header impor client yang hilang dan bug trimming
-System ID (DDCB4 vs 7738F), dengan pengujian metode asli lintas ID.
-GUI diagnostik di root tetap tersedia seperti sebelumnya.
+Jalankan **Jalankan GUI.cmd** untuk membuka satu aplikasi dengan tab
+**Absensi Wajah** dan **SchoolPay**. Implementasi terpadu, CLI, cara pakai,
+serta bukti REA berada di [JIBAS-License-Tool-Codex](JIBAS-License-Tool-Codex/README.md).
+SchoolPay Secure Server 10.5 diuji melalui importer dan loader asli pada
+31 skenario / 43 percobaan. Aktivasi runtime/online SchoolPay belum dibuktikan.
+Database ID kedua produk berbeda: Face V4YNE, SchoolPay 7VJM4 pada mesin uji.
+
+## Dokumentasi diagnostik historis
+
+Bagian berikut menjelaskan antarmuka diagnostik `app.py` dan audit terdahulu.
+Panduan aplikasi terpadu terbaru ada pada tautan di atas.
 
 Repository Python dengan arsip penelitian JIBAS dan antarmuka desktop **JIBAS
 Diagnostics** untuk membaca berkas yang sudah tersedia. GUI saat ini hanya

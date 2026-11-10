@@ -1,0 +1,205 @@
+{
+  "original_dbid_0824": "7VJM4",
+  "python_dbid": "7VJM4",
+  "recipe": {
+    "method": "SchoolPay jbsfina recipe (original 0x06000824)",
+    "pieces": [
+      {
+        "procedure": "splang02",
+        "variable": "@uhc",
+        "position": 9,
+        "character": "7"
+      },
+      {
+        "procedure": "splang07",
+        "variable": "@uhd",
+        "position": 21,
+        "character": "V"
+      },
+      {
+        "procedure": "splang10",
+        "variable": "@uhg",
+        "position": 12,
+        "character": "J"
+      },
+      {
+        "procedure": "splang01",
+        "variable": "@uhg",
+        "position": 32,
+        "character": "M"
+      },
+      {
+        "procedure": "splang09",
+        "variable": "@uhg",
+        "position": 45,
+        "character": "4"
+      }
+    ],
+    "connection": "127.0.0.1:3434/jbsfina"
+  },
+  "hardware": {
+    "disk_serial_raw": "30029941042         ",
+    "uuid": "E0813C3C-120B-02FE-5F00-BCAEC5319E78",
+    "original_system_id": "DDCB4",
+    "original_md5": "1a043d719f80ad440d781229bf0950cf",
+    "python_system_id": "DDCB4"
+  },
+  "minute_vectors": [
+    {
+      "date": "2026-11-10T12:00",
+      "original_0708": 1066090320,
+      "python_schoolpay_legacy_minute": 1066090320,
+      "python_face_legacy_minute_reference": 1066090320
+    },
+    {
+      "date": "2028-12-31T23:59",
+      "original_0708": 1067219999,
+      "python_schoolpay_legacy_minute": 1067219999,
+      "python_face_legacy_minute_reference": 1067219999
+    },
+    {
+      "date": "2029-01-01T23:59",
+      "original_0708": 1067219999,
+      "python_schoolpay_legacy_minute": 1067219999,
+      "python_face_legacy_minute_reference": 1067219999
+    },
+    {
+      "date": "2100-03-01T00:00",
+      "original_0708": 1104648480,
+      "python_schoolpay_legacy_minute": 1104648480,
+      "python_face_legacy_minute_reference": 1104648480
+    },
+    {
+      "date": "2000-02-29T00:00",
+      "original_0708": 1052048160,
+      "python_schoolpay_legacy_minute": 1052048160,
+      "python_face_legacy_minute_reference": 1052048160
+    },
+    {
+      "date": "2030-01-01T00:00",
+      "original_0708": 1067744160,
+      "python_schoolpay_legacy_minute": 1067744160,
+      "python_face_legacy_minute_reference": 1067744160
+    },
+    {
+      "date": "4084-01-01T00:00",
+      "original_0708": -2146900576,
+      "python_schoolpay_legacy_minute": -2146900576,
+      "python_face_legacy_minute_reference": 2148066720
+    },
+    {
+      "date": "4085-01-01T00:00",
+      "original_0708": -2146374976,
+      "python_schoolpay_legacy_minute": -2146374976,
+      "python_face_legacy_minute_reference": 2148592320
+    },
+    {
+      "date": "9999-12-31T23:59",
+      "original_0708": 964677343,
+      "python_schoolpay_legacy_minute": 964677343,
+      "python_face_legacy_minute_reference": 5259644639
+    }
+  ],
+  "live_routines_before": [
+    {
+      "name": "splang01",
+      "sha256": "ae2ed1c4584bd42fa0fbf8b5da814e9d5519dab73270571c55106fe9d60fb255"
+    },
+    {
+      "name": "splang02",
+      "sha256": "5eb2c00d818d34fa29006bf2aa3331857a2b35bd6ec837109dc90b609da90066"
+    },
+    {
+      "name": "splang03",
+      "sha256": "7a51b0a50c8bb0f2aec4a713bb6ae6c05fd0406a847ad36e39d2c26d49faba13"
+    },
+    {
+      "name": "splang04",
+      "sha256": "787541edb7db279a53c5141fe6520254bead2494117a369153874f2e563a516f"
+    },
+    {
+      "name": "splang05",
+      "sha256": "13f6a343c807252931cf83155f8f3cefc0f534029d020be5b7a7c818136f6fe4"
+    },
+    {
+      "name": "splang06",
+      "sha256": "b3c792cbf1044cf42bd6fd459c4077a4728bc7dd3091910754d207e18465babc"
+    },
+    {
+      "name": "splang07",
+      "sha256": "1a7091b4427ba2631c5b079a913c22b6d3c0124a2e297e21ae0d3ff74d9d3928"
+    },
+    {
+      "name": "splang08",
+      "sha256": "f2e52b8ab24ad0c03c3f2e8310e7315cdfaf8e99f4cda18bd151c90d75e54624"
+    },
+    {
+      "name": "splang09",
+      "sha256": "b9bc48d6332670d0cebac219acf683c09b24defc63994a5ceb0ded6e737d1d78"
+    },
+    {
+      "name": "splang10",
+      "sha256": "2f7b19d973d0cbca5b0b3c005a1fcbac962e58935df7d510ea341eb3d5dbb6ab"
+    },
+    {
+      "name": "splang11",
+      "sha256": "b0c2566cf77e436f59f9df7b3746df7aa62cce789e459da387748fd3fa802b4f"
+    },
+    {
+      "name": "splang12",
+      "sha256": "79bc881f1ca5ef6e26d9d28f177dcf9cd43d51f157d8600cd8a33c8538636222"
+    }
+  ],
+  "live_routines_after": [
+    {
+      "name": "splang01",
+      "sha256": "ae2ed1c4584bd42fa0fbf8b5da814e9d5519dab73270571c55106fe9d60fb255"
+    },
+    {
+      "name": "splang02",
+      "sha256": "5eb2c00d818d34fa29006bf2aa3331857a2b35bd6ec837109dc90b609da90066"
+    },
+    {
+      "name": "splang03",
+      "sha256": "7a51b0a50c8bb0f2aec4a713bb6ae6c05fd0406a847ad36e39d2c26d49faba13"
+    },
+    {
+      "name": "splang04",
+      "sha256": "787541edb7db279a53c5141fe6520254bead2494117a369153874f2e563a516f"
+    },
+    {
+      "name": "splang05",
+      "sha256": "13f6a343c807252931cf83155f8f3cefc0f534029d020be5b7a7c818136f6fe4"
+    },
+    {
+      "name": "splang06",
+      "sha256": "b3c792cbf1044cf42bd6fd459c4077a4728bc7dd3091910754d207e18465babc"
+    },
+    {
+      "name": "splang07",
+      "sha256": "1a7091b4427ba2631c5b079a913c22b6d3c0124a2e297e21ae0d3ff74d9d3928"
+    },
+    {
+      "name": "splang08",
+      "sha256": "f2e52b8ab24ad0c03c3f2e8310e7315cdfaf8e99f4cda18bd151c90d75e54624"
+    },
+    {
+      "name": "splang09",
+      "sha256": "b9bc48d6332670d0cebac219acf683c09b24defc63994a5ceb0ded6e737d1d78"
+    },
+    {
+      "name": "splang10",
+      "sha256": "2f7b19d973d0cbca5b0b3c005a1fcbac962e58935df7d510ea341eb3d5dbb6ab"
+    },
+    {
+      "name": "splang11",
+      "sha256": "b0c2566cf77e436f59f9df7b3746df7aa62cce789e459da387748fd3fa802b4f"
+    },
+    {
+      "name": "splang12",
+      "sha256": "79bc881f1ca5ef6e26d9d28f177dcf9cd43d51f157d8600cd8a33c8538636222"
+    }
+  ],
+  "routines_unchanged": true,
+  "all_comparisons_match": true
+}

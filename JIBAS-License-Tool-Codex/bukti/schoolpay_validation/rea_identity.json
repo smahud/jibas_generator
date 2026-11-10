@@ -1,0 +1,219 @@
+{
+  "evidence_id": "ev_c41574d6abcaf63da688ef3d54a75b7120313120a9101adbd1c0137527559bc5",
+  "subject": {
+    "name": "SPayServer.exe",
+    "digest": {
+      "sha256": "ca112352f1160ead541ff404354aecb3a83165798e562dea5ca3ef68191cd2f8"
+    },
+    "local_path": "C:\\Program Files (x86)\\YIM\\JIBAS SchoolPay Secure Server 10.5\\SPayServer.exe",
+    "format": "pe",
+    "architecture": "x86"
+  },
+  "provider": {
+    "id": "rea-analysis-view",
+    "name": "REA analysis view projection",
+    "version": "1"
+  },
+  "analysis_profile": null,
+  "predicate_type": "rea.analysis-view",
+  "operation": "inspect_analysis_view",
+  "parameters": {
+    "parent_evidence_id": "ev_14b6c58a63211378f824108a8f90e73a53652307540b39b5165bc7a927970930",
+    "view": {
+      "kind": "summary"
+    }
+  },
+  "raw_result": null,
+  "normalized_result": {
+    "kind": "summary",
+    "view": {
+      "kind": "summary"
+    },
+    "parent_evidence_id": "ev_14b6c58a63211378f824108a8f90e73a53652307540b39b5165bc7a927970930",
+    "parent_operation": "inspect_managed_artifact",
+    "parent_digest": "14b6c58a63211378f824108a8f90e73a53652307540b39b5165bc7a927970930",
+    "view_digest": "2ebd806f96f8dc1ce7799a9d8721366b10fcdcf24260252ae2dc10c4f69fa053",
+    "artifact": {
+      "path": "C:\\Program Files (x86)\\YIM\\JIBAS SchoolPay Secure Server 10.5\\SPayServer.exe",
+      "sha256": "ca112352f1160ead541ff404354aecb3a83165798e562dea5ca3ef68191cd2f8"
+    },
+    "coverage": {
+      "status": "complete-within-view",
+      "examined": 96,
+      "total": 96,
+      "next_offset": null,
+      "exhausted": true
+    },
+    "limitations": [
+      "Static inspection did not load the assembly, resolve dependencies through a CLR, decompile C#, or execute target code."
+    ],
+    "unknowns": [
+      "Collection counts and pages cover producer-returned rows; metadata completeness remains the original metadata status and coverage, not an absence claim about unreturned rows.",
+      "Metadata tokens are build-local coordinates bound to the recorded artifact SHA-256 and module MVID; this view does not load or execute the assembly."
+    ],
+    "summary": {
+      "artifact": {
+        "path": "C:\\Program Files (x86)\\YIM\\JIBAS SchoolPay Secure Server 10.5\\SPayServer.exe",
+        "sha256": "ca112352f1160ead541ff404354aecb3a83165798e562dea5ca3ef68191cd2f8",
+        "byte_length": 850944,
+        "format": "pe"
+      },
+      "pe": {
+        "machine": 332,
+        "machine_hex": "0x014c",
+        "architecture": "x86",
+        "optional_header": "pe32",
+        "section_count": 3,
+        "characteristics": 302,
+        "cli": {
+          "header_offset": 520,
+          "header_size": 72,
+          "runtime_version": "2.5",
+          "flags": 131075,
+          "flag_names": [
+            "il-only",
+            "32-bit-required",
+            "32-bit-preferred"
+          ],
+          "entry_point": {
+            "kind": "metadata-token",
+            "value": "0x0600095b"
+          },
+          "metadata_rva": 621032,
+          "metadata_size": 233380,
+          "resources_rva": 332316,
+          "resources_size": 288716,
+          "strong_name_rva": 0,
+          "strong_name_size": 0,
+          "managed_native_header_rva": 0,
+          "managed_native_header_size": 0,
+          "ready_to_run_signature": false
+        }
+      },
+      "classification": {
+        "status": "managed",
+        "container": "pe",
+        "runtime_family": "dotnet-framework",
+        "implementation": "cil",
+        "managed_architecture": "anycpu-prefer-32",
+        "evidence": [
+          {
+            "code": "cli-header-observed",
+            "detail": "A file-backed PE CLI header and metadata root were admitted.",
+            "file_offset": 520
+          },
+          {
+            "code": "target-framework-observed",
+            "detail": "An assembly-level TargetFrameworkAttribute names .NET Framework.",
+            "file_offset": 720508
+          },
+          {
+            "code": "managed-architecture-derived",
+            "detail": "Managed architecture anycpu-prefer-32 is derived from PE machine and CLI flags.",
+            "file_offset": 536
+          }
+        ]
+      },
+      "metadata": {
+        "status": "complete",
+        "version": "v4.0.30319",
+        "stream_names": [
+          "#Blob",
+          "#GUID",
+          "#Strings",
+          "#US",
+          "#~"
+        ],
+        "table_row_counts": {
+          "Module": 1,
+          "TypeRef": 481,
+          "TypeDef": 344,
+          "Field": 1453,
+          "MethodDef": 2754,
+          "Param": 3439,
+          "InterfaceImpl": 40,
+          "MemberRef": 1534,
+          "Constant": 45,
+          "CustomAttribute": 59,
+          "FieldMarshal": 3,
+          "ClassLayout": 5,
+          "StandAloneSig": 526,
+          "PropertyMap": 10,
+          "Property": 26,
+          "MethodSemantics": 32,
+          "MethodImpl": 17,
+          "ModuleRef": 3,
+          "TypeSpec": 117,
+          "ImplMap": 8,
+          "FieldRVA": 7,
+          "Assembly": 1,
+          "AssemblyRef": 11,
+          "ManifestResource": 26,
+          "NestedClass": 107,
+          "GenericParam": 105,
+          "MethodSpec": 22
+        }
+      },
+      "module": {
+        "name": "SPayServer.exe",
+        "generation": 0,
+        "mvid": "3f7d530d-8b12-4c29-229b-d7a7bd599cf1",
+        "enc_id": null,
+        "enc_base_id": null,
+        "token": "0x00000001",
+        "row_offset": 613592
+      },
+      "assembly": {
+        "name": "SPayServer",
+        "version": "10.5.0.0",
+        "culture": null,
+        "flags": 0,
+        "hash_algorithm": 32772,
+        "public_key": {
+          "kind": "none",
+          "byte_length": 0,
+          "sha256": null,
+          "token": null
+        },
+        "token": "0x20000001",
+        "row_offset": 722994
+      },
+      "target_frameworks": [
+        ".NETFramework,Version=v4.8"
+      ],
+      "coverage": {
+        "state": "complete",
+        "issues": []
+      },
+      "limitations": [
+        "Static inspection did not load the assembly, resolve dependencies through a CLR, decompile C#, or execute target code."
+      ],
+      "reported_counts": {
+        "references": 11,
+        "resources": 26,
+        "attributes": 59
+      },
+      "identity_scope": {
+        "token_identity": "build-local",
+        "requires_artifact_sha256": "ca112352f1160ead541ff404354aecb3a83165798e562dea5ca3ef68191cd2f8",
+        "requires_mvid": "3f7d530d-8b12-4c29-229b-d7a7bd599cf1"
+      }
+    }
+  },
+  "confidence": "derived",
+  "authority": "shipped-artifact",
+  "environment": null,
+  "limitations": [
+    "Static inspection did not load the assembly, resolve dependencies through a CLR, decompile C#, or execute target code."
+  ],
+  "relationship_coverage": null,
+  "locations": [
+    {
+      "kind": "artifact-path",
+      "path": "C:\\Program Files (x86)\\YIM\\JIBAS SchoolPay Secure Server 10.5\\SPayServer.exe"
+    }
+  ],
+  "evidence_links": [
+    "ev_14b6c58a63211378f824108a8f90e73a53652307540b39b5165bc7a927970930"
+  ]
+}

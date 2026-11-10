@@ -20,6 +20,20 @@ import id_detect
 import license_codec
 
 
+def product_modules(product="face"):
+    """Select explicit product engines; the original face CLI stays the default."""
+    if product == "schoolpay":
+        import schoolpay_codec
+        import schoolpay_id_detect
+        return schoolpay_codec, schoolpay_id_detect
+    return license_codec, id_detect
+
+
+def add_product_argument(parser):
+    parser.add_argument("--product", choices=("face", "schoolpay"), default="face",
+                        help="Produk tujuan: face (Absensi Wajah, bawaan) atau schoolpay.")
+
+
 def positive_int(value: str) -> int:
     try:
         number = int(value)
@@ -53,32 +67,37 @@ def iso_date(value: str) -> str:
 def build_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(
         description="Baca, periksa, buat, dan deteksi ID "
-                    "berkas lisensi JIBAS Face Server 16.5."
+                    "lisensi JIBAS Absensi Wajah dan SchoolPay."
     )
     commands = parser.add_subparsers(dest="command", required=True)
 
     detect = commands.add_parser("detect", help="Deteksi Database ID dan System ID asli.")
+    add_product_argument(detect)
     detect.add_argument("--no-system", action="store_true", help="Lewati deteksi hardware WMI.")
 
     inspect = commands.add_parser("inspect", help="Baca isi berkas lisensi.")
+    add_product_argument(inspect)
     inspect.add_argument("file", type=Path, metavar="FILE")
 
     verify = commands.add_parser("verify", help="Periksa lisensi terhadap ID instalasi.")
+    add_product_argument(verify)
     verify.add_argument("file", type=Path, metavar="FILE")
     verify.add_argument("--database-id", default=None)
     verify.add_argument("--system-id", default=None)
     verify.add_argument("--client-id", default=None)
     verify.add_argument("--for-import", action="store_true",
-                        help="Wajibkan header impor client 16.10; cache .enc biasanya tanpa header.")
+                        help="Wajibkan format/header impor produk; cache internal biasanya tanpa header.")
     verify.add_argument("--auto", action="store_true",
                         help="Deteksi ID asli dari MySQL/WMI bila argumen ID tidak diberikan.")
 
     generate = commands.add_parser("generate", help="Buat berkas lisensi baru atau perpanjangan.")
+    add_product_argument(generate)
     generate.add_argument("--database-id", required=True)
     generate.add_argument("--system-id", required=True)
     generate.add_argument("--client-id", default=None)
     generate.add_argument("--expires", required=True, type=iso_date, metavar="YYYY-MM-DD")
-    generate.add_argument("--capacity", required=True, type=positive_int, metavar="N")
+    generate.add_argument("--capacity", required=True, type=positive_int, metavar="N",
+                          help="Kapasitas wajah (face) atau vendor (schoolpay).")
     generate.add_argument("--client-name", default="")
     generate.add_argument("--previous-license", type=Path, default=None, metavar="FILE",
                           help="Lisensi sebelumnya untuk perpanjangan.")
@@ -104,19 +123,22 @@ def build_parser() -> argparse.ArgumentParser:
 
 
 def run_detect(args, outcomes: list) -> dict:
-    result: dict = {"dbid_detector": "jbssat splang recipe (original 0x06000AC3)"}
+    _, detector = product_modules(args.product)
+    label = ("SchoolPay splang recipe (original 0x06000824)" if args.product == "schoolpay"
+             else "jbssat splang recipe (original 0x06000AC3)")
+    result: dict = {"product": args.product, "dbid_detector": label}
     try:
-        dbid, info = id_detect.DbIdDetector().detect()
+        dbid, info = detector.DbIdDetector().detect()
         result["database_id"] = dbid
         result["database_id_detail"] = info
-    except id_detect.DetectError as exc:
+    except detector.DetectError as exc:
         result["database_id_error"] = str(exc)
     if not args.no_system:
         try:
-            sysid, info = id_detect.SystemIdDetector().detect()
+            sysid, info = detector.SystemIdDetector().detect()
             result["system_id"] = sysid
             result["system_id_detail"] = info
-        except id_detect.DetectError as exc:
+        except detector.DetectError as exc:
             result["system_id_error"] = str(exc)
     outcomes.append(result)
     if "database_id_error" in result or "system_id_error" in result:
@@ -126,7 +148,8 @@ def run_detect(args, outcomes: list) -> dict:
 
 
 def run_generate(args, outcomes: list) -> dict:
-    result = license_codec.generate_license(
+    codec, _ = product_modules(args.product)
+    result = codec.generate_license(
         database_id=args.database_id.strip(),
         system_id=args.system_id.strip(),
         client_id=(args.client_id or "").strip() or None,
@@ -166,21 +189,23 @@ def main(argv: list[str] | None = None) -> int:
         if args.command == "detect":
             run_detect(args, outcomes)
         elif args.command == "inspect":
-            outcomes.append(license_codec.inspect_license(args.file))
+            codec, _ = product_modules(args.product)
+            outcomes.append(codec.inspect_license(args.file))
         elif args.command == "verify":
+            codec, detector = product_modules(args.product)
             database_id = (args.database_id or "").strip()
             system_id = (args.system_id or "").strip()
             auto_used = False
             if args.auto:
                 if not database_id:
-                    database_id = id_detect.DbIdDetector().detect()[0]
+                    database_id = detector.DbIdDetector().detect()[0]
                     auto_used = True
                 if not system_id:
-                    system_id = id_detect.SystemIdDetector().detect()[0]
+                    system_id = detector.SystemIdDetector().detect()[0]
                     auto_used = True
             if not database_id or not system_id:
                 raise ValueError("Isi --database-id dan --system-id, atau gunakan --auto.")
-            verify_result = license_codec.verify_license(
+            verify_result = codec.verify_license(
                 args.file, database_id, system_id,
                 client_id=(args.client_id or "").strip() or None,
                 for_import=args.for_import)

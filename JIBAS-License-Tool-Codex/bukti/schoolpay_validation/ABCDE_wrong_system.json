@@ -1,0 +1,24 @@
+{
+  "artifact_sha256": "ca112352f1160ead541ff404354aecb3a83165798e562dea5ca3ef68191cd2f8",
+  "mvid": "3f7d530d-8b12-4c29-229b-d7a7bd599cf1",
+  "authority": "controlled replay: current ID holders supplied; original methods unmodified, no Main/UI/network",
+  "importer_token": "06000757",
+  "current_database_id": "ABCDE",
+  "current_system_id": "00000",
+  "attempts": [
+    {
+      "input": "C:\\YIM\\JIBAS Generator\\JIBAS-License-Tool-Codex\\bukti\\schoolpay_validation\\generated\\ABCDE_new.lic",
+      "before_client": "TRIAL",
+      "before_sequence": 0,
+      "accepted": true,
+      "after_client": "1661522E82E246B681E8D33F4B04A681",
+      "after_sequence": 1,
+      "after_dbid": "ABCDE",
+      "after_systemid": "ABCDE",
+      "max_vendor": 100,
+      "cache_exists": true,
+      "cache_loader_returned": true
+    }
+  ],
+  "label": "ABCDE_wrong_system"
+}

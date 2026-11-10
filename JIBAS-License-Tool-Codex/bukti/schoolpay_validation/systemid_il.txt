@@ -1,0 +1,438 @@
+﻿METHOD 0x06000943 #=zhbaudAr3w93mUySxXd$2XQekF4LuaAX2CXycHaXVUdrK::System.String #=z9BD6QLXWDphAjj6LHg==()
+0000: ldc.i4       110423802 
+0005: call         #=q1Fq9Fu6BEA2$aC_f$_F8mMvpxet0HWWO0lJyl_gxOg8=::System.String #=zZdWqzFY=(Int32) 0x06000063
+000A: newobj       System.Management.ManagementObjectSearcher::Void .ctor(System.String) 0x0A00054E
+000F: call         System.Management.ManagementObjectSearcher::System.Management.ManagementObjectCollection Get() 0x0A00054F
+0014: callvirt     System.Management.ManagementObjectCollection::ManagementObjectEnumerator GetEnumerator() 0x0A000550
+0019: stloc.0       
+001A: br           383 
+001F: ldloc.0       
+0020: callvirt     System.Management.ManagementObjectCollection+ManagementObjectEnumerator::System.Management.ManagementBaseObject get_Current() 0x0A000551
+0025: stloc.3       
+0026: ldc.i4       110425700 
+002B: call         #=q1Fq9Fu6BEA2$aC_f$_F8mMvpxet0HWWO0lJyl_gxOg8=::System.String #=zZdWqzFY=(Int32) 0x06000063
+0030: ldloc.3       
+0031: ldc.i4       110425719 
+0036: call         #=q1Fq9Fu6BEA2$aC_f$_F8mMvpxet0HWWO0lJyl_gxOg8=::System.String #=zZdWqzFY=(Int32) 0x06000063
+003B: callvirt     System.Management.ManagementBaseObject::System.Object get_Item(System.String) 0x0A000552
+0040: dup           
+0041: brtrue.s     71 
+0043: pop           
+0044: ldnull        
+0045: br.s         76 
+0047: callvirt     System.Object::System.String ToString() 0x0A000081
+004C: ldc.i4       110425783 
+0051: call         #=q1Fq9Fu6BEA2$aC_f$_F8mMvpxet0HWWO0lJyl_gxOg8=::System.String #=zZdWqzFY=(Int32) 0x06000063
+0056: call         System.String::System.String Concat(System.String, System.String, System.String) 0x0A000117
+005B: newobj       System.Management.ManagementObjectSearcher::Void .ctor(System.String) 0x0A00054E
+0060: call         System.Management.ManagementObjectSearcher::System.Management.ManagementObjectCollection Get() 0x0A00054F
+0065: callvirt     System.Management.ManagementObjectCollection::ManagementObjectEnumerator GetEnumerator() 0x0A000550
+006A: stloc.1       
+006B: br           360 
+0070: ldloc.1       
+0071: callvirt     System.Management.ManagementObjectCollection+ManagementObjectEnumerator::System.Management.ManagementBaseObject get_Current() 0x0A000551
+0076: castclass    ::System.Management.ManagementObject 0x010000BF
+007B: stloc.s      4 
+007D: ldc.i4       110425848 
+0082: call         #=q1Fq9Fu6BEA2$aC_f$_F8mMvpxet0HWWO0lJyl_gxOg8=::System.String #=zZdWqzFY=(Int32) 0x06000063
+0087: ldloc.s      4 
+0089: ldc.i4       110425719 
+008E: call         #=q1Fq9Fu6BEA2$aC_f$_F8mMvpxet0HWWO0lJyl_gxOg8=::System.String #=zZdWqzFY=(Int32) 0x06000063
+0093: callvirt     System.Management.ManagementBaseObject::System.Object get_Item(System.String) 0x0A000552
+0098: dup           
+0099: brtrue.s     159 
+009B: pop           
+009C: ldnull        
+009D: br.s         164 
+009F: callvirt     System.Object::System.String ToString() 0x0A000081
+00A4: ldc.i4       110426375 
+00A9: call         #=q1Fq9Fu6BEA2$aC_f$_F8mMvpxet0HWWO0lJyl_gxOg8=::System.String #=zZdWqzFY=(Int32) 0x06000063
+00AE: call         System.String::System.String Concat(System.String, System.String, System.String) 0x0A000117
+00B3: newobj       System.Management.ManagementObjectSearcher::Void .ctor(System.String) 0x0A00054E
+00B8: call         System.Management.ManagementObjectSearcher::System.Management.ManagementObjectCollection Get() 0x0A00054F
+00BD: callvirt     System.Management.ManagementObjectCollection::ManagementObjectEnumerator GetEnumerator() 0x0A000550
+00C2: stloc.2       
+00C3: br           337 
+00C8: ldloc.2       
+00C9: callvirt     System.Management.ManagementObjectCollection+ManagementObjectEnumerator::System.Management.ManagementBaseObject get_Current() 0x0A000551
+00CE: castclass    ::System.Management.ManagementObject 0x010000BF
+00D3: ldc.i4       110426446 
+00D8: call         #=q1Fq9Fu6BEA2$aC_f$_F8mMvpxet0HWWO0lJyl_gxOg8=::System.String #=zZdWqzFY=(Int32) 0x06000063
+00DD: callvirt     System.Management.ManagementBaseObject::System.Object get_Item(System.String) 0x0A000552
+00E2: callvirt     System.Object::System.String ToString() 0x0A000081
+00E7: callvirt     System.String::System.String ToUpper() 0x0A0004D1
+00EC: ldc.i4       110367008 
+00F1: call         #=q1Fq9Fu6BEA2$aC_f$_F8mMvpxet0HWWO0lJyl_gxOg8=::System.String #=zZdWqzFY=(Int32) 0x06000063
+00F6: ldc.i4.4      
+00F7: callvirt     System.String::Int32 IndexOf(System.String, System.StringComparison) 0x0A00044D
+00FC: ldc.i4.0      
+00FD: blt.s        337 
+00FF: ldc.i4       110426435 
+0104: call         #=q1Fq9Fu6BEA2$aC_f$_F8mMvpxet0HWWO0lJyl_gxOg8=::System.String #=zZdWqzFY=(Int32) 0x06000063
+0109: ldloc.3       
+010A: ldc.i4       110425719 
+010F: call         #=q1Fq9Fu6BEA2$aC_f$_F8mMvpxet0HWWO0lJyl_gxOg8=::System.String #=zZdWqzFY=(Int32) 0x06000063
+0114: callvirt     System.Management.ManagementBaseObject::System.Object get_Item(System.String) 0x0A000552
+0119: dup           
+011A: brtrue.s     288 
+011C: pop           
+011D: ldnull        
+011E: br.s         293 
+0120: callvirt     System.Object::System.String ToString() 0x0A000081
+0125: ldc.i4       110401323 
+012A: call         #=q1Fq9Fu6BEA2$aC_f$_F8mMvpxet0HWWO0lJyl_gxOg8=::System.String #=zZdWqzFY=(Int32) 0x06000063
+012F: call         System.String::System.String Concat(System.String, System.String, System.String) 0x0A000117
+0134: newobj       System.Management.ManagementObject::Void .ctor(System.String) 0x0A000553
+0139: ldc.i4       110426467 
+013E: call         #=q1Fq9Fu6BEA2$aC_f$_F8mMvpxet0HWWO0lJyl_gxOg8=::System.String #=zZdWqzFY=(Int32) 0x06000063
+0143: call         System.Management.ManagementBaseObject::System.Object get_Item(System.String) 0x0A000552
+0148: callvirt     System.Object::System.String ToString() 0x0A000081
+014D: stloc.s      5 
+014F: leave.s      417 
+0151: ldloc.2       
+0152: callvirt     System.Management.ManagementObjectCollection+ManagementObjectEnumerator::Boolean MoveNext() 0x0A000554
+0157: brtrue       200 
+015C: leave.s      360 
+015E: ldloc.2       
+015F: brfalse.s    359 
+0161: ldloc.2       
+0162: callvirt     System.IDisposable::Void Dispose() 0x0A000007
+0167: endfinally    
+0168: ldloc.1       
+0169: callvirt     System.Management.ManagementObjectCollection+ManagementObjectEnumerator::Boolean MoveNext() 0x0A000554
+016E: brtrue       112 
+0173: leave.s      383 
+0175: ldloc.1       
+0176: brfalse.s    382 
+0178: ldloc.1       
+0179: callvirt     System.IDisposable::Void Dispose() 0x0A000007
+017E: endfinally    
+017F: ldloc.0       
+0180: callvirt     System.Management.ManagementObjectCollection+ManagementObjectEnumerator::Boolean MoveNext() 0x0A000554
+0185: brtrue       31 
+018A: leave.s      406 
+018C: ldloc.0       
+018D: brfalse.s    405 
+018F: ldloc.0       
+0190: callvirt     System.IDisposable::Void Dispose() 0x0A000007
+0195: endfinally    
+0196: ldc.i4       110367067 
+019B: call         #=q1Fq9Fu6BEA2$aC_f$_F8mMvpxet0HWWO0lJyl_gxOg8=::System.String #=zZdWqzFY=(Int32) 0x06000063
+01A0: ret           
+01A1: ldloc.s      5 
+01A3: ret           
+METHOD 0x06000944 #=zhbaudAr3w93mUySxXd$2XQekF4LuaAX2CXycHaXVUdrK::System.String #=zyu14sqW3H6XO$3NoZw==()
+0000: ldc.i4       110367051 
+0005: call         #=q1Fq9Fu6BEA2$aC_f$_F8mMvpxet0HWWO0lJyl_gxOg8=::System.String #=zZdWqzFY=(Int32) 0x06000063
+000A: newobj       System.Management.ManagementObjectSearcher::Void .ctor(System.String) 0x0A00054E
+000F: callvirt     System.Management.ManagementObjectSearcher::System.Management.ManagementObjectCollection Get() 0x0A00054F
+0014: callvirt     System.Management.ManagementObjectCollection::ManagementObjectEnumerator GetEnumerator() 0x0A000550
+0019: stloc.0       
+001A: br.s         124 
+001C: ldloc.0       
+001D: callvirt     System.Management.ManagementObjectCollection+ManagementObjectEnumerator::System.Management.ManagementBaseObject get_Current() 0x0A000551
+0022: castclass    ::System.Management.ManagementObject 0x010000BF
+0027: callvirt     System.Management.ManagementBaseObject::System.Management.PropertyDataCollection get_Properties() 0x0A000555
+002C: callvirt     System.Management.PropertyDataCollection::PropertyDataEnumerator GetEnumerator() 0x0A000556
+0031: stloc.1       
+0032: br.s         97 
+0034: ldloc.1       
+0035: callvirt     System.Management.PropertyDataCollection+PropertyDataEnumerator::System.Management.PropertyData get_Current() 0x0A000557
+003A: stloc.2       
+003B: ldloc.2       
+003C: callvirt     System.Management.PropertyData::System.String get_Name() 0x0A000558
+0041: ldc.i4       110367131 
+0046: call         #=q1Fq9Fu6BEA2$aC_f$_F8mMvpxet0HWWO0lJyl_gxOg8=::System.String #=zZdWqzFY=(Int32) 0x06000063
+004B: callvirt     System.String::Boolean Equals(System.String) 0x0A000353
+0050: brfalse.s    97 
+0052: ldloc.2       
+0053: callvirt     System.Management.PropertyData::System.Object get_Value() 0x0A000559
+0058: callvirt     System.Object::System.String ToString() 0x0A000081
+005D: stloc.s      4 
+005F: leave.s      155 
+0061: ldloc.1       
+0062: callvirt     System.Management.PropertyDataCollection+PropertyDataEnumerator::Boolean MoveNext() 0x0A00055A
+0067: brtrue.s     52 
+0069: leave.s      124 
+006B: ldloc.1       
+006C: isinst       ::System.IDisposable 0x01000096
+0071: stloc.3       
+0072: ldloc.3       
+0073: brfalse.s    123 
+0075: ldloc.3       
+0076: callvirt     System.IDisposable::Void Dispose() 0x0A000007
+007B: endfinally    
+007C: ldloc.0       
+007D: callvirt     System.Management.ManagementObjectCollection+ManagementObjectEnumerator::Boolean MoveNext() 0x0A000554
+0082: brtrue.s     28 
+0084: leave.s      144 
+0086: ldloc.0       
+0087: brfalse.s    143 
+0089: ldloc.0       
+008A: callvirt     System.IDisposable::Void Dispose() 0x0A000007
+008F: endfinally    
+0090: ldc.i4       110367067 
+0095: call         #=q1Fq9Fu6BEA2$aC_f$_F8mMvpxet0HWWO0lJyl_gxOg8=::System.String #=zZdWqzFY=(Int32) 0x06000063
+009A: ret           
+009B: ldloc.s      4 
+009D: ret           
+METHOD 0x06000945 #=zhbaudAr3w93mUySxXd$2XQekF4LuaAX2CXycHaXVUdrK::System.String #=zvAK5S6ICiTnK()
+0000: call         #=zhbaudAr3w93mUySxXd$2XQekF4LuaAX2CXycHaXVUdrK::System.String #=z9BD6QLXWDphAjj6LHg==() 0x06000943
+0005: call         #=zhbaudAr3w93mUySxXd$2XQekF4LuaAX2CXycHaXVUdrK::System.String #=zyu14sqW3H6XO$3NoZw==() 0x06000944
+000A: stloc.0       
+000B: ldloc.0       
+000C: call         System.String::System.String Concat(System.String, System.String) 0x0A000256
+0011: call         #=zotDAj7_F36NLuDLbvUyHwYiFq7H5QE61cfEVTMlondpJ::System.String #=zZa_y$$s=(System.String) 0x06000989
+0016: stloc.1       
+0017: ldloc.1       
+0018: ldc.i4.5      
+0019: ldc.i4.1      
+001A: callvirt     System.String::System.String Substring(Int32, Int32) 0x0A0000AC
+001F: ldloc.1       
+0020: ldc.i4.s     17 
+0022: ldc.i4.1      
+0023: callvirt     System.String::System.String Substring(Int32, Int32) 0x0A0000AC
+0028: call         System.String::System.String Concat(System.String, System.String) 0x0A000256
+002D: ldloc.1       
+002E: ldc.i4.s     30 
+0030: ldc.i4.1      
+0031: callvirt     System.String::System.String Substring(Int32, Int32) 0x0A0000AC
+0036: call         System.String::System.String Concat(System.String, System.String) 0x0A000256
+003B: ldloc.1       
+003C: ldc.i4.s     24 
+003E: ldc.i4.1      
+003F: callvirt     System.String::System.String Substring(Int32, Int32) 0x0A0000AC
+0044: call         System.String::System.String Concat(System.String, System.String) 0x0A000256
+0049: ldloc.1       
+004A: ldc.i4.3      
+004B: ldc.i4.1      
+004C: callvirt     System.String::System.String Substring(Int32, Int32) 0x0A0000AC
+0051: call         System.String::System.String Concat(System.String, System.String) 0x0A000256
+0056: callvirt     System.String::System.String ToUpper() 0x0A0004D1
+005B: ret           
+METHOD 0x060009A9 #=zqyN_zmeVzZ31GMsy3pff5qp69q8151g03LX_D_aj7JPo$No5NymXwbI=::Void #=zfOPejYiO6Hug$5OR6w==()
+0000: call         #=ztuNGq6ggsZ$HLM6T4t_LDW95a9avb_7EJz6RzWY=+#=zewBbYnBKzi_p::Void #=z8FdIscg4PWHq() 0x060009DA
+0005: ldc.i4       110425649 
+000A: call         #=q1Fq9Fu6BEA2$aC_f$_F8mMvpxet0HWWO0lJyl_gxOg8=::System.String #=zZdWqzFY=(Int32) 0x06000063
+000F: newobj       System.Management.ManagementObjectSearcher::Void .ctor(System.String) 0x0A00054E
+0014: callvirt     System.Management.ManagementObjectSearcher::System.Management.ManagementObjectCollection Get() 0x0A00054F
+0019: callvirt     System.Management.ManagementObjectCollection::ManagementObjectEnumerator GetEnumerator() 0x0A000550
+001E: stloc.1       
+001F: br           557 
+0024: ldloc.1       
+0025: callvirt     System.Management.ManagementObjectCollection+ManagementObjectEnumerator::System.Management.ManagementBaseObject get_Current() 0x0A000551
+002A: castclass    ::System.Management.ManagementObject 0x010000BF
+002F: stloc.0       
+0030: ldloc.0       
+0031: ldc.i4       110425719 
+0036: call         #=q1Fq9Fu6BEA2$aC_f$_F8mMvpxet0HWWO0lJyl_gxOg8=::System.String #=zZdWqzFY=(Int32) 0x06000063
+003B: callvirt     System.Management.ManagementBaseObject::System.Object get_Item(System.String) 0x0A000552
+0040: callvirt     System.Object::System.String ToString() 0x0A000081
+0045: stloc.s      12 
+0047: ldsfld       System.String::System.String Empty 0x0A000093
+004C: stloc.s      5 
+004E: ldsfld       System.String::System.String Empty 0x0A000093
+0053: stloc.s      6 
+0055: ldc.i4       110425700 
+005A: call         #=q1Fq9Fu6BEA2$aC_f$_F8mMvpxet0HWWO0lJyl_gxOg8=::System.String #=zZdWqzFY=(Int32) 0x06000063
+005F: ldloc.0       
+0060: ldc.i4       110425719 
+0065: call         #=q1Fq9Fu6BEA2$aC_f$_F8mMvpxet0HWWO0lJyl_gxOg8=::System.String #=zZdWqzFY=(Int32) 0x06000063
+006A: callvirt     System.Management.ManagementBaseObject::System.Object get_Item(System.String) 0x0A000552
+006F: dup           
+0070: brtrue.s     118 
+0072: pop           
+0073: ldnull        
+0074: br.s         123 
+0076: callvirt     System.Object::System.String ToString() 0x0A000081
+007B: ldc.i4       110425783 
+0080: call         #=q1Fq9Fu6BEA2$aC_f$_F8mMvpxet0HWWO0lJyl_gxOg8=::System.String #=zZdWqzFY=(Int32) 0x06000063
+0085: call         System.String::System.String Concat(System.String, System.String, System.String) 0x0A000117
+008A: newobj       System.Management.ManagementObjectSearcher::Void .ctor(System.String) 0x0A00054E
+008F: callvirt     System.Management.ManagementObjectSearcher::System.Management.ManagementObjectCollection Get() 0x0A00054F
+0094: callvirt     System.Management.ManagementObjectCollection::ManagementObjectEnumerator GetEnumerator() 0x0A000550
+0099: stloc.2       
+009A: br           407 
+009F: ldloc.2       
+00A0: callvirt     System.Management.ManagementObjectCollection+ManagementObjectEnumerator::System.Management.ManagementBaseObject get_Current() 0x0A000551
+00A5: castclass    ::System.Management.ManagementObject 0x010000BF
+00AA: stloc.s      13 
+00AC: ldc.i4       110425848 
+00B1: call         #=q1Fq9Fu6BEA2$aC_f$_F8mMvpxet0HWWO0lJyl_gxOg8=::System.String #=zZdWqzFY=(Int32) 0x06000063
+00B6: ldloc.s      13 
+00B8: ldc.i4       110425719 
+00BD: call         #=q1Fq9Fu6BEA2$aC_f$_F8mMvpxet0HWWO0lJyl_gxOg8=::System.String #=zZdWqzFY=(Int32) 0x06000063
+00C2: callvirt     System.Management.ManagementBaseObject::System.Object get_Item(System.String) 0x0A000552
+00C7: dup           
+00C8: brtrue.s     206 
+00CA: pop           
+00CB: ldnull        
+00CC: br.s         211 
+00CE: callvirt     System.Object::System.String ToString() 0x0A000081
+00D3: ldc.i4       110426375 
+00D8: call         #=q1Fq9Fu6BEA2$aC_f$_F8mMvpxet0HWWO0lJyl_gxOg8=::System.String #=zZdWqzFY=(Int32) 0x06000063
+00DD: call         System.String::System.String Concat(System.String, System.String, System.String) 0x0A000117
+00E2: newobj       System.Management.ManagementObjectSearcher::Void .ctor(System.String) 0x0A00054E
+00E7: callvirt     System.Management.ManagementObjectSearcher::System.Management.ManagementObjectCollection Get() 0x0A00054F
+00EC: callvirt     System.Management.ManagementObjectCollection::ManagementObjectEnumerator GetEnumerator() 0x0A000550
+00F1: stloc.3       
+00F2: br           384 
+00F7: ldloc.3       
+00F8: callvirt     System.Management.ManagementObjectCollection+ManagementObjectEnumerator::System.Management.ManagementBaseObject get_Current() 0x0A000551
+00FD: castclass    ::System.Management.ManagementObject 0x010000BF
+0102: ldc.i4       110426446 
+0107: call         #=q1Fq9Fu6BEA2$aC_f$_F8mMvpxet0HWWO0lJyl_gxOg8=::System.String #=zZdWqzFY=(Int32) 0x06000063
+010C: callvirt     System.Management.ManagementBaseObject::System.Object get_Item(System.String) 0x0A000552
+0111: call         System.Convert::System.String ToString(System.Object) 0x0A000335
+0116: callvirt     System.String::System.String Trim() 0x0A0001A0
+011B: stloc.s      9 
+011D: ldloc.s      9 
+011F: callvirt     System.String::Int32 get_Length() 0x0A0000AB
+0124: brfalse.s    384 
+0126: ldloc.s      9 
+0128: ldc.i4.0      
+0129: ldc.i4.1      
+012A: callvirt     System.String::System.String Substring(Int32, Int32) 0x0A0000AC
+012F: pop           
+0130: ldc.i4       110426435 
+0135: call         #=q1Fq9Fu6BEA2$aC_f$_F8mMvpxet0HWWO0lJyl_gxOg8=::System.String #=zZdWqzFY=(Int32) 0x06000063
+013A: ldloc.0       
+013B: ldc.i4       110425719 
+0140: call         #=q1Fq9Fu6BEA2$aC_f$_F8mMvpxet0HWWO0lJyl_gxOg8=::System.String #=zZdWqzFY=(Int32) 0x06000063
+0145: callvirt     System.Management.ManagementBaseObject::System.Object get_Item(System.String) 0x0A000552
+014A: dup           
+014B: brtrue.s     337 
+014D: pop           
+014E: ldnull        
+014F: br.s         342 
+0151: callvirt     System.Object::System.String ToString() 0x0A000081
+0156: ldc.i4       110401323 
+015B: call         #=q1Fq9Fu6BEA2$aC_f$_F8mMvpxet0HWWO0lJyl_gxOg8=::System.String #=zZdWqzFY=(Int32) 0x06000063
+0160: call         System.String::System.String Concat(System.String, System.String, System.String) 0x0A000117
+0165: newobj       System.Management.ManagementObject::Void .ctor(System.String) 0x0A000553
+016A: ldc.i4       110426467 
+016F: call         #=q1Fq9Fu6BEA2$aC_f$_F8mMvpxet0HWWO0lJyl_gxOg8=::System.String #=zZdWqzFY=(Int32) 0x06000063
+0174: call         System.Management.ManagementBaseObject::System.Object get_Item(System.String) 0x0A000552
+0179: callvirt     System.Object::System.String ToString() 0x0A000081
+017E: stloc.s      5 
+0180: ldloc.3       
+0181: callvirt     System.Management.ManagementObjectCollection+ManagementObjectEnumerator::Boolean MoveNext() 0x0A000554
+0186: brtrue       247 
+018B: leave.s      407 
+018D: ldloc.3       
+018E: brfalse.s    406 
+0190: ldloc.3       
+0191: callvirt     System.IDisposable::Void Dispose() 0x0A000007
+0196: endfinally    
+0197: ldloc.2       
+0198: callvirt     System.Management.ManagementObjectCollection+ManagementObjectEnumerator::Boolean MoveNext() 0x0A000554
+019D: brtrue       159 
+01A2: leave.s      430 
+01A4: ldloc.2       
+01A5: brfalse.s    429 
+01A7: ldloc.2       
+01A8: callvirt     System.IDisposable::Void Dispose() 0x0A000007
+01AD: endfinally    
+01AE: ldloc.0       
+01AF: callvirt     System.Management.ManagementBaseObject::System.Management.PropertyDataCollection get_Properties() 0x0A000555
+01B4: callvirt     System.Management.PropertyDataCollection::PropertyDataEnumerator GetEnumerator() 0x0A000556
+01B9: stloc.s      8 
+01BB: br.s         515 
+01BD: ldloc.s      8 
+01BF: callvirt     System.Management.PropertyDataCollection+PropertyDataEnumerator::System.Management.PropertyData get_Current() 0x0A000557
+01C4: callvirt     System.Management.PropertyData::System.String get_Name() 0x0A000558
+01C9: stloc.s      4 
+01CB: ldloc.0       
+01CC: ldloc.s      4 
+01CE: callvirt     System.Management.ManagementBaseObject::System.Object get_Item(System.String) 0x0A000552
+01D3: stloc.s      10 
+01D5: ldloc.s      10 
+01D7: brfalse.s    515 
+01D9: ldloc.s      4 
+01DB: callvirt     System.String::System.String ToLower() 0x0A000397
+01E0: callvirt     System.String::System.String Trim() 0x0A0001A0
+01E5: stloc.s      4 
+01E7: ldloc.s      4 
+01E9: ldc.i4       110426508 
+01EE: call         #=q1Fq9Fu6BEA2$aC_f$_F8mMvpxet0HWWO0lJyl_gxOg8=::System.String #=zZdWqzFY=(Int32) 0x06000063
+01F3: callvirt     System.String::Boolean Equals(System.String) 0x0A000353
+01F8: brfalse.s    515 
+01FA: ldloc.s      10 
+01FC: callvirt     System.Object::System.String ToString() 0x0A000081
+0201: stloc.s      6 
+0203: ldloc.s      8 
+0205: callvirt     System.Management.PropertyDataCollection+PropertyDataEnumerator::Boolean MoveNext() 0x0A00055A
+020A: brtrue.s     445 
+020C: ldloc.s      5 
+020E: ldloc.s      6 
+0210: call         System.String::System.String Concat(System.String, System.String) 0x0A000256
+0215: stloc.s      7 
+0217: ldloc.s      7 
+0219: call         #=zotDAj7_F36NLuDLbvUyHwYiFq7H5QE61cfEVTMlondpJ::System.String #=zZa_y$$s=(System.String) 0x06000989
+021E: stloc.s      7 
+0220: ldloc.s      12 
+0222: ldloc.s      5 
+0224: ldloc.s      6 
+0226: ldloc.s      7 
+0228: call         #=ztuNGq6ggsZ$HLM6T4t_LDW95a9avb_7EJz6RzWY=+#=zewBbYnBKzi_p::Void #=znTy_zg8=(System.String, System.String, System.String, System.String) 0x060009DB
+022D: ldloc.1       
+022E: callvirt     System.Management.ManagementObjectCollection+ManagementObjectEnumerator::Boolean MoveNext() 0x0A000554
+0233: brtrue       36 
+0238: leave.s      580 
+023A: ldloc.1       
+023B: brfalse.s    579 
+023D: ldloc.1       
+023E: callvirt     System.IDisposable::Void Dispose() 0x0A000007
+0243: endfinally    
+0244: ldsfld       #=zqyN_zmeVzZ31GMsy3pff5qp69q8151g03LX_D_aj7JPo$No5NymXwbI=::#=zn6HdotRKweur8Bcc3i0yy$1EfILviRSKWmw4sdCn3Vr$ #=zzVJsRvRLptw9 0x04000506
+0249: brfalse.s    597 
+024B: ldsfld       #=zqyN_zmeVzZ31GMsy3pff5qp69q8151g03LX_D_aj7JPo$No5NymXwbI=::#=zn6HdotRKweur8Bcc3i0yy$1EfILviRSKWmw4sdCn3Vr$ #=zzVJsRvRLptw9 0x04000506
+0250: callvirt     #=zn6HdotRKweur8Bcc3i0yy$1EfILviRSKWmw4sdCn3Vr$::Void Invoke() 0x06000968
+0255: leave.s      627 
+0257: stloc.s      11 
+0259: ldc.i4       110426556 
+025E: call         #=q1Fq9Fu6BEA2$aC_f$_F8mMvpxet0HWWO0lJyl_gxOg8=::System.String #=zZdWqzFY=(Int32) 0x06000063
+0263: ldloc.s      11 
+0265: callvirt     System.Exception::System.String get_Message() 0x0A000254
+026A: ldloc.s      11 
+026C: call         #=z3c6g$vS33bsKmsK4i0aWriF$mLgGbHTTjHN2PWsx44wW::Void #=z2sAWaGY=(System.String, System.String, System.Exception) 0x060005D2
+0271: leave.s      627 
+0273: ret           
+METHOD 0x06000671 #=zBPRWDHujdi2fOurRxuI8X5aIkY2R$hJkCEM_lqKdXAUk::System.String #=z3Yrpqkl9Rrae(System.String)
+0000: call         System.Text.Encoding::System.Text.Encoding get_ASCII() 0x0A0003E8
+0005: ldarg.0       
+0006: callvirt     System.Text.Encoding::Byte[] GetBytes(System.String) 0x0A000200
+000B: stloc.0       
+000C: newobj       System.Security.Cryptography.MD5CryptoServiceProvider::Void .ctor() 0x0A0003E6
+0011: ldloc.0       
+0012: call         System.Security.Cryptography.HashAlgorithm::Byte[] ComputeHash(Byte[]) 0x0A0003E9
+0017: newobj       System.Text.StringBuilder::Void .ctor() 0x0A000059
+001C: stloc.1       
+001D: stloc.2       
+001E: ldc.i4.0      
+001F: stloc.3       
+0020: br.s         72 
+0022: ldloc.2       
+0023: ldloc.3       
+0024: ldelem.u1     
+0025: stloc.s      4 
+0027: ldloc.1       
+0028: ldloca.s     4 
+002A: ldc.i4       110423232 
+002F: call         #=q1Fq9Fu6BEA2$aC_f$_F8mMvpxet0HWWO0lJyl_gxOg8=::System.String #=zZdWqzFY=(Int32) 0x06000063
+0034: call         System.Byte::System.String ToString(System.String) 0x0A0003EA
+0039: callvirt     System.String::System.String ToLower() 0x0A000397
+003E: callvirt     System.Text.StringBuilder::System.Text.StringBuilder Append(System.String) 0x0A000311
+0043: pop           
+0044: ldloc.3       
+0045: ldc.i4.1      
+0046: add           
+0047: stloc.3       
+0048: ldloc.3       
+0049: ldloc.2       
+004A: ldlen         
+004B: conv.i4       
+004C: blt.s        34 
+004E: ldloc.1       
+004F: callvirt     System.Object::System.String ToString() 0x0A000081
+0054: ret           

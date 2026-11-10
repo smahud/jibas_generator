@@ -29,12 +29,28 @@ from __future__ import annotations
 
 import binascii
 import hashlib
+import os
 import re
 import subprocess
 
 
 class DetectError(ValueError):
     pass
+
+
+def database_password(explicit=None) -> str:
+    """Read a caller-supplied credential without storing it in source code."""
+    password = explicit if explicit is not None else os.environ.get("JIBAS_DB_PASSWORD")
+    if password is None:
+        raise DetectError("Credential database belum tersedia. Atur environment "
+                          "JIBAS_DB_PASSWORD melalui pengelola credential lokal.")
+    return password
+
+
+def _safe_database_error(exc: Exception, password: str) -> str:
+    """Do not propagate a connector error containing the supplied secret."""
+    detail = str(exc)
+    return detail.replace(password, "[REDACTED]") if password else detail
 
 
 DB_RECIPE = [
@@ -65,12 +81,13 @@ class DbIdDetector:
     missing routines. It fails with DetectError if they are unavailable.
     """
 
-    def __init__(self, host="127.0.0.1", port=3434, user="root", password="kebersamaan",
+    def __init__(self, host="127.0.0.1", port=3434, user="root", password=None,
                  database="jbssat"):
         self.host, self.port, self.user, self.password = host, port, user, password
         self.database = database
 
     def _connect(self):
+        password = database_password(self.password)
         try:
             import pymysql
         except ImportError as exc:
@@ -78,10 +95,11 @@ class DbIdDetector:
                 "Modul pymysql tidak tersedia. Install dengan: python -m pip install pymysql") from exc
         try:
             return pymysql.connect(host=self.host, port=self.port, user=self.user,
-                                   password=self.password, database=self.database,
+                                   password=password, database=self.database,
                                    charset="utf8mb4", connect_timeout=10)
         except Exception as exc:
-            raise DetectError(f"Tidak dapat terhubung MySQL {self.host}:{self.port}: {exc}") from exc
+            raise DetectError(f"Tidak dapat terhubung MySQL {self.host}:{self.port}: "
+                              + _safe_database_error(exc, password)) from None
 
     def verify_procedures(self, conn) -> dict:
         cursor = conn.cursor()
@@ -122,6 +140,11 @@ class DbIdDetector:
                     "procedure": f"splang{proc:02d}", "variable": var,
                     "position": position, "character": character,
                 })
+        except DetectError:
+            raise
+        except Exception as exc:
+            raise DetectError("Pemeriksaan Database ID gagal: "
+                              + _safe_database_error(exc, database_password(self.password))) from None
         finally:
             conn.close()
         db_id = "".join(pieces).upper()
@@ -172,8 +195,12 @@ exit 0
             completed = subprocess.run(
                 ["powershell", "-NoProfile", "-NonInteractive", "-Command", script],
                 capture_output=True, text=True, timeout=60, encoding="utf-8", errors="replace")
+        except subprocess.TimeoutExpired as exc:
+            raise DetectError("Pemeriksaan WMI melewati batas waktu 60 detik.") from exc
         except OSError as exc:
             raise DetectError(f"PowerShell tidak dapat dijalankan: {exc}") from exc
+        if completed.returncode != 0:
+            raise DetectError(f"Pemeriksaan WMI gagal (PowerShell exit {completed.returncode}).")
         disk, cs_uuid = "", ""
         for line in (completed.stdout or "").splitlines():
             if line.startswith("DISK "):

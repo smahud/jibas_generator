@@ -1,5 +1,13 @@
 # Mulai dari sini
 
+Versi sekarang menggabungkan tab Absensi Wajah dan SchoolPay dalam app.py.
+Baca SCHOOLPAY.md untuk format baru: DbId dari jbsfina, SystemId eksplisit,
+MaxVendor, dan kolom input ForSchoolPay pada skema (cache19, impor20).
+Header SchoolPay opsional; jangan menyalin aturan header wajib Face AF9.
+schoolpay_codec.py dan schoolpay_id_detect.py terpisah; jangan mengganti
+konstanta atau resep global Face saat mengembangkan produk berikutnya.
+Runtime SchoolPay09D0 belum diuji karena batas jaringan/DB di VM belum diketahui.
+
 Baca README.md dan TEMUAN.md paket Codex sebelum memakai laporan historis.
 Source awal berasal dari checkout lokal edb62b9; remote main saat investigasi
 8732d68 sudah berisi GUI diagnostik terpisah. Publikasi menambah subfolder Codex

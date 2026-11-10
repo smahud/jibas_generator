@@ -1,0 +1,80 @@
+{
+  "root": "C:\\Program Files (x86)\\YIM\\JIBAS SchoolPay Secure Server 10.5",
+  "files": [
+    {
+      "path": "config.ini",
+      "size": 373,
+      "sha256": "5915941e65168809c20ea8225be2c96e0002ac137e095cb07a50c5eb71ebefe0"
+    },
+    {
+      "path": "fw.bat",
+      "size": 347,
+      "sha256": "26e2c737bbb815cddb1d729a104fd694e3210162d30a51756a0ec8c03b054ff7"
+    },
+    {
+      "path": "jibas2015.ico",
+      "size": 1150,
+      "sha256": "363e53d0781e07db1a69a814ce52fcd8d330d8efafa0ea37d4f4f4e2da72153b"
+    },
+    {
+      "path": "license.enc",
+      "size": 2862,
+      "sha256": "acfcd5b180533c014339cc89ef4f81feef6afa1216bedbeabf8e99350c2a34bf"
+    },
+    {
+      "path": "maintenance.txt",
+      "size": 73566,
+      "sha256": "7b1bbc07cb67153ea8d6f057dc3c4cef9b6a3d160318418377bdfe35f7ce0166"
+    },
+    {
+      "path": "MySql.Data.dll",
+      "size": 1174528,
+      "sha256": "8c7e5f8b8b0adb4c5d07975f1afaa7735340d117cb658f877acf0839a691d6cf"
+    },
+    {
+      "path": "Newtonsoft.Json.dll",
+      "size": 711952,
+      "sha256": "d134937ec381729074694490e81983b08ec7991b31550eabafb9202e5b404f89"
+    },
+    {
+      "path": "spayicon_16.ico",
+      "size": 1150,
+      "sha256": "acc170311d61bf61c844d1291e851dde7951316e4b46a94e428763f4151d00f1"
+    },
+    {
+      "path": "SPayServer.exe",
+      "size": 850944,
+      "sha256": "ca112352f1160ead541ff404354aecb3a83165798e562dea5ca3ef68191cd2f8"
+    },
+    {
+      "path": "System.Runtime.CompilerServices.Unsafe.dll",
+      "size": 16768,
+      "sha256": "66409f670315afe8610f17a4d3a1ee52d72b6a46c544cec97544e8385f90ad74"
+    },
+    {
+      "path": "System.Threading.Tasks.Extensions.dll",
+      "size": 25984,
+      "sha256": "4f81ffd0dc7204db75afc35ea4291769b07c440592f28894260eea76626a23c6"
+    },
+    {
+      "path": "System.Windows.Forms.Ribbon.48.dll",
+      "size": 288768,
+      "sha256": "430c98f30b5444867be5e670696e126014dbbbb466147d4682135a30da9bbf82"
+    }
+  ],
+  "counts_by_directory": {
+    "config.ini": 1,
+    "fw.bat": 1,
+    "jibas2015.ico": 1,
+    "license.enc": 1,
+    "maintenance.txt": 1,
+    "MySql.Data.dll": 1,
+    "Newtonsoft.Json.dll": 1,
+    "spayicon_16.ico": 1,
+    "SPayServer.exe": 1,
+    "System.Runtime.CompilerServices.Unsafe.dll": 1,
+    "System.Threading.Tasks.Extensions.dll": 1,
+    "System.Windows.Forms.Ribbon.48.dll": 1
+  },
+  "scope": "all files recursively, read-only; hashes do not prove semantic analysis of all dependencies"
+}

@@ -1,0 +1,110 @@
+﻿METHOD 0x06000704 #=zKjv2UnB4LXcI5q0AJISZQhIqb2nVQfkY2UZ6bjfkSncP9tRHig==::Int32 #=zyRLmy0aMEWm2(Int32, Int32)
+0000: ldarg.1       
+0001: ldc.i4.1      
+0002: sub           
+0003: switch       58,63,58,77,58,77,58,58,77,58,77,58 
+0038: br.s         77 
+003A: ldc.i4.s     31 
+003C: stloc.0       
+003D: br.s         80 
+003F: ldarg.0       
+0040: ldc.i4.4      
+0041: rem           
+0042: brfalse.s    72 
+0044: ldc.i4.s     28 
+0046: br.s         74 
+0048: ldc.i4.s     29 
+004A: stloc.0       
+004B: br.s         80 
+004D: ldc.i4.s     30 
+004F: stloc.0       
+0050: ldloc.0       
+0051: ret           
+METHOD 0x06000705 #=zKjv2UnB4LXcI5q0AJISZQhIqb2nVQfkY2UZ6bjfkSncP9tRHig==::Int32 #=z4qVilfZkBbpm(Int32, Int32)
+0000: ldarg.0       
+0001: ldarg.1       
+0002: call         #=zKjv2UnB4LXcI5q0AJISZQhIqb2nVQfkY2UZ6bjfkSncP9tRHig==::Int32 #=zyRLmy0aMEWm2(Int32, Int32) 0x06000704
+0007: ret           
+METHOD 0x06000706 #=zKjv2UnB4LXcI5q0AJISZQhIqb2nVQfkY2UZ6bjfkSncP9tRHig==::Int32 #=zymz5mpEB6M4S(Int32)
+0000: ldarg.0       
+0001: ldc.i4.4      
+0002: div           
+0003: stloc.0       
+0004: ldarg.0       
+0005: ldloc.0       
+0006: sub           
+0007: stloc.1       
+0008: ldloc.0       
+0009: ldc.i4       366 
+000E: mul           
+000F: ldloc.1       
+0010: ldc.i4       365 
+0015: mul           
+0016: add           
+0017: ret           
+METHOD 0x06000707 #=zKjv2UnB4LXcI5q0AJISZQhIqb2nVQfkY2UZ6bjfkSncP9tRHig==::Int64 #=zivPDSJCDtROw(Int32, Int32, Int32, Int32, Int32)
+0000: ldarg.s      4 
+0002: conv.i8       
+0003: stloc.0       
+0004: ldloc.0       
+0005: ldarg.3       
+0006: ldc.i4.s     60 
+0008: mul           
+0009: conv.i8       
+000A: add           
+000B: stloc.0       
+000C: ldloc.0       
+000D: ldarg.2       
+000E: ldc.i4.s     24 
+0010: mul           
+0011: ldc.i4.s     60 
+0013: mul           
+0014: conv.i8       
+0015: add           
+0016: stloc.0       
+0017: ldc.i4.1      
+0018: stloc.1       
+0019: br.s         48 
+001B: ldloc.0       
+001C: ldarg.0       
+001D: ldloc.1       
+001E: call         #=zKjv2UnB4LXcI5q0AJISZQhIqb2nVQfkY2UZ6bjfkSncP9tRHig==::Int32 #=z4qVilfZkBbpm(Int32, Int32) 0x06000705
+0023: ldc.i4.s     24 
+0025: mul           
+0026: ldc.i4.s     60 
+0028: mul           
+0029: conv.i8       
+002A: add           
+002B: stloc.0       
+002C: ldloc.1       
+002D: ldc.i4.1      
+002E: add           
+002F: stloc.1       
+0030: ldloc.1       
+0031: ldarg.1       
+0032: ble.s        27 
+0034: ldloc.0       
+0035: ldarg.0       
+0036: call         #=zKjv2UnB4LXcI5q0AJISZQhIqb2nVQfkY2UZ6bjfkSncP9tRHig==::Int32 #=zymz5mpEB6M4S(Int32) 0x06000706
+003B: ldc.i4.s     24 
+003D: mul           
+003E: ldc.i4.s     60 
+0040: mul           
+0041: conv.i8       
+0042: add           
+0043: stloc.0       
+0044: ldloc.0       
+0045: ret           
+METHOD 0x06000708 #=zKjv2UnB4LXcI5q0AJISZQhIqb2nVQfkY2UZ6bjfkSncP9tRHig==::Int64 #=zivPDSJCDtROw(System.DateTime)
+0000: ldarga.s     0 
+0002: call         System.DateTime::Int32 get_Year() 0x0A00033F
+0007: ldarga.s     0 
+0009: call         System.DateTime::Int32 get_Month() 0x0A000340
+000E: ldarga.s     0 
+0010: call         System.DateTime::Int32 get_Day() 0x0A000341
+0015: ldarga.s     0 
+0017: call         System.DateTime::Int32 get_Hour() 0x0A000342
+001C: ldarga.s     0 
+001E: call         System.DateTime::Int32 get_Minute() 0x0A000343
+0023: call         #=zKjv2UnB4LXcI5q0AJISZQhIqb2nVQfkY2UZ6bjfkSncP9tRHig==::Int64 #=zivPDSJCDtROw(Int32, Int32, Int32, Int32, Int32) 0x06000707
+0028: ret           

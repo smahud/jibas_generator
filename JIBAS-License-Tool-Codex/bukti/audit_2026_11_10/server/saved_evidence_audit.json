@@ -1,0 +1,304 @@
+﻿{
+    "audit_kind":  "Read-only consistency audit of historical artifacts; no new target execution or DB access",
+    "current_binary_matches":  true,
+    "scenario_count":  31,
+    "runtime_case_count":  117,
+    "reported_total_matches":  true,
+    "all_scenarios_consistent":  true,
+    "scenarios":  [
+                      {
+                          "scenario":  "V4YNE_DDCB4_fresh",
+                          "consistent":  true,
+                          "errors":  [
+
+                                     ],
+                          "evidence_sha256":  "ea5a87cd9a6b32d184b888ad62fb4e18f8c64d74f29ab4fc3ce1cf90e70b45e6"
+                      },
+                      {
+                          "scenario":  "V4YNE_DDCB4_db_mismatch",
+                          "consistent":  true,
+                          "errors":  [
+
+                                     ],
+                          "evidence_sha256":  "06ed691bbb0f30758a76349cd03dd4a43e2c7c096cbcf5ed33605f7b236b1037"
+                      },
+                      {
+                          "scenario":  "V4YNE_DDCB4_system_mismatch",
+                          "consistent":  true,
+                          "errors":  [
+
+                                     ],
+                          "evidence_sha256":  "fb475a3bd53d368d267c0ada02bb94a60d33da567d5d1000fbb4838e5e5789aa"
+                      },
+                      {
+                          "scenario":  "V4YNE_DDCB4_renewal_ok",
+                          "consistent":  true,
+                          "errors":  [
+
+                                     ],
+                          "evidence_sha256":  "32ad43db11ee6a41afd107ecf6934a62b926f727cbea2a9c1b1e3d6e728ca7c1"
+                      },
+                      {
+                          "scenario":  "V4YNE_DDCB4_renewal_equal_sequence",
+                          "consistent":  true,
+                          "errors":  [
+
+                                     ],
+                          "evidence_sha256":  "2bd88ae5ac30f89550d91627e8e8919cf463afb8af942a5ffd60b985600bd295"
+                      },
+                      {
+                          "scenario":  "V4YNE_DDCB4_renewal_changed_client",
+                          "consistent":  true,
+                          "errors":  [
+
+                                     ],
+                          "evidence_sha256":  "07da0af20ae9ef0aed24d7da2a9d977f70c11f218e1af6a43bca45f5c1877c81"
+                      },
+                      {
+                          "scenario":  "V4YNE_DDCB4_renewal_decreased_sequence",
+                          "consistent":  true,
+                          "errors":  [
+
+                                     ],
+                          "evidence_sha256":  "28a79c02ebb9a87aa972ef4e0683bdc7e61a98b37296670dee560a25dd9c6ed5"
+                      },
+                      {
+                          "scenario":  "ABCDE_DDCB4_fresh",
+                          "consistent":  true,
+                          "errors":  [
+
+                                     ],
+                          "evidence_sha256":  "690ea3849926681da8ff926447ace1fe1e012531c4ff97cef3349f76a376c03f"
+                      },
+                      {
+                          "scenario":  "ABCDE_DDCB4_db_mismatch",
+                          "consistent":  true,
+                          "errors":  [
+
+                                     ],
+                          "evidence_sha256":  "2a98e1124378d9fd267e0607eafeff57b61617ff6e02123c670a6cb5cea34e59"
+                      },
+                      {
+                          "scenario":  "ABCDE_DDCB4_system_mismatch",
+                          "consistent":  true,
+                          "errors":  [
+
+                                     ],
+                          "evidence_sha256":  "bf4f0c437d5b9be4285c6da07f0345eb57422e85580d3eff3d6a842d73fc1a92"
+                      },
+                      {
+                          "scenario":  "ABCDE_DDCB4_renewal_ok",
+                          "consistent":  true,
+                          "errors":  [
+
+                                     ],
+                          "evidence_sha256":  "5fe4f94e451e5ee99dd5dced9e4e1f68f94cb10ef053ae80dc2f9bb2d4759f25"
+                      },
+                      {
+                          "scenario":  "ABCDE_DDCB4_renewal_equal_sequence",
+                          "consistent":  true,
+                          "errors":  [
+
+                                     ],
+                          "evidence_sha256":  "4aa2d27c83eee27cbdd6f196259900ab2a08d67397c7615b6b4fad249ac4c4c3"
+                      },
+                      {
+                          "scenario":  "ABCDE_DDCB4_renewal_changed_client",
+                          "consistent":  true,
+                          "errors":  [
+
+                                     ],
+                          "evidence_sha256":  "88f3807788bbe6c10cd523327a08d0ff1563d56bac693afb703caf4e0ffaa264"
+                      },
+                      {
+                          "scenario":  "ABCDE_DDCB4_renewal_decreased_sequence",
+                          "consistent":  true,
+                          "errors":  [
+
+                                     ],
+                          "evidence_sha256":  "dd7d2c0ea8f18aa36eadce7f14e162e390e556ba849bf4dcc83caa81886d86f4"
+                      },
+                      {
+                          "scenario":  "Z9X8W_123AB_fresh",
+                          "consistent":  true,
+                          "errors":  [
+
+                                     ],
+                          "evidence_sha256":  "9b63f1e0e3f4157aa398c47a27f36236b4020f3007c52e863b3dd7523c21cb95"
+                      },
+                      {
+                          "scenario":  "Z9X8W_123AB_db_mismatch",
+                          "consistent":  true,
+                          "errors":  [
+
+                                     ],
+                          "evidence_sha256":  "2ef5caf8470dc9c6032657899bbc139f80a4cccf633bbc6a565ae5d89a4c52bc"
+                      },
+                      {
+                          "scenario":  "Z9X8W_123AB_system_mismatch",
+                          "consistent":  true,
+                          "errors":  [
+
+                                     ],
+                          "evidence_sha256":  "6508c120dec0f0f08b0449835cd9c73c4c6ccf8ce0764a02a5e580fe720f9c1b"
+                      },
+                      {
+                          "scenario":  "Z9X8W_123AB_renewal_ok",
+                          "consistent":  true,
+                          "errors":  [
+
+                                     ],
+                          "evidence_sha256":  "0a78e1a83c1b2b97b9991162c7001a2b6df719f87fac99e5e2edbe03625252e4"
+                      },
+                      {
+                          "scenario":  "Z9X8W_123AB_renewal_equal_sequence",
+                          "consistent":  true,
+                          "errors":  [
+
+                                     ],
+                          "evidence_sha256":  "93344a5be7afeb361c745d399daf76c389bddf4603645f2e38b51c0cf6d37cf3"
+                      },
+                      {
+                          "scenario":  "Z9X8W_123AB_renewal_changed_client",
+                          "consistent":  true,
+                          "errors":  [
+
+                                     ],
+                          "evidence_sha256":  "f14466ac24c086332769cb8e7a5b7dfdc893e45bec3b6e18152d3840a29378b9"
+                      },
+                      {
+                          "scenario":  "Z9X8W_123AB_renewal_decreased_sequence",
+                          "consistent":  true,
+                          "errors":  [
+
+                                     ],
+                          "evidence_sha256":  "8dbc80ac6d1e0957fd328ca6212d38cf45d7e7385d865e3a85b3bba719a03b79"
+                      },
+                      {
+                          "scenario":  "V4YNE_7738F_fresh",
+                          "consistent":  true,
+                          "errors":  [
+
+                                     ],
+                          "evidence_sha256":  "02f34b285d4b433d5db3af274100ed34458180c853cd25ba13592c9b6ed77507"
+                      },
+                      {
+                          "scenario":  "V4YNE_7738F_db_mismatch",
+                          "consistent":  true,
+                          "errors":  [
+
+                                     ],
+                          "evidence_sha256":  "825a21693db6892e3b07e42ef690aa281ad1b3f725539851c8353beaea46842b"
+                      },
+                      {
+                          "scenario":  "V4YNE_7738F_system_mismatch",
+                          "consistent":  true,
+                          "errors":  [
+
+                                     ],
+                          "evidence_sha256":  "21cf54f780bb7415792719c15957ba0341aae0552721dda56b72f3dace659ca5"
+                      },
+                      {
+                          "scenario":  "V4YNE_7738F_renewal_ok",
+                          "consistent":  true,
+                          "errors":  [
+
+                                     ],
+                          "evidence_sha256":  "ecac3df840d237a0e02655d1debfa615fddcf768d96697951b0476a708d11f89"
+                      },
+                      {
+                          "scenario":  "V4YNE_7738F_renewal_equal_sequence",
+                          "consistent":  true,
+                          "errors":  [
+
+                                     ],
+                          "evidence_sha256":  "01252735248487855f1402268dc9c065147f3044adf61b704465a2ccbdd847bb"
+                      },
+                      {
+                          "scenario":  "V4YNE_7738F_renewal_changed_client",
+                          "consistent":  true,
+                          "errors":  [
+
+                                     ],
+                          "evidence_sha256":  "2d37819305cd732d5ffe328190be6b51ac3e1c8ce7d688e250874a0503554b94"
+                      },
+                      {
+                          "scenario":  "V4YNE_7738F_renewal_decreased_sequence",
+                          "consistent":  true,
+                          "errors":  [
+
+                                     ],
+                          "evidence_sha256":  "1635047fdc93c2104b57d3671e0da9808f4401c3cf41411365474f41f56466c2"
+                      },
+                      {
+                          "scenario":  "server_comments_multiline",
+                          "consistent":  true,
+                          "errors":  [
+
+                                     ],
+                          "evidence_sha256":  "3d336e9e1b964223dd598c99104362422de1fb526d8c214e8c6529c7e93b3a00"
+                      },
+                      {
+                          "scenario":  "server_corrupt",
+                          "consistent":  true,
+                          "errors":  [
+
+                                     ],
+                          "evidence_sha256":  "2db767014ee0d18994aff89cfaa5bd016daceadab21dba13f901dab46a19cafa"
+                      },
+                      {
+                          "scenario":  "server_wrong_crypto",
+                          "consistent":  true,
+                          "errors":  [
+
+                                     ],
+                          "evidence_sha256":  "3bcb8305d1f792edc69594485d3c0faa93dbbd064693adcdd6dbe2d8bfc02fbd"
+                      }
+                  ],
+    "db_fixture_checks":  [
+                              {
+                                  "fixture":  "V4YNE",
+                                  "consistent":  true
+                              },
+                              {
+                                  "fixture":  "ABCDE",
+                                  "consistent":  true
+                              },
+                              {
+                                  "fixture":  "WRK9T",
+                                  "consistent":  true
+                              },
+                              {
+                                  "fixture":  "Z9X8W",
+                                  "consistent":  true
+                              },
+                              {
+                                  "fixture":  "a1b2c",
+                                  "consistent":  true
+                              }
+                          ],
+    "hardware_digest_checks":  [
+                                   {
+                                       "consistent":  true
+                                   },
+                                   {
+                                       "consistent":  true
+                                   },
+                                   {
+                                       "consistent":  true
+                                   },
+                                   {
+                                       "consistent":  true
+                                   },
+                                   {
+                                       "consistent":  true
+                                   },
+                                   {
+                                       "consistent":  true
+                                   }
+                               ],
+    "all_id_checks_consistent":  true,
+    "stored_live_routine_snapshots_equal":  true,
+    "id_evidence_sha256":  "465560bfe19a78aea2c3f2e85b7341829d5d747b1cafe99d8bf8be9145bc6ccd",
+    "boundary":  "Internal consistency does not authenticate historical logs or prove official issuance, GUI activation, network behavior, or alternate physical hardware."
+}

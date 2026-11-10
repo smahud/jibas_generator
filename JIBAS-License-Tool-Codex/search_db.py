@@ -9,6 +9,8 @@ from __future__ import annotations
 import argparse
 import sys
 
+from id_detect import database_password
+
 KNOWN_DATABASES = [
     "jbsakad", "jbscbe", "jbsclient", "jbsegw", "jbsel", "jbsfina", "jbsjs",
     "jbsletter", "jbsperpus", "jbssat", "jbssdm", "jbssms", "jbstgram",
@@ -18,16 +20,17 @@ KNOWN_DATABASES = [
 
 def connect_kwargs() -> dict:
     return {"host": "127.0.0.1", "port": 3434, "user": "root",
-            "password": "kebersamaan", "connect_timeout": 5}
+            "password": database_password(), "connect_timeout": 5}
 
 
 def search(database_id: str, databases=None) -> list[dict]:
     import pymysql
     findings = []
     probe = database_id.upper()
+    connection_options = connect_kwargs()
     for db in (databases or KNOWN_DATABASES):
         try:
-            conn = pymysql.connect(database=db, **connect_kwargs())
+            conn = pymysql.connect(database=db, **connection_options)
         except Exception:
             continue
         try:

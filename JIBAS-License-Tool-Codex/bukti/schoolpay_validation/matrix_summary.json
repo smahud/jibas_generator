@@ -1,0 +1,9 @@
+{
+  "scenario_count": 31,
+  "attempt_count": 43,
+  "all_expected_outcomes": true,
+  "original_importer": "0x06000757",
+  "original_cache_loader": "0x06000756",
+  "full_runtime_activation_tested": false,
+  "limitation": "Runtime 09D0 is opaque VM with no proven safe online/DB guard; it was not executed."
+}

@@ -1,0 +1,24 @@
+{
+  "artifact_sha256": "ca112352f1160ead541ff404354aecb3a83165798e562dea5ca3ef68191cd2f8",
+  "mvid": "3f7d530d-8b12-4c29-229b-d7a7bd599cf1",
+  "authority": "controlled replay: current ID holders supplied; original methods unmodified, no Main/UI/network",
+  "importer_token": "06000757",
+  "current_database_id": "ZZZZZ",
+  "current_system_id": "ABCDE",
+  "attempts": [
+    {
+      "input": "C:\\YIM\\JIBAS Generator\\JIBAS-License-Tool-Codex\\bukti\\schoolpay_validation\\generated\\ABCDE_new.lic",
+      "before_client": "TRIAL",
+      "before_sequence": 0,
+      "accepted": false,
+      "exception": "System.Exception: Database Id tidak sama dengan lisensi (ABCDE)",
+      "after_client": "TRIAL",
+      "after_sequence": 0,
+      "after_dbid": "",
+      "after_systemid": "",
+      "max_vendor": 20,
+      "cache_exists": false
+    }
+  ],
+  "label": "ABCDE_wrong_database"
+}

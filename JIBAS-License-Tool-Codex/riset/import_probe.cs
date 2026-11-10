@@ -1,6 +1,7 @@
 using System;
 using System.IO;
 using System.Reflection;
+using System.Data.Common;
 using System.Collections.Generic;
 using System.Web.Script.Serialization;
 
@@ -11,6 +12,14 @@ using System.Web.Script.Serialization;
 // Usage: ImportProbe.exe <label> <licensePath>
 public static class ImportProbe {
     static Module module;
+    static string ConnectionString() {
+        string password = Environment.GetEnvironmentVariable("JIBAS_DB_PASSWORD");
+        if (password == null) throw new InvalidOperationException("JIBAS_DB_PASSWORD belum tersedia.");
+        var builder = new DbConnectionStringBuilder();
+        builder.ConnectionString = "server=127.0.0.1;port=3434;user id=root;persistsecurityinfo=false;charset=utf8mb4";
+        builder["password"] = password;
+        return builder.ConnectionString;
+    }
     static void Set(int token, object value) { module.ResolveField(token).SetValue(null, value); }
     static object Get(int token) { return module.ResolveField(token).GetValue(null); }
     static object Call(int token) { return module.ResolveMethod(token).Invoke(null, null); }
@@ -42,7 +51,7 @@ public static class ImportProbe {
             Assembly mysqlAsm = Assembly.LoadFrom(Path.Combine(targetDir, "MySql.Data.dll"));
             Type connType = mysqlAsm.GetType("MySql.Data.MySqlClient.MySqlConnection");
             object conn = Activator.CreateInstance(connType,
-                "server=127.0.0.1;port=3434;user id=root;password=kebersamaan;persistsecurityinfo=false;charset=utf8mb4");
+                ConnectionString());
             connType.GetMethod("Open").Invoke(conn, null);
             string dbid = (string)module.ResolveMethod(0x06000AC3).Invoke(null, new object[] { conn });
             Set(0x040004DB, dbid);

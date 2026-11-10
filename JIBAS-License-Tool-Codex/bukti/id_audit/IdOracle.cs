@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Reflection;
+using System.Data.Common;
 using System.Web.Script.Serialization;
 
 // Read-only original-method oracle. DB writes, if any, come from AC3's own
@@ -26,9 +27,13 @@ public static class IdOracle {
       if(args.Length>0 && args[0]=="db") {
         int port=args.Length>1 ? Int32.Parse(args[1]) : 3434;
         string pass=Environment.GetEnvironmentVariable("ID_AUDIT_MYSQL_PASSWORD");
+        if(pass==null) throw new InvalidOperationException("ID_AUDIT_MYSQL_PASSWORD belum tersedia.");
         var mysql=Assembly.LoadFrom(Path.Combine(dir,"MySql.Data.dll"));
         var ct=mysql.GetType("MySql.Data.MySqlClient.MySqlConnection");
-        object conn=Activator.CreateInstance(ct,"server=127.0.0.1;port="+port+";user id=root;password="+pass+";persistsecurityinfo=false;charset=utf8mb4");
+        var builder=new DbConnectionStringBuilder();
+        builder.ConnectionString="server=127.0.0.1;port="+port+";user id=root;persistsecurityinfo=false;charset=utf8mb4";
+        builder["password"]=pass;
+        object conn=Activator.CreateInstance(ct,builder.ConnectionString);
         ct.GetMethod("Open").Invoke(conn,null);
         result["port"]=port;
         result["original_AC3"]=Call(0x06000AC3,conn);

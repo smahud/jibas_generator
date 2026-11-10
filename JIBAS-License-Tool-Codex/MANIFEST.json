@@ -13,8 +13,8 @@
   "files": [
     {
       "path": ".gitattributes",
-      "bytes": 359,
-      "sha256": "f684f29abe395f59892275012dbb43aa600f32666e462adad951025ba286f3d1"
+      "bytes": 443,
+      "sha256": "3e14700c1ecec489d34bf720369739eab1c4be57aa5b97b879c58b7cf02cdb7e"
     },
     {
       "path": ".gitignore",
@@ -23,8 +23,8 @@
     },
     {
       "path": "AGENT_GUIDE.md",
-      "bytes": 1585,
-      "sha256": "7a333cf94ec99ddf4b928f36f7ba5964da50b40f7038e1440bdeba46a2ab007c"
+      "bytes": 2107,
+      "sha256": "eb9449053ae15ff6db64b52c0b567dc9462dd4b2fadc8d2ccaa15d33e7012705"
     },
     {
       "path": "Analisis.md",
@@ -33,13 +33,18 @@
     },
     {
       "path": "Jalankan GUI.cmd",
-      "bytes": 574,
-      "sha256": "f5d6da0618694ae2b222ca5059e0cf56755133a11d2adcf103f64cfb29d39034"
+      "bytes": 673,
+      "sha256": "7bd687527821ad566367c71237de264e5f9cf7a9726b9706163f26b1ab272d63"
     },
     {
       "path": "README.md",
-      "bytes": 4713,
-      "sha256": "127d90a5d387b740a20231b7e3cce01858e67fb20660fd883c7a862f048d6cf5"
+      "bytes": 6666,
+      "sha256": "5cd2902d2fa947d2576b335a7496ec4c85bc42cbb93fd35c343386b777c922b5"
+    },
+    {
+      "path": "SCHOOLPAY.md",
+      "bytes": 6780,
+      "sha256": "8bbf16088af621fca38b35db1c84ec00d9f4e6ce86680a6ad04ddde818590ded"
     },
     {
       "path": "TEMUAN.md",
@@ -48,23 +53,23 @@
     },
     {
       "path": "TEST_REPORT.md",
-      "bytes": 2262,
-      "sha256": "6e34707b24501bb1b8a19d7a383555d110d9b465906f49272b6e5387a4f6c3a4"
+      "bytes": 2954,
+      "sha256": "a89aaf05b64e456d240ca38ba36a6a5295c96ea6eb473f088cab8e5167036330"
     },
     {
       "path": "app.py",
-      "bytes": 16233,
-      "sha256": "b57605303325924782aa307e7b8ba71a1aabb4a285239708533fd20a0f879476"
+      "bytes": 22577,
+      "sha256": "2fb4f70b4987cfd675071df81dcdd524b1ae0f1418c4d85f45eaa4d23e5a3868"
     },
     {
       "path": "cli.cmd",
-      "bytes": 629,
-      "sha256": "eeaa7337d4d7fcfc48ffef4863a10e9cc6024361ec8d415ac2c92cbe291dedf2"
+      "bytes": 727,
+      "sha256": "6df368bce8497b28193fcc82a78dae1bc1f12f96a288a0d889014290558ce911"
     },
     {
       "path": "cli.py",
-      "bytes": 9112,
-      "sha256": "d94288f53b90d303da4458849be0b9e4d072f749691dec201cd9b18a05ca6407"
+      "bytes": 10176,
+      "sha256": "5664a23ea4b377dd60e0aa632ab1826935ba91be8b75fd39dd635894c0a43326"
     },
     {
       "path": "dbid_recipe.py",
@@ -78,13 +83,13 @@
     },
     {
       "path": "id_detect.py",
-      "bytes": 9234,
-      "sha256": "acdfda10ef3e9188bde9c1327aa9210aadb24eb19f2bb97ff90946dab3270bba"
+      "bytes": 10530,
+      "sha256": "17c4931f4944351fb248e7bec4597b2ce009b866a53ce70efc7608bc9e1e9a80"
     },
     {
       "path": "license_codec.py",
-      "bytes": 26237,
-      "sha256": "37c44e5797e82a9b8ecc34a1619823d899383b3dd092bbad2d94bd96583a4af5"
+      "bytes": 26470,
+      "sha256": "05dc9efb7d35127238bf79b83cd4fae5039995c2f55871b15b66dc5ecfb80d28"
     },
     {
       "path": "requirements-dev.txt",
@@ -102,9 +107,24 @@
       "sha256": "63952cfd0db50a581934fa3d366b48fa1ae0238687c0dfe3df74fb6abe5178c4"
     },
     {
+      "path": "schoolpay_codec.py",
+      "bytes": 12262,
+      "sha256": "01b32767ab74fdf6ac23e0caf26bf4df040ebb22c6f69030aa8dd477e212b428"
+    },
+    {
+      "path": "schoolpay_id_detect.py",
+      "bytes": 3262,
+      "sha256": "88b158be01f720c76e569fe66aee5b89138849512245f329d68aae6ebfbf09bf"
+    },
+    {
+      "path": "schoolpay_schema.xml",
+      "bytes": 2173,
+      "sha256": "1f433effb04941f495c27b8f4d4530a49c0acd8317199bdbc536c3f898062058"
+    },
+    {
       "path": "search_db.py",
-      "bytes": 3328,
-      "sha256": "7d3e7ef86567d7475696e4a44bd4159970f2993d9a05c412da6702fee4df5b66"
+      "bytes": 3419,
+      "sha256": "c2bd7dd7647b13fb944219471846b47431e7b6321110343f72abc352a43b90aa"
     },
     {
       "path": "bukti/audit_lawas_vs_baru.json",
@@ -172,6 +192,21 @@
       "sha256": "2c9368546a1f53b86154230746f6a5c99731dbe852ed56411f6422ebfd1e487a"
     },
     {
+      "path": "bukti/schoolpay_integrity.json",
+      "bytes": 114,
+      "sha256": "21cba7f2eafe6d95342d08817fd4d586db566f9a5d8212802b5b4b3a73582c0e"
+    },
+    {
+      "path": "bukti/schoolpay_inventory_after.json",
+      "bytes": 2523,
+      "sha256": "ca9df4140cacf9f5bf942480534581a9df036e5d62f810c116b6ed2061fe1b77"
+    },
+    {
+      "path": "bukti/schoolpay_inventory_before.json",
+      "bytes": 2523,
+      "sha256": "ca9df4140cacf9f5bf942480534581a9df036e5d62f810c116b6ed2061fe1b77"
+    },
+    {
       "path": "bukti/splang_decoded.txt",
       "bytes": 6912,
       "sha256": "78e661a91b2d0f659fd919e241bfdb869acadb0f83c00d48f3d53003d5f31d7a"
@@ -190,6 +225,41 @@
       "path": "bukti/verification_runtime_predicate.json",
       "bytes": 3920,
       "sha256": "e0a38692d7efc364b39a025938a28a2c67c223dc8803713e39477c3bb7e0c4fc"
+    },
+    {
+      "path": "bukti/audit_2026_11_10/client/audit_client.ps1",
+      "bytes": 3109,
+      "sha256": "96b283b5d196f3aee86262270e94154f571671f9dccb260f19f7414f14982213"
+    },
+    {
+      "path": "bukti/audit_2026_11_10/client/rea_identity.json",
+      "bytes": 6957,
+      "sha256": "7c637fc243e8c4cbeb6f617fe48defb0fcb278a0f750ab66965c7c018a78c46b"
+    },
+    {
+      "path": "bukti/audit_2026_11_10/client/verification.json",
+      "bytes": 3798,
+      "sha256": "ba94d39862399d48b289010e4834aa441a166dd98b224b113179554ea284ecce"
+    },
+    {
+      "path": "bukti/audit_2026_11_10/client/negative_header_4fe81370c513473e88a88f28c49fd044/maintenance.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "bukti/audit_2026_11_10/server/audit_saved_evidence.ps1",
+      "bytes": 5241,
+      "sha256": "ff9d55f5f39e55537ac68b342b3d0683cd9276af12ebf4193b69e9f5d8c9d648"
+    },
+    {
+      "path": "bukti/audit_2026_11_10/server/rea_identity.json",
+      "bytes": 6873,
+      "sha256": "6a3bffc63f3ac9acd86425ec5c9422deeef307d3ace6c34ee926cc2740c2c9e8"
+    },
+    {
+      "path": "bukti/audit_2026_11_10/server/saved_evidence_audit.json",
+      "bytes": 13917,
+      "sha256": "372fb497c0e2019b03014e8fa9c9a4f6ff6e2135aa97eb1dcd16170322c4dc3c"
     },
     {
       "path": "bukti/client16/intsites.txt",
@@ -433,13 +503,13 @@
     },
     {
       "path": "bukti/id_audit/IdOracle.cs",
-      "bytes": 3216,
-      "sha256": "9fde472ab3ca149b02e14a92e58631a8a4e99b877f9f307cb5c4be9277308cfa"
+      "bytes": 3473,
+      "sha256": "f1e209e0ecab003bc360b7d104bb2240605e2a5b476c192dd07e55f96261235f"
     },
     {
       "path": "bukti/id_audit/RuntimeDbId.cs",
-      "bytes": 2262,
-      "sha256": "b59970dad78d1efba5a896f4a64eb228070b24bfe75904fc6d86354d4dd3ee7d"
+      "bytes": 2692,
+      "sha256": "679ead8f654e0d2cdf0e85f7026a0e2e5d48e51920d6e04a21b569cd440f1535"
     },
     {
       "path": "bukti/id_audit/RuntimeSystemId.cs",
@@ -478,8 +548,8 @@
     },
     {
       "path": "bukti/id_audit/audit_ids.py",
-      "bytes": 5243,
-      "sha256": "ebe6f187081dcd37dbae07bc1222041c443008e9011f0eb8bf94692128a814eb"
+      "bytes": 5486,
+      "sha256": "93be0f0940a64e9f2c856714e355abcaf73ccafdbc444fd4f56c588474df5041"
     },
     {
       "path": "bukti/id_audit/isolated_db_matrix.json",
@@ -530,6 +600,526 @@
       "path": "bukti/import_results/sysid_info1_ddcb4_accepted_by_importer.json",
       "bytes": 543,
       "sha256": "8faedce1b990719e6f767e8692d4be30ca617b3f335b9d49db4149df6ffc313a"
+    },
+    {
+      "path": "bukti/schoolpay/FORMAT.md",
+      "bytes": 4808,
+      "sha256": "cf9594dfb03bd6aa3a631670504da7a469a4107ba5e779dc526f65eb68762308"
+    },
+    {
+      "path": "bukti/schoolpay/IntSites.cs",
+      "bytes": 5548,
+      "sha256": "2c065c1242adf5e6cc08a587e9d20c04e3f98abbca3a33ab68df9a571272dbf6"
+    },
+    {
+      "path": "bukti/schoolpay/SchoolPayFormatProbe.cs",
+      "bytes": 2081,
+      "sha256": "2cafd943018f51bc04a991be563dc528e28c85242166af87868c86b56d275b98"
+    },
+    {
+      "path": "bukti/schoolpay/VmOracle.cs",
+      "bytes": 3030,
+      "sha256": "be2172a3f666799ee09305f5b2e67419c429f820b888ad840a5d67f1297d9888"
+    },
+    {
+      "path": "bukti/schoolpay/crypto_il.txt",
+      "bytes": 7109,
+      "sha256": "d191313e724dff798ac43a1554d574a586c6ef07f6ee4959370941029f1b7169"
+    },
+    {
+      "path": "bukti/schoolpay/format_probe.json",
+      "bytes": 6570,
+      "sha256": "71e56092e9ef8214f3260c3c62668fe6d0e602864d3a49921bc59121076d306a"
+    },
+    {
+      "path": "bukti/schoolpay/gui_absensi.png",
+      "bytes": 32685,
+      "sha256": "fd70aea75ae21f7c88e50d3663d784b36b1fd73bc299a3f4cae97220cbd6ab3a"
+    },
+    {
+      "path": "bukti/schoolpay/gui_absensi_min.png",
+      "bytes": 28624,
+      "sha256": "dbf921e45ed5af832a2793a829793448463a9280e7f7ec75a39ec4a2e5590acf"
+    },
+    {
+      "path": "bukti/schoolpay/gui_layout_face_760x650.json",
+      "bytes": 180,
+      "sha256": "ffe9ee84cb77d38c78ed3116c0cff3f38fac26194ffaf3e73cc4aa3f14512366"
+    },
+    {
+      "path": "bukti/schoolpay/gui_layout_face_880x710.json",
+      "bytes": 180,
+      "sha256": "8d2cc97a8a3524aa34735a9cb0ac1603e7cab9820921d20903dac31199a3c8d0"
+    },
+    {
+      "path": "bukti/schoolpay/gui_layout_schoolpay_760x650.json",
+      "bytes": 185,
+      "sha256": "1bfb8c6ad1ad85fa7df57e8633295e4205445d2d695d25ed6e7deecc605e1435"
+    },
+    {
+      "path": "bukti/schoolpay/gui_layout_schoolpay_880x710.json",
+      "bytes": 185,
+      "sha256": "246afab19f2b57d9b088d9e61279404f8bcb3f88c5f594124651fcffc5d2e6dd"
+    },
+    {
+      "path": "bukti/schoolpay/gui_schoolpay.png",
+      "bytes": 31850,
+      "sha256": "f715db03c74df2e838ee869cb4963918d9198f899d987581708c421b68612ac0"
+    },
+    {
+      "path": "bukti/schoolpay/gui_schoolpay_min.png",
+      "bytes": 27890,
+      "sha256": "057d10451bf89db0d3f5a8cd0bd9a690b400214497bd1c2cc3d0b06a491b0eea"
+    },
+    {
+      "path": "bukti/schoolpay/gui_smoke.json",
+      "bytes": 2063,
+      "sha256": "9ec89b9686ffaf08ddb4daa63b0fc3fd158710b16775c5e4a2ae9aace7ed12df"
+    },
+    {
+      "path": "bukti/schoolpay/gui_visual_probe.py",
+      "bytes": 3728,
+      "sha256": "5cd35748c4f65761e4ac1e6edcefd2b42d683d044b18ce49945bc7f36789420e"
+    },
+    {
+      "path": "bukti/schoolpay/il.ps1",
+      "bytes": 3862,
+      "sha256": "de00147bf3abd83636c3144eeb38bd782b9910d958c683948a0dde3f4f2cb49b"
+    },
+    {
+      "path": "bukti/schoolpay/intsites.txt",
+      "bytes": 36652,
+      "sha256": "305f2910a6a62edb16d1f02ad82e40466f1c70141cb1aca3bb06f398aca63ab1"
+    },
+    {
+      "path": "bukti/schoolpay/license_type_il.txt",
+      "bytes": 28790,
+      "sha256": "fca8a8f4e5188e07bdb29a40adcc280587782024c532090e254c8c74edf07593"
+    },
+    {
+      "path": "bukti/schoolpay/methods.txt",
+      "bytes": 327445,
+      "sha256": "f3f1708d8f05d7e405b461d9dbf79d00ef11505c631b5e8c00e7b1510f29b4f7"
+    },
+    {
+      "path": "bukti/schoolpay/minute_il.txt",
+      "bytes": 3612,
+      "sha256": "eb313b8d821a882b7935b127b50328e3eb17fe92ec70c69c9b432ae535814ea7"
+    },
+    {
+      "path": "bukti/schoolpay/rea_identity.json",
+      "bytes": 7017,
+      "sha256": "3d9de246ec6ea005cb8ab8ebc358c66fa8166a9bcbce21b365d1fccae4bc8867"
+    },
+    {
+      "path": "bukti/schoolpay/rea_members_summary.json",
+      "bytes": 7786,
+      "sha256": "33f64415b23df978e9454de6565a32103065a2ef6f051e81e4dca188858ad2bc"
+    },
+    {
+      "path": "bukti/schoolpay/runtime_status_il.txt",
+      "bytes": 4388,
+      "sha256": "e9d0b064a8920fa32e82d8ed8ed0519aa0eeeb3f2247ad5ba7db287a427cd5c2"
+    },
+    {
+      "path": "bukti/schoolpay/schoolpay_schema.xml",
+      "bytes": 2173,
+      "sha256": "1f433effb04941f495c27b8f4d4530a49c0acd8317199bdbc536c3f898062058"
+    },
+    {
+      "path": "bukti/schoolpay/vm_strings.txt",
+      "bytes": 147234,
+      "sha256": "1183f4bc94a5d20f9bfb632e8112fa759d6644ec351ff68230b7f5c42d1009af"
+    },
+    {
+      "path": "bukti/schoolpay_validation/12345_decreased_sequence.json",
+      "bytes": 1498,
+      "sha256": "151b2781697ea86cef417187f57242aa4d6f61d3abea96e974df232204671bea"
+    },
+    {
+      "path": "bukti/schoolpay_validation/12345_different_client.json",
+      "bytes": 1485,
+      "sha256": "266689842e02d6b134814f84c346fe959431876cffb6ad758ca95dbe0ba750f2"
+    },
+    {
+      "path": "bukti/schoolpay_validation/12345_fresh.json",
+      "bytes": 879,
+      "sha256": "4a4c15ccf621f6e81e27be2708c6985a76ce3d5b66678ff84acffbbdde6417f6"
+    },
+    {
+      "path": "bukti/schoolpay_validation/12345_renewal.json",
+      "bytes": 1380,
+      "sha256": "55203a6cf45eaf671826cc32a2fef4ba5abf5ee0bb7c4327d28b40db0fd75067"
+    },
+    {
+      "path": "bukti/schoolpay_validation/12345_same_sequence.json",
+      "bytes": 1479,
+      "sha256": "2fa73084c62bbc93b53f81273cc577eb3eb7ce23b48552dd9b8d0fe89dbd8883"
+    },
+    {
+      "path": "bukti/schoolpay_validation/12345_wrong_database.json",
+      "bytes": 901,
+      "sha256": "572263310bb7af4797c7cdfebeadcf29e216ca80f8616b6a1e323ec173ad4f8c"
+    },
+    {
+      "path": "bukti/schoolpay_validation/12345_wrong_system.json",
+      "bytes": 886,
+      "sha256": "c036c3e5d62da1ccba95e38bea3f9b9912199f7ab8671a855e6ad43a4fb8f1fa"
+    },
+    {
+      "path": "bukti/schoolpay_validation/7VJM4_decreased_sequence.json",
+      "bytes": 1498,
+      "sha256": "3fc6ea0c082014898456d45ae36ad0a656d0e04a6c00ad1425f65f45bc16150d"
+    },
+    {
+      "path": "bukti/schoolpay_validation/7VJM4_different_client.json",
+      "bytes": 1485,
+      "sha256": "3c4dd897dae39a77c1957441d74c228dfbe218d5556f8c5494e173636df9ed6b"
+    },
+    {
+      "path": "bukti/schoolpay_validation/7VJM4_fresh.json",
+      "bytes": 879,
+      "sha256": "2cf3b5216fe20c15b60f135a5cc99d4bb612273eec48779a7c46bcabc4f01cd7"
+    },
+    {
+      "path": "bukti/schoolpay_validation/7VJM4_renewal.json",
+      "bytes": 1380,
+      "sha256": "f21e43acec5b3f22c421e3604285fe3f0937eab0119b2af52f6cc54ad6ba1067"
+    },
+    {
+      "path": "bukti/schoolpay_validation/7VJM4_same_sequence.json",
+      "bytes": 1479,
+      "sha256": "ba5428c888df04783263df1897b8428dc5180b1abd24a2b61e04d7a3c33cfb28"
+    },
+    {
+      "path": "bukti/schoolpay_validation/7VJM4_wrong_database.json",
+      "bytes": 901,
+      "sha256": "2ee87d63413479aec99e86751c4d97ea831c9e9695dc6a97647cd1fb16805167"
+    },
+    {
+      "path": "bukti/schoolpay_validation/7VJM4_wrong_system.json",
+      "bytes": 886,
+      "sha256": "9227df9a37b0a352d58c35b96bfcdc146d264e9e05d57321f947f8dd10dbdded"
+    },
+    {
+      "path": "bukti/schoolpay_validation/ABCDE_decreased_sequence.json",
+      "bytes": 1498,
+      "sha256": "3650f8b4fdcf564a187596092674e0d77c75ef3280899d0a96d16c96ab4aa609"
+    },
+    {
+      "path": "bukti/schoolpay_validation/ABCDE_different_client.json",
+      "bytes": 1485,
+      "sha256": "9722d026c9b0e0f4af21b7b8230498b94c1e36ef50658010daed494438cb263b"
+    },
+    {
+      "path": "bukti/schoolpay_validation/ABCDE_fresh.json",
+      "bytes": 879,
+      "sha256": "f3957be22eef7404aaa2c765e79c5795784610ea1c282907b4377a59c1c3c339"
+    },
+    {
+      "path": "bukti/schoolpay_validation/ABCDE_renewal.json",
+      "bytes": 1380,
+      "sha256": "4bc1840b0ac49a43f3f42e3f15804e35c066c14b6426aea31587c2260107bc73"
+    },
+    {
+      "path": "bukti/schoolpay_validation/ABCDE_same_sequence.json",
+      "bytes": 1479,
+      "sha256": "812018e9b325901e554d911e60401b7065072e5090f52ecbb26e2b26535efc3a"
+    },
+    {
+      "path": "bukti/schoolpay_validation/ABCDE_wrong_database.json",
+      "bytes": 901,
+      "sha256": "c65e24d1bc022c9f2758aad9dedef2bdc42fe835f2d8bf09a5d24a6a64bc45a7"
+    },
+    {
+      "path": "bukti/schoolpay_validation/ABCDE_wrong_system.json",
+      "bytes": 886,
+      "sha256": "80f5de5a862bb7439739752a96fdbc7dbcdc2a8f0b5aef9e1d88e99076163d2c"
+    },
+    {
+      "path": "bukti/schoolpay_validation/README.md",
+      "bytes": 4385,
+      "sha256": "d3e7da649d1dbddcd1c20c8cf6a594b45f0af70c13168c16a7cbd90916a9f6a5"
+    },
+    {
+      "path": "bukti/schoolpay_validation/SchoolPayIdProbe.cs",
+      "bytes": 2675,
+      "sha256": "2401decc4b70d7a31ba2ee3f31a07ba98948014e18ff9bb767ba7c75073bee12"
+    },
+    {
+      "path": "bukti/schoolpay_validation/SchoolPayImportProbe.cs",
+      "bytes": 2734,
+      "sha256": "be30d09ee0bd0ce04865d6fb46c1d4c3b2da5a43965e205e31b64ffd7a74c0b8"
+    },
+    {
+      "path": "bukti/schoolpay_validation/already_expired.json",
+      "bytes": 881,
+      "sha256": "45d929a2b9da795529854ee89279266e67ca81041f3d626b3b5bd15b88e57a51"
+    },
+    {
+      "path": "bukti/schoolpay_validation/arbitrary_comment_header.json",
+      "bytes": 894,
+      "sha256": "b02a2bd21b04a5777b95d71e23f9e2dd04038c032e34e2ad0a8ac69f4638bc3b"
+    },
+    {
+      "path": "bukti/schoolpay_validation/audit_schoolpay_ids.py",
+      "bytes": 3207,
+      "sha256": "16664fb4ffcec29be28767f4658fa17b2b7dca96bec0fcfc621f141d4098c029"
+    },
+    {
+      "path": "bukti/schoolpay_validation/broken_ciphertext.json",
+      "bytes": 1024,
+      "sha256": "f20d80833f77067a9e3cd64d7a227c547e9a82557f7b72620467e10168828014"
+    },
+    {
+      "path": "bukti/schoolpay_validation/callers_il.txt",
+      "bytes": 33182,
+      "sha256": "6b3309efc38654b7260823881089a3e4db05c6ed907204bafafe7f34a5ff0260"
+    },
+    {
+      "path": "bukti/schoolpay_validation/capacity_int32_overflow.json",
+      "bytes": 965,
+      "sha256": "671cb5cf469b245905049d3dcc873342e66a3c6bd754dbf90cd6fdd2824d4f8a"
+    },
+    {
+      "path": "bukti/schoolpay_validation/draft.lic",
+      "bytes": 3573,
+      "sha256": "22bf346f8c5a21eb164f7b2f509dd2bec1e1df5590bb24e965a63a30b5a818aa"
+    },
+    {
+      "path": "bukti/schoolpay_validation/flag_empty.json",
+      "bytes": 879,
+      "sha256": "8c65c694c4d6e08a2383dffe16d3a1fbe8e6735a4e987bba971b6e3a93046566"
+    },
+    {
+      "path": "bukti/schoolpay_validation/flag_false.json",
+      "bytes": 879,
+      "sha256": "3f3585331e98f8dbce85f3af33399917680aa717b40ee8b6b9b5ed92ad01996d"
+    },
+    {
+      "path": "bukti/schoolpay_validation/flag_schema_only.json",
+      "bytes": 891,
+      "sha256": "2602e540d12d6a359879186ac97ebbb7d478c46a90828c79375bd09edbf3813c"
+    },
+    {
+      "path": "bukti/schoolpay_validation/flag_zero.json",
+      "bytes": 877,
+      "sha256": "96e00d32100150a7fd7497452471fb5eaf5c18851827ccf7e0e434f9be3e66ec"
+    },
+    {
+      "path": "bukti/schoolpay_validation/for_schoolpay.lic",
+      "bytes": 3701,
+      "sha256": "1305e6ebfa6b2fde0ba625f67329d679f2da6e37de70efbc0769a36f73af5067"
+    },
+    {
+      "path": "bukti/schoolpay_validation/global_fields.txt",
+      "bytes": 201,
+      "sha256": "929df5f5fa30da739deb203382710c1a2ffece004b43b6f5005f4085cba9d6c4"
+    },
+    {
+      "path": "bukti/schoolpay_validation/id_candidates_il.txt",
+      "bytes": 16421,
+      "sha256": "b4d2f7bededfe042edee21113f9d77b3f7367f94e8990f34f8e30b1157e70295"
+    },
+    {
+      "path": "bukti/schoolpay_validation/id_date_oracle.json",
+      "bytes": 6082,
+      "sha256": "3593bb0c1f2690a7fe249064884659a5c6d251c01a32497d0ea77f9be463dddb"
+    },
+    {
+      "path": "bukti/schoolpay_validation/license_loader_il.txt",
+      "bytes": 8965,
+      "sha256": "e4f0ad917859ddb9f32658c640dda084eed77c597002d7d623f45c58d11366f7"
+    },
+    {
+      "path": "bukti/schoolpay_validation/license_runtime_readers.txt",
+      "bytes": 531,
+      "sha256": "2f18a6759c11c1e946f2000c572405a44b169ae89dbdc595623d0b8621906b5f"
+    },
+    {
+      "path": "bukti/schoolpay_validation/lowerheader.lic",
+      "bytes": 3701,
+      "sha256": "c7536c53cd7a18e5e19099f51f993a3d84b8da9d3f0a2042632f4ab2e4331cb2"
+    },
+    {
+      "path": "bukti/schoolpay_validation/matrix_results.json",
+      "bytes": 36569,
+      "sha256": "bed9c70420588c051052c31cc8aa409ed0c3e1133e19591dae2a7068c4e3e6df"
+    },
+    {
+      "path": "bukti/schoolpay_validation/matrix_summary.json",
+      "bytes": 314,
+      "sha256": "62e74f300681e93cf936e5a91f164612cc32180b5c1d2cdcbc7f8afdb7472ce4"
+    },
+    {
+      "path": "bukti/schoolpay_validation/method_inventory.txt",
+      "bytes": 325065,
+      "sha256": "0b82b4504724fea0a1dd7fea602b111355df2b8bd44550cc5ee551ac286e8cb8"
+    },
+    {
+      "path": "bukti/schoolpay_validation/no_for_schoolpay.json",
+      "bytes": 965,
+      "sha256": "e6d5850d8cc8a155ab995b3e0bec0ed6bd7237586382550075f725a8c9c4686b"
+    },
+    {
+      "path": "bukti/schoolpay_validation/no_header.json",
+      "bytes": 876,
+      "sha256": "654e9b21cb85c06773205d6c0d561a92268a6745b1ca97f2cb4c01a5355fc101"
+    },
+    {
+      "path": "bukti/schoolpay_validation/noheader.lic",
+      "bytes": 3674,
+      "sha256": "ceedc4d8bbdb27d699abaac6b315f70ca92c169172212e37ab9dbe6f9593e9ab"
+    },
+    {
+      "path": "bukti/schoolpay_validation/rea_identity.json",
+      "bytes": 7017,
+      "sha256": "3d9de246ec6ea005cb8ab8ebc358c66fa8166a9bcbce21b365d1fccae4bc8867"
+    },
+    {
+      "path": "bukti/schoolpay_validation/run_import_matrix.py",
+      "bytes": 5517,
+      "sha256": "499c5311afca86aacfe4bfab6e26eba8fc9cd806c787de652e330052cd990c6f"
+    },
+    {
+      "path": "bukti/schoolpay_validation/runtime_license_il.txt",
+      "bytes": 124,
+      "sha256": "e717aa7a6a7a0f146e1026ae250c08ef280b507575e6ca3788d6d5431f696b56"
+    },
+    {
+      "path": "bukti/schoolpay_validation/runtime_readers_il.txt",
+      "bytes": 25653,
+      "sha256": "559ff0fa0007c261ba0a8bde0d93c9af42bd2e230cc027ecdeb9704a40fb510d"
+    },
+    {
+      "path": "bukti/schoolpay_validation/schoolpay_il.ps1",
+      "bytes": 3862,
+      "sha256": "de00147bf3abd83636c3144eeb38bd782b9910d958c683948a0dde3f4f2cb49b"
+    },
+    {
+      "path": "bukti/schoolpay_validation/systemid_il.txt",
+      "bytes": 24359,
+      "sha256": "2034a583c2090f7f7053d965a0448d801880b0ef0c2c3ab1217b1e3e61c64836"
+    },
+    {
+      "path": "bukti/schoolpay_validation/wmi_methods.json",
+      "bytes": 953,
+      "sha256": "877157baef8572e7901277db54d11fd97e6bff95ab62b3cb2acc75827ffe7d72"
+    },
+    {
+      "path": "bukti/schoolpay_validation/wrongheader.lic",
+      "bytes": 3695,
+      "sha256": "eb78ee2198ee1e4c335c65c50ab8239283eabeef49c65c6f8e89468322567323"
+    },
+    {
+      "path": "bukti/schoolpay_validation/generated/12345_lowerseq.lic",
+      "bytes": 3701,
+      "sha256": "1a0f3ed22c24d76029057404cc9146c3ca108b4a7451dc990936db2cac8a1086"
+    },
+    {
+      "path": "bukti/schoolpay_validation/generated/12345_new.lic",
+      "bytes": 3701,
+      "sha256": "f2f5a4d3f3de29d34369d76e0871b471196c41785c923845386d8fd52ef69f11"
+    },
+    {
+      "path": "bukti/schoolpay_validation/generated/12345_otherclient.lic",
+      "bytes": 3677,
+      "sha256": "56d3ea1544edc5694a6fe2dabfda1836aeccfa9a3e08f4fbb48acba03b41f09e"
+    },
+    {
+      "path": "bukti/schoolpay_validation/generated/12345_renew.lic",
+      "bytes": 3701,
+      "sha256": "299600cbb02decca57bee450c3520698b76aa5384aa2be9a47ebb382dc3202ec"
+    },
+    {
+      "path": "bukti/schoolpay_validation/generated/7VJM4_lowerseq.lic",
+      "bytes": 3701,
+      "sha256": "ed32c1f69ecb967185ee8d73d9e0fc8562c8af79e939ccdda40bfcf0777f26c6"
+    },
+    {
+      "path": "bukti/schoolpay_validation/generated/7VJM4_new.lic",
+      "bytes": 3701,
+      "sha256": "a630230bb35b23d7f9cc5a726740f62a8c538f91300bba5df2b9126d5f717fa6"
+    },
+    {
+      "path": "bukti/schoolpay_validation/generated/7VJM4_otherclient.lic",
+      "bytes": 3677,
+      "sha256": "81f40c74dbd1f23769e1d3962e0d52970f4fd786f3e36cefcdf4e919a2fac372"
+    },
+    {
+      "path": "bukti/schoolpay_validation/generated/7VJM4_renew.lic",
+      "bytes": 3701,
+      "sha256": "f407997c596509b3279ec71bb008e543df150b07dc650904584eb4e5aad80141"
+    },
+    {
+      "path": "bukti/schoolpay_validation/generated/ABCDE_lowerseq.lic",
+      "bytes": 3701,
+      "sha256": "b2f2d8a15874c5fa728dcea3ef8d23d19e3df782c4e2cd6dfdca8c1df7e0493c"
+    },
+    {
+      "path": "bukti/schoolpay_validation/generated/ABCDE_new.lic",
+      "bytes": 3701,
+      "sha256": "51a014ceb7576f75bce39e62049678ea86c60276da15bbc99192adaa4c8da35c"
+    },
+    {
+      "path": "bukti/schoolpay_validation/generated/ABCDE_otherclient.lic",
+      "bytes": 3677,
+      "sha256": "37b59d44dd97152dbd93f6a2047c2bd477c9c60fbc24acd10809f07f6e00e676"
+    },
+    {
+      "path": "bukti/schoolpay_validation/generated/ABCDE_renew.lic",
+      "bytes": 3701,
+      "sha256": "77a90d8245bb0add1edbb37fd2b266471a70fd2c4b2c4320dcda21e669a9cc28"
+    },
+    {
+      "path": "bukti/schoolpay_validation/generated/broken.lic",
+      "bytes": 28,
+      "sha256": "d24cfab4b98d710c8a93df9b6f824e7f724615b156ecfa44f2a96ae24195627d"
+    },
+    {
+      "path": "bukti/schoolpay_validation/generated/capacity_overflow.lic",
+      "bytes": 3701,
+      "sha256": "e8f48ecb65e13c54670a2b297a6d0759537ad32fca1300953d8438bff16bf126"
+    },
+    {
+      "path": "bukti/schoolpay_validation/generated/expired.lic",
+      "bytes": 3701,
+      "sha256": "e328af18f877c4f760d92492733690a549838a26b7e4b19b61adbf19714b1fd0"
+    },
+    {
+      "path": "bukti/schoolpay_validation/generated/flag_empty.lic",
+      "bytes": 3677,
+      "sha256": "34dad47e92c2d488d42e9b8583a140c1f27427dcc245776ae2f1ffd4a8f711c0"
+    },
+    {
+      "path": "bukti/schoolpay_validation/generated/flag_false.lic",
+      "bytes": 3701,
+      "sha256": "15600c287418a5558a02b11c1d2170b33ffa932d1ca419573b256c084f8b951e"
+    },
+    {
+      "path": "bukti/schoolpay_validation/generated/flag_schema_only.lic",
+      "bytes": 3657,
+      "sha256": "0c3667f5e8f0adbf227661bfcef1a86ead317c73dbb369226fe453224905679d"
+    },
+    {
+      "path": "bukti/schoolpay_validation/generated/flag_zero.lic",
+      "bytes": 3701,
+      "sha256": "dee6a10ddf81fcd6492f15b32b9695e806e5820eb436b29b3ee33f77e490d7a6"
+    },
+    {
+      "path": "bukti/schoolpay_validation/generated/no_flag.lic",
+      "bytes": 3573,
+      "sha256": "545006c729e82315d43298d9fb7904ad579222b9fba34889c502ae1ed0c3cf9e"
+    },
+    {
+      "path": "bukti/schoolpay_validation/generated/noheader.lic",
+      "bytes": 3674,
+      "sha256": "ca0f607e9d11ec02d098ea5f8a124fe7891368298e1613d5dc01be26f49fae6c"
+    },
+    {
+      "path": "bukti/schoolpay_validation/generated/wrongheader.lic",
+      "bytes": 3693,
+      "sha256": "cb15cdbec439017f44f73842568c763d3cf235640aa42b517dfa5674d996adc4"
     },
     {
       "path": "bukti/server_matrix/ABCDE_DDCB4_db_mismatch.json",
@@ -788,13 +1378,53 @@
     },
     {
       "path": "contoh/BACA.txt",
-      "bytes": 445,
-      "sha256": "fb55e358c500f4b34725fdca7a209020a27f2d89cd3a8727011027a81a09c534"
+      "bytes": 726,
+      "sha256": "1b7f8f8a49eba417e16ffe8f630866cd223c0417714c2880a811874cbb565e19"
+    },
+    {
+      "path": "contoh/SchoolPay-7VJM4-DDCB4-baru.lic",
+      "bytes": 3701,
+      "sha256": "2b6405e60206d97fa37231a9b0b4d2b8a24511a21a601f60fd8143a6a802a3e7"
     },
     {
       "path": "contoh/V4YNE-DDCB4-baru.lic",
       "bytes": 3336,
       "sha256": "0f28a54f81c486b6862fd7b55584b40595af8c90258e001ea414f35611fcdee4"
+    },
+    {
+      "path": "docs/client-review-2026-11-10.md",
+      "bytes": 5755,
+      "sha256": "8e32c47a3f63e12da258a269dccb84e73ed146c73a820d761a71ddab3ae64eed"
+    },
+    {
+      "path": "docs/server-review-2026-11-10.md",
+      "bytes": 9252,
+      "sha256": "2cc7effcfb986442500dd83f3301ac595f77617e4d59f857739c9d7ef2abce87"
+    },
+    {
+      "path": "license_support/__init__.py",
+      "bytes": 74,
+      "sha256": "a61879bd3ccbb0944d20151385f60c36c6d42d5e064f4ed241d789f22638cad3"
+    },
+    {
+      "path": "license_support/__main__.py",
+      "bytes": 1946,
+      "sha256": "5225788742167001e144fd5d12f9f217effe0f44b76d2a62f25c5ccec4904b7c"
+    },
+    {
+      "path": "license_support/analysis.py",
+      "bytes": 2368,
+      "sha256": "ee6008021fbbc45938494f721d0e807875749f5b994d2db54fe573bfaceb8c65"
+    },
+    {
+      "path": "license_support/issuance.py",
+      "bytes": 809,
+      "sha256": "b7dbb7780115896a0ac17eab262f437262f8154681abcfd0631dc6a9e54f2629"
+    },
+    {
+      "path": "license_support/validation.py",
+      "bytes": 1162,
+      "sha256": "d0db600a30b5f80fed35ea996ffabfad974ff42941c9c1b50cb5d3fcc47ea2b4"
     },
     {
       "path": "patches/diagnostics_windows.patch",
@@ -803,8 +1433,8 @@
     },
     {
       "path": "riset/RuntimeDbId.cs",
-      "bytes": 2262,
-      "sha256": "b59970dad78d1efba5a896f4a64eb228070b24bfe75904fc6d86354d4dd3ee7d"
+      "bytes": 2692,
+      "sha256": "679ead8f654e0d2cdf0e85f7026a0e2e5d48e51920d6e04a21b569cd440f1535"
     },
     {
       "path": "riset/RuntimeSystemId.cs",
@@ -818,8 +1448,8 @@
     },
     {
       "path": "riset/import_probe.cs",
-      "bytes": 4830,
-      "sha256": "d7a7cf98d740883d67bee8a2bd8fe1eb877fae5a1a508241042ccdd8ba81cf84"
+      "bytes": 5260,
+      "sha256": "44098ea93a9be12ba37bc9cf8830642284100d892febb68027cdb30deb97e1d5"
     },
     {
       "path": "riset/inventory.py",
@@ -872,6 +1502,11 @@
       "sha256": "52ae1cad457060589eaebc0919d403a7b6ac7cd3d9b53a42ae62d52d2d40d952"
     },
     {
+      "path": "tests/test_diagnostic_failures.py",
+      "bytes": 3549,
+      "sha256": "92566c22da5ea39213f38382ccf521bb22ef6e76d0335e9760267c877ef1510a"
+    },
+    {
       "path": "tests/test_id_detect.py",
       "bytes": 3476,
       "sha256": "98a9c5a64e9060915627c550cd5c270c61388c9501342b5efa206ced01ebc79a"
@@ -882,9 +1517,34 @@
       "sha256": "e30b49d5d23103ac031071e5dfd1e6659f647b55f45a2e39149f985650512d96"
     },
     {
+      "path": "tests/test_license_support.py",
+      "bytes": 2876,
+      "sha256": "ee1e7e20c50332b7b7ee7108174dcddb99e8f3ae648c288a9a06e638185da173"
+    },
+    {
       "path": "tests/test_provenance_compat.py",
       "bytes": 2856,
       "sha256": "375b0424d262233df81be3923860b6b095425c076a24bd7c5073fc2ca77f1a2f"
+    },
+    {
+      "path": "tests/test_schoolpay_codec.py",
+      "bytes": 5869,
+      "sha256": "8f4f28f45a55aeae052b9459f72e91dc6a9664ffcda0fcf95a367028d94434a9"
+    },
+    {
+      "path": "tests/test_schoolpay_ids.py",
+      "bytes": 2111,
+      "sha256": "a95bfc68ac210a8b4fc190e93cd451d30058af23c4dbca5d674d5b6d97577a6c"
+    },
+    {
+      "path": "tests/test_unified_cli.py",
+      "bytes": 1970,
+      "sha256": "5bcaa37021266252f839a19818935701253db7cd950dc0ef413a94f9320c99f4"
+    },
+    {
+      "path": "tests/test_unified_gui.py",
+      "bytes": 8932,
+      "sha256": "32474ebf2ea77d98dc1d23005c40fd97d9e08e909d5c5c2cb98fbac492ef50b1"
     },
     {
       "path": "tests/fixtures/date_reference.json",
@@ -900,6 +1560,11 @@
       "path": "tests/fixtures/original-imported.enc",
       "bytes": 3482,
       "sha256": "52b73894501f510f2eda1dcc6513efc0da522bf3093d79c1d6ff28c3f2caf943"
+    },
+    {
+      "path": "tests/fixtures/schoolpay-empty.enc",
+      "bytes": 2862,
+      "sha256": "acfcd5b180533c014339cc89ef4f81feef6afa1216bedbeabf8e99350c2a34bf"
     }
   ]
 }

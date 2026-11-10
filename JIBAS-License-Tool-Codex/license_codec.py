@@ -125,6 +125,9 @@ def _parse_xml(xml: str):
     if root.tag != "NewDataSet":
         raise LicenseError("Root XML bukan NewDataSet.")
     rows = root.findall(TABLE)
+    if not rows and root.find(
+            ".//{http://www.w3.org/2001/XMLSchema}element[@name='" + TABLE + "']") is None:
+        raise LicenseError("Berkas bukan lisensi Absensi Wajah (tabel JibasSptFaceLicense tidak ditemukan).")
     if len(rows) > 1:
         raise LicenseError("Diharapkan paling banyak satu baris lisensi.")
     fields = {child.tag: child.text or "" for child in rows[0]} if rows else {}
