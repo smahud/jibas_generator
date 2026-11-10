@@ -1,0 +1,4 @@
+# Bagian eksperimen/hubungan backend tidak dibagikan
+__pycache__/
+*.pyc
+.pytest_cache/

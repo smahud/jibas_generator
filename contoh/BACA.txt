@@ -1,0 +1,19 @@
+CONTOH LISENSI — JIBAS Face Server 16.5 (tool OpenCode)
+=======================================================
+
+V4YNE-7738F.lic
+  Database ID  : V4YNE  (hasil deteksi/prosedur splang jbssat, terbukti 100%)
+  System ID    : 7738F  (hasil metode asli 0x0600059B di mesin ini:
+                          MD5("30029941042" + "E0813C3C-120B-02FE-5F00-BCAEC5319E78")
+                          -> hex[5,17,30,24,3] UPPER)
+  Client       : CONTOH-OpenCode, ClientId acak per pembuatan
+  Kapasitas    : 100.000 wajah
+  Berlaku s.d. : 2027-12-31 23:59 WIB
+
+PENTING
+- Info1/Seri HARUS System ID hasil mesin tujuan (di sini 7738F).
+  Nilai "DDCB4" yang lama muncul di cache bawaan BUKAN hasil mesin ini
+  (rekayasa replay tool sebelumnya) dan DITOLAK predikat runtime asli.
+- Berkas ini hanya contoh pendemonstrasian format; jangan dipakai sebagai
+  lisensi produksi sebelum ID mesin tujuan diverifikasi ulang.
+- Isi berkas dapat dibaca ulang dengan: cli.cmd inspect V4YNE-7738F.lic

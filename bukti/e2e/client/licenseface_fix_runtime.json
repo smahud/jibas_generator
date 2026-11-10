@@ -1,0 +1,91 @@
+{
+  "fixed_target": "JIBAS Face & Fingerprint Client 16.10 / FaceFgrClient.exe",
+  "client_exe_sha256_note": "6f5369df…ba546 (terukur sebelum riset; biner tidak pernah diubah)",
+  "root_cause": "licenseface.enc bawaan hanya skeleton tanpa baris; validator 0x06000AF7 kembalikan FALSE saat rows==0, holder mode global 0x040004C7..D1 tetap default cctor ('TRIAL'), dan handler simpan 0x0600051E menolak dengan 'Tidak dapat menyimpan presensi wajah karena ' + field 0x040004B6.",
+  "fix": "tulis-cache-client: salin satu baris dari lisensi efektif Face Server 16.5 (license.enc, profil AES-128-CBC pasangan '3477K3b3rS4mA4N'/'YaRAhM4nY4R4h1M#' yang terbukti identik dengan pasangan FACE klien dari pre-init dinamis 0x06000AF2) ke licenseface.enc folder klien; cadangan timestamped; licensefgr.enc (profil/pasangan berbeda: '3477K3b3rS4ma4N'/'YaRahM@nY4R4h1M#', validator 0x060008C0 sah pada baris nol) dan config.ini tidak disentuh.",
+  "applied_to": "C:\\Users\\LAPTOP~1\\AppData\\Local\\Temp\\opencode\\client_probe (sandbox copy; folder klien asli tidak ditulis)",
+  "cli_exit": 0,
+  "cli": {
+    "ok": true,
+    "results": [
+      {
+        "client_dir": "C:\\Users\\Laptop Kantor - ASUS\\AppData\\Local\\Temp\\opencode\\client_probe",
+        "cache_path": "C:\\Users\\Laptop Kantor - ASUS\\AppData\\Local\\Temp\\opencode\\client_probe\\licenseface.enc",
+        "sha256": "4b136c9e80dc77027b126c8b95fce0db0d0867c787ebcf44b336865baa515e5c",
+        "fields": {
+          "Versi": "16.5",
+          "KlienId": "64860620A8144467B61AE8898DEF4AF5",
+          "Klien": "LOCALHOST",
+          "Tanggal": "2026-10-28",
+          "Model": "",
+          "Seri": "DDCB4",
+          "Size": "100000",
+          "Sequence": "1",
+          "KodeRs": "",
+          "KodeTx": "",
+          "DbId": "V4YNE",
+          "LicenseLimit": "3000-10-28",
+          "LicenseLimitDate": "3000-10-28T23:59:00+07:00",
+          "MaxClient": "100000",
+          "Keterangan": "",
+          "Info1": "DDCB4",
+          "Info2": "",
+          "Info3": ""
+        },
+        "backup_path": "C:\\Users\\LAPTOP~1\\AppData\\Local\\Temp\\opencode\\client_probe\\licenseface.enc.bak-20261110T140931",
+        "untouched": {
+          "licensefgr.enc": true,
+          "config.ini": true
+        },
+        "source": "C:\\Program Files\\YIM\\JIBAS Face Server 16.5\\license.enc"
+      },
+      {
+        "valid": true,
+        "ready": true,
+        "checks": [
+          {
+            "name": "license_row",
+            "passed": true,
+            "detail": "Baris lisensi terbaca dari cache klien."
+          },
+          {
+            "name": "consumer_columns",
+            "passed": true,
+            "detail": "Kolom yang dikonsumsi validator klien lengkap dan dapat dibaca."
+          },
+          {
+            "name": "row_copy",
+            "passed": true,
+            "detail": "Baris cache sama dengan baris sumber lisensi efektif."
+          }
+        ]
+      }
+    ]
+  },
+  "faceprobe_stdout": "base holder -> C:\\Users\\Laptop Kantor - ASUS\\AppData\\Local\\Temp\\opencode\\client_probe\nwarm ok -> C:\\Users\\Laptop Kantor - ASUS\\AppData\\Local\\Temp\\opencode\\client_probe\\licensefgr.enc\nbase holder re-set -> C:\\Users\\Laptop Kantor - ASUS\\AppData\\Local\\Temp\\opencode\\client_probe\nholders BEFORE loader run:\n  FGR pwd 0x04000366 = ''\n  FGR iv  0x04000367 = ''\n  FACE pwd 0x04000375 = ''\n  FACE iv  0x04000376 = ''\nAF2 (dynamic pre-init) ok\nholders AFTER AF2:\n  FGR pwd 0x04000366 = ''\n  FGR iv  0x04000367 = ''\n  FACE pwd 0x04000375 = '3477K3b3rS4mA4N'\n  FACE iv  0x04000376 = 'YaRAhM4nY4R4h1M#'\nAF3 (face loader) ok\nholders AFTER AF3:\n  FGR pwd 0x04000366 = ''\n  FGR iv  0x04000367 = ''\n  FACE pwd 0x04000375 = '3477K3b3rS4mA4N'\n  FACE iv  0x04000376 = 'YaRAhM4nY4R4h1M#'\nVALIDATOR AFTER LOADER = True\nmode 0x040004C7 = '64860620A8144467B61AE8898DEF4AF5'\nklien 0x040004C8 = 'LOCALHOST'\ndbid  0x040004C9 = 'V4YNE'\n",
+  "faceprobe_exit": 0,
+  "runtime_assertions": {
+    "validator_0x06000AF7": "True",
+    "mode_0x040004C7": "64860620A8144467B61AE8898DEF4AF5",
+    "klien_0x040004C8": "LOCALHOST",
+    "dbid_0x040004C9": "V4YNE"
+  },
+  "sandbox_cache_sha256": "4b136c9e80dc77027b126c8b95fce0db0d0867c787ebcf44b336865baa515e5c",
+  "predicate_registrasi_0x0600052D": {
+    "db": "localhost:3434 root (config.ini klien, DBPASSWORD didekripsi 0x06000A46)",
+    "hasil": "True (read-only: SELECT NOW() + COUNT information_schema jbsakad/jbssdm/jbssms)",
+    "pesan": "",
+    "catatan": "dbprobe.exe; tidak ada mutasi basis data."
+  },
+  "enrollment_counter": {
+    "jbssat.fcface aktif": 0,
+    "bypass_flag_0x040004B4": false,
+    "implikasi": "quota wajah tidak menjadi penghalang setelah fix."
+  },
+  "integrity": {
+    "server_license_enc_sha256": "197ae5c726cf483d615b3d2f0cb06ba0ee19289dc5bb393f2e15d9ec418b6f65",
+    "real_client_licenseface_untouched": true,
+    "real_client_licensefgr_untouched": true,
+    "note": "folder klien asli hanya dibaca; semua tulisan uji hanya di sandbox."
+  }
+}

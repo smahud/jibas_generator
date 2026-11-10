@@ -1,0 +1,33 @@
+{
+  "title": "Audit perbandingan tool lawas (JIBAS-License-Tool-16.5) vs tool baru (JIBAS-License-Tool-OpenCode)",
+  "date": "2026-11-10",
+  "kernel_comparison": {
+    "codec": "license_core.py (lawas) vs license_codec.py (baru) — logika _profile/_decrypt/_encrypt/_parse_xml/_serialize/_id/_datetime/_legacy_minute/verify_license identik baris-per-baris; tambahan baru: parameter overwrite, keluaran kunci database_id/system_id/previous_sequence/mode, pesan kedaluwarsa-awal yang jelas",
+    "crypto": "identik (profil sama: password 3477K3b3rS4mA4N, IV YaRAhM4nY4R4h1M#, AES-128-CBC) — validasi lintas: codec baru mendekripsi cache asli terpasang & fixture importer asli"
+  },
+  "feature_matrix": {
+    "inspect|verify|generate CLI": {"16_5": true, "opencode": true},
+    "alur perpanjangan (--previous-license, Sequence otomatis naik, KlienId terjaga)": {"16_5": true, "opencode": true},
+    "--overwrite generator": {"16_5": false, "opencode": true},
+    "CLI detect (Database ID + System ID otomatis)": {"16_5": false, "opencode": true},
+    "CLI verify --auto": {"16_5": false, "opencode": true},
+    "GUI tkinter": {"16_5": true, "opencode": true},
+    "GUI deteksi otomatis (MySQL/WMI)": {"16_5": false, "opencode": true},
+    "GUI input Sequence & default berlaku +365 hari": {"16_5": true, "opencode": true},
+    "GUI checkbox timpa berkas": {"16_5": false, "opencode": true},
+    "GUI shortcut Ctrl-O": {"16_5": true, "opencode": true},
+    "search_db.py": {"16_5": true, "opencode": true, "note": "baru: pymysql + grep literal tabel & tubuh prosedur; catatan: Database ID memang tidak tersimpan (dihitung), bukan bug"},
+    "date_reference testing": {"16_5": true, "opencode": true, "note": "8 sampel metode asli 0x0600066B dipertahankan sebagai test"},
+    "fixture importer asli (original-empty/imported.enc)": {"16_5": true, "opencode": true},
+    "folder contoh lisensi": {"16_5": true, "opencode": true, "note": "contoh baru memakai SystemID ASLI mesin (7738F), bukan DDCB4"},
+    "bukti runtime original (predikat/impor)": {"16_5": true, "opencode": true, "note": "baru menambah 6 kasus E2E importer (perpanjangan dgn cache) + deteksi ID asli, lihat bukti/e2e/"},
+    "riset harness .cs": {"16_5": true, "opencode": true},
+    "MANIFEST + hash": {"16_5": true, "opencode": true}
+  },
+  "perbedaan_penting_hasil": {
+    "depends_awal": "tool lawas pernah menganggap Info1=DDCB4 karena replay predicate menginject field 0x040004E7 dengan Info1 lisensinya sendiri; audit ini membuktikan SystemID asli mesin adalah 7738F dan DDCB4 DITOLAK predikat runtime asli",
+    "deploy": "lawas ada di C:\\Program Files\\YIM (read-only bagi sesi ini); baru dipasang di C:\\YIM\\JIBAS-License-Tool-OpenCode"
+  },
+  "test_counts": {"16_5": {"core_unittest": 13, "interface_checks": 16}, "opencode": {"pytest": 29, "e2e_importer_asli": 6, "e2e_predikat_runtime_asli": 8, "e2e_desktop": "detect/generate/inspect/verify--auto/GUI-construct/search_db"}},
+  "audit_status": "PASS — superset lawas tanpa kehilangan fitur"
+}
