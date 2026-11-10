@@ -1,6 +1,6 @@
 {
-  "artifact_sha256": "ca112352f1160ead541ff404354aecb3a83165798e562dea5ca3ef68191cd2f8",
-  "init_token": "0x060006C5",
+  "artifact_sha256": "a2b77a3fc715d1d8c2b47a29ff65444af0e829c3f2704098ed538c48ce5f140b",
+  "init_token": "0x06000548",
   "profiles": {
     "server": {
       "source": "JIBAS Face Server 16.5 / FaceServer.exe init 0x060006C5",
@@ -19,6 +19,11 @@
     },
     "schoolpay": {
       "source": "JIBAS SchoolPay Secure Server 10.5 / SPayServer.exe init (same as Face Server, TBD for actual license data)",
+      "password_b64": "MzQ3N0szYjNyUzRtQTRO",
+      "iv_b64": "WWFSQWhNNG5ZNFI0aDFNIw=="
+    },
+    "cbe": {
+      "source": "JIBAS CBE Server 26.5 / CbeServer.exe init 0x06000548 (same crypto as Face Server)",
       "password_b64": "MzQ3N0szYjNyUzRtQTRO",
       "iv_b64": "WWFSQWhNNG5ZNFI0aDFNIw=="
     }

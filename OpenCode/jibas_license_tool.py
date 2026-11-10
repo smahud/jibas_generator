@@ -79,6 +79,14 @@ COLUMNS_SCHOOLPAY = (
     "LicenseLimit", "LicenseLimitDate", "MaxVendor", "Keterangan", "Info1", "Info2", "Info3",
 )
 
+# CBE Server constants
+TABLE_CBE = "JibasCbeLicense"
+COLUMNS_CBE = (
+    "Versi", "KlienId", "Klien", "Tanggal", "Model", "Seri", "Size",
+    "Sequence", "KodeRs", "KodeTx", "DbId", "LicenseLimit",
+    "LicenseLimitDate", "MaxClient", "Keterangan", "Info1", "Info2", "Info3",
+)
+
 # Default to Face for backward compatibility
 TABLE = TABLE_FACE
 COLUMNS = COLUMNS_FACE
@@ -92,6 +100,7 @@ ET.register_namespace("msdata", "urn:schemas-microsoft-com:xml-msdata")
 # client_face: FaceFgrClient 16.10 licenseface.enc (FACE cache)
 # client_fgr: FaceFgrClient 16.10 licensefgr.enc (FGR cache)
 # schoolpay: JIBAS SchoolPay Secure Server 10.5 license.enc
+# cbe: JIBAS CBE Server 26.5 license.enc (same crypto as server)
 
 
 # =============================================================================
@@ -189,6 +198,8 @@ def _get_table_columns_schema(product: str = "face"):
     """Get table name, columns, and schema file for a product."""
     if product == "schoolpay":
         return TABLE_SCHOOLPAY, COLUMNS_SCHOOLPAY, BASE / "schema_schoolpay.xml"
+    elif product == "cbe":
+        return TABLE_CBE, COLUMNS_CBE, BASE / "schema_cbe.xml"
     return TABLE_FACE, COLUMNS_FACE, BASE / "schema.xml"
 
 
@@ -480,6 +491,17 @@ def generate_license(
             "SystemId": system_id,  # SchoolPay has separate SystemId column
             "LicenseLimit": expires, "LicenseLimitDate": expiry.isoformat(),
             "MaxVendor": str(capacity), "Keterangan": "",
+            "Info1": system_id, "Info2": "", "Info3": "",
+        }
+    elif product == "cbe":
+        fields = {
+            "Versi": "26.5", "KlienId": client_id,
+            "Klien": client_name or (previous or {}).get("Klien") or database_id,
+            "Tanggal": created.date().isoformat(), "Model": "CBE",
+            "Seri": system_id, "Size": str(capacity), "Sequence": str(sequence),
+            "KodeRs": "", "KodeTx": "", "DbId": database_id,
+            "LicenseLimit": expires, "LicenseLimitDate": expiry.isoformat(),
+            "MaxClient": str(capacity), "Keterangan": "",
             "Info1": system_id, "Info2": "", "Info3": "",
         }
     else:
@@ -962,22 +984,13 @@ Examples:
     )
     subparsers = parser.add_subparsers(dest="command", required=True)
 
-    # Detect command
-    detect = subparsers.add_parser("detect", help="Detect Database ID and System ID from live system")
-    detect.add_argument("--no-system", action="store_true", help="Skip WMI hardware detection")
-    detect.add_argument("--host", default="127.0.0.1", help="MySQL host")
-    detect.add_argument("--port", type=int, default=3434, help="MySQL port")
-    detect.add_argument("--user", default="root", help="MySQL user")
-    detect.add_argument("--password", default="kebersamaan", help="MySQL password")
-    detect.add_argument("--database", default="jbssat", help="MySQL database")
-
     # Inspect command
     inspect = subparsers.add_parser("inspect", help="Read license file contents")
     inspect.add_argument("file", type=Path, metavar="FILE")
-    inspect.add_argument("--profile", choices=["server", "client_face", "client_fgr", "schoolpay"], default="server",
+    inspect.add_argument("--profile", choices=["server", "client_face", "client_fgr", "schoolpay", "cbe"], default="server",
                          help="Crypto profile to use for decryption")
-    inspect.add_argument("--product", choices=["face", "schoolpay"], default="face",
-                         help="Product type: face (Face/Fingerprint) or schoolpay (SchoolPay)")
+    inspect.add_argument("--product", choices=["face", "schoolpay", "cbe"], default="face",
+                         help="Product type: face (Face/Fingerprint), schoolpay (SchoolPay), or cbe (CBE Server)")
 
     # Verify command
     verify = subparsers.add_parser("verify", help="Verify license against installation IDs")
@@ -985,13 +998,11 @@ Examples:
     verify.add_argument("--database-id", required=True, help="Database ID (5 alphanumeric)")
     verify.add_argument("--system-id", required=True, help="System ID (5 hex)")
     verify.add_argument("--client-id", help="Client ID for verification (optional)")
-    verify.add_argument("--face-count", type=_positive_int, help="Active face/vendor count (optional)")
-    verify.add_argument("--profile", choices=["server", "client_face", "client_fgr", "schoolpay"], default="server",
+    verify.add_argument("--count", type=_positive_int, help="Active face/vendor count (optional)")
+    verify.add_argument("--profile", choices=["server", "client_face", "client_fgr", "schoolpay", "cbe"], default="server",
                         help="Crypto profile to use for decryption")
-    verify.add_argument("--product", choices=["face", "schoolpay"], default="face",
-                        help="Product type: face (Face/Fingerprint) or schoolpay (SchoolPay)")
-    verify.add_argument("--auto", action="store_true",
-                        help="Auto-detect IDs from live system if not provided")
+    verify.add_argument("--product", choices=["face", "schoolpay", "cbe"], default="face",
+                        help="Product type: face (Face/Fingerprint), schoolpay (SchoolPay), or cbe (CBE Server)")
 
     # Generate command
     generate = subparsers.add_parser("generate", help="Generate new license file")
@@ -1003,8 +1014,8 @@ Examples:
     generate.add_argument("--client-name", default="", help="Client name (optional)")
     generate.add_argument("--output", required=True, type=Path, help="Output .lic file path")
     generate.add_argument("--overwrite", action="store_true", help="Overwrite existing output file")
-    generate.add_argument("--product", choices=["face", "schoolpay"], default="face",
-                          help="Product type: face (Face/Fingerprint) or schoolpay (SchoolPay)")
+    generate.add_argument("--product", choices=["face", "schoolpay", "cbe"], default="face",
+                          help="Product type: face (Face/Fingerprint), schoolpay (SchoolPay), or cbe (CBE Server)")
 
     # Renew command
     renew = subparsers.add_parser("renew", help="Renew license (requires previous license file)")
@@ -1014,11 +1025,10 @@ Examples:
     renew.add_argument("--capacity", required=True, type=_positive_int, help="New max faces/vendors")
     renew.add_argument("--previous-license", required=True, type=Path, help="Previous license file (.lic/.enc)")
     renew.add_argument("--client-name", default="", help="Client name (optional, defaults to previous)")
-    renew.add_argument("--sequence", type=_positive_int32, help="Explicit sequence (default: previous + 1)")
     renew.add_argument("--output", required=True, type=Path, help="Output .lic file path")
     renew.add_argument("--overwrite", action="store_true", help="Overwrite existing output file")
-    renew.add_argument("--product", choices=["face", "schoolpay"], default="face",
-                       help="Product type: face (Face/Fingerprint) or schoolpay (SchoolPay)")
+    renew.add_argument("--product", choices=["face", "schoolpay", "cbe"], default="face",
+                       help="Product type: face (Face/Fingerprint), schoolpay (SchoolPay), or cbe (CBE Server)")
 
     # Fix client cache command
     client = subparsers.add_parser(
@@ -1051,22 +1061,7 @@ def main(argv: Optional[List[str]] = None) -> int:
     args = parser.parse_args(argv)
 
     try:
-        if args.command == "detect":
-            detector = DbIdDetector(
-                host=args.host, port=args.port, user=args.user,
-                password=args.password, database=args.database
-            )
-            dbid, db_info = detector.detect()
-            result = {"database_id": dbid, "database_id_detail": db_info}
-            if not args.no_system:
-                sys_detector = SystemIdDetector()
-                sysid, sys_info = sys_detector.detect()
-                result["system_id"] = sysid
-                result["system_id_detail"] = sys_info
-            print(json.dumps({"ok": True, "results": [result]}, ensure_ascii=False, indent=2, default=str))
-            return 0
-
-        elif args.command == "inspect":
+        if args.command == "inspect":
             result = inspect_license(args.file, profile=args.profile, product=args.product)
             print(json.dumps({"ok": True, "results": [result]}, ensure_ascii=False, indent=2, default=str))
             return 0
@@ -1075,23 +1070,11 @@ def main(argv: Optional[List[str]] = None) -> int:
             database_id = args.database_id.strip()
             system_id = args.system_id.strip()
             client_id = (args.client_id or "").strip() or None
-            auto_used = False
-            if args.auto:
-                if not database_id:
-                    detector = DbIdDetector()
-                    database_id = detector.detect()[0]
-                    auto_used = True
-                if not system_id:
-                    sys_detector = SystemIdDetector()
-                    system_id = sys_detector.detect()[0]
-                    auto_used = True
             result = verify_license(
                 args.file, database_id, system_id, client_id,
-                face_count=args.face_count, profile=args.profile, product=args.product
+                face_count=args.count, profile=args.profile, product=args.product
             )
             output = {"ok": result.get("valid") is True, "results": [result]}
-            if auto_used:
-                output["results"].append({"auto_detection": True})
             print(json.dumps(output, ensure_ascii=False, indent=2, default=str))
             return 0 if result.get("valid") is True else 1
 
@@ -1118,7 +1101,6 @@ def main(argv: Optional[List[str]] = None) -> int:
                 output_path=args.output,
                 previous_license_path=args.previous_license,
                 client_name=args.client_name.strip(),
-                sequence=args.sequence,
                 overwrite=args.overwrite,
                 product=args.product,
             )

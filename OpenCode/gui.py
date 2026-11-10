@@ -48,15 +48,20 @@ class LicenseToolGUI:
         self.notebook.add(self.tab_generate, text="Buat & Perpanjang")
         self._build_generate_tab()
 
-        # Tab 3: Client Cache Fix
+        # Tab 3: SchoolPay
+        self.tab_schoolpay = ttk.Frame(self.notebook)
+        self.notebook.add(self.tab_schoolpay, text="SchoolPay")
+        self._build_schoolpay_tab()
+
+        # Tab 4: CBE Server
+        self.tab_cbe = ttk.Frame(self.notebook)
+        self.notebook.add(self.tab_cbe, text="CBE Server")
+        self._build_cbe_tab()
+
+        # Tab 5: Client Cache Fix
         self.tab_client = ttk.Frame(self.notebook)
         self.notebook.add(self.tab_client, text="Perbaiki Client Cache")
         self._build_client_tab()
-
-        # Tab 4: ID Detection
-        self.tab_detect = ttk.Frame(self.notebook)
-        self.notebook.add(self.tab_detect, text="Deteksi ID")
-        self._build_detect_tab()
 
         # Status bar
         self.status_var = tk.StringVar(value="Siap")
@@ -77,13 +82,17 @@ class LicenseToolGUI:
         self.inspect_file_entry.pack(side=tk.LEFT, padx=4, fill=tk.X, expand=True)
         ttk.Button(file_frame, text="Pilih...", command=self._pick_inspect_file).pack(side=tk.LEFT, padx=4)
 
-        # Profile selection
+        # Profile and Product selection
         profile_frame = ttk.Frame(frame)
         profile_frame.pack(fill=tk.X, padx=8, pady=(0, 8))
         ttk.Label(profile_frame, text="Profil Kripto:").pack(side=tk.LEFT)
         self.inspect_profile_var = tk.StringVar(value="server")
         ttk.Combobox(profile_frame, textvariable=self.inspect_profile_var,
-                     values=["server", "client_face", "client_fgr"], width=15, state="readonly").pack(side=tk.LEFT, padx=4)
+                     values=["server", "client_face", "client_fgr", "schoolpay", "cbe"], width=15, state="readonly").pack(side=tk.LEFT, padx=4)
+        ttk.Label(profile_frame, text="Produk:").pack(side=tk.LEFT, padx=(12, 0))
+        self.inspect_product_var = tk.StringVar(value="face")
+        ttk.Combobox(profile_frame, textvariable=self.inspect_product_var,
+                     values=["face", "schoolpay", "cbe"], width=12, state="readonly").pack(side=tk.LEFT, padx=4)
 
         # Action buttons
         action_frame = ttk.Frame(frame)
@@ -110,12 +119,9 @@ class LicenseToolGUI:
         self.verify_clientid_var = tk.StringVar()
         ttk.Entry(id_grid, textvariable=self.verify_clientid_var, width=40).grid(row=1, column=1, columnspan=3, sticky=tk.W, padx=4, pady=2)
 
-        ttk.Label(id_grid, text="Jumlah Wajah Aktif (opsional):").grid(row=2, column=0, sticky=tk.W, padx=4, pady=2)
+        ttk.Label(id_grid, text="Jumlah Aktif (opsional):").grid(row=2, column=0, sticky=tk.W, padx=4, pady=2)
         self.verify_facecount_var = tk.StringVar()
         ttk.Entry(id_grid, textvariable=self.verify_facecount_var, width=10).grid(row=2, column=1, padx=4, pady=2, sticky=tk.W)
-
-        self.verify_auto_var = tk.BooleanVar(value=False)
-        ttk.Checkbutton(id_grid, text="Deteksi otomatis ID dari sistem", variable=self.verify_auto_var).grid(row=3, column=0, columnspan=4, sticky=tk.W, padx=4, pady=4)
 
         # Results area (compact like Codex version)
         result_frame = ttk.LabelFrame(self.tab_inspect, text="Hasil")
@@ -153,33 +159,33 @@ class LicenseToolGUI:
         self.gen_sysid_var = tk.StringVar()
         ttk.Entry(grid, textvariable=self.gen_sysid_var, width=20).grid(row=1, column=1, padx=4, pady=4, sticky=tk.W)
 
-        # Row 2: Client ID (optional)
-        ttk.Label(grid, text="Client ID (opsional):").grid(row=2, column=0, sticky=tk.W, padx=4, pady=4)
+        # Row 2: Product
+        ttk.Label(grid, text="Produk:").grid(row=2, column=0, sticky=tk.W, padx=4, pady=4)
+        self.gen_product_var = tk.StringVar(value="face")
+        ttk.Combobox(grid, textvariable=self.gen_product_var,
+                     values=["face", "schoolpay", "cbe"], width=15, state="readonly").grid(row=2, column=1, padx=4, pady=4, sticky=tk.W)
+
+        # Row 3: Client ID (optional)
+        ttk.Label(grid, text="Client ID (opsional):").grid(row=3, column=0, sticky=tk.W, padx=4, pady=4)
         self.gen_clientid_var = tk.StringVar()
-        ttk.Entry(grid, textvariable=self.gen_clientid_var, width=40).grid(row=2, column=1, padx=4, pady=4, sticky=tk.W)
-        ttk.Label(grid, text="(kosongkan untuk lisensi baru, isi untuk perpanjangan)").grid(row=2, column=2, sticky=tk.W, padx=4)
+        ttk.Entry(grid, textvariable=self.gen_clientid_var, width=40).grid(row=3, column=1, padx=4, pady=4, sticky=tk.W)
+        ttk.Label(grid, text="(kosongkan untuk lisensi baru, isi untuk perpanjangan)").grid(row=3, column=2, sticky=tk.W, padx=4)
 
-        # Row 3: Client Name
-        ttk.Label(grid, text="Nama Klien:").grid(row=3, column=0, sticky=tk.W, padx=4, pady=4)
+        # Row 4: Client Name
+        ttk.Label(grid, text="Nama Klien:").grid(row=4, column=0, sticky=tk.W, padx=4, pady=4)
         self.gen_clientname_var = tk.StringVar()
-        ttk.Entry(grid, textvariable=self.gen_clientname_var, width=40).grid(row=3, column=1, padx=4, pady=4, sticky=tk.W)
+        ttk.Entry(grid, textvariable=self.gen_clientname_var, width=40).grid(row=4, column=1, padx=4, pady=4, sticky=tk.W)
 
-        # Row 4: Expiry Date
-        ttk.Label(grid, text="Tanggal Kedaluwarsa:").grid(row=4, column=0, sticky=tk.W, padx=4, pady=4)
+        # Row 5: Expiry Date
+        ttk.Label(grid, text="Tanggal Kedaluwarsa:").grid(row=5, column=0, sticky=tk.W, padx=4, pady=4)
         self.gen_expires_var = tk.StringVar(value="2027-12-31")
-        ttk.Entry(grid, textvariable=self.gen_expires_var, width=15).grid(row=4, column=1, padx=4, pady=4, sticky=tk.W)
-        ttk.Label(grid, text="(YYYY-MM-DD)").grid(row=4, column=2, sticky=tk.W, padx=4)
+        ttk.Entry(grid, textvariable=self.gen_expires_var, width=15).grid(row=5, column=1, padx=4, pady=4, sticky=tk.W)
+        ttk.Label(grid, text="(YYYY-MM-DD)").grid(row=5, column=2, sticky=tk.W, padx=4)
 
-        # Row 5: Capacity
-        ttk.Label(grid, text="Kapasitas (Max Wajah):").grid(row=5, column=0, sticky=tk.W, padx=4, pady=4)
+        # Row 6: Capacity
+        ttk.Label(grid, text="Kapasitas:").grid(row=6, column=0, sticky=tk.W, padx=4, pady=4)
         self.gen_capacity_var = tk.StringVar(value="100")
-        ttk.Entry(grid, textvariable=self.gen_capacity_var, width=15).grid(row=5, column=1, padx=4, pady=4, sticky=tk.W)
-
-        # Row 6: Sequence (for renewal)
-        ttk.Label(grid, text="Sequence (opsional):").grid(row=6, column=0, sticky=tk.W, padx=4, pady=4)
-        self.gen_sequence_var = tk.StringVar()
-        ttk.Entry(grid, textvariable=self.gen_sequence_var, width=15).grid(row=6, column=1, padx=4, pady=4, sticky=tk.W)
-        ttk.Label(grid, text="(hanya untuk perpanjangan tanpa berkas sebelumnya)").grid(row=6, column=2, sticky=tk.W, padx=4)
+        ttk.Entry(grid, textvariable=self.gen_capacity_var, width=15).grid(row=6, column=1, padx=4, pady=4, sticky=tk.W)
 
         # Row 7: Previous license (for renewal)
         ttk.Label(grid, text="Lisensi Sebelumnya:").grid(row=7, column=0, sticky=tk.W, padx=4, pady=4)
@@ -263,59 +269,6 @@ class LicenseToolGUI:
 
         ttk.Button(result_frame, text="Salin JSON", command=self._copy_client_result).grid(row=2, column=0, columnspan=2, sticky=tk.E, padx=8, pady=4)
 
-    def _build_detect_tab(self):
-        frame = ttk.LabelFrame(self.tab_detect, text="Deteksi Database ID & System ID")
-        frame.pack(fill=tk.X, padx=8, pady=8)
-
-        ttk.Label(frame, text="Mengambil Database ID dari database jbssat (prosedur splang) "
-                              "dan System ID dari WMI (serial disk + UUID).").pack(anchor=tk.W, padx=8, pady=8)
-
-        grid = ttk.Frame(frame)
-        grid.pack(fill=tk.X, padx=8, pady=8)
-
-        ttk.Label(grid, text="MySQL Host:").grid(row=0, column=0, sticky=tk.W, padx=4, pady=4)
-        self.detect_host_var = tk.StringVar(value="127.0.0.1")
-        ttk.Entry(grid, textvariable=self.detect_host_var, width=20).grid(row=0, column=1, padx=4, pady=4)
-
-        ttk.Label(grid, text="Port:").grid(row=0, column=2, sticky=tk.W, padx=4, pady=4)
-        self.detect_port_var = tk.StringVar(value="3434")
-        ttk.Entry(grid, textvariable=self.detect_port_var, width=10).grid(row=0, column=3, padx=4, pady=4)
-
-        ttk.Label(grid, text="User:").grid(row=1, column=0, sticky=tk.W, padx=4, pady=4)
-        self.detect_user_var = tk.StringVar(value="root")
-        ttk.Entry(grid, textvariable=self.detect_user_var, width=20).grid(row=1, column=1, padx=4, pady=4)
-
-        ttk.Label(grid, text="Password:").grid(row=1, column=2, sticky=tk.W, padx=4, pady=4)
-        self.detect_pass_var = tk.StringVar(value="kebersamaan")
-        ttk.Entry(grid, textvariable=self.detect_pass_var, width=20, show="*").grid(row=1, column=3, padx=4, pady=4)
-
-        ttk.Label(grid, text="Database:").grid(row=2, column=0, sticky=tk.W, padx=4, pady=4)
-        self.detect_db_var = tk.StringVar(value="jbssat")
-        ttk.Entry(grid, textvariable=self.detect_db_var, width=20).grid(row=2, column=1, padx=4, pady=4)
-
-        self.detect_no_system_var = tk.BooleanVar(value=False)
-        ttk.Checkbutton(grid, text="Lewati deteksi System ID (WMI)", variable=self.detect_no_system_var).grid(row=3, column=0, columnspan=4, sticky=tk.W, padx=4, pady=4)
-
-        ttk.Button(grid, text="Deteksi ID", command=self._detect_ids).grid(row=4, column=1, sticky=tk.W, padx=4, pady=8)
-
-        # Results (compact like Codex version)
-        result_frame = ttk.LabelFrame(self.tab_detect, text="Hasil")
-        result_frame.pack(fill=tk.BOTH, expand=True, padx=8, pady=8)
-        result_frame.columnconfigure(0, weight=1)
-        result_frame.rowconfigure(1, weight=1)
-
-        self.detect_result_text = tk.Text(
-            result_frame, wrap="word", height=10, state="disabled",
-            background="white", foreground="#22324b", relief="solid",
-            borderwidth=1, font=("Consolas", 9), padx=10, pady=8,
-        )
-        self.detect_result_text.grid(row=1, column=0, sticky="nsew", pady=(3, 0), padx=4)
-        scrollbar = ttk.Scrollbar(result_frame, orient="vertical", command=self.detect_result_text.yview)
-        scrollbar.grid(row=1, column=1, sticky="ns", pady=(3, 0))
-        self.detect_result_text.configure(yscrollcommand=scrollbar.set)
-
-        ttk.Button(result_frame, text="Salin JSON", command=self._copy_detect_result).grid(row=2, column=0, columnspan=2, sticky=tk.E, padx=8, pady=4)
-
     def _pick_inspect_file(self):
         path = filedialog.askopenfilename(
             title="Pilih berkas lisensi",
@@ -372,6 +325,23 @@ class LicenseToolGUI:
         if path:
             self.sp_output_var.set(path)
 
+    def _pick_cbe_prev_license(self):
+        path = filedialog.askopenfilename(
+            title="Pilih lisensi sebelumnya",
+            filetypes=[("License files", "*.lic *.enc"), ("All files", "*.*")]
+        )
+        if path:
+            self.cbe_prev_license_var.set(path)
+
+    def _pick_cbe_output(self):
+        path = filedialog.asksaveasfilename(
+            title="Simpan lisensi CBE sebagai",
+            defaultextension=".lic",
+            filetypes=[("License files", "*.lic"), ("All files", "*.*")]
+        )
+        if path:
+            self.cbe_output_var.set(path)
+
     def _run_worker(self, func, *args):
         """Run a function in background thread."""
         if self.worker_thread and self.worker_thread.is_alive():
@@ -405,7 +375,8 @@ class LicenseToolGUI:
             messagebox.showwarning("Peringatan", "Pilih berkas lisensi terlebih dahulu.")
             return
         profile = self.inspect_profile_var.get()
-        self._run_worker(core.inspect_license, path, profile)
+        product = self.inspect_product_var.get()
+        self._run_worker(core.inspect_license, path, profile, product)
 
     def _verify_file(self):
         path = self.inspect_file_var.get().strip()
@@ -418,19 +389,14 @@ class LicenseToolGUI:
         face_count = self.verify_facecount_var.get().strip()
         face_count = int(face_count) if face_count else None
         profile = self.inspect_profile_var.get()
-        auto = self.verify_auto_var.get()
+        product = self.inspect_product_var.get()
 
-        if not auto and (not dbid or not sysid):
-            messagebox.showwarning("Peringatan", "Isi Database ID dan System ID, atau aktifkan deteksi otomatis.")
+        if not dbid or not sysid:
+            messagebox.showwarning("Peringatan", "Isi Database ID dan System ID.")
             return
 
         def verify_task():
-            if auto:
-                if not dbid:
-                    dbid = core.DbIdDetector().detect()[0]
-                if not sysid:
-                    sysid = core.SystemIdDetector().detect()[0]
-            return core.verify_license(path, dbid, sysid, client_id, face_count=face_count, profile=profile)
+            return core.verify_license(path, dbid, sysid, client_id, face_count=face_count, profile=profile, product=product)
 
         self._run_worker(verify_task)
 
@@ -443,10 +409,9 @@ class LicenseToolGUI:
             expires = self.gen_expires_var.get().strip()
             capacity = int(self.gen_capacity_var.get().strip())
             output = self.gen_output_var.get().strip()
-            sequence = self.gen_sequence_var.get().strip()
-            sequence = int(sequence) if sequence else None
             prev_license = self.gen_prev_license_var.get().strip() or None
             overwrite = self.gen_overwrite_var.get()
+            product = self.gen_product_var.get()
 
             if not dbid or not sysid:
                 messagebox.showwarning("Peringatan", "Database ID dan System ID wajib diisi.")
@@ -462,8 +427,8 @@ class LicenseToolGUI:
                     output_path=output,
                     client_name=client_name,
                     previous_license_path=prev_license,
-                    sequence=sequence,
                     overwrite=overwrite,
+                    product=product,
                 )
 
             self._run_worker(gen_task)
@@ -479,9 +444,8 @@ class LicenseToolGUI:
             capacity = int(self.gen_capacity_var.get().strip())
             output = self.gen_output_var.get().strip()
             prev_license = self.gen_prev_license_var.get().strip()
-            sequence = self.gen_sequence_var.get().strip()
-            sequence = int(sequence) if sequence else None
             overwrite = self.gen_overwrite_var.get()
+            product = self.gen_product_var.get()
 
             if not dbid or not sysid:
                 messagebox.showwarning("Peringatan", "Database ID dan System ID wajib diisi.")
@@ -499,8 +463,8 @@ class LicenseToolGUI:
                     output_path=output,
                     previous_license_path=prev_license,
                     client_name=client_name,
-                    sequence=sequence,
                     overwrite=overwrite,
+                    product=product,
                 )
 
             self._run_worker(renew_task)
@@ -516,8 +480,6 @@ class LicenseToolGUI:
             expires = self.sp_expires_var.get().strip()
             capacity = int(self.sp_capacity_var.get().strip())
             output = self.sp_output_var.get().strip()
-            sequence = self.sp_sequence_var.get().strip()
-            sequence = int(sequence) if sequence else None
             prev_license = self.sp_prev_license_var.get().strip() or None
             overwrite = self.sp_overwrite_var.get()
 
@@ -535,7 +497,6 @@ class LicenseToolGUI:
                     output_path=output,
                     client_name=client_name,
                     previous_license_path=prev_license,
-                    sequence=sequence,
                     overwrite=overwrite,
                     product="schoolpay",
                 )
@@ -553,8 +514,6 @@ class LicenseToolGUI:
             capacity = int(self.sp_capacity_var.get().strip())
             output = self.sp_output_var.get().strip()
             prev_license = self.sp_prev_license_var.get().strip()
-            sequence = self.sp_sequence_var.get().strip()
-            sequence = int(sequence) if sequence else None
             overwrite = self.sp_overwrite_var.get()
 
             if not dbid or not sysid:
@@ -573,9 +532,77 @@ class LicenseToolGUI:
                     output_path=output,
                     previous_license_path=prev_license,
                     client_name=client_name,
-                    sequence=sequence,
                     overwrite=overwrite,
                     product="schoolpay",
+                )
+
+            self._run_worker(renew_task)
+        except ValueError as exc:
+            messagebox.showerror("Kesalahan Input", str(exc))
+
+    def _generate_cbe(self):
+        try:
+            dbid = self.cbe_dbid_var.get().strip()
+            sysid = self.cbe_sysid_var.get().strip()
+            client_id = self.cbe_clientid_var.get().strip() or None
+            client_name = self.cbe_clientname_var.get().strip()
+            expires = self.cbe_expires_var.get().strip()
+            capacity = int(self.cbe_capacity_var.get().strip())
+            output = self.cbe_output_var.get().strip()
+            prev_license = self.cbe_prev_license_var.get().strip() or None
+            overwrite = self.cbe_overwrite_var.get()
+
+            if not dbid or not sysid:
+                messagebox.showwarning("Peringatan", "Database ID dan System ID wajib diisi.")
+                return
+
+            def gen_task():
+                return core.generate_license(
+                    database_id=dbid,
+                    system_id=sysid,
+                    client_id=client_id,
+                    expires=expires,
+                    capacity=capacity,
+                    output_path=output,
+                    client_name=client_name,
+                    previous_license_path=prev_license,
+                    overwrite=overwrite,
+                    product="cbe",
+                )
+
+            self._run_worker(gen_task)
+        except ValueError as exc:
+            messagebox.showerror("Kesalahan Input", str(exc))
+
+    def _renew_cbe(self):
+        try:
+            dbid = self.cbe_dbid_var.get().strip()
+            sysid = self.cbe_sysid_var.get().strip()
+            client_name = self.cbe_clientname_var.get().strip()
+            expires = self.cbe_expires_var.get().strip()
+            capacity = int(self.cbe_capacity_var.get().strip())
+            output = self.cbe_output_var.get().strip()
+            prev_license = self.cbe_prev_license_var.get().strip()
+            overwrite = self.cbe_overwrite_var.get()
+
+            if not dbid or not sysid:
+                messagebox.showwarning("Peringatan", "Database ID dan System ID wajib diisi.")
+                return
+            if not prev_license:
+                messagebox.showwarning("Peringatan", "Lisensi sebelumnya wajib dipilih untuk perpanjangan.")
+                return
+
+            def renew_task():
+                return core.renew_license(
+                    database_id=dbid,
+                    system_id=sysid,
+                    expires=expires,
+                    capacity=capacity,
+                    output_path=output,
+                    previous_license_path=prev_license,
+                    client_name=client_name,
+                    overwrite=overwrite,
+                    product="cbe",
                 )
 
             self._run_worker(renew_task)
@@ -601,27 +628,6 @@ class LicenseToolGUI:
 
         self._run_worker(fix_task)
 
-    def _detect_ids(self):
-        host = self.detect_host_var.get().strip()
-        port = int(self.detect_port_var.get().strip())
-        user = self.detect_user_var.get().strip()
-        password = self.detect_pass_var.get().strip()
-        database = self.detect_db_var.get().strip()
-        no_system = self.detect_no_system_var.get()
-
-        def detect_task():
-            detector = core.DbIdDetector(host=host, port=port, user=user, password=password, database=database)
-            dbid, db_info = detector.detect()
-            result = {"database_id": dbid, "database_id_detail": db_info}
-            if not no_system:
-                sys_detector = core.SystemIdDetector()
-                sysid, sys_info = sys_detector.detect()
-                result["system_id"] = sysid
-                result["system_id_detail"] = sys_info
-            return result
-
-        self._run_worker(detect_task)
-
     def _handle_result(self, result: Dict[str, Any]):
         """Route result to appropriate tab."""
         current_tab = self.notebook.index(self.notebook.select())
@@ -641,16 +647,16 @@ class LicenseToolGUI:
             self.sp_result_text.delete(1.0, tk.END)
             self.sp_result_text.insert(tk.END, json.dumps(result, ensure_ascii=False, indent=2, default=str))
             self.sp_result_text.config(state="disabled")
-        elif current_tab == 3:  # Client Cache
+        elif current_tab == 3:  # CBE Server
+            self.cbe_result_text.config(state="normal")
+            self.cbe_result_text.delete(1.0, tk.END)
+            self.cbe_result_text.insert(tk.END, json.dumps(result, ensure_ascii=False, indent=2, default=str))
+            self.cbe_result_text.config(state="disabled")
+        elif current_tab == 4:  # Client Cache
             self.client_result_text.config(state="normal")
             self.client_result_text.delete(1.0, tk.END)
             self.client_result_text.insert(tk.END, json.dumps(result, ensure_ascii=False, indent=2, default=str))
             self.client_result_text.config(state="disabled")
-        elif current_tab == 4:  # Detect
-            self.detect_result_text.config(state="normal")
-            self.detect_result_text.delete(1.0, tk.END)
-            self.detect_result_text.insert(tk.END, json.dumps(result, ensure_ascii=False, indent=2, default=str))
-            self.detect_result_text.config(state="disabled")
 
     def _copy_inspect_result(self):
         text = self.inspect_result_text.get(1.0, tk.END).strip()
@@ -670,15 +676,6 @@ class LicenseToolGUI:
         self.client_result_text.config(state="normal")
         text = self.client_result_text.get(1.0, tk.END).strip()
         self.client_result_text.config(state="disabled")
-        if text:
-            self.root.clipboard_clear()
-            self.root.clipboard_append(text)
-            self.status_var.set("JSON disalin ke clipboard")
-
-    def _copy_detect_result(self):
-        self.detect_result_text.config(state="normal")
-        text = self.detect_result_text.get(1.0, tk.END).strip()
-        self.detect_result_text.config(state="disabled")
         if text:
             self.root.clipboard_clear()
             self.root.clipboard_append(text)
@@ -746,12 +743,6 @@ class LicenseToolGUI:
         self.sp_capacity_var = tk.StringVar(value="100")
         ttk.Entry(grid, textvariable=self.sp_capacity_var, width=15).grid(row=5, column=1, padx=4, pady=4, sticky=tk.W)
 
-        # Sequence (for renewal)
-        ttk.Label(grid, text="Sequence (opsional):").grid(row=6, column=0, sticky=tk.W, padx=4, pady=4)
-        self.sp_sequence_var = tk.StringVar()
-        ttk.Entry(grid, textvariable=self.sp_sequence_var, width=15).grid(row=6, column=1, padx=4, pady=4, sticky=tk.W)
-        ttk.Label(grid, text="(hanya untuk perpanjangan tanpa berkas sebelumnya)").grid(row=6, column=2, sticky=tk.W, padx=4)
-
         # Previous license (for renewal)
         ttk.Label(grid, text="Lisensi Sebelumnya:").grid(row=7, column=0, sticky=tk.W, padx=4, pady=4)
         self.sp_prev_license_var = tk.StringVar()
@@ -788,6 +779,105 @@ class LicenseToolGUI:
         self.sp_result_text.configure(yscrollcommand=scrollbar.set)
 
         ttk.Button(result_frame, text="Salin JSON", command=self._copy_sp_result).pack(anchor=tk.E, padx=8, pady=4)
+
+    def _build_cbe_tab(self):
+        """Build the CBE Server license management tab."""
+        frame = ttk.LabelFrame(self.tab_cbe, text="JIBAS CBE Server 26.5 License Management")
+        frame.pack(fill=tk.BOTH, expand=True, padx=8, pady=8)
+
+        # Product info
+        info_text = ("JIBAS CBE Server 26.5 License Generator\n"
+                     "Table: JibasCbeLicense | Crypto: AES-128-CBC (same as Face Server)\n"
+                     "Columns: Versi, KlienId, Klien, Tanggal, Model, Seri, Size, Sequence,\n"
+                     "         KodeRs, KodeTx, DbId, LicenseLimit, LicenseLimitDate,\n"
+                     "         MaxClient, Keterangan, Info1, Info2, Info3\n"
+                     "Key Differences from Face: Same structure, Model=CBE, Versi=26.5")
+        ttk.Label(frame, text=info_text, justify=tk.LEFT, font=("Consolas", 9)).pack(anchor=tk.W, padx=8, pady=8)
+
+        # Parameters frame
+        param_frame = ttk.LabelFrame(frame, text="Parameter Lisensi CBE Server")
+        param_frame.pack(fill=tk.X, padx=8, pady=8)
+
+        grid = ttk.Frame(param_frame)
+        grid.pack(fill=tk.X, padx=8, pady=8)
+
+        # Database ID
+        ttk.Label(grid, text="Database ID:").grid(row=0, column=0, sticky=tk.W, padx=4, pady=4)
+        self.cbe_dbid_var = tk.StringVar()
+        ttk.Entry(grid, textvariable=self.cbe_dbid_var, width=20).grid(row=0, column=1, padx=4, pady=4, sticky=tk.W)
+
+        # System ID
+        ttk.Label(grid, text="System ID:").grid(row=1, column=0, sticky=tk.W, padx=4, pady=4)
+        self.cbe_sysid_var = tk.StringVar()
+        ttk.Entry(grid, textvariable=self.cbe_sysid_var, width=20).grid(row=1, column=1, padx=4, pady=4, sticky=tk.W)
+
+        # Client ID (optional)
+        ttk.Label(grid, text="Client ID (opsional):").grid(row=2, column=0, sticky=tk.W, padx=4, pady=4)
+        self.cbe_clientid_var = tk.StringVar()
+        ttk.Entry(grid, textvariable=self.cbe_clientid_var, width=40).grid(row=2, column=1, padx=4, pady=4, sticky=tk.W)
+        ttk.Label(grid, text="(kosongkan untuk lisensi baru, isi untuk perpanjangan)").grid(row=2, column=2, sticky=tk.W, padx=4)
+
+        # Client Name
+        ttk.Label(grid, text="Nama Klien:").grid(row=3, column=0, sticky=tk.W, padx=4, pady=4)
+        self.cbe_clientname_var = tk.StringVar()
+        ttk.Entry(grid, textvariable=self.cbe_clientname_var, width=40).grid(row=3, column=1, padx=4, pady=4, sticky=tk.W)
+
+        # Expiry Date
+        ttk.Label(grid, text="Tanggal Kedaluwarsa:").grid(row=4, column=0, sticky=tk.W, padx=4, pady=4)
+        self.cbe_expires_var = tk.StringVar(value="2027-12-31")
+        ttk.Entry(grid, textvariable=self.cbe_expires_var, width=15).grid(row=4, column=1, padx=4, pady=4, sticky=tk.W)
+        ttk.Label(grid, text="(YYYY-MM-DD)").grid(row=4, column=2, sticky=tk.W, padx=4)
+
+        # Capacity (MaxClient)
+        ttk.Label(grid, text="Max Client (Kapasitas):").grid(row=5, column=0, sticky=tk.W, padx=4, pady=4)
+        self.cbe_capacity_var = tk.StringVar(value="100")
+        ttk.Entry(grid, textvariable=self.cbe_capacity_var, width=15).grid(row=5, column=1, padx=4, pady=4, sticky=tk.W)
+
+        # Previous license (for renewal)
+        ttk.Label(grid, text="Lisensi Sebelumnya:").grid(row=6, column=0, sticky=tk.W, padx=4, pady=4)
+        self.cbe_prev_license_var = tk.StringVar()
+        ttk.Entry(grid, textvariable=self.cbe_prev_license_var, width=50).grid(row=6, column=1, padx=4, pady=4, sticky=tk.W)
+        ttk.Button(grid, text="Pilih...", command=self._pick_cbe_prev_license).grid(row=6, column=2, padx=4, pady=4)
+
+        # Output
+        ttk.Label(grid, text="File Output:").grid(row=7, column=0, sticky=tk.W, padx=4, pady=4)
+        self.cbe_output_var = tk.StringVar(value="cbe.lic")
+        ttk.Entry(grid, textvariable=self.cbe_output_var, width=50).grid(row=7, column=1, padx=4, pady=4, sticky=tk.W)
+        ttk.Button(grid, text="Pilih...", command=self._pick_cbe_output).grid(row=7, column=2, padx=4, pady=4)
+
+        self.cbe_overwrite_var = tk.BooleanVar(value=False)
+        ttk.Checkbutton(grid, text="Timpa jika sudah ada", variable=self.cbe_overwrite_var).grid(row=8, column=1, sticky=tk.W, padx=4, pady=4)
+
+        # Action buttons
+        action_frame = ttk.Frame(param_frame)
+        action_frame.pack(fill=tk.X, padx=8, pady=8)
+        ttk.Button(action_frame, text="Buat Lisensi CBE Baru", command=self._generate_cbe).pack(side=tk.LEFT, padx=4)
+        ttk.Button(action_frame, text="Perpanjang Lisensi CBE", command=self._renew_cbe).pack(side=tk.LEFT, padx=4)
+
+        # Results
+        result_frame = ttk.LabelFrame(self.tab_cbe, text="Hasil")
+        result_frame.pack(fill=tk.BOTH, expand=True, padx=8, pady=8)
+
+        self.cbe_result_text = tk.Text(
+            result_frame, wrap="word", height=10, state="disabled",
+            background="white", foreground="#22324b", relief="solid",
+            borderwidth=1, font=("Consolas", 9), padx=10, pady=8,
+        )
+        self.cbe_result_text.pack(fill=tk.BOTH, expand=True, padx=4, pady=4)
+        scrollbar = ttk.Scrollbar(result_frame, orient="vertical", command=self.cbe_result_text.yview)
+        scrollbar.pack(side=tk.RIGHT, fill=tk.Y)
+        self.cbe_result_text.configure(yscrollcommand=scrollbar.set)
+
+        ttk.Button(result_frame, text="Salin JSON", command=self._copy_cbe_result).pack(anchor=tk.E, padx=8, pady=4)
+
+    def _copy_cbe_result(self):
+        self.cbe_result_text.config(state="normal")
+        text = self.cbe_result_text.get(1.0, tk.END).strip()
+        self.cbe_result_text.config(state="disabled")
+        if text:
+            self.root.clipboard_clear()
+            self.root.clipboard_append(text)
+            self.status_var.set("JSON disalin ke clipboard")
 
 
 def main():
