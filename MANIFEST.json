@@ -13,7 +13,7 @@
     "Importer asli 0x060006CC: DbId wajib sama saat cache runtime kosong; perpanjangan Sequence naik + KlienId sama; Info1 TIDAK diperiksa saat impor",
     "Predikat runtime asli 0x06000913/0x0600090D: Info1/masa berlaku/kapasitas/TRIAL/DB-ID; Info1 lama DDCB4 ditolak, 7738F aktif",
     "Akar pesan TRIAL client 16.10: validator FACE 0x06000AF7 FALSE saat licenseface.enc rows==0; mode global 0x040004C7..D1 default 'TRIAL' cctor; handler simpan 0x0600051E menolak",
-    "Fix client 16.10: tulislicenseface.enc satu baris salinan lisensi efektif Face Server; pasangan FACE klien '3477K3b3rS4mA4N'/'YaRAhM4nY4R4h1M#' dari pre-init dinamis 0x06000AF2 (holder 0x04000375/76) identik profil server; validator dibuktikan TRUE + mode terisi KlienId",
+    "Fix client 16.10: tulis licenseface.enc satu baris salinan lisensi efektif Face Server; pasangan FACE klien '3477K3b3rS4mA4N'/'YaRAhM4nY4R4h1M#' dari pre-init dinamis 0x06000AF2 (holder 0x04000375/76) identik profil server; validator dibuktikan TRUE + mode terisi KlienId",
     "FGR client 16.10: pasangan '3477K3b3rS4ma4N'/'YaRahM@nY4R4h1M#' (pre-init 0x060008BC, holder 0x04000366/67); validator 0x060008C0 sah pada baris nol - cache tidak disentuh",
     "Predikat registrasi client 0x0600052D: read-only SELECT NOW() + count information_schema jbsakad/jbssdm/jbssms, dibuktikan TRUE (dbprobe)"
   ],
