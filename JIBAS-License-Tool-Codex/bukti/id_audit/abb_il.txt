@@ -1,0 +1,34 @@
+METHOD 0x0x06000ABB #=zj8I7hF72m8xUqY_f9JANT3KMKZtA$gK8AmodNKI=::System.String #=z3kd91KU=(Int32)
+0000: ldsfld       #=zj8I7hF72m8xUqY_f9JANT3KMKZtA$gK8AmodNKI=::System.Random #=zVcZxYbaivWLwUtvsSA== 0x040005F1
+0005: brtrue.s     17 
+0007: newobj       System.Random::Void .ctor() 0x0A000483
+000C: stsfld       #=zj8I7hF72m8xUqY_f9JANT3KMKZtA$gK8AmodNKI=::System.Random #=zVcZxYbaivWLwUtvsSA== 0x040005F1
+0011: ldsfld       System.String::System.String Empty 0x0A00009D
+0016: stloc.0       
+0017: ldc.i4.0      
+0018: stloc.1       
+0019: br.s         74 
+001B: ldsfld       #=zj8I7hF72m8xUqY_f9JANT3KMKZtA$gK8AmodNKI=::System.Random #=zVcZxYbaivWLwUtvsSA== 0x040005F1
+0020: ldc.i4.0      
+0021: ldsfld       #=zj8I7hF72m8xUqY_f9JANT3KMKZtA$gK8AmodNKI=::Int32 #=zTDXY4l0= 0x040005F0
+0026: ldc.i4.1      
+0027: sub           
+0028: callvirt     System.Random::Int32 Next(Int32, Int32) 0x0A000442
+002D: stloc.2       
+002E: ldloc.0       
+002F: ldc.i4       -1509740398 
+0034: call         #=qr$qXOzdN0p8L_X5faVkFhkg78wshc8Hnh2d9KqJ$Eck=::System.String #=zoKh7rvc=(Int32) 0x060004B5
+0039: ldloc.2       
+003A: ldc.i4.1      
+003B: call         System.String::System.String Substring(Int32, Int32) 0x0A00011D
+0040: call         System.String::System.String Concat(System.String, System.String) 0x0A0002DA
+0045: stloc.0       
+0046: ldloc.1       
+0047: ldc.i4.1      
+0048: add           
+0049: stloc.1       
+004A: ldloc.1       
+004B: ldarg.0       
+004C: blt.s        27 
+004E: ldloc.0       
+004F: ret           

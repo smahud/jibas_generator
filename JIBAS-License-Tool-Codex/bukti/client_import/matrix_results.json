@@ -1,0 +1,223 @@
+[
+  {
+    "target_sha256": "6f5369df4d854c467d24fb067d8b79c573b35699c7b1ce7f19a310669f1ba546",
+    "mvid": "0ec4d2e7-40e6-4d47-2b18-cbedb1259d09",
+    "authority": "controlled-replay: runtime identity holder supplied; original importer and validator unmodified",
+    "sandbox": "C:\\YIM\\JIBAS Generator\\JIBAS-License-Tool-Codex\\bukti\\client_import\\verify_headerless_rejected_j5hy1260",
+    "attempts": [
+      {
+        "input": "C:\\YIM\\JIBAS Generator\\JIBAS-License-Tool-Codex\\bukti\\client_import\\inputs\\missing_header.lic",
+        "current_database_id": "V4YNE",
+        "before_sequence": 0,
+        "before_client_id": "TRIAL",
+        "accepted": false,
+        "exception": "System.Exception: File terpilih bukan lisensi JIBAS Presensi Wajah",
+        "cache_exists": false,
+        "after_sequence": 0,
+        "after_client_id": "TRIAL",
+        "after_database_id": "",
+        "after_info1": "",
+        "cache_validator_returned": false
+      }
+    ],
+    "label": "headerless_rejected"
+  },
+  {
+    "target_sha256": "6f5369df4d854c467d24fb067d8b79c573b35699c7b1ce7f19a310669f1ba546",
+    "mvid": "0ec4d2e7-40e6-4d47-2b18-cbedb1259d09",
+    "authority": "controlled-replay: runtime identity holder supplied; original importer and validator unmodified",
+    "sandbox": "C:\\YIM\\JIBAS Generator\\JIBAS-License-Tool-Codex\\bukti\\client_import\\verify_wrong_header_rejected_xdwne3vy",
+    "attempts": [
+      {
+        "input": "C:\\YIM\\JIBAS Generator\\JIBAS-License-Tool-Codex\\bukti\\client_import\\inputs\\wrong_header.lic",
+        "current_database_id": "V4YNE",
+        "before_sequence": 0,
+        "before_client_id": "TRIAL",
+        "accepted": false,
+        "exception": "System.Exception: File terpilih bukan lisensi JIBAS Presensi Wajah",
+        "cache_exists": false,
+        "after_sequence": 0,
+        "after_client_id": "TRIAL",
+        "after_database_id": "",
+        "after_info1": "",
+        "cache_validator_returned": false
+      }
+    ],
+    "label": "wrong_header_rejected"
+  },
+  {
+    "target_sha256": "6f5369df4d854c467d24fb067d8b79c573b35699c7b1ce7f19a310669f1ba546",
+    "mvid": "0ec4d2e7-40e6-4d47-2b18-cbedb1259d09",
+    "authority": "controlled-replay: runtime identity holder supplied; original importer and validator unmodified",
+    "sandbox": "C:\\YIM\\JIBAS Generator\\JIBAS-License-Tool-Codex\\bukti\\client_import\\verify_lowercase_header_hl2q84ji",
+    "attempts": [
+      {
+        "input": "C:\\YIM\\JIBAS Generator\\JIBAS-License-Tool-Codex\\bukti\\client_import\\inputs\\lowercase_header.lic",
+        "current_database_id": "V4YNE",
+        "before_sequence": 0,
+        "before_client_id": "TRIAL",
+        "accepted": false,
+        "exception": "System.Exception: File terpilih bukan lisensi JIBAS Presensi Wajah",
+        "cache_exists": false,
+        "after_sequence": 0,
+        "after_client_id": "TRIAL",
+        "after_database_id": "",
+        "after_info1": "",
+        "cache_validator_returned": false
+      }
+    ],
+    "label": "lowercase_header"
+  },
+  {
+    "target_sha256": "6f5369df4d854c467d24fb067d8b79c573b35699c7b1ce7f19a310669f1ba546",
+    "mvid": "0ec4d2e7-40e6-4d47-2b18-cbedb1259d09",
+    "authority": "controlled-replay: runtime identity holder supplied; original importer and validator unmodified",
+    "sandbox": "C:\\YIM\\JIBAS Generator\\JIBAS-License-Tool-Codex\\bukti\\client_import\\verify_fresh_renewal_vah_s4i_",
+    "attempts": [
+      {
+        "input": "C:\\YIM\\JIBAS Generator\\JIBAS-License-Tool-Codex\\bukti\\client_import\\inputs\\v4yne_new.lic",
+        "current_database_id": "V4YNE",
+        "before_sequence": 0,
+        "before_client_id": "TRIAL",
+        "accepted": true,
+        "cache_exists": true,
+        "after_sequence": 1,
+        "after_client_id": "116CE74C5A5941C8ABAB3B353EEF4BB9",
+        "after_database_id": "V4YNE",
+        "after_info1": "DDCB4",
+        "cache_validator_returned": true
+      },
+      {
+        "input": "C:\\YIM\\JIBAS Generator\\JIBAS-License-Tool-Codex\\bukti\\client_import\\inputs\\v4yne_new.lic",
+        "current_database_id": "V4YNE",
+        "before_sequence": 1,
+        "before_client_id": "116CE74C5A5941C8ABAB3B353EEF4BB9",
+        "accepted": false,
+        "exception": "System.Exception: Sequence lisensi sama dengan lisensi yang terdaftar!",
+        "cache_exists": true,
+        "after_sequence": 1,
+        "after_client_id": "116CE74C5A5941C8ABAB3B353EEF4BB9",
+        "after_database_id": "V4YNE",
+        "after_info1": "DDCB4",
+        "cache_validator_returned": true
+      },
+      {
+        "input": "C:\\YIM\\JIBAS Generator\\JIBAS-License-Tool-Codex\\bukti\\client_import\\inputs\\v4yne_renew.lic",
+        "current_database_id": "V4YNE",
+        "before_sequence": 1,
+        "before_client_id": "116CE74C5A5941C8ABAB3B353EEF4BB9",
+        "accepted": true,
+        "cache_exists": true,
+        "after_sequence": 2,
+        "after_client_id": "116CE74C5A5941C8ABAB3B353EEF4BB9",
+        "after_database_id": "V4YNE",
+        "after_info1": "DDCB4",
+        "cache_validator_returned": true
+      },
+      {
+        "input": "C:\\YIM\\JIBAS Generator\\JIBAS-License-Tool-Codex\\bukti\\client_import\\inputs\\v4yne_changed_client.lic",
+        "current_database_id": "V4YNE",
+        "before_sequence": 2,
+        "before_client_id": "116CE74C5A5941C8ABAB3B353EEF4BB9",
+        "accepted": false,
+        "exception": "System.Exception: Client Id tidak sama dengan lisensi sebelumnya!",
+        "cache_exists": true,
+        "after_sequence": 2,
+        "after_client_id": "116CE74C5A5941C8ABAB3B353EEF4BB9",
+        "after_database_id": "V4YNE",
+        "after_info1": "DDCB4",
+        "cache_validator_returned": true
+      }
+    ],
+    "label": "fresh_renewal"
+  },
+  {
+    "target_sha256": "6f5369df4d854c467d24fb067d8b79c573b35699c7b1ce7f19a310669f1ba546",
+    "mvid": "0ec4d2e7-40e6-4d47-2b18-cbedb1259d09",
+    "authority": "controlled-replay: runtime identity holder supplied; original importer and validator unmodified",
+    "sandbox": "C:\\YIM\\JIBAS Generator\\JIBAS-License-Tool-Codex\\bukti\\client_import\\verify_mismatched_db_tu_47hun",
+    "attempts": [
+      {
+        "input": "C:\\YIM\\JIBAS Generator\\JIBAS-License-Tool-Codex\\bukti\\client_import\\inputs\\v4yne_new.lic",
+        "current_database_id": "VWXYZ",
+        "before_sequence": 0,
+        "before_client_id": "TRIAL",
+        "accepted": false,
+        "exception": "System.Exception: Database Id tidak sama dengan lisensi (V4YNE)",
+        "cache_exists": false,
+        "after_sequence": 0,
+        "after_client_id": "TRIAL",
+        "after_database_id": "",
+        "after_info1": "",
+        "cache_validator_returned": false
+      }
+    ],
+    "label": "mismatched_db"
+  },
+  {
+    "target_sha256": "6f5369df4d854c467d24fb067d8b79c573b35699c7b1ce7f19a310669f1ba546",
+    "mvid": "0ec4d2e7-40e6-4d47-2b18-cbedb1259d09",
+    "authority": "controlled-replay: runtime identity holder supplied; original importer and validator unmodified",
+    "sandbox": "C:\\YIM\\JIBAS Generator\\JIBAS-License-Tool-Codex\\bukti\\client_import\\verify_different_id_abcde_k06m2fzh",
+    "attempts": [
+      {
+        "input": "C:\\YIM\\JIBAS Generator\\JIBAS-License-Tool-Codex\\bukti\\client_import\\inputs\\abcde_new.lic",
+        "current_database_id": "ABCDE",
+        "before_sequence": 0,
+        "before_client_id": "TRIAL",
+        "accepted": true,
+        "cache_exists": true,
+        "after_sequence": 1,
+        "after_client_id": "DA87E89758684F788957A9D5B2E29F57",
+        "after_database_id": "ABCDE",
+        "after_info1": "ABCDE",
+        "cache_validator_returned": true
+      }
+    ],
+    "label": "different_id_abcde"
+  },
+  {
+    "target_sha256": "6f5369df4d854c467d24fb067d8b79c573b35699c7b1ce7f19a310669f1ba546",
+    "mvid": "0ec4d2e7-40e6-4d47-2b18-cbedb1259d09",
+    "authority": "controlled-replay: runtime identity holder supplied; original importer and validator unmodified",
+    "sandbox": "C:\\YIM\\JIBAS Generator\\JIBAS-License-Tool-Codex\\bukti\\client_import\\verify_different_id_digits_81arys4f",
+    "attempts": [
+      {
+        "input": "C:\\YIM\\JIBAS Generator\\JIBAS-License-Tool-Codex\\bukti\\client_import\\inputs\\12345_new.lic",
+        "current_database_id": "12345",
+        "before_sequence": 0,
+        "before_client_id": "TRIAL",
+        "accepted": true,
+        "cache_exists": true,
+        "after_sequence": 1,
+        "after_client_id": "C6E2116AE7094A1C95270908B832948F",
+        "after_database_id": "12345",
+        "after_info1": "12345",
+        "cache_validator_returned": true
+      }
+    ],
+    "label": "different_id_digits"
+  },
+  {
+    "target_sha256": "6f5369df4d854c467d24fb067d8b79c573b35699c7b1ce7f19a310669f1ba546",
+    "mvid": "0ec4d2e7-40e6-4d47-2b18-cbedb1259d09",
+    "authority": "controlled-replay: runtime identity holder supplied; original importer and validator unmodified",
+    "sandbox": "C:\\YIM\\JIBAS Generator\\JIBAS-License-Tool-Codex\\bukti\\client_import\\verify_different_system_id_accepted_by_importer",
+    "attempts": [
+      {
+        "input": "C:\\YIM\\JIBAS Generator\\JIBAS-License-Tool-Codex\\bukti\\client_import\\inputs\\v4yne_different_system.lic",
+        "current_database_id": "V4YNE",
+        "before_sequence": 0,
+        "before_client_id": "TRIAL",
+        "accepted": true,
+        "cache_exists": true,
+        "after_sequence": 1,
+        "after_client_id": "F5CDF0837ECE4035B9AE0530C0394CA3",
+        "after_database_id": "V4YNE",
+        "after_info1": "00000",
+        "cache_validator_returned": true
+      }
+    ],
+    "label": "different_system_id_accepted_by_importer"
+  }
+]

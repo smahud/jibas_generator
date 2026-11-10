@@ -1,0 +1,39 @@
+METHOD 0x0x06000ABD #=zj8I7hF72m8xUqY_f9JANT3KMKZtA$gK8AmodNKI=::Void #=zp6Cf01FGcXvC(MySql.Data.MySqlClient.MySqlConnection)
+0000: newobj       MySql.Data.MySqlClient.MySqlCommand::Void .ctor() 0x0A0002E5
+0005: dup           
+0006: ldarg.0       
+0007: callvirt     MySql.Data.MySqlClient.MySqlCommand::Void set_Connection(MySql.Data.MySqlClient.MySqlConnection) 0x0A0002E6
+000C: dup           
+000D: ldc.i4       -1509739774 
+0012: call         #=qr$qXOzdN0p8L_X5faVkFhkg78wshc8Hnh2d9KqJ$Eck=::System.String #=zoKh7rvc=(Int32) 0x060004B5
+0017: callvirt     System.Data.Common.DbCommand::Void set_CommandText(System.String) 0x0A0002CE
+001C: stloc.0       
+001D: ldloc.0       
+001E: callvirt     System.Data.Common.DbCommand::Int32 ExecuteNonQuery() 0x0A00024C
+0023: pop           
+0024: ldsfld       #=zj8I7hF72m8xUqY_f9JANT3KMKZtA$gK8AmodNKI=::System.String[] #=zhwwFQzsfDflG 0x040005F2
+0029: stloc.1       
+002A: ldc.i4.0      
+002B: stloc.2       
+002C: br.s         73 
+002E: ldloc.1       
+002F: ldloc.2       
+0030: ldelem.ref    
+0031: stloc.3       
+0032: ldloc.0       
+0033: ldloc.3       
+0034: call         #=zj8I7hF72m8xUqY_f9JANT3KMKZtA$gK8AmodNKI=::System.String #=zuXAf0lxMyGL7(System.String) 0x06000AC5
+0039: callvirt     System.Data.Common.DbCommand::Void set_CommandText(System.String) 0x0A0002CE
+003E: ldloc.0       
+003F: callvirt     System.Data.Common.DbCommand::Int32 ExecuteNonQuery() 0x0A00024C
+0044: pop           
+0045: ldloc.2       
+0046: ldc.i4.1      
+0047: add           
+0048: stloc.2       
+0049: ldloc.2       
+004A: ldloc.1       
+004B: ldlen         
+004C: conv.i4       
+004D: blt.s        46 
+004F: ret           

@@ -1,0 +1,13 @@
+# Bagian eksperimen/hubungan backend tidak dibagikan
+__pycache__/
+*.pyc
+.pytest_cache/
+.venv/
+*.exe
+*.dll
+*.zip
+bukti/id_audit/mysql_sandbox/
+bukti/id_audit/sandbox/
+bukti/client_import/sandbox*/
+bukti/client_import/verify_*/
+PUBLISH_RESULT.json

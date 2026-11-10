@@ -1,0 +1,53 @@
+METHOD 0x0x06000ABF #=zj8I7hF72m8xUqY_f9JANT3KMKZtA$gK8AmodNKI=::Void #=ztc1_UanAi$GN(MySql.Data.MySqlClient.MySqlConnection)
+0000: newobj       MySql.Data.MySqlClient.MySqlCommand::Void .ctor() 0x0A0002E5
+0005: dup           
+0006: ldarg.0       
+0007: callvirt     MySql.Data.MySqlClient.MySqlCommand::Void set_Connection(MySql.Data.MySqlClient.MySqlConnection) 0x0A0002E6
+000C: stloc.0       
+000D: ldc.i4.0      
+000E: stloc.1       
+000F: ldsfld       #=zj8I7hF72m8xUqY_f9JANT3KMKZtA$gK8AmodNKI=::System.String[] #=zhwwFQzsfDflG 0x040005F2
+0014: stloc.2       
+0015: ldc.i4.0      
+0016: stloc.3       
+0017: br.s         71 
+0019: ldloc.2       
+001A: ldloc.3       
+001B: ldelem.ref    
+001C: stloc.s      4 
+001E: ldloc.0       
+001F: ldc.i4       -1509739626 
+0024: call         #=qr$qXOzdN0p8L_X5faVkFhkg78wshc8Hnh2d9KqJ$Eck=::System.String #=zoKh7rvc=(Int32) 0x060004B5
+0029: ldloc.s      4 
+002B: call         System.String::System.String Format(System.String, System.Object) 0x0A000129
+0030: callvirt     System.Data.Common.DbCommand::Void set_CommandText(System.String) 0x0A0002CE
+0035: ldloc.1       
+0036: ldloc.0       
+0037: callvirt     System.Data.Common.DbCommand::System.Object ExecuteScalar() 0x0A0002D6
+003C: call         System.Convert::Int32 ToInt32(System.Object) 0x0A0000C1
+0041: add           
+0042: stloc.1       
+0043: ldloc.3       
+0044: ldc.i4.1      
+0045: add           
+0046: stloc.3       
+0047: ldloc.3       
+0048: ldloc.2       
+0049: ldlen         
+004A: conv.i4       
+004B: blt.s        25 
+004D: ldloc.1       
+004E: brtrue.s     93 
+0050: ldarg.0       
+0051: call         #=zj8I7hF72m8xUqY_f9JANT3KMKZtA$gK8AmodNKI=::Void #=zp6Cf01FGcXvC(MySql.Data.MySqlClient.MySqlConnection) 0x06000ABD
+0056: ldarg.0       
+0057: call         #=zj8I7hF72m8xUqY_f9JANT3KMKZtA$gK8AmodNKI=::Void #=zUlI85nrffyL4(MySql.Data.MySqlClient.MySqlConnection) 0x06000ABC
+005C: ret           
+005D: ldloc.1       
+005E: ldc.i4.s     12 
+0060: beq.s        114 
+0062: ldc.i4       -1509739459 
+0067: call         #=qr$qXOzdN0p8L_X5faVkFhkg78wshc8Hnh2d9KqJ$Eck=::System.String #=zoKh7rvc=(Int32) 0x060004B5
+006C: newobj       System.Exception::Void .ctor(System.String) 0x0A0000D0
+0071: throw         
+0072: ret           

@@ -1,0 +1,22 @@
+{
+  "target_sha256": "6f5369df4d854c467d24fb067d8b79c573b35699c7b1ce7f19a310669f1ba546",
+  "mvid": "0ec4d2e7-40e6-4d47-2b18-cbedb1259d09",
+  "authority": "controlled-replay: runtime identity holder supplied; original importer and validator unmodified",
+  "sandbox": "C:\\YIM\\JIBAS Generator\\JIBAS-License-Tool-Codex\\bukti\\client_import\\verify_different_system_id_accepted_by_importer",
+  "attempts": [
+    {
+      "input": "C:\\YIM\\JIBAS Generator\\JIBAS-License-Tool-Codex\\bukti\\client_import\\inputs\\v4yne_different_system.lic",
+      "current_database_id": "V4YNE",
+      "before_sequence": 0,
+      "before_client_id": "TRIAL",
+      "accepted": true,
+      "cache_exists": true,
+      "after_sequence": 1,
+      "after_client_id": "F5CDF0837ECE4035B9AE0530C0394CA3",
+      "after_database_id": "V4YNE",
+      "after_info1": "00000",
+      "cache_validator_returned": true
+    }
+  ],
+  "label": "different_system_id_accepted_by_importer"
+}

@@ -1,0 +1,57 @@
+{
+  "title": "Audit variabel lisensi JIBAS Face Server 16.5 — setiap variabel yang dibaca kode asli vs implementasi tool OpenCode",
+  "artifact_sha256": "8a123015b2ee095ceda51ece6d47436e9760c88be8f92fb76ed7c120c923c364",
+  "crypto_profile": {
+    "password_ascii": "3477K3b3rS4mA4N",
+    "iv_ascii": "YaRAhM4nY4R4h1M#",
+    "aes_key_md5": "b89c5690fef45f51a9996e88fa0f3410",
+    "cipher": "AES-128-CBC/PKCS7, ASCII XML NewDataSet/JibasSptFaceLicense, file + CRLF",
+    "proof": "Dekripsi sukses atas cache terpasang asli dan fixture importer asli (tests/test_provenance_compat.py)"
+  },
+  "fields_18_columns": {
+    "Versi": {"original_use": "disalin importer", "runtime": "tidak diverifikasi", "generator": "\"16.5\"", "proof": "cache asli Versi=16.5"},
+    "KlienId": {"original_use": "disalin importer; runtime 0x040004EE; predikat 913 menandai TRIAL", "runner": "0x040004EE", "generator": "random uuid4 hex32 uppercase; sama dengan lisensi sebelumnya (perpanjangan)", "proof": "import probes; runtime TRIAL ditolak"},
+    "Klien": {"original_use": "disalin importer", "runtime": "0x040004EF target tampilan", "generator": "nama klien; fallback lawas: Database ID", "proof": "cache asli Klien=LOCALHOST"},
+    "Tanggal": {"original_use": "disalin importer (String tanggal YYYY-MM-DD)", "generator": "today Asia/Jakarta %Y-%m-%d", "proof": "format identik dgn cache asli 2026-10-28"},
+    "Model": {"original_use": "TIDAK disalin importer (17 kolom saja)", "generator": "tetap ditulis 'SPTFACE' (tak berbahaya)", "proof": "fixture original-imported.enc tanpa kolom 'Model'"},
+    "Seri": {"original_use": "disalin importer; runtime 0x040004F1", "generator": "= System ID (sama sd Info1)", "proof": "cache asli Seri=DDCB4=Info1"},
+    "Size": {"original_use": "disalin importer", "generator": "kapasitas (string)", "proof": "cache asli Size=100000"},
+    "Sequence": {"original_use": "disalin importer; runtime 0x040004F7; pembanding naik pada perpanjangan", "generator": "Int32; previous+1 atau eksplisit lebih besar", "proof": "renew_seq_equal ditolak asli dengan pesan 'Sequence lisensi sama dengan lisensi yang terdaftar!'; renew_rising diterima (1->5)"},
+    "KodeRs": {"original_use": "disalin importer; TIDAK diverifikasi", "generator": "kosong", "proof": "cache asli kosong"},
+    "KodeTx": {"original_use": "disalin importer; TIDAK diverifikasi", "generator": "kosong", "proof": "cache asli kosong"},
+    "DbId": {"original_use": "disalin importer; runtime 0x040004F0; wajib sama dengan ID asli saat cache runtime kosong", "generator": "Database ID terdeteksi/manual", "proof": "fresh_match diterima; fresh_dbidmiss ditolak 'Database Id tidak sama dengan lisensi (WRK9T)'"},
+    "LicenseLimit": {"original_use": "disalin importer; runtime 0x040004F2", "generator": "YYYY-MM-DD", "proof": "cache asli 3000-10-28"},
+    "LicenseLimitDate": {"original_use": "DateTime; runtime 0x040004F3; konversi menit 66B -> 0x040004F4; predikat kedaluwarsa", "generator": "datetime ISO +07:00 23:59", "proof": "runtime probe expired ditolak; 8 sampel date_reference cocok dengan _legacy_minute"},
+    "MaxClient": {"original_use": "Int32; runtime 0x040004F5; pembanding jumlah wajah", "generator": "1..2147483647", "proof": "runtime at_capacity diterima; over_capacity ditolak"},
+    "Keterangan": {"original_use": "disalin importer; TIDAK diverifikasi", "generator": "kosong", "proof": "cache asli kosong"},
+    "Info1": {"original_use": "disalin importer; runtime 0x040004F8; predikat membandingkan dengan SystemID asli (0x0600059B)", "generator": "= System ID (Bukan DDCB4)", "proof": "predikat: 7738F aktif, DDCB4 ditolak; importer TIDAK memeriksa Info1 saat impor"},
+    "Info2": {"original_use": "disalin importer; TIDAK diverifikasi", "generator": "kosong", "proof": "cache asli kosong"},
+    "Info3": {"original_use": "disalin importer; TIDAK diverifikasi", "generator": "kosong", "proof": "cache asli kosong"}
+  },
+  "derived_runtime_variables": {
+    "DatabaseID asli": {
+      "formula": "UPPER(hex_decode(@uhh)[14] + hex_decode(@uhf)[5] + hex_decode(@uhc)[25] + hex_decode(@uhe)[37] + hex_decode(@uhb)[47]) dari jbssat.splang04/02/09/11/01",
+      "guards": "12 prosedur splang wajib (information_schema.ROUTINES), USE jbssat",
+      "implementation": "id_detect.DbIdDetector + dbid_recipe.RECIPE",
+      "proof": "bukti/detector_provenance.json (V4YNE -> WRK9T -> V4YNE cocok runtime asli 3x)"
+    },
+    "SystemID asli": {
+      "formula": "MD5(Win32_PhysicalMedia.SerialNumber(disk C:, spasi akhir dipangkas) + Win32_ComputerSystemProduct.UUID) hex lowercase [5,17,30,24,3] UPPER",
+      "implementation": "id_detect.SystemIdDetector",
+      "proof": "runtime asli 7738F == detector 7738F"
+    },
+    "Menit legacy": {
+      "formula": "0x0600066B: hari sejak epoch aritmetika asli (bulan berjalan ikut, kabisat year%4)",
+      "implementation": "license_codec._legacy_minute",
+      "proof": "8 sampel bukti/date_reference.json + tests"
+    }
+  },
+  "importer_rules_original_0x060006CC": {
+    "dbid_equality": "saat runtime cache kosong: file DbId harus sama dgn ID asli (pesan: 'Database Id tidak sama dengan lisensi (X)')",
+    "sequence_rising": "saat cache ada: Sequence harus LEBIH BESAR; pesan asli 'Sequence lisensi sama dengan lisensi yang terdaftar!' terverifikasi",
+    "klienid_renewal": "Nuansa baru terbukti E2E: importer MENERIMA lisensi ber-KlienId berbeda pada perpanjangan; nilai KlienId AKTIF di runtime/cache tetap KlienId cache lama (merge). Generator tool ini lebih ketat: menuntut KlienId sama via --previous-license",
+    "info1": "TIDAK diperiksa saat impor (bukti fresh_info1_ddcb4 diterima); baru diverifikasi predikat runtime"
+  },
+  "generator_output_mapping": "Semua 18 kolom ditulis dengan format identik dengan cache asli; 17 kolom dibaca importer (Model tidak — diverifikasi via fixture)",
+  "audit_status": "PASS — tidak ada variabel original yang hilang dari implementasi"
+}

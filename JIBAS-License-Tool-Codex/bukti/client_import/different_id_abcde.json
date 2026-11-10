@@ -1,0 +1,22 @@
+{
+  "target_sha256": "6f5369df4d854c467d24fb067d8b79c573b35699c7b1ce7f19a310669f1ba546",
+  "mvid": "0ec4d2e7-40e6-4d47-2b18-cbedb1259d09",
+  "authority": "controlled-replay: runtime identity holder supplied; original importer and validator unmodified",
+  "sandbox": "C:\\YIM\\JIBAS Generator\\JIBAS-License-Tool-Codex\\bukti\\client_import\\verify_different_id_abcde_k06m2fzh",
+  "attempts": [
+    {
+      "input": "C:\\YIM\\JIBAS Generator\\JIBAS-License-Tool-Codex\\bukti\\client_import\\inputs\\abcde_new.lic",
+      "current_database_id": "ABCDE",
+      "before_sequence": 0,
+      "before_client_id": "TRIAL",
+      "accepted": true,
+      "cache_exists": true,
+      "after_sequence": 1,
+      "after_client_id": "DA87E89758684F788957A9D5B2E29F57",
+      "after_database_id": "ABCDE",
+      "after_info1": "ABCDE",
+      "cache_validator_returned": true
+    }
+  ],
+  "label": "different_id_abcde"
+}

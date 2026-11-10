@@ -1,0 +1,376 @@
+{
+  "live_port": 3434,
+  "isolated_port": 3435,
+  "live_routines_before": [
+    {
+      "name": "splang01",
+      "sha256": "b24ad91b42de3edf2bfaf5f9812becacbab1df6b05fe940c8fc3feae2718d6a7"
+    },
+    {
+      "name": "splang02",
+      "sha256": "81de4b1d160dadbafaf3e873e16b91b8efa761769694a23136af60dc29efeb55"
+    },
+    {
+      "name": "splang03",
+      "sha256": "5fadec7c624a2896f2d11df20900518a5f63ce56b0388d4ae74331ddb4bba90c"
+    },
+    {
+      "name": "splang04",
+      "sha256": "59b437605494a9dd1066f6ab7f1e91c965ff58d152db022d161feac7d9dd2ab5"
+    },
+    {
+      "name": "splang05",
+      "sha256": "89c5d591ff5ff03dfa8f75d5ebe355efce463d8ea5b384ddea6dbec114deab34"
+    },
+    {
+      "name": "splang06",
+      "sha256": "4224be3633aebd62107934e4960f032dea43ed710e620804189cd1659353d660"
+    },
+    {
+      "name": "splang07",
+      "sha256": "49cd4dc94b67efb778d431e8252c942dd0d3c355783a838624305d89da20f352"
+    },
+    {
+      "name": "splang08",
+      "sha256": "9263c5817b13197d4d497997c5c2627c3505a0850eb64f15c95c9238f42d9da5"
+    },
+    {
+      "name": "splang09",
+      "sha256": "0018ae5d17e981bfb454d2fe7f19ef0fd5f6e99864ae9a607ff57facbe3b5ea2"
+    },
+    {
+      "name": "splang10",
+      "sha256": "416a0ecad988c1db176c67945630396e673925c4ffd8130f905f7b64c0be22e5"
+    },
+    {
+      "name": "splang11",
+      "sha256": "af2d00c8a17fb2da372958df5e2ac8b1c15b53bdbd11fdfd83087a6f19460353"
+    },
+    {
+      "name": "splang12",
+      "sha256": "669089d2cbbfb6188b7d145c0bf4a0cfeb0d2816db990b2d596878ae3562072c"
+    }
+  ],
+  "cases": [
+    {
+      "fixture_id": "V4YNE",
+      "original": {
+        "mvid": "9e7e3122-c165-4ca3-3e9c-234edb96bf24",
+        "port": 3435,
+        "original_AC3": "V4YNE"
+      },
+      "python": "V4YNE",
+      "match": true,
+      "recipe_pieces": [
+        {
+          "procedure": "splang04",
+          "variable": "@uhh",
+          "position": 14,
+          "character": "V"
+        },
+        {
+          "procedure": "splang02",
+          "variable": "@uhf",
+          "position": 5,
+          "character": "4"
+        },
+        {
+          "procedure": "splang09",
+          "variable": "@uhc",
+          "position": 25,
+          "character": "Y"
+        },
+        {
+          "procedure": "splang11",
+          "variable": "@uhe",
+          "position": 37,
+          "character": "N"
+        },
+        {
+          "procedure": "splang01",
+          "variable": "@uhb",
+          "position": 47,
+          "character": "E"
+        }
+      ]
+    },
+    {
+      "fixture_id": "ABCDE",
+      "original": {
+        "mvid": "9e7e3122-c165-4ca3-3e9c-234edb96bf24",
+        "port": 3435,
+        "original_AC3": "ABCDE"
+      },
+      "python": "ABCDE",
+      "match": true,
+      "recipe_pieces": [
+        {
+          "procedure": "splang04",
+          "variable": "@uhh",
+          "position": 14,
+          "character": "A"
+        },
+        {
+          "procedure": "splang02",
+          "variable": "@uhf",
+          "position": 5,
+          "character": "B"
+        },
+        {
+          "procedure": "splang09",
+          "variable": "@uhc",
+          "position": 25,
+          "character": "C"
+        },
+        {
+          "procedure": "splang11",
+          "variable": "@uhe",
+          "position": 37,
+          "character": "D"
+        },
+        {
+          "procedure": "splang01",
+          "variable": "@uhb",
+          "position": 47,
+          "character": "E"
+        }
+      ]
+    },
+    {
+      "fixture_id": "WRK9T",
+      "original": {
+        "mvid": "9e7e3122-c165-4ca3-3e9c-234edb96bf24",
+        "port": 3435,
+        "original_AC3": "WRK9T"
+      },
+      "python": "WRK9T",
+      "match": true,
+      "recipe_pieces": [
+        {
+          "procedure": "splang04",
+          "variable": "@uhh",
+          "position": 14,
+          "character": "W"
+        },
+        {
+          "procedure": "splang02",
+          "variable": "@uhf",
+          "position": 5,
+          "character": "R"
+        },
+        {
+          "procedure": "splang09",
+          "variable": "@uhc",
+          "position": 25,
+          "character": "K"
+        },
+        {
+          "procedure": "splang11",
+          "variable": "@uhe",
+          "position": 37,
+          "character": "9"
+        },
+        {
+          "procedure": "splang01",
+          "variable": "@uhb",
+          "position": 47,
+          "character": "T"
+        }
+      ]
+    },
+    {
+      "fixture_id": "Z9X8W",
+      "original": {
+        "mvid": "9e7e3122-c165-4ca3-3e9c-234edb96bf24",
+        "port": 3435,
+        "original_AC3": "Z9X8W"
+      },
+      "python": "Z9X8W",
+      "match": true,
+      "recipe_pieces": [
+        {
+          "procedure": "splang04",
+          "variable": "@uhh",
+          "position": 14,
+          "character": "Z"
+        },
+        {
+          "procedure": "splang02",
+          "variable": "@uhf",
+          "position": 5,
+          "character": "9"
+        },
+        {
+          "procedure": "splang09",
+          "variable": "@uhc",
+          "position": 25,
+          "character": "X"
+        },
+        {
+          "procedure": "splang11",
+          "variable": "@uhe",
+          "position": 37,
+          "character": "8"
+        },
+        {
+          "procedure": "splang01",
+          "variable": "@uhb",
+          "position": 47,
+          "character": "W"
+        }
+      ]
+    },
+    {
+      "fixture_id": "a1b2c",
+      "original": {
+        "mvid": "9e7e3122-c165-4ca3-3e9c-234edb96bf24",
+        "port": 3435,
+        "original_AC3": "A1B2C"
+      },
+      "python": "A1B2C",
+      "match": true,
+      "recipe_pieces": [
+        {
+          "procedure": "splang04",
+          "variable": "@uhh",
+          "position": 14,
+          "character": "a"
+        },
+        {
+          "procedure": "splang02",
+          "variable": "@uhf",
+          "position": 5,
+          "character": "1"
+        },
+        {
+          "procedure": "splang09",
+          "variable": "@uhc",
+          "position": 25,
+          "character": "b"
+        },
+        {
+          "procedure": "splang11",
+          "variable": "@uhe",
+          "position": 37,
+          "character": "2"
+        },
+        {
+          "procedure": "splang01",
+          "variable": "@uhb",
+          "position": 47,
+          "character": "c"
+        }
+      ]
+    }
+  ],
+  "bootstrap_original": {
+    "mvid": "9e7e3122-c165-4ca3-3e9c-234edb96bf24",
+    "port": 3435,
+    "original_AC3": "LTB28"
+  },
+  "bootstrap_routine_count": 12,
+  "bootstrap_detector": "LTB28",
+  "missing_one_original": {
+    "exit_code": 1,
+    "error": "System.Exception: Licensing system has been altered!\n   at #=zj8I7hF72m8xUqY_f9JANT3KMKZtA$gK8AmodNKI=.#=ztc1_UanAi$GN(MySqlConnection #=zZg0cF2c=)\n   at #=zj8I7hF72m8xUqY_f9JANT3KMKZtA$gK8AmodNKI=.#=zBFLnNnOjqpzq(MySqlConnection #=zZg0cF2c=)"
+  },
+  "live_routines_after": [
+    {
+      "name": "splang01",
+      "sha256": "b24ad91b42de3edf2bfaf5f9812becacbab1df6b05fe940c8fc3feae2718d6a7"
+    },
+    {
+      "name": "splang02",
+      "sha256": "81de4b1d160dadbafaf3e873e16b91b8efa761769694a23136af60dc29efeb55"
+    },
+    {
+      "name": "splang03",
+      "sha256": "5fadec7c624a2896f2d11df20900518a5f63ce56b0388d4ae74331ddb4bba90c"
+    },
+    {
+      "name": "splang04",
+      "sha256": "59b437605494a9dd1066f6ab7f1e91c965ff58d152db022d161feac7d9dd2ab5"
+    },
+    {
+      "name": "splang05",
+      "sha256": "89c5d591ff5ff03dfa8f75d5ebe355efce463d8ea5b384ddea6dbec114deab34"
+    },
+    {
+      "name": "splang06",
+      "sha256": "4224be3633aebd62107934e4960f032dea43ed710e620804189cd1659353d660"
+    },
+    {
+      "name": "splang07",
+      "sha256": "49cd4dc94b67efb778d431e8252c942dd0d3c355783a838624305d89da20f352"
+    },
+    {
+      "name": "splang08",
+      "sha256": "9263c5817b13197d4d497997c5c2627c3505a0850eb64f15c95c9238f42d9da5"
+    },
+    {
+      "name": "splang09",
+      "sha256": "0018ae5d17e981bfb454d2fe7f19ef0fd5f6e99864ae9a607ff57facbe3b5ea2"
+    },
+    {
+      "name": "splang10",
+      "sha256": "416a0ecad988c1db176c67945630396e673925c4ffd8130f905f7b64c0be22e5"
+    },
+    {
+      "name": "splang11",
+      "sha256": "af2d00c8a17fb2da372958df5e2ac8b1c15b53bdbd11fdfd83087a6f19460353"
+    },
+    {
+      "name": "splang12",
+      "sha256": "669089d2cbbfb6188b7d145c0bf4a0cfeb0d2816db990b2d596878ae3562072c"
+    }
+  ],
+  "live_routines_unchanged": true,
+  "system_hash_vectors": [
+    {
+      "input": "",
+      "digest": "d41d8cd98f00b204e9800998ecf8427e",
+      "system_id": "C97ED",
+      "python_digest": "d41d8cd98f00b204e9800998ecf8427e",
+      "match": true
+    },
+    {
+      "input": "A",
+      "digest": "7fc56270e7a70fa81a5935b72eacbe29",
+      "system_id": "2A225",
+      "python_digest": "7fc56270e7a70fa81a5935b72eacbe29",
+      "match": true
+    },
+    {
+      "input": "A ",
+      "digest": "6743b9fcc57cf1b169fb4ef6c7a955d2",
+      "system_id": "99DC3",
+      "python_digest": "6743b9fcc57cf1b169fb4ef6c7a955d2",
+      "match": true
+    },
+    {
+      "input": " ABC ",
+      "digest": "c5128f579b83322a464b5b5065364dd8",
+      "system_id": "F6D62",
+      "python_digest": "c5128f579b83322a464b5b5065364dd8",
+      "match": true
+    },
+    {
+      "input": "A\u00e9\ud83d\ude00B",
+      "digest": "b3ba4dbe69c1e98e90c9b5b35060c542",
+      "system_id": "D045A",
+      "python_digest": "b3ba4dbe69c1e98e90c9b5b35060c542",
+      "match": true
+    },
+    {
+      "input": "30029941042         E0813C3C-120B-02FE-5F00-BCAEC5319E78",
+      "digest": "1a043d719f80ad440d781229bf0950cf",
+      "system_id": "DDCB4",
+      "python_digest": "1a043d719f80ad440d781229bf0950cf",
+      "match": true
+    }
+  ],
+  "live_detector": {
+    "database_id": "V4YNE",
+    "system_id": "DDCB4"
+  }
+}

@@ -1,0 +1,34 @@
+﻿METHOD 0x0x06000AF9 #=zsXaVurIhyCuNFMgbgTnM11k7$Al1XutNOzmXfyIeVL7w::Boolean #=zaxUtCas=(System.String)
+0000: ldc.i4.1      
+0001: newarr       ::System.Object 0x010000E5
+0006: stloc.0       
+0007: ldloc.0       
+0008: ldc.i4.0      
+0009: ldarg.0       
+000A: stelem.ref    
+000B: call         #=ztTEsFAtISz68OkLLyQQOb81lt2XyN5b5KcbsCBL4rOt$vHynLw==::#=q9JcqGmuHWuwLs2CfLO7vh9Fr9RjB9WkfGu8ILMgKiX8= #=z4p4n__0js4AmoZ3V1bU$_AGtZgz5e97y0WzMZOySmABEG3JXxQ==() 0x06000B02
+0010: call         #=ztTEsFAtISz68OkLLyQQOb81lt2XyN5b5KcbsCBL4rOt$vHynLw==::System.IO.Stream #=zHA00oXhf8BiEXoPegqiDcAkC$8CuBPyZ1u9eG3sJqdtnZO8cKA==() 0x06000B04
+0015: ldstr        "i8ME1jQ5P%" 0x700000B1
+001A: ldloc.0       
+001B: call         #=q9JcqGmuHWuwLs2CfLO7vh9Fr9RjB9WkfGu8ILMgKiX8=::System.Object #=zOJOw3Ex6MbADOSuBWJrnoztcSJ4R(System.IO.Stream, System.String, System.Object[]) 0x060001C7
+0020: unbox        ::System.Boolean 0x01000040
+0025: ldobj        ::System.Boolean 0x01000040
+002A: ret           
+METHOD 0x0x06000AF8 #=zsXaVurIhyCuNFMgbgTnM11k7$Al1XutNOzmXfyIeVL7w::Int32 #=za9BcKZTEN5wR(Int32)
+0000: ldc.i4.0      
+0001: ret           
+METHOD 0x0x06000AF5 #=zsXaVurIhyCuNFMgbgTnM11k7$Al1XutNOzmXfyIeVL7w::Void #=zWjjwfYWPw8bB()
+0000: call         #=zsXaVurIhyCuNFMgbgTnM11k7$Al1XutNOzmXfyIeVL7w::System.Data.DataTable #=zWUt$TJM=() 0x06000AEE
+0005: callvirt     System.Data.DataTable::System.Data.DataTable Clone() 0x0A0004F4
+000A: dup           
+000B: callvirt     System.Data.DataTable::System.Data.DataRowCollection get_Rows() 0x0A0002BE
+0010: callvirt     System.Data.DataRowCollection::Void Clear() 0x0A00032C
+0015: call         #=zsXaVurIhyCuNFMgbgTnM11k7$Al1XutNOzmXfyIeVL7w::Void #=zKljXB5RJ3fGT(System.Data.DataTable) 0x06000AF6
+001A: ret           
+METHOD 0x0x06000AF4 #=zsXaVurIhyCuNFMgbgTnM11k7$Al1XutNOzmXfyIeVL7w::Void #=zFKsug1iWQzMz()
+0000: call         #=zsXaVurIhyCuNFMgbgTnM11k7$Al1XutNOzmXfyIeVL7w::System.Data.DataTable #=zWUt$TJM=() 0x06000AEE
+0005: callvirt     System.Data.DataTable::System.Data.DataRowCollection get_Rows() 0x0A0002BE
+000A: callvirt     System.Data.DataRowCollection::Void Clear() 0x0A00032C
+000F: call         #=zTGsquuuLzslgrCfzorgLMfzyNvLKp3MaWT9QQcc=+#=zJ0PjApHYFWRL::Void #=zqXHboTo=() 0x0600083E
+0014: call         #=zsXaVurIhyCuNFMgbgTnM11k7$Al1XutNOzmXfyIeVL7w::Void #=zWjjwfYWPw8bB() 0x06000AF5
+0019: ret           

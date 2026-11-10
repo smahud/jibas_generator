@@ -1,0 +1,4102 @@
+{
+  "root": "C:\\Program Files\\YIM",
+  "files": [
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\AForge.dll",
+      "size": 17920,
+      "sha256": "966a474060a8aca70c73ba09d0b6fe2353035961c7107b9003ef879c010ff8da"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\AForge.Video.DirectShow.dll",
+      "size": 61440,
+      "sha256": "666d44798d94eafa1ed21af79e9bc0293ffd96f863ab5d87f78bcee9ef9ffd6b"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\AForge.Video.dll",
+      "size": 20992,
+      "sha256": "bafa6ed04ca2782270074127a0498dde022c2a9f4096c6bb2b8e3c08bb3d404d"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\BouncyCastle.Cryptography.dll",
+      "size": 4694688,
+      "sha256": "d9a58c84baa55a12684cd2381bca03c8f2a9cbae21a6bf1e9ebd65f495629721"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\comerr64.dll",
+      "size": 26240,
+      "sha256": "9a792cd1b9faae56ccd57783685ba6481c5b76d42a5e16e2ec24c37f6b86d57e"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\concrt140.dll",
+      "size": 324208,
+      "sha256": "2405355f0a58067b258f8df33c327e3a3d716eaac5a3a5aebb757842d85bd376"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\config.ini",
+      "size": 580,
+      "sha256": "41242f2d70c35807ad283472dbc98c98d9b5ae7604749e822d6fb037753c3498"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\CpuMathNative.dll",
+      "size": 43312,
+      "sha256": "95cc6c3ce20008641e8b4f82f1720439c78b1a0f7ed09f0f68ddddc8c056efcc"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\cvextern.dll",
+      "size": 47710184,
+      "sha256": "ac2e3b619d132661530b073d96880c1f6349d4943d8e08c861415d723ea317a9"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\DPFPDevNET.dll",
+      "size": 42352,
+      "sha256": "6494686b2a188fb7ede4a9777089a09d2e502415ff59334b6d9a85cf1e63f4c8"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\DPFPEngNET.dll",
+      "size": 30064,
+      "sha256": "03a19cadbd222874b3ccf37521d6093c6d7893ee1d0013f0fa8ffe69fc745f37"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\DPFPGuiNET.dll",
+      "size": 42352,
+      "sha256": "3a4f3ca9ecc38533d4f76e8c64c071d4a36a15e23e6e95832ba94c4f92d2740c"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\DPFPShrNET.dll",
+      "size": 25968,
+      "sha256": "e5b667100c1081b99e5ec57c3e0d46eff6ed974419703697b1245d7af0ea02fb"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\DPFPVerNET.dll",
+      "size": 25968,
+      "sha256": "45da4a0f28d75e000d2b368e2bf60df2a0173ab0722d6ec0bee52d551646a86d"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\DS-DIGIB.TTF",
+      "size": 24896,
+      "sha256": "db992dcd7c4ced4a7051eebf59e02c65a92452dcbb6d7b6e4e8eb1a6aa6bfc9f"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\Emgu.CV.Bitmap.dll",
+      "size": 16896,
+      "sha256": "edc9f8b826763742175b788b7e4f9e9ab0ce69912b658fe604e541a747dc7885"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\Emgu.CV.dll",
+      "size": 921600,
+      "sha256": "53043e0404e2a653044b7986339c59a10a3973135162cc1b3759440b8d90a836"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\FaceFgrClient.exe",
+      "size": 1154560,
+      "sha256": "6f5369df4d854c467d24fb067d8b79c573b35699c7b1ce7f19a310669f1ba546"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\FaceFgrClient.exe.config",
+      "size": 2886,
+      "sha256": "2cbdf9d86644aa5f0f330f195e87b24b01ba5b8b90218710e573185c1444566b"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\Google.Protobuf.dll",
+      "size": 496792,
+      "sha256": "0a693aa9227561bfbce6c36e14c1fef3e17368141b28d936a061047ff422e7c3"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\gssapi64.dll",
+      "size": 403072,
+      "sha256": "0c8d7b18f82bee9863308affe69de8277d091e5253dbc593868d4ced0b570453"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\jibas2024.ico",
+      "size": 2462,
+      "sha256": "07f2116f3b46c5d5f933e2b8f9c42b23ec236bf3c5845b45cbaf9ea6573479cc"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\K4os.Compression.LZ4.dll",
+      "size": 75264,
+      "sha256": "6dade79664f48a163d6864c84a0a6c5c55b856bdfaf34ba187c87f18f9167238"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\K4os.Compression.LZ4.Streams.dll",
+      "size": 83456,
+      "sha256": "36f1ca01f12522a0c50f8fe48cd06adc24571ee2a0ff248315b388b8bd00f484"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\K4os.Hash.xxHash.dll",
+      "size": 13312,
+      "sha256": "fd5fbeafb3ae59b45dbc6ac6b867ecdbeb4b4b715adebc5d1766e155e639caf3"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\k5sprt64.dll",
+      "size": 69248,
+      "sha256": "e164ff9bc4c09e168283ad33cd9029e06d928b2a00be3a9e206877161f14532e"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\krb5_64.dll",
+      "size": 1224320,
+      "sha256": "69e987a944e99355fcf0174ef86b33bf0a8c4c162dc556a9d00f47278584bc3e"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\krbcc64.dll",
+      "size": 121984,
+      "sha256": "8cc4ed936b065d907d00e52ddb2508aca9455d8b80929c57ec0860c6622c86be"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\LdaNative.dll",
+      "size": 169744,
+      "sha256": "49e9cc3f5e7193d6ce707f72ab54ed3850c53db1f1726e7694560b96ff3f70f1"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\libusb-1.0.dll",
+      "size": 148992,
+      "sha256": "adac7941dd18232e3915a9813a4ab4bc1986016ac1eabf2395ed62033f10d4eb"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\licenseface.enc",
+      "size": 2754,
+      "sha256": "b684f59bb7073a6ca46e2858c8802d4be4aa29655a292bd9574115b81155bbad"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\licensefgr.enc",
+      "size": 2074,
+      "sha256": "8e9053bae772c02128366bb37c6a1a6a9e2a408928c6eb740d251ec5038158bd"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\maintenance.txt",
+      "size": 3168,
+      "sha256": "6ce1b1620130b8c479c31eed47770b11cc706edf4c7c12e3f181082f6e955f6b"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\Microsoft.Bcl.AsyncInterfaces.dll",
+      "size": 26424,
+      "sha256": "707ddc8b6a4119bf614d669ec379f2443c2b180d655ac4b86e7496a30fc604e8"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\Microsoft.Bcl.Numerics.dll",
+      "size": 21296,
+      "sha256": "b9aa29c4145c18c5e5367c43360837409f635ae341d91dd1a12bba55626e3785"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\Microsoft.ML.Core.dll",
+      "size": 422664,
+      "sha256": "b07c3c921f5d98a179c3a18a459e5036a25f6c2e7b40031be8e2cee95d920168"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\Microsoft.ML.CpuMath.dll",
+      "size": 63240,
+      "sha256": "fd6c6618d3d3ac17965a8e9595813d4cd6194fd059e0eab6255b11eb96267984"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\Microsoft.ML.Data.dll",
+      "size": 1568520,
+      "sha256": "a0ca9598928255174d2db1f4c497fe74f2cf2797260bfb91e5fcef496a815a6d"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\Microsoft.ML.DataView.dll",
+      "size": 48400,
+      "sha256": "1b380c7d5435c25f091a4c7e82dcd990d252cad71c12a822f754dc7785c953a8"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\Microsoft.ML.KMeansClustering.dll",
+      "size": 56632,
+      "sha256": "10d4ae65017486be1873b863b295928879723f22a5a923e1ee800bbb9e28b324"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\Microsoft.ML.PCA.dll",
+      "size": 53520,
+      "sha256": "7486636b34142bcec68ad79780c9f5b9a67bf2cf47ba46b9f5eec21567d45050"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\Microsoft.ML.StandardTrainers.dll",
+      "size": 327432,
+      "sha256": "0bca7acf3574430d8a168ebfdafd8d0eba206b9ab5e6368baee296ecee5537e0"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\Microsoft.ML.Transforms.dll",
+      "size": 773392,
+      "sha256": "0e9ebde9e9da52e7eaf6a56a24153e043d971369c3f0703ca58a88b997698b53"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\Model\\glintr100.onnx",
+      "size": 260694151,
+      "sha256": "a7933ea5330113b01c9b60351d8f4c33003f145d8470ac5f0e52ee2effe25c60"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\Model\\haarcascade_eye.xml",
+      "size": 341406,
+      "sha256": "71cc64fc305a355dc60067880f6fbbd43dd155bd63ee3844661a1bda34b2fd8c"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\Model\\haarcascade_frontalface_default.xml",
+      "size": 930127,
+      "sha256": "0f7d4527844eb514d4a4948e822da90fbb16a34a0bbbbc6adc6498747a5aafb0"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\Model\\haarcascade_mcs_mouth.xml",
+      "size": 719806,
+      "sha256": "27d5a644d6542351e2a79dd99ff49d3539773092cae551a3fbd9de94229c2be7"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\Model\\haarcascade_mcs_nose.xml",
+      "size": 1585210,
+      "sha256": "2ff64683bd2f49547e64e0063610744746ed140082c7a8f7f66fdcbb664713bc"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\msvcp140.dll",
+      "size": 557728,
+      "sha256": "0f885b509a685d2bbfa652fed26b5fb31d88fbdab0a978c641d1c7b8aa460aa9"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\msvcp140_1.dll",
+      "size": 35952,
+      "sha256": "bfad5aef4c63a669e3c140655cdfdf395b6c979b400a447bd5dcb65ed8826c3d"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\msvcp140_2.dll",
+      "size": 280200,
+      "sha256": "3ea06f0ee098b4823cb79599df3780e7f23cce52c19aac31d2a0d47efe33a5e9"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\msvcp140_atomic_wait.dll",
+      "size": 50304,
+      "sha256": "640b2aefced484d0368eea5bdd06addd0658a3a70a49256e560d6923b404a479"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\msvcp140_codecvt_ids.dll",
+      "size": 31872,
+      "sha256": "f2069a52880ec885ee7f0511186100eb7fada0411a2b4948fafea7735b878a18"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\MySql.Data.dll",
+      "size": 1189000,
+      "sha256": "6568624f775f2ec92611d4e7a524456fe1b7342982380f2f55cba2170e9430e0"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\Newtonsoft.Json.dll",
+      "size": 711952,
+      "sha256": "e1e27af7b07eeedf5ce71a9255f0422816a6fc5849a483c6714e1b472044fa9d"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\opencv_videoio_ffmpeg4120_64.dll",
+      "size": 28349440,
+      "sha256": "a0f01e4ee5e97b4a513cd70f01fafadc0dd187ba5d1293cb7fc6b77e7d17c631"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\sptface04.ico",
+      "size": 1150,
+      "sha256": "88e256bfbf219170ab3353b725bfd144ecb9e7ac93415f968a93c7b689a1018a"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\System.Buffers.dll",
+      "size": 23816,
+      "sha256": "2d78d770c9cb997199154ae8c018b9f1d1efbc86729f7264dde6dbad2a12cac3"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\System.CodeDom.dll",
+      "size": 30488,
+      "sha256": "a3fb4f972deff1db79dba1c36fac443933401aba05cdce43b163534151854c9d"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\System.Collections.Immutable.dll",
+      "size": 259336,
+      "sha256": "8369f2b30cea5dba95c432d8433eefa782e70a90f38712609f45e678ef7db3f2"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\System.Configuration.ConfigurationManager.dll",
+      "size": 91824,
+      "sha256": "be1068d1af240549afcd48f22cfcf15ac10c4630600a5344ae025d3055029834"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\System.Drawing.Common.dll",
+      "size": 50464,
+      "sha256": "dac076ce52ee0deb108e23f8028a996ced0fb5941fe591eee4d3f32ff085d89a"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\System.IO.Pipelines.dll",
+      "size": 84792,
+      "sha256": "d881b5e01c527bb7cafa3c2482f7cbfbf158fcbb6f93efb4381b638c2d4ea6f7"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\System.Memory.dll",
+      "size": 145200,
+      "sha256": "d5e8e4866f9cfa66f7765660f84b210198893e55335487afe5ebda342c0e913d"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\System.Numerics.Tensors.dll",
+      "size": 94520,
+      "sha256": "5910b638c7ef2cabe2570782b3b6db94e02d41f43fd8deae4cf7c35277ca0ef6"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\System.Numerics.Vectors.dll",
+      "size": 110344,
+      "sha256": "20c2fa81b8c70d651099d762954f285fd4f942e63b2d7217c145dab8d4b2f4c9"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\System.Runtime.CompilerServices.Unsafe.dll",
+      "size": 19256,
+      "sha256": "08cbd7278b66f1e68425a82d4b97181a4130d93e3dd91831407aba7212ccdacf"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\System.Text.Encodings.Web.dll",
+      "size": 79664,
+      "sha256": "ad6be4be7e0183f3eabac3f747b834c557156942c7d2ce12039477ad0874fbfb"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\System.Text.Json.dll",
+      "size": 726320,
+      "sha256": "ead4137d1b7ed06d55f609acfedfdad041977b029a9d2c7e8b596f698fedd8ac"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\System.Threading.Channels.dll",
+      "size": 78600,
+      "sha256": "28b2710729bec1881664afd56189dbf3a06311521ad92d204b752bd4f81deacc"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\System.Threading.Tasks.Extensions.dll",
+      "size": 25984,
+      "sha256": "4f81ffd0dc7204db75afc35ea4291769b07c440592f28894260eea76626a23c6"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\System.ValueTuple.dll",
+      "size": 25232,
+      "sha256": "e905d102585b22c6df04f219af5cbdbfa7bc165979e9788b62df6dcc165e10f4"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\Temp\\80694jtpr7.ml",
+      "size": 4300,
+      "sha256": "526eb59fd384ec9ed0a9a6691cbe512dacc4062fbe4bc328d34e6a5e2f4bc137"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\Temp\\gvrzeitk72.ml",
+      "size": 4300,
+      "sha256": "526eb59fd384ec9ed0a9a6691cbe512dacc4062fbe4bc328d34e6a5e2f4bc137"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\Temp\\nfx6z5rwmx.ml",
+      "size": 4300,
+      "sha256": "526eb59fd384ec9ed0a9a6691cbe512dacc4062fbe4bc328d34e6a5e2f4bc137"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\Accessibility.dll",
+      "size": 21296,
+      "sha256": "7b036ab06c46ad78f5019facd0bf91245f1d437d7186c92f122020481f2acf2b"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\clretwrc.dll",
+      "size": 311096,
+      "sha256": "a85317edac22fe00072f0a09898efa69511041138c494deefffd4c6c02307e16"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\clrgc.dll",
+      "size": 432936,
+      "sha256": "b791aedabd09a99e958dff79fce614d43543deae0ecac0dedb8ec8695ae3c9b9"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\clrjit.dll",
+      "size": 1529096,
+      "sha256": "ba6959f761d3aaa50ac8dfa052829724f38ba1f9218615645eaf7ebf6e1aaed5"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\config.ini",
+      "size": 313,
+      "sha256": "4272fc78d832f3ab76bb45c51fb21f4c4b9e781feb6f10870c5390f853496b80"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\coreclr.dll",
+      "size": 4072200,
+      "sha256": "4193f2ba7b4549b21fa53470024ecaebd68dd1c5bd2acc542b2ccbd5d05d4c3a"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\createdump.exe",
+      "size": 50536,
+      "sha256": "e7aeea41bec57d821874bc553711175c9a36bcc763ca91fce3a9beee1e1cf51b"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\cs\\Microsoft.VisualBasic.Forms.resources.dll",
+      "size": 25896,
+      "sha256": "caa285dc773ab61fc40889b5280c9902ec04143e8d3a35430c2dc0f1d7430abc"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\cs\\PresentationCore.resources.dll",
+      "size": 108840,
+      "sha256": "c5db19303882d3bb00b3a46bae6c804c387641d094fef45c4917cc1e832b0e6c"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\cs\\PresentationFramework.resources.dll",
+      "size": 197432,
+      "sha256": "a2f37da4c9a98a74bd960daa25414887880ba7731ad263ce4f35d0e1067dcb37"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\cs\\PresentationUI.resources.dll",
+      "size": 45832,
+      "sha256": "ba5431efb09fce0be883f1216d9adbe796677f69bb9405194f10fc5b50d3ed1c"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\cs\\ReachFramework.resources.dll",
+      "size": 39224,
+      "sha256": "8c5d706bb3a94b6677ce98c4f56297c78fd73271ffe15739533aa5aa6ac2b278"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\cs\\System.Windows.Controls.Ribbon.resources.dll",
+      "size": 18744,
+      "sha256": "5a29918d16426abf3757bdd61c3f924b25f9ee48ff90f7062152ce2703b5b62f"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\cs\\System.Windows.Forms.Design.resources.dll",
+      "size": 149288,
+      "sha256": "cfc11364dbbbf8801603b9fe54e1d11b20c79132df848c0edc9347b170232f4b"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\cs\\System.Windows.Forms.Primitives.resources.dll",
+      "size": 16184,
+      "sha256": "c5bd92932ef8b95193e77d96baa9ff093d64f7d04d08852b0a9c4cc2e1134621"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\cs\\System.Windows.Forms.resources.dll",
+      "size": 365864,
+      "sha256": "a962b9136cdaadc02eed676c3221056062fad74ea5dd07079ca9412dd37aee1b"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\cs\\System.Windows.Input.Manipulations.resources.dll",
+      "size": 16688,
+      "sha256": "84a5e29c96fbe51d59a48c9da97daf14245ea607928d623cdc8ece51ca0ba476"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\cs\\System.Xaml.resources.dll",
+      "size": 65336,
+      "sha256": "17ab4b13c5c97b55c98d06c0865aef0da51c49717fea13bffde7fae60880d98a"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\cs\\UIAutomationClient.resources.dll",
+      "size": 20272,
+      "sha256": "dd2d56c7a0195bc8027f49abaa9382f2d4a755dec6dd211bd48448807c03e736"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\cs\\UIAutomationClientSideProviders.resources.dll",
+      "size": 21256,
+      "sha256": "6f4f7b666ad3e6d0b9dab8e81d6345c8bced9fc5fa56d64f543f565093b216db"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\cs\\UIAutomationProvider.resources.dll",
+      "size": 15664,
+      "sha256": "5eaa8230165022cb7129b7b6bd625ae16816ca04aa415ad869e0a7a5b01a8887"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\cs\\UIAutomationTypes.resources.dll",
+      "size": 18736,
+      "sha256": "3fbd556966d7a48775811c6d6792dd1822e3cbdbc11d8b43bcc23c51e9da5fe6"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\cs\\WindowsBase.resources.dll",
+      "size": 86832,
+      "sha256": "dc0a6447c825e8efb43cf901537ef9c5b32f0e53cd71592a9bd01d4b36c00be4"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\cs\\WindowsFormsIntegration.resources.dll",
+      "size": 16168,
+      "sha256": "54d6d4cdea1472de512c6701bc50a3d29e38d44c8d73955fdf5bfbcabef69b60"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\D3DCompiler_47_cor3.dll",
+      "size": 4127224,
+      "sha256": "b6bb03086bf06f348a21618e5d5767aba764d07a40a2872be486b8a70d9aa1eb"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\de\\Microsoft.VisualBasic.Forms.resources.dll",
+      "size": 25912,
+      "sha256": "e845b6e181b8aaf55870799f4795f4aa5c7bc1c48bafd198798f49619aba97b5"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\de\\PresentationCore.resources.dll",
+      "size": 114480,
+      "sha256": "97914a9d6924025b6b8c4562a458cc12e444117750c9d216c078fee6898174c9"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\de\\PresentationFramework.resources.dll",
+      "size": 213808,
+      "sha256": "426f252be7dd83a66f0517c8db11ba2a8b27263c5df56c75f57580832ec7f0a7"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\de\\PresentationUI.resources.dll",
+      "size": 47400,
+      "sha256": "241557390f97459202253b5203743ab29f6ff2f92a54fcc0770db1c927d0e305"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\de\\ReachFramework.resources.dll",
+      "size": 39720,
+      "sha256": "8d3d4b9fd19c84bc17b965ec245f5f8e760289893d1d8cd6bff19807d917e5bd"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\de\\System.Windows.Controls.Ribbon.resources.dll",
+      "size": 18736,
+      "sha256": "ab946a910bec71828dc365500eb34feaee7a57cc50b83fd9dac5c40781815fd1"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\de\\System.Windows.Forms.Design.resources.dll",
+      "size": 149816,
+      "sha256": "7e9b9a5b790aacf5734f98fc16671440c145dc5f149258be2cb162b6439f3795"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\de\\System.Windows.Forms.Primitives.resources.dll",
+      "size": 16168,
+      "sha256": "537f82e0ac01ef7b8879b23bde290f29f0617ff0d8fc70a364d040fdd69cbb8e"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\de\\System.Windows.Forms.resources.dll",
+      "size": 374056,
+      "sha256": "ff34e779f451275cd1873bc2ccaa7cbbfea5ec4c2c4df28064ba8f40718d210f"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\de\\System.Windows.Input.Manipulations.resources.dll",
+      "size": 16696,
+      "sha256": "601a1592e167cdaace3f6aaba47a05afc4659a21ee05d3a8a63a6e206450de0a"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\de\\System.Xaml.resources.dll",
+      "size": 68880,
+      "sha256": "84a327d711e830cc91bcf7ae6831e05ed7002487012884d0c9ff6f2a99053b37"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\de\\UIAutomationClient.resources.dll",
+      "size": 20272,
+      "sha256": "b0f7f9a71446eef25902ab27ca62a9fe237f41943573c0384aaf4abafb676fa8"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\de\\UIAutomationClientSideProviders.resources.dll",
+      "size": 21288,
+      "sha256": "0a69fb78589518ad3621cbdf5b8a68ab7e27c18f25d4cbe07ed872d7d2df62dc"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\de\\UIAutomationProvider.resources.dll",
+      "size": 15656,
+      "sha256": "93099734ffa34a59124f788f6bfdc799d61bafab730db28593bcbb01166b26b4"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\de\\UIAutomationTypes.resources.dll",
+      "size": 18728,
+      "sha256": "813d4e3b22bf499ce3a983cb3af237f307cb1fb1e0606c175df53b499ca7d703"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\de\\WindowsBase.resources.dll",
+      "size": 91448,
+      "sha256": "1e460c8cc8a955f07882482f7c82730807e7ac624f97ab445bab97603a18bea5"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\de\\WindowsFormsIntegration.resources.dll",
+      "size": 16168,
+      "sha256": "5a62c201e986f3f9aef0f757cb9387d35d761076a20909a5e670166169e7cabb"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\DirectWriteForwarder.dll",
+      "size": 465184,
+      "sha256": "0130c37c4505de2b7fac5fa22053bcf826b49feb964ce8c3a7f1874b173d0c62"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\es\\Microsoft.VisualBasic.Forms.resources.dll",
+      "size": 25896,
+      "sha256": "d8b3118134eaf663d863b87e1ef84336c1e5bf1b2b79f712689e9ce0c826c34c"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\es\\PresentationCore.resources.dll",
+      "size": 110384,
+      "sha256": "acbf1126d4a7831c44c080f50bc369647c2c54dcb3256f63d00cb4166f44aacd"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\es\\PresentationFramework.resources.dll",
+      "size": 203576,
+      "sha256": "12b680433aaa77c9350344bb2836090c7270d3b9b21c8eb7f2aca0db37afca6e"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\es\\PresentationUI.resources.dll",
+      "size": 45856,
+      "sha256": "845947fb3c40b269746163d8aad216beb7d24b199ee915bc8b7b743922a56830"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\es\\ReachFramework.resources.dll",
+      "size": 39720,
+      "sha256": "9696ba726665a475c5c03a8ef9ac0bffcc56ff1d0b145fec483d2fe584e3d34b"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\es\\System.Windows.Controls.Ribbon.resources.dll",
+      "size": 18736,
+      "sha256": "49284165f79883167552de457903dafa699c7e41268f53a8fbc25dea076fb73c"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\es\\System.Windows.Forms.Design.resources.dll",
+      "size": 149800,
+      "sha256": "66481a7066dbc2fc82d40c779b511dc63cd8ece5da1515e17dc7173b7a6e54a2"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\es\\System.Windows.Forms.Primitives.resources.dll",
+      "size": 16168,
+      "sha256": "94daf8309087419cbdab8b7b1c3d3aef0e6dc18dcc97c6038165bc6f3d4285e9"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\es\\System.Windows.Forms.resources.dll",
+      "size": 366384,
+      "sha256": "ba8046ff6edfd6b74c815b72bd159f54cc8e053a9893bbf2a793e9c768aa5ec6"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\es\\System.Windows.Input.Manipulations.resources.dll",
+      "size": 16680,
+      "sha256": "f569dd722c996b8a5b6d8beefb59e3529030ef1cd0be5c937193cd856306055a"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\es\\System.Xaml.resources.dll",
+      "size": 66352,
+      "sha256": "1ebcfef61e362e6706fc4c3875b254b5a652fa843d98381471a9181e3bdae249"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\es\\UIAutomationClient.resources.dll",
+      "size": 20280,
+      "sha256": "e6b94a9630f5454c7148db6a7f7d5f96b5fa124ba2097bb54378f696e0f49a9a"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\es\\UIAutomationClientSideProviders.resources.dll",
+      "size": 21288,
+      "sha256": "8b397c0dae2e012f8e5910dda670a77259726f68114fba7135c6ca266d297c13"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\es\\UIAutomationProvider.resources.dll",
+      "size": 15632,
+      "sha256": "1e2f526798903cf3c81d9acdcc3258c6809677b7e53fd73b861b9323f977462b"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\es\\UIAutomationTypes.resources.dll",
+      "size": 18704,
+      "sha256": "54869e6c5486c9da32e6a7a86e2d4d7474c5967dcc3e3fad6660dae400e3b9b9"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\es\\WindowsBase.resources.dll",
+      "size": 89904,
+      "sha256": "bef05fde0026c76bd7f8668c5b6cdf7867c6e5865c80066c11ae7a7beaa00490"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\es\\WindowsFormsIntegration.resources.dll",
+      "size": 16176,
+      "sha256": "fcacc5bae310faa4776a8643f5e0fcfaac7ea7a6dcde2442ac75ff56a38676fd"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\fr\\Microsoft.VisualBasic.Forms.resources.dll",
+      "size": 25904,
+      "sha256": "c9a0513341e6a848c7c863ccb28eec35fbd0900b8bbc4948f10c31ceab6f5882"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\fr\\PresentationCore.resources.dll",
+      "size": 113424,
+      "sha256": "d6ed7aa360052b4653ee12ae0b04383964db6334033cbb3ee9e662cae707ed87"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\fr\\PresentationFramework.resources.dll",
+      "size": 207112,
+      "sha256": "07f9f5170a1d354b8a65f8b32dd266c71e74e77f2733dec24aff7da5055851c9"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\fr\\PresentationUI.resources.dll",
+      "size": 46888,
+      "sha256": "768250cff863149c9d42aacff3b09d254d77b3db9121a0204206949ff19072aa"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\fr\\ReachFramework.resources.dll",
+      "size": 40232,
+      "sha256": "c7c3ef84b2f0f14b7f0c1d36b0044702faebc2bf9f4eda89540a3e50c445bf90"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\fr\\System.Windows.Controls.Ribbon.resources.dll",
+      "size": 18704,
+      "sha256": "3d568eca91c3acbdb1690484f354df740b3331e1fc80c2c39b4c08712d7f0943"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\fr\\System.Windows.Forms.Design.resources.dll",
+      "size": 150304,
+      "sha256": "7b1c77bfc5206b073761dc515bad6ace4416a1f91e3bb22dc7e13318423f5d2a"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\fr\\System.Windows.Forms.Primitives.resources.dll",
+      "size": 16168,
+      "sha256": "b64fc793f37a985a2897247496f9087566de2018058d8804523cd4cc3d30f819"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\fr\\System.Windows.Forms.resources.dll",
+      "size": 373040,
+      "sha256": "57489a5fcf86b0cd60561b5c6557632fc426b26151cb454921c34517abf7bc3a"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\fr\\System.Windows.Input.Manipulations.resources.dll",
+      "size": 16688,
+      "sha256": "534fea6842c1ef402a7e9743d606570c43b466dc50d8b0ee89985cc2e9d524c5"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\fr\\System.Xaml.resources.dll",
+      "size": 67368,
+      "sha256": "32ba51454eca9bf3d6d2fc59250cf10a81166c30c0b92750ca02ebd611cf9cc1"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\fr\\UIAutomationClient.resources.dll",
+      "size": 20280,
+      "sha256": "0064e6eecd73431d882a3885863c498433b471bf52a68caa97820e5130828f9a"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\fr\\UIAutomationClientSideProviders.resources.dll",
+      "size": 21264,
+      "sha256": "802dfd059e3d51b273209c22c763e322a73b4addfaeb25fdf629de5eecca61c4"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\fr\\UIAutomationProvider.resources.dll",
+      "size": 15648,
+      "sha256": "70a0bda83dacf042ccd919a07f21a114f2b6c8e9fea7f5b2deb7aa8ae2562f4e"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\fr\\UIAutomationTypes.resources.dll",
+      "size": 18744,
+      "sha256": "600187cf48bf022bd8a2706c8114b8d2895187d0548607b1a6e710f10071ff47"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\fr\\WindowsBase.resources.dll",
+      "size": 90936,
+      "sha256": "3f8bfb56e471d15e1c3822094a7f55aeadb670b6a345978b95fa5d6f535a4fb7"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\fr\\WindowsFormsIntegration.resources.dll",
+      "size": 16184,
+      "sha256": "2656aec88f2508f865e676703acdabc54dca4afa3213bae015c6e5364bdcfb8a"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\hostfxr.dll",
+      "size": 293168,
+      "sha256": "f10a1c25cdfb653b52c6a168917b92282a1f27629c772b94230230f01b7b6751"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\hostpolicy.dll",
+      "size": 334632,
+      "sha256": "9357440b177b0223f316d9efc557fb057fa0b4bca6363ac05a1a70505f9228a2"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\IpMatcher.dll",
+      "size": 13824,
+      "sha256": "de5a7c21d039756bf4dae1145803c429854efaeb7a78b2594990ec8272967fdd"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\it\\Microsoft.VisualBasic.Forms.resources.dll",
+      "size": 25904,
+      "sha256": "fdf04aa27b22fd8b76e673257f1a35bd62fabcdb9c853ba2f8346ad5920010dd"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\it\\PresentationCore.resources.dll",
+      "size": 111888,
+      "sha256": "b8d16da2becae03b3c82663b57bf078db66f81415ab277b56601576c4a97fce5"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\it\\PresentationFramework.resources.dll",
+      "size": 206128,
+      "sha256": "27850e904c95fde4c3e94027e05e32204ec467b15f397ce566388b3a630020a1"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\it\\PresentationUI.resources.dll",
+      "size": 45840,
+      "sha256": "a22ec15196ff927658333e44e7dd9557fe990332a23abbf5abcea36868c8c201"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\it\\ReachFramework.resources.dll",
+      "size": 39704,
+      "sha256": "07bb09e9d1010fc658c604df1ba7f35b86fd6271217d0e7a4aeca5aac2d598a5"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\it\\System.Windows.Controls.Ribbon.resources.dll",
+      "size": 18728,
+      "sha256": "ab09e3dda4a46c40973dc655459240a5967d5af7cdde5113eef928b5b22ecec1"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\it\\System.Windows.Forms.Design.resources.dll",
+      "size": 150824,
+      "sha256": "0e2d51177222c0d9d1b199cc643abc48cfd7f813b1985fbf2a8ba6755779bde3"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\it\\System.Windows.Forms.Primitives.resources.dll",
+      "size": 16184,
+      "sha256": "fca6eb713aaded1d50da246feef187530ab517b44762e4907b57feb11fd06c43"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\it\\System.Windows.Forms.resources.dll",
+      "size": 368936,
+      "sha256": "183378b04b0d6fa71811be4a004fe43228843dfecfef2cf8a29f1ec23dd478bb"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\it\\System.Windows.Input.Manipulations.resources.dll",
+      "size": 16688,
+      "sha256": "d11ea2c40358cebddeebaf574b19ba67902d189729e5651c03ec3e5e52a441c8"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\it\\System.Xaml.resources.dll",
+      "size": 66344,
+      "sha256": "1ac96e25228ce91d7e145a63b72fb60bb782a8ae729e852b9b64d3bb4abccc49"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\it\\UIAutomationClient.resources.dll",
+      "size": 20264,
+      "sha256": "13fb4728e08d64355465c277b97efc8bf55baa5bff270b9e67a53d7d4f3b7eb4"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\it\\UIAutomationClientSideProviders.resources.dll",
+      "size": 21256,
+      "sha256": "c61a04d2091b793945ceceed46e8df63d8ca7c7d835c26815920ac5b7a7a4afd"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\it\\UIAutomationProvider.resources.dll",
+      "size": 15624,
+      "sha256": "6a50ae7f471ccbda36308d2ff71d9453664801ee92099b5ec5c2cfe47f71e2a7"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\it\\UIAutomationTypes.resources.dll",
+      "size": 18744,
+      "sha256": "91bcb632c23e3c7c7735034419fce42cfe15ee516c2947a76575c0c821d6a986"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\it\\WindowsBase.resources.dll",
+      "size": 91400,
+      "sha256": "7ab43f078a03ef5d6c8d99eecf1acfd6dcde0144bc979828821278b5f24b5a69"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\it\\WindowsFormsIntegration.resources.dll",
+      "size": 16136,
+      "sha256": "7dc6456590a7f1849ac1bd0539b99e3f4110e2996f651e0b585e4546b55a5ae7"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\ja\\Microsoft.VisualBasic.Forms.resources.dll",
+      "size": 26408,
+      "sha256": "20e314e0c18ea65cf1f035ebba164162081f5dc726f796186039f67639dbc730"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\ja\\PresentationCore.resources.dll",
+      "size": 122632,
+      "sha256": "88ebf067b61a8c52aebd414b82501bd79b98fa75a010aa5cd290d3840ed59f48"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\ja\\PresentationFramework.resources.dll",
+      "size": 226600,
+      "sha256": "f5b97c55ecbd1e53e872472f24e323e572759361f30f22b1ef473d3340ec51f0"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\ja\\PresentationUI.resources.dll",
+      "size": 49440,
+      "sha256": "4b429f434a79974ef04686036e21bfec733bd0e25d894eb67f730118c33c5336"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\ja\\ReachFramework.resources.dll",
+      "size": 42256,
+      "sha256": "af65871bd5bd061dd9b3e3640349e19bc85e556126f6a5f1be7a6763d10a2fcf"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\ja\\System.Windows.Controls.Ribbon.resources.dll",
+      "size": 19232,
+      "sha256": "c27a7aa942c7a5dbfce9ef26768f940f9dc764a19012e4217d9cf4e263814443"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\ja\\System.Windows.Forms.Design.resources.dll",
+      "size": 155960,
+      "sha256": "32576b57794ecc59e3acc362ce80d0c120b73815dd605d8593e78f5d060f9073"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\ja\\System.Windows.Forms.Primitives.resources.dll",
+      "size": 16696,
+      "sha256": "c65b86c78cd76502f3d101d56ebd7d91416ccf98b4c98b0b62d95eb43ebca433"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\ja\\System.Windows.Forms.resources.dll",
+      "size": 409392,
+      "sha256": "683823a355b7b9bef467d2595d28ecb807a87de7a3388d1efb3081bb2c6b061d"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\ja\\System.Windows.Input.Manipulations.resources.dll",
+      "size": 16680,
+      "sha256": "1d791b8b12358dfee4d149efe4d7dc72d2ce467e873b0cd83ec5581416ffa1d3"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\ja\\System.Xaml.resources.dll",
+      "size": 74544,
+      "sha256": "f0d1171696fc899b43d5e3e715408fff948649586dd39728d2ee44eb000a6e6a"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\ja\\UIAutomationClient.resources.dll",
+      "size": 20792,
+      "sha256": "ddad2cf57434a02aca4e8c74a9683eceee936b4985a29ddda353b541c266a249"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\ja\\UIAutomationClientSideProviders.resources.dll",
+      "size": 21792,
+      "sha256": "0cd9c646065bc324938dd65f173f58d810b1ff75aa25c142ccc51213331a95bc"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\ja\\UIAutomationProvider.resources.dll",
+      "size": 15656,
+      "sha256": "376aaf792802f36aa24a46162bfaaefcba539048776a1f3b97f96ad1a1014c9d"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\ja\\UIAutomationTypes.resources.dll",
+      "size": 18736,
+      "sha256": "cf9f60107f2bb5d730276b5b2aaec1952f06511d08695e2421bddc3f443041c3"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\ja\\WindowsBase.resources.dll",
+      "size": 99592,
+      "sha256": "2f817b79d8f839f25e45c624b81a9d149f7984e440894695110fb2a3e454c04f"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\ja\\WindowsFormsIntegration.resources.dll",
+      "size": 16680,
+      "sha256": "f8122da43de0617f87ea00ce6bc3a57ce448b8817a2b0a9085e7259f0ec62837"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\ko\\Microsoft.VisualBasic.Forms.resources.dll",
+      "size": 25896,
+      "sha256": "8835b9c8910c84d9d805dc76caeb9e584e441eef9e91e131f88a2003951eae72"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\ko\\PresentationCore.resources.dll",
+      "size": 114456,
+      "sha256": "7a8480658cdf9001acd9f264e9b971565997f39f8ff436e0545631ef0372acbb"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\ko\\PresentationFramework.resources.dll",
+      "size": 211760,
+      "sha256": "db47e9694cd73697c41fbf4dd864583c40d038d4f2fff28fd9da0aab49cbcb2d"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\ko\\PresentationUI.resources.dll",
+      "size": 46384,
+      "sha256": "5ab28a41737ebfa0bab319340ee9ee97893d755821ca63a3a4eebeaf8f2265e8"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\ko\\ReachFramework.resources.dll",
+      "size": 40728,
+      "sha256": "f8622bf41150ad88d3e64e4f83a66c89ce6902f95027309f945d56f4c7026029"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\ko\\System.Windows.Controls.Ribbon.resources.dll",
+      "size": 18704,
+      "sha256": "e3dd552fee3e3aee664b8fa6b6e67f0fdc70885b40182bf5ec45b100adcd9e12"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\ko\\System.Windows.Forms.Design.resources.dll",
+      "size": 151336,
+      "sha256": "476ddbc6e1af43e1a280c63c86054446dc87b9b4603da994cbc31e4bbcb2e064"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\ko\\System.Windows.Forms.Primitives.resources.dll",
+      "size": 16168,
+      "sha256": "13f8bd18beeb13efbd85bcfc41a8ce044d764ec18782a5e6915a33838d583ef3"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\ko\\System.Windows.Forms.resources.dll",
+      "size": 371000,
+      "sha256": "8a05aca2dac1fd7ca5070672efbab9349801206bfdc55b9f18aef4e32f9833f1"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\ko\\System.Windows.Input.Manipulations.resources.dll",
+      "size": 16688,
+      "sha256": "29c40cc9adde0432a2e1de4affc77d107398142a117256048ee83dbb82988e46"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\ko\\System.Xaml.resources.dll",
+      "size": 69936,
+      "sha256": "79ccf33984fb19ac5af5dfa30a79d9ed2a509768bf5b08f51d4ff3e008770be2"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\ko\\UIAutomationClient.resources.dll",
+      "size": 20264,
+      "sha256": "803b782ae8542953245ef3730bc78d413ff50f36a02c3df26c3c2dc9d09106ce"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\ko\\UIAutomationClientSideProviders.resources.dll",
+      "size": 21304,
+      "sha256": "868464a624087c35af1e0ecea2fcdaf1dfdca143ae9fe5d664609578c9ade536"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\ko\\UIAutomationProvider.resources.dll",
+      "size": 15656,
+      "sha256": "98ad924baaf6bd57038d3838f50f96575229d82319088ccf4cac358a3f416b86"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\ko\\UIAutomationTypes.resources.dll",
+      "size": 18704,
+      "sha256": "e08394c60a403dec44db977a32fd7f21bc618af1197f1b0dff2a31c2aff70e6d"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\ko\\WindowsBase.resources.dll",
+      "size": 92464,
+      "sha256": "be0bcbd8bb0534d5239fabaaa7837d9688f3854060333593cd5e76959103709b"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\ko\\WindowsFormsIntegration.resources.dll",
+      "size": 16136,
+      "sha256": "7663a0120823ae88e79793113b95cfdcf9a27c13f1183614bb44ce69e917a6b6"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\maintenance_ttsservice.txt",
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\Microsoft.CSharp.dll",
+      "size": 940312,
+      "sha256": "7c491ec12469941cdb36f7d83e6b4c15127ed3709be9116b8601d88b0549ee2b"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\Microsoft.DiaSymReader.Native.x86.dll",
+      "size": 2146344,
+      "sha256": "6564545beab3cb9cd35cfb0cb77d4ec8ba3297d384e98f2fa24c536184e7830f"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\Microsoft.VisualBasic.Core.dll",
+      "size": 1177896,
+      "sha256": "5f55d10e146ef2c8b2c80da449265e3fa327e64eec2a717bd4b079f6327c3104"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\Microsoft.VisualBasic.dll",
+      "size": 19240,
+      "sha256": "7ecaa6f90bac76bd61052af1c2087a85e9677a77802de576c85ded3a0781ecd4"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\Microsoft.VisualBasic.Forms.dll",
+      "size": 223496,
+      "sha256": "44435a9eafd6807737796aca9cb82056bb0d3a58040257800bfd7d4b015bba9b"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\Microsoft.Win32.Primitives.dll",
+      "size": 15672,
+      "sha256": "95f18ee65d4c61b67bdb87172f6dfae8928996445865e2c8b76817a226ab9f83"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\Microsoft.Win32.Registry.AccessControl.dll",
+      "size": 35112,
+      "sha256": "8c93b7eae3a7ecd551f87e93c30afaf59dff2a3ddbd7c5b86cb7f5390fb41dcd"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\Microsoft.Win32.Registry.dll",
+      "size": 104744,
+      "sha256": "167edbb603c609e4261f03fa48868a4f6ea78cbccce51aa01070442b481c34a5"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\Microsoft.Win32.SystemEvents.dll",
+      "size": 92440,
+      "sha256": "baa93d70f3829402c57c0c2b914a80e856a40d2acad009f68be2d5e3d94863fa"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\Microsoft.Windows.SDK.NET.dll",
+      "size": 23637048,
+      "sha256": "43b12f190d22f258039df567ef407333dc41dc95ac7b232dbf94aab069c65bbb"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\mscordaccore.dll",
+      "size": 1265168,
+      "sha256": "74cc9e411769558df113a05941fd5ce693fdf2cb28a7e306bbf97c02ebf3f60b"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\mscordaccore_x86_x86_8.0.1525.16413.dll",
+      "size": 1265168,
+      "sha256": "74cc9e411769558df113a05941fd5ce693fdf2cb28a7e306bbf97c02ebf3f60b"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\mscordbi.dll",
+      "size": 1179664,
+      "sha256": "9dafbbc0fc71bef8f03771a225d571f1e1b37dcb0d3af75cef9a7ac391cc3ba1"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\mscorlib.dll",
+      "size": 59688,
+      "sha256": "06c55015e5e64fe6d8c7323934667bcdc53d2cae7a76d5bc904c16fd0fe0c256"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\mscorrc.dll",
+      "size": 137000,
+      "sha256": "60849bd23b657768a548d5eb8a92428549714d7f1da01e7113eeeba58475940a"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\msquic.dll",
+      "size": 618056,
+      "sha256": "f7f1fed9faa50b4ded05b9c0dea93d4be319e6ffc7c35f8864667de5ec28a2a6"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\netstandard.dll",
+      "size": 101168,
+      "sha256": "a13eab74dd4192adecf4c5e97c0c15c4bba5496ef6d103d2029c30336223437c"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\PanduanBahasa.pdf",
+      "size": 714243,
+      "sha256": "fd76cd3c1d9525a3c9ac840789789508f9874bdca59d0a47b27f7dc248195cd4"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\PenImc_cor3.dll",
+      "size": 142104,
+      "sha256": "ae105dac7f27be16527003ff6c286a8f5d85564c8b39a8a5b87d191aed989309"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\pl\\Microsoft.VisualBasic.Forms.resources.dll",
+      "size": 25896,
+      "sha256": "6037413ccd13731a00938af3e41a8e031cadaf068f325403aa8d31e12d3af90a"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\pl\\PresentationCore.resources.dll",
+      "size": 113464,
+      "sha256": "91a18728844c334b2440273b58378b406acb3b5b3664c44ff8f0661d84d76d6f"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\pl\\PresentationFramework.resources.dll",
+      "size": 209680,
+      "sha256": "9c5abc105d4ef64cb61933e178984f1262f993497aac945d7f62122cb13e915e"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\pl\\PresentationUI.resources.dll",
+      "size": 46368,
+      "sha256": "fb62a316a6a1821997e4f9c84ceadb299bc5769677c17ebdaeb07b229e257893"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\pl\\ReachFramework.resources.dll",
+      "size": 40200,
+      "sha256": "fedaa29896753e1ab8740286b417f8889f5aecaf7647160d526bad358f2fecca"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\pl\\System.Windows.Controls.Ribbon.resources.dll",
+      "size": 18736,
+      "sha256": "674f09a4327b79d4b165d5aa2896b81393dc43a207bba6ca85994780acbb0e2f"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\pl\\System.Windows.Forms.Design.resources.dll",
+      "size": 149288,
+      "sha256": "51d6ad44475a4a815cacaf6df5031eba96d61943f4ffbd1762ae23555b8513a4"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\pl\\System.Windows.Forms.Primitives.resources.dll",
+      "size": 16168,
+      "sha256": "801caff3eb78e4365f7516f561302ee2d30c55611689cbfc872596d2fbffdc78"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\pl\\System.Windows.Forms.resources.dll",
+      "size": 366344,
+      "sha256": "59a20230fb45fad0c6a1378cb62a49338461902ab3feee0d6c7f93c7afc37f59"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\pl\\System.Windows.Input.Manipulations.resources.dll",
+      "size": 16648,
+      "sha256": "1cc43caa8a8909abfab0561de646f175136681f5205c0e9d9370ce8367f7a181"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\pl\\System.Xaml.resources.dll",
+      "size": 69936,
+      "sha256": "ee4ea86ea6de670f67b40dd92465c3b1f5d172b13c8d139e6d1292bf35410295"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\pl\\UIAutomationClient.resources.dll",
+      "size": 20280,
+      "sha256": "4dcdd669af151c72937285fe4ee1d124e378575ef8ba0a51b4f41e2a6bb6a709"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\pl\\UIAutomationClientSideProviders.resources.dll",
+      "size": 21256,
+      "sha256": "f2be40e422df9dd125173fb80fa583e32bbc63e9307284058e3c76f983c5daa5"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\pl\\UIAutomationProvider.resources.dll",
+      "size": 15640,
+      "sha256": "634f3c8d0e17427b9c4c36a91cd5948ae5d4cc60629087729aa1d76ea62f714a"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\pl\\UIAutomationTypes.resources.dll",
+      "size": 18696,
+      "sha256": "e046d0b7d6a502a891a7a08a959b77af4f08923c9fa5e8a4618dd9f76dd817ac"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\pl\\WindowsBase.resources.dll",
+      "size": 90912,
+      "sha256": "69170ecdd391a20713e1d5d8ae7151e5bff70489a687ada6cd614cf85139cd57"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\pl\\WindowsFormsIntegration.resources.dll",
+      "size": 16184,
+      "sha256": "b33a2afb026ca3e8b1923b8c6c729979731027f9dd1dc8ea6b70e7da5fd0a2d9"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\PresentationCore.dll",
+      "size": 8075560,
+      "sha256": "d617ef355258a2f4f57dbc1e0391864268749f0d94a0b31fbe235d344a2288cd"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\PresentationFramework-SystemCore.dll",
+      "size": 39216,
+      "sha256": "fe4cacbc12b1c61f7b8f3bb2508c6117e6ac7f04107c3707b81b561bb62a64d2"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\PresentationFramework-SystemData.dll",
+      "size": 35104,
+      "sha256": "a21f65549c5ac88786a69a81c7e002ad3786a93b3972d9f062f64aafc31ee980"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\PresentationFramework-SystemDrawing.dll",
+      "size": 35112,
+      "sha256": "4ad8922a441b9c870467420c8746769ed446f63d8b69f4593c3e150f4be3ab56"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\PresentationFramework-SystemXml.dll",
+      "size": 35112,
+      "sha256": "fc8c11a7696ec43d61259948995066c08f4e2404c4e5a226bcd56ed59f5266cf"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\PresentationFramework-SystemXmlLinq.dll",
+      "size": 31024,
+      "sha256": "02225faf1786912179c863bb808a02c4bc9cbc839449328b712ef48bf854f538"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\PresentationFramework.Aero.dll",
+      "size": 444720,
+      "sha256": "dc432de30e3421f064ec97a9fa8e6c90eb192cb0ab8d35d6d7f9a06bf134254f"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\PresentationFramework.Aero2.dll",
+      "size": 452904,
+      "sha256": "d0db50789393c9f852fd853a38e52aafcaa0887366b68595dfdb36b34954e70c"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\PresentationFramework.AeroLite.dll",
+      "size": 235808,
+      "sha256": "5616783631a17f6143b042d657e2cddb7db1a8084b2ddbe5eafda6034227a137"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\PresentationFramework.Classic.dll",
+      "size": 276776,
+      "sha256": "fc0ba4cf75401961b8c5b3fa35798ee996b7326e081affea0bfe329673e9af72"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\PresentationFramework.dll",
+      "size": 15178032,
+      "sha256": "3692c38eb1d217ac55e3955435c3c27830f7452df6277d49ad46d5e4c6f3b819"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\PresentationFramework.Luna.dll",
+      "size": 665904,
+      "sha256": "8cdfa7782d693da9565f8874905cf55cb532487abc0f0ca1d206e071214a2285"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\PresentationFramework.Royale.dll",
+      "size": 330016,
+      "sha256": "36f569ac7814c6e3b37cf0c2bc57a08d60d8017cc8db6b412624fe3afd0a49b0"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\PresentationNative_cor3.dll",
+      "size": 944304,
+      "sha256": "73683834c0723d449ffbcf02ee3625f429fe69f84d656464f0579179cec5dab7"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\PresentationUI.dll",
+      "size": 1222952,
+      "sha256": "ec25eb86048cba4109600c84fd7df3b656d954eb2bafa180f8ec2d755caae34e"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\pt-BR\\Microsoft.VisualBasic.Forms.resources.dll",
+      "size": 25912,
+      "sha256": "6125a5542984ce01280bf7e631fadfc69a406876872e16a1932186d2d4a7dd37"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\pt-BR\\PresentationCore.resources.dll",
+      "size": 109872,
+      "sha256": "54017f93efe294306fe9b3f50ff9e811ca20ff8d641d938419f8ef59b04cc6e0"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\pt-BR\\PresentationFramework.resources.dll",
+      "size": 203064,
+      "sha256": "ed40f26625790770de35dd3b372e1a73773810f8e3112aeaed5b12884911ca23"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\pt-BR\\PresentationUI.resources.dll",
+      "size": 45872,
+      "sha256": "84ed45b835023e8d7feaaee0b78ff009cac1c5e8bf034573bc4188fec0b75eb2"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\pt-BR\\ReachFramework.resources.dll",
+      "size": 39224,
+      "sha256": "67082c18e9f03a150440aabbe32dafb261dd30617ad56c3835c220897ae5f562"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\pt-BR\\System.Windows.Controls.Ribbon.resources.dll",
+      "size": 18736,
+      "sha256": "dfbaca938727251f46f93683f60c3d819a53e31228791314bf16f5f7bcdb9063"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\pt-BR\\System.Windows.Forms.Design.resources.dll",
+      "size": 149304,
+      "sha256": "052a02c55eff1d7804ed29d304e5948c36a0957d15a217845ee215e8893171c4"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\pt-BR\\System.Windows.Forms.Primitives.resources.dll",
+      "size": 16168,
+      "sha256": "661e5727f2058778e226cfeead8d79e7617a1b6516d16123547d727b185be82d"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\pt-BR\\System.Windows.Forms.resources.dll",
+      "size": 359224,
+      "sha256": "722e0d9cfb636e97366c6d2c321278735ccb66bc58c994ea7c2afb0b24d60a2b"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\pt-BR\\System.Windows.Input.Manipulations.resources.dll",
+      "size": 16688,
+      "sha256": "7a3218dad791667bd4c88f23f32534366f57958872dd806de793cb707b8b6167"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\pt-BR\\System.Xaml.resources.dll",
+      "size": 65840,
+      "sha256": "3fcec303873fe2d0ffe8376bc372e0e256dd202f2f31ac7177507dde8e3d359e"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\pt-BR\\UIAutomationClient.resources.dll",
+      "size": 20232,
+      "sha256": "172b9cc843ca9fbec4a921f59bbeed819fd113d7902cd07240576d894db6d478"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\pt-BR\\UIAutomationClientSideProviders.resources.dll",
+      "size": 21304,
+      "sha256": "47a71fc2163f18cf79d948ed3f2feca6bbfb11b2a720f1f08dbe5bd82176e200"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\pt-BR\\UIAutomationProvider.resources.dll",
+      "size": 15656,
+      "sha256": "3bc03c760dc9d247318813c466d3ccc1730a0c56f1f8b66f1d4a6ef24fbf054a"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\pt-BR\\UIAutomationTypes.resources.dll",
+      "size": 18736,
+      "sha256": "b52a736504148667bd1d4c07232eff3f9df5759cd9717c46a2f1dd83ec4ff563"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\pt-BR\\WindowsBase.resources.dll",
+      "size": 89392,
+      "sha256": "a5cc1707bc824c7c8696d8098370ca17d3cc200b2d0c24a1720468063c952603"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\pt-BR\\WindowsFormsIntegration.resources.dll",
+      "size": 16176,
+      "sha256": "f49cb7b1a69166fadaf850f631175d3487ff5052f5487923f172f7eb59711d40"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\ReachFramework.dll",
+      "size": 1517872,
+      "sha256": "42c453b665a51826347f7a2c848e86d0db9132a92a30e886c6ecd97519aafa87"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\RegexMatcher.dll",
+      "size": 202752,
+      "sha256": "3aa3683236de1a855bc17edafe11d62997f3e9ccab264c7c577d7af41f28f262"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\ru\\Microsoft.VisualBasic.Forms.resources.dll",
+      "size": 26928,
+      "sha256": "8a5a513816524133edba03e35a5d91e4b6393667d0979078479fc9bb05762387"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\ru\\PresentationCore.resources.dll",
+      "size": 138536,
+      "sha256": "52fb62715e9013693f9d38cd3559a2dc28d1ed0a1d1f286925b42969e176ee16"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\ru\\PresentationFramework.resources.dll",
+      "size": 257848,
+      "sha256": "99c758053cffcd504e79000ae5579bc5fe0d1489086cd9d03088bb58add3b496"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\ru\\PresentationUI.resources.dll",
+      "size": 54568,
+      "sha256": "89e600fc88eace7bb041e0d7972fd123aee3b0c59510d0d4ae9bd3c3e1e599d4"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\ru\\ReachFramework.resources.dll",
+      "size": 44336,
+      "sha256": "ddcde7ff302970ae6cdb841f3ce8cb115895b8fd98f50b74a1a06ab319e2dc22"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\ru\\System.Windows.Controls.Ribbon.resources.dll",
+      "size": 19760,
+      "sha256": "cc45a5481cf36a9255b00549c4e4988082bc88cdbeaa2d8dc237ade02f07e446"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\ru\\System.Windows.Forms.Design.resources.dll",
+      "size": 163112,
+      "sha256": "dea6fd08ef886d060b6674cd620d998ce8c3e53206679dff181f4dd2bb862155"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\ru\\System.Windows.Forms.Primitives.resources.dll",
+      "size": 16688,
+      "sha256": "8dc31d42f21b6892428fc13ec4d1ad929b2fd1eb2d19c9cbc994b3532877f463"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\ru\\System.Windows.Forms.resources.dll",
+      "size": 476968,
+      "sha256": "bf45a1f8f14301c81c353d62c0f94b483f38348d943a1b6d5e74b2a4bdcaff07"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\ru\\System.Windows.Input.Manipulations.resources.dll",
+      "size": 17200,
+      "sha256": "0024c14479f4d569220e0886983d66174356b035c7d5a7c89fcf75a554517e77"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\ru\\System.Xaml.resources.dll",
+      "size": 84776,
+      "sha256": "ec6bb7db450af2389e3cba08798548a2f5b93e14c65a6045f1e866bb77d2393e"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\ru\\UIAutomationClient.resources.dll",
+      "size": 21808,
+      "sha256": "a883f314f66e0c7b13701770a96702c1fc6cea65ad61874ae0bafad8d3ccdd54"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\ru\\UIAutomationClientSideProviders.resources.dll",
+      "size": 22328,
+      "sha256": "08252fda45acf29fdd3be4cf5c04786b02d47ad0153ae21927863a1f20552947"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\ru\\UIAutomationProvider.resources.dll",
+      "size": 15624,
+      "sha256": "134cdf27ed8a3ee52ba0c7e653602d29f8f872e4a97b16f180ff0292cb5b6346"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\ru\\UIAutomationTypes.resources.dll",
+      "size": 19248,
+      "sha256": "954b5b1900fd156b1b6091df01b9c8664675fa14e72cd5caa35128353e37a52c"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\ru\\WindowsBase.resources.dll",
+      "size": 111888,
+      "sha256": "7a936e5fa80111a83cc90d5501c7498149ade164df90610d1dfef55a4a64acab"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\ru\\WindowsFormsIntegration.resources.dll",
+      "size": 16696,
+      "sha256": "0264a5e01f8889a38feabc6148f1c0df7f37913f7f3edcba808dc06da7cf550c"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\System.AppContext.dll",
+      "size": 15664,
+      "sha256": "85606fd1d012cb871ec80075677f8fe0f3f2e27adc3243f973283b5105876400"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\System.Buffers.dll",
+      "size": 15656,
+      "sha256": "274205512ebb3326056b7c0939ff0619af91c7d28fe290c685c68fae8624e204"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\System.CodeDom.dll",
+      "size": 440616,
+      "sha256": "9cc1e48a56e30850c2486116aa6d0d990af1c6459712f2ed1a955732c0f42b76"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\System.Collections.Concurrent.dll",
+      "size": 252200,
+      "sha256": "57b3c52897d5c67baaf812ebacdfa26ddccde0faec817f039b1ac5f6991f8e87"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\System.Collections.dll",
+      "size": 239920,
+      "sha256": "a47f1c82785e44e662ec8283c1b00e9a66deb1935fb17a22bd89a27f2de8c1c1"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\System.Collections.Immutable.dll",
+      "size": 751912,
+      "sha256": "e80efd365c0086fbb422e6ed02a46c5639b9bd053bc1c84171ee42449a96ec07"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\System.Collections.NonGeneric.dll",
+      "size": 92464,
+      "sha256": "5df659ed45ded5a266d2958d8e4fcbf84b972375fccd968a3d2c80371ae308c9"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\System.Collections.Specialized.dll",
+      "size": 92472,
+      "sha256": "62cbd7acbecbe56c08f2ed516882c087036716aad770ff50a3a6cdeb2d9821cd"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\System.ComponentModel.Annotations.dll",
+      "size": 186680,
+      "sha256": "82d4ac288b2573d647ee982339299a558d148a5d460b863f1b444a6affc3abf2"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\System.ComponentModel.DataAnnotations.dll",
+      "size": 17184,
+      "sha256": "a74f66ab96e5a5eb2e5e21719f58a65636bd9ec1320d85eafd7710744dd8e94d"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\System.ComponentModel.dll",
+      "size": 31016,
+      "sha256": "76b27da8318fa43e6d2d2ebbf8ed4c7a279f25f09b8a86d8b674214330d638a1"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\System.ComponentModel.EventBasedAsync.dll",
+      "size": 47416,
+      "sha256": "cffed7a4fc25a7ac0fa22365a06cd1bafd08793ffc0438cfbab8e94be38600d0"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\System.ComponentModel.Primitives.dll",
+      "size": 76072,
+      "sha256": "dc8bae61e7c9fa4e3d9cfc84d4835a7c4423b53113240888b13049f63daae1f4"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\System.ComponentModel.TypeConverter.dll",
+      "size": 686368,
+      "sha256": "62c5ee41547dc6ca97b60999df603e157c3ebc8f7d0ffeedbec91dcb901b9543"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\System.Configuration.ConfigurationManager.dll",
+      "size": 964904,
+      "sha256": "1a93b3685948e6d610de2b4e77efcbe5769c50710f30aa9067ab5e7dc23841ed"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\System.Configuration.dll",
+      "size": 19752,
+      "sha256": "6e6ef15ad846056043b861f1d77e635c0463aa713dd927e2195f739dcd198818"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\System.Console.dll",
+      "size": 158000,
+      "sha256": "07717803399106183066fa9b347b07bdc5c4a4b10787f136d866fac7c95d79df"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\System.Core.dll",
+      "size": 23848,
+      "sha256": "74f1ebccef7e692353d6441254c27f04015c5674523abdcf4f55e0f8aa10599c"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\System.Data.Common.dll",
+      "size": 2648352,
+      "sha256": "981d6171ade0625dde9395bd95db52b60394b7c7db099df99ab69b89a4e42930"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\System.Data.DataSetExtensions.dll",
+      "size": 16168,
+      "sha256": "100d2e881d067c695cba74db71ee08fbacb7863263f5d7fe193282d46f6f0b91"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\System.Data.dll",
+      "size": 25400,
+      "sha256": "f9d6dbfe8715cbbbf10e3cbf53440218af59e81ad2ac6576063c4a6918dbb7e1"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\System.Design.dll",
+      "size": 22312,
+      "sha256": "aff054ee8f2c77fd2ec0e7dd1c148df0c216cd21f8528047b334f48413bbdda8"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\System.Diagnostics.Contracts.dll",
+      "size": 16696,
+      "sha256": "002e413a920ecfd2fe5a5f8ff928eecfeaf3a49565e4993bb7c4eee3140af031"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\System.Diagnostics.Debug.dll",
+      "size": 16168,
+      "sha256": "a6c4d74726771cf2494f842f64bcbe4ad89571c75ba11bd8b10e2892012b379e"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\System.Diagnostics.DiagnosticSource.dll",
+      "size": 383272,
+      "sha256": "56bf07e0434dd14438de9baae6d5d5a073f07a9f060325ce5e8fe4f6c676d566"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\System.Diagnostics.EventLog.dll",
+      "size": 342304,
+      "sha256": "93a81189d20d68e5e3c3b450ef0101fea588027b7c545ec3a8e033e2866ab6dd"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\System.Diagnostics.EventLog.Messages.dll",
+      "size": 801048,
+      "sha256": "b8026913cf5ee9dd886897732159ad4496158ba9817a5e4ab1448607c4c4a316"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\System.Diagnostics.FileVersionInfo.dll",
+      "size": 47400,
+      "sha256": "913b13244c4cf51524341ab0f79be2d40803d66f15d1fb3c68ea38172b1d8140"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\System.Diagnostics.PerformanceCounter.dll",
+      "size": 260360,
+      "sha256": "c10918f507796c81829ae2b51e38f9bd9e813a73e5078954c2873367e2f1d73f"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\System.Diagnostics.Process.dll",
+      "size": 297272,
+      "sha256": "609e2ca0dec23975458e3fd4bf9575827e03a04b7d046688c9754df6963dc782"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\System.Diagnostics.StackTrace.dll",
+      "size": 43312,
+      "sha256": "097eab9dea6c1e6382a295ef4850cf2ac54de3abac55da68fd9a8f690718e8da"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\System.Diagnostics.TextWriterTraceListener.dll",
+      "size": 63768,
+      "sha256": "0463474f4b25c9becea268a54219e6ef8eb92bfb1cc171fb266016a676cd5937"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\System.Diagnostics.Tools.dll",
+      "size": 15656,
+      "sha256": "14e8c1023c8a38ec80f005555a6b1a169e7d824aa9d6f6121a5e7a2f999eaa1d"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\System.Diagnostics.TraceSource.dll",
+      "size": 129320,
+      "sha256": "194d8fb24a031a9c2aaf17b21e995f839f6781c7b0fad3cf7ca15621c7491147"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\System.Diagnostics.Tracing.dll",
+      "size": 16680,
+      "sha256": "6e5218146843f62f1b8f0f5af8447e8ef787ec5a3a41648d6006f67999862fec"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\System.DirectoryServices.dll",
+      "size": 928024,
+      "sha256": "c492978229db1f1be435ef56b58b775a38431df46d997061bbbdfb37743bc632"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\System.dll",
+      "size": 50472,
+      "sha256": "da4e95b22a799ab7d79bdaac8eb81fa6b8837bbc7af8fb496b07d25b5ea6bf89"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\System.Drawing.Common.dll",
+      "size": 1325344,
+      "sha256": "0ed3d013385b19a469ea1789f78ff704c8d9af0eba03b5feb2d5e9b9be819dc5"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\System.Drawing.Design.dll",
+      "size": 15672,
+      "sha256": "4268bdfa8061c0e6eb770e241d2e9a2be1fdc447f880d4aaeebd378490cd3151"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\System.Drawing.dll",
+      "size": 21800,
+      "sha256": "3ee1933b88d047eb1a58439e5b7867d37a65da43e8f542356800e654c6609c67"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\System.Drawing.Primitives.dll",
+      "size": 129328,
+      "sha256": "81014c281f251f78643bb6a8cfa9664c358d42396046888cf7213249fc7a501a"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\System.Dynamic.Runtime.dll",
+      "size": 16680,
+      "sha256": "2fb820706fe6ba1422050f772d0818fbbbce45141082368eb77213ef07ce9c6b"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\System.Formats.Asn1.dll",
+      "size": 223512,
+      "sha256": "76dc4f6ddeb9467012750ebb39f4f270d5940b05b11a03fd8993710b39a267db"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\System.Formats.Tar.dll",
+      "size": 252208,
+      "sha256": "6e8f96b3d66a182fa2193fb18310ec610f3057391ef0c0717d186abfef1500f9"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\System.Globalization.Calendars.dll",
+      "size": 16176,
+      "sha256": "e81f6db580101eb6bf5f27a047b1965f0076d4017b29f640230e6ad852055d62"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\System.Globalization.dll",
+      "size": 16184,
+      "sha256": "02cd854dccc15a5cc816321bcf409a85c6a3242b1f5cecdb9007631a95e61277"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\System.Globalization.Extensions.dll",
+      "size": 15656,
+      "sha256": "c0312d946bd793b4c53dd7c7cfe00d58a14df9f0d544ea974b76b8b496f0004a"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\System.IO.Compression.Brotli.dll",
+      "size": 71960,
+      "sha256": "bbc76c9e458875420e2b42ddc781779eef419810ca8fece9be8231eb37a74bb4"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\System.IO.Compression.dll",
+      "size": 243976,
+      "sha256": "d2071df439025ff17b881a41509d3801ae95e9fcb502878a0b38b38d8c2dcad1"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\System.IO.Compression.FileSystem.dll",
+      "size": 15656,
+      "sha256": "003802572f4f962ec80f71595a63561d51ff80b56e02ef00e00ef765d5b12681"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\System.IO.Compression.Native.dll",
+      "size": 776488,
+      "sha256": "cbee0a84787bc41f8ab2bba6cb63225ab16243e39d637a2c04d9f665821e705b"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\System.IO.Compression.ZipFile.dll",
+      "size": 51504,
+      "sha256": "e3ca1a9337bcf629f61947f197d305d2504d50b619b5320508f31e7aad2f35d2"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\System.IO.dll",
+      "size": 16184,
+      "sha256": "bdc9b9fb7b3cb8443d9b60343f21193a04ca6d18d6e1d54f50fd94880b413e9b"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\System.IO.FileSystem.AccessControl.dll",
+      "size": 96552,
+      "sha256": "80c8e552a411932ba8424a89c7d0783a9873f5c47142ecf0096eba62023de24a"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\System.IO.FileSystem.dll",
+      "size": 16184,
+      "sha256": "bf799b1e170a4d6aec7372836e44082be1387992602575eabcc1512b7987bf1b"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\System.IO.FileSystem.DriveInfo.dll",
+      "size": 51512,
+      "sha256": "30f3dc869da99372951b075f24bd34942cad06d3289b4b20f5ed566de028db05"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\System.IO.FileSystem.Primitives.dll",
+      "size": 15656,
+      "sha256": "2622a63c8cc3e99eece943e962f0724470cd3519b3f36001379c88f7bf25fcd4"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\System.IO.FileSystem.Watcher.dll",
+      "size": 76080,
+      "sha256": "88819d015c667e278d753951e94437656cac1ce319fa00ad9b36c72f5ef70098"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\System.IO.IsolatedStorage.dll",
+      "size": 84264,
+      "sha256": "97db09d204a674ba353939302fd710a2a0f1057417ccadf7dd40e40cd33f69e2"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\System.IO.MemoryMappedFiles.dll",
+      "size": 76072,
+      "sha256": "6dd3de7b813bb957b9432878f3cc348eae2bcb32f83eaff82fa9bbbdce7b917d"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\System.IO.Packaging.dll",
+      "size": 268584,
+      "sha256": "55492537adc6413b76ba14e5f312eeeeed6a6ce9b4c5892efe7054a5a2071584"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\System.IO.Pipes.AccessControl.dll",
+      "size": 16680,
+      "sha256": "ef6a616eccb4278291e1aab723a19169793d9afcfda39df41b1ef39b567c70ee"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\System.IO.Pipes.dll",
+      "size": 153888,
+      "sha256": "9859fec3348346548bdbbe3eae0aca238732cfe919faaeaa1099d772ad49a703"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\System.IO.UnmanagedMemoryStream.dll",
+      "size": 15664,
+      "sha256": "b60bc90f5874132825f229ed7a9992bc9208774048619e44e6f852d5fd4feec9"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\System.Linq.dll",
+      "size": 489744,
+      "sha256": "7e368e9fdaf8cc5553589b814a3e0d0427bb5815574a49ae29d01f5771f2f208"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\System.Linq.Expressions.dll",
+      "size": 3389704,
+      "sha256": "fd3cebcbc864e9d6dfa4137627b0dacc71552b6cb1b06419d2397a2a94d471da"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\System.Linq.Parallel.dll",
+      "size": 735528,
+      "sha256": "80dd8ce461cc4a6bf024f357d3dea665cd3523b04bf77518378bdf049cdd7b4d"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\System.Linq.Queryable.dll",
+      "size": 166184,
+      "sha256": "1221153d9342237f2bc77a30d3aa1bc3e0dc16e032741cbe027fa4cb1e86b75b"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\System.Memory.dll",
+      "size": 145704,
+      "sha256": "cb14a70c33c61273408ea56736da2a8a3984d9cbe16c1f145ad69b48deab32f6"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\System.Net.dll",
+      "size": 17696,
+      "sha256": "173b44869200fe39365a365b43c0fb9e10ea3965c411cfea957dedefe8c98fbb"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\System.Net.Http.dll",
+      "size": 1575208,
+      "sha256": "62f73d21a6b70fa775433529cb8d6db5361fc2ef7603339fa48ed363e4584d72"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\System.Net.Http.Json.dll",
+      "size": 112936,
+      "sha256": "d61c358943329dcf3bee1d98e3db84bb8c5444baa1f1cf574be7b84f1e54d5a5"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\System.Net.HttpListener.dll",
+      "size": 493864,
+      "sha256": "01dac7087a913863d6c665f0c38d8e85c765ad021fed79ecd8eb982d9a38712b"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\System.Net.Mail.dll",
+      "size": 391464,
+      "sha256": "b94aacd7d935a865fbc66f4426ec093778d86cfb1d5583a78c3074909d5e5185"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\System.Net.NameResolution.dll",
+      "size": 100640,
+      "sha256": "ad7caabdd7c466aa1d38ffb6ae76b6fafd86f3701d2b9d410bd3a744d5a387d1"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\System.Net.NetworkInformation.dll",
+      "size": 141608,
+      "sha256": "5972d2fa5ee1fb3ee5d513f17d7cd69cea1760cf4aa7133d5d65894df6e5c24d"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\System.Net.Ping.dll",
+      "size": 84240,
+      "sha256": "6fb3e0c793078d5f7417b1b693d6a64e46cad8fd0356e10d4802a6ff6471d4a0"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\System.Net.Primitives.dll",
+      "size": 211240,
+      "sha256": "eccb01119a79f9150121aa922a4d4d78bdceb3d4c64c9a94471698ef19a70915"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\System.Net.Quic.dll",
+      "size": 260408,
+      "sha256": "e9fbb0a26df66e6153801c2966e3ae87b24fe1abc71386738600e662f09604b6"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\System.Net.Requests.dll",
+      "size": 321800,
+      "sha256": "88c72a22434e33cbf54579835179cea9a44088468726238d1a07835f52f05c7d"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\System.Net.Security.dll",
+      "size": 604432,
+      "sha256": "a4a5585958d6557340611bec3d923b62974e937cad9909b10ffac59849d737e4"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\System.Net.ServicePoint.dll",
+      "size": 43320,
+      "sha256": "b0bfeaebc92dc61b097737128920b94782b0c1515b797556d22da4f111cbb035"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\System.Net.Sockets.dll",
+      "size": 481576,
+      "sha256": "035bf7c2cce00c5060b1f87e33cc13214525ce3a5eb830bcf3bea9037535b046"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\System.Net.WebClient.dll",
+      "size": 149800,
+      "sha256": "4e18587dce0b40bc7302616b16da9bad21046d43925026313803d5d8ed4fd5aa"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\System.Net.WebHeaderCollection.dll",
+      "size": 63760,
+      "sha256": "eadbb00b0211d4cc2c7ae132d6cac714078838ea8bfc6f96dc3732079df9c229"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\System.Net.WebProxy.dll",
+      "size": 43304,
+      "sha256": "ff9a10ddc047533b83fa40391513c8a5d2e923231cc3cf68bde126422439d467"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\System.Net.WebSockets.Client.dll",
+      "size": 92448,
+      "sha256": "95e4f1f9ffe92efe42923cd098efd16457c03084593e5cff7fc997b4417be109"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\System.Net.WebSockets.dll",
+      "size": 170256,
+      "sha256": "d9ba29f4dfad97bfe4caf3be99c7896ec25240725357286ea4771086365d9eb0"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\System.Numerics.dll",
+      "size": 15656,
+      "sha256": "d0d1c5fbffaa6fe0d869d819d49f2de2ce932235245a58963d20523c1d2c3b9a"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\System.Numerics.Vectors.dll",
+      "size": 16176,
+      "sha256": "a6537ee7220e6a91731b8bb7ab51264b2bb4a6b9c66e5894a8db8a0f7de26518"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\System.ObjectModel.dll",
+      "size": 71992,
+      "sha256": "d6fe48473cb353f74456a6e5ec6bdb6b5efbdb1459b01f91bd34b636e5766307"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\System.Printing.dll",
+      "size": 907528,
+      "sha256": "c8fd3727b155d7ae6092184d78fa7f355a89b75116ffa55036b08dc4989a1bde"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\System.Private.CoreLib.dll",
+      "size": 12536104,
+      "sha256": "f7ae5f5bc336b3caf1d9d73145098f004dd75057d9b02c6267b28a2a2475a4c7"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\System.Private.DataContractSerialization.dll",
+      "size": 1927464,
+      "sha256": "c41e7b1613b7f3057e777030252be4ba8b0bde74598172138c0b847c79ef7429"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\System.Private.Uri.dll",
+      "size": 248072,
+      "sha256": "e1eefdcfe04c1f6f835492a13d6bb5d94bb156ab03241cb3f71b8f0d670828be"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\System.Private.Xml.dll",
+      "size": 7424272,
+      "sha256": "ca611ba094aa51b09fb2d1df4e56b3047179c1c04e2c1e42b1abbb78ca799c61"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\System.Private.Xml.Linq.dll",
+      "size": 366904,
+      "sha256": "959af38a8e0e14ddffea2870fa4dcc9d91c9032c1f855bed7866c6842906035e"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\System.Reflection.DispatchProxy.dll",
+      "size": 71976,
+      "sha256": "ad908600f645fd39ffe37af87daa8c273390e2b6ce88eec7e8586954a584fa5d"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\System.Reflection.dll",
+      "size": 16680,
+      "sha256": "12032839d45d8c3523bb34eb61c5baae2ce8d332f0ba12e8f58be439c9620b46"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\System.Reflection.Emit.dll",
+      "size": 125240,
+      "sha256": "90957a0f9f71b0a25fb3c9f3ea4682c7dec5c70032186be1e9accfb71918b870"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\System.Reflection.Emit.ILGeneration.dll",
+      "size": 16160,
+      "sha256": "eaac80bc2f12c08330cc81c907a19600e11af4f4936a6e33b30cf202af929eb8"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\System.Reflection.Emit.Lightweight.dll",
+      "size": 16168,
+      "sha256": "5d2ceb2213319e75a85bdcd16da7cbe2664e88c6d85744b2788b47c321994384"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\System.Reflection.Extensions.dll",
+      "size": 15656,
+      "sha256": "0a440c60943388cbdb32735449df4a4398e78f5e1f42378a1bdb635006fb95a0"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\System.Reflection.Metadata.dll",
+      "size": 1063208,
+      "sha256": "2f68b5ec244d3a27aff446d1f48db3881876d61fe4a726bc427ebb0b95620ad9"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\System.Reflection.Primitives.dll",
+      "size": 16168,
+      "sha256": "6a58615a4e3c5685e45c9f8247772bd4b5e157bcdd9c16eb6e802445bd695438"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\System.Reflection.TypeExtensions.dll",
+      "size": 43312,
+      "sha256": "7bf1c9f63bf7f691f0a86e10a1e8bf38689f1e1465df26531aa6e247bd073231"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\System.Resources.Extensions.dll",
+      "size": 129320,
+      "sha256": "95b4e87b6de09d898ad1cd939bc36cb9861397e6d21d11d1d8f2d3e246542673"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\System.Resources.Reader.dll",
+      "size": 15640,
+      "sha256": "e00c7e36b0e937e42c33a6922c47b78e96a9400f956c92edcb3794c12f3ddf7a"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\System.Resources.ResourceManager.dll",
+      "size": 16168,
+      "sha256": "69e478597527f95481e2ecce2d4c47a6c8b39a77d90b060f1101db5d94236118"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\System.Resources.Writer.dll",
+      "size": 51464,
+      "sha256": "5a963fd24e96005725329109c78df5447d5716c565236e13cc0fb2f7a77ad2df"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\System.Runtime.CompilerServices.Unsafe.dll",
+      "size": 15664,
+      "sha256": "3f485a31a09d52f199dc5b33844bc2e828e73af943d4323cf4bb6966c791eee8"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\System.Runtime.CompilerServices.VisualC.dll",
+      "size": 31016,
+      "sha256": "6c742453e9136e76f942fedf290621cfb874523ad260efbb0764c10cc4f159f4"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\System.Runtime.dll",
+      "size": 43816,
+      "sha256": "6ec607c001a60807affd7551d266c1635a3f54d88b09b850323097e610846af4"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\System.Runtime.Extensions.dll",
+      "size": 18216,
+      "sha256": "bacc79f1e4111e64dfc06348410dbaf919a21e8ddc2cc171ac81042c41e00571"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\System.Runtime.Handles.dll",
+      "size": 15656,
+      "sha256": "e6555a8e3eece7454043b433f4ac3ecef0b96765bd4e1a2e7846f3664f15c202"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\System.Runtime.InteropServices.dll",
+      "size": 88360,
+      "sha256": "84856b636d98cb2f2b4564be946d767393d89b0ef806f8d0a576a5f0da27763f"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\System.Runtime.InteropServices.JavaScript.dll",
+      "size": 51504,
+      "sha256": "2a3e6a54dea95c6be35c7d06888cbccd27ddbfef83fadc52c7ab79d4e4487a37"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\System.Runtime.InteropServices.RuntimeInformation.dll",
+      "size": 15656,
+      "sha256": "50f937460565eef58f90bd93306860161e81066331d7e9d078fa12e85e556446"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\System.Runtime.Intrinsics.dll",
+      "size": 17208,
+      "sha256": "ef6ca0fc3d246572e7d8fadecd9362bbb0453319c0710f4c54dbbab91b2d28fe"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\System.Runtime.Loader.dll",
+      "size": 16168,
+      "sha256": "d9ced4c78e7a9897b974c854cbb9353a00c1d4f8797b8c4672cf1b1afdf48f7b"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\System.Runtime.Numerics.dll",
+      "size": 313640,
+      "sha256": "eb35636b2eaadadea1c14eebf8cc16b44094062f7d54277ca2b42a03e4f21ade"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\System.Runtime.Serialization.dll",
+      "size": 17192,
+      "sha256": "50057a8f3d843cad04b00bbeabeb0d8a414a83ab3c544174a5e86b7533863221"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\System.Runtime.Serialization.Formatters.dll",
+      "size": 293152,
+      "sha256": "715c740c9ffe841553a0662c898ae4261d6685b2c52d319608e563d7c1d3703a"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\System.Runtime.Serialization.Json.dll",
+      "size": 16168,
+      "sha256": "6e8902bc3dea348b03698945533cc5686bcfec3b7b5348768b04a9f19ae69530"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\System.Runtime.Serialization.Primitives.dll",
+      "size": 39208,
+      "sha256": "bc1821c6c22339b9d7c2a64a1e3fdaf6293b56f8cb08dee1170feeba8a0b0af0"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\System.Runtime.Serialization.Xml.dll",
+      "size": 17208,
+      "sha256": "e9cbed40e12a6c0d7c9c667c8dbb2b1238b2aff509e928235fb1cb26c6cae4ef"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\System.Security.AccessControl.dll",
+      "size": 211256,
+      "sha256": "ce4846c45c1fcd56a1b89460e5050b523aceeee0020f9e327ef7dce2c357989a"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\System.Security.Claims.dll",
+      "size": 92464,
+      "sha256": "53ba18312864dbc6898094f9a4fbd3e82efde5d9311c5d36c2a8a717386e3fb7"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\System.Security.Cryptography.Algorithms.dll",
+      "size": 17696,
+      "sha256": "5d7e60fdc1a70a58b8640f0779deb28338baa07ff1a1c4a62ad63342080126e6"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\System.Security.Cryptography.Cng.dll",
+      "size": 16680,
+      "sha256": "42051af76afb5567cb24f8f828a243cc646553087f526a25f6299c5f84080406"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\System.Security.Cryptography.Csp.dll",
+      "size": 16176,
+      "sha256": "d23f39d466a4258b17b22092fd41996197ab16d0fd4226bccf765b751d72f639"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\System.Security.Cryptography.dll",
+      "size": 1792304,
+      "sha256": "0d82e4d848a23eeb812512dc55c9d824947d6f4527acfe280f45ef69168725d9"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\System.Security.Cryptography.Encoding.dll",
+      "size": 16168,
+      "sha256": "49d4c146a340f5ed37994cf14795ba57a1a5015f39e3aab15b8a97e5928c0f91"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\System.Security.Cryptography.OpenSsl.dll",
+      "size": 15656,
+      "sha256": "3a368abcc6ac7ea4ffea50a84aca7145fbe8c19df7556c0c08795c63e895c6fc"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\System.Security.Cryptography.Pkcs.dll",
+      "size": 682288,
+      "sha256": "387e728d96905f0d11ba15fc8eb629659fef6cc53c277d9fa357b317c26116de"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\System.Security.Cryptography.Primitives.dll",
+      "size": 16168,
+      "sha256": "97575e0a811c269603222f41ab12b5da3bce70a609d9f71178f8e6127a5bc616"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\System.Security.Cryptography.ProtectedData.dll",
+      "size": 55568,
+      "sha256": "328d369db9b4e720bc40f7f822e0292c32e584dd503a19753354b07ad0d1c8f2"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\System.Security.Cryptography.X509Certificates.dll",
+      "size": 17208,
+      "sha256": "6fb4551da91c7e168186fabbe766466b4b66beabcb3f697ec894b6b69501a2fe"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\System.Security.Cryptography.Xml.dll",
+      "size": 416040,
+      "sha256": "78410770397f1d18378fb5a9712aa98170d77fe3dde57bd36ab446e50ea490b6"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\System.Security.dll",
+      "size": 18728,
+      "sha256": "afa778a017b9999c4453818e9bb424f5a29e13df605a93ed77898e20690f0988"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\System.Security.Permissions.dll",
+      "size": 182576,
+      "sha256": "d8c569cc890fc958ab62afab13fc6fcf05d2c2fba26f5d4e434a3b80908e1c76"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\System.Security.Principal.dll",
+      "size": 15656,
+      "sha256": "67158faf500a021b96c98eb0270b8749ce187fe81aae983243fd107b4ead16fe"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\System.Security.Principal.Windows.dll",
+      "size": 166200,
+      "sha256": "bf592ff40619c8d0c4d44fe5b1a67050d4da947801c7cd91929aa070fedc1eb0"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\System.Security.SecureString.dll",
+      "size": 15656,
+      "sha256": "b1bbb322bf54f7f943891fa1bb5fac5fa5ec248f3a813a4a97211a045867d2fa"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\System.ServiceModel.Web.dll",
+      "size": 17192,
+      "sha256": "3f59ed34759004d11da1e34a1ec2229a58b52bae77cf2593ad9ed87c3cfb1fdd"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\System.ServiceProcess.dll",
+      "size": 16168,
+      "sha256": "66d4766511aff734def48a3e59ffd5b0056c273eeda4e7b178c70d1756d220c8"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\System.Text.Encoding.CodePages.dll",
+      "size": 858416,
+      "sha256": "a74210fda58ca34ca0206b2ee48b3265a7d44a118a7c9e8120fe7fea0e9db923"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\System.Text.Encoding.dll",
+      "size": 16168,
+      "sha256": "4e076fc0d05400153ad85b85f3ae2da2c74b5400bba0e581512b7340b9e21c79"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\System.Text.Encoding.Extensions.dll",
+      "size": 16184,
+      "sha256": "407de6196c1ed972d69e954b73cb827f0cb7dbe59f5f9e70fae08bc95116f096"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\System.Text.Encodings.Web.dll",
+      "size": 125240,
+      "sha256": "661fced257c1bcbbbfae39b68e705a86502fa59699f87c956881e7a91e8cfc9b"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\System.Text.Json.dll",
+      "size": 1386776,
+      "sha256": "bb80f7f61c90329ad21dddf2560d9094536d06db13aaaa4d68d8ae24d02404d2"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\System.Text.RegularExpressions.dll",
+      "size": 960808,
+      "sha256": "cbab0e27b7f1e3f5ebeb042a216fb0a4a512080c5447bbf7fe9d5ffc635ce9d9"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\System.Threading.AccessControl.dll",
+      "size": 80176,
+      "sha256": "4fbebe8465b73d4cef40369ca2e06af6708b10a02d0e419f8963cae29fc0bbc8"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\System.Threading.Channels.dll",
+      "size": 121128,
+      "sha256": "675b361355a8313c630ed1c5fb2c10859546cfdd05ceeaf9cc677ba447fed902"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\System.Threading.dll",
+      "size": 80184,
+      "sha256": "8f10c11f157cb1b1dc59899ccd8c2ceed802df5f6c732f7768f45f5a83b5f270"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\System.Threading.Overlapped.dll",
+      "size": 16184,
+      "sha256": "6fe5da6486099dabaea923dfadcc1f9fc646deac1960700a70cdc2192ee5a7b5"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\System.Threading.Tasks.Dataflow.dll",
+      "size": 440600,
+      "sha256": "bdc1e285b5c3c14bdf9d9b3a87562c935016cb73cbe560e57a8b53e301f1b67c"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\System.Threading.Tasks.dll",
+      "size": 17176,
+      "sha256": "5ce56ab2b4a3c42ccd86e1b5b0a3bddf37913d5890e2a114729c24d170f71650"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\System.Threading.Tasks.Extensions.dll",
+      "size": 16168,
+      "sha256": "ab8188c166f8851d08e49e64e6ca50e5dd724f6c1eb8fd6fcaefab4986e79068"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\System.Threading.Tasks.Parallel.dll",
+      "size": 121136,
+      "sha256": "398c689dcc4ba17c5f03447319c5b3e37099e3058c1bdf9232a23aee8023525a"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\System.Threading.Thread.dll",
+      "size": 16168,
+      "sha256": "50de3e96a5627219c0e543b2d58c9c531a5298b92a96cfe370f7dce608ce2a00"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\System.Threading.ThreadPool.dll",
+      "size": 16184,
+      "sha256": "05e5384183b123893a30b067a9bf8ec8b967c5c2c6476d711427c8c8d4f4a9a8"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\System.Threading.Timer.dll",
+      "size": 15656,
+      "sha256": "2b8a19a5bc275d858b2988f285680b1b82eba71c733887d565840cd0e8ddb31e"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\System.Transactions.dll",
+      "size": 16696,
+      "sha256": "f933aa1a46254b20e1d746ef51aeb9e0f1be0fcf98d6eae82b1ba90d426307aa"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\System.Transactions.Local.dll",
+      "size": 596264,
+      "sha256": "b5a2a50e0546c0ccad33e6b682594d9cb87e0a6c229364d26ff133ffe84847b1"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\System.ValueTuple.dll",
+      "size": 15656,
+      "sha256": "787a8ea24e6e16c9255f3783ef9306f31832528bf4d572b7c80f8a6339b8fa4c"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\System.Web.dll",
+      "size": 15640,
+      "sha256": "9f78aad23196f3bf9ebea04f83601638c6cd556ec333cd8ff1084b687157fdb7"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\System.Web.HttpUtility.dll",
+      "size": 59688,
+      "sha256": "b381d62f14d6003fa9bad9ab5bb0cbd99437b420612020805878a7ad94b8f450"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\System.Windows.Controls.Ribbon.dll",
+      "size": 1399056,
+      "sha256": "cb93a16df1ac3ce52a750257cf0782800a62c6ce4e0a863c3a7686890f41cf65"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\System.Windows.dll",
+      "size": 16144,
+      "sha256": "8df471855dc12e95bc388f56865c06fd2ab7d06622190f94190d52ec3e2a2285"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\System.Windows.Extensions.dll",
+      "size": 112920,
+      "sha256": "7eedbf8850199ab57a85dbea371d90b3328df5f2356fa239646796c8d7fbab7b"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\System.Windows.Forms.Design.dll",
+      "size": 5253424,
+      "sha256": "e3fc59643c3073e4d4f3a6fe1fcec7a283dc800d717ff6ecfa29eb48b8ecacc7"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\System.Windows.Forms.Design.Editors.dll",
+      "size": 16672,
+      "sha256": "2cd752403041ef5b832c29c82b89171c70844519a7ce4ff9fa6bb3bd08eccde3"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\System.Windows.Forms.dll",
+      "size": 12798224,
+      "sha256": "95eacd545637496ee89bf67dd4efa872c08f2d5af2309e70aa8d6225b6028339"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\System.Windows.Forms.Primitives.dll",
+      "size": 2763048,
+      "sha256": "b98e9d1b772e40e1d16b3bef24a9b0a71850d5c03337e4adbf3937933b2fde2f"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\System.Windows.Input.Manipulations.dll",
+      "size": 129312,
+      "sha256": "d72ba0eb330e0b0c93dc4d99eed9a00655b9cafe751de24dbe628f221a4c2d26"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\System.Windows.Presentation.dll",
+      "size": 31032,
+      "sha256": "a175dc2c6932b6d449d212ca5e988e0facec6cd66d73aee37916822f4b2a24f4"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\System.Xaml.dll",
+      "size": 1300760,
+      "sha256": "cdd606040be31dde7aad31e150f2276b803c6af1da58860e490ff97f135900f2"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\System.Xml.dll",
+      "size": 23848,
+      "sha256": "7bddb3c041fef4eaaae614d9a111b7d832aca7ec1600e81989e863f88ade2198"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\System.Xml.Linq.dll",
+      "size": 16168,
+      "sha256": "de89076f2baacc9329a442df29c7b044597827bfd5e690c1acf0521457d59305"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\System.Xml.ReaderWriter.dll",
+      "size": 22320,
+      "sha256": "1aa80560d9e1d5fb23f8a7dda5b11e866d1fd8a20b7088cd034cb9bada30ba26"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\System.Xml.Serialization.dll",
+      "size": 16680,
+      "sha256": "8f8da5d01403e707f55fd8ddf6d9ee8df439253757ea8617e635470a03a1b42f"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\System.Xml.XDocument.dll",
+      "size": 16152,
+      "sha256": "ef6a6e81fcd5f581be3407154430101345dad61fdba523f03f88a50237273bf0"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\System.Xml.XmlDocument.dll",
+      "size": 16168,
+      "sha256": "93de7592142961f7fa7a3ba8b678e1a54a56056cd600b813f22d9bd363fe53be"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\System.Xml.XmlSerializer.dll",
+      "size": 18232,
+      "sha256": "a04682417050ed549a2ac0905b5d4c1750d24b8dde6348b7477ae5ada393774d"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\System.Xml.XPath.dll",
+      "size": 16168,
+      "sha256": "ef86c2eaa55756324c5562b4792c96f0f1c172032112c4cd4b50559c3b6db136"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\System.Xml.XPath.XDocument.dll",
+      "size": 31032,
+      "sha256": "a7b91491f630a1cdc746f4c31879059cb239cda1dae7a489cb044c9c64a717c1"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\Timestamps.dll",
+      "size": 11776,
+      "sha256": "c33f15ebcf54bfa667ecfe1a9b3c60c9e1cc9fc7c9ee5b259c8d61700533078c"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\tr\\Microsoft.VisualBasic.Forms.resources.dll",
+      "size": 25384,
+      "sha256": "f1cf7160c2153fd586ba7c1403b0b1ae4bfa24457c2d928339fb7540574071f8"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\tr\\PresentationCore.resources.dll",
+      "size": 107832,
+      "sha256": "00f9dcfa89be394dc689d1be9fad0283ae4728756cf672816a9d781a0e32d502"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\tr\\PresentationFramework.resources.dll",
+      "size": 196360,
+      "sha256": "fe336854b8fda92b4a07912a26c572caaf4a087e083175db593bf75262e7a216"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\tr\\PresentationUI.resources.dll",
+      "size": 44808,
+      "sha256": "18a6fcd66f7029d6355bdec710b4362125a3bff4e52e04b04abcb80906a95db1"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\tr\\ReachFramework.resources.dll",
+      "size": 38712,
+      "sha256": "18b03027d4412923155a29f65faf2510a840061fec384de7ab8bf706e9bd9447"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\tr\\System.Windows.Controls.Ribbon.resources.dll",
+      "size": 18744,
+      "sha256": "cb2d7b55d985366a07ee09c35759209142a9aad32fef5e58e58df7025a2aa1df"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\tr\\System.Windows.Forms.Design.resources.dll",
+      "size": 148776,
+      "sha256": "41991d74fe52b732d03dc42f1f4bf99e658ecd5b8cfb6961527fecbbf946118a"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\tr\\System.Windows.Forms.Primitives.resources.dll",
+      "size": 16152,
+      "sha256": "91ed79d652fb74a3a357c098b43076dad76b3b9fe920883fed68b50acf72eeb4"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\tr\\System.Windows.Forms.resources.dll",
+      "size": 361784,
+      "sha256": "ba7080c0383813b5070d6b1b66747b0c600dd49801db2e4db36c0d210b3ad28c"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\tr\\System.Windows.Input.Manipulations.resources.dll",
+      "size": 16688,
+      "sha256": "fb5ebafd377c2a50ae2de81685c2075d1bc79823923c5f1120e3f8f11e7ac330"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\tr\\System.Xaml.resources.dll",
+      "size": 65336,
+      "sha256": "b0f6b6b9d731b22d1075a551888fa424d71626c98fd3b93e4cd5cb96679743fc"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\tr\\UIAutomationClient.resources.dll",
+      "size": 20232,
+      "sha256": "1a5b5f3faee628b6890ace7aa8a8a8d3e013aab09b7ce14d5fac65ec2d314abd"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\tr\\UIAutomationClientSideProviders.resources.dll",
+      "size": 21296,
+      "sha256": "e480ebea2688fbf6ebbd29d6c96e142607ff6f8c571b9ef1734e5e501d0b5b28"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\tr\\UIAutomationProvider.resources.dll",
+      "size": 15656,
+      "sha256": "0094e93e31762cbe44fe1e35824398a79367adbb1dcaa06c73eebc15a85d80dd"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\tr\\UIAutomationTypes.resources.dll",
+      "size": 18744,
+      "sha256": "c37248c8c6e060adaaf8219f40d1ba0ff18d0024d30e4bf840eb1bd283021701"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\tr\\WindowsBase.resources.dll",
+      "size": 85296,
+      "sha256": "acc5a008ba45b78461d76d7ce80115988602293e541e4f424f3cca5672ce42f5"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\tr\\WindowsFormsIntegration.resources.dll",
+      "size": 16136,
+      "sha256": "1a658ac918fd614fa68eb82897df3505f9982e2d9468758b2ac9cb22727f24ba"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\TtsService.deps.json",
+      "size": 39834,
+      "sha256": "cfe8d0aa69fefa04750e2709574078c9ad26be98a9cf89cf9a61d5c8f18537c7"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\TtsService.dll",
+      "size": 98304,
+      "sha256": "a87a2028e50ae4f0069ebf0c28de4ed5e048241306b68002151de018845694af"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\TtsService.exe",
+      "size": 116736,
+      "sha256": "1621b40b9bbdf68011372f25e16a282d0e286cd33a5981e00b9887fa90b3045d"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\ttsservice.info",
+      "size": 28,
+      "sha256": "aa383b7783d5402230b815015f361e67292d7b0ba674840d3971da3f01b67528"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\TtsService.runtimeconfig.json",
+      "size": 525,
+      "sha256": "d7822a64dc44047d5429cc0b0b27ed658e4e8d9136620482cb1299df40474d4a"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\UIAutomationClient.dll",
+      "size": 383272,
+      "sha256": "e48a6e377dfbbb65a1da2e75c1c03318eeb3c62aadbf95f6eb816c18ff1593d3"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\UIAutomationClientSideProviders.dll",
+      "size": 805160,
+      "sha256": "61adb0da81312d006ff4b577ada1dd2328d783e70e9077100de0c4f90d28efdd"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\UIAutomationProvider.dll",
+      "size": 59656,
+      "sha256": "5321e85b4e94207aa5ba990cf7e8b64da657b99f423e73e44e12665b93561554"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\UIAutomationTypes.dll",
+      "size": 301360,
+      "sha256": "4f6ed94d3da78b0530572d3ec29b3146bc6cebee7dedfcc3486b8e88e2a2af3e"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\UrlMatcher.dll",
+      "size": 313856,
+      "sha256": "32bd1b578557f33821184115f94537f73697b59ba7b489d0ab1f51502c488d60"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\vcruntime140_cor3.dll",
+      "size": 90224,
+      "sha256": "a9c96258573313001001192224a69ed501355a2d3b340c7dadd14a00edd686ef"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\WatsonWebserver.Core.dll",
+      "size": 110080,
+      "sha256": "1e8b27c1f17e3100be8a4287f6a329259610fb6c6f954785bae6c4a9337d9439"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\WatsonWebserver.dll",
+      "size": 51200,
+      "sha256": "52731850c9b772e019066ab191a5f3587e0c748aeb56194e24c8f164ade46915"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\WindowsBase.dll",
+      "size": 2079016,
+      "sha256": "e87245be6399edc1b27094aa98e29c4fb6eb6ff9db45d24225f8c9674d2aafaf"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\WindowsFormsIntegration.dll",
+      "size": 194840,
+      "sha256": "9afb53f426ccf613422eed08a72cdb719aa4f5c1c8fcd1d0744661e7edf5d570"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\WinRT.Runtime.dll",
+      "size": 528944,
+      "sha256": "bcf3a14e8712a90837fc5c0d8c8a24696af2bd7f74e9767597ec81ededfb23db"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\wpfgfx_cor3.dll",
+      "size": 1803536,
+      "sha256": "544f023331a4c530672c9fac081677f158d8968c6ff0da3138842de7980c0dd7"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\zh-Hans\\Microsoft.VisualBasic.Forms.resources.dll",
+      "size": 25400,
+      "sha256": "333cdf628bcefe80303731537da17e1cef34b6e2dd744445f4658aa0ffd3957d"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\zh-Hans\\PresentationCore.resources.dll",
+      "size": 100648,
+      "sha256": "aa82b558167b6854e07f0d0dac4c40a385e55723894089afc4af4ef3b23370b2"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\zh-Hans\\PresentationFramework.resources.dll",
+      "size": 183600,
+      "sha256": "e2b460631bd3026c0a992da2c29e5648aa2fee6ca18cec4feb01402ce16461ab"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\zh-Hans\\PresentationUI.resources.dll",
+      "size": 43280,
+      "sha256": "9642be2f2c408207a612e742d0a54c4ba3e8b2139b1bb6afa5c143a38dc283ea"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\zh-Hans\\ReachFramework.resources.dll",
+      "size": 37168,
+      "sha256": "bae8ff147f56b2e19490693d3874ba4ab8e16dce09fde72962dc7dc6a34ae008"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\zh-Hans\\System.Windows.Controls.Ribbon.resources.dll",
+      "size": 18736,
+      "sha256": "cb0097d7d1c6a83a23a8166bc16602ef7c6874063cf74353319b3a7c4578c30f"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\zh-Hans\\System.Windows.Forms.Design.resources.dll",
+      "size": 145208,
+      "sha256": "3cf954138b45fae3ff164c44a3edf3a7ca70e5d070b12d2c37a1379fd361a50a"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\zh-Hans\\System.Windows.Forms.Primitives.resources.dll",
+      "size": 16168,
+      "sha256": "4ad3d727e990e9deee6c9a92b287ced8c7eb3a9c5ec12d5f0c6d60c261a3524d"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\zh-Hans\\System.Windows.Forms.resources.dll",
+      "size": 319784,
+      "sha256": "cd0e86a9417bf446f8cd6186366491bc2856380b76a2b52d335abc5e1a480794"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\zh-Hans\\System.Windows.Input.Manipulations.resources.dll",
+      "size": 16688,
+      "sha256": "43658a25f1a46dfde58b43084ac05fcd0d19e6f9b2a452d8eec90330039cdd16"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\zh-Hans\\System.Xaml.resources.dll",
+      "size": 61232,
+      "sha256": "2af3c8223a9635e0dc376855aa0e1501ebca46ba5e9d8b440b26714538880fe6"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\zh-Hans\\UIAutomationClient.resources.dll",
+      "size": 19736,
+      "sha256": "5101112c9f3bf80b8d4140bebd8a93a922384faf8313999b3656fce07810d632"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\zh-Hans\\UIAutomationClientSideProviders.resources.dll",
+      "size": 20792,
+      "sha256": "07624012e344ff753c85787c4b444034c1d54cc2d6a992eb705ff1cb915559ea"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\zh-Hans\\UIAutomationProvider.resources.dll",
+      "size": 15656,
+      "sha256": "ce8a6eb2820e583a2e8fea67dad3ab5fbfcf5d75b74289a155632e1d5afad9c4"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\zh-Hans\\UIAutomationTypes.resources.dll",
+      "size": 18736,
+      "sha256": "0f73f83e368ed52140f919d72c644730b3a644aab102f44810fca8424b1bac45"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\zh-Hans\\WindowsBase.resources.dll",
+      "size": 79152,
+      "sha256": "c5ecc1f06538840493d69f8841c08e3915a144fc1fcfd0ffe60446f3e2a8c86c"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\zh-Hans\\WindowsFormsIntegration.resources.dll",
+      "size": 16184,
+      "sha256": "6ee2388d849a1f83b0ec3b84883c1dbd9edff88fbd337034f46491bea551566f"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\zh-Hant\\Microsoft.VisualBasic.Forms.resources.dll",
+      "size": 25352,
+      "sha256": "b799410740ff97eacb595a8399ff3ad43b68cc1702140ea84ada8cced060f151"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\zh-Hant\\PresentationCore.resources.dll",
+      "size": 101680,
+      "sha256": "818f3047a3d89413867c7b34cd44ac40f3ed43c5c944f7632d793e42d8e44101"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\zh-Hant\\PresentationFramework.resources.dll",
+      "size": 184104,
+      "sha256": "e9dff70044a4d8bc5c5eebc72a773b2dc19435c21de266b54b4ca8fa8b69ffdf"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\zh-Hant\\PresentationUI.resources.dll",
+      "size": 43280,
+      "sha256": "b1394f1bcdfec1bdc6cfbcc68365bbea1788f6da7cbc3c53de5822422dde0bd9"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\zh-Hant\\ReachFramework.resources.dll",
+      "size": 37672,
+      "sha256": "c16fa41ffeed347dc22dfd8442a8df3533fcf8e067fa62f6acfd66839f516dba"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\zh-Hant\\System.Windows.Controls.Ribbon.resources.dll",
+      "size": 18736,
+      "sha256": "3bdb99e9af6e914a3456a30c59ee0af08cea3dd98bd3d879dee45ee39e2198d1"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\zh-Hant\\System.Windows.Forms.Design.resources.dll",
+      "size": 145208,
+      "sha256": "c50f35b5b4dd5377ca8b72fbbd40d63790870fee157093f92948ad232bbed90f"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\zh-Hant\\System.Windows.Forms.Primitives.resources.dll",
+      "size": 16184,
+      "sha256": "9ed9b114283c86b716f6df09ec2233adcdf385a2173dcde2d30fa53f76b40119"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\zh-Hant\\System.Windows.Forms.resources.dll",
+      "size": 325416,
+      "sha256": "cd076aa6ebef7b611ed50da6fe6369b773a1f44c3b2d740f8fdb094b786ad466"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\zh-Hant\\System.Windows.Input.Manipulations.resources.dll",
+      "size": 16696,
+      "sha256": "16b0898278915b1b74442d260612e254cb03b0b5dcddee34fb4630286416d108"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\zh-Hant\\System.Xaml.resources.dll",
+      "size": 60688,
+      "sha256": "0ff50aa3dbe7dd7e21243989c5bd86a6eae5e53cd5043b839418610d7912d30d"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\zh-Hant\\UIAutomationClient.resources.dll",
+      "size": 19720,
+      "sha256": "c6a024e9f76736ef52c4b804b49c76178f5b726983964232cf416c73abb3cc44"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\zh-Hant\\UIAutomationClientSideProviders.resources.dll",
+      "size": 20776,
+      "sha256": "f82a6e43ff522c1124b80a2bd0065c80c332dbdc32ca1fa705ec0a75af091522"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\zh-Hant\\UIAutomationProvider.resources.dll",
+      "size": 15624,
+      "sha256": "ae4c5223e4478f1611b35456f083076adbc6b1240ba0d316913ea63d54db7d35"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\zh-Hant\\UIAutomationTypes.resources.dll",
+      "size": 18712,
+      "sha256": "39d7dd73ddd99124f1a2bf28d48a6c00321ab379d5c4c84a287305957b6491f4"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\zh-Hant\\WindowsBase.resources.dll",
+      "size": 80656,
+      "sha256": "44c6fc90f72907322ac52834fb75ed18ddac7ac213d0f2ce613f3372d56499dd"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\TtsService\\zh-Hant\\WindowsFormsIntegration.resources.dll",
+      "size": 16184,
+      "sha256": "8e30641ef8bf39ce46bc65edff882541958c11cd442a635944bd4310c3983a4a"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\uninst.exe",
+      "size": 60299,
+      "sha256": "9d59afef3cd8af349fcd419b768c782009ca04a60ed9423a840095edb64820f5"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\vcruntime140.dll",
+      "size": 124544,
+      "sha256": "d5e4d9a3e835fa679450145d6a7d94e36573a509317111904d9b3712c30d9066"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\vcruntime140_1.dll",
+      "size": 49792,
+      "sha256": "1f2d41c4aa5db0bc33ebf7b66d72943a817d7ce6cbe880502a9403823633093f"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\Yim.Jibas.SptFgr.Manager.Data.Api.dll",
+      "size": 7680,
+      "sha256": "1edd5c9ffe28553bcda3f094c31df44007822d29290593ac3db02f7f20c4a804"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Client 16.10\\ZstdSharp.dll",
+      "size": 428032,
+      "sha256": "654aa27c8f70c821d2d8402db95c313a8451b2a2264bf51d7ffc9e195befe22a"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Manager 16.5\\AForge.dll",
+      "size": 17920,
+      "sha256": "966a474060a8aca70c73ba09d0b6fe2353035961c7107b9003ef879c010ff8da"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Manager 16.5\\AForge.Video.DirectShow.dll",
+      "size": 61440,
+      "sha256": "666d44798d94eafa1ed21af79e9bc0293ffd96f863ab5d87f78bcee9ef9ffd6b"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Manager 16.5\\AForge.Video.dll",
+      "size": 20992,
+      "sha256": "bafa6ed04ca2782270074127a0498dde022c2a9f4096c6bb2b8e3c08bb3d404d"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Manager 16.5\\BouncyCastle.Cryptography.dll",
+      "size": 4694688,
+      "sha256": "d9a58c84baa55a12684cd2381bca03c8f2a9cbae21a6bf1e9ebd65f495629721"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Manager 16.5\\comerr64.dll",
+      "size": 26240,
+      "sha256": "9a792cd1b9faae56ccd57783685ba6481c5b76d42a5e16e2ec24c37f6b86d57e"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Manager 16.5\\concrt140.dll",
+      "size": 324208,
+      "sha256": "2405355f0a58067b258f8df33c327e3a3d716eaac5a3a5aebb757842d85bd376"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Manager 16.5\\config.ini",
+      "size": 579,
+      "sha256": "634f894bdd7139aa7c11bdc081b289bdad17fd82e435bdcf1f6dc07102befeb9"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Manager 16.5\\CpuMathNative.dll",
+      "size": 43312,
+      "sha256": "95cc6c3ce20008641e8b4f82f1720439c78b1a0f7ed09f0f68ddddc8c056efcc"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Manager 16.5\\cvextern.dll",
+      "size": 47710184,
+      "sha256": "ac2e3b619d132661530b073d96880c1f6349d4943d8e08c861415d723ea317a9"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Manager 16.5\\DPFPDevNET.dll",
+      "size": 42352,
+      "sha256": "6494686b2a188fb7ede4a9777089a09d2e502415ff59334b6d9a85cf1e63f4c8"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Manager 16.5\\DPFPEngNET.dll",
+      "size": 30064,
+      "sha256": "03a19cadbd222874b3ccf37521d6093c6d7893ee1d0013f0fa8ffe69fc745f37"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Manager 16.5\\DPFPGuiNET.dll",
+      "size": 42352,
+      "sha256": "3a4f3ca9ecc38533d4f76e8c64c071d4a36a15e23e6e95832ba94c4f92d2740c"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Manager 16.5\\DPFPShrNET.dll",
+      "size": 25968,
+      "sha256": "e5b667100c1081b99e5ec57c3e0d46eff6ed974419703697b1245d7af0ea02fb"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Manager 16.5\\DPFPVerNET.dll",
+      "size": 25968,
+      "sha256": "45da4a0f28d75e000d2b368e2bf60df2a0173ab0722d6ec0bee52d551646a86d"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Manager 16.5\\Emgu.CV.Bitmap.dll",
+      "size": 16896,
+      "sha256": "edc9f8b826763742175b788b7e4f9e9ab0ce69912b658fe604e541a747dc7885"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Manager 16.5\\Emgu.CV.dll",
+      "size": 921600,
+      "sha256": "53043e0404e2a653044b7986339c59a10a3973135162cc1b3759440b8d90a836"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Manager 16.5\\Emgu.CV.UI.dll",
+      "size": 102376,
+      "sha256": "92cc8d5a74f75b3a0105b456419e02d57d673349bff17f23a4ee9a8be6047c5b"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Manager 16.5\\FaceFingerManager.exe",
+      "size": 2266624,
+      "sha256": "4f4eed686831b9a6db21a263df3c94f83010bfecb1cf35f7fc7d27ce144db546"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Manager 16.5\\FaceFingerManager.exe.config",
+      "size": 3553,
+      "sha256": "ff5ed5736c3716809b5051826bd71e6e8953e99db9bb4c47ecb344a7881f76ed"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Manager 16.5\\Google.Protobuf.dll",
+      "size": 496792,
+      "sha256": "0a693aa9227561bfbce6c36e14c1fef3e17368141b28d936a061047ff422e7c3"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Manager 16.5\\gssapi64.dll",
+      "size": 403072,
+      "sha256": "0c8d7b18f82bee9863308affe69de8277d091e5253dbc593868d4ced0b570453"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Manager 16.5\\K4os.Compression.LZ4.dll",
+      "size": 75264,
+      "sha256": "6dade79664f48a163d6864c84a0a6c5c55b856bdfaf34ba187c87f18f9167238"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Manager 16.5\\K4os.Compression.LZ4.Streams.dll",
+      "size": 83456,
+      "sha256": "36f1ca01f12522a0c50f8fe48cd06adc24571ee2a0ff248315b388b8bd00f484"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Manager 16.5\\K4os.Hash.xxHash.dll",
+      "size": 13312,
+      "sha256": "fd5fbeafb3ae59b45dbc6ac6b867ecdbeb4b4b715adebc5d1766e155e639caf3"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Manager 16.5\\k5sprt64.dll",
+      "size": 69248,
+      "sha256": "e164ff9bc4c09e168283ad33cd9029e06d928b2a00be3a9e206877161f14532e"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Manager 16.5\\krb5_64.dll",
+      "size": 1224320,
+      "sha256": "69e987a944e99355fcf0174ef86b33bf0a8c4c162dc556a9d00f47278584bc3e"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Manager 16.5\\krbcc64.dll",
+      "size": 121984,
+      "sha256": "8cc4ed936b065d907d00e52ddb2508aca9455d8b80929c57ec0860c6622c86be"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Manager 16.5\\LdaNative.dll",
+      "size": 169744,
+      "sha256": "49e9cc3f5e7193d6ce707f72ab54ed3850c53db1f1726e7694560b96ff3f70f1"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Manager 16.5\\libusb-1.0.dll",
+      "size": 148992,
+      "sha256": "adac7941dd18232e3915a9813a4ab4bc1986016ac1eabf2395ed62033f10d4eb"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Manager 16.5\\license.enc",
+      "size": 2074,
+      "sha256": "8e9053bae772c02128366bb37c6a1a6a9e2a408928c6eb740d251ec5038158bd"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Manager 16.5\\maintenance.txt",
+      "size": 4702,
+      "sha256": "facb90d0dcf415ee9c9d144ae03e8dc219393c22a7e2d090184602b6af0c2062"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Manager 16.5\\Microsoft.Bcl.AsyncInterfaces.dll",
+      "size": 26424,
+      "sha256": "707ddc8b6a4119bf614d669ec379f2443c2b180d655ac4b86e7496a30fc604e8"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Manager 16.5\\Microsoft.Bcl.HashCode.dll",
+      "size": 23424,
+      "sha256": "76b1260ce747a317e9b514433b89a81b038411fcabddc6f9c7dbabb0742d8b81"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Manager 16.5\\Microsoft.Bcl.Numerics.dll",
+      "size": 21296,
+      "sha256": "b9aa29c4145c18c5e5367c43360837409f635ae341d91dd1a12bba55626e3785"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Manager 16.5\\Microsoft.ML.Core.dll",
+      "size": 422664,
+      "sha256": "b07c3c921f5d98a179c3a18a459e5036a25f6c2e7b40031be8e2cee95d920168"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Manager 16.5\\Microsoft.ML.CpuMath.dll",
+      "size": 63240,
+      "sha256": "fd6c6618d3d3ac17965a8e9595813d4cd6194fd059e0eab6255b11eb96267984"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Manager 16.5\\Microsoft.ML.Data.dll",
+      "size": 1568520,
+      "sha256": "a0ca9598928255174d2db1f4c497fe74f2cf2797260bfb91e5fcef496a815a6d"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Manager 16.5\\Microsoft.ML.DataView.dll",
+      "size": 48400,
+      "sha256": "1b380c7d5435c25f091a4c7e82dcd990d252cad71c12a822f754dc7785c953a8"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Manager 16.5\\Microsoft.ML.KMeansClustering.dll",
+      "size": 56632,
+      "sha256": "10d4ae65017486be1873b863b295928879723f22a5a923e1ee800bbb9e28b324"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Manager 16.5\\Microsoft.ML.PCA.dll",
+      "size": 53520,
+      "sha256": "7486636b34142bcec68ad79780c9f5b9a67bf2cf47ba46b9f5eec21567d45050"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Manager 16.5\\Microsoft.ML.StandardTrainers.dll",
+      "size": 327432,
+      "sha256": "0bca7acf3574430d8a168ebfdafd8d0eba206b9ab5e6368baee296ecee5537e0"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Manager 16.5\\Microsoft.ML.Transforms.dll",
+      "size": 773392,
+      "sha256": "0e9ebde9e9da52e7eaf6a56a24153e043d971369c3f0703ca58a88b997698b53"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Manager 16.5\\Model\\glintr100.onnx",
+      "size": 260694151,
+      "sha256": "a7933ea5330113b01c9b60351d8f4c33003f145d8470ac5f0e52ee2effe25c60"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Manager 16.5\\Model\\haarcascade_eye.xml",
+      "size": 341406,
+      "sha256": "71cc64fc305a355dc60067880f6fbbd43dd155bd63ee3844661a1bda34b2fd8c"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Manager 16.5\\Model\\haarcascade_frontalface_default.xml",
+      "size": 930127,
+      "sha256": "0f7d4527844eb514d4a4948e822da90fbb16a34a0bbbbc6adc6498747a5aafb0"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Manager 16.5\\Model\\haarcascade_mcs_mouth.xml",
+      "size": 719806,
+      "sha256": "27d5a644d6542351e2a79dd99ff49d3539773092cae551a3fbd9de94229c2be7"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Manager 16.5\\Model\\haarcascade_mcs_nose.xml",
+      "size": 1585210,
+      "sha256": "2ff64683bd2f49547e64e0063610744746ed140082c7a8f7f66fdcbb664713bc"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Manager 16.5\\msvcp140.dll",
+      "size": 557728,
+      "sha256": "0f885b509a685d2bbfa652fed26b5fb31d88fbdab0a978c641d1c7b8aa460aa9"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Manager 16.5\\msvcp140_1.dll",
+      "size": 35952,
+      "sha256": "bfad5aef4c63a669e3c140655cdfdf395b6c979b400a447bd5dcb65ed8826c3d"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Manager 16.5\\msvcp140_2.dll",
+      "size": 280200,
+      "sha256": "3ea06f0ee098b4823cb79599df3780e7f23cce52c19aac31d2a0d47efe33a5e9"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Manager 16.5\\msvcp140_atomic_wait.dll",
+      "size": 50304,
+      "sha256": "640b2aefced484d0368eea5bdd06addd0658a3a70a49256e560d6923b404a479"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Manager 16.5\\msvcp140_codecvt_ids.dll",
+      "size": 31872,
+      "sha256": "f2069a52880ec885ee7f0511186100eb7fada0411a2b4948fafea7735b878a18"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Manager 16.5\\MySql.Data.dll",
+      "size": 1189000,
+      "sha256": "6568624f775f2ec92611d4e7a524456fe1b7342982380f2f55cba2170e9430e0"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Manager 16.5\\Newtonsoft.Json.dll",
+      "size": 721320,
+      "sha256": "f0c07af0e84d4dd4da4bd7823ba4535bc0481b3bf623ed40b659b68147a6bb75"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Manager 16.5\\opencv_videoio_ffmpeg4100_64.dll",
+      "size": 26391552,
+      "sha256": "3de83b84588b3ee8bacdbea85a8f92d4855a32a1108183963315a7db06ad5744"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Manager 16.5\\opencv_videoio_ffmpeg4120_64.dll",
+      "size": 28349440,
+      "sha256": "a0f01e4ee5e97b4a513cd70f01fafadc0dd187ba5d1293cb7fc6b77e7d17c631"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Manager 16.5\\PanduanCahaya.pdf",
+      "size": 38679,
+      "sha256": "601a472ec2dd04eb15d3edbcb5d0394cd37ef72a5ef46d806f99219391811361"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Manager 16.5\\PanduanWajah.pdf",
+      "size": 234255,
+      "sha256": "f5d8ced4ed7f14c6630d9aca25e84fd7f0899ba41ddc1957846c98a770fc1b8d"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Manager 16.5\\sptface04.ico",
+      "size": 1150,
+      "sha256": "88e256bfbf219170ab3353b725bfd144ecb9e7ac93415f968a93c7b689a1018a"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Manager 16.5\\System.Buffers.dll",
+      "size": 23816,
+      "sha256": "2d78d770c9cb997199154ae8c018b9f1d1efbc86729f7264dde6dbad2a12cac3"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Manager 16.5\\System.CodeDom.dll",
+      "size": 30488,
+      "sha256": "a3fb4f972deff1db79dba1c36fac443933401aba05cdce43b163534151854c9d"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Manager 16.5\\System.Collections.Immutable.dll",
+      "size": 259336,
+      "sha256": "8369f2b30cea5dba95c432d8433eefa782e70a90f38712609f45e678ef7db3f2"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Manager 16.5\\System.Configuration.ConfigurationManager.dll",
+      "size": 91824,
+      "sha256": "be1068d1af240549afcd48f22cfcf15ac10c4630600a5344ae025d3055029834"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Manager 16.5\\System.Drawing.Common.dll",
+      "size": 50464,
+      "sha256": "dac076ce52ee0deb108e23f8028a996ced0fb5941fe591eee4d3f32ff085d89a"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Manager 16.5\\System.Formats.Nrbf.dll",
+      "size": 70960,
+      "sha256": "39a8572c4307aca6553809e32ea1795b477e479599871dec0de08d1684e18d40"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Manager 16.5\\System.IO.Pipelines.dll",
+      "size": 84792,
+      "sha256": "d881b5e01c527bb7cafa3c2482f7cbfbf158fcbb6f93efb4381b638c2d4ea6f7"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Manager 16.5\\System.Memory.dll",
+      "size": 145200,
+      "sha256": "d5e8e4866f9cfa66f7765660f84b210198893e55335487afe5ebda342c0e913d"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Manager 16.5\\System.Numerics.Tensors.dll",
+      "size": 94520,
+      "sha256": "5910b638c7ef2cabe2570782b3b6db94e02d41f43fd8deae4cf7c35277ca0ef6"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Manager 16.5\\System.Numerics.Vectors.dll",
+      "size": 110344,
+      "sha256": "20c2fa81b8c70d651099d762954f285fd4f942e63b2d7217c145dab8d4b2f4c9"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Manager 16.5\\System.Reflection.Metadata.dll",
+      "size": 511240,
+      "sha256": "8fc17840e7b7db173e84fc6c7daaf92441069b83a07b2cb054599e7dd36ab86b"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Manager 16.5\\System.Resources.Extensions.dll",
+      "size": 112432,
+      "sha256": "13efbc7cb15b32f29bcb007d466d0e62a30e1afac1994b17fdfbd61ba47b94fb"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Manager 16.5\\System.Runtime.CompilerServices.Unsafe.dll",
+      "size": 19256,
+      "sha256": "08cbd7278b66f1e68425a82d4b97181a4130d93e3dd91831407aba7212ccdacf"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Manager 16.5\\System.Text.Encodings.Web.dll",
+      "size": 79664,
+      "sha256": "ad6be4be7e0183f3eabac3f747b834c557156942c7d2ce12039477ad0874fbfb"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Manager 16.5\\System.Text.Json.dll",
+      "size": 726320,
+      "sha256": "ead4137d1b7ed06d55f609acfedfdad041977b029a9d2c7e8b596f698fedd8ac"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Manager 16.5\\System.Threading.Channels.dll",
+      "size": 78600,
+      "sha256": "28b2710729bec1881664afd56189dbf3a06311521ad92d204b752bd4f81deacc"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Manager 16.5\\System.Threading.Tasks.Extensions.dll",
+      "size": 25984,
+      "sha256": "4f81ffd0dc7204db75afc35ea4291769b07c440592f28894260eea76626a23c6"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Manager 16.5\\System.ValueTuple.dll",
+      "size": 25232,
+      "sha256": "e905d102585b22c6df04f219af5cbdbfa7bc165979e9788b62df6dcc165e10f4"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Manager 16.5\\System.Windows.Forms.Ribbon.48.dll",
+      "size": 288768,
+      "sha256": "430c98f30b5444867be5e670696e126014dbbbb466147d4682135a30da9bbf82"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Manager 16.5\\uninst.exe",
+      "size": 53462,
+      "sha256": "390eec3bc05d9469fda9f2cfcb51e60bc35922fe2eeef5ba7d244804a63b2f1e"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Manager 16.5\\vcruntime140.dll",
+      "size": 124544,
+      "sha256": "d5e4d9a3e835fa679450145d6a7d94e36573a509317111904d9b3712c30d9066"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Manager 16.5\\vcruntime140_1.dll",
+      "size": 49792,
+      "sha256": "1f2d41c4aa5db0bc33ebf7b66d72943a817d7ce6cbe880502a9403823633093f"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Manager 16.5\\Yim.Jibas.SptFgr.Manager.Data.Api.dll",
+      "size": 7680,
+      "sha256": "1edd5c9ffe28553bcda3f094c31df44007822d29290593ac3db02f7f20c4a804"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Manager 16.5\\Yim.Jibas.SptFgr.Manager.Data.Api.dll.config",
+      "size": 1175,
+      "sha256": "16ad786f8f5a892094c8a06738b29502db780e9e05d278ef0aeab8788617460a"
+    },
+    {
+      "path": "JIBAS Face & Fingerprint Manager 16.5\\ZstdSharp.dll",
+      "size": 428032,
+      "sha256": "654aa27c8f70c821d2d8402db95c313a8451b2a2264bf51d7ffc9e195befe22a"
+    },
+    {
+      "path": "JIBAS Face Server 16.5\\BouncyCastle.Cryptography.dll",
+      "size": 4694688,
+      "sha256": "d9a58c84baa55a12684cd2381bca03c8f2a9cbae21a6bf1e9ebd65f495629721"
+    },
+    {
+      "path": "JIBAS Face Server 16.5\\Cache\\cache.txt",
+      "size": 1,
+      "sha256": "cdb4ee2aea69cc6a83331bbe96dc2caa9a299d21329efb0336fc02a82e1839a8"
+    },
+    {
+      "path": "JIBAS Face Server 16.5\\comerr64.dll",
+      "size": 26240,
+      "sha256": "9a792cd1b9faae56ccd57783685ba6481c5b76d42a5e16e2ec24c37f6b86d57e"
+    },
+    {
+      "path": "JIBAS Face Server 16.5\\concrt140.dll",
+      "size": 324208,
+      "sha256": "2405355f0a58067b258f8df33c327e3a3d716eaac5a3a5aebb757842d85bd376"
+    },
+    {
+      "path": "JIBAS Face Server 16.5\\config.ini",
+      "size": 716,
+      "sha256": "56dfe4123ccd72e64847536e3be5eb511aa68c7c209bdc4b95761ce1e84e05d4"
+    },
+    {
+      "path": "JIBAS Face Server 16.5\\CpuMathNative.dll",
+      "size": 43312,
+      "sha256": "95cc6c3ce20008641e8b4f82f1720439c78b1a0f7ed09f0f68ddddc8c056efcc"
+    },
+    {
+      "path": "JIBAS Face Server 16.5\\cvextern.dll",
+      "size": 47710184,
+      "sha256": "ac2e3b619d132661530b073d96880c1f6349d4943d8e08c861415d723ea317a9"
+    },
+    {
+      "path": "JIBAS Face Server 16.5\\Emgu.CV.Bitmap.dll",
+      "size": 16896,
+      "sha256": "edc9f8b826763742175b788b7e4f9e9ab0ce69912b658fe604e541a747dc7885"
+    },
+    {
+      "path": "JIBAS Face Server 16.5\\Emgu.CV.dll",
+      "size": 921600,
+      "sha256": "53043e0404e2a653044b7986339c59a10a3973135162cc1b3759440b8d90a836"
+    },
+    {
+      "path": "JIBAS Face Server 16.5\\FaceServer.exe",
+      "size": 1036288,
+      "sha256": "8a123015b2ee095ceda51ece6d47436e9760c88be8f92fb76ed7c120c923c364"
+    },
+    {
+      "path": "JIBAS Face Server 16.5\\FaceServer.exe.config",
+      "size": 3126,
+      "sha256": "1a695a4ec66c4bde4e9beb3e50edb224146ccfc5ef1724fcbc8eddcd5b8377cc"
+    },
+    {
+      "path": "JIBAS Face Server 16.5\\fw.bat",
+      "size": 347,
+      "sha256": "fdbab3b43243ef3a3a1efa87e004d45e63f7a5b75322422ba286d9a7492982b9"
+    },
+    {
+      "path": "JIBAS Face Server 16.5\\Google.Protobuf.dll",
+      "size": 496792,
+      "sha256": "0a693aa9227561bfbce6c36e14c1fef3e17368141b28d936a061047ff422e7c3"
+    },
+    {
+      "path": "JIBAS Face Server 16.5\\gssapi64.dll",
+      "size": 403072,
+      "sha256": "0c8d7b18f82bee9863308affe69de8277d091e5253dbc593868d4ced0b570453"
+    },
+    {
+      "path": "JIBAS Face Server 16.5\\K4os.Compression.LZ4.dll",
+      "size": 75264,
+      "sha256": "6dade79664f48a163d6864c84a0a6c5c55b856bdfaf34ba187c87f18f9167238"
+    },
+    {
+      "path": "JIBAS Face Server 16.5\\K4os.Compression.LZ4.Streams.dll",
+      "size": 83456,
+      "sha256": "36f1ca01f12522a0c50f8fe48cd06adc24571ee2a0ff248315b388b8bd00f484"
+    },
+    {
+      "path": "JIBAS Face Server 16.5\\K4os.Hash.xxHash.dll",
+      "size": 13312,
+      "sha256": "fd5fbeafb3ae59b45dbc6ac6b867ecdbeb4b4b715adebc5d1766e155e639caf3"
+    },
+    {
+      "path": "JIBAS Face Server 16.5\\k5sprt64.dll",
+      "size": 69248,
+      "sha256": "e164ff9bc4c09e168283ad33cd9029e06d928b2a00be3a9e206877161f14532e"
+    },
+    {
+      "path": "JIBAS Face Server 16.5\\krb5_64.dll",
+      "size": 1224320,
+      "sha256": "69e987a944e99355fcf0174ef86b33bf0a8c4c162dc556a9d00f47278584bc3e"
+    },
+    {
+      "path": "JIBAS Face Server 16.5\\krbcc64.dll",
+      "size": 121984,
+      "sha256": "8cc4ed936b065d907d00e52ddb2508aca9455d8b80929c57ec0860c6622c86be"
+    },
+    {
+      "path": "JIBAS Face Server 16.5\\LdaNative.dll",
+      "size": 169744,
+      "sha256": "49e9cc3f5e7193d6ce707f72ab54ed3850c53db1f1726e7694560b96ff3f70f1"
+    },
+    {
+      "path": "JIBAS Face Server 16.5\\libusb-1.0.dll",
+      "size": 148992,
+      "sha256": "adac7941dd18232e3915a9813a4ab4bc1986016ac1eabf2395ed62033f10d4eb"
+    },
+    {
+      "path": "JIBAS Face Server 16.5\\license.enc",
+      "size": 3502,
+      "sha256": "197ae5c726cf483d615b3d2f0cb06ba0ee19289dc5bb393f2e15d9ec418b6f65"
+    },
+    {
+      "path": "JIBAS Face Server 16.5\\maintenance.txt",
+      "size": 768,
+      "sha256": "8dbe68e167de420a0d1a29a00aa726dede39028ee49458e0735bba4d13af4c68"
+    },
+    {
+      "path": "JIBAS Face Server 16.5\\Microsoft.Bcl.AsyncInterfaces.dll",
+      "size": 26424,
+      "sha256": "707ddc8b6a4119bf614d669ec379f2443c2b180d655ac4b86e7496a30fc604e8"
+    },
+    {
+      "path": "JIBAS Face Server 16.5\\Microsoft.Bcl.Numerics.dll",
+      "size": 21296,
+      "sha256": "b9aa29c4145c18c5e5367c43360837409f635ae341d91dd1a12bba55626e3785"
+    },
+    {
+      "path": "JIBAS Face Server 16.5\\Microsoft.ML.Core.dll",
+      "size": 422664,
+      "sha256": "b07c3c921f5d98a179c3a18a459e5036a25f6c2e7b40031be8e2cee95d920168"
+    },
+    {
+      "path": "JIBAS Face Server 16.5\\Microsoft.ML.CpuMath.dll",
+      "size": 63240,
+      "sha256": "fd6c6618d3d3ac17965a8e9595813d4cd6194fd059e0eab6255b11eb96267984"
+    },
+    {
+      "path": "JIBAS Face Server 16.5\\Microsoft.ML.Data.dll",
+      "size": 1568520,
+      "sha256": "a0ca9598928255174d2db1f4c497fe74f2cf2797260bfb91e5fcef496a815a6d"
+    },
+    {
+      "path": "JIBAS Face Server 16.5\\Microsoft.ML.DataView.dll",
+      "size": 48400,
+      "sha256": "1b380c7d5435c25f091a4c7e82dcd990d252cad71c12a822f754dc7785c953a8"
+    },
+    {
+      "path": "JIBAS Face Server 16.5\\Microsoft.ML.KMeansClustering.dll",
+      "size": 56632,
+      "sha256": "10d4ae65017486be1873b863b295928879723f22a5a923e1ee800bbb9e28b324"
+    },
+    {
+      "path": "JIBAS Face Server 16.5\\Microsoft.ML.PCA.dll",
+      "size": 53520,
+      "sha256": "7486636b34142bcec68ad79780c9f5b9a67bf2cf47ba46b9f5eec21567d45050"
+    },
+    {
+      "path": "JIBAS Face Server 16.5\\Microsoft.ML.StandardTrainers.dll",
+      "size": 327432,
+      "sha256": "0bca7acf3574430d8a168ebfdafd8d0eba206b9ab5e6368baee296ecee5537e0"
+    },
+    {
+      "path": "JIBAS Face Server 16.5\\Microsoft.ML.Transforms.dll",
+      "size": 773392,
+      "sha256": "0e9ebde9e9da52e7eaf6a56a24153e043d971369c3f0703ca58a88b997698b53"
+    },
+    {
+      "path": "JIBAS Face Server 16.5\\Model\\glintr100.onnx",
+      "size": 260694151,
+      "sha256": "a7933ea5330113b01c9b60351d8f4c33003f145d8470ac5f0e52ee2effe25c60"
+    },
+    {
+      "path": "JIBAS Face Server 16.5\\Model\\haarcascade_eye.xml",
+      "size": 341406,
+      "sha256": "71cc64fc305a355dc60067880f6fbbd43dd155bd63ee3844661a1bda34b2fd8c"
+    },
+    {
+      "path": "JIBAS Face Server 16.5\\Model\\haarcascade_frontalface_default.xml",
+      "size": 930127,
+      "sha256": "0f7d4527844eb514d4a4948e822da90fbb16a34a0bbbbc6adc6498747a5aafb0"
+    },
+    {
+      "path": "JIBAS Face Server 16.5\\Model\\haarcascade_mcs_mouth.xml",
+      "size": 719806,
+      "sha256": "27d5a644d6542351e2a79dd99ff49d3539773092cae551a3fbd9de94229c2be7"
+    },
+    {
+      "path": "JIBAS Face Server 16.5\\Model\\haarcascade_mcs_nose.xml",
+      "size": 1585210,
+      "sha256": "2ff64683bd2f49547e64e0063610744746ed140082c7a8f7f66fdcbb664713bc"
+    },
+    {
+      "path": "JIBAS Face Server 16.5\\msvcp140.dll",
+      "size": 557728,
+      "sha256": "0f885b509a685d2bbfa652fed26b5fb31d88fbdab0a978c641d1c7b8aa460aa9"
+    },
+    {
+      "path": "JIBAS Face Server 16.5\\msvcp140_1.dll",
+      "size": 35952,
+      "sha256": "bfad5aef4c63a669e3c140655cdfdf395b6c979b400a447bd5dcb65ed8826c3d"
+    },
+    {
+      "path": "JIBAS Face Server 16.5\\msvcp140_2.dll",
+      "size": 280200,
+      "sha256": "3ea06f0ee098b4823cb79599df3780e7f23cce52c19aac31d2a0d47efe33a5e9"
+    },
+    {
+      "path": "JIBAS Face Server 16.5\\msvcp140_atomic_wait.dll",
+      "size": 50304,
+      "sha256": "640b2aefced484d0368eea5bdd06addd0658a3a70a49256e560d6923b404a479"
+    },
+    {
+      "path": "JIBAS Face Server 16.5\\msvcp140_codecvt_ids.dll",
+      "size": 31872,
+      "sha256": "f2069a52880ec885ee7f0511186100eb7fada0411a2b4948fafea7735b878a18"
+    },
+    {
+      "path": "JIBAS Face Server 16.5\\MySql.Data.dll",
+      "size": 1189000,
+      "sha256": "6568624f775f2ec92611d4e7a524456fe1b7342982380f2f55cba2170e9430e0"
+    },
+    {
+      "path": "JIBAS Face Server 16.5\\Newtonsoft.Json.dll",
+      "size": 721320,
+      "sha256": "f0c07af0e84d4dd4da4bd7823ba4535bc0481b3bf623ed40b659b68147a6bb75"
+    },
+    {
+      "path": "JIBAS Face Server 16.5\\opencv_videoio_ffmpeg4120_64.dll",
+      "size": 28349440,
+      "sha256": "a0f01e4ee5e97b4a513cd70f01fafadc0dd187ba5d1293cb7fc6b77e7d17c631"
+    },
+    {
+      "path": "JIBAS Face Server 16.5\\sptface04.ico",
+      "size": 1150,
+      "sha256": "88e256bfbf219170ab3353b725bfd144ecb9e7ac93415f968a93c7b689a1018a"
+    },
+    {
+      "path": "JIBAS Face Server 16.5\\System.Buffers.dll",
+      "size": 23816,
+      "sha256": "2d78d770c9cb997199154ae8c018b9f1d1efbc86729f7264dde6dbad2a12cac3"
+    },
+    {
+      "path": "JIBAS Face Server 16.5\\System.CodeDom.dll",
+      "size": 30488,
+      "sha256": "a3fb4f972deff1db79dba1c36fac443933401aba05cdce43b163534151854c9d"
+    },
+    {
+      "path": "JIBAS Face Server 16.5\\System.Collections.Immutable.dll",
+      "size": 259336,
+      "sha256": "8369f2b30cea5dba95c432d8433eefa782e70a90f38712609f45e678ef7db3f2"
+    },
+    {
+      "path": "JIBAS Face Server 16.5\\System.Configuration.ConfigurationManager.dll",
+      "size": 91824,
+      "sha256": "be1068d1af240549afcd48f22cfcf15ac10c4630600a5344ae025d3055029834"
+    },
+    {
+      "path": "JIBAS Face Server 16.5\\System.Drawing.Common.dll",
+      "size": 50464,
+      "sha256": "dac076ce52ee0deb108e23f8028a996ced0fb5941fe591eee4d3f32ff085d89a"
+    },
+    {
+      "path": "JIBAS Face Server 16.5\\System.IO.Pipelines.dll",
+      "size": 84792,
+      "sha256": "d881b5e01c527bb7cafa3c2482f7cbfbf158fcbb6f93efb4381b638c2d4ea6f7"
+    },
+    {
+      "path": "JIBAS Face Server 16.5\\System.Memory.dll",
+      "size": 145200,
+      "sha256": "d5e8e4866f9cfa66f7765660f84b210198893e55335487afe5ebda342c0e913d"
+    },
+    {
+      "path": "JIBAS Face Server 16.5\\System.Numerics.Tensors.dll",
+      "size": 94520,
+      "sha256": "5910b638c7ef2cabe2570782b3b6db94e02d41f43fd8deae4cf7c35277ca0ef6"
+    },
+    {
+      "path": "JIBAS Face Server 16.5\\System.Numerics.Vectors.dll",
+      "size": 110344,
+      "sha256": "20c2fa81b8c70d651099d762954f285fd4f942e63b2d7217c145dab8d4b2f4c9"
+    },
+    {
+      "path": "JIBAS Face Server 16.5\\System.Runtime.CompilerServices.Unsafe.dll",
+      "size": 19256,
+      "sha256": "08cbd7278b66f1e68425a82d4b97181a4130d93e3dd91831407aba7212ccdacf"
+    },
+    {
+      "path": "JIBAS Face Server 16.5\\System.Text.Encodings.Web.dll",
+      "size": 79664,
+      "sha256": "ad6be4be7e0183f3eabac3f747b834c557156942c7d2ce12039477ad0874fbfb"
+    },
+    {
+      "path": "JIBAS Face Server 16.5\\System.Text.Json.dll",
+      "size": 726320,
+      "sha256": "ead4137d1b7ed06d55f609acfedfdad041977b029a9d2c7e8b596f698fedd8ac"
+    },
+    {
+      "path": "JIBAS Face Server 16.5\\System.Threading.Channels.dll",
+      "size": 78600,
+      "sha256": "28b2710729bec1881664afd56189dbf3a06311521ad92d204b752bd4f81deacc"
+    },
+    {
+      "path": "JIBAS Face Server 16.5\\System.Threading.Tasks.Extensions.dll",
+      "size": 25984,
+      "sha256": "4f81ffd0dc7204db75afc35ea4291769b07c440592f28894260eea76626a23c6"
+    },
+    {
+      "path": "JIBAS Face Server 16.5\\System.ValueTuple.dll",
+      "size": 25232,
+      "sha256": "e905d102585b22c6df04f219af5cbdbfa7bc165979e9788b62df6dcc165e10f4"
+    },
+    {
+      "path": "JIBAS Face Server 16.5\\System.Windows.Forms.Ribbon.48.dll",
+      "size": 288768,
+      "sha256": "430c98f30b5444867be5e670696e126014dbbbb466147d4682135a30da9bbf82"
+    },
+    {
+      "path": "JIBAS Face Server 16.5\\uninst.exe",
+      "size": 57089,
+      "sha256": "156052cc8c33a511a2f7026baff697083e12709aeb57ca393b097c3f498f6d7b"
+    },
+    {
+      "path": "JIBAS Face Server 16.5\\vcruntime140.dll",
+      "size": 124544,
+      "sha256": "d5e4d9a3e835fa679450145d6a7d94e36573a509317111904d9b3712c30d9066"
+    },
+    {
+      "path": "JIBAS Face Server 16.5\\vcruntime140_1.dll",
+      "size": 49792,
+      "sha256": "1f2d41c4aa5db0bc33ebf7b66d72943a817d7ce6cbe880502a9403823633093f"
+    },
+    {
+      "path": "JIBAS Face Server 16.5\\Yim.Jibas.Spt.Face.Server.Data.Api.dll",
+      "size": 9728,
+      "sha256": "bf5e38d3edd23b5e976d93641f8e6d2ee91537bcc830a4fc18f2dfeb46b050e4"
+    },
+    {
+      "path": "JIBAS Face Server 16.5\\Yim.Jibas.Spt.Face.Server.Data.Api.dll.config",
+      "size": 1175,
+      "sha256": "16ad786f8f5a892094c8a06738b29502db780e9e05d278ef0aeab8788617460a"
+    },
+    {
+      "path": "JIBAS Face Server 16.5\\Yim.Jibas.SptFgr.Manager.Data.Api.dll",
+      "size": 7680,
+      "sha256": "0edf57113deeebfc851f879c132ce071eab1534b6206c304e904de7967c0d698"
+    },
+    {
+      "path": "JIBAS Face Server 16.5\\Yim.Jibas.SptFgr.Manager.Data.Api.dll.config",
+      "size": 1175,
+      "sha256": "16ad786f8f5a892094c8a06738b29502db780e9e05d278ef0aeab8788617460a"
+    },
+    {
+      "path": "JIBAS Face Server 16.5\\Yim.Jibas.SptFgr.Manager.Data.Api.pdb",
+      "size": 34304,
+      "sha256": "df18fe1f7867ca42b570e498a804ffae15f331c28d81da4820dec15f95042bcd"
+    },
+    {
+      "path": "JIBAS Face Server 16.5\\ZstdSharp.dll",
+      "size": 428032,
+      "sha256": "654aa27c8f70c821d2d8402db95c313a8451b2a2264bf51d7ffc9e195befe22a"
+    },
+    {
+      "path": "JIBAS-License-Tool-16.5\\.git\\config",
+      "size": 98,
+      "sha256": "2e32996e7c1ad4b93476aebbb833cb14d199dfab1cc1acda4fe0b6bc8609c128"
+    },
+    {
+      "path": "JIBAS-License-Tool-16.5\\.git\\description",
+      "size": 42,
+      "sha256": "fd25eb9c1f3748aaa20c0324755f0cde236c9d6cd6e9d320bcb84d6d4670ed31"
+    },
+    {
+      "path": "JIBAS-License-Tool-16.5\\.git\\HEAD",
+      "size": 22,
+      "sha256": "efece735f9e2c3a8cce5ddd1a32157e7fec60142deb50b0c263a43e0e0f563fe"
+    },
+    {
+      "path": "JIBAS-License-Tool-16.5\\.git\\objects\\07\\252fa339f1a584f8fd89d738903538dfc1a690",
+      "size": 625,
+      "sha256": "90812fac236aeb18524dfb254acbc78dce3f8922342ed22ffd23600eb05dac4d"
+    },
+    {
+      "path": "JIBAS-License-Tool-16.5\\.git\\objects\\07\\6898cc12b47ff5880e94603baf945731dd23ec",
+      "size": 139,
+      "sha256": "89bcbdc550fed088ce6e659f5e671068e6427ab638c0c04817d93cacac5b04d6"
+    },
+    {
+      "path": "JIBAS-License-Tool-16.5\\.git\\objects\\0d\\86fe1991d6db4178a49b0588c5abe02ff1444f",
+      "size": 2124,
+      "sha256": "a9c56f45b2cd94d9e79c5fbd52c0677219f569a3150bca1437b9f87a35ab1a04"
+    },
+    {
+      "path": "JIBAS-License-Tool-16.5\\.git\\objects\\0e\\12a6e89c77d97a7a83a06d62dfc73afa24b8c1",
+      "size": 2672,
+      "sha256": "46e4bb8ab297217606a3a8501c3ec8232597b99462d3b63233c0dd3698f4fdd2"
+    },
+    {
+      "path": "JIBAS-License-Tool-16.5\\.git\\objects\\0f\\4f19daf932958dc173dc61d035b2f5eded163b",
+      "size": 1774,
+      "sha256": "5e06880ca221b527bb9a3d44bbb98f5a86ee0d7ebf6c656302618d8b630e254f"
+    },
+    {
+      "path": "JIBAS-License-Tool-16.5\\.git\\objects\\14\\717b11edc393a201d09cf711529580e8bfcaf4",
+      "size": 199,
+      "sha256": "3b841dbb307ac8a55f7ded4b47357177e308745c4b2a954a0f8611202f7c9205"
+    },
+    {
+      "path": "JIBAS-License-Tool-16.5\\.git\\objects\\19\\fbd7e5ed8b2d93009d186312c8fe41626ec8b6",
+      "size": 2541,
+      "sha256": "7efd654c0395ab79ab5bc3bd6b7b4d550b7a916f1c3a70a57bde8b44a85e4539"
+    },
+    {
+      "path": "JIBAS-License-Tool-16.5\\.git\\objects\\1a\\0b0d1245e4c0943bdb43e36240f094c7ef8561",
+      "size": 1251,
+      "sha256": "30ad7df8d5a2d932bb2f2c4931f24ef282db2253a95c5c313fb261f18ed4e7b6"
+    },
+    {
+      "path": "JIBAS-License-Tool-16.5\\.git\\objects\\29\\205c63d48487afa5eff932d0a542988e32c9a7",
+      "size": 187,
+      "sha256": "3c0ca599b04cf323eb4f2742212a3516ac755f62f5e20322710e1b4204384a1d"
+    },
+    {
+      "path": "JIBAS-License-Tool-16.5\\.git\\objects\\37\\d023a09b0384b551d7041c863c0d6b2942c125",
+      "size": 758,
+      "sha256": "476310b60a3b53863d809aeebb56a88d43f1c53144bb31c32b4beca6a0a6e815"
+    },
+    {
+      "path": "JIBAS-License-Tool-16.5\\.git\\objects\\39\\95703c01c357c06fdb642cb82cdfabd5a28c12",
+      "size": 10732,
+      "sha256": "37ad7574f7e1c4eb0ee936e4f6b03abb7127c83f4fad41535d2159de0b7c9629"
+    },
+    {
+      "path": "JIBAS-License-Tool-16.5\\.git\\objects\\40\\d760e2d041496352c60f61ebd265f772125c23",
+      "size": 60,
+      "sha256": "1ebed5b08a44698135a2766a523fa9ab071d6c1f8d32e0dae345f97ab8b194b1"
+    },
+    {
+      "path": "JIBAS-License-Tool-16.5\\.git\\objects\\45\\6141c8380f641424028e2796528ac5f329d7a9",
+      "size": 1229,
+      "sha256": "20abf621d8b8068fa45ddeb01135e5c1d6e7c0b3f27775a4d6a5d5d0cc7ad46c"
+    },
+    {
+      "path": "JIBAS-License-Tool-16.5\\.git\\objects\\64\\4f67cb93e0996c5ae849f6241aeedae67ca0d0",
+      "size": 498,
+      "sha256": "cf09a54e3b2215cc5ea1bd71fa45216b0c55c4f4fa5e979c407e7d5cd2396a23"
+    },
+    {
+      "path": "JIBAS-License-Tool-16.5\\.git\\objects\\65\\3efd5ddc4ba1ba437e121da601ec0a31f5350e",
+      "size": 3824,
+      "sha256": "fece960276cbab34c37026d6d4125d4e02deb236180d1ae22d5b307ec86a1963"
+    },
+    {
+      "path": "JIBAS-License-Tool-16.5\\.git\\objects\\66\\fe86452579230336a0e7ed01b7b6024fab203d",
+      "size": 245,
+      "sha256": "bcdfa34b59e1ae09a7c89286d48688fb4adfd9f75c0d4b3d7a6cbaebbb78702f"
+    },
+    {
+      "path": "JIBAS-License-Tool-16.5\\.git\\objects\\6b\\99aa815e2f88b9eea096865e5cbcf8259768b0",
+      "size": 1519,
+      "sha256": "87f2dcdefd178dac7e9baef283e34b03571386cffa9726ba9f481ae22cb7522d"
+    },
+    {
+      "path": "JIBAS-License-Tool-16.5\\.git\\objects\\79\\ed1711e1a190e048c33e85fa61848845a23298",
+      "size": 1015,
+      "sha256": "65812ef14538d4c4ac20f8c0f745a60db01cab659b853d60bda4c78afddd1f94"
+    },
+    {
+      "path": "JIBAS-License-Tool-16.5\\.git\\objects\\80\\74707d89374cb550d2fea92695099b16e020c6",
+      "size": 4518,
+      "sha256": "48be7c7e5c9d256fb50046e0ce63d655b0bc33a3f0c45e3d2d7d5d9dd8b3b4bb"
+    },
+    {
+      "path": "JIBAS-License-Tool-16.5\\.git\\objects\\8a\\25ce2b0e693f4cf4a2c16dc52fb1b76476c9c6",
+      "size": 38,
+      "sha256": "3bc9b7db95e1d09ee3a256de71e301a3d77ebaae7837c032879634278efbe3cb"
+    },
+    {
+      "path": "JIBAS-License-Tool-16.5\\.git\\objects\\8a\\fbf54dab6c665cba3d630e8adea90d0ae01590",
+      "size": 1744,
+      "sha256": "51bd1ac26561faa066f3230f3eefac852d6b3185990c21b01ba78bf2ad6dd4c5"
+    },
+    {
+      "path": "JIBAS-License-Tool-16.5\\.git\\objects\\8d\\1694f0757bfb9060f5c47577c2cc4f7a68df92",
+      "size": 73,
+      "sha256": "8167e663e6a50c5bb441ccc24b0c3ea95a1599b13ab8f856391b12b1f213f49a"
+    },
+    {
+      "path": "JIBAS-License-Tool-16.5\\.git\\objects\\8e\\f8ea3f341c20e5ece0dc487751d05873adb10c",
+      "size": 3108,
+      "sha256": "f51b740772d3181ae1a5884f8579a835b56bb5b4063d51a1312fc5c599346336"
+    },
+    {
+      "path": "JIBAS-License-Tool-16.5\\.git\\objects\\90\\5adc4676edfa372bf8d9384c591db3f9e94afd",
+      "size": 236,
+      "sha256": "49fa3af7988ee99522662fc3fe87976ac0eae057e14d7ebba5fcb8e7537d52f4"
+    },
+    {
+      "path": "JIBAS-License-Tool-16.5\\.git\\objects\\a9\\78983f9c83a951dfab0fd5c9ec443d2e40788b",
+      "size": 288,
+      "sha256": "2c7f9cce8e224064c19565db2000045f07cd6d913c2f7c1505ee9008be516772"
+    },
+    {
+      "path": "JIBAS-License-Tool-16.5\\.git\\objects\\ac\\345565c7b79dbdbce4c15861f684f6293ee665",
+      "size": 75,
+      "sha256": "63f117d8350fa50ad1e7c794558098b928819d67915df296661bfc66c8d8cc5c"
+    },
+    {
+      "path": "JIBAS-License-Tool-16.5\\.git\\objects\\b2\\5c46429d783bb2001dce11c75838618b8081a2",
+      "size": 152,
+      "sha256": "e31fa97b1a4ba7b1f875a84c84fac2874ad6ed799a90d1481706223319ed28ac"
+    },
+    {
+      "path": "JIBAS-License-Tool-16.5\\.git\\objects\\bc\\58e99adb2c1ff3a0c318607922c13100766010",
+      "size": 1948,
+      "sha256": "07851ef49004485f93581fb45c5104169683886853aa366493ad9c48731616f2"
+    },
+    {
+      "path": "JIBAS-License-Tool-16.5\\.git\\objects\\c1\\387f56573b6e75d26b2aeb1e002754c56953a4",
+      "size": 432,
+      "sha256": "eb47c3c568ad5a127b3e3dba4a3357e24dd3db75970f44b3fbeb479ad362ba6e"
+    },
+    {
+      "path": "JIBAS-License-Tool-16.5\\.git\\objects\\c6\\66f31c3dc93bfd9989d248d141563ba6e11002",
+      "size": 3493,
+      "sha256": "c846652492f9a4db571aa7c6f3d7b2e702b8ac7a45434c1c557140ae298ecf01"
+    },
+    {
+      "path": "JIBAS-License-Tool-16.5\\.git\\objects\\c7\\90eab26a8f6f401afe480dd892f972264cc455",
+      "size": 1457,
+      "sha256": "219ee39088b3ca92e26e8a0b7a716912f81e529302d0a014421f78aab38ac9b0"
+    },
+    {
+      "path": "JIBAS-License-Tool-16.5\\.git\\objects\\c7\\e738483e291f3a4daeb5689782c00214ef56fc",
+      "size": 118,
+      "sha256": "8878a710fc06bf4decec9a3c9e18e9eeca38bb59d02e1c2f03c0d8ff75f25176"
+    },
+    {
+      "path": "JIBAS-License-Tool-16.5\\.git\\objects\\cf\\9ca0bf7c404382d8dd25cbafedb269e96a6790",
+      "size": 100,
+      "sha256": "d8d12a8d30b7d395b2f6b168f3b75cd554bae78eeedaa681a6ca0d387c2c87ea"
+    },
+    {
+      "path": "JIBAS-License-Tool-16.5\\.git\\objects\\dc\\06850ad8b0d6f89c0d568600954b5fc1b01cc5",
+      "size": 1181,
+      "sha256": "4cb6e69c79c601d4f548504d91503c9f8dcfa7688dacb2f6a6feaa7a1bdc8ee0"
+    },
+    {
+      "path": "JIBAS-License-Tool-16.5\\.git\\objects\\dd\\0a8eea861e490c7e13082e7aae077d691e3b28",
+      "size": 2119,
+      "sha256": "74679403ac4218f03b24824157cc9f99071ee886760af0140cf9c91d57f83dfc"
+    },
+    {
+      "path": "JIBAS-License-Tool-16.5\\.git\\objects\\e2\\8f2820e72f6edc50691f493a0d356871de513f",
+      "size": 258,
+      "sha256": "97d2a42beedca4a0bf55c95f7e251d72cc7a7d1b3440903199134a64e0d95201"
+    },
+    {
+      "path": "JIBAS-License-Tool-16.5\\.git\\objects\\e7\\47d580a9d9f10dc02f404225236b65c38d0309",
+      "size": 1026,
+      "sha256": "4d6735322f86fb4af7f3f1a86bd83c71707196c3623a527e52de89a60476845a"
+    },
+    {
+      "path": "JIBAS-License-Tool-16.5\\.git\\objects\\e7\\74c6e1549d9a4fdd12ed7263a68de6335026a9",
+      "size": 341,
+      "sha256": "7a79d10de19545df6c7d739a57251d9ee24d5c86a4ecec6a000d341e8eea53f7"
+    },
+    {
+      "path": "JIBAS-License-Tool-16.5\\.git\\objects\\e8\\65c2c82c18ffbde80f9bb1015162f1425142fe",
+      "size": 802,
+      "sha256": "d642c86bc53e150a1d4d60a64ff3d0c7f46bf0795470f969aad2d8a54217e141"
+    },
+    {
+      "path": "JIBAS-License-Tool-16.5\\.git\\objects\\e8\\f12269133d632a763eea9f1ff671dc813b07ad",
+      "size": 471,
+      "sha256": "4aae9d30a4b6a774626d280cec5b3993a8fc5dd0f24711b8d6ebfe766bd5daf4"
+    },
+    {
+      "path": "JIBAS-License-Tool-16.5\\.git\\refs\\heads\\main",
+      "size": 42,
+      "sha256": "1e90cf402fbc9040f3540790924b550d2e9eca2557c5fcf7168eab563b8bce3d"
+    },
+    {
+      "path": "JIBAS-License-Tool-16.5\\.gitignore",
+      "size": 64,
+      "sha256": "0b4a732e721b037def3e7934506fed76197ef8930050baa49a5a6e51a6a80c84"
+    },
+    {
+      "path": "JIBAS-License-Tool-16.5\\.pytest_cache\\.gitignore",
+      "size": 37,
+      "sha256": "3ed731b65d06150c138e2dadb0be0697550888a6b47eb8c45ecc9adba8b8e9bd"
+    },
+    {
+      "path": "JIBAS-License-Tool-16.5\\.pytest_cache\\CACHEDIR.TAG",
+      "size": 191,
+      "sha256": "37dc88ef9a0abeddbe81053a6dd8fdfb13afb613045ea1eb4a5c815a74a3bde4"
+    },
+    {
+      "path": "JIBAS-License-Tool-16.5\\.pytest_cache\\README.md",
+      "size": 302,
+      "sha256": "73fd6fccdd802c419a6b2d983d6c3173b7da97558ac4b589edec2dfe443db9ad"
+    },
+    {
+      "path": "JIBAS-License-Tool-16.5\\.pytest_cache\\v\\cache\\nodeids",
+      "size": 1364,
+      "sha256": "2310f3fa4626223a68bed723fbb2cc5580f6dbdb4a803229c0838a60ebd17e3c"
+    },
+    {
+      "path": "JIBAS-License-Tool-16.5\\__pycache__\\jibas_license_generator.cpython-312.pyc",
+      "size": 34308,
+      "sha256": "b863cc617279156e02ffd70eabd3a8df2593ee671227a7ead06f8fc982063dbb"
+    },
+    {
+      "path": "JIBAS-License-Tool-16.5\\__pycache__\\license_core.cpython-312.pyc",
+      "size": 20089,
+      "sha256": "9af477e3eb06a2f16f8fa2dba807dae32e554617f27ebbe3e7ce5039a6e959f8"
+    },
+    {
+      "path": "JIBAS-License-Tool-16.5\\Analisis_Lisensi.md",
+      "size": 8496,
+      "sha256": "aa890c65d81e55a0ea69df4e69c9851b51f870067f838374533273c13ac4751d"
+    },
+    {
+      "path": "JIBAS-License-Tool-16.5\\app.py",
+      "size": 11537,
+      "sha256": "e3170de5426b3397f0d6b126dd30cce8d662a286ed96bb8d3883226ea62db183"
+    },
+    {
+      "path": "JIBAS-License-Tool-16.5\\bukti\\artifact_identity.json",
+      "size": 314,
+      "sha256": "ab32ab4ad14113190c9cbfbbbb26d6149f927b27e5674999eb97fce1407818d5"
+    },
+    {
+      "path": "JIBAS-License-Tool-16.5\\bukti\\compatibility_results.json",
+      "size": 4933,
+      "sha256": "dcfda1cacf99b0253a08ddd590b94043f3c789de262a11b234fad27a6e3af724"
+    },
+    {
+      "path": "JIBAS-License-Tool-16.5\\bukti\\date_reference.json",
+      "size": 467,
+      "sha256": "180cd6a02c260f264fdf8f8f0481d32e3eb55cdda62db2b48e8656ff4f636c5a"
+    },
+    {
+      "path": "JIBAS-License-Tool-16.5\\bukti\\strings_schema.json",
+      "size": 3052,
+      "sha256": "70f970fd7c7e9db38f13deebe950cc02a4f4dd28df442ab78ecca93dbf214f66"
+    },
+    {
+      "path": "JIBAS-License-Tool-16.5\\bukti\\ui_results.json",
+      "size": 1633,
+      "sha256": "61e834627bc6975e4cba0dde0b7b4e364d5d6207aa11f4f7583ed017ab789c43"
+    },
+    {
+      "path": "JIBAS-License-Tool-16.5\\bukti\\verification_findings.md",
+      "size": 7181,
+      "sha256": "2c9368546a1f53b86154230746f6a5c99731dbe852ed56411f6422ebfd1e487a"
+    },
+    {
+      "path": "JIBAS-License-Tool-16.5\\bukti\\verification_runtime_predicate.json",
+      "size": 6347,
+      "sha256": "0b02ecc3be6a9357863011681feeb5308181fb72f48406bd46f401cf23ef298c"
+    },
+    {
+      "path": "JIBAS-License-Tool-16.5\\bukti\\vm_matrix_comparison.json",
+      "size": 419,
+      "sha256": "ff4c5c9a5e1dcda3ea7c62d9f0fc7295c1f1ab0605459f751e58ca8b50f6aa2e"
+    },
+    {
+      "path": "JIBAS-License-Tool-16.5\\cli.cmd",
+      "size": 289,
+      "sha256": "db8045d23b39246db71f2b5a63a1d3d127921e139d3f10baa350c99b8c57dc0c"
+    },
+    {
+      "path": "JIBAS-License-Tool-16.5\\cli.py",
+      "size": 4793,
+      "sha256": "2627ee00bb8f9a9570aef5687d0365f03b9f44d53a6258bf790985c55f661419"
+    },
+    {
+      "path": "JIBAS-License-Tool-16.5\\contoh\\V4YNE-DDCB4.lic",
+      "size": 3310,
+      "sha256": "bf76377c1b63f643d4e0ca82aaaeb075e0c9ad08d50db0d1de020e198f1d4302"
+    },
+    {
+      "path": "JIBAS-License-Tool-16.5\\format_profile.json",
+      "size": 298,
+      "sha256": "d203e4ee6c5cd18f4104639ab1308a710afc7c1c98b18327a0ae2dcbd8ede95f"
+    },
+    {
+      "path": "JIBAS-License-Tool-16.5\\Jalankan GUI.cmd",
+      "size": 238,
+      "sha256": "55fcf27927f1cc4ff58e4b3c1f90e1352aa54509a1c3b2b341af1063b5660e7c"
+    },
+    {
+      "path": "JIBAS-License-Tool-16.5\\jibas_license_generator.py",
+      "size": 27446,
+      "sha256": "879a461eb059ca8d30a1701db66f61c87c4ab50e992a940ea852cbb25121da59"
+    },
+    {
+      "path": "JIBAS-License-Tool-16.5\\license_core.py",
+      "size": 13431,
+      "sha256": "8eeb4d37f005ee4a75ba9d6e2138f9bdb64d768e6eae7a51626dfeea1bc77fa9"
+    },
+    {
+      "path": "JIBAS-License-Tool-16.5\\LICENSE_GENERATOR_README.md",
+      "size": 13542,
+      "sha256": "e3b6630d735a7b867720fce7f9cdc8ac672f5abfebe583c7403c46411fbe3f29"
+    },
+    {
+      "path": "JIBAS-License-Tool-16.5\\MANIFEST.json",
+      "size": 3326,
+      "sha256": "8ad426b32f46de123fac487b569573e595f895d6e93b20ef9da0fc74317ead80"
+    },
+    {
+      "path": "JIBAS-License-Tool-16.5\\README.md",
+      "size": 2512,
+      "sha256": "80c5d01050d0090f9f088c4fd6295b63cac187ba258724fd9f991a2ff634f220"
+    },
+    {
+      "path": "JIBAS-License-Tool-16.5\\README_USAGE.md",
+      "size": 3532,
+      "sha256": "94466c45665085516b85532e09e5fe2c452527dcd4d220cdf9096e715ea015f0"
+    },
+    {
+      "path": "JIBAS-License-Tool-16.5\\requirements.txt",
+      "size": 22,
+      "sha256": "66d91a7f67ba42b379b8646431bf4fec571fae734e2cd170a19fed532a728c61"
+    },
+    {
+      "path": "JIBAS-License-Tool-16.5\\riset\\il.ps1",
+      "size": 3840,
+      "sha256": "9983dd5db46c97f633f9093fcec032a7dd8ceafba0204a3cc3a16b03d08a8508"
+    },
+    {
+      "path": "JIBAS-License-Tool-16.5\\riset\\string_decoder.cs",
+      "size": 5027,
+      "sha256": "d9893dd41910df869e08b59b174dbb59925e21fa12a943339e8bad3c4d84f5b7"
+    },
+    {
+      "path": "JIBAS-License-Tool-16.5\\riset\\string_decoder_date_reference.cs",
+      "size": 1385,
+      "sha256": "d06e7ff475fa759c84c4ed7a2231a4c1450f5e24f5550581d65bc67a6ea68f35"
+    },
+    {
+      "path": "JIBAS-License-Tool-16.5\\riset\\string_decoder_runtime.cs",
+      "size": 4723,
+      "sha256": "f62fabe5d2adf3ee3292b379ea9c4b3676b7d721f5ae97ce5a2860c43cc2b194"
+    },
+    {
+      "path": "JIBAS-License-Tool-16.5\\riset\\vm_probe_crypto.cs",
+      "size": 2957,
+      "sha256": "cb9d9c4d6c242bc9e2e537f443d6a3974368b247740fdcf377bdfcba9edfb80c"
+    },
+    {
+      "path": "JIBAS-License-Tool-16.5\\riset\\vm_probe_import.cs",
+      "size": 2114,
+      "sha256": "87b88c7468e2ff831489989a67556e3b4cda6c14a7a6b2eaae9090dc2664e3fd"
+    },
+    {
+      "path": "JIBAS-License-Tool-16.5\\schema.xml",
+      "size": 2056,
+      "sha256": "63952cfd0db50a581934fa3d366b48fa1ae0238687c0dfe3df74fb6abe5178c4"
+    },
+    {
+      "path": "JIBAS-License-Tool-16.5\\search_db.py",
+      "size": 987,
+      "sha256": "a5c97867aaf399952a7abae09449328a84578c7e8fa15cfa8f464eacbca05476"
+    },
+    {
+      "path": "JIBAS-License-Tool-16.5\\test_artifacts\\b193a55aff374e69b629b4adb0fcc271\\1ec5041bc62049bc956d96c6b50cea04.lic",
+      "size": 3310,
+      "sha256": "0c6d4f5f2b3d2f28042f909dfcecf100c9e0ecd8477f7be7a75985aa87aaca6e"
+    },
+    {
+      "path": "JIBAS-License-Tool-16.5\\test_artifacts\\b193a55aff374e69b629b4adb0fcc271\\48225a35e16a4dccbc1c89518035e9a1.lic",
+      "size": 3310,
+      "sha256": "4196cb7213fe867d7e5f5166730b4c3d6ba8b63c33a5b1785d2d0ce458cb0890"
+    },
+    {
+      "path": "JIBAS-License-Tool-16.5\\test_artifacts\\b193a55aff374e69b629b4adb0fcc271\\8d37ff45ebae45aa8df5ca86699feaab.lic",
+      "size": 3310,
+      "sha256": "9d11eeab90ab4a785429ff0ca38f628fdb3c373dcdccd18a8ffd6ce150cf5b09"
+    },
+    {
+      "path": "JIBAS-License-Tool-16.5\\test_artifacts\\b193a55aff374e69b629b4adb0fcc271\\8f541c5d100d472895f91852887929d3.lic",
+      "size": 3310,
+      "sha256": "9c5f346f6cc1b65e469302e557a5c3ef3b0e02305dc33389890c8f8cb9305b6b"
+    },
+    {
+      "path": "JIBAS-License-Tool-16.5\\test_artifacts\\b193a55aff374e69b629b4adb0fcc271\\bcd96bcb114642f7923877e92792c76a.lic",
+      "size": 3310,
+      "sha256": "6e5df158de10299972dc0c3651a7fc191ae9e2d21159f773946a2448d83a835a"
+    },
+    {
+      "path": "JIBAS-License-Tool-16.5\\test_artifacts\\b193a55aff374e69b629b4adb0fcc271\\d8e1ae840188487bac827cf1ae9a25ca.lic",
+      "size": 3310,
+      "sha256": "9a535126775c25fdf669e7449e18b02f27f261bc1c29757d668fe7bd8c7911dd"
+    },
+    {
+      "path": "JIBAS-License-Tool-16.5\\test_artifacts\\b193a55aff374e69b629b4adb0fcc271\\fa75c8e6b4fb4b4caef3bf54c57745dc.lic",
+      "size": 3310,
+      "sha256": "a67ac333974e8f6f557cee52e3fe943b0533b5d65ca2406719aec1b0f0ac991c"
+    },
+    {
+      "path": "JIBAS-License-Tool-16.5\\test_diff1.lic",
+      "size": 3310,
+      "sha256": "b9d667286d99e1f9a0d8bbfdbfc3d189497fb1674346c65dc21d73fa63add158"
+    },
+    {
+      "path": "JIBAS-License-Tool-16.5\\test_diff2.lic",
+      "size": 3310,
+      "sha256": "1b38989dff54c4e0e89f15802aea9249085eaaa394d0329fac58ac2305794038"
+    },
+    {
+      "path": "JIBAS-License-Tool-16.5\\test_diff3.lic",
+      "size": 3310,
+      "sha256": "b6a8e7c474b0b646d6ea257262815e3c000707fb885a7b9d9f2b0c1bd25166eb"
+    },
+    {
+      "path": "JIBAS-License-Tool-16.5\\test_faceserver.py",
+      "size": 1011,
+      "sha256": "21bc7546822fef8e26904d46e63283e2f59d3dc6df6c9fb1368343ea6448f605"
+    },
+    {
+      "path": "JIBAS-License-Tool-16.5\\test_license.lic",
+      "size": 3310,
+      "sha256": "7badc3bd8d7823202da0ecab3475bf4b083119b7cdf1a6b713c7e572feeb7e4c"
+    },
+    {
+      "path": "JIBAS-License-Tool-16.5\\test_license_aaaaa.lic",
+      "size": 3310,
+      "sha256": "27df4c4e2e8903b3804a0d105ee4fecfc2ed5ea96fce5af0b5c3ba7e838d7bd0"
+    },
+    {
+      "path": "JIBAS-License-Tool-16.5\\test_license_abcde.lic",
+      "size": 3310,
+      "sha256": "ecf8335f6f12a7a78d6e911468dc4d016ad3f3f59cdc8694d282c60665ae5ab7"
+    },
+    {
+      "path": "JIBAS-License-Tool-16.5\\test_license_renewal_1.lic",
+      "size": 3310,
+      "sha256": "1a53dfc20f1d9c3f9016331d177796608dc70acdd46f085527f5e1801e37a6ba"
+    },
+    {
+      "path": "JIBAS-License-Tool-16.5\\test_license_renewal_2.lic",
+      "size": 3310,
+      "sha256": "7e5b5296f3e9e8fa698ecdfa2d47d7caa0d59596d350bc6e905c3b66200f43be"
+    },
+    {
+      "path": "JIBAS-License-Tool-16.5\\test_license_v4yne.lic",
+      "size": 3310,
+      "sha256": "70caad905fc929e21c9a3648a9aaa2d8b2634cafa356b6c18bdf841019974fc9"
+    },
+    {
+      "path": "JIBAS-License-Tool-16.5\\test_new_gen.lic",
+      "size": 3310,
+      "sha256": "900dd64c65874e44a2fc591879cb4260a060dd1ccfc88331962e43b3f05ac0cf"
+    },
+    {
+      "path": "JIBAS-License-Tool-16.5\\test_new_gen.py",
+      "size": 1394,
+      "sha256": "5c884d78ce11bdc96ac715e565710213e64470396b51fd60efb60b1c5fbd9317"
+    },
+    {
+      "path": "JIBAS-License-Tool-16.5\\test_renewal.lic",
+      "size": 3310,
+      "sha256": "f343846f6bd71e0da7927d13b937425d4c4cac2c18dbc52bbfaa235ec4a5d3ef"
+    },
+    {
+      "path": "JIBAS-License-Tool-16.5\\tests\\__pycache__\\test_license_core.cpython-312-pytest-9.2.0.pyc",
+      "size": 13475,
+      "sha256": "00b8984ed77d2a9a1d378cf5a3c08387e137157d49bd1812246e208b43294692"
+    },
+    {
+      "path": "JIBAS-License-Tool-16.5\\tests\\fixtures\\date_reference.json",
+      "size": 467,
+      "sha256": "180cd6a02c260f264fdf8f8f0481d32e3eb55cdda62db2b48e8656ff4f636c5a"
+    },
+    {
+      "path": "JIBAS-License-Tool-16.5\\tests\\fixtures\\original-empty.enc",
+      "size": 2754,
+      "sha256": "b684f59bb7073a6ca46e2858c8802d4be4aa29655a292bd9574115b81155bbad"
+    },
+    {
+      "path": "JIBAS-License-Tool-16.5\\tests\\fixtures\\original-imported.enc",
+      "size": 3482,
+      "sha256": "52b73894501f510f2eda1dcc6513efc0da522bf3093d79c1d6ff28c3f2caf943"
+    },
+    {
+      "path": "JIBAS-License-Tool-16.5\\tests\\test_license_core.py",
+      "size": 6742,
+      "sha256": "0804714c06315ac368265b69c1dedebd5907ca5f8d365b42e09d0ae70c6440e8"
+    }
+  ],
+  "counts_by_directory": {
+    "JIBAS Face & Fingerprint Client 16.10": 555,
+    "JIBAS Face & Fingerprint Manager 16.5": 84,
+    "JIBAS Face Server 16.5": 73,
+    "JIBAS-License-Tool-16.5": 106
+  },
+  "scope": "all files recursively, read-only; hashes do not prove semantic analysis of all dependencies"
+}

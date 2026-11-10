@@ -1,0 +1,162 @@
+{
+  "scenarios": [
+    {
+      "name": "V4YNE_DDCB4_fresh",
+      "passed": true,
+      "importer": true
+    },
+    {
+      "name": "V4YNE_DDCB4_db_mismatch",
+      "passed": true,
+      "importer": "Exception: Database Id tidak sama dengan lisensi (V4YNE)"
+    },
+    {
+      "name": "V4YNE_DDCB4_system_mismatch",
+      "passed": true,
+      "importer": true
+    },
+    {
+      "name": "V4YNE_DDCB4_renewal_ok",
+      "passed": true,
+      "importer": true
+    },
+    {
+      "name": "V4YNE_DDCB4_renewal_equal_sequence",
+      "passed": true,
+      "importer": "Exception: Sequence lisensi sama dengan lisensi yang terdaftar!"
+    },
+    {
+      "name": "V4YNE_DDCB4_renewal_changed_client",
+      "passed": true,
+      "importer": "Exception: Client Id tidak sama dengan lisensi sebelumnya!"
+    },
+    {
+      "name": "V4YNE_DDCB4_renewal_decreased_sequence",
+      "passed": true,
+      "importer": "Exception: Sequence lisensi lebih kecil daripada lisensi yang terdaftar!"
+    },
+    {
+      "name": "ABCDE_DDCB4_fresh",
+      "passed": true,
+      "importer": true
+    },
+    {
+      "name": "ABCDE_DDCB4_db_mismatch",
+      "passed": true,
+      "importer": "Exception: Database Id tidak sama dengan lisensi (ABCDE)"
+    },
+    {
+      "name": "ABCDE_DDCB4_system_mismatch",
+      "passed": true,
+      "importer": true
+    },
+    {
+      "name": "ABCDE_DDCB4_renewal_ok",
+      "passed": true,
+      "importer": true
+    },
+    {
+      "name": "ABCDE_DDCB4_renewal_equal_sequence",
+      "passed": true,
+      "importer": "Exception: Sequence lisensi sama dengan lisensi yang terdaftar!"
+    },
+    {
+      "name": "ABCDE_DDCB4_renewal_changed_client",
+      "passed": true,
+      "importer": "Exception: Client Id tidak sama dengan lisensi sebelumnya!"
+    },
+    {
+      "name": "ABCDE_DDCB4_renewal_decreased_sequence",
+      "passed": true,
+      "importer": "Exception: Sequence lisensi lebih kecil daripada lisensi yang terdaftar!"
+    },
+    {
+      "name": "Z9X8W_123AB_fresh",
+      "passed": true,
+      "importer": true
+    },
+    {
+      "name": "Z9X8W_123AB_db_mismatch",
+      "passed": true,
+      "importer": "Exception: Database Id tidak sama dengan lisensi (Z9X8W)"
+    },
+    {
+      "name": "Z9X8W_123AB_system_mismatch",
+      "passed": true,
+      "importer": true
+    },
+    {
+      "name": "Z9X8W_123AB_renewal_ok",
+      "passed": true,
+      "importer": true
+    },
+    {
+      "name": "Z9X8W_123AB_renewal_equal_sequence",
+      "passed": true,
+      "importer": "Exception: Sequence lisensi sama dengan lisensi yang terdaftar!"
+    },
+    {
+      "name": "Z9X8W_123AB_renewal_changed_client",
+      "passed": true,
+      "importer": "Exception: Client Id tidak sama dengan lisensi sebelumnya!"
+    },
+    {
+      "name": "Z9X8W_123AB_renewal_decreased_sequence",
+      "passed": true,
+      "importer": "Exception: Sequence lisensi lebih kecil daripada lisensi yang terdaftar!"
+    },
+    {
+      "name": "V4YNE_7738F_fresh",
+      "passed": true,
+      "importer": true
+    },
+    {
+      "name": "V4YNE_7738F_db_mismatch",
+      "passed": true,
+      "importer": "Exception: Database Id tidak sama dengan lisensi (V4YNE)"
+    },
+    {
+      "name": "V4YNE_7738F_system_mismatch",
+      "passed": true,
+      "importer": true
+    },
+    {
+      "name": "V4YNE_7738F_renewal_ok",
+      "passed": true,
+      "importer": true
+    },
+    {
+      "name": "V4YNE_7738F_renewal_equal_sequence",
+      "passed": true,
+      "importer": "Exception: Sequence lisensi sama dengan lisensi yang terdaftar!"
+    },
+    {
+      "name": "V4YNE_7738F_renewal_changed_client",
+      "passed": true,
+      "importer": "Exception: Client Id tidak sama dengan lisensi sebelumnya!"
+    },
+    {
+      "name": "V4YNE_7738F_renewal_decreased_sequence",
+      "passed": true,
+      "importer": "Exception: Sequence lisensi lebih kecil daripada lisensi yang terdaftar!"
+    },
+    {
+      "name": "server_comments_multiline",
+      "passed": true,
+      "importer": true
+    },
+    {
+      "name": "server_corrupt",
+      "passed": true,
+      "importer": "FormatException: The input is not a valid Base-64 string as it contains a non-base 64 character, more than two padding characters, or an illegal character among the padding characters. "
+    },
+    {
+      "name": "server_wrong_crypto",
+      "passed": true,
+      "importer": "CryptographicException: Padding is invalid and cannot be removed."
+    }
+  ],
+  "total": 31,
+  "all_passed": true,
+  "scope": "Original methods, controlled environment field injection; not live production activation"
+}

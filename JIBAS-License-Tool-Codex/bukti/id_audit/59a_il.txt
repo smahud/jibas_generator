@@ -1,0 +1,55 @@
+METHOD 0x0x0600059A #=z6KVilqh3AyfNaAL_MQwHcsOXlEq5DUZLjKiu9bk=::System.String #=zsdx1MGhcrmi9yFacyw==()
+0000: ldc.i4       -1509749963 
+0005: call         #=qr$qXOzdN0p8L_X5faVkFhkg78wshc8Hnh2d9KqJ$Eck=::System.String #=zoKh7rvc=(Int32) 0x060004B5
+000A: newobj       System.Management.ManagementObjectSearcher::Void .ctor(System.String) 0x0A000325
+000F: callvirt     System.Management.ManagementObjectSearcher::System.Management.ManagementObjectCollection Get() 0x0A000326
+0014: callvirt     System.Management.ManagementObjectCollection::ManagementObjectEnumerator GetEnumerator() 0x0A000327
+0019: stloc.0       
+001A: br.s         124 
+001C: ldloc.0       
+001D: callvirt     System.Management.ManagementObjectCollection+ManagementObjectEnumerator::System.Management.ManagementBaseObject get_Current() 0x0A000328
+0022: castclass    ::System.Management.ManagementObject 0x010000E9
+0027: callvirt     System.Management.ManagementBaseObject::System.Management.PropertyDataCollection get_Properties() 0x0A00032D
+002C: callvirt     System.Management.PropertyDataCollection::PropertyDataEnumerator GetEnumerator() 0x0A00032E
+0031: stloc.1       
+0032: br.s         97 
+0034: ldloc.1       
+0035: callvirt     System.Management.PropertyDataCollection+PropertyDataEnumerator::System.Management.PropertyData get_Current() 0x0A00032F
+003A: stloc.2       
+003B: ldloc.2       
+003C: callvirt     System.Management.PropertyData::System.String get_Name() 0x0A000330
+0041: ldc.i4       -1509749819 
+0046: call         #=qr$qXOzdN0p8L_X5faVkFhkg78wshc8Hnh2d9KqJ$Eck=::System.String #=zoKh7rvc=(Int32) 0x060004B5
+004B: callvirt     System.String::Boolean Equals(System.String) 0x0A00028E
+0050: brfalse.s    97 
+0052: ldloc.2       
+0053: callvirt     System.Management.PropertyData::System.Object get_Value() 0x0A000331
+0058: callvirt     System.Object::System.String ToString() 0x0A0000CB
+005D: stloc.s      4 
+005F: leave.s      155 
+0061: ldloc.1       
+0062: callvirt     System.Management.PropertyDataCollection+PropertyDataEnumerator::Boolean MoveNext() 0x0A000332
+0067: brtrue.s     52 
+0069: leave.s      124 
+006B: ldloc.1       
+006C: isinst       ::System.IDisposable 0x010000BF
+0071: stloc.3       
+0072: ldloc.3       
+0073: brfalse.s    123 
+0075: ldloc.3       
+0076: callvirt     System.IDisposable::Void Dispose() 0x0A000006
+007B: endfinally    
+007C: ldloc.0       
+007D: callvirt     System.Management.ManagementObjectCollection+ManagementObjectEnumerator::Boolean MoveNext() 0x0A00032C
+0082: brtrue.s     28 
+0084: leave.s      144 
+0086: ldloc.0       
+0087: brfalse.s    143 
+0089: ldloc.0       
+008A: callvirt     System.IDisposable::Void Dispose() 0x0A000006
+008F: endfinally    
+0090: ldc.i4       -1509750011 
+0095: call         #=qr$qXOzdN0p8L_X5faVkFhkg78wshc8Hnh2d9KqJ$Eck=::System.String #=zoKh7rvc=(Int32) 0x060004B5
+009A: ret           
+009B: ldloc.s      4 
+009D: ret           

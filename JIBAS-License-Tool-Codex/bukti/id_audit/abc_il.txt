@@ -1,0 +1,150 @@
+METHOD 0x0x06000ABC #=zj8I7hF72m8xUqY_f9JANT3KMKZtA$gK8AmodNKI=::Void #=zUlI85nrffyL4(MySql.Data.MySqlClient.MySqlConnection)
+0000: newobj       MySql.Data.MySqlClient.MySqlCommand::Void .ctor() 0x0A0002E5
+0005: dup           
+0006: ldarg.0       
+0007: callvirt     MySql.Data.MySqlClient.MySqlCommand::Void set_Connection(MySql.Data.MySqlClient.MySqlConnection) 0x0A0002E6
+000C: stloc.0       
+000D: ldc.i4       -1509740374 
+0012: call         #=qr$qXOzdN0p8L_X5faVkFhkg78wshc8Hnh2d9KqJ$Eck=::System.String #=zoKh7rvc=(Int32) 0x060004B5
+0017: stloc.1       
+0018: ldloc.0       
+0019: ldloc.1       
+001A: callvirt     System.Data.Common.DbCommand::Void set_CommandText(System.String) 0x0A0002CE
+001F: ldloc.0       
+0020: callvirt     System.Data.Common.DbCommand::System.Object ExecuteScalar() 0x0A0002D6
+0025: call         System.Convert::Int32 ToInt32(System.Object) 0x0A0000C1
+002A: brfalse.s    45 
+002C: ret           
+002D: ldc.i4       -1509740080 
+0032: call         #=qr$qXOzdN0p8L_X5faVkFhkg78wshc8Hnh2d9KqJ$Eck=::System.String #=zoKh7rvc=(Int32) 0x060004B5
+0037: stloc.1       
+0038: ldloc.0       
+0039: ldloc.1       
+003A: callvirt     System.Data.Common.DbCommand::Void set_CommandText(System.String) 0x0A0002CE
+003F: ldloc.0       
+0040: callvirt     System.Data.Common.DbCommand::Int32 ExecuteNonQuery() 0x0A00024C
+0045: pop           
+0046: ldc.i4       -1509739969 
+004B: call         #=qr$qXOzdN0p8L_X5faVkFhkg78wshc8Hnh2d9KqJ$Eck=::System.String #=zoKh7rvc=(Int32) 0x060004B5
+0050: stloc.1       
+0051: ldc.i4       -1509739870 
+0056: call         #=qr$qXOzdN0p8L_X5faVkFhkg78wshc8Hnh2d9KqJ$Eck=::System.String #=zoKh7rvc=(Int32) 0x060004B5
+005B: stloc.2       
+005C: ldc.i4.s     64 
+005E: call         #=zj8I7hF72m8xUqY_f9JANT3KMKZtA$gK8AmodNKI=::System.String #=z3kd91KU=(Int32) 0x06000ABB
+0063: stloc.3       
+0064: ldloc.0       
+0065: ldloc.1       
+0066: ldloc.2       
+0067: ldloc.3       
+0068: call         System.String::System.String Format(System.String, System.Object, System.Object) 0x0A0000FB
+006D: callvirt     System.Data.Common.DbCommand::Void set_CommandText(System.String) 0x0A0002CE
+0072: ldloc.0       
+0073: callvirt     System.Data.Common.DbCommand::Int32 ExecuteNonQuery() 0x0A00024C
+0078: pop           
+0079: ldc.i4       -1509739682 
+007E: call         #=qr$qXOzdN0p8L_X5faVkFhkg78wshc8Hnh2d9KqJ$Eck=::System.String #=zoKh7rvc=(Int32) 0x060004B5
+0083: stloc.2       
+0084: ldc.i4.s     64 
+0086: call         #=zj8I7hF72m8xUqY_f9JANT3KMKZtA$gK8AmodNKI=::System.String #=z3kd91KU=(Int32) 0x06000ABB
+008B: stloc.3       
+008C: ldloc.0       
+008D: ldloc.1       
+008E: ldloc.2       
+008F: ldloc.3       
+0090: call         System.String::System.String Format(System.String, System.Object, System.Object) 0x0A0000FB
+0095: callvirt     System.Data.Common.DbCommand::Void set_CommandText(System.String) 0x0A0002CE
+009A: ldloc.0       
+009B: callvirt     System.Data.Common.DbCommand::Int32 ExecuteNonQuery() 0x0A00024C
+00A0: pop           
+00A1: ldc.i4       -1509739702 
+00A6: call         #=qr$qXOzdN0p8L_X5faVkFhkg78wshc8Hnh2d9KqJ$Eck=::System.String #=zoKh7rvc=(Int32) 0x060004B5
+00AB: stloc.2       
+00AC: ldc.i4.s     64 
+00AE: call         #=zj8I7hF72m8xUqY_f9JANT3KMKZtA$gK8AmodNKI=::System.String #=z3kd91KU=(Int32) 0x06000ABB
+00B3: stloc.3       
+00B4: ldloc.0       
+00B5: ldloc.1       
+00B6: ldloc.2       
+00B7: ldloc.3       
+00B8: call         System.String::System.String Format(System.String, System.Object, System.Object) 0x0A0000FB
+00BD: callvirt     System.Data.Common.DbCommand::Void set_CommandText(System.String) 0x0A0002CE
+00C2: ldloc.0       
+00C3: callvirt     System.Data.Common.DbCommand::Int32 ExecuteNonQuery() 0x0A00024C
+00C8: pop           
+00C9: ldc.i4       -1509739706 
+00CE: call         #=qr$qXOzdN0p8L_X5faVkFhkg78wshc8Hnh2d9KqJ$Eck=::System.String #=zoKh7rvc=(Int32) 0x060004B5
+00D3: stloc.2       
+00D4: ldc.i4.s     64 
+00D6: call         #=zj8I7hF72m8xUqY_f9JANT3KMKZtA$gK8AmodNKI=::System.String #=z3kd91KU=(Int32) 0x06000ABB
+00DB: stloc.3       
+00DC: ldloc.0       
+00DD: ldloc.1       
+00DE: ldloc.2       
+00DF: ldloc.3       
+00E0: call         System.String::System.String Format(System.String, System.Object, System.Object) 0x0A0000FB
+00E5: callvirt     System.Data.Common.DbCommand::Void set_CommandText(System.String) 0x0A0002CE
+00EA: ldloc.0       
+00EB: callvirt     System.Data.Common.DbCommand::Int32 ExecuteNonQuery() 0x0A00024C
+00F0: pop           
+00F1: ldc.i4       -1509739662 
+00F6: call         #=qr$qXOzdN0p8L_X5faVkFhkg78wshc8Hnh2d9KqJ$Eck=::System.String #=zoKh7rvc=(Int32) 0x060004B5
+00FB: stloc.2       
+00FC: ldc.i4.s     64 
+00FE: call         #=zj8I7hF72m8xUqY_f9JANT3KMKZtA$gK8AmodNKI=::System.String #=z3kd91KU=(Int32) 0x06000ABB
+0103: stloc.3       
+0104: ldloc.0       
+0105: ldloc.1       
+0106: ldloc.2       
+0107: ldloc.3       
+0108: call         System.String::System.String Format(System.String, System.Object, System.Object) 0x0A0000FB
+010D: callvirt     System.Data.Common.DbCommand::Void set_CommandText(System.String) 0x0A0002CE
+0112: ldloc.0       
+0113: callvirt     System.Data.Common.DbCommand::Int32 ExecuteNonQuery() 0x0A00024C
+0118: pop           
+0119: ldc.i4       -1509739666 
+011E: call         #=qr$qXOzdN0p8L_X5faVkFhkg78wshc8Hnh2d9KqJ$Eck=::System.String #=zoKh7rvc=(Int32) 0x060004B5
+0123: stloc.2       
+0124: ldc.i4.s     64 
+0126: call         #=zj8I7hF72m8xUqY_f9JANT3KMKZtA$gK8AmodNKI=::System.String #=z3kd91KU=(Int32) 0x06000ABB
+012B: stloc.3       
+012C: ldloc.0       
+012D: ldloc.1       
+012E: ldloc.2       
+012F: ldloc.3       
+0130: call         System.String::System.String Format(System.String, System.Object, System.Object) 0x0A0000FB
+0135: callvirt     System.Data.Common.DbCommand::Void set_CommandText(System.String) 0x0A0002CE
+013A: ldloc.0       
+013B: callvirt     System.Data.Common.DbCommand::Int32 ExecuteNonQuery() 0x0A00024C
+0140: pop           
+0141: ldc.i4       -1509739750 
+0146: call         #=qr$qXOzdN0p8L_X5faVkFhkg78wshc8Hnh2d9KqJ$Eck=::System.String #=zoKh7rvc=(Int32) 0x060004B5
+014B: stloc.2       
+014C: ldc.i4.s     64 
+014E: call         #=zj8I7hF72m8xUqY_f9JANT3KMKZtA$gK8AmodNKI=::System.String #=z3kd91KU=(Int32) 0x06000ABB
+0153: stloc.3       
+0154: ldloc.0       
+0155: ldloc.1       
+0156: ldloc.2       
+0157: ldloc.3       
+0158: call         System.String::System.String Format(System.String, System.Object, System.Object) 0x0A0000FB
+015D: callvirt     System.Data.Common.DbCommand::Void set_CommandText(System.String) 0x0A0002CE
+0162: ldloc.0       
+0163: callvirt     System.Data.Common.DbCommand::Int32 ExecuteNonQuery() 0x0A00024C
+0168: pop           
+0169: ldc.i4       -1509739754 
+016E: call         #=qr$qXOzdN0p8L_X5faVkFhkg78wshc8Hnh2d9KqJ$Eck=::System.String #=zoKh7rvc=(Int32) 0x060004B5
+0173: stloc.2       
+0174: ldc.i4.s     64 
+0176: call         #=zj8I7hF72m8xUqY_f9JANT3KMKZtA$gK8AmodNKI=::System.String #=z3kd91KU=(Int32) 0x06000ABB
+017B: stloc.3       
+017C: ldloc.0       
+017D: ldloc.1       
+017E: ldloc.2       
+017F: ldloc.3       
+0180: call         System.String::System.String Format(System.String, System.Object, System.Object) 0x0A0000FB
+0185: callvirt     System.Data.Common.DbCommand::Void set_CommandText(System.String) 0x0A0002CE
+018A: ldloc.0       
+018B: callvirt     System.Data.Common.DbCommand::Int32 ExecuteNonQuery() 0x0A00024C
+0190: pop           
+0191: ret           

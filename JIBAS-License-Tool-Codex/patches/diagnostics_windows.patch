@@ -1,0 +1,14 @@
+diff --git a/diagnostics.py b/diagnostics.py
+--- a/diagnostics.py
++++ b/diagnostics.py
+@@ -77,6 +77,10 @@ def _read_source(path: str | Path) -> bytes:
+     if not str(path).strip():
+         raise DiagnosticError("missing_path")
+     try:
++        # Windows os.open(directory) raises PermissionError before fstat.
++        # Keep the post-open check too, for races and non-directory devices.
++        if Path(path).is_dir():
++            raise DiagnosticError("not_regular")
+         # O_NONBLOCK prevents a FIFO from blocking before fstat rejects it.
+         flags = os.O_RDONLY | getattr(os, "O_BINARY", 0) | getattr(os, "O_NONBLOCK", 0)
+         descriptor = os.open(path, flags)

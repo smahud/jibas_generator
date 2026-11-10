@@ -1,0 +1,63 @@
+{
+  "target_sha256": "6f5369df4d854c467d24fb067d8b79c573b35699c7b1ce7f19a310669f1ba546",
+  "mvid": "0ec4d2e7-40e6-4d47-2b18-cbedb1259d09",
+  "authority": "controlled-replay: runtime identity holder supplied; original importer and validator unmodified",
+  "sandbox": "C:\\YIM\\JIBAS Generator\\JIBAS-License-Tool-Codex\\bukti\\client_import\\verify_fresh_renewal_vah_s4i_",
+  "attempts": [
+    {
+      "input": "C:\\YIM\\JIBAS Generator\\JIBAS-License-Tool-Codex\\bukti\\client_import\\inputs\\v4yne_new.lic",
+      "current_database_id": "V4YNE",
+      "before_sequence": 0,
+      "before_client_id": "TRIAL",
+      "accepted": true,
+      "cache_exists": true,
+      "after_sequence": 1,
+      "after_client_id": "116CE74C5A5941C8ABAB3B353EEF4BB9",
+      "after_database_id": "V4YNE",
+      "after_info1": "DDCB4",
+      "cache_validator_returned": true
+    },
+    {
+      "input": "C:\\YIM\\JIBAS Generator\\JIBAS-License-Tool-Codex\\bukti\\client_import\\inputs\\v4yne_new.lic",
+      "current_database_id": "V4YNE",
+      "before_sequence": 1,
+      "before_client_id": "116CE74C5A5941C8ABAB3B353EEF4BB9",
+      "accepted": false,
+      "exception": "System.Exception: Sequence lisensi sama dengan lisensi yang terdaftar!",
+      "cache_exists": true,
+      "after_sequence": 1,
+      "after_client_id": "116CE74C5A5941C8ABAB3B353EEF4BB9",
+      "after_database_id": "V4YNE",
+      "after_info1": "DDCB4",
+      "cache_validator_returned": true
+    },
+    {
+      "input": "C:\\YIM\\JIBAS Generator\\JIBAS-License-Tool-Codex\\bukti\\client_import\\inputs\\v4yne_renew.lic",
+      "current_database_id": "V4YNE",
+      "before_sequence": 1,
+      "before_client_id": "116CE74C5A5941C8ABAB3B353EEF4BB9",
+      "accepted": true,
+      "cache_exists": true,
+      "after_sequence": 2,
+      "after_client_id": "116CE74C5A5941C8ABAB3B353EEF4BB9",
+      "after_database_id": "V4YNE",
+      "after_info1": "DDCB4",
+      "cache_validator_returned": true
+    },
+    {
+      "input": "C:\\YIM\\JIBAS Generator\\JIBAS-License-Tool-Codex\\bukti\\client_import\\inputs\\v4yne_changed_client.lic",
+      "current_database_id": "V4YNE",
+      "before_sequence": 2,
+      "before_client_id": "116CE74C5A5941C8ABAB3B353EEF4BB9",
+      "accepted": false,
+      "exception": "System.Exception: Client Id tidak sama dengan lisensi sebelumnya!",
+      "cache_exists": true,
+      "after_sequence": 2,
+      "after_client_id": "116CE74C5A5941C8ABAB3B353EEF4BB9",
+      "after_database_id": "V4YNE",
+      "after_info1": "DDCB4",
+      "cache_validator_returned": true
+    }
+  ],
+  "label": "fresh_renewal"
+}

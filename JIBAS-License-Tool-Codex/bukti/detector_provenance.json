@@ -1,0 +1,57 @@
+{
+  "title": "Detector provenance - automatic Database ID / System ID readout proven against original FaceServer.exe methods",
+  "artifact": {
+    "name": "FaceServer.exe",
+    "sha256": "8a123015b2ee095ceda51ece6d47436e9760c88be8f92fb76ed7c120c923c364",
+    "path": "C:\\Program Files\\YIM\\JIBAS Face Server 16.5\\FaceServer.exe"
+  },
+  "method_tokens": {
+    "database_idGetter": "0x06000AC3",
+    "system_id": "0x0600059B",
+    "disk_serial": "0x06000599",
+    "csproduct_uuid": "0x0600059A",
+    "license_importer": "0x060006CC"
+  },
+  "database_id_states": [
+    {
+      "state": "live jbssat as installed",
+      "original_runtime_AC3_database_id": "V4YNE",
+      "DbIdDetector_python_result": "V4YNE",
+      "match": true
+    },
+    {
+      "state": "splang payload patched (splang01/02/04/09/11 rewritten)",
+      "original_runtime_AC3_database_id": "WRK9T",
+      "DbIdDetector_python_result": "WRK9T",
+      "match": true
+    },
+    {
+      "state": "restored to as-installed condition",
+      "original_runtime_AC3_database_id": "V4YNE",
+      "DbIdDetector_python_result": "V4YNE",
+      "match": true
+    }
+  ],
+  "database_id_recipe": {
+    "procedures": "jbssat splang01..splang12 must all exist (information_schema.ROUTINES), else app refuses",
+    "formula": "UPPER( hex_decode(@uhh)[14] + hex_decode(@uhf)[5] + hex_decode(@uhc)[25] + hex_decode(@uhe)[37] + hex_decode(@uhb)[47] )",
+    "out_parameters": "@uha..@uhi (9 OUT parameters, index 0..8)",
+    "harness": "RuntimeDbId.exe (riset/RuntimeDbId.cs) executed ORIGINAL method 0x06000AC3 on the live MySQL connection"
+  },
+  "system_id_state": {
+    "original_runtime_59B_system_id": "7738F",
+    "SystemIdDetector_python_result": "7738F",
+    "match": true,
+    "disk_serial_raw": "30029941042",
+    "csproduct_uuid": "E0813C3C-120B-02FE-5F00-BCAEC5319E78",
+    "algorithm": "MD5(ascii(serial)+ascii(uuid)) lowercase hex, characters [5,17,30,24,3], uppercased; trailing space in raw serial is trimmed by the original code",
+    "cached_license_info1": "DDCB4",
+    "note": "The actively installed license cache carries Info1=DDCB4 which differs from the real machine value 7738F; the original runtime predicate 0x06000913/0x0600090D rejects DDCB4 (see verification_runtime_predicate.json). The DDCB4 value traces back to the previous agent's self-referential replay (injected 0x040004E7 with the license's own Info1)."
+  },
+  "database_live_state_after_testing": "restored; verified V4YNE by both original runtime and detector",
+  "execution_boundaries": [
+    "original methods executed in a separate process via reflection; binary unmodified",
+    "no Main/UI execution; no writes to the installed license cache",
+    "MySQL experiment state restored and re-verified"
+  ]
+}

@@ -1,0 +1,217 @@
+{
+  "evidence_id": "ev_ec7d062cf8b76dfee1c1fa0db13afb51e0fb2adf3e39121ac297835b29bed427",
+  "subject": {
+    "name": "FaceFingerManager.exe",
+    "digest": {
+      "sha256": "4f4eed686831b9a6db21a263df3c94f83010bfecb1cf35f7fc7d27ce144db546"
+    },
+    "local_path": "C:\\Program Files\\YIM\\JIBAS Face & Fingerprint Manager 16.5\\FaceFingerManager.exe",
+    "format": "pe",
+    "architecture": "x86_64"
+  },
+  "provider": {
+    "id": "rea-analysis-view",
+    "name": "REA analysis view projection",
+    "version": "1"
+  },
+  "analysis_profile": null,
+  "predicate_type": "rea.analysis-view",
+  "operation": "inspect_analysis_view",
+  "parameters": {
+    "parent_evidence_id": "ev_0f77136c5abfdac914cbc92ae1e265900473341d42e596ffabe98baf06daaa47",
+    "view": {
+      "kind": "summary"
+    }
+  },
+  "raw_result": null,
+  "normalized_result": {
+    "kind": "summary",
+    "view": {
+      "kind": "summary"
+    },
+    "parent_evidence_id": "ev_0f77136c5abfdac914cbc92ae1e265900473341d42e596ffabe98baf06daaa47",
+    "parent_operation": "inspect_managed_artifact",
+    "parent_digest": "0f77136c5abfdac914cbc92ae1e265900473341d42e596ffabe98baf06daaa47",
+    "view_digest": "b5876a3b38d61a905c0c1de13464cff5e839a5c5d8dbe136f72105bbe9de4570",
+    "artifact": {
+      "path": "C:\\Program Files\\YIM\\JIBAS Face & Fingerprint Manager 16.5\\FaceFingerManager.exe",
+      "sha256": "4f4eed686831b9a6db21a263df3c94f83010bfecb1cf35f7fc7d27ce144db546"
+    },
+    "coverage": {
+      "status": "complete-within-view",
+      "examined": 161,
+      "total": 161,
+      "next_offset": null,
+      "exhausted": true
+    },
+    "limitations": [
+      "Static inspection did not load the assembly, resolve dependencies through a CLR, decompile C#, or execute target code."
+    ],
+    "unknowns": [
+      "Collection counts and pages cover producer-returned rows; metadata completeness remains the original metadata status and coverage, not an absence claim about unreturned rows.",
+      "Metadata tokens are build-local coordinates bound to the recorded artifact SHA-256 and module MVID; this view does not load or execute the assembly."
+    ],
+    "summary": {
+      "artifact": {
+        "path": "C:\\Program Files\\YIM\\JIBAS Face & Fingerprint Manager 16.5\\FaceFingerManager.exe",
+        "sha256": "4f4eed686831b9a6db21a263df3c94f83010bfecb1cf35f7fc7d27ce144db546",
+        "byte_length": 2266624,
+        "format": "pe"
+      },
+      "pe": {
+        "machine": 34404,
+        "machine_hex": "0x8664",
+        "architecture": "x86_64",
+        "optional_header": "pe32-plus",
+        "section_count": 3,
+        "characteristics": 46,
+        "cli": {
+          "header_offset": 520,
+          "header_size": 72,
+          "runtime_version": "2.5",
+          "flags": 1,
+          "flag_names": [
+            "il-only"
+          ],
+          "entry_point": {
+            "kind": "metadata-token",
+            "value": "0x06000634"
+          },
+          "metadata_rva": 1913160,
+          "metadata_size": 356876,
+          "resources_rva": 924464,
+          "resources_size": 988696,
+          "strong_name_rva": 0,
+          "strong_name_size": 0,
+          "managed_native_header_rva": 0,
+          "managed_native_header_size": 0,
+          "ready_to_run_signature": false
+        }
+      },
+      "classification": {
+        "status": "managed",
+        "container": "pe",
+        "runtime_family": "dotnet-framework",
+        "implementation": "cil",
+        "managed_architecture": "x86_64",
+        "evidence": [
+          {
+            "code": "cli-header-observed",
+            "detail": "A file-backed PE CLI header and metadata root were admitted.",
+            "file_offset": 520
+          },
+          {
+            "code": "target-framework-observed",
+            "detail": "An assembly-level TargetFrameworkAttribute names .NET Framework.",
+            "file_offset": 2071704
+          },
+          {
+            "code": "managed-architecture-derived",
+            "detail": "Managed architecture x86_64 is derived from PE machine and CLI flags.",
+            "file_offset": 536
+          }
+        ]
+      },
+      "metadata": {
+        "status": "complete",
+        "version": "v4.0.30319",
+        "stream_names": [
+          "#Blob",
+          "#GUID",
+          "#Strings",
+          "#US",
+          "#~"
+        ],
+        "table_row_counts": {
+          "Module": 1,
+          "TypeRef": 528,
+          "TypeDef": 429,
+          "Field": 4102,
+          "MethodDef": 4055,
+          "Param": 5223,
+          "InterfaceImpl": 34,
+          "MemberRef": 1655,
+          "Constant": 19,
+          "CustomAttribute": 48,
+          "FieldMarshal": 3,
+          "ClassLayout": 7,
+          "StandAloneSig": 663,
+          "PropertyMap": 9,
+          "Property": 23,
+          "MethodSemantics": 26,
+          "MethodImpl": 10,
+          "ModuleRef": 1,
+          "TypeSpec": 139,
+          "ImplMap": 4,
+          "FieldRVA": 12,
+          "Assembly": 1,
+          "AssemblyRef": 24,
+          "ManifestResource": 89,
+          "NestedClass": 118,
+          "GenericParam": 105,
+          "MethodSpec": 30
+        }
+      },
+      "module": {
+        "name": "FaceFingerManager.exe",
+        "generation": 0,
+        "mvid": "691ed074-4d5b-457c-c158-7d2227849bf0",
+        "enc_id": null,
+        "enc_base_id": null,
+        "token": "0x00000001",
+        "row_offset": 1905720
+      },
+      "assembly": {
+        "name": "FaceFingerManager",
+        "version": "16.5.0.0",
+        "culture": null,
+        "flags": 0,
+        "hash_algorithm": 32772,
+        "public_key": {
+          "kind": "none",
+          "byte_length": 0,
+          "sha256": null,
+          "token": null
+        },
+        "token": "0x20000001",
+        "row_offset": 2074312
+      },
+      "target_frameworks": [
+        ".NETFramework,Version=v4.8"
+      ],
+      "coverage": {
+        "state": "complete",
+        "issues": []
+      },
+      "limitations": [
+        "Static inspection did not load the assembly, resolve dependencies through a CLR, decompile C#, or execute target code."
+      ],
+      "reported_counts": {
+        "references": 24,
+        "resources": 89,
+        "attributes": 48
+      },
+      "identity_scope": {
+        "token_identity": "build-local",
+        "requires_artifact_sha256": "4f4eed686831b9a6db21a263df3c94f83010bfecb1cf35f7fc7d27ce144db546",
+        "requires_mvid": "691ed074-4d5b-457c-c158-7d2227849bf0"
+      }
+    }
+  },
+  "confidence": "derived",
+  "authority": "shipped-artifact",
+  "environment": null,
+  "limitations": [
+    "Static inspection did not load the assembly, resolve dependencies through a CLR, decompile C#, or execute target code."
+  ],
+  "relationship_coverage": null,
+  "locations": [
+    {
+      "kind": "artifact-path",
+      "path": "C:\\Program Files\\YIM\\JIBAS Face & Fingerprint Manager 16.5\\FaceFingerManager.exe"
+    }
+  ],
+  "evidence_links": [
+    "ev_0f77136c5abfdac914cbc92ae1e265900473341d42e596ffabe98baf06daaa47"
+  ]
+}

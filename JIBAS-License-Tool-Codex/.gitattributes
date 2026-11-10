@@ -1,0 +1,5 @@
+# Preserve exact evidence bytes and release SHA-256 across Git checkouts.
+* -text
+bukti/** -whitespace
+tests/fixtures/** -whitespace
+*.lic -whitespace

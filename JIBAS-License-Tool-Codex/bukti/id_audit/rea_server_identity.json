@@ -1,0 +1,217 @@
+{
+  "evidence_id": "ev_493d688940694420dcdf44d637a5daa28812894dd0c1254662600a85f9ed9975",
+  "subject": {
+    "name": "FaceServer.exe",
+    "digest": {
+      "sha256": "8a123015b2ee095ceda51ece6d47436e9760c88be8f92fb76ed7c120c923c364"
+    },
+    "local_path": "C:\\Program Files\\YIM\\JIBAS Face Server 16.5\\FaceServer.exe",
+    "format": "pe",
+    "architecture": "x86_64"
+  },
+  "provider": {
+    "id": "rea-analysis-view",
+    "name": "REA analysis view projection",
+    "version": "1"
+  },
+  "analysis_profile": null,
+  "predicate_type": "rea.analysis-view",
+  "operation": "inspect_analysis_view",
+  "parameters": {
+    "parent_evidence_id": "ev_9ba7fda80fc72ec89a5958b4f2f8585417e5d01abc32a4b8d213a00afa4c1876",
+    "view": {
+      "kind": "summary"
+    }
+  },
+  "raw_result": null,
+  "normalized_result": {
+    "kind": "summary",
+    "view": {
+      "kind": "summary"
+    },
+    "parent_evidence_id": "ev_9ba7fda80fc72ec89a5958b4f2f8585417e5d01abc32a4b8d213a00afa4c1876",
+    "parent_operation": "inspect_managed_artifact",
+    "parent_digest": "9ba7fda80fc72ec89a5958b4f2f8585417e5d01abc32a4b8d213a00afa4c1876",
+    "view_digest": "3a04ed8cdfe0a0d23b2b3e06dbbe3a98468e7be162685ac946bc9e929cba68ad",
+    "artifact": {
+      "path": "C:\\Program Files\\YIM\\JIBAS Face Server 16.5\\FaceServer.exe",
+      "sha256": "8a123015b2ee095ceda51ece6d47436e9760c88be8f92fb76ed7c120c923c364"
+    },
+    "coverage": {
+      "status": "complete-within-view",
+      "examined": 116,
+      "total": 116,
+      "next_offset": null,
+      "exhausted": true
+    },
+    "limitations": [
+      "Static inspection did not load the assembly, resolve dependencies through a CLR, decompile C#, or execute target code."
+    ],
+    "unknowns": [
+      "Collection counts and pages cover producer-returned rows; metadata completeness remains the original metadata status and coverage, not an absence claim about unreturned rows.",
+      "Metadata tokens are build-local coordinates bound to the recorded artifact SHA-256 and module MVID; this view does not load or execute the assembly."
+    ],
+    "summary": {
+      "artifact": {
+        "path": "C:\\Program Files\\YIM\\JIBAS Face Server 16.5\\FaceServer.exe",
+        "sha256": "8a123015b2ee095ceda51ece6d47436e9760c88be8f92fb76ed7c120c923c364",
+        "byte_length": 1036288,
+        "format": "pe"
+      },
+      "pe": {
+        "machine": 34404,
+        "machine_hex": "0x8664",
+        "architecture": "x86_64",
+        "optional_header": "pe32-plus",
+        "section_count": 3,
+        "characteristics": 46,
+        "cli": {
+          "header_offset": 520,
+          "header_size": 72,
+          "runtime_version": "2.5",
+          "flags": 1,
+          "flag_names": [
+            "il-only"
+          ],
+          "entry_point": {
+            "kind": "metadata-token",
+            "value": "0x0600057a"
+          },
+          "metadata_rva": 759432,
+          "metadata_size": 280144,
+          "resources_rva": 464636,
+          "resources_size": 294796,
+          "strong_name_rva": 0,
+          "strong_name_size": 0,
+          "managed_native_header_rva": 0,
+          "managed_native_header_size": 0,
+          "ready_to_run_signature": false
+        }
+      },
+      "classification": {
+        "status": "managed",
+        "container": "pe",
+        "runtime_family": "dotnet-framework",
+        "implementation": "cil",
+        "managed_architecture": "x86_64",
+        "evidence": [
+          {
+            "code": "cli-header-observed",
+            "detail": "A file-backed PE CLI header and metadata root were admitted.",
+            "file_offset": 520
+          },
+          {
+            "code": "target-framework-observed",
+            "detail": "An assembly-level TargetFrameworkAttribute names .NET Framework.",
+            "file_offset": 879822
+          },
+          {
+            "code": "managed-architecture-derived",
+            "detail": "Managed architecture x86_64 is derived from PE machine and CLI flags.",
+            "file_offset": 536
+          }
+        ]
+      },
+      "metadata": {
+        "status": "complete",
+        "version": "v4.0.30319",
+        "stream_names": [
+          "#Blob",
+          "#GUID",
+          "#Strings",
+          "#US",
+          "#~"
+        ],
+        "table_row_counts": {
+          "Module": 1,
+          "TypeRef": 538,
+          "TypeDef": 398,
+          "Field": 1826,
+          "MethodDef": 3277,
+          "Param": 4158,
+          "InterfaceImpl": 42,
+          "MemberRef": 1761,
+          "Constant": 119,
+          "CustomAttribute": 61,
+          "FieldMarshal": 3,
+          "ClassLayout": 5,
+          "StandAloneSig": 663,
+          "PropertyMap": 11,
+          "Property": 27,
+          "MethodSemantics": 33,
+          "MethodImpl": 20,
+          "ModuleRef": 3,
+          "TypeSpec": 139,
+          "ImplMap": 8,
+          "FieldRVA": 7,
+          "Assembly": 1,
+          "AssemblyRef": 20,
+          "ManifestResource": 35,
+          "NestedClass": 111,
+          "GenericParam": 105,
+          "MethodSpec": 39
+        }
+      },
+      "module": {
+        "name": "FaceServer.exe",
+        "generation": 0,
+        "mvid": "9e7e3122-c165-4ca3-3e9c-234edb96bf24",
+        "enc_id": null,
+        "enc_base_id": null,
+        "token": "0x00000001",
+        "row_offset": 751992
+      },
+      "assembly": {
+        "name": "FaceServer",
+        "version": "16.5.0.0",
+        "culture": null,
+        "flags": 0,
+        "hash_algorithm": 32772,
+        "public_key": {
+          "kind": "none",
+          "byte_length": 0,
+          "sha256": null,
+          "token": null
+        },
+        "token": "0x20000001",
+        "row_offset": 882678
+      },
+      "target_frameworks": [
+        ".NETFramework,Version=v4.8"
+      ],
+      "coverage": {
+        "state": "complete",
+        "issues": []
+      },
+      "limitations": [
+        "Static inspection did not load the assembly, resolve dependencies through a CLR, decompile C#, or execute target code."
+      ],
+      "reported_counts": {
+        "references": 20,
+        "resources": 35,
+        "attributes": 61
+      },
+      "identity_scope": {
+        "token_identity": "build-local",
+        "requires_artifact_sha256": "8a123015b2ee095ceda51ece6d47436e9760c88be8f92fb76ed7c120c923c364",
+        "requires_mvid": "9e7e3122-c165-4ca3-3e9c-234edb96bf24"
+      }
+    }
+  },
+  "confidence": "derived",
+  "authority": "shipped-artifact",
+  "environment": null,
+  "limitations": [
+    "Static inspection did not load the assembly, resolve dependencies through a CLR, decompile C#, or execute target code."
+  ],
+  "relationship_coverage": null,
+  "locations": [
+    {
+      "kind": "artifact-path",
+      "path": "C:\\Program Files\\YIM\\JIBAS Face Server 16.5\\FaceServer.exe"
+    }
+  ],
+  "evidence_links": [
+    "ev_9ba7fda80fc72ec89a5958b4f2f8585417e5d01abc32a4b8d213a00afa4c1876"
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "target_sha256": "6f5369df4d854c467d24fb067d8b79c573b35699c7b1ce7f19a310669f1ba546",
+  "mvid": "0ec4d2e7-40e6-4d47-2b18-cbedb1259d09",
+  "authority": "controlled-replay: runtime identity holder supplied; original importer and validator unmodified",
+  "sandbox": "C:\\YIM\\JIBAS Generator\\JIBAS-License-Tool-Codex\\bukti\\client_import\\verify_mismatched_db_tu_47hun",
+  "attempts": [
+    {
+      "input": "C:\\YIM\\JIBAS Generator\\JIBAS-License-Tool-Codex\\bukti\\client_import\\inputs\\v4yne_new.lic",
+      "current_database_id": "VWXYZ",
+      "before_sequence": 0,
+      "before_client_id": "TRIAL",
+      "accepted": false,
+      "exception": "System.Exception: Database Id tidak sama dengan lisensi (V4YNE)",
+      "cache_exists": false,
+      "after_sequence": 0,
+      "after_client_id": "TRIAL",
+      "after_database_id": "",
+      "after_info1": "",
+      "cache_validator_returned": false
+    }
+  ],
+  "label": "mismatched_db"
+}

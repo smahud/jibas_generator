@@ -1,0 +1,199 @@
+{
+  "mvid": "9e7e3122-c165-4ca3-3e9c-234edb96bf24",
+  "artifact_sha256": "8a123015b2ee095ceda51ece6d47436e9760c88be8f92fb76ed7c120c923c364",
+  "original_tables": [
+    {
+      "field_token": "0x04000307",
+      "name": "JibasSptFaceLicense",
+      "columns": [
+        {
+          "name": "Versi",
+          "type": "System.String"
+        },
+        {
+          "name": "KlienId",
+          "type": "System.String"
+        },
+        {
+          "name": "Klien",
+          "type": "System.String"
+        },
+        {
+          "name": "Tanggal",
+          "type": "System.String"
+        },
+        {
+          "name": "Model",
+          "type": "System.String"
+        },
+        {
+          "name": "Seri",
+          "type": "System.String"
+        },
+        {
+          "name": "Size",
+          "type": "System.String"
+        },
+        {
+          "name": "Sequence",
+          "type": "System.Int32"
+        },
+        {
+          "name": "KodeRs",
+          "type": "System.String"
+        },
+        {
+          "name": "KodeTx",
+          "type": "System.String"
+        },
+        {
+          "name": "DbId",
+          "type": "System.String"
+        },
+        {
+          "name": "LicenseLimit",
+          "type": "System.String"
+        },
+        {
+          "name": "LicenseLimitDate",
+          "type": "System.DateTime"
+        },
+        {
+          "name": "MaxClient",
+          "type": "System.String"
+        },
+        {
+          "name": "Keterangan",
+          "type": "System.String"
+        },
+        {
+          "name": "Info1",
+          "type": "System.String"
+        },
+        {
+          "name": "Info2",
+          "type": "System.String"
+        },
+        {
+          "name": "Info3",
+          "type": "System.String"
+        }
+      ]
+    }
+  ],
+  "before_sequence": 0,
+  "before_client": "TRIAL",
+  "candidate_import": true,
+  "after_sequence": 1,
+  "after_client": "571BA70EB9E741CBAB0377592A477B20",
+  "after_dbid": "Z9X8W",
+  "after_info1": "123AB",
+  "cache_written": true,
+  "runtime_cases": [
+    {
+      "name": "actual_injected_environment",
+      "dbid": "Z9X8W",
+      "system_id": "FFFFF",
+      "face_count": 0,
+      "simulated_time": "2026-11-10T12:00:00",
+      "accepted": false,
+      "status_code": -999,
+      "status_text": ""
+    },
+    {
+      "name": "matching_license_environment",
+      "dbid": "Z9X8W",
+      "system_id": "123AB",
+      "face_count": 0,
+      "simulated_time": "2026-11-10T12:00:00",
+      "accepted": true,
+      "status_code": 2,
+      "status_text": "Status Lisensi: Aktif"
+    },
+    {
+      "name": "wrong_database",
+      "dbid": "ZZZZZ",
+      "system_id": "123AB",
+      "face_count": 0,
+      "simulated_time": "2026-11-10T12:00:00",
+      "accepted": false,
+      "status_code": 0,
+      "status_text": "Status Lisensi: Database id (ZZZZZ) tidak sesuai dengan lisensi (Z9X8W)"
+    },
+    {
+      "name": "wrong_system",
+      "dbid": "Z9X8W",
+      "system_id": "FFFFF",
+      "face_count": 0,
+      "simulated_time": "2026-11-10T12:00:00",
+      "accepted": false,
+      "status_code": -999,
+      "status_text": ""
+    },
+    {
+      "name": "legacy_day_after_expiry",
+      "dbid": "Z9X8W",
+      "system_id": "123AB",
+      "face_count": 0,
+      "simulated_time": "2029-01-01T23:59:00",
+      "accepted": true,
+      "status_code": 2,
+      "status_text": "Status Lisensi: Aktif"
+    },
+    {
+      "name": "expired",
+      "dbid": "Z9X8W",
+      "system_id": "123AB",
+      "face_count": 0,
+      "simulated_time": "2029-12-31T23:59:00",
+      "accepted": false,
+      "status_code": 0,
+      "status_text": "Status Lisensi: Jangka waktu lisensi telah berakhir"
+    },
+    {
+      "name": "at_capacity",
+      "dbid": "Z9X8W",
+      "system_id": "123AB",
+      "face_count": 123,
+      "simulated_time": "2026-11-10T12:00:00",
+      "accepted": true,
+      "status_code": 2,
+      "status_text": "Status Lisensi: Aktif"
+    },
+    {
+      "name": "over_capacity",
+      "dbid": "Z9X8W",
+      "system_id": "123AB",
+      "face_count": 124,
+      "simulated_time": "2026-11-10T12:00:00",
+      "accepted": false,
+      "status_code": 0,
+      "status_text": "Status Lisensi: Jumlah wajah yang aktif (124) melebihi lisensi (123)"
+    },
+    {
+      "name": "trial",
+      "dbid": "Z9X8W",
+      "system_id": "123AB",
+      "face_count": 0,
+      "simulated_time": "2026-11-10T12:00:00",
+      "accepted": false,
+      "status_code": 1,
+      "status_text": "Status Lisensi: TRIAL"
+    }
+  ],
+  "sandbox": "C:\\Users\\Laptop Kantor - ASUS\\AppData\\Local\\Temp\\codex-server-matrix\\d854c9c478c14f5499ee3dfe9d5be535",
+  "boundary": "Controlled original-method replay; IDs/count/time injected; database/network/main/UI not run; not production activation.",
+  "scenario": "Z9X8W_123AB_system_mismatch",
+  "runtime_expectations": {
+    "actual_injected_environment": false,
+    "matching_license_environment": true,
+    "wrong_database": false,
+    "wrong_system": false,
+    "legacy_day_after_expiry": true,
+    "expired": false,
+    "at_capacity": true,
+    "over_capacity": false,
+    "trial": false
+  },
+  "assertions_passed": true
+}

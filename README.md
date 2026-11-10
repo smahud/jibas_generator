@@ -1,5 +1,11 @@
 # JIBAS Generator — Diagnostik Berkas Lokal
 
+Pembaruan REA Windows 10 November 2026 tersedia terpisah di
+[JIBAS-License-Tool-Codex](JIBAS-License-Tool-Codex/README.md).
+Temuan baru membuktikan header impor client yang hilang dan bug trimming
+System ID (DDCB4 vs 7738F), dengan pengujian metode asli lintas ID.
+GUI diagnostik di root tetap tersedia seperti sebelumnya.
+
 Repository Python dengan arsip penelitian JIBAS dan antarmuka desktop **JIBAS
 Diagnostics** untuk membaca berkas yang sudah tersedia. GUI saat ini hanya
 menyediakan inspeksi dan pemeriksaan lokal; hasilnya **bukan konfirmasi aktivasi

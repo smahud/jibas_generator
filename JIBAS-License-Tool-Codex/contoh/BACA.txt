@@ -1,0 +1,6 @@
+V4YNE-DDCB4-baru.lic adalah contoh LISENSI BARU: header impor benar,
+Sequence 1, Client ID baru, kapasitas 100, berlaku sampai 2030-12-31.
+Jangan gunakan sebagai perpanjangan instalasi yang sudah berlisensi.
+Perpanjangan: gunakan --previous-license agar Client ID sama dan Sequence naik.
+Contoh lama V4YNE-7738F.lic dipindah ke bukti/historical_example_V4YNE-7738F.lic.
+File lama sengaja dipertahankan untuk membuktikan bug header dan detector.

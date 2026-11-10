@@ -1,0 +1,97 @@
+{
+  "mvid": "9e7e3122-c165-4ca3-3e9c-234edb96bf24",
+  "artifact_sha256": "8a123015b2ee095ceda51ece6d47436e9760c88be8f92fb76ed7c120c923c364",
+  "original_tables": [
+    {
+      "field_token": "0x04000307",
+      "name": "JibasSptFaceLicense",
+      "columns": [
+        {
+          "name": "Versi",
+          "type": "System.String"
+        },
+        {
+          "name": "KlienId",
+          "type": "System.String"
+        },
+        {
+          "name": "Klien",
+          "type": "System.String"
+        },
+        {
+          "name": "Tanggal",
+          "type": "System.String"
+        },
+        {
+          "name": "Model",
+          "type": "System.String"
+        },
+        {
+          "name": "Seri",
+          "type": "System.String"
+        },
+        {
+          "name": "Size",
+          "type": "System.String"
+        },
+        {
+          "name": "Sequence",
+          "type": "System.Int32"
+        },
+        {
+          "name": "KodeRs",
+          "type": "System.String"
+        },
+        {
+          "name": "KodeTx",
+          "type": "System.String"
+        },
+        {
+          "name": "DbId",
+          "type": "System.String"
+        },
+        {
+          "name": "LicenseLimit",
+          "type": "System.String"
+        },
+        {
+          "name": "LicenseLimitDate",
+          "type": "System.DateTime"
+        },
+        {
+          "name": "MaxClient",
+          "type": "System.String"
+        },
+        {
+          "name": "Keterangan",
+          "type": "System.String"
+        },
+        {
+          "name": "Info1",
+          "type": "System.String"
+        },
+        {
+          "name": "Info2",
+          "type": "System.String"
+        },
+        {
+          "name": "Info3",
+          "type": "System.String"
+        }
+      ]
+    }
+  ],
+  "before_sequence": 0,
+  "before_client": "TRIAL",
+  "candidate_import": "Exception: Database Id tidak sama dengan lisensi (V4YNE)",
+  "after_sequence": 0,
+  "after_client": "TRIAL",
+  "after_dbid": "",
+  "after_info1": "",
+  "cache_written": false,
+  "sandbox": "C:\\Users\\Laptop Kantor - ASUS\\AppData\\Local\\Temp\\codex-server-matrix\\988d71fe20074e819225924ea07b5707",
+  "boundary": "Controlled original-method replay; IDs/count/time injected; database/network/main/UI not run; not production activation.",
+  "scenario": "V4YNE_DDCB4_db_mismatch",
+  "expected_error_substring": "Database Id tidak sama",
+  "assertions_passed": true
+}

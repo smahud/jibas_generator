@@ -1,0 +1,4 @@
+SystemId(0x0600059B): [DDCB4]
+diskpath(0x06000599): [30029941042         ]
+csp(0x0600059A): [E0813C3C-120B-02FE-5F00-BCAEC5319E78]
+DB id field: []  sysid field: []
