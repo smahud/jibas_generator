@@ -1,0 +1,57 @@
+{
+  "method": "0x06000E0A",
+  "mvid": "5831bc0d-d22e-4a13-67b9-f22eab4b24a8",
+  "artifact_sha256": "a2b77a3fc715d1d8c2b47a29ff65444af0e829c3f2704098ed538c48ce5f140b",
+  "samples": [
+    {
+      "stamp": "2026-11-10T12:00:00",
+      "original_minute": 1066090320,
+      "python_minute": 1066090320,
+      "matches": true
+    },
+    {
+      "stamp": "2028-12-31T23:59:00",
+      "original_minute": 1067219999,
+      "python_minute": 1067219999,
+      "matches": true
+    },
+    {
+      "stamp": "2029-01-01T23:59:00",
+      "original_minute": 1067219999,
+      "python_minute": 1067219999,
+      "matches": true
+    },
+    {
+      "stamp": "2030-12-31T23:59:00",
+      "original_minute": 1068269759,
+      "python_minute": 1068269759,
+      "matches": true
+    },
+    {
+      "stamp": "3000-01-01T00:00:00",
+      "original_minute": 1577926080,
+      "python_minute": 1577926080,
+      "matches": true
+    },
+    {
+      "stamp": "4084-01-01T00:00:00",
+      "original_minute": -2146900576,
+      "python_minute": -2146900576,
+      "matches": true
+    },
+    {
+      "stamp": "4085-01-01T00:00:00",
+      "original_minute": -2146374976,
+      "python_minute": -2146374976,
+      "matches": true
+    },
+    {
+      "stamp": "9999-12-31T23:59:00",
+      "original_minute": 964677343,
+      "python_minute": 964677343,
+      "matches": true
+    }
+  ],
+  "scope": "pure date method invocation only, no Main, database, network, or live writes",
+  "all_python_values_match": true
+}

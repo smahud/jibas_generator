@@ -1,60 +1,31 @@
-"""Command-line interface for the JIBAS license accuracy tool.
-
-Commands:
-  default    Detection readout of Database ID and System ID
-  inspect    Read the contents of a license file
-  verify     Check the license against the installation ID (can be detected automatically)
-  generate   Create a new license file or an extension
-  tulis-cache-client  Fix the client 16.10 trial notice: write licenseface.enc
-                      from the effective Face Server license row.
-"""
+"""Manual-ID CLI for the FACE, SchoolPay and CBE license generators."""
 from __future__ import annotations
 
 import argparse
 from datetime import date
+import importlib
 import json
 from pathlib import Path
 import sys
 
-import id_detect
-import license_codec
+PRODUCTS = {"face": "license_codec", "schoolpay": "schoolpay_codec", "cbe": "cbe_codec"}
 
 
-def product_modules(product="face"):
-    """Select explicit product engines; the original face CLI stays the default."""
-    if product == "schoolpay":
-        import schoolpay_codec
-        import schoolpay_id_detect
-        return schoolpay_codec, schoolpay_id_detect
-    return license_codec, id_detect
+def product_codec(product="face"):
+    return importlib.import_module(PRODUCTS[product])
 
 
-def add_product_argument(parser):
-    parser.add_argument("--product", choices=("face", "schoolpay"), default="face",
-                        help="Produk tujuan: face (Absensi Wajah, bawaan) atau schoolpay.")
-
-
-def positive_int(value: str) -> int:
+def positive_int(value):
     try:
         number = int(value)
     except ValueError as exc:
         raise argparse.ArgumentTypeError("Kapasitas harus berupa bilangan bulat.") from exc
-    if number < 1:
-        raise argparse.ArgumentTypeError("Kapasitas harus lebih dari nol.")
+    if not 1 <= number <= 2147483647:
+        raise argparse.ArgumentTypeError("Kapasitas harus antara 1 dan 2147483647.")
     return number
 
 
-def positive_int32(value: str) -> int:
-    try:
-        number = int(value)
-    except ValueError as exc:
-        raise argparse.ArgumentTypeError("Sequence harus berupa bilangan bulat.") from exc
-    if not 1 <= number <= 2_147_483_647:
-        raise argparse.ArgumentTypeError("Sequence harus antara 1 dan 2147483647.")
-    return number
-
-
-def iso_date(value: str) -> str:
+def iso_date(value):
     try:
         parsed = date.fromisoformat(value)
     except ValueError as exc:
@@ -64,173 +35,74 @@ def iso_date(value: str) -> str:
     return value
 
 
-def build_parser() -> argparse.ArgumentParser:
-    parser = argparse.ArgumentParser(
-        description="Baca, periksa, buat, dan deteksi ID "
-                    "lisensi JIBAS Absensi Wajah dan SchoolPay."
-    )
+def build_parser():
+    parser = argparse.ArgumentParser(description="Lisensi Absensi Wajah, SchoolPay dan CBE Server; ID diisi manual.")
     commands = parser.add_subparsers(dest="command", required=True)
+    for command in ("inspect", "verify", "generate"):
+        child = commands.add_parser(command)
+        child.add_argument("--product", choices=tuple(PRODUCTS), default="face",
+                           help="face (bawaan), schoolpay, atau cbe.")
+        if command in ("inspect", "verify"):
+            child.add_argument("file", type=Path, metavar="FILE")
+        if command in ("verify", "generate"):
+            child.add_argument("--database-id", required=True)
+            child.add_argument("--system-id", required=True)
+            child.add_argument("--client-id", default=None)
+        if command == "verify":
+            child.add_argument("--for-import", action="store_true",
+                               help="Periksa syarat file impor produk selain pemeriksaan offline.")
+        if command == "generate":
+            child.add_argument("--expires", required=True, type=iso_date, metavar="YYYY-MM-DD")
+            child.add_argument("--capacity", required=True, type=positive_int,
+                               help="Wajah (face), vendor (schoolpay), koneksi klien (cbe).")
+            child.add_argument("--client-name", default="")
+            child.add_argument("--previous-license", type=Path, default=None,
+                               help="File lama untuk perpanjangan; Sequence dihitung otomatis.")
+            child.add_argument("--out", required=True, type=Path, metavar="FILE")
+            child.add_argument("--overwrite", action="store_true")
 
-    detect = commands.add_parser("detect", help="Deteksi Database ID dan System ID asli.")
-    add_product_argument(detect)
-    detect.add_argument("--no-system", action="store_true", help="Lewati deteksi hardware WMI.")
-
-    inspect = commands.add_parser("inspect", help="Baca isi berkas lisensi.")
-    add_product_argument(inspect)
-    inspect.add_argument("file", type=Path, metavar="FILE")
-
-    verify = commands.add_parser("verify", help="Periksa lisensi terhadap ID instalasi.")
-    add_product_argument(verify)
-    verify.add_argument("file", type=Path, metavar="FILE")
-    verify.add_argument("--database-id", default=None)
-    verify.add_argument("--system-id", default=None)
-    verify.add_argument("--client-id", default=None)
-    verify.add_argument("--for-import", action="store_true",
-                        help="Wajibkan format/header impor produk; cache internal biasanya tanpa header.")
-    verify.add_argument("--auto", action="store_true",
-                        help="Deteksi ID asli dari MySQL/WMI bila argumen ID tidak diberikan.")
-
-    generate = commands.add_parser("generate", help="Buat berkas lisensi baru atau perpanjangan.")
-    add_product_argument(generate)
-    generate.add_argument("--database-id", required=True)
-    generate.add_argument("--system-id", required=True)
-    generate.add_argument("--client-id", default=None)
-    generate.add_argument("--expires", required=True, type=iso_date, metavar="YYYY-MM-DD")
-    generate.add_argument("--capacity", required=True, type=positive_int, metavar="N",
-                          help="Kapasitas wajah (face) atau vendor (schoolpay).")
-    generate.add_argument("--client-name", default="")
-    generate.add_argument("--previous-license", type=Path, default=None, metavar="FILE",
-                          help="Lisensi sebelumnya untuk perpanjangan.")
-    generate.add_argument("--sequence", type=positive_int32, default=None, metavar="N",
-                          help="Sequence eksplisit; harus lebih besar dari lisensi sebelumnya.")
-    generate.add_argument("--out", required=True, type=Path, metavar="FILE")
-    generate.add_argument("--overwrite", action="store_true")
-
-    client = commands.add_parser(
-        "tulis-cache-client",
-        help="Perbaiki TRIAL FaceFgrClient 16.10: tulis licenseface.enc "
-             "dari baris lisensi efektif Face Server.")
-    client.add_argument("--dari", type=Path, default=None, metavar="FILE",
-                        help="Lisensi efektif (.lic/.enc); bawaan: "
-                             "license.enc Face Server 16.5 terpasang.")
-    client.add_argument("--tujuan", type=Path, default=None, metavar="DIR",
-                        help="Folder FaceFgrClient 16.10; bawaan: folder "
-                             "instalasi klien 16.10.")
-    client.add_argument("--overwrite", action="store_true",
-                        help="Timpa licenseface.enc yang ada (cadangan "
-                             "licenseface.enc.bak-<stempel> dibuat otomatis).")
+    cache = commands.add_parser("tulis-cache-client", help="Utilitas cache FACE historis dengan backup.")
+    cache.add_argument("--dari", type=Path, default=None, metavar="FILE")
+    cache.add_argument("--tujuan", type=Path, default=None, metavar="DIR")
+    cache.add_argument("--overwrite", action="store_true")
     return parser
 
 
-def run_detect(args, outcomes: list) -> dict:
-    _, detector = product_modules(args.product)
-    label = ("SchoolPay splang recipe (original 0x06000824)" if args.product == "schoolpay"
-             else "jbssat splang recipe (original 0x06000AC3)")
-    result: dict = {"product": args.product, "dbid_detector": label}
-    try:
-        dbid, info = detector.DbIdDetector().detect()
-        result["database_id"] = dbid
-        result["database_id_detail"] = info
-    except detector.DetectError as exc:
-        result["database_id_error"] = str(exc)
-    if not args.no_system:
-        try:
-            sysid, info = detector.SystemIdDetector().detect()
-            result["system_id"] = sysid
-            result["system_id_detail"] = info
-        except detector.DetectError as exc:
-            result["system_id_error"] = str(exc)
-    outcomes.append(result)
-    if "database_id_error" in result or "system_id_error" in result:
-        raise ValueError("Deteksi ID belum lengkap: " + "; ".join(
-            str(result[key]) for key in ("database_id_error", "system_id_error") if key in result))
-    return result
-
-
-def run_generate(args, outcomes: list) -> dict:
-    codec, _ = product_modules(args.product)
-    result = codec.generate_license(
-        database_id=args.database_id.strip(),
-        system_id=args.system_id.strip(),
-        client_id=(args.client_id or "").strip() or None,
-        expires=args.expires,
-        capacity=args.capacity,
-        output_path=args.out,
-        client_name=args.client_name.strip(),
-        previous_license_path=args.previous_license,
-        sequence=args.sequence,
-        overwrite=args.overwrite,
-    )
-    outcomes.append(result)
-    verification = result.get("verification")
-    if isinstance(verification, dict) and verification.get("valid") is False:
-        raise SystemExit(1)
-    return result
-
-
-def run_fix_client_cache(args, outcomes: list) -> dict:
-    source = args.dari or license_codec.DEFAULT_CLIENT_SOURCE
-    client_dir = args.tujuan or license_codec.DEFAULT_CLIENT_DIR
-    result = license_codec.fix_client_cache(
-        client_dir, source, overwrite=args.overwrite)
-    outcomes.append(result)
-    verification = license_codec.verify_client_fix(result)
-    outcomes.append(verification)
-    if verification.get("ready") is not True:
-        raise SystemExit(1)
-    return result
-
-
-def main(argv: list[str] | None = None) -> int:
-    parser = build_parser()
-    args = parser.parse_args(argv)
+def main(argv=None):
+    args = build_parser().parse_args(argv)
     outcomes = []
     try:
-        if args.command == "detect":
-            run_detect(args, outcomes)
-        elif args.command == "inspect":
-            codec, _ = product_modules(args.product)
-            outcomes.append(codec.inspect_license(args.file))
-        elif args.command == "verify":
-            codec, detector = product_modules(args.product)
-            database_id = (args.database_id or "").strip()
-            system_id = (args.system_id or "").strip()
-            auto_used = False
-            if args.auto:
-                if not database_id:
-                    database_id = detector.DbIdDetector().detect()[0]
-                    auto_used = True
-                if not system_id:
-                    system_id = detector.SystemIdDetector().detect()[0]
-                    auto_used = True
-            if not database_id or not system_id:
-                raise ValueError("Isi --database-id dan --system-id, atau gunakan --auto.")
-            verify_result = codec.verify_license(
-                args.file, database_id, system_id,
-                client_id=(args.client_id or "").strip() or None,
-                for_import=args.for_import)
-            outcomes.append(verify_result)
-            if auto_used:
-                outcomes.append({"auto_detection": True})
-            is_valid = verify_result.get("valid") is True
-            print(json.dumps({"ok": is_valid, "results": outcomes},
-                             ensure_ascii=False, indent=2, default=str))
-            return 0 if is_valid else 1
+        if args.command == "tulis-cache-client":
+            codec = product_codec("face")
+            result = codec.fix_client_cache(args.tujuan or codec.DEFAULT_CLIENT_DIR,
+                args.dari or codec.DEFAULT_CLIENT_SOURCE, overwrite=args.overwrite)
+            outcomes.append(result)
+            verification = codec.verify_client_fix(result)
+            outcomes.append(verification)
+            ok = verification.get("ready") is True
         else:
-            if args.command == "tulis-cache-client":
-                run_fix_client_cache(args, outcomes)
+            codec = product_codec(args.product)
+            if args.command == "inspect":
+                result = codec.inspect_license(args.file)
+                ok = True
+            elif args.command == "verify":
+                result = codec.verify_license(args.file, args.database_id.strip(), args.system_id.strip(),
+                    client_id=(args.client_id or "").strip() or None, for_import=args.for_import)
+                ok = result.get("valid") is True
             else:
-                run_generate(args, outcomes)
-        print(json.dumps({"ok": True, "results": outcomes},
-                         ensure_ascii=False, indent=2, default=str))
-        return 0
-    except SystemExit as exc:  # propagated statuses from helpers
-        if isinstance(exc.code, str):
-            raise
-        return 1 if exc.code is None else exc.code
+                client_id = (args.client_id or "").strip() or None
+                if client_id and not args.previous_license:
+                    raise ValueError("Untuk perpanjangan, pilih file lisensi lama agar Sequence dihitung otomatis.")
+                result = codec.generate_license(database_id=args.database_id.strip(),
+                    system_id=args.system_id.strip(), client_id=client_id, expires=args.expires,
+                    capacity=args.capacity, output_path=args.out, client_name=args.client_name.strip(),
+                    previous_license_path=args.previous_license, sequence=None, overwrite=args.overwrite)
+                ok = result.get("verification", {}).get("valid") is True
+            outcomes.append(result)
+        print(json.dumps({"ok": ok, "results": outcomes}, ensure_ascii=False, indent=2, default=str))
+        return 0 if ok else 1
     except (OSError, ValueError) as exc:
-        print(json.dumps({"ok": False, "error": str(exc)}, ensure_ascii=False),
-              file=sys.stderr)
+        print(json.dumps({"ok": False, "error": str(exc)}, ensure_ascii=False), file=sys.stderr)
         return 2
 
 

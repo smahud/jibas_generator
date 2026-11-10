@@ -1,0 +1,99 @@
+﻿METHOD 0x060005B7 #=z7BSnOotoF3zhEI642U2m4TYLZfmSjLOHyA==::System.String #=zylGkdEFZ$A_W()
+0000: ldsfld       #=zabBXcoOO7fm$IgTgIhCAgtELTmkyIs9KPA==+#=zoGpjPCE=::System.String #=zF3TpeDM= 0x040005D2
+0005: ldc.i4       1089679955 
+000A: call         #=q0y8ZybtQjWGJxOXzfCn979b65JpLIHLOVBAQM4De8Zw=::System.String #=zepWPJGM=(Int32) 0x0600005C
+000F: call         System.IO.Path::System.String Combine(System.String, System.String) 0x0A00033C
+0014: ret           
+METHOD 0x060005B9 #=z7BSnOotoF3zhEI642U2m4TYLZfmSjLOHyA==::Void #=zU5D_bNB9aLFE()
+0000: call         #=zLJlvIAM26wbszkZjEYWVCwOoSUMZepudYoAu5pMSCUBFHerv5Q==::#=qdDwFC2touNSZvn3P8zve6cjQIJPXqPduOoEN5KW0LYk= #=zO24707xvqtQ8lzP1lBgy$l3wiiL39Sn7oRAwXq3fYNRgBNNKog==() 0x060007A4
+0005: call         #=zLJlvIAM26wbszkZjEYWVCwOoSUMZepudYoAu5pMSCUBFHerv5Q==::System.IO.Stream #=z_B2215M$3HdSQLXBQOc0RXS1tmYMQniu3PS0PB2yQU_zsvLV0g==() 0x060007A6
+000A: ldstr        "D/<!cBkV:," 0x70000001
+000F: ldnull        
+0010: call         #=qdDwFC2touNSZvn3P8zve6cjQIJPXqPduOoEN5KW0LYk=::Void #=zPd8ds1kU58FWhey4llvZpQMNRWr8JERtQQ==(System.IO.Stream, System.String, System.Object[]) 0x06000321
+0015: ret           
+METHOD 0x060005BA #=z7BSnOotoF3zhEI642U2m4TYLZfmSjLOHyA==::Void #=zcSAp7Nk=()
+0000: call         #=z7BSnOotoF3zhEI642U2m4TYLZfmSjLOHyA==::Void #=zU5D_bNB9aLFE() 0x060005B9
+0005: call         #=z7BSnOotoF3zhEI642U2m4TYLZfmSjLOHyA==::Void #=zR2QjsUsQN3JG() 0x060005B8
+000A: call         #=z7BSnOotoF3zhEI642U2m4TYLZfmSjLOHyA==::System.String #=zylGkdEFZ$A_W() 0x060005B7
+000F: call         System.IO.File::Boolean Exists(System.String) 0x0A00033E
+0014: brtrue.s     27 
+0016: call         #=z7BSnOotoF3zhEI642U2m4TYLZfmSjLOHyA==::Void #=zQIHvYpOLO0Jm() 0x060005BC
+001B: call         #=z7BSnOotoF3zhEI642U2m4TYLZfmSjLOHyA==::Boolean #=ziv9I6x5WgcnK() 0x060005BE
+0020: brtrue.s     39 
+0022: call         #=z7BSnOotoF3zhEI642U2m4TYLZfmSjLOHyA==::Void #=zQIHvYpOLO0Jm() 0x060005BC
+0027: call         #=ztZ1kWA6jQem1L13h_3$ltyb4Se8poZU5SQ==::Void #=zmR_Jrcs=() 0x06000DD2
+002C: ret           
+METHOD 0x06000723 #=zJU1l1Hq99eaPqY_vn0Bvl7sNG5eIQhjB6g==::Void #=z30Cb8BgSnPujmmhDSg==(System.String, System.String)
+0000: newobj       System.Security.Cryptography.MD5CryptoServiceProvider::Void .ctor() 0x0A000436
+0005: stloc.0       
+0006: newobj       System.Security.Cryptography.RijndaelManaged::Void .ctor() 0x0A000437
+000B: stsfld       #=zJU1l1Hq99eaPqY_vn0Bvl7sNG5eIQhjB6g==::System.Security.Cryptography.Rijndael #=zX_uJxX8= 0x04000419
+0010: ldsfld       #=zJU1l1Hq99eaPqY_vn0Bvl7sNG5eIQhjB6g==::System.Security.Cryptography.Rijndael #=zX_uJxX8= 0x04000419
+0015: ldc.i4.1      
+0016: callvirt     System.Security.Cryptography.SymmetricAlgorithm::Void set_Mode(System.Security.Cryptography.CipherMode) 0x0A0001EC
+001B: ldsfld       #=zJU1l1Hq99eaPqY_vn0Bvl7sNG5eIQhjB6g==::System.Security.Cryptography.Rijndael #=zX_uJxX8= 0x04000419
+0020: ldc.i4.2      
+0021: callvirt     System.Security.Cryptography.SymmetricAlgorithm::Void set_Padding(System.Security.Cryptography.PaddingMode) 0x0A0001ED
+0026: ldsfld       #=zJU1l1Hq99eaPqY_vn0Bvl7sNG5eIQhjB6g==::System.Security.Cryptography.Rijndael #=zX_uJxX8= 0x04000419
+002B: ldloc.0       
+002C: call         System.Text.Encoding::System.Text.Encoding get_ASCII() 0x0A000342
+0031: ldarg.0       
+0032: callvirt     System.Text.Encoding::Byte[] GetBytes(System.String) 0x0A0000AC
+0037: callvirt     System.Security.Cryptography.HashAlgorithm::Byte[] ComputeHash(Byte[]) 0x0A000438
+003C: callvirt     System.Security.Cryptography.SymmetricAlgorithm::Void set_Key(Byte[]) 0x0A00003B
+0041: ldsfld       #=zJU1l1Hq99eaPqY_vn0Bvl7sNG5eIQhjB6g==::System.Security.Cryptography.Rijndael #=zX_uJxX8= 0x04000419
+0046: call         System.Text.Encoding::System.Text.Encoding get_ASCII() 0x0A000342
+004B: ldarg.1       
+004C: callvirt     System.Text.Encoding::Byte[] GetBytes(System.String) 0x0A0000AC
+0051: callvirt     System.Security.Cryptography.SymmetricAlgorithm::Void set_IV(Byte[]) 0x0A000108
+0056: ldsfld       #=zJU1l1Hq99eaPqY_vn0Bvl7sNG5eIQhjB6g==::System.Security.Cryptography.Rijndael #=zX_uJxX8= 0x04000419
+005B: callvirt     System.Security.Cryptography.SymmetricAlgorithm::System.Security.Cryptography.ICryptoTransform CreateEncryptor() 0x0A000109
+0060: stsfld       #=zJU1l1Hq99eaPqY_vn0Bvl7sNG5eIQhjB6g==::System.Security.Cryptography.ICryptoTransform #=zE$Iw2ndfxquW__m5ew== 0x0400041A
+0065: ldsfld       #=zJU1l1Hq99eaPqY_vn0Bvl7sNG5eIQhjB6g==::System.Security.Cryptography.Rijndael #=zX_uJxX8= 0x04000419
+006A: callvirt     System.Security.Cryptography.SymmetricAlgorithm::System.Security.Cryptography.ICryptoTransform CreateDecryptor() 0x0A00010B
+006F: stsfld       #=zJU1l1Hq99eaPqY_vn0Bvl7sNG5eIQhjB6g==::System.Security.Cryptography.ICryptoTransform #=zHAtze_yZ0st8mpbqGw== 0x0400041B
+0074: ldc.i4.0      
+0075: stsfld       #=zJU1l1Hq99eaPqY_vn0Bvl7sNG5eIQhjB6g==::Boolean #=zFPyAa5Q27K0T 0x0400041C
+007A: ret           
+METHOD 0x06000725 #=zJU1l1Hq99eaPqY_vn0Bvl7sNG5eIQhjB6g==::System.String #=ztiunIyE=(System.String, System.String, System.String)
+0000: ldsfld       #=zJU1l1Hq99eaPqY_vn0Bvl7sNG5eIQhjB6g==::Boolean #=zFPyAa5Q27K0T 0x0400041C
+0005: brtrue.s     14 
+0007: ldarg.1       
+0008: ldarg.2       
+0009: call         #=zJU1l1Hq99eaPqY_vn0Bvl7sNG5eIQhjB6g==::Void #=z30Cb8BgSnPujmmhDSg==(System.String, System.String) 0x06000723
+000E: call         System.Text.Encoding::System.Text.Encoding get_ASCII() 0x0A000342
+0013: ldarg.0       
+0014: callvirt     System.Text.Encoding::Byte[] GetBytes(System.String) 0x0A0000AC
+0019: stloc.0       
+001A: ldsfld       #=zJU1l1Hq99eaPqY_vn0Bvl7sNG5eIQhjB6g==::System.Security.Cryptography.ICryptoTransform #=zE$Iw2ndfxquW__m5ew== 0x0400041A
+001F: ldloc.0       
+0020: ldc.i4.0      
+0021: ldloc.0       
+0022: ldlen         
+0023: conv.i4       
+0024: callvirt     System.Security.Cryptography.ICryptoTransform::Byte[] TransformFinalBlock(Byte[], Int32, Int32) 0x0A00010A
+0029: stloc.0       
+002A: ldloc.0       
+002B: call         System.Convert::System.String ToBase64String(Byte[]) 0x0A00035D
+0030: ret           
+METHOD 0x06000727 #=zJU1l1Hq99eaPqY_vn0Bvl7sNG5eIQhjB6g==::System.String #=zn$tqBT0=(System.String, System.String, System.String)
+0000: ldsfld       #=zJU1l1Hq99eaPqY_vn0Bvl7sNG5eIQhjB6g==::Boolean #=zFPyAa5Q27K0T 0x0400041C
+0005: brtrue.s     14 
+0007: ldarg.1       
+0008: ldarg.2       
+0009: call         #=zJU1l1Hq99eaPqY_vn0Bvl7sNG5eIQhjB6g==::Void #=z30Cb8BgSnPujmmhDSg==(System.String, System.String) 0x06000723
+000E: ldarg.0       
+000F: call         System.Convert::Byte[] FromBase64String(System.String) 0x0A000218
+0014: stloc.0       
+0015: ldsfld       #=zJU1l1Hq99eaPqY_vn0Bvl7sNG5eIQhjB6g==::System.Security.Cryptography.ICryptoTransform #=zHAtze_yZ0st8mpbqGw== 0x0400041B
+001A: ldloc.0       
+001B: ldc.i4.0      
+001C: ldloc.0       
+001D: ldlen         
+001E: conv.i4       
+001F: callvirt     System.Security.Cryptography.ICryptoTransform::Byte[] TransformFinalBlock(Byte[], Int32, Int32) 0x0A00010A
+0024: stloc.0       
+0025: call         System.Text.Encoding::System.Text.Encoding get_ASCII() 0x0A000342
+002A: ldloc.0       
+002B: callvirt     System.Text.Encoding::System.String GetString(Byte[]) 0x0A000439
+0030: ret           

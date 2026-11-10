@@ -1,0 +1,25 @@
+﻿METHOD0x060005D3 CbeAndroidData.AndroidDataProtocol #=zmHJhex8=(CbeAndroidData.AndroidSession, Yim.Jibas.Cbe.Common.Data.CbeApplication, System.String)
+  04BE ldsfld token0x040003F3
+METHOD0x06000703 Void #=zmG6J5Gc=(System.String, System.String, System.String, System.String)
+  001C stfld token0x040003E5
+  0023 stfld token0x040003E6
+  002A stfld token0x040003E7
+  0031 stfld token0x040003E8
+METHOD0x06000704 Boolean #=zd6dZCYuolR09z_UOug==(System.String)
+  0032 ldfld token0x040003E8
+METHOD0x06000932 Void #=zxpq2Z43yCukwB5kT7g==(System.Object, System.EventArgs)
+  000D ldsfld token0x040003F3
+METHOD0x06000935 Void #=zCfrfKXy1Lp4ypXn5YQ==(System.Object, System.EventArgs)
+  00D4 stsfld token0x040003F3
+  00EF ldsfld token0x040003F3
+METHOD0x0600093A Void #=z93HwiXtXgc$6$L_$qw==(System.Object, System.EventArgs)
+  00E0 stsfld token0x040003F3
+  00EB ldsfld token0x040003F3
+METHOD0x06000A73 Void #=zU9OzQMw=()
+  00D2 stsfld token0x040003F3
+METHOD0x06000AF2 Void #=zl3UUlCp956Cc(#=zhsWDWT9OINJkMNLSydAEW2ZRyo3fTz6rOfjt_Jw=, Yim.Jibas.Cbe.Common.Data.CbeCommonData)
+  014A ldsfld token0x040003F3
+METHOD0x06000BB6 Void #=ztND7xL02HPoA(System.Object, System.EventArgs)
+  0040 call token0x060005C0
+METHOD0x06000C9B Void #=zmfJoJc9ifkft()
+  0017 stsfld token0x040003F3

@@ -1,0 +1,166 @@
+{
+  "evidence_id": "ev_f429e03c6839c0b95d5eb800d49b41917b65869b91781c3e37e3890e197604c8",
+  "subject": {
+    "name": "CbeServer.exe",
+    "digest": {
+      "sha256": "a2b77a3fc715d1d8c2b47a29ff65444af0e829c3f2704098ed538c48ce5f140b"
+    },
+    "local_path": "C:\\Program Files\\YIM\\JIBAS CBE Server 26.5\\CbeServer.exe",
+    "format": "pe",
+    "architecture": "x86_64"
+  },
+  "provider": {
+    "id": "rea-analysis-view",
+    "name": "REA analysis view projection",
+    "version": "1"
+  },
+  "analysis_profile": null,
+  "predicate_type": "rea.analysis-view",
+  "operation": "inspect_analysis_view",
+  "parameters": {
+    "parent_evidence_id": "ev_c44fa16b9d5b278dd54123a99059800ee74856dd4f0d96c3a5f879b8ac4a76d8",
+    "view": {
+      "kind": "summary"
+    }
+  },
+  "raw_result": null,
+  "normalized_result": {
+    "kind": "summary",
+    "view": {
+      "kind": "summary"
+    },
+    "parent_evidence_id": "ev_c44fa16b9d5b278dd54123a99059800ee74856dd4f0d96c3a5f879b8ac4a76d8",
+    "parent_operation": "inspect_managed_members",
+    "parent_digest": "c44fa16b9d5b278dd54123a99059800ee74856dd4f0d96c3a5f879b8ac4a76d8",
+    "view_digest": "86b9252657c82956a432434efcb767b354cc83eadfe789616014f2f383fade32",
+    "artifact": {
+      "path": "C:\\Program Files\\YIM\\JIBAS CBE Server 26.5\\CbeServer.exe",
+      "sha256": "a2b77a3fc715d1d8c2b47a29ff65444af0e829c3f2704098ed538c48ce5f140b"
+    },
+    "coverage": {
+      "status": "complete-within-view",
+      "examined": 441,
+      "total": 441,
+      "next_offset": null,
+      "exhausted": true
+    },
+    "limitations": [
+      "Member decoding exceeded capacity after the type inventory was admitted; fields, methods, member references, call edges, field accesses, exported types and user strings are not examined to completion. Empty member collections do not establish absence.",
+      "Metadata tokens are build-local coordinates and require the reported artifact SHA-256 and MVID. Type names and list ranges retain their original metadata and nesting uncertainty.",
+      "Use the returned TypeDef full_name values with type_names (CLI --type) to inspect a smaller selection; a single selected type can still exceed capacity."
+    ],
+    "unknowns": [
+      "Collection counts and pages cover producer-returned rows; member completeness remains the original coverage, not an absence claim about unreturned rows.",
+      "Metadata tokens are build-local coordinates bound to the recorded artifact SHA-256 and module MVID; this view does not load or execute the assembly."
+    ],
+    "summary": {
+      "signature_resolution": null,
+      "nesting_read": true,
+      "artifact": {
+        "path": "C:\\Program Files\\YIM\\JIBAS CBE Server 26.5\\CbeServer.exe",
+        "sha256": "a2b77a3fc715d1d8c2b47a29ff65444af0e829c3f2704098ed538c48ce5f140b",
+        "byte_length": 1943040,
+        "format": "pe"
+      },
+      "module": {
+        "name": "CbeServer.exe",
+        "generation": 0,
+        "mvid": "5831bc0d-d22e-4a13-67b9-f22eab4b24a8",
+        "enc_id": null,
+        "enc_base_id": null,
+        "token": "0x00000001",
+        "row_offset": 1626792
+      },
+      "assembly": null,
+      "metadata": {
+        "status": "partial",
+        "version": "v4.0.30319",
+        "table_row_counts": {
+          "Module": 1,
+          "TypeRef": 541,
+          "TypeDef": 441,
+          "Field": 2205,
+          "MethodDef": 3730,
+          "Param": 4739,
+          "InterfaceImpl": 42,
+          "MemberRef": 2120,
+          "Constant": 27,
+          "CustomAttribute": 61,
+          "FieldMarshal": 4,
+          "ClassLayout": 8,
+          "StandAloneSig": 758,
+          "PropertyMap": 13,
+          "Property": 29,
+          "MethodSemantics": 35,
+          "MethodImpl": 20,
+          "ModuleRef": 4,
+          "TypeSpec": 174,
+          "ImplMap": 14,
+          "FieldRVA": 10,
+          "Assembly": 1,
+          "AssemblyRef": 13,
+          "ManifestResource": 44,
+          "NestedClass": 137,
+          "GenericParam": 105,
+          "MethodSpec": 46
+        }
+      },
+      "identity_scope": {
+        "token_identity": "build-local",
+        "requires_artifact_sha256": "a2b77a3fc715d1d8c2b47a29ff65444af0e829c3f2704098ed538c48ce5f140b",
+        "requires_mvid": "5831bc0d-d22e-4a13-67b9-f22eab4b24a8"
+      },
+      "selection": null,
+      "method_rows": {
+        "offset": 0,
+        "count": 3730,
+        "total": 3730
+      },
+      "coverage": {
+        "state": "partial",
+        "issues": [
+          {
+            "code": "resource-limit",
+            "scope": "metadata.representation",
+            "offset": null,
+            "detail": "Managed metadata exceeds the 67108864 byte representation budget"
+          }
+        ]
+      },
+      "user_strings": null,
+      "limitations": [
+        "Member decoding exceeded capacity after the type inventory was admitted; fields, methods, member references, call edges, field accesses, exported types and user strings are not examined to completion. Empty member collections do not establish absence.",
+        "Use the returned TypeDef full_name values with type_names (CLI --type) to inspect a smaller selection; a single selected type can still exceed capacity.",
+        "Metadata tokens are build-local coordinates and require the reported artifact SHA-256 and MVID. Type names and list ranges retain their original metadata and nesting uncertainty."
+      ],
+      "reported_counts": {
+        "types": 441,
+        "exported_types": null,
+        "fields": 0,
+        "methods": 0,
+        "member_refs": 0,
+        "call_edges": 0,
+        "field_accesses": 0,
+        "user_strings": null
+      }
+    }
+  },
+  "confidence": "derived",
+  "authority": "shipped-artifact",
+  "environment": null,
+  "limitations": [
+    "Member decoding exceeded capacity after the type inventory was admitted; fields, methods, member references, call edges, field accesses, exported types and user strings are not examined to completion. Empty member collections do not establish absence.",
+    "Metadata tokens are build-local coordinates and require the reported artifact SHA-256 and MVID. Type names and list ranges retain their original metadata and nesting uncertainty.",
+    "Use the returned TypeDef full_name values with type_names (CLI --type) to inspect a smaller selection; a single selected type can still exceed capacity."
+  ],
+  "relationship_coverage": null,
+  "locations": [
+    {
+      "kind": "artifact-path",
+      "path": "C:\\Program Files\\YIM\\JIBAS CBE Server 26.5\\CbeServer.exe"
+    }
+  ],
+  "evidence_links": [
+    "ev_c44fa16b9d5b278dd54123a99059800ee74856dd4f0d96c3a5f879b8ac4a76d8"
+  ]
+}

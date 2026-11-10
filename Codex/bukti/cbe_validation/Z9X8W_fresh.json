@@ -1,0 +1,54 @@
+{
+  "artifact_sha256": "a2b77a3fc715d1d8c2b47a29ff65444af0e829c3f2704098ed538c48ce5f140b",
+  "mvid": "5831bc0d-d22e-4a13-67b9-f22eab4b24a8",
+  "current_database_id": "Z9X8W",
+  "importer_token": "060005C0",
+  "authority": "controlled replay: current database-ID holder supplied; unmodified target importer and cache-loader methods",
+  "scope": "Target Main/UI/full runtime not executed; cache files written only under caller-provided sandbox",
+  "attempts": [
+    {
+      "input": "C:\\YIM\\JIBAS Generator\\Codex\\bukti\\cbe_validation\\generated\\Z9X8W_new.lic",
+      "before_client": "TRIAL",
+      "before_sequence": 0,
+      "accepted": true,
+      "after_client": "14AA1C07E54E4A8EB82994CB4F30F734",
+      "after_sequence": 1,
+      "after_database_id": "Z9X8W",
+      "after_seri": "123AB",
+      "after_info1": "123AB",
+      "capacity": 100,
+      "transformed_capacity": 250,
+      "cache_exists": true,
+      "cache_sha256": "870d7bb864c09a929b22bca609e76669baf6ddc1e7ae59a83a22a94ac393f3de",
+      "cache_loader_returned": true,
+      "cache_columns": [
+        "Versi",
+        "KlienId",
+        "Klien",
+        "Tanggal",
+        "Model",
+        "Seri",
+        "Size",
+        "Sequence",
+        "KodeRs",
+        "KodeTx",
+        "DbId",
+        "LicenseLimit",
+        "LicenseLimitDate",
+        "MaxClient",
+        "Keterangan",
+        "Info1",
+        "Info2",
+        "Info3"
+      ],
+      "reloaded_client": "14AA1C07E54E4A8EB82994CB4F30F734",
+      "reloaded_sequence": 1,
+      "reloaded_capacity": 100,
+      "reloaded_transformed_capacity": 250
+    }
+  ],
+  "label": "Z9X8W_fresh",
+  "expected_acceptance": [
+    true
+  ]
+}

@@ -1,0 +1,219 @@
+{
+  "method": "0x060005BF",
+  "mvid": "5831bc0d-d22e-4a13-67b9-f22eab4b24a8",
+  "samples": [
+    {
+      "input": -2147483648,
+      "output": 40
+    },
+    {
+      "input": -1,
+      "output": 40
+    },
+    {
+      "input": 0,
+      "output": 40
+    },
+    {
+      "input": 1,
+      "output": 40
+    },
+    {
+      "input": 2,
+      "output": 40
+    },
+    {
+      "input": 10,
+      "output": 40
+    },
+    {
+      "input": 19,
+      "output": 40
+    },
+    {
+      "input": 20,
+      "output": 40
+    },
+    {
+      "input": 21,
+      "output": 40
+    },
+    {
+      "input": 25,
+      "output": 40
+    },
+    {
+      "input": 49,
+      "output": 40
+    },
+    {
+      "input": 50,
+      "output": 40
+    },
+    {
+      "input": 51,
+      "output": 40
+    },
+    {
+      "input": 99,
+      "output": 40
+    },
+    {
+      "input": 100,
+      "output": 250
+    },
+    {
+      "input": 101,
+      "output": 250
+    },
+    {
+      "input": 199,
+      "output": 250
+    },
+    {
+      "input": 200,
+      "output": 250
+    },
+    {
+      "input": 201,
+      "output": 250
+    },
+    {
+      "input": 249,
+      "output": 250
+    },
+    {
+      "input": 250,
+      "output": 750
+    },
+    {
+      "input": 251,
+      "output": 750
+    },
+    {
+      "input": 499,
+      "output": 750
+    },
+    {
+      "input": 500,
+      "output": 1500
+    },
+    {
+      "input": 501,
+      "output": 1500
+    },
+    {
+      "input": 999,
+      "output": 3000
+    },
+    {
+      "input": 1000,
+      "output": 7500
+    },
+    {
+      "input": 1001,
+      "output": 7500
+    },
+    {
+      "input": 10000,
+      "output": 500000
+    },
+    {
+      "input": 2147483647,
+      "output": 2500000
+    }
+  ],
+  "candidate_segments_monotone_boundary_search": [
+    {
+      "start": 0,
+      "end": 99,
+      "output": 40,
+      "next_boundary": 100,
+      "output_at_next_boundary": 250
+    },
+    {
+      "start": 100,
+      "end": 249,
+      "output": 250,
+      "next_boundary": 250,
+      "output_at_next_boundary": 750
+    },
+    {
+      "start": 250,
+      "end": 499,
+      "output": 750,
+      "next_boundary": 500,
+      "output_at_next_boundary": 1500
+    },
+    {
+      "start": 500,
+      "end": 749,
+      "output": 1500,
+      "next_boundary": 750,
+      "output_at_next_boundary": 3000
+    },
+    {
+      "start": 750,
+      "end": 999,
+      "output": 3000,
+      "next_boundary": 1000,
+      "output_at_next_boundary": 7500
+    },
+    {
+      "start": 1000,
+      "end": 1499,
+      "output": 7500,
+      "next_boundary": 1500,
+      "output_at_next_boundary": 15000
+    },
+    {
+      "start": 1500,
+      "end": 1999,
+      "output": 15000,
+      "next_boundary": 2000,
+      "output_at_next_boundary": 30000
+    },
+    {
+      "start": 2000,
+      "end": 2999,
+      "output": 30000,
+      "next_boundary": 3000,
+      "output_at_next_boundary": 100000
+    },
+    {
+      "start": 3000,
+      "end": 4999,
+      "output": 100000,
+      "next_boundary": 5000,
+      "output_at_next_boundary": 250000
+    },
+    {
+      "start": 5000,
+      "end": 9999,
+      "output": 250000,
+      "next_boundary": 10000,
+      "output_at_next_boundary": 500000
+    },
+    {
+      "start": 10000,
+      "end": 49999,
+      "output": 500000,
+      "next_boundary": 50000,
+      "output_at_next_boundary": 1000000
+    },
+    {
+      "start": 50000,
+      "end": 99999,
+      "output": 1000000,
+      "next_boundary": 100000,
+      "output_at_next_boundary": 2500000
+    },
+    {
+      "start": 100000,
+      "end": 2147483647,
+      "output": 2500000
+    }
+  ],
+  "limitations": "Segment search assumes monotonicity; exact sampled outputs and transition edges are original-method observations.",
+  "scope": "original capacity transform only; no target Main or DB/network setup"
+}

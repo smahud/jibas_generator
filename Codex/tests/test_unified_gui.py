@@ -1,9 +1,11 @@
-"""Notebook integration and real Tk worker lifecycle checks, using fake backends."""
+"""Manual-only notebook routing and Tk worker lifecycle, without live installs."""
+from functools import partial
+import importlib
+import json
 from pathlib import Path
 import sys
 import threading
 import time
-from functools import partial
 from types import SimpleNamespace
 import tkinter as tk
 
@@ -13,9 +15,19 @@ sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 import app
 
 
+@pytest.fixture(scope="module")
+def tk_master():
+    # A real application uses one Tcl/Tk interpreter per process. Repeated Tk()
+    # creation has process-global native Tk state; isolate forms in Toplevels.
+    master = tk.Tk()
+    master.withdraw()
+    yield master
+    master.destroy()
+
+
 @pytest.fixture
-def gui():
-    window = tk.Tk()
+def gui(tk_master):
+    window = tk.Toplevel(tk_master)
     window.withdraw()
     application = app.LicenseApp(window)
     yield application
@@ -33,28 +45,65 @@ def pump(application, predicate, timeout=3):
 
 def values(file="synthetic.lic"):
     return dict(database_id="ABCDE", system_id="123AB", client_id="", client_name="SYNTHETIC",
-                capacity="20", expires="2030-12-31", file=file, previous_license="", sequence="")
+                capacity="20", expires="2030-12-31", file=file, previous_license="")
 
 
-def test_tabs_have_independent_inputs_and_active_shortcut_target(gui):
-    assert [gui.notebook.tab(tab, "text") for tab in gui.notebook.tabs()] == ["Absensi Wajah", "SchoolPay"]
-    assert gui.active_panel() is gui.panels["face"]
-    gui.panels["face"].inputs["database_id"].set("V4YNE")
-    gui.panels["schoolpay"].inputs["database_id"].set("7VJM4")
-    gui.notebook.select(gui.panels["schoolpay"])
-    assert gui.active_panel() is gui.panels["schoolpay"]
+def widgets(root):
+    yield root
+    for child in root.winfo_children():
+        yield from widgets(child)
+
+
+def test_three_tabs_have_independent_manual_inputs(gui):
+    assert [gui.notebook.tab(tab, "text") for tab in gui.notebook.tabs()] == [
+        "Absensi Wajah", "SchoolPay", "CBE Server"]
+    for key, database_id in (("face", "V4YNE"), ("schoolpay", "7VJM4"), ("cbe", "ABCDE")):
+        panel = gui.panels[key]
+        panel.inputs["database_id"].set(database_id)
+        gui.notebook.select(panel)
+        assert gui.active_panel() is panel
+        assert panel.inputs["database_id"].get() == database_id
+        assert "sequence" not in panel.inputs
     assert gui.panels["face"].inputs["database_id"].get() == "V4YNE"
     assert gui.panels["schoolpay"].inputs["database_id"].get() == "7VJM4"
-    assert gui.panels["face"].product.capacity_label == "Kapasitas wajah"
-    assert gui.panels["schoolpay"].product.capacity_label == "Kapasitas vendor"
 
 
-@pytest.mark.parametrize("key", ["face", "schoolpay"])
+def test_database_settings_and_detection_controls_are_removed(gui):
+    texts = []
+    for widget in widgets(gui):
+        if "text" in widget.keys():
+            texts.append(str(widget.cget("text")))
+    assert "Koneksi Database…" not in texts
+    assert "Deteksi Database ID" not in texts
+    assert "Deteksi System ID" not in texts
+    assert "Sequence" not in texts
+    assert not hasattr(gui, "connection")
+    assert not hasattr(gui, "configure_database")
+    for panel in gui.panels.values():
+        assert not hasattr(panel, "_detect_db")
+        assert not hasattr(panel, "_detect_sys")
+        assert "database_id" in panel.inputs and "system_id" in panel.inputs
+
+
+def test_results_stay_six_lines_when_window_height_grows(gui):
+    gui.window.deiconify()
+    gui.window.geometry("880x650+0+0")
+    gui.window.update()
+    panel = gui.panels["face"]
+    first_height = panel.output.winfo_height()
+    assert int(panel.output.cget("height")) == 6
+    gui.window.geometry("880x730+0+0")
+    gui.window.update()
+    assert panel.output.winfo_height() == first_height
+    assert str(panel.output.cget("wrap")) == "word"
+    gui.window.withdraw()
+
+
+@pytest.mark.parametrize("key", ["face", "schoolpay", "cbe"])
 def test_dispatch_runs_backend_in_worker_and_applies_result_on_tk_thread(gui, key, monkeypatch):
     panel = gui.panels[key]
     main_thread = threading.get_ident()
-    called = []
-    result_threads = []
+    called, result_threads = [], []
     allow_finish = threading.Event()
 
     def generate(**kw):
@@ -76,7 +125,6 @@ def test_dispatch_runs_backend_in_worker_and_applies_result_on_tk_thread(gui, ke
     assert panel.busy
     assert not panel._start_task("other", lambda: None, "")
     pump(gui, lambda: bool(called))
-    # Main-thread callbacks remain runnable while the backend is blocked.
     heartbeat = []
     gui.window.after(0, lambda: heartbeat.append(True))
     pump(gui, lambda: bool(heartbeat))
@@ -86,43 +134,27 @@ def test_dispatch_runs_backend_in_worker_and_applies_result_on_tk_thread(gui, ke
     assert result_threads == [main_thread]
     assert called[0][1]["capacity"] == 20
     assert called[0][1]["client_id"] is None
+    assert called[0][1]["sequence"] is None
     assert called[0][1]["previous_license_path"] is None
     assert key in panel.output.get("1.0", "end")
-    other = gui.panels["schoolpay" if key == "face" else "face"]
-    assert other.inputs["file"].get() == ""
-    assert other.output.get("1.0", "end").strip() == ""
+    for other_key, other in gui.panels.items():
+        if other_key != key:
+            assert other.inputs["file"].get() == ""
+            assert other.output.get("1.0", "end").strip() == ""
 
 
-def test_each_panel_uses_its_detector_and_connection_snapshot(gui, monkeypatch):
-    calls, notices = [], []
-    secret = "synthetic-db-secret"
-    gui.connection = dict(host="example.invalid", port=3434, user="synthetic", password=secret)
-
-    class FakeDbDetector:
-        def __init__(self, **kw):
-            calls.append(kw)
-
-        def detect(self):
-            raise ValueError("Connector included " + secret)
-
-    school = gui.panels["schoolpay"]
-    school._detector = SimpleNamespace(DbIdDetector=FakeDbDetector)
-    monkeypatch.setattr(app.messagebox, "showerror", lambda *args, **kw: notices.append(args))
-    school._detect_db()
-    gui.connection["host"] = "changed.invalid"
-    pump(gui, lambda: not school.busy)
-    assert calls[0]["host"] == "example.invalid"
-    assert calls[0]["password"] == secret
-    assert secret not in school.output.get("1.0", "end")
-    assert notices and secret not in notices[0][1]
-    assert not gui.panels["face"].busy
+def test_renewal_client_id_without_previous_file_explains_automatic_sequence():
+    snapshot = values()
+    snapshot["client_id"] = "PREVIOUS_CLIENT"
+    with pytest.raises(ValueError, match="lisensi lama"):
+        app.run_backend_action(SimpleNamespace(), "generate", snapshot)
 
 
-def test_close_while_worker_runs_does_not_schedule_tk_from_worker():
-    window = tk.Tk()
+def test_close_while_worker_runs_does_not_schedule_tk_from_worker(tk_master):
+    window = tk.Toplevel(tk_master)
     window.withdraw()
     application = app.LicenseApp(window)
-    panel = application.panels["schoolpay"]
+    panel = application.panels["cbe"]
     started, release, finished = threading.Event(), threading.Event(), threading.Event()
 
     def operation():
@@ -136,59 +168,43 @@ def test_close_while_worker_runs_does_not_schedule_tk_from_worker():
     application.close()
     release.set()
     assert finished.wait(1)
-    assert panel._closed
-    assert panel._poll_id is None
+    assert panel._closed and panel._poll_id is None
 
 
-def test_database_dialog_masks_password_and_updates_memory_only(gui):
-    gui.connection["password"] = "synthetic-dialog-secret"
-    gui.configure_database()
-    dialog = next(child for child in gui.window.winfo_children() if isinstance(child, tk.Toplevel))
-    nodes = list(dialog.winfo_children())
-    entries, buttons = [], []
-    while nodes:
-        node = nodes.pop()
-        nodes.extend(node.winfo_children())
-        if isinstance(node, app.ttk.Entry):
-            entries.append(node)
-        elif isinstance(node, app.ttk.Button):
-            buttons.append(node)
-    secret_entry = next(entry for entry in entries if entry.cget("show") == "•")
-    assert secret_entry.get() == "synthetic-dialog-secret"
-    secret_entry.delete(0, "end")
-    secret_entry.insert(0, "changed-synthetic-secret")
-    next(button for button in buttons if button.cget("text") == "Gunakan").invoke()
-    assert gui.connection["password"] == "changed-synthetic-secret"
-    assert not dialog.winfo_exists()
-
-
-@pytest.mark.parametrize("product,database_id,field", [
-    ("face", "V4YNE", "MaxClient"), ("schoolpay", "7VJM4", "MaxVendor")])
-def test_real_product_backend_roundtrip_through_gui(gui, tmp_path, product, database_id, field):
+@pytest.mark.parametrize("product,database_id", [
+    ("face", "V4YNE"), ("schoolpay", "7VJM4"), ("cbe", "ABCDE")])
+def test_real_backend_new_and_renewal_sequences_are_automatic(gui, tmp_path, product, database_id):
+    codec_name = next(item.codec_module for item in app.PRODUCTS if item.key == product)
+    codec = importlib.import_module(codec_name)
     panel = gui.panels[product]
-    snapshot = values(str(tmp_path / (product + ".lic")))
+    first = tmp_path / f"{product}.lic"
+    snapshot = values(str(first))
     snapshot.update(database_id=database_id, system_id="DDCB4")
     for key, value in snapshot.items():
         panel.inputs[key].set(value)
     panel.run_action("generate")
     pump(gui, lambda: not panel.busy)
-    assert Path(panel.inputs["file"].get()).is_file()
-    panel.run_action("inspect")
-    pump(gui, lambda: not panel.busy)
-    import json
-    report = json.loads(panel.output.get("1.0", "end"))
-    assert report["fields"]["DbId"] == database_id
-    assert report["fields"][field] == "20"
+    assert first.is_file()
+    first_fields = codec.inspect_license(first)["fields"]
+    assert first_fields["Sequence"] == "1"
     panel.run_action("verify")
     pump(gui, lambda: not panel.busy)
     assert json.loads(panel.output.get("1.0", "end"))["valid"] is True
+    renewed = tmp_path / f"{product}-renewal.lic"
+    panel.inputs["previous_license"].set(str(first))
+    panel.inputs["file"].set(str(renewed))
+    panel.run_action("generate")
+    pump(gui, lambda: not panel.busy)
+    renewed_fields = codec.inspect_license(renewed)["fields"]
+    assert renewed_fields["Sequence"] == "2"
+    assert renewed_fields["KlienId"] == first_fields["KlienId"]
+    assert "sequence" not in panel.inputs
 
 
-def test_workers_keep_plain_data_and_close_finalizes_variables_on_main_thread(monkeypatch):
-    window = tk.Tk()
+def test_worker_keeps_plain_data_and_close_finalizes_variables_on_main_thread(monkeypatch, tk_master):
+    window = tk.Toplevel(tk_master)
     window.withdraw()
     application = app.LicenseApp(window)
-    panel = application.panels["schoolpay"]
     launched, finalized = [], []
     main_thread = threading.get_ident()
     original_finalizer = tk.Variable.__del__
@@ -221,20 +237,17 @@ def test_workers_keep_plain_data_and_close_finalizes_variables_on_main_thread(mo
                 assert_plain(item)
 
     try:
-        panel.inputs["file"].set("synthetic.lic")
-        panel.run_action("inspect")
-        panel._set_busy(False)
-        panel._detect_db()
-        panel._set_busy(False)
-        panel._detect_sys()
+        for panel in application.panels.values():
+            panel.inputs["file"].set("synthetic.lic")
+            panel.run_action("inspect")
         assert len(launched) == 3
         for task in launched:
             assert task["target"] is app._run_queued_task
             assert task["target"].__closure__ is None
             assert_plain(task["args"])
         application.close()
-        # Each tab owns 9 StringVars, one status StringVar and one BooleanVar.
-        assert len(finalized) >= 22
+        # Each of three panels owns 8 input StringVars, status, and BooleanVar.
+        assert len(finalized) >= 30
         assert set(finalized) == {main_thread}
     finally:
         application.close()

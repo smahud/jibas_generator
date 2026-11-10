@@ -1,0 +1,13 @@
+{
+  "product": "schoolpay",
+  "size": [
+    880,
+    650
+  ],
+  "clipped_widgets": [],
+  "result_lines": 6,
+  "result_pixels": 102,
+  "sequence_input": false,
+  "database_settings": false,
+  "source": "Owned Tk QA window, synthetic values, exact client-region capture"
+}
