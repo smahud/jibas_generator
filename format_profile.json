@@ -1,1 +1,32 @@
-{"artifact_sha256":"8a123015b2ee095ceda51ece6d47436e9760c88be8f92fb76ed7c120c923c364","init_token":"0x060006C5","profiles":{"server":{"source":"JIBAS Face Server 16.5 / FaceServer.exe init 0x060006C5","password_b64":"MzQ3N0szYjNyUzRtQTRO","iv_b64":"WWFSQWhNNG5ZNFI0aDFNIw=="},"client_face":{"source":"JIBAS Face & Fingerprint Client 16.10 / pre-init dinamis 0x06000AF2 (holder 0x04000375/76)","password_b64":"MzQ3N0szYjNyUzRtQTRO","iv_b64":"WWFSQWhNNG5ZNFI0aDFNIw=="},"client_fgr":{"source":"JIBAS Face & Fingerprint Client 16.10 / pre-init dinamis 0x060008BC (holder 0x04000366/67)","password_b64":"MzQ3N0szYjNyUzRtYTRO","iv_b64":"WWFSYWhNQG5ZNFI0aDFNIw=="}},"password_b64":"MzQ3N0szYjNyUzRtQTRO","iv_b64":"WWFSQWhNNG5ZNFI0aDFNIw==","key_derivation":"MD5(ASCII(password))","cipher":"AES-128-CBC","padding":"PKCS7","plaintext_encoding":"ASCII"}
+{
+  "artifact_sha256": "ca112352f1160ead541ff404354aecb3a83165798e562dea5ca3ef68191cd2f8",
+  "init_token": "0x060006C5",
+  "profiles": {
+    "server": {
+      "source": "JIBAS Face Server 16.5 / FaceServer.exe init 0x060006C5",
+      "password_b64": "MzQ3N0szYjNyUzRtQTRO",
+      "iv_b64": "WWFSQWhNNG5ZNFI0aDFNIw=="
+    },
+    "client_face": {
+      "source": "JIBAS Face & Fingerprint Client 16.10 / pre-init dinamis 0x06000AF2 (holder 0x04000375/76)",
+      "password_b64": "MzQ3N0szYjNyUzRtQTRO",
+      "iv_b64": "WWFSQWhNNG5ZNFI0aDFNIw=="
+    },
+    "client_fgr": {
+      "source": "JIBAS Face & Fingerprint Client 16.10 / pre-init dinamis 0x060008BC (holder 0x04000366/67)",
+      "password_b64": "MzQ3N0szYjNyUzRtYTRO",
+      "iv_b64": "WWFSYWhNQG5ZNFI0aDFNIw=="
+    },
+    "schoolpay": {
+      "source": "JIBAS SchoolPay Secure Server 10.5 / SPayServer.exe init (same as Face Server, TBD for actual license data)",
+      "password_b64": "MzQ3N0szYjNyUzRtQTRO",
+      "iv_b64": "WWFSQWhNNG5ZNFI0aDFNIw=="
+    }
+  },
+  "password_b64": "MzQ3N0szYjNyUzRtQTRO",
+  "iv_b64": "WWFSQWhNNG5ZNFI0aDFNIw==",
+  "key_derivation": "MD5(ASCII(password))",
+  "cipher": "AES-128-CBC",
+  "padding": "PKCS7",
+  "plaintext_encoding": "ASCII"
+}

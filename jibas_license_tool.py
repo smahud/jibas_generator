@@ -62,12 +62,27 @@ from cryptography.hazmat.primitives.ciphers import Cipher, algorithms, modes
 # =============================================================================
 
 BASE = Path(__file__).resolve().parent
-TABLE = "JibasSptFaceLicense"
-COLUMNS = (
+
+# Face/Fingerprint constants
+TABLE_FACE = "JibasSptFaceLicense"
+COLUMNS_FACE = (
     "Versi", "KlienId", "Klien", "Tanggal", "Model", "Seri", "Size",
     "Sequence", "KodeRs", "KodeTx", "DbId", "LicenseLimit",
     "LicenseLimitDate", "MaxClient", "Keterangan", "Info1", "Info2", "Info3",
 )
+
+# SchoolPay constants
+TABLE_SCHOOLPAY = "JibasSchoolPayLicense"
+COLUMNS_SCHOOLPAY = (
+    "Versi", "KlienId", "Klien", "Tanggal", "Model", "Seri", "Size",
+    "Sequence", "KodeRs", "KodeTx", "DbId", "SystemId",
+    "LicenseLimit", "LicenseLimitDate", "MaxVendor", "Keterangan", "Info1", "Info2", "Info3",
+)
+
+# Default to Face for backward compatibility
+TABLE = TABLE_FACE
+COLUMNS = COLUMNS_FACE
+
 JAKARTA = timezone(timedelta(hours=7))
 ET.register_namespace("xs", "http://www.w3.org/2001/XMLSchema")
 ET.register_namespace("msdata", "urn:schemas-microsoft-com:xml-msdata")
@@ -76,6 +91,7 @@ ET.register_namespace("msdata", "urn:schemas-microsoft-com:xml-msdata")
 # server: FaceServer.exe license.enc
 # client_face: FaceFgrClient 16.10 licenseface.enc (FACE cache)
 # client_fgr: FaceFgrClient 16.10 licensefgr.enc (FGR cache)
+# schoolpay: JIBAS SchoolPay Secure Server 10.5 license.enc
 
 
 # =============================================================================
@@ -169,7 +185,14 @@ def _encrypt(xml: str, profile: str = "server") -> bytes:
 # XML HANDLING
 # =============================================================================
 
-def _parse_xml(xml: str):
+def _get_table_columns_schema(product: str = "face"):
+    """Get table name, columns, and schema file for a product."""
+    if product == "schoolpay":
+        return TABLE_SCHOOLPAY, COLUMNS_SCHOOLPAY, BASE / "schema_schoolpay.xml"
+    return TABLE_FACE, COLUMNS_FACE, BASE / "schema.xml"
+
+
+def _parse_xml(xml: str, product: str = "face"):
     """Parse license XML and extract fields."""
     if "<!DOCTYPE" in xml.upper() or "<!ENTITY" in xml.upper():
         raise LicenseError("Deklarasi DTD/entity tidak termasuk format lisensi.")
@@ -179,23 +202,26 @@ def _parse_xml(xml: str):
         raise LicenseError(f"XML lisensi tidak valid: {exc}") from exc
     if root.tag != "NewDataSet":
         raise LicenseError("Root XML bukan NewDataSet.")
-    rows = root.findall(TABLE)
+    table_name, _, _ = _get_table_columns_schema(product)
+    rows = root.findall(table_name)
     if len(rows) > 1:
         raise LicenseError("Diharapkan paling banyak satu baris lisensi.")
     fields = {child.tag: child.text or "" for child in rows[0]} if rows else {}
     return root, fields
 
 
-def _serialize(fields: dict) -> str:
+def _serialize(fields: dict, product: str = "face") -> str:
     """Serialize fields to license XML."""
+    _, columns, schema_file = _get_table_columns_schema(product)
+    table_name, _, _ = _get_table_columns_schema(product)
     try:
-        root = ET.fromstring((BASE / "schema.xml").read_text(encoding="ascii"))
+        root = ET.fromstring(schema_file.read_text(encoding="ascii"))
     except (OSError, ET.ParseError) as exc:
         raise LicenseError(f"Skema lisensi tidak tersedia: {exc}") from exc
-    for existing in list(root.findall(TABLE)):
+    for existing in list(root.findall(table_name)):
         root.remove(existing)
-    row = ET.SubElement(root, TABLE)
-    for name in COLUMNS:
+    row = ET.SubElement(root, table_name)
+    for name in columns:
         ET.SubElement(row, name).text = str(fields.get(name, ""))
     return ET.tostring(root, encoding="ascii", xml_declaration=False).decode("ascii")
 
@@ -239,7 +265,7 @@ def _legacy_minute(value: datetime) -> int:
 # PUBLIC API: INSPECTION & VERIFICATION
 # =============================================================================
 
-def inspect_license(path: str | Path, profile: str = "server") -> Dict[str, Any]:
+def inspect_license(path: str | Path, profile: str = "server", product: str = "face") -> Dict[str, Any]:
     """Read and decrypt license file, return metadata and fields."""
     path = Path(path)
     try:
@@ -247,10 +273,11 @@ def inspect_license(path: str | Path, profile: str = "server") -> Dict[str, Any]
     except OSError as exc:
         raise LicenseError(f"Tidak dapat membaca berkas: {exc}") from exc
     xml = _decrypt(raw, profile=profile)
-    _, fields = _parse_xml(xml)
+    _, fields = _parse_xml(xml, product=product)
+    format_name = "JIBAS SchoolPay Secure Server 10.5" if product == "schoolpay" else "JIBAS Face Server 16.5"
     return {
         "path": str(path.resolve()),
-        "format": "JIBAS Face Server 16.5 / AES-128-CBC / XML DataTable",
+        "format": f"{format_name} / AES-128-CBC / XML DataTable",
         "sha256": hashlib.sha256(raw).hexdigest(),
         "has_license_row": bool(fields),
         "fields": fields,
@@ -266,7 +293,8 @@ def verify_license(
     *,
     face_count: Optional[int] = None,
     now: Optional[datetime] = None,
-    profile: str = "server"
+    profile: str = "server",
+    product: str = "face"
 ) -> Dict[str, Any]:
     """
     Verify license against installation IDs.
@@ -280,7 +308,7 @@ def verify_license(
     """
     database_id = _validate_id(database_id, "Database ID")
     system_id = _validate_id(system_id, "System ID", system=True)
-    fields = inspect_license(path, profile=profile)["fields"]
+    fields = inspect_license(path, profile=profile, product=product)["fields"]
     checks: List[Dict[str, Any]] = []
 
     def add_check(name: str, passed: bool, detail: str) -> None:
@@ -289,8 +317,9 @@ def verify_license(
     add_check("license_row", bool(fields),
               "Baris lisensi tersedia." if fields else "Cache tidak berisi baris lisensi; ini bukan lisensi aktif.")
     if fields:
-        add_check("required_fields", all(name in fields for name in COLUMNS if name != "Model"),
-                  "17 kolom yang dibaca importer; Model boleh tidak ditulis cache asli.")
+        _, columns, _ = _get_table_columns_schema(product)
+        add_check("required_fields", all(name in fields for name in columns if name != "Model"),
+                  f"{len(columns)} kolom yang dibaca importer; Model boleh tidak ditulis cache asli.")
         add_check("database_id", fields.get("DbId") == database_id,
                   f"DbId berkas: {fields.get('DbId', '')}")
         add_check("system_id", fields.get("Info1") == system_id,
@@ -308,15 +337,16 @@ def verify_license(
         except (ValueError, KeyError):
             add_check("expiry", False, "LicenseLimitDate tidak dapat dibaca.")
         try:
-            capacity = int(fields["MaxClient"])
+            capacity_field = "MaxVendor" if product == "schoolpay" else "MaxClient"
+            capacity = int(fields[capacity_field])
             sequence = int(fields["Sequence"])
-            add_check("capacity", 0 <= capacity <= 2147483647, f"MaxClient: {capacity}")
+            add_check("capacity", 0 <= capacity <= 2147483647, f"{capacity_field}: {capacity}")
             add_check("sequence", 0 <= sequence <= 2147483647, f"Sequence: {sequence}")
             if face_count is not None:
                 add_check("face_count", 0 <= face_count <= capacity,
                           f"Wajah aktif: {face_count}; kapasitas: {capacity}")
         except (ValueError, KeyError):
-            add_check("numeric_fields", False, "MaxClient/Sequence bukan Int32 yang valid.")
+            add_check("numeric_fields", False, f"{capacity_field}/Sequence bukan Int32 yang valid.")
 
     return {
         "valid": all(item["passed"] for item in checks),
@@ -350,7 +380,8 @@ def generate_license(
     previous_license_path: Optional[str | Path] = None,
     sequence: Optional[int] = None,
     overwrite: bool = False,
-    profile: str = "server"
+    profile: str = "server",
+    product: str = "face"
 ) -> Dict[str, Any]:
     """
     Generate a new license file.
@@ -360,12 +391,13 @@ def generate_license(
         system_id: 5-char hex System ID (e.g., 7738F)
         client_id: Optional Client ID for renewals (32-char hex)
         expires: Expiry date YYYY-MM-DD
-        capacity: Max faces (1..2147483647)
+        capacity: Max faces/vendors (1..2147483647)
         output_path: Output .lic file path
         client_name: Optional client name
         previous_license_path: Previous license for renewal
         sequence: Explicit sequence number (for renewal without previous file)
         overwrite: Overwrite existing output file
+        product: "face" (Face/Fingerprint) or "schoolpay" (SchoolPay)
 
     Returns:
         Dict with path, client_id, sequence, verification result
@@ -395,7 +427,7 @@ def generate_license(
     is_renewal = bool(previous_license_path or client_id or (sequence is not None))
 
     if previous_license_path:
-        previous = inspect_license(previous_license_path, profile=profile)["fields"]
+        previous = inspect_license(previous_license_path, profile=profile, product=product)["fields"]
         if not previous:
             raise LicenseError("Lisensi sebelumnya tidak berisi baris lisensi.")
         if previous.get("DbId") != database_id:
@@ -437,19 +469,33 @@ def generate_license(
     if _legacy_minute(created) > _legacy_minute(expiry):
         raise LicenseError("Tanggal ini sudah lewat menurut perhitungan waktu aplikasi asli.")
 
-    fields = {
-        "Versi": "16.5", "KlienId": client_id,
-        "Klien": client_name or (previous or {}).get("Klien") or database_id,
-        "Tanggal": created.date().isoformat(), "Model": "SPTFACE",
-        "Seri": system_id, "Size": str(capacity), "Sequence": str(sequence),
-        "KodeRs": "", "KodeTx": "", "DbId": database_id,
-        "LicenseLimit": expires, "LicenseLimitDate": expiry.isoformat(),
-        "MaxClient": str(capacity), "Keterangan": "",
-        "Info1": system_id, "Info2": "", "Info3": "",
-    }
+    # Product-specific fields
+    if product == "schoolpay":
+        fields = {
+            "Versi": "10.5", "KlienId": client_id,
+            "Klien": client_name or (previous or {}).get("Klien") or database_id,
+            "Tanggal": created.date().isoformat(), "Model": "SCHOOLPAY",
+            "Seri": system_id, "Size": str(capacity), "Sequence": str(sequence),
+            "KodeRs": "", "KodeTx": "", "DbId": database_id,
+            "SystemId": system_id,  # SchoolPay has separate SystemId column
+            "LicenseLimit": expires, "LicenseLimitDate": expiry.isoformat(),
+            "MaxVendor": str(capacity), "Keterangan": "",
+            "Info1": system_id, "Info2": "", "Info3": "",
+        }
+    else:
+        fields = {
+            "Versi": "16.5", "KlienId": client_id,
+            "Klien": client_name or (previous or {}).get("Klien") or database_id,
+            "Tanggal": created.date().isoformat(), "Model": "SPTFACE",
+            "Seri": system_id, "Size": str(capacity), "Sequence": str(sequence),
+            "KodeRs": "", "KodeTx": "", "DbId": database_id,
+            "LicenseLimit": expires, "LicenseLimitDate": expiry.isoformat(),
+            "MaxClient": str(capacity), "Keterangan": "",
+            "Info1": system_id, "Info2": "", "Info3": "",
+        }
 
     output = Path(output_path)
-    encoded = _encrypt(_serialize(fields), profile=profile)
+    encoded = _encrypt(_serialize(fields, product=product), profile=profile)
     try:
         if overwrite:
             with output.open("wb") as stream:
@@ -462,7 +508,7 @@ def generate_license(
     except OSError as exc:
         raise LicenseError(f"Tidak dapat menyimpan berkas: {exc}") from exc
 
-    verification = verify_license(output, database_id, system_id, client_id, profile=profile)
+    verification = verify_license(output, database_id, system_id, client_id, profile=profile, product=product)
     return {
         "path": str(output.resolve()),
         "client_id": client_id,
@@ -486,7 +532,8 @@ def renew_license(
     client_name: str = "",
     sequence: Optional[int] = None,
     overwrite: bool = False,
-    profile: str = "server"
+    profile: str = "server",
+    product: str = "face"
 ) -> Dict[str, Any]:
     """
     Convenience function for license renewal.
@@ -502,6 +549,7 @@ def renew_license(
         sequence=sequence,
         overwrite=overwrite,
         profile=profile,
+        product=product,
     )
 
 
@@ -926,8 +974,10 @@ Examples:
     # Inspect command
     inspect = subparsers.add_parser("inspect", help="Read license file contents")
     inspect.add_argument("file", type=Path, metavar="FILE")
-    inspect.add_argument("--profile", choices=["server", "client_face", "client_fgr"], default="server",
+    inspect.add_argument("--profile", choices=["server", "client_face", "client_fgr", "schoolpay"], default="server",
                          help="Crypto profile to use for decryption")
+    inspect.add_argument("--product", choices=["face", "schoolpay"], default="face",
+                         help="Product type: face (Face/Fingerprint) or schoolpay (SchoolPay)")
 
     # Verify command
     verify = subparsers.add_parser("verify", help="Verify license against installation IDs")
@@ -935,9 +985,11 @@ Examples:
     verify.add_argument("--database-id", required=True, help="Database ID (5 alphanumeric)")
     verify.add_argument("--system-id", required=True, help="System ID (5 hex)")
     verify.add_argument("--client-id", help="Client ID for verification (optional)")
-    verify.add_argument("--face-count", type=_positive_int, help="Active face count (optional)")
-    verify.add_argument("--profile", choices=["server", "client_face", "client_fgr"], default="server",
+    verify.add_argument("--face-count", type=_positive_int, help="Active face/vendor count (optional)")
+    verify.add_argument("--profile", choices=["server", "client_face", "client_fgr", "schoolpay"], default="server",
                         help="Crypto profile to use for decryption")
+    verify.add_argument("--product", choices=["face", "schoolpay"], default="face",
+                        help="Product type: face (Face/Fingerprint) or schoolpay (SchoolPay)")
     verify.add_argument("--auto", action="store_true",
                         help="Auto-detect IDs from live system if not provided")
 
@@ -947,22 +999,26 @@ Examples:
     generate.add_argument("--system-id", required=True, help="System ID (5 hex, e.g., 7738F)")
     generate.add_argument("--client-id", help="Client ID for renewal (optional, 32-char hex)")
     generate.add_argument("--expires", required=True, type=_iso_date, help="Expiry date YYYY-MM-DD")
-    generate.add_argument("--capacity", required=True, type=_positive_int, help="Max faces (1..2147483647)")
+    generate.add_argument("--capacity", required=True, type=_positive_int, help="Max faces/vendors (1..2147483647)")
     generate.add_argument("--client-name", default="", help="Client name (optional)")
     generate.add_argument("--output", required=True, type=Path, help="Output .lic file path")
     generate.add_argument("--overwrite", action="store_true", help="Overwrite existing output file")
+    generate.add_argument("--product", choices=["face", "schoolpay"], default="face",
+                          help="Product type: face (Face/Fingerprint) or schoolpay (SchoolPay)")
 
     # Renew command
     renew = subparsers.add_parser("renew", help="Renew license (requires previous license file)")
     renew.add_argument("--database-id", required=True, help="Database ID (5 alphanumeric)")
     renew.add_argument("--system-id", required=True, help="System ID (5 hex) - can differ from previous")
     renew.add_argument("--expires", required=True, type=_iso_date, help="New expiry date YYYY-MM-DD")
-    renew.add_argument("--capacity", required=True, type=_positive_int, help="New max faces")
+    renew.add_argument("--capacity", required=True, type=_positive_int, help="New max faces/vendors")
     renew.add_argument("--previous-license", required=True, type=Path, help="Previous license file (.lic/.enc)")
     renew.add_argument("--client-name", default="", help="Client name (optional, defaults to previous)")
     renew.add_argument("--sequence", type=_positive_int32, help="Explicit sequence (default: previous + 1)")
     renew.add_argument("--output", required=True, type=Path, help="Output .lic file path")
     renew.add_argument("--overwrite", action="store_true", help="Overwrite existing output file")
+    renew.add_argument("--product", choices=["face", "schoolpay"], default="face",
+                       help="Product type: face (Face/Fingerprint) or schoolpay (SchoolPay)")
 
     # Fix client cache command
     client = subparsers.add_parser(
@@ -1011,7 +1067,7 @@ def main(argv: Optional[List[str]] = None) -> int:
             return 0
 
         elif args.command == "inspect":
-            result = inspect_license(args.file, profile=args.profile)
+            result = inspect_license(args.file, profile=args.profile, product=args.product)
             print(json.dumps({"ok": True, "results": [result]}, ensure_ascii=False, indent=2, default=str))
             return 0
 
@@ -1031,7 +1087,7 @@ def main(argv: Optional[List[str]] = None) -> int:
                     auto_used = True
             result = verify_license(
                 args.file, database_id, system_id, client_id,
-                face_count=args.face_count, profile=args.profile
+                face_count=args.face_count, profile=args.profile, product=args.product
             )
             output = {"ok": result.get("valid") is True, "results": [result]}
             if auto_used:
@@ -1049,6 +1105,7 @@ def main(argv: Optional[List[str]] = None) -> int:
                 output_path=args.output,
                 client_name=args.client_name.strip(),
                 overwrite=args.overwrite,
+                product=args.product,
             )
             return _print_result(result, "generate")
 
@@ -1063,6 +1120,7 @@ def main(argv: Optional[List[str]] = None) -> int:
                 client_name=args.client_name.strip(),
                 sequence=args.sequence,
                 overwrite=args.overwrite,
+                product=args.product,
             )
             return _print_result(result, "renew")
 

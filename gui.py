@@ -355,6 +355,23 @@ class LicenseToolGUI:
         if path:
             self.client_dir_var.set(path)
 
+    def _pick_sp_prev_license(self):
+        path = filedialog.askopenfilename(
+            title="Pilih lisensi sebelumnya",
+            filetypes=[("License files", "*.lic *.enc"), ("All files", "*.*")]
+        )
+        if path:
+            self.sp_prev_license_var.set(path)
+
+    def _pick_sp_output(self):
+        path = filedialog.asksaveasfilename(
+            title="Simpan lisensi SchoolPay sebagai",
+            defaultextension=".lic",
+            filetypes=[("License files", "*.lic"), ("All files", "*.*")]
+        )
+        if path:
+            self.sp_output_var.set(path)
+
     def _run_worker(self, func, *args):
         """Run a function in background thread."""
         if self.worker_thread and self.worker_thread.is_alive():
@@ -490,6 +507,81 @@ class LicenseToolGUI:
         except ValueError as exc:
             messagebox.showerror("Kesalahan Input", str(exc))
 
+    def _generate_schoolpay(self):
+        try:
+            dbid = self.sp_dbid_var.get().strip()
+            sysid = self.sp_sysid_var.get().strip()
+            client_id = self.sp_clientid_var.get().strip() or None
+            client_name = self.sp_clientname_var.get().strip()
+            expires = self.sp_expires_var.get().strip()
+            capacity = int(self.sp_capacity_var.get().strip())
+            output = self.sp_output_var.get().strip()
+            sequence = self.sp_sequence_var.get().strip()
+            sequence = int(sequence) if sequence else None
+            prev_license = self.sp_prev_license_var.get().strip() or None
+            overwrite = self.sp_overwrite_var.get()
+
+            if not dbid or not sysid:
+                messagebox.showwarning("Peringatan", "Database ID dan System ID wajib diisi.")
+                return
+
+            def gen_task():
+                return core.generate_license(
+                    database_id=dbid,
+                    system_id=sysid,
+                    client_id=client_id,
+                    expires=expires,
+                    capacity=capacity,
+                    output_path=output,
+                    client_name=client_name,
+                    previous_license_path=prev_license,
+                    sequence=sequence,
+                    overwrite=overwrite,
+                    product="schoolpay",
+                )
+
+            self._run_worker(gen_task)
+        except ValueError as exc:
+            messagebox.showerror("Kesalahan Input", str(exc))
+
+    def _renew_schoolpay(self):
+        try:
+            dbid = self.sp_dbid_var.get().strip()
+            sysid = self.sp_sysid_var.get().strip()
+            client_name = self.sp_clientname_var.get().strip()
+            expires = self.sp_expires_var.get().strip()
+            capacity = int(self.sp_capacity_var.get().strip())
+            output = self.sp_output_var.get().strip()
+            prev_license = self.sp_prev_license_var.get().strip()
+            sequence = self.sp_sequence_var.get().strip()
+            sequence = int(sequence) if sequence else None
+            overwrite = self.sp_overwrite_var.get()
+
+            if not dbid or not sysid:
+                messagebox.showwarning("Peringatan", "Database ID dan System ID wajib diisi.")
+                return
+            if not prev_license:
+                messagebox.showwarning("Peringatan", "Lisensi sebelumnya wajib dipilih untuk perpanjangan.")
+                return
+
+            def renew_task():
+                return core.renew_license(
+                    database_id=dbid,
+                    system_id=sysid,
+                    expires=expires,
+                    capacity=capacity,
+                    output_path=output,
+                    previous_license_path=prev_license,
+                    client_name=client_name,
+                    sequence=sequence,
+                    overwrite=overwrite,
+                    product="schoolpay",
+                )
+
+            self._run_worker(renew_task)
+        except ValueError as exc:
+            messagebox.showerror("Kesalahan Input", str(exc))
+
     def _fix_client_cache(self):
         source = self.client_source_var.get().strip()
         client_dir = self.client_dir_var.get().strip()
@@ -544,12 +636,17 @@ class LicenseToolGUI:
             self.gen_result_text.delete(1.0, tk.END)
             self.gen_result_text.insert(tk.END, json.dumps(result, ensure_ascii=False, indent=2, default=str))
             self.gen_result_text.config(state="disabled")
-        elif current_tab == 2:  # Client Cache
+        elif current_tab == 2:  # SchoolPay
+            self.sp_result_text.config(state="normal")
+            self.sp_result_text.delete(1.0, tk.END)
+            self.sp_result_text.insert(tk.END, json.dumps(result, ensure_ascii=False, indent=2, default=str))
+            self.sp_result_text.config(state="disabled")
+        elif current_tab == 3:  # Client Cache
             self.client_result_text.config(state="normal")
             self.client_result_text.delete(1.0, tk.END)
             self.client_result_text.insert(tk.END, json.dumps(result, ensure_ascii=False, indent=2, default=str))
             self.client_result_text.config(state="disabled")
-        elif current_tab == 3:  # Detect
+        elif current_tab == 4:  # Detect
             self.detect_result_text.config(state="normal")
             self.detect_result_text.delete(1.0, tk.END)
             self.detect_result_text.insert(tk.END, json.dumps(result, ensure_ascii=False, indent=2, default=str))
@@ -586,6 +683,111 @@ class LicenseToolGUI:
             self.root.clipboard_clear()
             self.root.clipboard_append(text)
             self.status_var.set("JSON disalin ke clipboard")
+
+    def _copy_sp_result(self):
+        self.sp_result_text.config(state="normal")
+        text = self.sp_result_text.get(1.0, tk.END).strip()
+        self.sp_result_text.config(state="disabled")
+        if text:
+            self.root.clipboard_clear()
+            self.root.clipboard_append(text)
+            self.status_var.set("JSON disalin ke clipboard")
+
+    def _build_schoolpay_tab(self):
+        """Build the SchoolPay license management tab."""
+        frame = ttk.LabelFrame(self.tab_schoolpay, text="JIBAS SchoolPay Secure Server 10.5 License Management")
+        frame.pack(fill=tk.BOTH, expand=True, padx=8, pady=8)
+
+        # Product info
+        info_text = ("JIBAS SchoolPay Secure Server 10.5 License Generator\n"
+                     "Table: JibasSchoolPayLicense | Crypto: AES-128-CBC (same as Face Server)\n"
+                     "Columns: Versi, KlienId, Klien, Tanggal, Model, Seri, Size, Sequence,\n"
+                     "         KodeRs, KodeTx, DbId, SystemId, LicenseLimit, LicenseLimitDate,\n"
+                     "         MaxVendor, Keterangan, Info1, Info2, Info3\n"
+                     "Key Differences from Face: MaxVendor instead of MaxClient, SystemId column added")
+        ttk.Label(frame, text=info_text, justify=tk.LEFT, font=("Consolas", 9)).pack(anchor=tk.W, padx=8, pady=8)
+
+        # Parameters frame
+        param_frame = ttk.LabelFrame(frame, text="Parameter Lisensi SchoolPay")
+        param_frame.pack(fill=tk.X, padx=8, pady=8)
+
+        grid = ttk.Frame(param_frame)
+        grid.pack(fill=tk.X, padx=8, pady=8)
+
+        # Database ID
+        ttk.Label(grid, text="Database ID:").grid(row=0, column=0, sticky=tk.W, padx=4, pady=4)
+        self.sp_dbid_var = tk.StringVar()
+        ttk.Entry(grid, textvariable=self.sp_dbid_var, width=20).grid(row=0, column=1, padx=4, pady=4, sticky=tk.W)
+
+        # System ID
+        ttk.Label(grid, text="System ID:").grid(row=1, column=0, sticky=tk.W, padx=4, pady=4)
+        self.sp_sysid_var = tk.StringVar()
+        ttk.Entry(grid, textvariable=self.sp_sysid_var, width=20).grid(row=1, column=1, padx=4, pady=4, sticky=tk.W)
+
+        # Client ID (optional)
+        ttk.Label(grid, text="Client ID (opsional):").grid(row=2, column=0, sticky=tk.W, padx=4, pady=4)
+        self.sp_clientid_var = tk.StringVar()
+        ttk.Entry(grid, textvariable=self.sp_clientid_var, width=40).grid(row=2, column=1, padx=4, pady=4, sticky=tk.W)
+        ttk.Label(grid, text="(kosongkan untuk lisensi baru, isi untuk perpanjangan)").grid(row=2, column=2, sticky=tk.W, padx=4)
+
+        # Client Name
+        ttk.Label(grid, text="Nama Klien:").grid(row=3, column=0, sticky=tk.W, padx=4, pady=4)
+        self.sp_clientname_var = tk.StringVar()
+        ttk.Entry(grid, textvariable=self.sp_clientname_var, width=40).grid(row=3, column=1, padx=4, pady=4, sticky=tk.W)
+
+        # Expiry Date
+        ttk.Label(grid, text="Tanggal Kedaluwarsa:").grid(row=4, column=0, sticky=tk.W, padx=4, pady=4)
+        self.sp_expires_var = tk.StringVar(value="2027-12-31")
+        ttk.Entry(grid, textvariable=self.sp_expires_var, width=15).grid(row=4, column=1, padx=4, pady=4, sticky=tk.W)
+        ttk.Label(grid, text="(YYYY-MM-DD)").grid(row=4, column=2, sticky=tk.W, padx=4)
+
+        # Capacity (MaxVendor)
+        ttk.Label(grid, text="Max Vendor (Kapasitas):").grid(row=5, column=0, sticky=tk.W, padx=4, pady=4)
+        self.sp_capacity_var = tk.StringVar(value="100")
+        ttk.Entry(grid, textvariable=self.sp_capacity_var, width=15).grid(row=5, column=1, padx=4, pady=4, sticky=tk.W)
+
+        # Sequence (for renewal)
+        ttk.Label(grid, text="Sequence (opsional):").grid(row=6, column=0, sticky=tk.W, padx=4, pady=4)
+        self.sp_sequence_var = tk.StringVar()
+        ttk.Entry(grid, textvariable=self.sp_sequence_var, width=15).grid(row=6, column=1, padx=4, pady=4, sticky=tk.W)
+        ttk.Label(grid, text="(hanya untuk perpanjangan tanpa berkas sebelumnya)").grid(row=6, column=2, sticky=tk.W, padx=4)
+
+        # Previous license (for renewal)
+        ttk.Label(grid, text="Lisensi Sebelumnya:").grid(row=7, column=0, sticky=tk.W, padx=4, pady=4)
+        self.sp_prev_license_var = tk.StringVar()
+        ttk.Entry(grid, textvariable=self.sp_prev_license_var, width=50).grid(row=7, column=1, padx=4, pady=4, sticky=tk.W)
+        ttk.Button(grid, text="Pilih...", command=self._pick_sp_prev_license).grid(row=7, column=2, padx=4, pady=4)
+
+        # Output
+        ttk.Label(grid, text="File Output:").grid(row=8, column=0, sticky=tk.W, padx=4, pady=4)
+        self.sp_output_var = tk.StringVar(value="schoolpay.lic")
+        ttk.Entry(grid, textvariable=self.sp_output_var, width=50).grid(row=8, column=1, padx=4, pady=4, sticky=tk.W)
+        ttk.Button(grid, text="Pilih...", command=self._pick_sp_output).grid(row=8, column=2, padx=4, pady=4)
+
+        self.sp_overwrite_var = tk.BooleanVar(value=False)
+        ttk.Checkbutton(grid, text="Timpa jika sudah ada", variable=self.sp_overwrite_var).grid(row=9, column=1, sticky=tk.W, padx=4, pady=4)
+
+        # Action buttons
+        action_frame = ttk.Frame(param_frame)
+        action_frame.pack(fill=tk.X, padx=8, pady=8)
+        ttk.Button(action_frame, text="Buat Lisensi SchoolPay Baru", command=self._generate_schoolpay).pack(side=tk.LEFT, padx=4)
+        ttk.Button(action_frame, text="Perpanjang Lisensi SchoolPay", command=self._renew_schoolpay).pack(side=tk.LEFT, padx=4)
+
+        # Results
+        result_frame = ttk.LabelFrame(self.tab_schoolpay, text="Hasil")
+        result_frame.pack(fill=tk.BOTH, expand=True, padx=8, pady=8)
+
+        self.sp_result_text = tk.Text(
+            result_frame, wrap="word", height=10, state="disabled",
+            background="white", foreground="#22324b", relief="solid",
+            borderwidth=1, font=("Consolas", 9), padx=10, pady=8,
+        )
+        self.sp_result_text.pack(fill=tk.BOTH, expand=True, padx=4, pady=4)
+        scrollbar = ttk.Scrollbar(result_frame, orient="vertical", command=self.sp_result_text.yview)
+        scrollbar.pack(side=tk.RIGHT, fill=tk.Y)
+        self.sp_result_text.configure(yscrollcommand=scrollbar.set)
+
+        ttk.Button(result_frame, text="Salin JSON", command=self._copy_sp_result).pack(anchor=tk.E, padx=8, pady=4)
 
 
 def main():
