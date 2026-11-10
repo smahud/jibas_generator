@@ -287,6 +287,16 @@
       "file": "bukti/e2e/client/licenseface_fix_runtime.json",
       "sha256": "500b1d6e1f72720a5e1a45167cbd0d1f3107688f47ee3ec632717421fc30a21d",
       "size": 5102
+    },
+    {
+      "file": "AGENT_GUIDE.md",
+      "sha256": "9560bc736be9c8bf8bfbcfd0b3e3863c47b2f4e2dc64e7fe669e4169e45373e6",
+      "size": 11396
+    },
+    {
+      "file": "db/jibas_db_full_20261110.sql",
+      "sha256": "78152e1a195e8aef67e6ea2b00632cf1a4288291ffb9cf6a2ded681f05e2be6d",
+      "size": 1442821
     }
   ]
 }

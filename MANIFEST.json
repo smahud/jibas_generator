@@ -74,6 +74,8 @@
     "riset/client16/pwdprobe.cs",
     "bukti/client16/vm_strings.txt",
     "bukti/client16/intsites.txt",
-    "bukti/e2e/client/licenseface_fix_runtime.json"
+    "bukti/e2e/client/licenseface_fix_runtime.json",
+    "AGENT_GUIDE.md",
+    "db/jibas_db_full_20261110.sql"
   ]
 }

@@ -15,6 +15,7 @@ C:\YIM\JIBAS Generator\
 ├── README.md                                  ← dokumen ini (mulai dari sini)
 ├── JIBAS-License-Tool\                        ← HASIL REA: tool lisensi (repo git)
 │   ├── README.md                              ← dokumen tool (cara pakai + bukti)
+│   ├── AGENT_GUIDE.md                         ← salinan guide root ini (ikut repo GitHub)
 │   ├── Analisis.md                            ← analisa biner server 16.5
 │   ├── license_codec.py / cli.py / app.py     ← engine + CLI + GUI
 │   ├── id_detect.py / dbid_recipe.py          ← detector Database/System ID
@@ -23,6 +24,7 @@ C:\YIM\JIBAS Generator\
 │   ├── bukti\                                 ← hasil pembuktian runtime (JSON/CS)
 │   │   ├── e2e\client\licenseface_fix_runtime.json
 │   │   └── client16\vm_strings.txt, intsites.txt
+│   ├── db\                                    ← dump MySQL plain text (lihat §5)
 │   └── riset\                                 ← harness C# (server + client16)
 ├── JIBAS Face & Fingerprint Client 16.10\     ← TARGET 1 (salinan verbatim utk REA)
 └── JIBAS Face Server 16.5\                    ← TARGET 2 (salinan verbatim utk REA)
@@ -37,6 +39,10 @@ Folder asli di `C:\Program Files\YIM\…` tetap sebagai instalasi live.
 |---|---|---|---|---|
 | **Face Server 16.5** | `FaceServer.exe` | `8a123015b2ee095c…` | 16.5 | lisensi server (`license.enc`) |
 | **Face & Fingerprint Client 16.10** | `FaceFgrClient.exe` | `6f5369df4d854c46…` | 16.10.0.0 | cache lisensi `licenseface.enc` / `licensefgr.enc` |
+
+> **Sumber aset target (Google Drive)** — arsip JIBAS Face dapat diunduh dari
+> <https://drive.google.com/drive/folders/1VjnBYeDDiuP4JEzr1y5KfURpMaIZTOlo?usp=sharing>
+> (akses read-only: siapa pun yang punya tautan).
 
 Catatan REA inti — **REA (MCP) tidak mendukung PE managed** untuk target ini;
 seluruh analisa memakai **harness C# refleksi** (lihat `riset/`). Kedua biner
@@ -76,7 +82,7 @@ Info1, Info2, Info3. Kolom `Model` diisi "" (importer asli menyalin 17 kolom).
 | Tujuan | Token |
 |---|---|
 | Decoder string VM (wrapper/worker) | `0x06000348` / `0x06000349(Int32,Boolean)` |
-|canary decoder client| canary di init worker `0x06000349` (GetCallingAssembly + token mscorlib `B77A5C561934E089`); solusi **warm sekali via metode asli `0x060008B9`** lalu wrapper/worker bisa decode int arbitrer |
+| Canary decode (client) | canary di init worker `0x06000349` (GetCallingAssembly + token mscorlib `B77A5C561934E089`); solusi **warm sekali via metode asli `0x060008B9`** lalu wrapper/worker bisa decode int arbitrer |
 | Pre-init pasangan kripto FACE | `0x06000AF2` (holder `0x04000375/76`) |
 | Path cache FACE | `0x06000AF0` → `licenseface.enc` |
 | Loader/validator FACE | `0x06000AF3` / **`0x06000AF7`** |
@@ -117,7 +123,29 @@ Tabel 2349 string terdekripsi: `JIBAS-License-Tool\bukti\client16\vm_strings.txt
 | csc | hanya via full path `C:\Windows\Microsoft.NET\Framework64\v4.0.30319\csc.exe` |
 | Penghitungan wajah aktif | `SELECT COUNT(*) FROM jbssat.fcface WHERE status=1 AND useraktif=1` (saat ini 0) |
 
-## 5. Aturan kerja (wajib dipatuhi)
+## 5. Dump MySQL (plain text)
+
+**Berkas** — `JIBAS-License-Tool\db\jibas_db_full_20261110.sql`
+(dibuat 2026-11-10; 1,4 MB; 17.640 baris; mysqldump exit 0).
+
+- **Plain text 100%**: SQL mentah hasil `mysqldump --hex-blob` — agent bisa
+  membacanya langsung (grep/editor), **tanpa decode/encode** apa pun.
+- Isi: 16 database `jbs*` (skema + data) lengkap; **12 prosedur
+  `jbssat.splang01..12`** (recipe Database ID) ikut tersimpan; trigger & event ikut.
+- Keamanan data: instalasi default **tidak ada hal rahasia** — user/password
+  MySQL `root`/`kebersamaan` adalah default bawaan JIBAS (dokumentasi publik),
+  bukan kredensial khusus mesin ini.
+- Muat ulang di mesin ini:
+  ```cmd
+  "C:\YIM\JIBAS\xampp\mysql\bin\mysql.exe" -h 127.0.0.1 -P 3434 -u root -pkebersamaan < db\jibas_db_full_20261110.sql
+  ```
+  **PERINGATAN**: dump memuat `DROP DATABASE IF EXISTS` (opsi
+  `--add-drop-database`) — memuat ke server yang sama akan MENGGANTI database
+  live. Untuk eksperimen pakai MariaDB/server kedua, lalu jalankan
+  `cli.cmd detect` pada salinan itu untuk membuktikan Database ID `V4YNE`.
+- Sumber arsip target (client/server) juga tersedia di Google Drive — link di §2.
+
+## 6. Aturan kerja (wajib dipatuhi)
 
 1. **Jangan mengubah biner** kedua target. SEMUA tulisan eksperimen ke folder
    target hanya di salinan `JIBAS Generator\…` atau sandbox `%TEMP%`.
@@ -135,7 +163,7 @@ Tabel 2349 string terdekripsi: `JIBAS-License-Tool\bukti\client16\vm_strings.txt
 6. Git di `JIBAS-License-Tool\` — commit per perubahan berarti
    (`feat:/fix:/docs:/test:/chore: …`).
 
-## 6. Cara pakai tool (ringkas)
+## 7. Cara pakai tool (ringkas)
 
 ```cmd
 cd "C:\YIM\JIBAS Generator\JIBAS-License-Tool"
@@ -149,7 +177,7 @@ cli.cmd tulis-cache-client              :: FIX TRIAL klien 16.10 (lihat atas)
 python -m pytest tests -q               :: 39 tes
 ```
 
-## 7. Roadmap / tugas berikutnya untuk agent
+## 8. Roadmap / tugas berikutnya untuk agent
 
 1. **Terapkan fix CDC klien ke folder asli** (butuh persetujuan pengguna,
    aturan: tulisan folder target hanya sandbox):
@@ -167,7 +195,7 @@ python -m pytest tests -q               :: 39 tes
 5. Jaga jaminan: setelah perubahan apa pun, ulangi verifikasi sha target,
    sha `license.enc` server, status layanan, dan `pytest`.
 
-## 8. Keamanan output perintah CLI
+## 9. Keamanan output perintah CLI
 
 Perintah `inspect/verify/generate/tulis-cache-client` mengeluarkan **JSON**
 dengan kunci `ok`/`results`/`error` — cocok di-pipe untuk agen berikutnya.
