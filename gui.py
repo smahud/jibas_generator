@@ -117,22 +117,24 @@ class LicenseToolGUI:
         self.verify_auto_var = tk.BooleanVar(value=False)
         ttk.Checkbutton(id_grid, text="Deteksi otomatis ID dari sistem", variable=self.verify_auto_var).grid(row=3, column=0, columnspan=4, sticky=tk.W, padx=4, pady=4)
 
-        # Results area
+        # Results area (compact like Codex version)
         result_frame = ttk.LabelFrame(self.tab_inspect, text="Hasil")
         result_frame.pack(fill=tk.BOTH, expand=True, padx=8, pady=8)
+        result_frame.columnconfigure(0, weight=1)
+        result_frame.rowconfigure(1, weight=1)
 
-        self.inspect_result_text = tk.Text(result_frame, height=20, wrap=tk.NONE, font=("Consolas", 9))
-        self.inspect_result_text.pack(fill=tk.BOTH, expand=True, padx=4, pady=4)
-        scroll_y = ttk.Scrollbar(result_frame, orient=tk.VERTICAL, command=self.inspect_result_text.yview)
-        scroll_y.place(relx=1.0, rely=0, relheight=1.0, anchor=tk.NE, width=16)
-        self.inspect_result_text.configure(yscrollcommand=scroll_y.set)
-
-        scroll_x = ttk.Scrollbar(result_frame, orient=tk.HORIZONTAL, command=self.inspect_result_text.xview)
-        scroll_x.place(relx=0, rely=1.0, relwidth=1.0, anchor=tk.SW, height=16)
-        self.inspect_result_text.configure(xscrollcommand=scroll_x.set)
+        self.inspect_result_text = tk.Text(
+            result_frame, wrap="word", height=10, state="disabled",
+            background="white", foreground="#22324b", relief="solid",
+            borderwidth=1, font=("Consolas", 9), padx=10, pady=8,
+        )
+        self.inspect_result_text.grid(row=1, column=0, sticky="nsew", pady=(3, 0), padx=4)
+        scrollbar = ttk.Scrollbar(result_frame, orient="vertical", command=self.inspect_result_text.yview)
+        scrollbar.grid(row=1, column=1, sticky="ns", pady=(3, 0))
+        self.inspect_result_text.configure(yscrollcommand=scrollbar.set)
 
         # Copy button
-        ttk.Button(result_frame, text="Salin JSON", command=self._copy_inspect_result).pack(anchor=tk.E, padx=8, pady=4)
+        ttk.Button(result_frame, text="Salin JSON", command=self._copy_inspect_result).grid(row=2, column=0, columnspan=2, sticky=tk.E, padx=8, pady=4)
 
     def _build_generate_tab(self):
         frame = ttk.LabelFrame(self.tab_generate, text="Parameter Lisensi")
@@ -200,20 +202,23 @@ class LicenseToolGUI:
         ttk.Button(action_frame, text="Buat Lisensi Baru", command=self._generate_license).pack(side=tk.LEFT, padx=4)
         ttk.Button(action_frame, text="Perpanjang Lisensi", command=self._renew_license).pack(side=tk.LEFT, padx=4)
 
-        # Results
+        # Results (compact like Codex version)
         result_frame = ttk.LabelFrame(self.tab_generate, text="Hasil")
         result_frame.pack(fill=tk.BOTH, expand=True, padx=8, pady=8)
+        result_frame.columnconfigure(0, weight=1)
+        result_frame.rowconfigure(1, weight=1)
 
-        self.gen_result_text = tk.Text(result_frame, height=15, wrap=tk.NONE, font=("Consolas", 9))
-        self.gen_result_text.pack(fill=tk.BOTH, expand=True, padx=4, pady=4)
-        scroll_y = ttk.Scrollbar(result_frame, orient=tk.VERTICAL, command=self.gen_result_text.yview)
-        scroll_y.place(relx=1.0, rely=0, relheight=1.0, anchor=tk.NE, width=16)
-        self.gen_result_text.configure(yscrollcommand=scroll_y.set)
-        scroll_x = ttk.Scrollbar(result_frame, orient=tk.HORIZONTAL, command=self.gen_result_text.xview)
-        scroll_x.place(relx=0, rely=1.0, relwidth=1.0, anchor=tk.SW, height=16)
-        self.gen_result_text.configure(xscrollcommand=scroll_x.set)
+        self.gen_result_text = tk.Text(
+            result_frame, wrap="word", height=10, state="disabled",
+            background="white", foreground="#22324b", relief="solid",
+            borderwidth=1, font=("Consolas", 9), padx=10, pady=8,
+        )
+        self.gen_result_text.grid(row=1, column=0, sticky="nsew", pady=(3, 0), padx=4)
+        scrollbar = ttk.Scrollbar(result_frame, orient="vertical", command=self.gen_result_text.yview)
+        scrollbar.grid(row=1, column=1, sticky="ns", pady=(3, 0))
+        self.gen_result_text.configure(yscrollcommand=scrollbar.set)
 
-        ttk.Button(result_frame, text="Salin JSON", command=self._copy_gen_result).pack(anchor=tk.E, padx=8, pady=4)
+        ttk.Button(result_frame, text="Salin JSON", command=self._copy_gen_result).grid(row=2, column=0, columnspan=2, sticky=tk.E, padx=8, pady=4)
 
     def _build_client_tab(self):
         frame = ttk.LabelFrame(self.tab_client, text="Perbaiki Cache FACE (licenseface.enc)")
@@ -240,20 +245,23 @@ class LicenseToolGUI:
 
         ttk.Button(grid, text="Terapkan Perbaikan", command=self._fix_client_cache).grid(row=3, column=1, sticky=tk.W, padx=4, pady=8)
 
-        # Results
+        # Results (compact like Codex version)
         result_frame = ttk.LabelFrame(self.tab_client, text="Hasil")
         result_frame.pack(fill=tk.BOTH, expand=True, padx=8, pady=8)
+        result_frame.columnconfigure(0, weight=1)
+        result_frame.rowconfigure(1, weight=1)
 
-        self.client_result_text = tk.Text(result_frame, height=15, wrap=tk.NONE, font=("Consolas", 9))
-        self.client_result_text.pack(fill=tk.BOTH, expand=True, padx=4, pady=4)
-        scroll_y = ttk.Scrollbar(result_frame, orient=tk.VERTICAL, command=self.client_result_text.yview)
-        scroll_y.place(relx=1.0, rely=0, relheight=1.0, anchor=tk.NE, width=16)
-        self.client_result_text.configure(yscrollcommand=scroll_y.set)
-        scroll_x = ttk.Scrollbar(result_frame, orient=tk.HORIZONTAL, command=self.client_result_text.xview)
-        scroll_x.place(relx=0, rely=1.0, relwidth=1.0, anchor=tk.SW, height=16)
-        self.client_result_text.configure(xscrollcommand=scroll_x.set)
+        self.client_result_text = tk.Text(
+            result_frame, wrap="word", height=10, state="disabled",
+            background="white", foreground="#22324b", relief="solid",
+            borderwidth=1, font=("Consolas", 9), padx=10, pady=8,
+        )
+        self.client_result_text.grid(row=1, column=0, sticky="nsew", pady=(3, 0), padx=4)
+        scrollbar = ttk.Scrollbar(result_frame, orient="vertical", command=self.client_result_text.yview)
+        scrollbar.grid(row=1, column=1, sticky="ns", pady=(3, 0))
+        self.client_result_text.configure(yscrollcommand=scrollbar.set)
 
-        ttk.Button(result_frame, text="Salin JSON", command=self._copy_client_result).pack(anchor=tk.E, padx=8, pady=4)
+        ttk.Button(result_frame, text="Salin JSON", command=self._copy_client_result).grid(row=2, column=0, columnspan=2, sticky=tk.E, padx=8, pady=4)
 
     def _build_detect_tab(self):
         frame = ttk.LabelFrame(self.tab_detect, text="Deteksi Database ID & System ID")
@@ -290,20 +298,23 @@ class LicenseToolGUI:
 
         ttk.Button(grid, text="Deteksi ID", command=self._detect_ids).grid(row=4, column=1, sticky=tk.W, padx=4, pady=8)
 
-        # Results
+        # Results (compact like Codex version)
         result_frame = ttk.LabelFrame(self.tab_detect, text="Hasil")
         result_frame.pack(fill=tk.BOTH, expand=True, padx=8, pady=8)
+        result_frame.columnconfigure(0, weight=1)
+        result_frame.rowconfigure(1, weight=1)
 
-        self.detect_result_text = tk.Text(result_frame, height=15, wrap=tk.NONE, font=("Consolas", 9))
-        self.detect_result_text.pack(fill=tk.BOTH, expand=True, padx=4, pady=4)
-        scroll_y = ttk.Scrollbar(result_frame, orient=tk.VERTICAL, command=self.detect_result_text.yview)
-        scroll_y.place(relx=1.0, rely=0, relheight=1.0, anchor=tk.NE, width=16)
-        self.detect_result_text.configure(yscrollcommand=scroll_y.set)
-        scroll_x = ttk.Scrollbar(result_frame, orient=tk.HORIZONTAL, command=self.detect_result_text.xview)
-        scroll_x.place(relx=0, rely=1.0, relwidth=1.0, anchor=tk.SW, height=16)
-        self.detect_result_text.configure(xscrollcommand=scroll_x.set)
+        self.detect_result_text = tk.Text(
+            result_frame, wrap="word", height=10, state="disabled",
+            background="white", foreground="#22324b", relief="solid",
+            borderwidth=1, font=("Consolas", 9), padx=10, pady=8,
+        )
+        self.detect_result_text.grid(row=1, column=0, sticky="nsew", pady=(3, 0), padx=4)
+        scrollbar = ttk.Scrollbar(result_frame, orient="vertical", command=self.detect_result_text.yview)
+        scrollbar.grid(row=1, column=1, sticky="ns", pady=(3, 0))
+        self.detect_result_text.configure(yscrollcommand=scrollbar.set)
 
-        ttk.Button(result_frame, text="Salin JSON", command=self._copy_detect_result).pack(anchor=tk.E, padx=8, pady=4)
+        ttk.Button(result_frame, text="Salin JSON", command=self._copy_detect_result).grid(row=2, column=0, columnspan=2, sticky=tk.E, padx=8, pady=4)
 
     def _pick_inspect_file(self):
         path = filedialog.askopenfilename(
@@ -524,17 +535,25 @@ class LicenseToolGUI:
         current_tab = self.notebook.index(self.notebook.select())
 
         if current_tab == 0:  # Inspect/Verify
+            self.inspect_result_text.config(state="normal")
             self.inspect_result_text.delete(1.0, tk.END)
             self.inspect_result_text.insert(tk.END, json.dumps(result, ensure_ascii=False, indent=2, default=str))
+            self.inspect_result_text.config(state="disabled")
         elif current_tab == 1:  # Generate
+            self.gen_result_text.config(state="normal")
             self.gen_result_text.delete(1.0, tk.END)
             self.gen_result_text.insert(tk.END, json.dumps(result, ensure_ascii=False, indent=2, default=str))
+            self.gen_result_text.config(state="disabled")
         elif current_tab == 2:  # Client Cache
+            self.client_result_text.config(state="normal")
             self.client_result_text.delete(1.0, tk.END)
             self.client_result_text.insert(tk.END, json.dumps(result, ensure_ascii=False, indent=2, default=str))
+            self.client_result_text.config(state="disabled")
         elif current_tab == 3:  # Detect
+            self.detect_result_text.config(state="normal")
             self.detect_result_text.delete(1.0, tk.END)
             self.detect_result_text.insert(tk.END, json.dumps(result, ensure_ascii=False, indent=2, default=str))
+            self.detect_result_text.config(state="disabled")
 
     def _copy_inspect_result(self):
         text = self.inspect_result_text.get(1.0, tk.END).strip()
@@ -551,14 +570,18 @@ class LicenseToolGUI:
             self.status_var.set("JSON disalin ke clipboard")
 
     def _copy_client_result(self):
+        self.client_result_text.config(state="normal")
         text = self.client_result_text.get(1.0, tk.END).strip()
+        self.client_result_text.config(state="disabled")
         if text:
             self.root.clipboard_clear()
             self.root.clipboard_append(text)
             self.status_var.set("JSON disalin ke clipboard")
 
     def _copy_detect_result(self):
+        self.detect_result_text.config(state="normal")
         text = self.detect_result_text.get(1.0, tk.END).strip()
+        self.detect_result_text.config(state="disabled")
         if text:
             self.root.clipboard_clear()
             self.root.clipboard_append(text)
