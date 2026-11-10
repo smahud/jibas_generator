@@ -1,4 +1,12 @@
-# Pengujian aplikasi terpadu — Windows, 10 November 2026
+# Pengujian aplikasi terpadu — Windows, 11 November 2026
+
+Versi manual terbaru: **120 passed in 8.56s**, dengan warning finalizer Tk
+dianggap error. Ketiga produk diuji melalui GUI dan CLI; 12 tes GUI memeriksa
+ketiadaan kontrol koneksi/deteksi/Sequence, renewal otomatis, dan hasil6baris.
+CBE: 14 tes codec serta oracle34skenario/46percobaan (semua sesuai).
+Seluruh13file instalasi CBE tetap identik. Lihat MANUAL_UPDATE.md dan CBE.md.
+
+Bagian di bawah adalah catatan pengujian Face/SchoolPay sebelumnya.
 
 Python 3.12.14, cryptography 50.0.2, PyMySQL 1.2.4, pytest 9.2.0.
 

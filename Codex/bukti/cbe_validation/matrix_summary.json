@@ -1,0 +1,14 @@
+{
+  "scenario_count": 34,
+  "attempt_count": 46,
+  "accepted_attempts": 29,
+  "all_expected_outcomes": true,
+  "original_importer": "0x060005C0",
+  "official_ui_handler": "0x06000BB6",
+  "original_cache_loader": "0x060005BE",
+  "current_database_holder": "0x040003F3",
+  "target_binary_unmodified": true,
+  "hooks_or_patches_used": false,
+  "runtime_activated": false,
+  "scope": "Controlled importer/cache replay only; target Main/UI, database, and online activation workflow not executed."
+}

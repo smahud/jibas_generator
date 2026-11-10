@@ -1,50 +1,52 @@
-# JIBAS License Generator — Repository
+# JIBAS License Generator
 
-Hasil *reverse engineering* lisensi JIBAS dan implementasi generatornya. Root repo hanya berisi
-berkas pendukung; kode implementasi dipisah per agent di sub-direktori.
+Root repository berisi file pendukung. Semua kode aplikasi dipisahkan menurut
+implementasinya:
 
-## 📁 Struktur
+| Direktori | Isi |
+|---|---|
+| [Codex](Codex/README.md) | Satu aplikasi dengan tab Absensi Wajah, SchoolPay, dan CBE Server; kode Python, tes, contoh, serta bukti REA |
+| [OpenCode](OpenCode/README.md) | Implementasi OpenCode dan arsip analisisnya, dipertahankan terpisah |
 
-| Direktori / Berkas | Isi |
-|--------------------|-----|
-| `OpenCode/` | **Implementasi aktif (OpenCode)** — `jibas_license_tool.py` (core + CLI), `gui.py` (GUI 5 tab), `cli.py` (audit read-only), schema & profil kripto, `README.md` dokumentasi lengkap, `tests/` |
-| `Codex/` | Implementasi riwayat (Codex) untuk verifikasi silang — lihat `Codex/README.md` |
-| `Jalankan OpenCode.cmd` | Launcher GUI implementasi aktif (OpenCode) |
-| `Jalankan GUI.cmd` | Launcher GUI implementasi riwayat (Codex) |
+Tidak ada produk Python di root. Riwayat sebelum pemisahan tetap tersedia di Git.
 
-## 🚀 Menjalankan
+## Menjalankan
 
-```cmd
-rem GUI implementasi aktif (5 tab: Inspeksi & Verifikasi, Buat & Perpanjang, SchoolPay, CBE Server, Perbaiki Client Cache)
-Jalankan OpenCode.cmd
+Klik **Jalankan GUI.cmd** untuk Codex atau **Jalankan OpenCode.cmd** untuk OpenCode.
+Untuk Codex, gunakan Python3.10+ dengan Tkinter dan instal:
 
-rem CLI implementasi aktif
-OpenCode\jibas_license_tool.py inspect lisensi.lic
-OpenCode\jibas_license_tool.py generate --database-id V4YNE --system-id 7738F --expires 2027-12-31 --capacity 100 --output baru.lic --product schoolpay
+```bat
+python -m pip install -r Codex/requirements.txt
 ```
 
-Detail format, profil kripto, skema XML, dan pembentukan ID: **[OpenCode/README.md](OpenCode/README.md)**.
+Perilaku aplikasi Codex terbaru:
 
-## 🛠️ Produk yang Didukung
+- Database ID dan System ID diisi manual pada ketiga tab.
+- Menu koneksi database serta tombol deteksi sudah dihapus.
+- Input Sequence sudah dihapus. Lisensi baru mulai1; perpanjangan memakai file
+  lisensi lama untuk mempertahankan Client ID dan menaikkan urutan otomatis.
+- Kotak Hasil tetap enam baris dengan scrollbar.
 
-| Produk | Format Tabel | Status |
-|--------|--------------|--------|
-| JIBAS Face Server 16.5 | `JibasSptFaceLicense` (18 kolom) | ✅ Terbukti (runtime importer + predikat) |
-| JIBAS Face & Fingerprint Client 16.10 | cache `licenseface.enc` / `licensefgr.enc` | ✅ Terbukti (`fix-client-cache`) |
-| JIBAS SchoolPay Secure Server 10.5 | `JibasSchoolPayLicense` (19 kolom, `MaxVendor` + `SystemId`) | ⚠️ Round-trip offline terverifikasi; runtime SPayServer belum diuji |
-| JIBAS CBE Server 26.5 | `JibasCbeLicense` (18 kolom, kripto sama dengan Face Server) | ⚠️ Round-trip offline terverifikasi; runtime CbeServer belum diuji |
+File lama diperlukan untuk perpanjangan; Client ID sendiri tidak mengungkap
+Sequence yang sedang terpasang. Hasil tidak dipasang ke instalasi JIBAS otomatis.
 
-⚠️ Verifikasi offline **bukan bukti** aktivasi/penerimaan aplikasi target. License yang terbukti valid
-secara format tetap harus diuji langsung pada aplikasi aslinya.
+## Validasi
 
-## 📝 Konvensi Penggunaan
+Codex: **120 tes lulus**, termasuk GUI manual, CLI tiga produk, dan codec.
+CBE Server26.5: **34 skenario /46 percobaan** importer dan loader asli sesuai
+ekspektasi. Seluruh13file instalasi CBE identik sebelum/sesudah pengujian.
+Penerimaan importer tidak membuktikan aktivasi runtime atau online.
 
-- **Database ID & System ID diisi manual** — menu deteksi otomatis dihapus; ambil nilai dari aplikasi asli masing-masing (Face Server menampilkan ID saat mulai tanpa lisensi; gunakan nilai itu per mesin target).
-- **Sequence otomatis** — selalu `1` untuk lisensi baru, `previous + 1` untuk perpanjangan; tidak ada inputan sequence.
-- Hasil simpan sebagai `.lic`.
-- Tetap aman: cadangan dibuat otomatis sebelum menimpa `licenseface.enc`; `config.ini` & `licensefgr.enc` tidak disentuh.
+Laporan: [pembaruan manual/CBE](Codex/MANUAL_UPDATE.md),
+[detail CBE](Codex/CBE.md), [SchoolPay](Codex/SCHOOLPAY.md),
+[Face](Codex/TEMUAN.md).
 
-## ⚖️ Lisensi & Hukum
+Jalankan tes dari direktori implementasi agar modul bernama sama tidak bercampur:
 
-Dibuat untuk analisis teknis dan manajemen lisensi internal. Hak atas software JIBAS tetap milik pemiliknya.
-Gunakan hanya pada data/berkas yang Anda berhak akses. Verifikasi offline **bukan** konfirmasi aktivasi dari penerbit JIBAS.
+```bat
+cd Codex
+python -m pytest tests -q -W error::pytest.PytestUnraisableExceptionWarning
+```
+
+Untuk OpenCode, jalankan suite dari direktorinya sendiri. Binary JIBAS,
+compiled harness, dan datadir eksperimen tidak disertakan dalam paket Codex.

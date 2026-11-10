@@ -1,0 +1,86 @@
+{
+  "root": "C:\\Program Files\\YIM\\JIBAS CBE Server 26.5",
+  "files": [
+    {
+      "path": "CbeAndroidData.dll",
+      "size": 13824,
+      "sha256": "06459535bd15313a758cdc4969027f6c8843f47a3715ca19e2c910eb5a575ef3"
+    },
+    {
+      "path": "CbeCommon.dll",
+      "size": 11264,
+      "sha256": "4b00a16b61ceaf55ec9d92017e5fc7fbb6f9c2ac85d6780d754c6082f6576241"
+    },
+    {
+      "path": "cbeicon2.ico",
+      "size": 1150,
+      "sha256": "bac6f0dc2f5968566a13510e4a6674de1b11937a07137a562da57a6c927d46a0"
+    },
+    {
+      "path": "CbeServer.exe",
+      "size": 1943040,
+      "sha256": "a2b77a3fc715d1d8c2b47a29ff65444af0e829c3f2704098ed538c48ce5f140b"
+    },
+    {
+      "path": "config.ini",
+      "size": 587,
+      "sha256": "bbbac849c6afe27ae8b8523d599f2af3d47f83e8ade114b531272a390dec9749"
+    },
+    {
+      "path": "fw.bat",
+      "size": 347,
+      "sha256": "01d451b00fe0a1e384f7b8cc2c22ea221e0fa00b460e3dea5966d050f7c7752f"
+    },
+    {
+      "path": "jibas2015.ico",
+      "size": 1150,
+      "sha256": "363e53d0781e07db1a69a814ce52fcd8d330d8efafa0ea37d4f4f4e2da72153b"
+    },
+    {
+      "path": "license.enc",
+      "size": 2754,
+      "sha256": "4d5a47df33b50a4539385502aa0fcc1d77632c6d90ca733b2e3f011f04c3881f"
+    },
+    {
+      "path": "MySql.Data.dll",
+      "size": 1174528,
+      "sha256": "8c7e5f8b8b0adb4c5d07975f1afaa7735340d117cb658f877acf0839a691d6cf"
+    },
+    {
+      "path": "Newtonsoft.Json.dll",
+      "size": 711952,
+      "sha256": "d134937ec381729074694490e81983b08ec7991b31550eabafb9202e5b404f89"
+    },
+    {
+      "path": "System.Runtime.CompilerServices.Unsafe.dll",
+      "size": 16768,
+      "sha256": "66409f670315afe8610f17a4d3a1ee52d72b6a46c544cec97544e8385f90ad74"
+    },
+    {
+      "path": "System.Threading.Tasks.Extensions.dll",
+      "size": 25984,
+      "sha256": "4f81ffd0dc7204db75afc35ea4291769b07c440592f28894260eea76626a23c6"
+    },
+    {
+      "path": "System.Windows.Forms.Ribbon.48.dll",
+      "size": 288768,
+      "sha256": "430c98f30b5444867be5e670696e126014dbbbb466147d4682135a30da9bbf82"
+    }
+  ],
+  "counts_by_directory": {
+    "CbeAndroidData.dll": 1,
+    "CbeCommon.dll": 1,
+    "cbeicon2.ico": 1,
+    "CbeServer.exe": 1,
+    "config.ini": 1,
+    "fw.bat": 1,
+    "jibas2015.ico": 1,
+    "license.enc": 1,
+    "MySql.Data.dll": 1,
+    "Newtonsoft.Json.dll": 1,
+    "System.Runtime.CompilerServices.Unsafe.dll": 1,
+    "System.Threading.Tasks.Extensions.dll": 1,
+    "System.Windows.Forms.Ribbon.48.dll": 1
+  },
+  "scope": "all files recursively, read-only; hashes do not prove semantic analysis of all dependencies"
+}

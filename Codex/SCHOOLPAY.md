@@ -11,20 +11,17 @@ tanggal berakhir dan **kapasitas vendor**. Nama klien opsional. Untuk lisensi
 baru, Client ID dan Sequence boleh kosong. Untuk perpanjangan, pilih file lisensi
 lama agar Client ID dipertahankan dan Sequence naik otomatis.
 
-Tombol Koneksi Database mengatur koneksi untuk kedua tab selama aplikasi terbuka.
-Password disamarkan dan hanya disimpan di memori; credential juga dapat diambil
-dari environment `JIBAS_DB_PASSWORD`. Pengisian ID manual tidak memerlukan DB.
+Isi ID secara manual dari instalasi SchoolPay tujuan. Menu koneksi database dan
+semua tombol deteksi sudah dihapus; aplikasi tidak meminta credential database.
 
 ```bat
-cli.cmd detect --product schoolpay
 cli.cmd generate --product schoolpay --database-id 7VJM4 --system-id DDCB4 --expires 2030-12-31 --capacity 10 --out schoolpay.lic
 cli.cmd inspect --product schoolpay schoolpay.lic
 cli.cmd verify --product schoolpay schoolpay.lic --database-id 7VJM4 --system-id DDCB4 --for-import
 ```
 
-Untuk perpanjangan, tambahkan `--previous-license FILE_LAMA`. Jika hanya Client ID
-yang diketahui, Sequence terpasang tetap harus diketahui: berikan `--client-id ID
---sequence N` dengan N lebih tinggi. Contoh di `contoh/SchoolPay-7VJM4-DDCB4-baru.lic`
+Untuk perpanjangan, tambahkan `--previous-license FILE_LAMA`. Client ID tetap
+dan Sequence naik secara otomatis; tidak ada input Sequence. Contoh di `contoh/SchoolPay-7VJM4-DDCB4-baru.lic`
 adalah lisensi baru Sequence 1, kapasitas 10, expiry 2030-12-31, bukan perpanjangan.
 Tidak ada hasil yang dipasang ke instalasi aktif secara otomatis.
 

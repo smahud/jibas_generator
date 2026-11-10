@@ -1,5 +1,12 @@
 # Mulai dari sini
 
+Status2026-11-11: aplikasi terbaru mempunyai tiga tab manual (Face,SchoolPay,CBE).
+Semua koneksi/deteksi ID dan input Sequence sudah dihapus dari GUI/CLI publik.
+Urutan baru1 atau previous+1; client ID tanpa file lama harus ditolak jika urutan
+tidak diketahui. Pertahankan worker berisi data biasa dan cleanup Tk di main thread.
+Hasil GUI tetap6baris, tidak mengembang vertikal. Struktur Git root hanya supporting
+files, semua implementasi di Codex/ dan OpenCode/. Lihat CBE.md dan README terbaru.
+
 Versi sekarang menggabungkan tab Absensi Wajah dan SchoolPay dalam app.py.
 Baca SCHOOLPAY.md untuk format baru: DbId dari jbsfina, SystemId eksplisit,
 MaxVendor, dan kolom input ForSchoolPay pada skema (cache19, impor20).

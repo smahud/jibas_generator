@@ -1,0 +1,30 @@
+{
+  "test_command": "python -X utf8 -m pytest tests/test_unified_gui.py -q -W error::pytest.PytestUnraisableExceptionWarning",
+  "result": "12 passed",
+  "duration_seconds": 2.93,
+  "full_suite_snapshot": "119 passed in 9.20s, with PytestUnraisableExceptionWarning treated as error",
+  "framework": "Windows Tk / ttk.Notebook",
+  "tabs": ["Absensi Wajah", "SchoolPay", "CBE Server"],
+  "checks": [
+    "Independent inputs and active-tab routing for all three products",
+    "No database connection settings, detector buttons, or detector code in GUI",
+    "Database ID and System ID remain manual input fields",
+    "Sequence input removed; generation passes None for automatic backend sequence",
+    "New licenses use sequence 1 and renewal from previous file uses sequence 2 for all three real codecs",
+    "Client ID without previous file produces a clear renewal instruction",
+    "Backend I/O runs off Tk thread while main-thread heartbeat and results remain responsive",
+    "Duplicate tasks are rejected and close during running work is safe",
+    "Worker object graphs contain ordinary data only; Tk variable finalizers run on main thread",
+    "Result area remains six text lines with word wrapping and scrollbar when window grows"
+  ],
+  "visual_qa": {
+    "sizes": [[880,650],[760,560]],
+    "products_checked": ["face","schoolpay","cbe"],
+    "clipped_widgets": [],
+    "result_pixels": 102,
+    "capture": "Self-rendered owned QA window, synthetic data, exact client region only",
+    "screenshots": ["gui_face_880x650.png","gui_schoolpay_880x650.png","gui_cbe_880x650.png","gui_face_760x560.png","gui_schoolpay_760x560.png","gui_cbe_760x560.png"]
+  },
+  "scope": "Manual-input GUI, worker lifecycle, and local codec integration; no native JIBAS activation or database connection was performed",
+  "test_lifecycle": "The GUI suite uses one real module-scoped Tcl/Tk interpreter and separate Toplevel test windows, matching one interpreter per application process. This avoids native Tk reinitialization failures from repeatedly creating Tk roots. Close/variable-finalization regression remains active, no timeout was increased, and strict full-suite validation passed."
+}

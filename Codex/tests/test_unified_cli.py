@@ -1,4 +1,4 @@
-"""End-to-end CLI routing for both products; no database or live install writes."""
+"""End-to-end CLI routing with manual IDs and automatic renewal sequence."""
 import json
 from pathlib import Path
 import subprocess
@@ -18,6 +18,7 @@ def call(*args):
 @pytest.mark.parametrize('product,db,system_field,capacity_field', [
     ('face', 'V4YNE', 'Info1', 'MaxClient'),
     ('schoolpay', '7VJM4', 'SystemId', 'MaxVendor'),
+    ('cbe', 'ABCDE', 'Info1', 'MaxClient'),
 ])
 def test_product_generate_inspect_verify_and_renew(tmp_path, product, db, system_field, capacity_field):
     out = tmp_path / f'{product}.lic'
@@ -39,3 +40,16 @@ def test_product_generate_inspect_verify_and_renew(tmp_path, product, db, system
     assert report['results'][0]['client_id'] == original_client
     assert report['results'][0]['sequence'] == 2
     assert report['results'][0]['mode'] == 'renewal'
+
+
+def test_public_cli_is_manual_and_sequence_is_automatic():
+    import cli
+    parser = cli.build_parser()
+    with pytest.raises(SystemExit):
+        parser.parse_args(['detect'])
+    with pytest.raises(SystemExit):
+        parser.parse_args(['verify', 'file.lic', '--auto'])
+    with pytest.raises(SystemExit):
+        parser.parse_args(['generate', '--product', 'face', '--database-id', 'ABCDE',
+                           '--system-id', '123AB', '--expires', '2030-12-31',
+                           '--capacity', '10', '--out', 'file.lic', '--sequence', '10'])

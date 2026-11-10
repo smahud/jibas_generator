@@ -1,0 +1,29 @@
+{
+  "artifact_sha256": "a2b77a3fc715d1d8c2b47a29ff65444af0e829c3f2704098ed538c48ce5f140b",
+  "mvid": "5831bc0d-d22e-4a13-67b9-f22eab4b24a8",
+  "current_database_id": "ABCDE",
+  "importer_token": "060005C0",
+  "authority": "controlled replay: current database-ID holder supplied; unmodified target importer and cache-loader methods",
+  "scope": "Target Main/UI/full runtime not executed; cache files written only under caller-provided sandbox",
+  "attempts": [
+    {
+      "input": "C:\\YIM\\JIBAS Generator\\Codex\\bukti\\cbe_validation\\generated\\missing_maxclient.lic",
+      "before_client": "TRIAL",
+      "before_sequence": 0,
+      "accepted": false,
+      "exception": "System.InvalidCastException: Object cannot be cast from DBNull to other types.",
+      "after_client": "65BBF155503D478DA0B795610AF2A7F9",
+      "after_sequence": 0,
+      "after_database_id": "ABCDE",
+      "after_seri": "DDCB4",
+      "after_info1": "",
+      "capacity": 20,
+      "transformed_capacity": 20,
+      "cache_exists": false
+    }
+  ],
+  "label": "missing_maxclient",
+  "expected_acceptance": [
+    false
+  ]
+}

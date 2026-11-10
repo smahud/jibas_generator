@@ -1,0 +1,108 @@
+﻿METHOD 0x06000BB5 #=zhkJ1_inuhqcVU8ESwvdWdKJeWFTBgYj3qiXqNKdOPAec0KDYgCDJPJ0IulVM::System.String #=zxQW4MFg1hYtV(System.DateTime)
+0000: ldarg.1       
+0001: ldsfld       #=zGnuFu88gTPUlKcu5mbsQpXUu5RZIuMWwDg==+#=zNx2zY$Q=::System.DateTime #=z63AQ92o= 0x040003F5
+0006: call         System.DateTime::System.TimeSpan op_Subtraction(System.DateTime, System.DateTime) 0x0A000713
+000B: stloc.1       
+000C: ldloca.s     1 
+000E: call         System.TimeSpan::Double get_TotalDays() 0x0A000714
+0013: call         System.Convert::Int32 ToInt32(Double) 0x0A000504
+0018: stloc.0       
+0019: ldc.i4       1089548676 
+001E: call         #=q0y8ZybtQjWGJxOXzfCn979b65JpLIHLOVBAQM4De8Zw=::System.String #=zepWPJGM=(Int32) 0x0600005C
+0023: ldloca.s     0 
+0025: call         System.Int32::System.String ToString() 0x0A00002F
+002A: ldc.i4       1089592407 
+002F: call         #=q0y8ZybtQjWGJxOXzfCn979b65JpLIHLOVBAQM4De8Zw=::System.String #=zepWPJGM=(Int32) 0x0600005C
+0034: call         System.String::System.String Concat(System.String, System.String, System.String) 0x0A000117
+0039: stloc.2       
+003A: leave.s      91 
+003C: stloc.3       
+003D: ldc.i4       1089592384 
+0042: call         #=q0y8ZybtQjWGJxOXzfCn979b65JpLIHLOVBAQM4De8Zw=::System.String #=zepWPJGM=(Int32) 0x0600005C
+0047: ldloc.3       
+0048: callvirt     System.Exception::System.String get_Message() 0x0A00022B
+004D: ldloc.3       
+004E: call         #=zv$2niTJvpv7FlVUf0fHPts7de0e4rBqicj8JKItlnzHy::Void #=zuhgahVY=(System.String, System.String, System.Exception) 0x06000E38
+0053: ldsfld       System.String::System.String Empty 0x0A00009A
+0058: stloc.2       
+0059: leave.s      91 
+005B: ldloc.2       
+005C: ret           
+METHOD 0x06000E0A #=zutHZiU83VQpzb7iGwEs2PQDJc_eQ6o_GFJaQBwG3oW6T::Int64 #=znYN0rN19WuCn(System.DateTime)
+0000: ldarga.s     0 
+0002: call         System.DateTime::Int32 get_Year() 0x0A0002F2
+0007: ldarga.s     0 
+0009: call         System.DateTime::Int32 get_Month() 0x0A0002F3
+000E: ldarga.s     0 
+0010: call         System.DateTime::Int32 get_Day() 0x0A000600
+0015: ldarga.s     0 
+0017: call         System.DateTime::Int32 get_Hour() 0x0A000601
+001C: ldarga.s     0 
+001E: call         System.DateTime::Int32 get_Minute() 0x0A000602
+0023: call         #=zutHZiU83VQpzb7iGwEs2PQDJc_eQ6o_GFJaQBwG3oW6T::Int64 #=znYN0rN19WuCn(Int32, Int32, Int32, Int32, Int32) 0x06000E09
+0028: ret           
+METHOD 0x06000E11 #=zutHZiU83VQpzb7iGwEs2PQDJc_eQ6o_GFJaQBwG3oW6T::System.String #=z2Bu6IJNumti0(System.DateTime)
+0000: ldc.i4.5      
+0001: newarr       ::System.String 0x01000167
+0006: dup           
+0007: ldc.i4.0      
+0008: ldarga.s     0 
+000A: call         System.DateTime::Int32 get_Day() 0x0A000600
+000F: stloc.0       
+0010: ldloca.s     0 
+0012: call         System.Int32::System.String ToString() 0x0A00002F
+0017: stelem.ref    
+0018: dup           
+0019: ldc.i4.1      
+001A: ldc.i4       1089544494 
+001F: call         #=q0y8ZybtQjWGJxOXzfCn979b65JpLIHLOVBAQM4De8Zw=::System.String #=zepWPJGM=(Int32) 0x0600005C
+0024: stelem.ref    
+0025: dup           
+0026: ldc.i4.2      
+0027: ldarga.s     0 
+0029: call         System.DateTime::Int32 get_Month() 0x0A0002F3
+002E: call         #=zutHZiU83VQpzb7iGwEs2PQDJc_eQ6o_GFJaQBwG3oW6T::System.String #=z$vH2VcE=(Int32) 0x06000E18
+0033: stelem.ref    
+0034: dup           
+0035: ldc.i4.3      
+0036: ldc.i4       1089544494 
+003B: call         #=q0y8ZybtQjWGJxOXzfCn979b65JpLIHLOVBAQM4De8Zw=::System.String #=zepWPJGM=(Int32) 0x0600005C
+0040: stelem.ref    
+0041: dup           
+0042: ldc.i4.4      
+0043: ldarga.s     0 
+0045: call         System.DateTime::Int32 get_Year() 0x0A0002F2
+004A: stloc.0       
+004B: ldloca.s     0 
+004D: call         System.Int32::System.String ToString() 0x0A00002F
+0052: stelem.ref    
+0053: call         System.String::System.String Concat(System.String[]) 0x0A000120
+0058: ret           
+METHOD 0x06000E15 #=zutHZiU83VQpzb7iGwEs2PQDJc_eQ6o_GFJaQBwG3oW6T::System.String #=zGRw71XoLrPQ0(System.DateTime)
+0000: ldarga.s     0 
+0002: call         System.DateTime::System.DayOfWeek get_DayOfWeek() 0x0A00073F
+0007: stloc.0       
+0008: ldloc.0       
+0009: switch       40,51,62,73,84,95 
+0026: br.s         106 
+0028: ldc.i4       1089481499 
+002D: call         #=q0y8ZybtQjWGJxOXzfCn979b65JpLIHLOVBAQM4De8Zw=::System.String #=zepWPJGM=(Int32) 0x0600005C
+0032: ret           
+0033: ldc.i4       1089481426 
+0038: call         #=q0y8ZybtQjWGJxOXzfCn979b65JpLIHLOVBAQM4De8Zw=::System.String #=zepWPJGM=(Int32) 0x0600005C
+003D: ret           
+003E: ldc.i4       1089481438 
+0043: call         #=q0y8ZybtQjWGJxOXzfCn979b65JpLIHLOVBAQM4De8Zw=::System.String #=zepWPJGM=(Int32) 0x0600005C
+0048: ret           
+0049: ldc.i4       1089481419 
+004E: call         #=q0y8ZybtQjWGJxOXzfCn979b65JpLIHLOVBAQM4De8Zw=::System.String #=zepWPJGM=(Int32) 0x0600005C
+0053: ret           
+0054: ldc.i4       1089481462 
+0059: call         #=q0y8ZybtQjWGJxOXzfCn979b65JpLIHLOVBAQM4De8Zw=::System.String #=zepWPJGM=(Int32) 0x0600005C
+005E: ret           
+005F: ldc.i4       1089481442 
+0064: call         #=q0y8ZybtQjWGJxOXzfCn979b65JpLIHLOVBAQM4De8Zw=::System.String #=zepWPJGM=(Int32) 0x0600005C
+0069: ret           
+006A: ldc.i4       1089481455 
+006F: call         #=q0y8ZybtQjWGJxOXzfCn979b65JpLIHLOVBAQM4De8Zw=::System.String #=zepWPJGM=(Int32) 0x0600005C
+0074: ret           

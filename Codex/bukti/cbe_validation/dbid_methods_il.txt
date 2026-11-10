@@ -1,0 +1,1746 @@
+﻿METHOD 0x060009DF #=zado7OX1NtEdrtAh6yxt_eVHzt2yH76hFGab8IY_J14KFXcv$6g==::System.String #=zNmRoBlHqFKajWG6znA==(MySql.Data.MySqlClient.MySqlConnection)
+0000: ldarg.0       
+0001: ldfld        #=zado7OX1NtEdrtAh6yxt_eVHzt2yH76hFGab8IY_J14KFXcv$6g==::System.String #=zbx8jzuyriz18CV6BGA== 0x040005E0
+0006: ldsfld       System.String::System.String Empty 0x0A00009A
+000B: call         System.String::Boolean op_Equality(System.String, System.String) 0x0A000023
+0010: brfalse.s    24 
+0012: ldsfld       System.String::System.String Empty 0x0A00009A
+0017: ret           
+0018: ldc.i4       1089563398 
+001D: call         #=q0y8ZybtQjWGJxOXzfCn979b65JpLIHLOVBAQM4De8Zw=::System.String #=zepWPJGM=(Int32) 0x0600005C
+0022: stloc.0       
+0023: ldloc.0       
+0024: ldarg.0       
+0025: ldfld        #=zado7OX1NtEdrtAh6yxt_eVHzt2yH76hFGab8IY_J14KFXcv$6g==::System.String #=zbx8jzuyriz18CV6BGA== 0x040005E0
+002A: call         System.String::System.String Format(System.String, System.Object) 0x0A0001A8
+002F: stloc.0       
+0030: newobj       System.Collections.Generic.Dictionary`2[[System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089],[System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]::Void .ctor() 0x0A0003FB
+0035: stloc.2       
+0036: ldarg.1       
+0037: ldloc.0       
+0038: call         #=z4AeuwrUxfvnU5fsKT98$1cT1z3FKBe_GjQ==::System.Data.DataTable #=zCFV8zzI=(MySql.Data.MySqlClient.MySqlConnection, System.String) 0x0600055D
+003D: callvirt     System.Data.DataTable::System.Data.DataRowCollection get_Rows() 0x0A000255
+0042: callvirt     System.Data.InternalDataCollectionBase::System.Collections.IEnumerator GetEnumerator() 0x0A000256
+0047: stloc.1       
+0048: br.s         122 
+004A: ldloc.1       
+004B: callvirt     System.Collections.IEnumerator::System.Object get_Current() 0x0A000043
+0050: castclass    ::System.Data.DataRow 0x01000061
+0055: dup           
+0056: ldc.i4.0      
+0057: callvirt     System.Data.DataRow::System.Object get_Item(Int32) 0x0A0002F7
+005C: callvirt     System.Object::System.String ToString() 0x0A000077
+0061: stloc.s      4 
+0063: ldc.i4.1      
+0064: callvirt     System.Data.DataRow::System.Object get_Item(Int32) 0x0A0002F7
+0069: callvirt     System.Object::System.String ToString() 0x0A000077
+006E: stloc.s      5 
+0070: ldloc.2       
+0071: ldloc.s      4 
+0073: ldloc.s      5 
+0075: callvirt     System.Collections.Generic.Dictionary`2[[System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089],[System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]::Void Add(System.String, System.String) 0x0A000400
+007A: ldloc.1       
+007B: callvirt     System.Collections.IEnumerator::Boolean MoveNext() 0x0A000045
+0080: brtrue.s     74 
+0082: leave.s      149 
+0084: ldloc.1       
+0085: isinst       ::System.IDisposable 0x010000BA
+008A: stloc.3       
+008B: ldloc.3       
+008C: brfalse.s    148 
+008E: ldloc.3       
+008F: callvirt     System.IDisposable::Void Dispose() 0x0A000003
+0094: endfinally    
+0095: ldloc.2       
+0096: call         Newtonsoft.Json.JsonConvert::System.String SerializeObject(System.Object) 0x0A00025D
+009B: ret           
+METHOD 0x060009E0 #=zado7OX1NtEdrtAh6yxt_eVHzt2yH76hFGab8IY_J14KFXcv$6g==::System.String #=zvklCJXtogy2g1PDhP8g5_0Y=(MySql.Data.MySqlClient.MySqlConnection, Int32)
+0000: ldarg.0       
+0001: ldfld        #=zado7OX1NtEdrtAh6yxt_eVHzt2yH76hFGab8IY_J14KFXcv$6g==::System.String #=zbx8jzuyriz18CV6BGA== 0x040005E0
+0006: ldsfld       System.String::System.String Empty 0x0A00009A
+000B: call         System.String::Boolean op_Equality(System.String, System.String) 0x0A000023
+0010: brfalse.s    24 
+0012: ldsfld       System.String::System.String Empty 0x0A00009A
+0017: ret           
+0018: newobj       MySql.Data.MySqlClient.MySqlCommand::Void .ctor() 0x0A00022F
+001D: dup           
+001E: ldarg.1       
+001F: callvirt     MySql.Data.MySqlClient.MySqlCommand::Void set_Connection(MySql.Data.MySqlClient.MySqlConnection) 0x0A000230
+0024: stloc.s      12 
+0026: ldc.i4       1089563643 
+002B: call         #=q0y8ZybtQjWGJxOXzfCn979b65JpLIHLOVBAQM4De8Zw=::System.String #=zepWPJGM=(Int32) 0x0600005C
+0030: stloc.0       
+0031: ldloc.0       
+0032: ldarg.0       
+0033: ldfld        #=zado7OX1NtEdrtAh6yxt_eVHzt2yH76hFGab8IY_J14KFXcv$6g==::System.String #=zbx8jzuyriz18CV6BGA== 0x040005E0
+0038: call         System.String::System.String Format(System.String, System.Object) 0x0A0001A8
+003D: stloc.0       
+003E: ldarg.2       
+003F: brfalse.s    95 
+0041: ldloc.0       
+0042: ldc.i4       1089557891 
+0047: call         #=q0y8ZybtQjWGJxOXzfCn979b65JpLIHLOVBAQM4De8Zw=::System.String #=zepWPJGM=(Int32) 0x0600005C
+004C: call         System.String::System.String Concat(System.String, System.String) 0x0A00022C
+0051: stloc.0       
+0052: ldloc.0       
+0053: ldarg.2       
+0054: box          ::System.Int32 0x010000DE
+0059: call         System.String::System.String Format(System.String, System.Object) 0x0A0001A8
+005E: stloc.0       
+005F: ldarg.0       
+0060: ldfld        #=zado7OX1NtEdrtAh6yxt_eVHzt2yH76hFGab8IY_J14KFXcv$6g==::Int32 #=z7tUvrzS_S0PR4K4WGw== 0x040005DD
+0065: ldc.i4.2      
+0066: bne.un.s     123 
+0068: ldloc.0       
+0069: ldc.i4       1089557922 
+006E: call         #=q0y8ZybtQjWGJxOXzfCn979b65JpLIHLOVBAQM4De8Zw=::System.String #=zepWPJGM=(Int32) 0x0600005C
+0073: call         System.String::System.String Concat(System.String, System.String) 0x0A00022C
+0078: stloc.0       
+0079: br.s         140 
+007B: ldloc.0       
+007C: ldc.i4       1089557980 
+0081: call         #=q0y8ZybtQjWGJxOXzfCn979b65JpLIHLOVBAQM4De8Zw=::System.String #=zepWPJGM=(Int32) 0x0600005C
+0086: call         System.String::System.String Concat(System.String, System.String) 0x0A00022C
+008B: stloc.0       
+008C: ldloc.0       
+008D: ldc.i4       1089558009 
+0092: call         #=q0y8ZybtQjWGJxOXzfCn979b65JpLIHLOVBAQM4De8Zw=::System.String #=zepWPJGM=(Int32) 0x0600005C
+0097: call         System.String::System.String Concat(System.String, System.String) 0x0A00022C
+009C: stloc.0       
+009D: newobj       System.Collections.Generic.List`1[[CbeAndroidData.PilihUjianData, CbeAndroidData, Version=26.0.0.0, Culture=neutral, PublicKeyToken=null]]::Void .ctor() 0x0A000610
+00A2: stloc.s      17 
+00A4: ldarg.1       
+00A5: ldloc.0       
+00A6: call         #=z4AeuwrUxfvnU5fsKT98$1cT1z3FKBe_GjQ==::System.Data.DataTable #=zCFV8zzI=(MySql.Data.MySqlClient.MySqlConnection, System.String) 0x0600055D
+00AB: callvirt     System.Data.DataTable::System.Data.DataRowCollection get_Rows() 0x0A000255
+00B0: callvirt     System.Data.InternalDataCollectionBase::System.Collections.IEnumerator GetEnumerator() 0x0A000256
+00B5: stloc.s      16 
+00B7: br           2447 
+00BC: ldloc.s      16 
+00BE: callvirt     System.Collections.IEnumerator::System.Object get_Current() 0x0A000043
+00C3: castclass    ::System.Data.DataRow 0x01000061
+00C8: stloc.1       
+00C9: ldloc.1       
+00CA: ldc.i4       1089540769 
+00CF: call         #=q0y8ZybtQjWGJxOXzfCn979b65JpLIHLOVBAQM4De8Zw=::System.String #=zepWPJGM=(Int32) 0x0600005C
+00D4: callvirt     System.Data.DataRow::System.Object get_Item(System.String) 0x0A000257
+00D9: call         System.Convert::Int32 ToInt32(System.Object) 0x0A000150
+00DE: stloc.s      13 
+00E0: ldloc.1       
+00E1: ldc.i4       1089538312 
+00E6: call         #=q0y8ZybtQjWGJxOXzfCn979b65JpLIHLOVBAQM4De8Zw=::System.String #=zepWPJGM=(Int32) 0x0600005C
+00EB: callvirt     System.Data.DataRow::System.Object get_Item(System.String) 0x0A000257
+00F0: call         System.Convert::Int32 ToInt32(System.Object) 0x0A000150
+00F5: stloc.s      14 
+00F7: ldloc.1       
+00F8: ldc.i4       1089550800 
+00FD: call         #=q0y8ZybtQjWGJxOXzfCn979b65JpLIHLOVBAQM4De8Zw=::System.String #=zepWPJGM=(Int32) 0x0600005C
+0102: callvirt     System.Data.DataRow::System.Object get_Item(System.String) 0x0A000257
+0107: callvirt     System.Object::System.String ToString() 0x0A000077
+010C: stloc.s      18 
+010E: ldloc.1       
+010F: ldc.i4       1089561879 
+0114: call         #=q0y8ZybtQjWGJxOXzfCn979b65JpLIHLOVBAQM4De8Zw=::System.String #=zepWPJGM=(Int32) 0x0600005C
+0119: callvirt     System.Data.DataRow::System.Object get_Item(System.String) 0x0A000257
+011E: call         System.Convert::Int32 ToInt32(System.Object) 0x0A000150
+0123: stloc.s      29 
+0125: ldloc.1       
+0126: ldc.i4       1089561856 
+012B: call         #=q0y8ZybtQjWGJxOXzfCn979b65JpLIHLOVBAQM4De8Zw=::System.String #=zepWPJGM=(Int32) 0x0600005C
+0130: callvirt     System.Data.DataRow::System.Object get_Item(System.String) 0x0A000257
+0135: call         System.Convert::Int32 ToInt32(System.Object) 0x0A000150
+013A: stloc.s      30 
+013C: ldloc.1       
+013D: ldc.i4       1089538596 
+0142: call         #=q0y8ZybtQjWGJxOXzfCn979b65JpLIHLOVBAQM4De8Zw=::System.String #=zepWPJGM=(Int32) 0x0600005C
+0147: callvirt     System.Data.DataRow::System.Object get_Item(System.String) 0x0A000257
+014C: callvirt     System.Object::System.String ToString() 0x0A000077
+0151: stloc.s      31 
+0153: ldloc.1       
+0154: ldc.i4       1089558016 
+0159: call         #=q0y8ZybtQjWGJxOXzfCn979b65JpLIHLOVBAQM4De8Zw=::System.String #=zepWPJGM=(Int32) 0x0600005C
+015E: callvirt     System.Data.DataRow::System.Object get_Item(System.String) 0x0A000257
+0163: call         System.Convert::Int32 ToInt32(System.Object) 0x0A000150
+0168: stloc.s      15 
+016A: ldloc.1       
+016B: ldc.i4       1089538367 
+0170: call         #=q0y8ZybtQjWGJxOXzfCn979b65JpLIHLOVBAQM4De8Zw=::System.String #=zepWPJGM=(Int32) 0x0600005C
+0175: callvirt     System.Data.DataRow::System.Object get_Item(System.String) 0x0A000257
+017A: call         System.Convert::Int32 ToInt32(System.Object) 0x0A000150
+017F: stloc.s      19 
+0181: ldloc.1       
+0182: ldc.i4       1089558029 
+0187: call         #=q0y8ZybtQjWGJxOXzfCn979b65JpLIHLOVBAQM4De8Zw=::System.String #=zepWPJGM=(Int32) 0x0600005C
+018C: callvirt     System.Data.DataRow::System.Object get_Item(System.String) 0x0A000257
+0191: callvirt     System.Object::System.String ToString() 0x0A000077
+0196: stloc.s      32 
+0198: ldloc.1       
+0199: ldc.i4       1089561767 
+019E: call         #=q0y8ZybtQjWGJxOXzfCn979b65JpLIHLOVBAQM4De8Zw=::System.String #=zepWPJGM=(Int32) 0x0600005C
+01A3: callvirt     System.Data.DataRow::System.Object get_Item(System.String) 0x0A000257
+01A8: callvirt     System.Object::System.String ToString() 0x0A000077
+01AD: stloc.s      33 
+01AF: ldloc.1       
+01B0: ldc.i4       1089561812 
+01B5: call         #=q0y8ZybtQjWGJxOXzfCn979b65JpLIHLOVBAQM4De8Zw=::System.String #=zepWPJGM=(Int32) 0x0600005C
+01BA: callvirt     System.Data.DataRow::System.Object get_Item(System.String) 0x0A000257
+01BF: callvirt     System.Object::System.String ToString() 0x0A000077
+01C4: callvirt     System.String::System.String ToUpper() 0x0A000247
+01C9: stloc.s      34 
+01CB: ldloc.1       
+01CC: ldc.i4       1089558079 
+01D1: call         #=q0y8ZybtQjWGJxOXzfCn979b65JpLIHLOVBAQM4De8Zw=::System.String #=zepWPJGM=(Int32) 0x0600005C
+01D6: callvirt     System.Data.DataRow::System.Object get_Item(System.String) 0x0A000257
+01DB: call         System.Convert::Int32 ToInt32(System.Object) 0x0A000150
+01E0: stloc.s      9 
+01E2: ldloc.1       
+01E3: ldc.i4       1089538055 
+01E8: call         #=q0y8ZybtQjWGJxOXzfCn979b65JpLIHLOVBAQM4De8Zw=::System.String #=zepWPJGM=(Int32) 0x0600005C
+01ED: callvirt     System.Data.DataRow::System.Object get_Item(System.String) 0x0A000257
+01F2: call         System.Convert::Double ToDouble(System.Object) 0x0A0000EC
+01F7: stloc.s      42 
+01F9: ldloc.1       
+01FA: ldc.i4       1089562038 
+01FF: call         #=q0y8ZybtQjWGJxOXzfCn979b65JpLIHLOVBAQM4De8Zw=::System.String #=zepWPJGM=(Int32) 0x0600005C
+0204: callvirt     System.Data.DataRow::System.Object get_Item(System.String) 0x0A000257
+0209: pop           
+020A: ldloc.1       
+020B: ldc.i4       1089562016 
+0210: call         #=q0y8ZybtQjWGJxOXzfCn979b65JpLIHLOVBAQM4De8Zw=::System.String #=zepWPJGM=(Int32) 0x0600005C
+0215: callvirt     System.Data.DataRow::System.Object get_Item(System.String) 0x0A000257
+021A: stloc.s      20 
+021C: ldsfld       System.String::System.String Empty 0x0A00009A
+0221: stloc.s      8 
+0223: ldloc.s      9 
+0225: ldc.i4.1      
+0226: xor           
+0227: ldloc.s      9 
+0229: bge.s        574 
+022B: ldloc.s      8 
+022D: ldc.i4       1089558060 
+0232: call         #=q0y8ZybtQjWGJxOXzfCn979b65JpLIHLOVBAQM4De8Zw=::System.String #=zepWPJGM=(Int32) 0x0600005C
+0237: call         System.String::System.String Concat(System.String, System.String) 0x0A00022C
+023C: stloc.s      8 
+023E: ldloc.s      9 
+0240: ldc.i4.2      
+0241: xor           
+0242: ldloc.s      9 
+0244: bge.s        601 
+0246: ldloc.s      8 
+0248: ldc.i4       1089558108 
+024D: call         #=q0y8ZybtQjWGJxOXzfCn979b65JpLIHLOVBAQM4De8Zw=::System.String #=zepWPJGM=(Int32) 0x0600005C
+0252: call         System.String::System.String Concat(System.String, System.String) 0x0A00022C
+0257: stloc.s      8 
+0259: ldloc.s      9 
+025B: ldc.i4.4      
+025C: xor           
+025D: ldloc.s      9 
+025F: bge.s        628 
+0261: ldloc.s      8 
+0263: ldc.i4       1089558092 
+0268: call         #=q0y8ZybtQjWGJxOXzfCn979b65JpLIHLOVBAQM4De8Zw=::System.String #=zepWPJGM=(Int32) 0x0600005C
+026D: call         System.String::System.String Concat(System.String, System.String) 0x0A00022C
+0272: stloc.s      8 
+0274: ldc.i4.0      
+0275: stloc.s      5 
+0277: ldarg.0       
+0278: ldfld        #=zado7OX1NtEdrtAh6yxt_eVHzt2yH76hFGab8IY_J14KFXcv$6g==::#=zagfZSGTVwnf3f$RiQWFaacrBAA6NXQgXkPVg_ac= #=z5VosaJ4USvDr 0x040005DC
+027D: ldfld        #=zagfZSGTVwnf3f$RiQWFaacrBAA6NXQgXkPVg_ac=::System.String #=zVENPtEAgjsebFfVMYw== 0x040005E6
+0282: stloc.s      35 
+0284: ldsfld       System.String::System.String Empty 0x0A00009A
+0289: stloc.2       
+028A: ldloc.s      15 
+028C: brtrue.s     678 
+028E: ldloc.2       
+028F: ldc.i4       1089558141 
+0294: call         #=q0y8ZybtQjWGJxOXzfCn979b65JpLIHLOVBAQM4De8Zw=::System.String #=zepWPJGM=(Int32) 0x0600005C
+0299: ldloc.s      35 
+029B: call         System.String::System.String Concat(System.String, System.String, System.String) 0x0A000117
+02A0: stloc.2       
+02A1: br           1226 
+02A6: ldloc.s      15 
+02A8: ldc.i4.1      
+02A9: bne.un       875 
+02AE: ldloc.1       
+02AF: ldc.i4       1089543890 
+02B4: call         #=q0y8ZybtQjWGJxOXzfCn979b65JpLIHLOVBAQM4De8Zw=::System.String #=zepWPJGM=(Int32) 0x0600005C
+02B9: callvirt     System.Data.DataRow::System.Object get_Item(System.String) 0x0A000257
+02BE: call         System.Convert::Boolean IsDBNull(System.Object) 0x0A0002F0
+02C3: brtrue.s     732 
+02C5: ldloc.1       
+02C6: ldc.i4       1089543890 
+02CB: call         #=q0y8ZybtQjWGJxOXzfCn979b65JpLIHLOVBAQM4De8Zw=::System.String #=zepWPJGM=(Int32) 0x0600005C
+02D0: callvirt     System.Data.DataRow::System.Object get_Item(System.String) 0x0A000257
+02D5: call         System.Convert::Int32 ToInt32(System.Object) 0x0A000150
+02DA: br.s         733 
+02DC: ldc.i4.0      
+02DD: stloc.s      37 
+02DF: ldloc.1       
+02E0: ldc.i4       1089543884 
+02E5: call         #=q0y8ZybtQjWGJxOXzfCn979b65JpLIHLOVBAQM4De8Zw=::System.String #=zepWPJGM=(Int32) 0x0600005C
+02EA: callvirt     System.Data.DataRow::System.Object get_Item(System.String) 0x0A000257
+02EF: call         System.Convert::Boolean IsDBNull(System.Object) 0x0A0002F0
+02F4: brtrue.s     781 
+02F6: ldloc.1       
+02F7: ldc.i4       1089543884 
+02FC: call         #=q0y8ZybtQjWGJxOXzfCn979b65JpLIHLOVBAQM4De8Zw=::System.String #=zepWPJGM=(Int32) 0x0600005C
+0301: callvirt     System.Data.DataRow::System.Object get_Item(System.String) 0x0A000257
+0306: call         System.Convert::Int32 ToInt32(System.Object) 0x0A000150
+030B: br.s         782 
+030D: ldc.i4.0      
+030E: stloc.s      38 
+0310: ldloc.2       
+0311: ldc.i4       1089558160 
+0316: call         #=q0y8ZybtQjWGJxOXzfCn979b65JpLIHLOVBAQM4De8Zw=::System.String #=zepWPJGM=(Int32) 0x0600005C
+031B: ldarg.1       
+031C: ldc.i4.4      
+031D: ldloc.s      37 
+031F: box          ::System.Int32 0x010000DE
+0324: call         #=zpkZUmjMSH7m2BYqRdagWayKmNKwXuOWUDks5d44=::System.Object #=zE81krXI=(MySql.Data.MySqlClient.MySqlConnection, #=zKDRLmpDnQy7i5m5l8bAnRS6qgaerdQF7zZpkvWM=, System.Object) 0x06000CF0
+0329: dup           
+032A: brtrue.s     816 
+032C: pop           
+032D: ldnull        
+032E: br.s         821 
+0330: callvirt     System.Object::System.String ToString() 0x0A000077
+0335: call         System.String::System.String Concat(System.String, System.String, System.String) 0x0A000117
+033A: stloc.2       
+033B: ldloc.2       
+033C: ldc.i4       1089558147 
+0341: call         #=q0y8ZybtQjWGJxOXzfCn979b65JpLIHLOVBAQM4De8Zw=::System.String #=zepWPJGM=(Int32) 0x0600005C
+0346: ldarg.1       
+0347: ldc.i4.5      
+0348: ldloc.s      38 
+034A: box          ::System.Int32 0x010000DE
+034F: call         #=zpkZUmjMSH7m2BYqRdagWayKmNKwXuOWUDks5d44=::System.Object #=zE81krXI=(MySql.Data.MySqlClient.MySqlConnection, #=zKDRLmpDnQy7i5m5l8bAnRS6qgaerdQF7zZpkvWM=, System.Object) 0x06000CF0
+0354: dup           
+0355: brtrue.s     859 
+0357: pop           
+0358: ldnull        
+0359: br.s         864 
+035B: callvirt     System.Object::System.String ToString() 0x0A000077
+0360: call         System.String::System.String Concat(System.String, System.String, System.String) 0x0A000117
+0365: stloc.2       
+0366: br           1226 
+036B: ldloc.s      15 
+036D: ldc.i4.2      
+036E: bne.un       1052 
+0373: ldloc.2       
+0374: ldc.i4       1089558192 
+0379: call         #=q0y8ZybtQjWGJxOXzfCn979b65JpLIHLOVBAQM4De8Zw=::System.String #=zepWPJGM=(Int32) 0x0600005C
+037E: call         System.String::System.String Concat(System.String, System.String) 0x0A00022C
+0383: stloc.2       
+0384: ldc.i4       1089558205 
+0389: call         #=q0y8ZybtQjWGJxOXzfCn979b65JpLIHLOVBAQM4De8Zw=::System.String #=zepWPJGM=(Int32) 0x0600005C
+038E: stloc.0       
+038F: ldloc.0       
+0390: ldloc.s      19 
+0392: box          ::System.Int32 0x010000DE
+0397: call         System.String::System.String Format(System.String, System.Object) 0x0A0001A8
+039C: stloc.0       
+039D: ldarg.1       
+039E: ldloc.0       
+039F: call         #=z4AeuwrUxfvnU5fsKT98$1cT1z3FKBe_GjQ==::System.Data.DataTable #=zCFV8zzI=(MySql.Data.MySqlClient.MySqlConnection, System.String) 0x0600055D
+03A4: callvirt     System.Data.DataTable::System.Data.DataRowCollection get_Rows() 0x0A000255
+03A9: callvirt     System.Data.InternalDataCollectionBase::System.Collections.IEnumerator GetEnumerator() 0x0A000256
+03AE: stloc.s      6 
+03B0: br.s         1017 
+03B2: ldloc.s      6 
+03B4: callvirt     System.Collections.IEnumerator::System.Object get_Current() 0x0A000043
+03B9: castclass    ::System.Data.DataRow 0x01000061
+03BE: ldc.i4.0      
+03BF: callvirt     System.Data.DataRow::System.Object get_Item(Int32) 0x0A0002F7
+03C4: callvirt     System.Object::System.String ToString() 0x0A000077
+03C9: stloc.s      39 
+03CB: ldloc.2       
+03CC: ldc.i4       1089558398 
+03D1: call         #=q0y8ZybtQjWGJxOXzfCn979b65JpLIHLOVBAQM4De8Zw=::System.String #=zepWPJGM=(Int32) 0x0600005C
+03D6: ldc.i4       1089541395 
+03DB: call         #=q0y8ZybtQjWGJxOXzfCn979b65JpLIHLOVBAQM4De8Zw=::System.String #=zepWPJGM=(Int32) 0x0600005C
+03E0: ldloc.s      5 
+03E2: ldc.i4.1      
+03E3: add           
+03E4: dup           
+03E5: stloc.s      5 
+03E7: box          ::System.Int32 0x010000DE
+03EC: ldloc.s      39 
+03EE: call         System.String::System.String Format(System.String, System.Object, System.Object, System.Object) 0x0A0002EA
+03F3: call         System.String::System.String Concat(System.String, System.String) 0x0A00022C
+03F8: stloc.2       
+03F9: ldloc.s      6 
+03FB: callvirt     System.Collections.IEnumerator::Boolean MoveNext() 0x0A000045
+0400: brtrue.s     946 
+0402: leave        1226 
+0407: ldloc.s      6 
+0409: isinst       ::System.IDisposable 0x010000BA
+040E: stloc.s      7 
+0410: ldloc.s      7 
+0412: brfalse.s    1051 
+0414: ldloc.s      7 
+0416: callvirt     System.IDisposable::Void Dispose() 0x0A000003
+041B: endfinally    
+041C: ldloc.s      15 
+041E: ldc.i4.3      
+041F: bne.un       1226 
+0424: ldloc.2       
+0425: ldc.i4       1089558380 
+042A: call         #=q0y8ZybtQjWGJxOXzfCn979b65JpLIHLOVBAQM4De8Zw=::System.String #=zepWPJGM=(Int32) 0x0600005C
+042F: call         System.String::System.String Concat(System.String, System.String) 0x0A00022C
+0434: stloc.2       
+0435: ldc.i4       1089558428 
+043A: call         #=q0y8ZybtQjWGJxOXzfCn979b65JpLIHLOVBAQM4De8Zw=::System.String #=zepWPJGM=(Int32) 0x0600005C
+043F: stloc.0       
+0440: ldloc.0       
+0441: ldloc.s      19 
+0443: box          ::System.Int32 0x010000DE
+0448: call         System.String::System.String Format(System.String, System.Object) 0x0A0001A8
+044D: stloc.0       
+044E: ldarg.1       
+044F: ldloc.0       
+0450: call         #=z4AeuwrUxfvnU5fsKT98$1cT1z3FKBe_GjQ==::System.Data.DataTable #=zCFV8zzI=(MySql.Data.MySqlClient.MySqlConnection, System.String) 0x0600055D
+0455: callvirt     System.Data.DataTable::System.Data.DataRowCollection get_Rows() 0x0A000255
+045A: callvirt     System.Data.InternalDataCollectionBase::System.Collections.IEnumerator GetEnumerator() 0x0A000256
+045F: stloc.s      6 
+0461: br.s         1194 
+0463: ldloc.s      6 
+0465: callvirt     System.Collections.IEnumerator::System.Object get_Current() 0x0A000043
+046A: castclass    ::System.Data.DataRow 0x01000061
+046F: ldc.i4.0      
+0470: callvirt     System.Data.DataRow::System.Object get_Item(Int32) 0x0A0002F7
+0475: callvirt     System.Object::System.String ToString() 0x0A000077
+047A: stloc.s      40 
+047C: ldloc.2       
+047D: ldc.i4       1089558398 
+0482: call         #=q0y8ZybtQjWGJxOXzfCn979b65JpLIHLOVBAQM4De8Zw=::System.String #=zepWPJGM=(Int32) 0x0600005C
+0487: ldc.i4       1089541395 
+048C: call         #=q0y8ZybtQjWGJxOXzfCn979b65JpLIHLOVBAQM4De8Zw=::System.String #=zepWPJGM=(Int32) 0x0600005C
+0491: ldloc.s      5 
+0493: ldc.i4.1      
+0494: add           
+0495: dup           
+0496: stloc.s      5 
+0498: box          ::System.Int32 0x010000DE
+049D: ldloc.s      40 
+049F: call         System.String::System.String Format(System.String, System.Object, System.Object, System.Object) 0x0A0002EA
+04A4: call         System.String::System.String Concat(System.String, System.String) 0x0A00022C
+04A9: stloc.2       
+04AA: ldloc.s      6 
+04AC: callvirt     System.Collections.IEnumerator::Boolean MoveNext() 0x0A000045
+04B1: brtrue.s     1123 
+04B3: leave.s      1226 
+04B5: ldloc.s      6 
+04B7: isinst       ::System.IDisposable 0x010000BA
+04BC: stloc.s      7 
+04BE: ldloc.s      7 
+04C0: brfalse.s    1225 
+04C2: ldloc.s      7 
+04C4: callvirt     System.IDisposable::Void Dispose() 0x0A000003
+04C9: endfinally    
+04CA: ldc.i4.0      
+04CB: stloc.s      5 
+04CD: ldc.i4       1089556572 
+04D2: call         #=q0y8ZybtQjWGJxOXzfCn979b65JpLIHLOVBAQM4De8Zw=::System.String #=zepWPJGM=(Int32) 0x0600005C
+04D7: ldloc.s      32 
+04D9: call         System.String::System.String Concat(System.String, System.String) 0x0A00022C
+04DE: stloc.3       
+04DF: ldloc.3       
+04E0: ldc.i4       1089556556 
+04E5: call         #=q0y8ZybtQjWGJxOXzfCn979b65JpLIHLOVBAQM4De8Zw=::System.String #=zepWPJGM=(Int32) 0x0600005C
+04EA: call         System.String::System.String Concat(System.String, System.String) 0x0A00022C
+04EF: stloc.3       
+04F0: ldloc.s      29 
+04F2: brtrue.s     1290 
+04F4: ldloc.3       
+04F5: ldc.i4       1089556582 
+04FA: call         #=q0y8ZybtQjWGJxOXzfCn979b65JpLIHLOVBAQM4De8Zw=::System.String #=zepWPJGM=(Int32) 0x0600005C
+04FF: call         System.String::System.String Concat(System.String, System.String) 0x0A00022C
+0504: stloc.3       
+0505: br           1603 
+050A: ldloc.3       
+050B: ldc.i4       1089541395 
+0510: call         #=q0y8ZybtQjWGJxOXzfCn979b65JpLIHLOVBAQM4De8Zw=::System.String #=zepWPJGM=(Int32) 0x0600005C
+0515: call         System.String::System.String Concat(System.String, System.String) 0x0A00022C
+051A: stloc.3       
+051B: ldc.i4       1089556638 
+0520: call         #=q0y8ZybtQjWGJxOXzfCn979b65JpLIHLOVBAQM4De8Zw=::System.String #=zepWPJGM=(Int32) 0x0600005C
+0525: ldloca.s     13 
+0527: call         System.Int32::System.String ToString() 0x0A00002F
+052C: call         System.String::System.String Concat(System.String, System.String) 0x0A00022C
+0531: stloc.0       
+0532: ldarg.1       
+0533: ldloc.0       
+0534: call         #=z4AeuwrUxfvnU5fsKT98$1cT1z3FKBe_GjQ==::System.Data.DataTable #=zCFV8zzI=(MySql.Data.MySqlClient.MySqlConnection, System.String) 0x0600055D
+0539: callvirt     System.Data.DataTable::System.Data.DataRowCollection get_Rows() 0x0A000255
+053E: callvirt     System.Data.InternalDataCollectionBase::System.Collections.IEnumerator GetEnumerator() 0x0A000256
+0543: stloc.s      6 
+0545: br           1568 
+054A: ldloc.s      6 
+054C: callvirt     System.Collections.IEnumerator::System.Object get_Current() 0x0A000043
+0551: castclass    ::System.Data.DataRow 0x01000061
+0556: dup           
+0557: ldc.i4       1089550812 
+055C: call         #=q0y8ZybtQjWGJxOXzfCn979b65JpLIHLOVBAQM4De8Zw=::System.String #=zepWPJGM=(Int32) 0x0600005C
+0561: callvirt     System.Data.DataRow::System.Object get_Item(System.String) 0x0A000257
+0566: callvirt     System.Object::System.String ToString() 0x0A000077
+056B: stloc.s      27 
+056D: dup           
+056E: ldc.i4       1089556773 
+0573: call         #=q0y8ZybtQjWGJxOXzfCn979b65JpLIHLOVBAQM4De8Zw=::System.String #=zepWPJGM=(Int32) 0x0600005C
+0578: callvirt     System.Data.DataRow::System.Object get_Item(System.String) 0x0A000257
+057D: callvirt     System.Object::System.String ToString() 0x0A000077
+0582: stloc.s      28 
+0584: dup           
+0585: ldc.i4       1089556823 
+058A: call         #=q0y8ZybtQjWGJxOXzfCn979b65JpLIHLOVBAQM4De8Zw=::System.String #=zepWPJGM=(Int32) 0x0600005C
+058F: callvirt     System.Data.DataRow::System.Object get_Item(System.String) 0x0A000257
+0594: callvirt     System.Object::System.String ToString() 0x0A000077
+0599: stloc.s      41 
+059B: ldc.i4       1089556806 
+05A0: call         #=q0y8ZybtQjWGJxOXzfCn979b65JpLIHLOVBAQM4De8Zw=::System.String #=zepWPJGM=(Int32) 0x0600005C
+05A5: callvirt     System.Data.DataRow::System.Object get_Item(System.String) 0x0A000257
+05AA: call         System.Convert::Int32 ToInt32(System.Object) 0x0A000150
+05AF: ldloc.s      5 
+05B1: ldc.i4.1      
+05B2: add           
+05B3: stloc.s      5 
+05B5: brtrue.s     1518 
+05B7: ldloc.3       
+05B8: ldc.i4       1089556813 
+05BD: call         #=q0y8ZybtQjWGJxOXzfCn979b65JpLIHLOVBAQM4De8Zw=::System.String #=zepWPJGM=(Int32) 0x0600005C
+05C2: ldc.i4.4      
+05C3: newarr       ::System.Object 0x0100010D
+05C8: dup           
+05C9: ldc.i4.0      
+05CA: ldloc.s      5 
+05CC: box          ::System.Int32 0x010000DE
+05D1: stelem.ref    
+05D2: dup           
+05D3: ldc.i4.1      
+05D4: ldloc.s      27 
+05D6: stelem.ref    
+05D7: dup           
+05D8: ldc.i4.2      
+05D9: ldloc.s      28 
+05DB: stelem.ref    
+05DC: dup           
+05DD: ldc.i4.3      
+05DE: ldloc.s      41 
+05E0: stelem.ref    
+05E1: call         System.String::System.String Format(System.String, System.Object[]) 0x0A000237
+05E6: call         System.String::System.String Concat(System.String, System.String) 0x0A00022C
+05EB: stloc.3       
+05EC: br.s         1551 
+05EE: ldloc.3       
+05EF: ldc.i4       1089556844 
+05F4: call         #=q0y8ZybtQjWGJxOXzfCn979b65JpLIHLOVBAQM4De8Zw=::System.String #=zepWPJGM=(Int32) 0x0600005C
+05F9: ldloc.s      5 
+05FB: box          ::System.Int32 0x010000DE
+0600: ldloc.s      27 
+0602: ldloc.s      28 
+0604: call         System.String::System.String Format(System.String, System.Object, System.Object, System.Object) 0x0A0002EA
+0609: call         System.String::System.String Concat(System.String, System.String) 0x0A00022C
+060E: stloc.3       
+060F: ldloc.3       
+0610: ldc.i4       1089541395 
+0615: call         #=q0y8ZybtQjWGJxOXzfCn979b65JpLIHLOVBAQM4De8Zw=::System.String #=zepWPJGM=(Int32) 0x0600005C
+061A: call         System.String::System.String Concat(System.String, System.String) 0x0A00022C
+061F: stloc.3       
+0620: ldloc.s      6 
+0622: callvirt     System.Collections.IEnumerator::Boolean MoveNext() 0x0A000045
+0627: brtrue       1354 
+062C: leave.s      1603 
+062E: ldloc.s      6 
+0630: isinst       ::System.IDisposable 0x010000BA
+0635: stloc.s      7 
+0637: ldloc.s      7 
+0639: brfalse.s    1602 
+063B: ldloc.s      7 
+063D: callvirt     System.IDisposable::Void Dispose() 0x0A000003
+0642: endfinally    
+0643: ldc.i4.5      
+0644: newarr       ::System.String 0x01000167
+0649: dup           
+064A: ldc.i4.0      
+064B: ldloc.3       
+064C: stelem.ref    
+064D: dup           
+064E: ldc.i4.1      
+064F: ldc.i4       1089556915 
+0654: call         #=q0y8ZybtQjWGJxOXzfCn979b65JpLIHLOVBAQM4De8Zw=::System.String #=zepWPJGM=(Int32) 0x0600005C
+0659: stelem.ref    
+065A: dup           
+065B: ldc.i4.2      
+065C: ldloc.s      8 
+065E: stelem.ref    
+065F: dup           
+0660: ldc.i4.3      
+0661: ldc.i4       1089556898 
+0666: call         #=q0y8ZybtQjWGJxOXzfCn979b65JpLIHLOVBAQM4De8Zw=::System.String #=zepWPJGM=(Int32) 0x0600005C
+066B: stelem.ref    
+066C: dup           
+066D: ldc.i4.4      
+066E: ldloc.s      33 
+0670: stelem.ref    
+0671: call         System.String::System.String Concat(System.String[]) 0x0A000120
+0676: stloc.3       
+0677: ldloc.s      14 
+0679: brtrue.s     1663 
+067B: ldloc.s      13 
+067D: br.s         1665 
+067F: ldloc.s      14 
+0681: stloc.s      21 
+0683: ldloc.s      14 
+0685: brtrue.s     1683 
+0687: ldc.i4       1089556950 
+068C: call         #=q0y8ZybtQjWGJxOXzfCn979b65JpLIHLOVBAQM4De8Zw=::System.String #=zepWPJGM=(Int32) 0x0600005C
+0691: br.s         1705 
+0693: ldc.i4       1089566560 
+0698: call         #=q0y8ZybtQjWGJxOXzfCn979b65JpLIHLOVBAQM4De8Zw=::System.String #=zepWPJGM=(Int32) 0x0600005C
+069D: ldloca.s     13 
+069F: call         System.Int32::System.String ToString() 0x0A00002F
+06A4: call         System.String::System.String Concat(System.String, System.String) 0x0A00022C
+06A9: stloc.s      22 
+06AB: ldarg.0       
+06AC: ldfld        #=zado7OX1NtEdrtAh6yxt_eVHzt2yH76hFGab8IY_J14KFXcv$6g==::CbeAndroidData.EUserLevel #=zV2iNHbackJGi 0x040005D9
+06B1: ldc.i4.1      
+06B2: beq.s        1749 
+06B4: ldarg.0       
+06B5: ldfld        #=zado7OX1NtEdrtAh6yxt_eVHzt2yH76hFGab8IY_J14KFXcv$6g==::CbeAndroidData.EUserLevel #=zV2iNHbackJGi 0x040005D9
+06BA: ldc.i4.2      
+06BB: beq.s        1737 
+06BD: ldc.i4       1089550863 
+06C2: call         #=q0y8ZybtQjWGJxOXzfCn979b65JpLIHLOVBAQM4De8Zw=::System.String #=zepWPJGM=(Int32) 0x0600005C
+06C7: br.s         1759 
+06C9: ldc.i4       1089550936 
+06CE: call         #=q0y8ZybtQjWGJxOXzfCn979b65JpLIHLOVBAQM4De8Zw=::System.String #=zepWPJGM=(Int32) 0x0600005C
+06D3: br.s         1759 
+06D5: ldc.i4       1089550821 
+06DA: call         #=q0y8ZybtQjWGJxOXzfCn979b65JpLIHLOVBAQM4De8Zw=::System.String #=zepWPJGM=(Int32) 0x0600005C
+06DF: stloc.s      23 
+06E1: ldc.i4       1089556928 
+06E6: call         #=q0y8ZybtQjWGJxOXzfCn979b65JpLIHLOVBAQM4De8Zw=::System.String #=zepWPJGM=(Int32) 0x0600005C
+06EB: stloc.0       
+06EC: ldloc.0       
+06ED: ldc.i4.4      
+06EE: newarr       ::System.Object 0x0100010D
+06F3: dup           
+06F4: ldc.i4.0      
+06F5: ldloc.s      21 
+06F7: box          ::System.Int32 0x010000DE
+06FC: stelem.ref    
+06FD: dup           
+06FE: ldc.i4.1      
+06FF: ldloc.s      22 
+0701: stelem.ref    
+0702: dup           
+0703: ldc.i4.2      
+0704: ldloc.s      23 
+0706: stelem.ref    
+0707: dup           
+0708: ldc.i4.3      
+0709: ldarg.0       
+070A: ldfld        #=zado7OX1NtEdrtAh6yxt_eVHzt2yH76hFGab8IY_J14KFXcv$6g==::System.String #=zjSEewUoEKPDw 0x040005D8
+070F: stelem.ref    
+0710: call         System.String::System.String Format(System.String, System.Object[]) 0x0A000237
+0715: stloc.0       
+0716: ldarg.1       
+0717: ldloc.0       
+0718: call         #=z4AeuwrUxfvnU5fsKT98$1cT1z3FKBe_GjQ==::System.Object #=zeosQX2mzE_Iy(MySql.Data.MySqlClient.MySqlConnection, System.String) 0x0600055B
+071D: call         System.Convert::Int32 ToInt32(System.Object) 0x0A000150
+0722: stloc.s      5 
+0724: ldc.i4.0      
+0725: stloc.s      24 
+0727: ldc.i4.m1     
+0728: stloc.s      10 
+072A: ldc.i4       1089557116 
+072F: call         #=q0y8ZybtQjWGJxOXzfCn979b65JpLIHLOVBAQM4De8Zw=::System.String #=zepWPJGM=(Int32) 0x0600005C
+0734: stloc.s      25 
+0736: ldc.i4.0      
+0737: stloc.s      26 
+0739: ldloc.s      5 
+073B: ldc.i4.0      
+073C: ble          2050 
+0741: ldc.i4       1089557136 
+0746: call         #=q0y8ZybtQjWGJxOXzfCn979b65JpLIHLOVBAQM4De8Zw=::System.String #=zepWPJGM=(Int32) 0x0600005C
+074B: stloc.0       
+074C: ldloc.0       
+074D: ldc.i4.4      
+074E: newarr       ::System.Object 0x0100010D
+0753: dup           
+0754: ldc.i4.0      
+0755: ldloc.s      21 
+0757: box          ::System.Int32 0x010000DE
+075C: stelem.ref    
+075D: dup           
+075E: ldc.i4.1      
+075F: ldloc.s      22 
+0761: stelem.ref    
+0762: dup           
+0763: ldc.i4.2      
+0764: ldloc.s      23 
+0766: stelem.ref    
+0767: dup           
+0768: ldc.i4.3      
+0769: ldarg.0       
+076A: ldfld        #=zado7OX1NtEdrtAh6yxt_eVHzt2yH76hFGab8IY_J14KFXcv$6g==::System.String #=zjSEewUoEKPDw 0x040005D8
+076F: stelem.ref    
+0770: call         System.String::System.String Format(System.String, System.Object[]) 0x0A000237
+0775: stloc.0       
+0776: ldloc.s      12 
+0778: ldloc.0       
+0779: callvirt     System.Data.Common.DbCommand::Void set_CommandText(System.String) 0x0A000232
+077E: ldloc.s      12 
+0780: callvirt     MySql.Data.MySqlClient.MySqlCommand::MySql.Data.MySqlClient.MySqlDataReader ExecuteReader() 0x0A000233
+0785: stloc.s      11 
+0787: ldloc.s      11 
+0789: callvirt     System.Data.Common.DbDataReader::Boolean Read() 0x0A000234
+078E: brfalse.s    2043 
+0790: ldloc.s      11 
+0792: ldc.i4.0      
+0793: callvirt     System.Data.Common.DbDataReader::System.Object get_Item(Int32) 0x0A000235
+0798: call         System.Convert::Int32 ToInt32(System.Object) 0x0A000150
+079D: stloc.s      24 
+079F: ldloc.s      11 
+07A1: ldc.i4.1      
+07A2: callvirt     System.Data.Common.DbDataReader::System.Object get_Item(Int32) 0x0A000235
+07A7: call         System.Convert::Int32 ToInt32(System.Object) 0x0A000150
+07AC: stloc.s      10 
+07AE: ldloc.s      11 
+07B0: ldc.i4.2      
+07B1: callvirt     System.Data.Common.DbDataReader::System.Object get_Item(Int32) 0x0A000235
+07B6: call         System.Convert::Int32 ToInt32(System.Object) 0x0A000150
+07BB: stloc.s      26 
+07BD: ldloc.s      10 
+07BF: ldc.i4.m1     
+07C0: beq.s        2031 
+07C2: ldloc.s      10 
+07C4: brfalse.s    2019 
+07C6: ldloc.s      10 
+07C8: ldc.i4.1      
+07C9: beq.s        2007 
+07CB: ldc.i4       1089557282 
+07D0: call         #=q0y8ZybtQjWGJxOXzfCn979b65JpLIHLOVBAQM4De8Zw=::System.String #=zepWPJGM=(Int32) 0x0600005C
+07D5: br.s         2041 
+07D7: ldc.i4       1089557292 
+07DC: call         #=q0y8ZybtQjWGJxOXzfCn979b65JpLIHLOVBAQM4De8Zw=::System.String #=zepWPJGM=(Int32) 0x0600005C
+07E1: br.s         2041 
+07E3: ldc.i4       1089557116 
+07E8: call         #=q0y8ZybtQjWGJxOXzfCn979b65JpLIHLOVBAQM4De8Zw=::System.String #=zepWPJGM=(Int32) 0x0600005C
+07ED: br.s         2041 
+07EF: ldc.i4       1089557326 
+07F4: call         #=q0y8ZybtQjWGJxOXzfCn979b65JpLIHLOVBAQM4De8Zw=::System.String #=zepWPJGM=(Int32) 0x0600005C
+07F9: stloc.s      25 
+07FB: ldloc.s      11 
+07FD: callvirt     System.Data.Common.DbDataReader::Void Close() 0x0A000236
+0802: ldc.i4       1089557368 
+0807: call         #=q0y8ZybtQjWGJxOXzfCn979b65JpLIHLOVBAQM4De8Zw=::System.String #=zepWPJGM=(Int32) 0x0600005C
+080C: stloc.0       
+080D: ldloc.0       
+080E: ldloc.s      13 
+0810: box          ::System.Int32 0x010000DE
+0815: call         System.String::System.String Format(System.String, System.Object) 0x0A0001A8
+081A: stloc.0       
+081B: ldloc.s      12 
+081D: ldloc.0       
+081E: callvirt     System.Data.Common.DbCommand::Void set_CommandText(System.String) 0x0A000232
+0823: ldloc.s      12 
+0825: callvirt     System.Data.Common.DbCommand::System.Object ExecuteScalar() 0x0A00023F
+082A: call         System.Convert::Int32 ToInt32(System.Object) 0x0A000150
+082F: stloc.s      36 
+0831: newobj       CbeAndroidData.PilihUjianData::Void .ctor() 0x0A000611
+0836: stloc.s      4 
+0838: ldloc.s      4 
+083A: ldloc.s      13 
+083C: stfld        CbeAndroidData.PilihUjianData::Int32 IdUjian 0x0A000612
+0841: ldloc.s      4 
+0843: ldloc.s      14 
+0845: stfld        CbeAndroidData.PilihUjianData::Int32 IdRemedUjian 0x0A000613
+084A: ldloc.s      4 
+084C: ldloc.s      24 
+084E: stfld        CbeAndroidData.PilihUjianData::Int32 IdUjianSerta 0x0A000614
+0853: ldloc.s      4 
+0855: ldarg.0       
+0856: ldarg.1       
+0857: ldloc.s      13 
+0859: call         #=zado7OX1NtEdrtAh6yxt_eVHzt2yH76hFGab8IY_J14KFXcv$6g==::Int32 #=zEcClHEOAzHPB(MySql.Data.MySqlClient.MySqlConnection, Int32) 0x060009DC
+085E: stfld        CbeAndroidData.PilihUjianData::Int32 IdJadwalUjian 0x0A000615
+0863: ldloc.s      4 
+0865: ldloc.s      18 
+0867: callvirt     System.String::System.String ToUpper() 0x0A000247
+086C: stfld        CbeAndroidData.PilihUjianData::System.String Judul 0x0A000616
+0871: ldloc.s      4 
+0873: ldc.i4.s     11 
+0875: newarr       ::System.String 0x01000167
+087A: dup           
+087B: ldc.i4.0      
+087C: ldloc.s      18 
+087E: callvirt     System.String::System.String ToUpper() 0x0A000247
+0883: stelem.ref    
+0884: dup           
+0885: ldc.i4.1      
+0886: ldc.i4       1089557490 
+088B: call         #=q0y8ZybtQjWGJxOXzfCn979b65JpLIHLOVBAQM4De8Zw=::System.String #=zepWPJGM=(Int32) 0x0600005C
+0890: stelem.ref    
+0891: dup           
+0892: ldc.i4.2      
+0893: ldloc.s      20 
+0895: brtrue.s     2202 
+0897: ldnull        
+0898: br.s         2209 
+089A: ldloc.s      20 
+089C: callvirt     System.Object::System.String ToString() 0x0A000077
+08A1: stelem.ref    
+08A2: dup           
+08A3: ldc.i4.3      
+08A4: ldc.i4       1089557501 
+08A9: call         #=q0y8ZybtQjWGJxOXzfCn979b65JpLIHLOVBAQM4De8Zw=::System.String #=zepWPJGM=(Int32) 0x0600005C
+08AE: stelem.ref    
+08AF: dup           
+08B0: ldc.i4.4      
+08B1: ldloc.s      30 
+08B3: brfalse.s    2253 
+08B5: ldloca.s     30 
+08B7: call         System.Int32::System.String ToString() 0x0A00002F
+08BC: ldc.i4       1089550999 
+08C1: call         #=q0y8ZybtQjWGJxOXzfCn979b65JpLIHLOVBAQM4De8Zw=::System.String #=zepWPJGM=(Int32) 0x0600005C
+08C6: call         System.String::System.String Concat(System.String, System.String) 0x0A00022C
+08CB: br.s         2263 
+08CD: ldc.i4       1089557485 
+08D2: call         #=q0y8ZybtQjWGJxOXzfCn979b65JpLIHLOVBAQM4De8Zw=::System.String #=zepWPJGM=(Int32) 0x0600005C
+08D7: stelem.ref    
+08D8: dup           
+08D9: ldc.i4.5      
+08DA: ldc.i4       1089559556 
+08DF: call         #=q0y8ZybtQjWGJxOXzfCn979b65JpLIHLOVBAQM4De8Zw=::System.String #=zepWPJGM=(Int32) 0x0600005C
+08E4: stelem.ref    
+08E5: dup           
+08E6: ldc.i4.6      
+08E7: ldloca.s     36 
+08E9: call         System.Int32::System.String ToString() 0x0A00002F
+08EE: stelem.ref    
+08EF: dup           
+08F0: ldc.i4.7      
+08F1: ldc.i4       1089559609 
+08F6: call         #=q0y8ZybtQjWGJxOXzfCn979b65JpLIHLOVBAQM4De8Zw=::System.String #=zepWPJGM=(Int32) 0x0600005C
+08FB: stelem.ref    
+08FC: dup           
+08FD: ldc.i4.8      
+08FE: ldloca.s     42 
+0900: call         System.Double::System.String ToString() 0x0A00039E
+0905: stelem.ref    
+0906: dup           
+0907: ldc.i4.s     9 
+0909: ldc.i4       1089559596 
+090E: call         #=q0y8ZybtQjWGJxOXzfCn979b65JpLIHLOVBAQM4De8Zw=::System.String #=zepWPJGM=(Int32) 0x0600005C
+0913: stelem.ref    
+0914: dup           
+0915: ldc.i4.s     10 
+0917: ldloc.s      25 
+0919: stelem.ref    
+091A: call         System.String::System.String Concat(System.String[]) 0x0A000120
+091F: stfld        CbeAndroidData.PilihUjianData::System.String UjianInfo 0x0A000617
+0924: ldloc.s      4 
+0926: ldc.i4.5      
+0927: newarr       ::System.String 0x01000167
+092C: dup           
+092D: ldc.i4.0      
+092E: ldloc.s      31 
+0930: callvirt     System.String::System.String ToUpper() 0x0A000247
+0935: stelem.ref    
+0936: dup           
+0937: ldc.i4.1      
+0938: ldc.i4       1089559644 
+093D: call         #=q0y8ZybtQjWGJxOXzfCn979b65JpLIHLOVBAQM4De8Zw=::System.String #=zepWPJGM=(Int32) 0x0600005C
+0942: stelem.ref    
+0943: dup           
+0944: ldc.i4.2      
+0945: ldloc.s      34 
+0947: stelem.ref    
+0948: dup           
+0949: ldc.i4.3      
+094A: ldc.i4       1089559667 
+094F: call         #=q0y8ZybtQjWGJxOXzfCn979b65JpLIHLOVBAQM4De8Zw=::System.String #=zepWPJGM=(Int32) 0x0600005C
+0954: stelem.ref    
+0955: dup           
+0956: ldc.i4.4      
+0957: ldloc.2       
+0958: stelem.ref    
+0959: call         System.String::System.String Concat(System.String[]) 0x0A000120
+095E: stfld        CbeAndroidData.PilihUjianData::System.String Pelajaran 0x0A000618
+0963: ldloc.s      4 
+0965: ldloc.3       
+0966: stfld        CbeAndroidData.PilihUjianData::System.String JadwalInfo 0x0A000619
+096B: ldloc.s      4 
+096D: ldloc.s      10 
+096F: stfld        CbeAndroidData.PilihUjianData::Int32 StatusUjian 0x0A00061A
+0974: ldloc.s      4 
+0976: ldloc.s      36 
+0978: stfld        CbeAndroidData.PilihUjianData::Int32 JumlahSoal 0x0A00061B
+097D: ldloc.s      4 
+097F: ldloc.s      26 
+0981: stfld        CbeAndroidData.PilihUjianData::Int32 UjianOfflineDownloadStatus 0x0A00061C
+0986: ldloc.s      17 
+0988: ldloc.s      4 
+098A: callvirt     System.Collections.Generic.List`1[[CbeAndroidData.PilihUjianData, CbeAndroidData, Version=26.0.0.0, Culture=neutral, PublicKeyToken=null]]::Void Add(CbeAndroidData.PilihUjianData) 0x0A00061D
+098F: ldloc.s      16 
+0991: callvirt     System.Collections.IEnumerator::Boolean MoveNext() 0x0A000045
+0996: brtrue       188 
+099B: leave.s      2482 
+099D: ldloc.s      16 
+099F: isinst       ::System.IDisposable 0x010000BA
+09A4: stloc.s      7 
+09A6: ldloc.s      7 
+09A8: brfalse.s    2481 
+09AA: ldloc.s      7 
+09AC: callvirt     System.IDisposable::Void Dispose() 0x0A000003
+09B1: endfinally    
+09B2: ldloc.s      17 
+09B4: call         Newtonsoft.Json.JsonConvert::System.String SerializeObject(System.Object) 0x0A00025D
+09B9: ret           
+METHOD 0x060009E1 #=zado7OX1NtEdrtAh6yxt_eVHzt2yH76hFGab8IY_J14KFXcv$6g==::System.String #=z6PQdx_zEJC_YuwvkHShiogSHxIW7(MySql.Data.MySqlClient.MySqlConnection)
+0000: ldarg.0       
+0001: ldfld        #=zado7OX1NtEdrtAh6yxt_eVHzt2yH76hFGab8IY_J14KFXcv$6g==::System.String #=zbx8jzuyriz18CV6BGA== 0x040005E0
+0006: ldsfld       System.String::System.String Empty 0x0A00009A
+000B: call         System.String::Boolean op_Equality(System.String, System.String) 0x0A000023
+0010: brfalse.s    24 
+0012: ldsfld       System.String::System.String Empty 0x0A00009A
+0017: ret           
+0018: newobj       MySql.Data.MySqlClient.MySqlCommand::Void .ctor() 0x0A00022F
+001D: dup           
+001E: ldarg.1       
+001F: callvirt     MySql.Data.MySqlClient.MySqlCommand::Void set_Connection(MySql.Data.MySqlClient.MySqlConnection) 0x0A000230
+0024: stloc.s      12 
+0026: ldc.i4       1089559648 
+002B: call         #=q0y8ZybtQjWGJxOXzfCn979b65JpLIHLOVBAQM4De8Zw=::System.String #=zepWPJGM=(Int32) 0x0600005C
+0030: stloc.0       
+0031: ldloc.0       
+0032: ldarg.0       
+0033: ldfld        #=zado7OX1NtEdrtAh6yxt_eVHzt2yH76hFGab8IY_J14KFXcv$6g==::System.String #=zbx8jzuyriz18CV6BGA== 0x040005E0
+0038: call         System.String::System.String Format(System.String, System.Object) 0x0A0001A8
+003D: stloc.0       
+003E: ldloc.0       
+003F: ldc.i4       1089558009 
+0044: call         #=q0y8ZybtQjWGJxOXzfCn979b65JpLIHLOVBAQM4De8Zw=::System.String #=zepWPJGM=(Int32) 0x0600005C
+0049: call         System.String::System.String Concat(System.String, System.String) 0x0A00022C
+004E: stloc.0       
+004F: newobj       System.Collections.Generic.List`1[[CbeAndroidData.PilihUjianData, CbeAndroidData, Version=26.0.0.0, Culture=neutral, PublicKeyToken=null]]::Void .ctor() 0x0A000610
+0054: stloc.s      18 
+0056: ldarg.0       
+0057: ldfld        #=zado7OX1NtEdrtAh6yxt_eVHzt2yH76hFGab8IY_J14KFXcv$6g==::CbeAndroidData.EUserLevel #=zV2iNHbackJGi 0x040005D9
+005C: ldc.i4.1      
+005D: beq.s        128 
+005F: ldarg.0       
+0060: ldfld        #=zado7OX1NtEdrtAh6yxt_eVHzt2yH76hFGab8IY_J14KFXcv$6g==::CbeAndroidData.EUserLevel #=zV2iNHbackJGi 0x040005D9
+0065: ldc.i4.2      
+0066: beq.s        116 
+0068: ldc.i4       1089550863 
+006D: call         #=q0y8ZybtQjWGJxOXzfCn979b65JpLIHLOVBAQM4De8Zw=::System.String #=zepWPJGM=(Int32) 0x0600005C
+0072: br.s         138 
+0074: ldc.i4       1089550936 
+0079: call         #=q0y8ZybtQjWGJxOXzfCn979b65JpLIHLOVBAQM4De8Zw=::System.String #=zepWPJGM=(Int32) 0x0600005C
+007E: br.s         138 
+0080: ldc.i4       1089550821 
+0085: call         #=q0y8ZybtQjWGJxOXzfCn979b65JpLIHLOVBAQM4De8Zw=::System.String #=zepWPJGM=(Int32) 0x0600005C
+008A: stloc.s      19 
+008C: ldarg.1       
+008D: ldloc.0       
+008E: call         #=z4AeuwrUxfvnU5fsKT98$1cT1z3FKBe_GjQ==::System.Data.DataTable #=zCFV8zzI=(MySql.Data.MySqlClient.MySqlConnection, System.String) 0x0600055D
+0093: callvirt     System.Data.DataTable::System.Data.DataRowCollection get_Rows() 0x0A000255
+0098: callvirt     System.Data.InternalDataCollectionBase::System.Collections.IEnumerator GetEnumerator() 0x0A000256
+009D: stloc.s      16 
+009F: br           2400 
+00A4: ldloc.s      16 
+00A6: callvirt     System.Collections.IEnumerator::System.Object get_Current() 0x0A000043
+00AB: castclass    ::System.Data.DataRow 0x01000061
+00B0: stloc.1       
+00B1: ldloc.1       
+00B2: ldc.i4       1089540769 
+00B7: call         #=q0y8ZybtQjWGJxOXzfCn979b65JpLIHLOVBAQM4De8Zw=::System.String #=zepWPJGM=(Int32) 0x0600005C
+00BC: callvirt     System.Data.DataRow::System.Object get_Item(System.String) 0x0A000257
+00C1: call         System.Convert::Int32 ToInt32(System.Object) 0x0A000150
+00C6: stloc.s      13 
+00C8: ldloc.1       
+00C9: ldc.i4       1089538312 
+00CE: call         #=q0y8ZybtQjWGJxOXzfCn979b65JpLIHLOVBAQM4De8Zw=::System.String #=zepWPJGM=(Int32) 0x0600005C
+00D3: callvirt     System.Data.DataRow::System.Object get_Item(System.String) 0x0A000257
+00D8: call         System.Convert::Int32 ToInt32(System.Object) 0x0A000150
+00DD: stloc.s      14 
+00DF: ldloc.s      14 
+00E1: brtrue.s     231 
+00E3: ldloc.s      13 
+00E5: br.s         233 
+00E7: ldloc.s      14 
+00E9: stloc.s      20 
+00EB: ldloc.s      14 
+00ED: brtrue.s     251 
+00EF: ldc.i4       1089556950 
+00F4: call         #=q0y8ZybtQjWGJxOXzfCn979b65JpLIHLOVBAQM4De8Zw=::System.String #=zepWPJGM=(Int32) 0x0600005C
+00F9: br.s         273 
+00FB: ldc.i4       1089566560 
+0100: call         #=q0y8ZybtQjWGJxOXzfCn979b65JpLIHLOVBAQM4De8Zw=::System.String #=zepWPJGM=(Int32) 0x0600005C
+0105: ldloca.s     13 
+0107: call         System.Int32::System.String ToString() 0x0A00002F
+010C: call         System.String::System.String Concat(System.String, System.String) 0x0A00022C
+0111: stloc.s      21 
+0113: ldc.i4       1089556928 
+0118: call         #=q0y8ZybtQjWGJxOXzfCn979b65JpLIHLOVBAQM4De8Zw=::System.String #=zepWPJGM=(Int32) 0x0600005C
+011D: stloc.0       
+011E: ldloc.0       
+011F: ldc.i4.4      
+0120: newarr       ::System.Object 0x0100010D
+0125: dup           
+0126: ldc.i4.0      
+0127: ldloc.s      20 
+0129: box          ::System.Int32 0x010000DE
+012E: stelem.ref    
+012F: dup           
+0130: ldc.i4.1      
+0131: ldloc.s      21 
+0133: stelem.ref    
+0134: dup           
+0135: ldc.i4.2      
+0136: ldloc.s      19 
+0138: stelem.ref    
+0139: dup           
+013A: ldc.i4.3      
+013B: ldarg.0       
+013C: ldfld        #=zado7OX1NtEdrtAh6yxt_eVHzt2yH76hFGab8IY_J14KFXcv$6g==::System.String #=zjSEewUoEKPDw 0x040005D8
+0141: stelem.ref    
+0142: call         System.String::System.String Format(System.String, System.Object[]) 0x0A000237
+0147: stloc.0       
+0148: ldarg.1       
+0149: ldloc.0       
+014A: call         #=z4AeuwrUxfvnU5fsKT98$1cT1z3FKBe_GjQ==::System.Object #=zeosQX2mzE_Iy(MySql.Data.MySqlClient.MySqlConnection, System.String) 0x0600055B
+014F: call         System.Convert::Int32 ToInt32(System.Object) 0x0A000150
+0154: stloc.s      5 
+0156: ldc.i4.0      
+0157: stloc.s      22 
+0159: ldc.i4.m1     
+015A: stloc.s      8 
+015C: ldc.i4       1089557116 
+0161: call         #=q0y8ZybtQjWGJxOXzfCn979b65JpLIHLOVBAQM4De8Zw=::System.String #=zepWPJGM=(Int32) 0x0600005C
+0166: stloc.s      23 
+0168: ldc.i4.0      
+0169: stloc.s      17 
+016B: ldloc.s      5 
+016D: ldc.i4.0      
+016E: ble          564 
+0173: ldc.i4       1089557136 
+0178: call         #=q0y8ZybtQjWGJxOXzfCn979b65JpLIHLOVBAQM4De8Zw=::System.String #=zepWPJGM=(Int32) 0x0600005C
+017D: stloc.0       
+017E: ldloc.0       
+017F: ldc.i4.4      
+0180: newarr       ::System.Object 0x0100010D
+0185: dup           
+0186: ldc.i4.0      
+0187: ldloc.s      20 
+0189: box          ::System.Int32 0x010000DE
+018E: stelem.ref    
+018F: dup           
+0190: ldc.i4.1      
+0191: ldloc.s      21 
+0193: stelem.ref    
+0194: dup           
+0195: ldc.i4.2      
+0196: ldloc.s      19 
+0198: stelem.ref    
+0199: dup           
+019A: ldc.i4.3      
+019B: ldarg.0       
+019C: ldfld        #=zado7OX1NtEdrtAh6yxt_eVHzt2yH76hFGab8IY_J14KFXcv$6g==::System.String #=zjSEewUoEKPDw 0x040005D8
+01A1: stelem.ref    
+01A2: call         System.String::System.String Format(System.String, System.Object[]) 0x0A000237
+01A7: stloc.0       
+01A8: ldloc.s      12 
+01AA: ldloc.0       
+01AB: callvirt     System.Data.Common.DbCommand::Void set_CommandText(System.String) 0x0A000232
+01B0: ldloc.s      12 
+01B2: callvirt     MySql.Data.MySqlClient.MySqlCommand::MySql.Data.MySqlClient.MySqlDataReader ExecuteReader() 0x0A000233
+01B7: stloc.s      11 
+01B9: ldloc.s      11 
+01BB: callvirt     System.Data.Common.DbDataReader::Boolean Read() 0x0A000234
+01C0: brfalse.s    557 
+01C2: ldloc.s      11 
+01C4: ldc.i4.0      
+01C5: callvirt     System.Data.Common.DbDataReader::System.Object get_Item(Int32) 0x0A000235
+01CA: call         System.Convert::Int32 ToInt32(System.Object) 0x0A000150
+01CF: stloc.s      22 
+01D1: ldloc.s      11 
+01D3: ldc.i4.1      
+01D4: callvirt     System.Data.Common.DbDataReader::System.Object get_Item(Int32) 0x0A000235
+01D9: call         System.Convert::Int32 ToInt32(System.Object) 0x0A000150
+01DE: stloc.s      8 
+01E0: ldloc.s      11 
+01E2: ldc.i4.2      
+01E3: callvirt     System.Data.Common.DbDataReader::System.Object get_Item(Int32) 0x0A000235
+01E8: call         System.Convert::Int32 ToInt32(System.Object) 0x0A000150
+01ED: stloc.s      17 
+01EF: ldloc.s      8 
+01F1: ldc.i4.m1     
+01F2: beq.s        545 
+01F4: ldloc.s      8 
+01F6: brfalse.s    533 
+01F8: ldloc.s      8 
+01FA: ldc.i4.1      
+01FB: beq.s        521 
+01FD: ldc.i4       1089557282 
+0202: call         #=q0y8ZybtQjWGJxOXzfCn979b65JpLIHLOVBAQM4De8Zw=::System.String #=zepWPJGM=(Int32) 0x0600005C
+0207: br.s         555 
+0209: ldc.i4       1089557292 
+020E: call         #=q0y8ZybtQjWGJxOXzfCn979b65JpLIHLOVBAQM4De8Zw=::System.String #=zepWPJGM=(Int32) 0x0600005C
+0213: br.s         555 
+0215: ldc.i4       1089557116 
+021A: call         #=q0y8ZybtQjWGJxOXzfCn979b65JpLIHLOVBAQM4De8Zw=::System.String #=zepWPJGM=(Int32) 0x0600005C
+021F: br.s         555 
+0221: ldc.i4       1089557326 
+0226: call         #=q0y8ZybtQjWGJxOXzfCn979b65JpLIHLOVBAQM4De8Zw=::System.String #=zepWPJGM=(Int32) 0x0600005C
+022B: stloc.s      23 
+022D: ldloc.s      11 
+022F: callvirt     System.Data.Common.DbDataReader::Void Close() 0x0A000236
+0234: ldc.i4       1089557368 
+0239: call         #=q0y8ZybtQjWGJxOXzfCn979b65JpLIHLOVBAQM4De8Zw=::System.String #=zepWPJGM=(Int32) 0x0600005C
+023E: stloc.0       
+023F: ldloc.0       
+0240: ldloc.s      13 
+0242: box          ::System.Int32 0x010000DE
+0247: call         System.String::System.String Format(System.String, System.Object) 0x0A0001A8
+024C: stloc.0       
+024D: ldloc.s      12 
+024F: ldloc.0       
+0250: callvirt     System.Data.Common.DbCommand::Void set_CommandText(System.String) 0x0A000232
+0255: ldloc.s      12 
+0257: callvirt     System.Data.Common.DbCommand::System.Object ExecuteScalar() 0x0A00023F
+025C: call         System.Convert::Int32 ToInt32(System.Object) 0x0A000150
+0261: stloc.s      24 
+0263: ldloc.s      8 
+0265: ldc.i4.1      
+0266: beq          2400 
+026B: ldloc.s      8 
+026D: ldc.i4.2      
+026E: beq          2400 
+0273: ldloc.s      24 
+0275: brfalse      2400 
+027A: ldloc.s      17 
+027C: ldc.i4.1      
+027D: beq          2400 
+0282: ldloc.1       
+0283: ldc.i4       1089550800 
+0288: call         #=q0y8ZybtQjWGJxOXzfCn979b65JpLIHLOVBAQM4De8Zw=::System.String #=zepWPJGM=(Int32) 0x0600005C
+028D: callvirt     System.Data.DataRow::System.Object get_Item(System.String) 0x0A000257
+0292: callvirt     System.Object::System.String ToString() 0x0A000077
+0297: stloc.s      25 
+0299: ldloc.1       
+029A: ldc.i4       1089561879 
+029F: call         #=q0y8ZybtQjWGJxOXzfCn979b65JpLIHLOVBAQM4De8Zw=::System.String #=zepWPJGM=(Int32) 0x0600005C
+02A4: callvirt     System.Data.DataRow::System.Object get_Item(System.String) 0x0A000257
+02A9: call         System.Convert::Int32 ToInt32(System.Object) 0x0A000150
+02AE: stloc.s      30 
+02B0: ldloc.1       
+02B1: ldc.i4       1089561856 
+02B6: call         #=q0y8ZybtQjWGJxOXzfCn979b65JpLIHLOVBAQM4De8Zw=::System.String #=zepWPJGM=(Int32) 0x0600005C
+02BB: callvirt     System.Data.DataRow::System.Object get_Item(System.String) 0x0A000257
+02C0: call         System.Convert::Int32 ToInt32(System.Object) 0x0A000150
+02C5: stloc.s      31 
+02C7: ldloc.1       
+02C8: ldc.i4       1089538596 
+02CD: call         #=q0y8ZybtQjWGJxOXzfCn979b65JpLIHLOVBAQM4De8Zw=::System.String #=zepWPJGM=(Int32) 0x0600005C
+02D2: callvirt     System.Data.DataRow::System.Object get_Item(System.String) 0x0A000257
+02D7: callvirt     System.Object::System.String ToString() 0x0A000077
+02DC: stloc.s      32 
+02DE: ldloc.1       
+02DF: ldc.i4       1089558016 
+02E4: call         #=q0y8ZybtQjWGJxOXzfCn979b65JpLIHLOVBAQM4De8Zw=::System.String #=zepWPJGM=(Int32) 0x0600005C
+02E9: callvirt     System.Data.DataRow::System.Object get_Item(System.String) 0x0A000257
+02EE: call         System.Convert::Int32 ToInt32(System.Object) 0x0A000150
+02F3: stloc.s      15 
+02F5: ldloc.1       
+02F6: ldc.i4       1089538367 
+02FB: call         #=q0y8ZybtQjWGJxOXzfCn979b65JpLIHLOVBAQM4De8Zw=::System.String #=zepWPJGM=(Int32) 0x0600005C
+0300: callvirt     System.Data.DataRow::System.Object get_Item(System.String) 0x0A000257
+0305: call         System.Convert::Int32 ToInt32(System.Object) 0x0A000150
+030A: stloc.s      26 
+030C: ldloc.1       
+030D: ldc.i4       1089558029 
+0312: call         #=q0y8ZybtQjWGJxOXzfCn979b65JpLIHLOVBAQM4De8Zw=::System.String #=zepWPJGM=(Int32) 0x0600005C
+0317: callvirt     System.Data.DataRow::System.Object get_Item(System.String) 0x0A000257
+031C: callvirt     System.Object::System.String ToString() 0x0A000077
+0321: stloc.s      33 
+0323: ldloc.1       
+0324: ldc.i4       1089561767 
+0329: call         #=q0y8ZybtQjWGJxOXzfCn979b65JpLIHLOVBAQM4De8Zw=::System.String #=zepWPJGM=(Int32) 0x0600005C
+032E: callvirt     System.Data.DataRow::System.Object get_Item(System.String) 0x0A000257
+0333: callvirt     System.Object::System.String ToString() 0x0A000077
+0338: stloc.s      34 
+033A: ldloc.1       
+033B: ldc.i4       1089561812 
+0340: call         #=q0y8ZybtQjWGJxOXzfCn979b65JpLIHLOVBAQM4De8Zw=::System.String #=zepWPJGM=(Int32) 0x0600005C
+0345: callvirt     System.Data.DataRow::System.Object get_Item(System.String) 0x0A000257
+034A: callvirt     System.Object::System.String ToString() 0x0A000077
+034F: callvirt     System.String::System.String ToUpper() 0x0A000247
+0354: stloc.s      35 
+0356: ldloc.1       
+0357: ldc.i4       1089558079 
+035C: call         #=q0y8ZybtQjWGJxOXzfCn979b65JpLIHLOVBAQM4De8Zw=::System.String #=zepWPJGM=(Int32) 0x0600005C
+0361: callvirt     System.Data.DataRow::System.Object get_Item(System.String) 0x0A000257
+0366: call         System.Convert::Int32 ToInt32(System.Object) 0x0A000150
+036B: stloc.s      10 
+036D: ldloc.1       
+036E: ldc.i4       1089538055 
+0373: call         #=q0y8ZybtQjWGJxOXzfCn979b65JpLIHLOVBAQM4De8Zw=::System.String #=zepWPJGM=(Int32) 0x0600005C
+0378: callvirt     System.Data.DataRow::System.Object get_Item(System.String) 0x0A000257
+037D: call         System.Convert::Double ToDouble(System.Object) 0x0A0000EC
+0382: stloc.s      42 
+0384: ldloc.1       
+0385: ldc.i4       1089562038 
+038A: call         #=q0y8ZybtQjWGJxOXzfCn979b65JpLIHLOVBAQM4De8Zw=::System.String #=zepWPJGM=(Int32) 0x0600005C
+038F: callvirt     System.Data.DataRow::System.Object get_Item(System.String) 0x0A000257
+0394: pop           
+0395: ldloc.1       
+0396: ldc.i4       1089562016 
+039B: call         #=q0y8ZybtQjWGJxOXzfCn979b65JpLIHLOVBAQM4De8Zw=::System.String #=zepWPJGM=(Int32) 0x0600005C
+03A0: callvirt     System.Data.DataRow::System.Object get_Item(System.String) 0x0A000257
+03A5: stloc.s      27 
+03A7: ldsfld       System.String::System.String Empty 0x0A00009A
+03AC: stloc.s      9 
+03AE: ldloc.s      10 
+03B0: ldc.i4.1      
+03B1: xor           
+03B2: ldloc.s      10 
+03B4: bge.s        969 
+03B6: ldloc.s      9 
+03B8: ldc.i4       1089558060 
+03BD: call         #=q0y8ZybtQjWGJxOXzfCn979b65JpLIHLOVBAQM4De8Zw=::System.String #=zepWPJGM=(Int32) 0x0600005C
+03C2: call         System.String::System.String Concat(System.String, System.String) 0x0A00022C
+03C7: stloc.s      9 
+03C9: ldloc.s      10 
+03CB: ldc.i4.2      
+03CC: xor           
+03CD: ldloc.s      10 
+03CF: bge.s        996 
+03D1: ldloc.s      9 
+03D3: ldc.i4       1089558108 
+03D8: call         #=q0y8ZybtQjWGJxOXzfCn979b65JpLIHLOVBAQM4De8Zw=::System.String #=zepWPJGM=(Int32) 0x0600005C
+03DD: call         System.String::System.String Concat(System.String, System.String) 0x0A00022C
+03E2: stloc.s      9 
+03E4: ldloc.s      10 
+03E6: ldc.i4.4      
+03E7: xor           
+03E8: ldloc.s      10 
+03EA: bge.s        1023 
+03EC: ldloc.s      9 
+03EE: ldc.i4       1089558092 
+03F3: call         #=q0y8ZybtQjWGJxOXzfCn979b65JpLIHLOVBAQM4De8Zw=::System.String #=zepWPJGM=(Int32) 0x0600005C
+03F8: call         System.String::System.String Concat(System.String, System.String) 0x0A00022C
+03FD: stloc.s      9 
+03FF: ldc.i4.0      
+0400: stloc.s      5 
+0402: ldarg.0       
+0403: ldfld        #=zado7OX1NtEdrtAh6yxt_eVHzt2yH76hFGab8IY_J14KFXcv$6g==::#=zagfZSGTVwnf3f$RiQWFaacrBAA6NXQgXkPVg_ac= #=z5VosaJ4USvDr 0x040005DC
+0408: ldfld        #=zagfZSGTVwnf3f$RiQWFaacrBAA6NXQgXkPVg_ac=::System.String #=zVENPtEAgjsebFfVMYw== 0x040005E6
+040D: stloc.s      36 
+040F: ldsfld       System.String::System.String Empty 0x0A00009A
+0414: stloc.2       
+0415: ldloc.s      15 
+0417: brtrue.s     1073 
+0419: ldloc.2       
+041A: ldc.i4       1089558141 
+041F: call         #=q0y8ZybtQjWGJxOXzfCn979b65JpLIHLOVBAQM4De8Zw=::System.String #=zepWPJGM=(Int32) 0x0600005C
+0424: ldloc.s      36 
+0426: call         System.String::System.String Concat(System.String, System.String, System.String) 0x0A000117
+042B: stloc.2       
+042C: br           1621 
+0431: ldloc.s      15 
+0433: ldc.i4.1      
+0434: bne.un       1270 
+0439: ldloc.1       
+043A: ldc.i4       1089543890 
+043F: call         #=q0y8ZybtQjWGJxOXzfCn979b65JpLIHLOVBAQM4De8Zw=::System.String #=zepWPJGM=(Int32) 0x0600005C
+0444: callvirt     System.Data.DataRow::System.Object get_Item(System.String) 0x0A000257
+0449: call         System.Convert::Boolean IsDBNull(System.Object) 0x0A0002F0
+044E: brtrue.s     1127 
+0450: ldloc.1       
+0451: ldc.i4       1089543890 
+0456: call         #=q0y8ZybtQjWGJxOXzfCn979b65JpLIHLOVBAQM4De8Zw=::System.String #=zepWPJGM=(Int32) 0x0600005C
+045B: callvirt     System.Data.DataRow::System.Object get_Item(System.String) 0x0A000257
+0460: call         System.Convert::Int32 ToInt32(System.Object) 0x0A000150
+0465: br.s         1128 
+0467: ldc.i4.0      
+0468: stloc.s      37 
+046A: ldloc.1       
+046B: ldc.i4       1089543884 
+0470: call         #=q0y8ZybtQjWGJxOXzfCn979b65JpLIHLOVBAQM4De8Zw=::System.String #=zepWPJGM=(Int32) 0x0600005C
+0475: callvirt     System.Data.DataRow::System.Object get_Item(System.String) 0x0A000257
+047A: call         System.Convert::Boolean IsDBNull(System.Object) 0x0A0002F0
+047F: brtrue.s     1176 
+0481: ldloc.1       
+0482: ldc.i4       1089543884 
+0487: call         #=q0y8ZybtQjWGJxOXzfCn979b65JpLIHLOVBAQM4De8Zw=::System.String #=zepWPJGM=(Int32) 0x0600005C
+048C: callvirt     System.Data.DataRow::System.Object get_Item(System.String) 0x0A000257
+0491: call         System.Convert::Int32 ToInt32(System.Object) 0x0A000150
+0496: br.s         1177 
+0498: ldc.i4.0      
+0499: stloc.s      38 
+049B: ldloc.2       
+049C: ldc.i4       1089558160 
+04A1: call         #=q0y8ZybtQjWGJxOXzfCn979b65JpLIHLOVBAQM4De8Zw=::System.String #=zepWPJGM=(Int32) 0x0600005C
+04A6: ldarg.1       
+04A7: ldc.i4.4      
+04A8: ldloc.s      37 
+04AA: box          ::System.Int32 0x010000DE
+04AF: call         #=zpkZUmjMSH7m2BYqRdagWayKmNKwXuOWUDks5d44=::System.Object #=zE81krXI=(MySql.Data.MySqlClient.MySqlConnection, #=zKDRLmpDnQy7i5m5l8bAnRS6qgaerdQF7zZpkvWM=, System.Object) 0x06000CF0
+04B4: dup           
+04B5: brtrue.s     1211 
+04B7: pop           
+04B8: ldnull        
+04B9: br.s         1216 
+04BB: callvirt     System.Object::System.String ToString() 0x0A000077
+04C0: call         System.String::System.String Concat(System.String, System.String, System.String) 0x0A000117
+04C5: stloc.2       
+04C6: ldloc.2       
+04C7: ldc.i4       1089558147 
+04CC: call         #=q0y8ZybtQjWGJxOXzfCn979b65JpLIHLOVBAQM4De8Zw=::System.String #=zepWPJGM=(Int32) 0x0600005C
+04D1: ldarg.1       
+04D2: ldc.i4.5      
+04D3: ldloc.s      38 
+04D5: box          ::System.Int32 0x010000DE
+04DA: call         #=zpkZUmjMSH7m2BYqRdagWayKmNKwXuOWUDks5d44=::System.Object #=zE81krXI=(MySql.Data.MySqlClient.MySqlConnection, #=zKDRLmpDnQy7i5m5l8bAnRS6qgaerdQF7zZpkvWM=, System.Object) 0x06000CF0
+04DF: dup           
+04E0: brtrue.s     1254 
+04E2: pop           
+04E3: ldnull        
+04E4: br.s         1259 
+04E6: callvirt     System.Object::System.String ToString() 0x0A000077
+04EB: call         System.String::System.String Concat(System.String, System.String, System.String) 0x0A000117
+04F0: stloc.2       
+04F1: br           1621 
+04F6: ldloc.s      15 
+04F8: ldc.i4.2      
+04F9: bne.un       1447 
+04FE: ldloc.2       
+04FF: ldc.i4       1089558192 
+0504: call         #=q0y8ZybtQjWGJxOXzfCn979b65JpLIHLOVBAQM4De8Zw=::System.String #=zepWPJGM=(Int32) 0x0600005C
+0509: call         System.String::System.String Concat(System.String, System.String) 0x0A00022C
+050E: stloc.2       
+050F: ldc.i4       1089558205 
+0514: call         #=q0y8ZybtQjWGJxOXzfCn979b65JpLIHLOVBAQM4De8Zw=::System.String #=zepWPJGM=(Int32) 0x0600005C
+0519: stloc.0       
+051A: ldloc.0       
+051B: ldloc.s      26 
+051D: box          ::System.Int32 0x010000DE
+0522: call         System.String::System.String Format(System.String, System.Object) 0x0A0001A8
+0527: stloc.0       
+0528: ldarg.1       
+0529: ldloc.0       
+052A: call         #=z4AeuwrUxfvnU5fsKT98$1cT1z3FKBe_GjQ==::System.Data.DataTable #=zCFV8zzI=(MySql.Data.MySqlClient.MySqlConnection, System.String) 0x0600055D
+052F: callvirt     System.Data.DataTable::System.Data.DataRowCollection get_Rows() 0x0A000255
+0534: callvirt     System.Data.InternalDataCollectionBase::System.Collections.IEnumerator GetEnumerator() 0x0A000256
+0539: stloc.s      6 
+053B: br.s         1412 
+053D: ldloc.s      6 
+053F: callvirt     System.Collections.IEnumerator::System.Object get_Current() 0x0A000043
+0544: castclass    ::System.Data.DataRow 0x01000061
+0549: ldc.i4.0      
+054A: callvirt     System.Data.DataRow::System.Object get_Item(Int32) 0x0A0002F7
+054F: callvirt     System.Object::System.String ToString() 0x0A000077
+0554: stloc.s      39 
+0556: ldloc.2       
+0557: ldc.i4       1089558398 
+055C: call         #=q0y8ZybtQjWGJxOXzfCn979b65JpLIHLOVBAQM4De8Zw=::System.String #=zepWPJGM=(Int32) 0x0600005C
+0561: ldc.i4       1089541395 
+0566: call         #=q0y8ZybtQjWGJxOXzfCn979b65JpLIHLOVBAQM4De8Zw=::System.String #=zepWPJGM=(Int32) 0x0600005C
+056B: ldloc.s      5 
+056D: ldc.i4.1      
+056E: add           
+056F: dup           
+0570: stloc.s      5 
+0572: box          ::System.Int32 0x010000DE
+0577: ldloc.s      39 
+0579: call         System.String::System.String Format(System.String, System.Object, System.Object, System.Object) 0x0A0002EA
+057E: call         System.String::System.String Concat(System.String, System.String) 0x0A00022C
+0583: stloc.2       
+0584: ldloc.s      6 
+0586: callvirt     System.Collections.IEnumerator::Boolean MoveNext() 0x0A000045
+058B: brtrue.s     1341 
+058D: leave        1621 
+0592: ldloc.s      6 
+0594: isinst       ::System.IDisposable 0x010000BA
+0599: stloc.s      7 
+059B: ldloc.s      7 
+059D: brfalse.s    1446 
+059F: ldloc.s      7 
+05A1: callvirt     System.IDisposable::Void Dispose() 0x0A000003
+05A6: endfinally    
+05A7: ldloc.s      15 
+05A9: ldc.i4.3      
+05AA: bne.un       1621 
+05AF: ldloc.2       
+05B0: ldc.i4       1089558380 
+05B5: call         #=q0y8ZybtQjWGJxOXzfCn979b65JpLIHLOVBAQM4De8Zw=::System.String #=zepWPJGM=(Int32) 0x0600005C
+05BA: call         System.String::System.String Concat(System.String, System.String) 0x0A00022C
+05BF: stloc.2       
+05C0: ldc.i4       1089558428 
+05C5: call         #=q0y8ZybtQjWGJxOXzfCn979b65JpLIHLOVBAQM4De8Zw=::System.String #=zepWPJGM=(Int32) 0x0600005C
+05CA: stloc.0       
+05CB: ldloc.0       
+05CC: ldloc.s      26 
+05CE: box          ::System.Int32 0x010000DE
+05D3: call         System.String::System.String Format(System.String, System.Object) 0x0A0001A8
+05D8: stloc.0       
+05D9: ldarg.1       
+05DA: ldloc.0       
+05DB: call         #=z4AeuwrUxfvnU5fsKT98$1cT1z3FKBe_GjQ==::System.Data.DataTable #=zCFV8zzI=(MySql.Data.MySqlClient.MySqlConnection, System.String) 0x0600055D
+05E0: callvirt     System.Data.DataTable::System.Data.DataRowCollection get_Rows() 0x0A000255
+05E5: callvirt     System.Data.InternalDataCollectionBase::System.Collections.IEnumerator GetEnumerator() 0x0A000256
+05EA: stloc.s      6 
+05EC: br.s         1589 
+05EE: ldloc.s      6 
+05F0: callvirt     System.Collections.IEnumerator::System.Object get_Current() 0x0A000043
+05F5: castclass    ::System.Data.DataRow 0x01000061
+05FA: ldc.i4.0      
+05FB: callvirt     System.Data.DataRow::System.Object get_Item(Int32) 0x0A0002F7
+0600: callvirt     System.Object::System.String ToString() 0x0A000077
+0605: stloc.s      40 
+0607: ldloc.2       
+0608: ldc.i4       1089558398 
+060D: call         #=q0y8ZybtQjWGJxOXzfCn979b65JpLIHLOVBAQM4De8Zw=::System.String #=zepWPJGM=(Int32) 0x0600005C
+0612: ldc.i4       1089541395 
+0617: call         #=q0y8ZybtQjWGJxOXzfCn979b65JpLIHLOVBAQM4De8Zw=::System.String #=zepWPJGM=(Int32) 0x0600005C
+061C: ldloc.s      5 
+061E: ldc.i4.1      
+061F: add           
+0620: dup           
+0621: stloc.s      5 
+0623: box          ::System.Int32 0x010000DE
+0628: ldloc.s      40 
+062A: call         System.String::System.String Format(System.String, System.Object, System.Object, System.Object) 0x0A0002EA
+062F: call         System.String::System.String Concat(System.String, System.String) 0x0A00022C
+0634: stloc.2       
+0635: ldloc.s      6 
+0637: callvirt     System.Collections.IEnumerator::Boolean MoveNext() 0x0A000045
+063C: brtrue.s     1518 
+063E: leave.s      1621 
+0640: ldloc.s      6 
+0642: isinst       ::System.IDisposable 0x010000BA
+0647: stloc.s      7 
+0649: ldloc.s      7 
+064B: brfalse.s    1620 
+064D: ldloc.s      7 
+064F: callvirt     System.IDisposable::Void Dispose() 0x0A000003
+0654: endfinally    
+0655: ldc.i4.0      
+0656: stloc.s      5 
+0658: ldc.i4       1089556572 
+065D: call         #=q0y8ZybtQjWGJxOXzfCn979b65JpLIHLOVBAQM4De8Zw=::System.String #=zepWPJGM=(Int32) 0x0600005C
+0662: ldloc.s      33 
+0664: call         System.String::System.String Concat(System.String, System.String) 0x0A00022C
+0669: stloc.3       
+066A: ldloc.3       
+066B: ldc.i4       1089556556 
+0670: call         #=q0y8ZybtQjWGJxOXzfCn979b65JpLIHLOVBAQM4De8Zw=::System.String #=zepWPJGM=(Int32) 0x0600005C
+0675: call         System.String::System.String Concat(System.String, System.String) 0x0A00022C
+067A: stloc.3       
+067B: ldloc.s      30 
+067D: brtrue.s     1685 
+067F: ldloc.3       
+0680: ldc.i4       1089556582 
+0685: call         #=q0y8ZybtQjWGJxOXzfCn979b65JpLIHLOVBAQM4De8Zw=::System.String #=zepWPJGM=(Int32) 0x0600005C
+068A: call         System.String::System.String Concat(System.String, System.String) 0x0A00022C
+068F: stloc.3       
+0690: br           1998 
+0695: ldloc.3       
+0696: ldc.i4       1089541395 
+069B: call         #=q0y8ZybtQjWGJxOXzfCn979b65JpLIHLOVBAQM4De8Zw=::System.String #=zepWPJGM=(Int32) 0x0600005C
+06A0: call         System.String::System.String Concat(System.String, System.String) 0x0A00022C
+06A5: stloc.3       
+06A6: ldc.i4       1089556638 
+06AB: call         #=q0y8ZybtQjWGJxOXzfCn979b65JpLIHLOVBAQM4De8Zw=::System.String #=zepWPJGM=(Int32) 0x0600005C
+06B0: ldloca.s     13 
+06B2: call         System.Int32::System.String ToString() 0x0A00002F
+06B7: call         System.String::System.String Concat(System.String, System.String) 0x0A00022C
+06BC: stloc.0       
+06BD: ldarg.1       
+06BE: ldloc.0       
+06BF: call         #=z4AeuwrUxfvnU5fsKT98$1cT1z3FKBe_GjQ==::System.Data.DataTable #=zCFV8zzI=(MySql.Data.MySqlClient.MySqlConnection, System.String) 0x0600055D
+06C4: callvirt     System.Data.DataTable::System.Data.DataRowCollection get_Rows() 0x0A000255
+06C9: callvirt     System.Data.InternalDataCollectionBase::System.Collections.IEnumerator GetEnumerator() 0x0A000256
+06CE: stloc.s      6 
+06D0: br           1963 
+06D5: ldloc.s      6 
+06D7: callvirt     System.Collections.IEnumerator::System.Object get_Current() 0x0A000043
+06DC: castclass    ::System.Data.DataRow 0x01000061
+06E1: dup           
+06E2: ldc.i4       1089550812 
+06E7: call         #=q0y8ZybtQjWGJxOXzfCn979b65JpLIHLOVBAQM4De8Zw=::System.String #=zepWPJGM=(Int32) 0x0600005C
+06EC: callvirt     System.Data.DataRow::System.Object get_Item(System.String) 0x0A000257
+06F1: callvirt     System.Object::System.String ToString() 0x0A000077
+06F6: stloc.s      28 
+06F8: dup           
+06F9: ldc.i4       1089556773 
+06FE: call         #=q0y8ZybtQjWGJxOXzfCn979b65JpLIHLOVBAQM4De8Zw=::System.String #=zepWPJGM=(Int32) 0x0600005C
+0703: callvirt     System.Data.DataRow::System.Object get_Item(System.String) 0x0A000257
+0708: callvirt     System.Object::System.String ToString() 0x0A000077
+070D: stloc.s      29 
+070F: dup           
+0710: ldc.i4       1089556823 
+0715: call         #=q0y8ZybtQjWGJxOXzfCn979b65JpLIHLOVBAQM4De8Zw=::System.String #=zepWPJGM=(Int32) 0x0600005C
+071A: callvirt     System.Data.DataRow::System.Object get_Item(System.String) 0x0A000257
+071F: callvirt     System.Object::System.String ToString() 0x0A000077
+0724: stloc.s      41 
+0726: ldc.i4       1089556806 
+072B: call         #=q0y8ZybtQjWGJxOXzfCn979b65JpLIHLOVBAQM4De8Zw=::System.String #=zepWPJGM=(Int32) 0x0600005C
+0730: callvirt     System.Data.DataRow::System.Object get_Item(System.String) 0x0A000257
+0735: call         System.Convert::Int32 ToInt32(System.Object) 0x0A000150
+073A: ldloc.s      5 
+073C: ldc.i4.1      
+073D: add           
+073E: stloc.s      5 
+0740: brtrue.s     1913 
+0742: ldloc.3       
+0743: ldc.i4       1089556813 
+0748: call         #=q0y8ZybtQjWGJxOXzfCn979b65JpLIHLOVBAQM4De8Zw=::System.String #=zepWPJGM=(Int32) 0x0600005C
+074D: ldc.i4.4      
+074E: newarr       ::System.Object 0x0100010D
+0753: dup           
+0754: ldc.i4.0      
+0755: ldloc.s      5 
+0757: box          ::System.Int32 0x010000DE
+075C: stelem.ref    
+075D: dup           
+075E: ldc.i4.1      
+075F: ldloc.s      28 
+0761: stelem.ref    
+0762: dup           
+0763: ldc.i4.2      
+0764: ldloc.s      29 
+0766: stelem.ref    
+0767: dup           
+0768: ldc.i4.3      
+0769: ldloc.s      41 
+076B: stelem.ref    
+076C: call         System.String::System.String Format(System.String, System.Object[]) 0x0A000237
+0771: call         System.String::System.String Concat(System.String, System.String) 0x0A00022C
+0776: stloc.3       
+0777: br.s         1946 
+0779: ldloc.3       
+077A: ldc.i4       1089556844 
+077F: call         #=q0y8ZybtQjWGJxOXzfCn979b65JpLIHLOVBAQM4De8Zw=::System.String #=zepWPJGM=(Int32) 0x0600005C
+0784: ldloc.s      5 
+0786: box          ::System.Int32 0x010000DE
+078B: ldloc.s      28 
+078D: ldloc.s      29 
+078F: call         System.String::System.String Format(System.String, System.Object, System.Object, System.Object) 0x0A0002EA
+0794: call         System.String::System.String Concat(System.String, System.String) 0x0A00022C
+0799: stloc.3       
+079A: ldloc.3       
+079B: ldc.i4       1089541395 
+07A0: call         #=q0y8ZybtQjWGJxOXzfCn979b65JpLIHLOVBAQM4De8Zw=::System.String #=zepWPJGM=(Int32) 0x0600005C
+07A5: call         System.String::System.String Concat(System.String, System.String) 0x0A00022C
+07AA: stloc.3       
+07AB: ldloc.s      6 
+07AD: callvirt     System.Collections.IEnumerator::Boolean MoveNext() 0x0A000045
+07B2: brtrue       1749 
+07B7: leave.s      1998 
+07B9: ldloc.s      6 
+07BB: isinst       ::System.IDisposable 0x010000BA
+07C0: stloc.s      7 
+07C2: ldloc.s      7 
+07C4: brfalse.s    1997 
+07C6: ldloc.s      7 
+07C8: callvirt     System.IDisposable::Void Dispose() 0x0A000003
+07CD: endfinally    
+07CE: ldc.i4.5      
+07CF: newarr       ::System.String 0x01000167
+07D4: dup           
+07D5: ldc.i4.0      
+07D6: ldloc.3       
+07D7: stelem.ref    
+07D8: dup           
+07D9: ldc.i4.1      
+07DA: ldc.i4       1089556915 
+07DF: call         #=q0y8ZybtQjWGJxOXzfCn979b65JpLIHLOVBAQM4De8Zw=::System.String #=zepWPJGM=(Int32) 0x0600005C
+07E4: stelem.ref    
+07E5: dup           
+07E6: ldc.i4.2      
+07E7: ldloc.s      9 
+07E9: stelem.ref    
+07EA: dup           
+07EB: ldc.i4.3      
+07EC: ldc.i4       1089556898 
+07F1: call         #=q0y8ZybtQjWGJxOXzfCn979b65JpLIHLOVBAQM4De8Zw=::System.String #=zepWPJGM=(Int32) 0x0600005C
+07F6: stelem.ref    
+07F7: dup           
+07F8: ldc.i4.4      
+07F9: ldloc.s      34 
+07FB: stelem.ref    
+07FC: call         System.String::System.String Concat(System.String[]) 0x0A000120
+0801: stloc.3       
+0802: newobj       CbeAndroidData.PilihUjianData::Void .ctor() 0x0A000611
+0807: stloc.s      4 
+0809: ldloc.s      4 
+080B: ldloc.s      13 
+080D: stfld        CbeAndroidData.PilihUjianData::Int32 IdUjian 0x0A000612
+0812: ldloc.s      4 
+0814: ldloc.s      14 
+0816: stfld        CbeAndroidData.PilihUjianData::Int32 IdRemedUjian 0x0A000613
+081B: ldloc.s      4 
+081D: ldloc.s      22 
+081F: stfld        CbeAndroidData.PilihUjianData::Int32 IdUjianSerta 0x0A000614
+0824: ldloc.s      4 
+0826: ldarg.0       
+0827: ldarg.1       
+0828: ldloc.s      13 
+082A: call         #=zado7OX1NtEdrtAh6yxt_eVHzt2yH76hFGab8IY_J14KFXcv$6g==::Int32 #=zEcClHEOAzHPB(MySql.Data.MySqlClient.MySqlConnection, Int32) 0x060009DC
+082F: stfld        CbeAndroidData.PilihUjianData::Int32 IdJadwalUjian 0x0A000615
+0834: ldloc.s      4 
+0836: ldloc.s      25 
+0838: callvirt     System.String::System.String ToUpper() 0x0A000247
+083D: stfld        CbeAndroidData.PilihUjianData::System.String Judul 0x0A000616
+0842: ldloc.s      4 
+0844: ldc.i4.s     11 
+0846: newarr       ::System.String 0x01000167
+084B: dup           
+084C: ldc.i4.0      
+084D: ldloc.s      25 
+084F: callvirt     System.String::System.String ToUpper() 0x0A000247
+0854: stelem.ref    
+0855: dup           
+0856: ldc.i4.1      
+0857: ldc.i4       1089557490 
+085C: call         #=q0y8ZybtQjWGJxOXzfCn979b65JpLIHLOVBAQM4De8Zw=::System.String #=zepWPJGM=(Int32) 0x0600005C
+0861: stelem.ref    
+0862: dup           
+0863: ldc.i4.2      
+0864: ldloc.s      27 
+0866: brtrue.s     2155 
+0868: ldnull        
+0869: br.s         2162 
+086B: ldloc.s      27 
+086D: callvirt     System.Object::System.String ToString() 0x0A000077
+0872: stelem.ref    
+0873: dup           
+0874: ldc.i4.3      
+0875: ldc.i4       1089557501 
+087A: call         #=q0y8ZybtQjWGJxOXzfCn979b65JpLIHLOVBAQM4De8Zw=::System.String #=zepWPJGM=(Int32) 0x0600005C
+087F: stelem.ref    
+0880: dup           
+0881: ldc.i4.4      
+0882: ldloc.s      31 
+0884: brfalse.s    2206 
+0886: ldloca.s     31 
+0888: call         System.Int32::System.String ToString() 0x0A00002F
+088D: ldc.i4       1089550999 
+0892: call         #=q0y8ZybtQjWGJxOXzfCn979b65JpLIHLOVBAQM4De8Zw=::System.String #=zepWPJGM=(Int32) 0x0600005C
+0897: call         System.String::System.String Concat(System.String, System.String) 0x0A00022C
+089C: br.s         2216 
+089E: ldc.i4       1089557485 
+08A3: call         #=q0y8ZybtQjWGJxOXzfCn979b65JpLIHLOVBAQM4De8Zw=::System.String #=zepWPJGM=(Int32) 0x0600005C
+08A8: stelem.ref    
+08A9: dup           
+08AA: ldc.i4.5      
+08AB: ldc.i4       1089559556 
+08B0: call         #=q0y8ZybtQjWGJxOXzfCn979b65JpLIHLOVBAQM4De8Zw=::System.String #=zepWPJGM=(Int32) 0x0600005C
+08B5: stelem.ref    
+08B6: dup           
+08B7: ldc.i4.6      
+08B8: ldloca.s     24 
+08BA: call         System.Int32::System.String ToString() 0x0A00002F
+08BF: stelem.ref    
+08C0: dup           
+08C1: ldc.i4.7      
+08C2: ldc.i4       1089559609 
+08C7: call         #=q0y8ZybtQjWGJxOXzfCn979b65JpLIHLOVBAQM4De8Zw=::System.String #=zepWPJGM=(Int32) 0x0600005C
+08CC: stelem.ref    
+08CD: dup           
+08CE: ldc.i4.8      
+08CF: ldloca.s     42 
+08D1: call         System.Double::System.String ToString() 0x0A00039E
+08D6: stelem.ref    
+08D7: dup           
+08D8: ldc.i4.s     9 
+08DA: ldc.i4       1089559596 
+08DF: call         #=q0y8ZybtQjWGJxOXzfCn979b65JpLIHLOVBAQM4De8Zw=::System.String #=zepWPJGM=(Int32) 0x0600005C
+08E4: stelem.ref    
+08E5: dup           
+08E6: ldc.i4.s     10 
+08E8: ldloc.s      23 
+08EA: stelem.ref    
+08EB: call         System.String::System.String Concat(System.String[]) 0x0A000120
+08F0: stfld        CbeAndroidData.PilihUjianData::System.String UjianInfo 0x0A000617
+08F5: ldloc.s      4 
+08F7: ldc.i4.5      
+08F8: newarr       ::System.String 0x01000167
+08FD: dup           
+08FE: ldc.i4.0      
+08FF: ldloc.s      32 
+0901: callvirt     System.String::System.String ToUpper() 0x0A000247
+0906: stelem.ref    
+0907: dup           
+0908: ldc.i4.1      
+0909: ldc.i4       1089559644 
+090E: call         #=q0y8ZybtQjWGJxOXzfCn979b65JpLIHLOVBAQM4De8Zw=::System.String #=zepWPJGM=(Int32) 0x0600005C
+0913: stelem.ref    
+0914: dup           
+0915: ldc.i4.2      
+0916: ldloc.s      35 
+0918: stelem.ref    
+0919: dup           
+091A: ldc.i4.3      
+091B: ldc.i4       1089559667 
+0920: call         #=q0y8ZybtQjWGJxOXzfCn979b65JpLIHLOVBAQM4De8Zw=::System.String #=zepWPJGM=(Int32) 0x0600005C
+0925: stelem.ref    
+0926: dup           
+0927: ldc.i4.4      
+0928: ldloc.2       
+0929: stelem.ref    
+092A: call         System.String::System.String Concat(System.String[]) 0x0A000120
+092F: stfld        CbeAndroidData.PilihUjianData::System.String Pelajaran 0x0A000618
+0934: ldloc.s      4 
+0936: ldloc.3       
+0937: stfld        CbeAndroidData.PilihUjianData::System.String JadwalInfo 0x0A000619
+093C: ldloc.s      4 
+093E: ldloc.s      8 
+0940: stfld        CbeAndroidData.PilihUjianData::Int32 StatusUjian 0x0A00061A
+0945: ldloc.s      4 
+0947: ldloc.s      24 
+0949: stfld        CbeAndroidData.PilihUjianData::Int32 JumlahSoal 0x0A00061B
+094E: ldloc.s      4 
+0950: ldloc.s      17 
+0952: stfld        CbeAndroidData.PilihUjianData::Int32 UjianOfflineDownloadStatus 0x0A00061C
+0957: ldloc.s      18 
+0959: ldloc.s      4 
+095B: callvirt     System.Collections.Generic.List`1[[CbeAndroidData.PilihUjianData, CbeAndroidData, Version=26.0.0.0, Culture=neutral, PublicKeyToken=null]]::Void Add(CbeAndroidData.PilihUjianData) 0x0A00061D
+0960: ldloc.s      16 
+0962: callvirt     System.Collections.IEnumerator::Boolean MoveNext() 0x0A000045
+0967: brtrue       164 
+096C: leave.s      2435 
+096E: ldloc.s      16 
+0970: isinst       ::System.IDisposable 0x010000BA
+0975: stloc.s      7 
+0977: ldloc.s      7 
+0979: brfalse.s    2434 
+097B: ldloc.s      7 
+097D: callvirt     System.IDisposable::Void Dispose() 0x0A000003
+0982: endfinally    
+0983: ldloc.s      18 
+0985: call         Newtonsoft.Json.JsonConvert::System.String SerializeObject(System.Object) 0x0A00025D
+098A: ret           
+METHOD 0x060009E2 #=zado7OX1NtEdrtAh6yxt_ebDWARxzEsTS$uTr0ysac1Wk::Void .ctor()
+0000: ldarg.0       
+0001: ldc.i4       1089542986 
+0006: call         #=q0y8ZybtQjWGJxOXzfCn979b65JpLIHLOVBAQM4De8Zw=::System.String #=zepWPJGM=(Int32) 0x0600005C
+000B: ldc.r4       11 
+0010: newobj       System.Drawing.Font::Void .ctor(System.String, Single) 0x0A00045F
+0015: stfld        #=zado7OX1NtEdrtAh6yxt_ebDWARxzEsTS$uTr0ysac1Wk::System.Drawing.Font #=zFLgYYtDNZomT 0x040005E1
+001A: ldarg.0       
+001B: call         System.Drawing.Color::System.Drawing.Color get_Navy() 0x0A00061E
+0020: newobj       System.Drawing.Pen::Void .ctor(System.Drawing.Color) 0x0A000508
+0025: stfld        #=zado7OX1NtEdrtAh6yxt_ebDWARxzEsTS$uTr0ysac1Wk::System.Drawing.Pen #=zUq45ND1wdghI 0x040005E2
+002A: ldarg.0       
+002B: ldc.i4.s     40 
+002D: stfld        #=zado7OX1NtEdrtAh6yxt_ebDWARxzEsTS$uTr0ysac1Wk::Int32 #=znuwhheZ6AtSY 0x040005E3
+0032: ldarg.0       
+0033: call         System.Windows.Forms.ListBox::Void .ctor() 0x0A0004B3
+0038: ldarg.0       
+0039: ldc.i4.2      
+003A: callvirt     System.Windows.Forms.ListBox::Void set_DrawMode(System.Windows.Forms.DrawMode) 0x0A0004EA
+003F: ret           

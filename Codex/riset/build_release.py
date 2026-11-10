@@ -1,5 +1,6 @@
 """Create a release manifest or copy only reviewable source/evidence files."""
 from pathlib import Path
+from datetime import date
 import hashlib
 import json
 import shutil
@@ -27,7 +28,7 @@ def manifest():
         data = path.read_bytes()
         rows.append({'path': path.relative_to(ROOT).as_posix(), 'bytes': len(data),
                      'sha256': hashlib.sha256(data).hexdigest()})
-    result = {'release': 'JIBAS-License-Tool-Codex', 'date': '2026-11-10',
+    result = {'release': 'Codex', 'date': date.today().isoformat(),
               'scope': 'source + evidence; MANIFEST.json excluded from its own hashes',
               'excluded': ['compiled executables', 'proprietary DLLs', 'sandbox datadir',
                            'temporary sandbox caches', 'Python caches', 'Git metadata'],
