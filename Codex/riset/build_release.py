@@ -15,7 +15,10 @@ def release_files():
             '.git', '__pycache__', '.pytest_cache', '.venv', 'mysql_sandbox', 'sandbox'
         } and not d.startswith(('sandbox_', 'verify_')))
         for name in sorted(files):
-            if name == 'PUBLISH_RESULT.json' or Path(name).suffix.lower() in {'.exe', '.dll', '.zip', '.pyc'}:
+            standalone = Path(directory) == ROOT and name == 'JIBAS-Generator-Codex.exe'
+            if name == 'PUBLISH_RESULT.json' or (
+                Path(name).suffix.lower() in {'.exe', '.dll', '.zip', '.pyc'} and not standalone
+            ):
                 continue
             yield Path(directory) / name
 
@@ -29,8 +32,8 @@ def manifest():
         rows.append({'path': path.relative_to(ROOT).as_posix(), 'bytes': len(data),
                      'sha256': hashlib.sha256(data).hexdigest()})
     result = {'release': 'Codex', 'date': date.today().isoformat(),
-              'scope': 'source + evidence; MANIFEST.json excluded from its own hashes',
-              'excluded': ['compiled executables', 'proprietary DLLs', 'sandbox datadir',
+              'scope': 'source + evidence + standalone executable; MANIFEST.json excluded from its own hashes',
+              'excluded': ['compiled executables except JIBAS-Generator-Codex.exe', 'proprietary DLLs', 'sandbox datadir',
                            'temporary sandbox caches', 'Python caches', 'Git metadata'],
               'files': rows}
     (ROOT / 'MANIFEST.json').write_text(json.dumps(result, indent=2), encoding='utf-8')

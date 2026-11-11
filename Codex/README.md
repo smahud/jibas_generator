@@ -11,6 +11,11 @@ File entry point lama dicadangkan dengan akhiran `.legacy-backup` sebelum digant
 
 ## Menjalankan
 
+Versi standalone Windows64-bit tersedia sebagai **JIBAS-Generator-Codex.exe**
+di direktori ini. Cukup salin dan jalankan satu file tersebut; tidak perlu Python,
+file `.py`, schema, atau profil JSON terpisah. Ketiga tab memakai input manual yang
+sama seperti versi Python. Cara build dan bukti pemeriksaan ada di [STANDALONE.md](STANDALONE.md).
+
 Klik **Jalankan GUI.cmd** pada direktori ini, atau launcher yang sama di root
 repository. Python 3.10+ dengan Tkinter diperlukan. Instal dependensi dengan:
 

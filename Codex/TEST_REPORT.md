@@ -1,5 +1,11 @@
 # Pengujian aplikasi terpadu — Windows, 11 November 2026
 
+Standalone: JIBAS-Generator-Codex.exe (Windows x64,15.479.480byte) lulus
+pemeriksaan terisolasi dengan hanya satu EXE dan tanpa environment Python.
+Ketiga produk diuji melalui panel Tk asli: buat, baca, verifikasi, mismatch
+System ID, perpanjangan dan verifikasi ulang. Resource/Tcl/Tk/native crypto
+berasal dari bundle internal. Lihat STANDALONE.md dan bukti/standalone.
+
 Versi manual terbaru: **120 passed in 8.56s**, dengan warning finalizer Tk
 dianggap error. Ketiga produk diuji melalui GUI dan CLI; 12 tes GUI memeriksa
 ketiadaan kontrol koneksi/deteksi/Sequence, renewal otomatis, dan hasil6baris.

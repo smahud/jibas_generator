@@ -16,6 +16,11 @@ launcher yang dijelaskan pada [panduan Codex](Codex/README.md).
 
 ## Menjalankan
 
+Versi satu file Windows64-bit tersedia di
+[Codex/JIBAS-Generator-Codex.exe](Codex/JIBAS-Generator-Codex.exe).
+Executable tersebut tidak memerlukan instalasi Python atau resource pendamping.
+Lihat [panduan standalone](Codex/STANDALONE.md) untuk build dan hasil pemeriksaan.
+
 Klik **Jalankan GUI.cmd** untuk Codex atau **Jalankan OpenCode.cmd** untuk OpenCode.
 Untuk Codex, gunakan Python3.10+ dengan Tkinter dan instal:
 

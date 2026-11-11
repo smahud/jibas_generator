@@ -1,0 +1,30 @@
+{
+  "file": "JIBAS-Generator-Codex.exe",
+  "bytes": 15479480,
+  "sha256": "6601fb1ae7d2816c09e8e039b7ee5a9dc6f1c4c07fa18f44bcfb902c6b1d75ae",
+  "built_utc": "2026-11-11T00:25:04.917101+00:00",
+  "architecture": "Windows x64",
+  "onefile": true,
+  "console": false,
+  "python": "3.12.14",
+  "packages": {
+    "pyinstaller": "6.22.3",
+    "pyinstaller-hooks-contrib": "2026.10",
+    "cryptography": "50.0.2"
+  },
+  "resources": [
+    "schema.xml",
+    "schoolpay_schema.xml",
+    "cbe_schema.xml",
+    "format_profile.json"
+  ],
+  "source_hashes": {
+    "app.py": "d161a249c01c72f116794f36085b9484b3777bdd09633e5b30bbab0197b8ff91",
+    "license_codec.py": "05dc9efb7d35127238bf79b83cd4fae5039995c2f55871b15b66dc5ecfb80d28",
+    "schoolpay_codec.py": "01b32767ab74fdf6ac23e0caf26bf4df040ebb22c6f69030aa8dd477e212b428",
+    "cbe_codec.py": "c9b8cbf6c6ec48aafacf980733c5685a9b078708c3b1b353a5423f29bdb6394f",
+    "build_tools/standalone_entry.py": "e6f1cb1d3538e24e997270d49b26d2ba31154b815585c2956f2851d8eb794b6b",
+    "build_tools/frozen_smoke.py": "33bd5d0cda6b0779c20592123a2112bb8b6baa1a406f735a9c22de71661cb872",
+    "JIBAS-Generator-Codex.spec": "2381cf239a2468f6c3d7f8fc84b4d7fb37a620e4d3439b71d7003826c3105141"
+  }
+}
