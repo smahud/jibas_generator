@@ -1,67 +1,77 @@
-# JIBAS License Generator
+﻿# JIBAS License Generator
 
-Root repository berisi file pendukung. Semua kode aplikasi dipisahkan menurut
-implementasinya:
+Satu aplikasi Codex dengan enam tab: **Absensi Wajah**, **Absensi Finger**,
+**SchoolPay**, **CBE Server**, **SJS**, dan **LetterStore**.
 
 | Direktori | Isi |
 |---|---|
-| [Codex](Codex/README.md) | Satu aplikasi dengan tab Absensi Wajah, SchoolPay, dan CBE Server; kode Python, tes, contoh, serta bukti REA |
-| [OpenCode](OpenCode/README.md) | Implementasi OpenCode dan arsip analisisnya, dipertahankan terpisah |
+| [Codex](Codex/README.md) | Source Python, standalone EXE, tests, dan bukti REA Codex |
+| [OpenCode](OpenCode/README.md) | Implementasi dan arsip OpenCode, terpisah |
+| [SharedDocs](SharedDocs/README.md) | Mekanisme, variabel, format, bukti, batas kesimpulan, dan panduan lintas agent |
 
-Tidak ada produk Python di root. Riwayat sebelum pemisahan tetap tersedia di Git.
-
-Direktori hasil Codex yang aktif adalah **Codex/**. Direktori lokal lama
-`JIBAS-License-Tool-Codex` dapat diarahkan ke implementasi ini dengan migrasi
-launcher yang dijelaskan pada [panduan Codex](Codex/README.md).
+Root hanya berisi file pendukung. SharedDocs sejajar dengan Codex dan OpenCode.
+Direktori hasil Codex aktif adalah **Codex/**; entry point lokal lama dapat
+mengarah ke sini sesuai [panduan Codex](Codex/README.md).
 
 ## Menjalankan
 
-Versi satu file Windows64-bit tersedia di
-[Codex/JIBAS-Generator-Codex.exe](Codex/JIBAS-Generator-Codex.exe).
-Executable tersebut tidak memerlukan instalasi Python atau resource pendamping.
-Lihat [panduan standalone](Codex/STANDALONE.md) untuk build dan hasil pemeriksaan.
+Buka [Codex/JIBAS-Generator-Codex.exe](Codex/JIBAS-Generator-Codex.exe).
+Versi Windows x64 ini satu file dan tidak memerlukan instalasi Python.
+[Panduan standalone](Codex/STANDALONE.md) menjelaskan build dan verifikasinya.
 
-Klik **Jalankan GUI.cmd** untuk Codex atau **Jalankan OpenCode.cmd** untuk OpenCode.
-Untuk Codex, gunakan Python3.10+ dengan Tkinter dan instal:
+Untuk versi source, gunakan **Jalankan GUI.cmd** atau **Jalankan OpenCode.cmd**.
+Codex memerlukan Python3.10+ dengan Tkinter:
 
 ```bat
 python -m pip install -r Codex/requirements.txt
 ```
 
-Perilaku aplikasi Codex terbaru:
+## Input tiap produk
 
-- Database ID dan System ID diisi manual pada ketiga tab.
-- System ID, Client ID, Nama klien, tanggal dan kapasitas terhubung dua arah
-  antar-tab. Database ID tetap terpisah sesuai produk.
-- **Save All** di kiri **Buat & simpan…** memvalidasi ketiga formulir, memilih
-  satu folder, dan menyimpan tiga lisensi; keluaran dipulihkan bila gagal.
-- Menu koneksi database serta tombol deteksi sudah dihapus.
-- Input Sequence sudah dihapus. Lisensi baru mulai1; perpanjangan memakai file
-  lisensi lama untuk mempertahankan Client ID dan menaikkan urutan otomatis.
-- Kotak Hasil tetap enam baris dengan scrollbar.
+| Tab | Identitas | Batas waktu/kapasitas |
+|---|---|---|
+| Absensi Wajah | Database ID + System ID | Tanggal + wajah |
+| Absensi Finger | Nomor seri scanner; tujuan Manager, Client atau keduanya | Tidak memakai keduanya |
+| SchoolPay | Database ID + System ID | Tanggal + vendor |
+| CBE Server | Database ID + System ID | Tanggal + klien |
+| SJS | Database ID + Registration Token; School ID asli untuk baru | Tanggal + agent |
+| LetterStore | Database ID | Tidak memakai keduanya |
 
-File lama diperlukan untuk perpanjangan; Client ID sendiri tidak mengungkap
-Sequence yang sedang terpasang. Hasil tidak dipasang ke instalasi JIBAS otomatis.
+Semua input manual. System ID/Client ID dibagikan pada Face, SchoolPay, CBE;
+nama pada semua tab; tanggal/kapasitas pada tab yang memakainya, termasuk SJS.
+Database ID selalu terpisah. Serial scanner, School ID dan token SJS tidak
+terhubung ke System ID. Token SJS berisi statistik lokal dan tidak mengungkap
+School ID. LetterStore asli hanya menerima satu registrasi.
 
-## Validasi
+**Save All**, di kiri **Buat & simpan…**, memvalidasi enam formulir sebelum
+memilih folder. Semua hasil dibuat dan diverifikasi di staging; kegagalan tidak
+menyisakan keluaran sebagian, dan penggantian file dipulihkan bila gagal.
+Pilihan overwrite tetap per tab. File tidak dipasang otomatis ke aplikasi JIBAS.
 
-Codex: **153 tes lulus,1 dilewati**, termasuk sinkronisasi field, Save All,
-rollback, GUI manual, CLI tiga produk, dan codec. Executable terbaru juga diuji
-dari folder terisolasi untuk Save All lisensi baru dan perpanjangan.
-CBE Server26.5: **34 skenario /46 percobaan** importer dan loader asli sesuai
-ekspektasi. Seluruh13file instalasi CBE identik sebelum/sesudah pengujian.
-Penerimaan importer tidak membuktikan aktivasi runtime atau online.
+Tidak ada menu koneksi/deteksi database atau input Sequence. Perpanjangan pada
+Face/SchoolPay/CBE/SJS memakai file lama, mempertahankan identitas dan menaikkan
+Sequence otomatis. Finger dan LetterStore tidak diberi mekanisme Sequence.
+Kotak Hasil tetap enam baris dengan scrollbar.
 
-Laporan: [pembaruan manual/CBE](Codex/MANUAL_UPDATE.md),
-[detail CBE](Codex/CBE.md), [SchoolPay](Codex/SCHOOLPAY.md),
-[Face](Codex/TEMUAN.md).
+## Validasi dan batas bukti
 
-Jalankan tes dari direktori implementasi agar modul bernama sama tidak bercampur:
+Suite mencakup codec enam produk, GUI, field bersama/privat, CLI, Save All dan
+rollback. Laporan terbaru di [Codex/TEST_REPORT.md](Codex/TEST_REPORT.md).
+Executable diuji sendiri dari folder terisolasi tanpa Python/resource pendamping.
+Pemeriksaan layout mencakup enam tab pada ukuran normal dan minimum.
+
+Metode asli Fingerprint Manager16.5/Client14.0/Client16.10 diuji impor, cache,
+dan pencocokan serial. LetterStore7.0 diuji beberapa Database ID, cache, flag
+registrasi, serta penolakan impor kedua. SJS7.10 diuji importer/renewal dan encoder
+token. Penerimaan file lokal tidak membuktikan aktivasi layanan online.
+Detail dan langkah reproduksi: [SharedDocs](SharedDocs/README.md).
+
+Jalankan suite dari direktori implementasi masing-masing:
 
 ```bat
 cd Codex
 python -m pytest tests -q -W error::pytest.PytestUnraisableExceptionWarning
 ```
 
-Untuk OpenCode, jalankan suite dari direktorinya sendiri. Binary JIBAS,
-compiled harness, dan datadir eksperimen tidak disertakan dalam paket Codex.
+Binary JIBAS, compiled harness dan datadir eksperimen tidak disertakan dalam
+rilis Codex. EXE yang disertakan adalah aplikasi Codex hasil build sendiri.
