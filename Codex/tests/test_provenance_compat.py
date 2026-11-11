@@ -61,7 +61,10 @@ def test_installed_cache_format_parity_with_generator():
     """Read-only comparison with the installed original cache."""
     if not INSTALLED_CACHE.exists():
         pytest.skip("Cache terpasang tidak tersedia di mesin ini.")
-    original = license_codec.inspect_license(INSTALLED_CACHE)["fields"]
+    inspection = license_codec.inspect_license(INSTALLED_CACHE)
+    if not inspection["has_license_row"]:
+        pytest.skip("Cache terpasang kosong; tidak ada tanggal lisensi untuk dibandingkan.")
+    original = inspection["fields"]
     # Generator harus menulis format tanggal yang sama dengan cache asli.
     assert original["Tanggal"] == datetime.strptime(
         original["Tanggal"], "%Y-%m-%d").date().isoformat()

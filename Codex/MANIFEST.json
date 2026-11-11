@@ -38,8 +38,8 @@
     },
     {
       "path": "JIBAS-Generator-Codex.exe",
-      "bytes": 15479480,
-      "sha256": "6601fb1ae7d2816c09e8e039b7ee5a9dc6f1c4c07fa18f44bcfb902c6b1d75ae"
+      "bytes": 15491402,
+      "sha256": "e9c10166aa09293915a51784bc3160f30fd979a93ae3e1f215fe004f07fb8ae5"
     },
     {
       "path": "JIBAS-Generator-Codex.spec",
@@ -58,8 +58,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 4652,
-      "sha256": "139f6edd339f0a2c51d444c5698f96431060d82e7f07d211fe9d444725138d1c"
+      "bytes": 6114,
+      "sha256": "5edf6504aa5a68d2ae9ba82bbb9a1f73e49d8b4a26a017789ed869e4eae5f51e"
     },
     {
       "path": "SCHOOLPAY.md",
@@ -67,9 +67,14 @@
       "sha256": "2a19e59bc2a39264dac51eaee33efe6432a0c185948a49f0af19413ad6bc075c"
     },
     {
+      "path": "SHARED_SAVE_ALL.md",
+      "bytes": 2375,
+      "sha256": "590b2968b339ca82bdf7d15909fc548432cdeba5858a1d0b87ed316cef6250b3"
+    },
+    {
       "path": "STANDALONE.md",
-      "bytes": 2785,
-      "sha256": "3fb21a6717e23b66058786a65f47ff83e82c1487d84705b665eb0f690a710063"
+      "bytes": 3071,
+      "sha256": "38d86193dcd2bc247ee09c930e2df0e0df0255ddb58ba6d9721908078b7df12f"
     },
     {
       "path": "TEMUAN.md",
@@ -78,18 +83,23 @@
     },
     {
       "path": "TEST_REPORT.md",
-      "bytes": 3776,
-      "sha256": "1439e29c5ba10fea28354476564e5f574fd759ac55d05a68b4a42785d0e2d2c4"
+      "bytes": 4063,
+      "sha256": "43d64c032de966d8b6bfe95da2ab606aa80e1ce5e7174632898ff245ecf52189"
     },
     {
       "path": "app.py",
-      "bytes": 17247,
-      "sha256": "d161a249c01c72f116794f36085b9484b3777bdd09633e5b30bbab0197b8ff91"
+      "bytes": 21341,
+      "sha256": "26f6555120dee7b1155d2b15c03ebbee85486c9f92e16dfd88dbdefee98dc99e"
+    },
+    {
+      "path": "batch_license.py",
+      "bytes": 10155,
+      "sha256": "e30004dd2b6ffeba9073ea53a427662833bd746fb5ed9847d1f3f1bea4e1e7ec"
     },
     {
       "path": "build_standalone.py",
-      "bytes": 2301,
-      "sha256": "fb37bfe90ee4b68ee43645b1c33c52e510d9eeb845232339789700c62c2c7ec0"
+      "bytes": 2321,
+      "sha256": "a53e5c27fa6395fd0f91f16abb143978d2fff78e60ecb8a537cbbb4a3ad27b0e"
     },
     {
       "path": "cbe_codec.py",
@@ -173,8 +183,8 @@
     },
     {
       "path": "build_tools/frozen_smoke.py",
-      "bytes": 4872,
-      "sha256": "33bd5d0cda6b0779c20592123a2112bb8b6baa1a406f735a9c22de71661cb872"
+      "bytes": 8722,
+      "sha256": "845c70389248b56af7130d68c0dbb28227cdf4b159ebfcbbd2631b200bf8ea20"
     },
     {
       "path": "build_tools/standalone_entry.py",
@@ -2047,19 +2057,94 @@
       "sha256": "77e91f4509119192563aea690af7b89d089003f5f8ab335e4323fe540216bd7d"
     },
     {
+      "path": "bukti/shared_save_all/VISUAL_QA.md",
+      "bytes": 1436,
+      "sha256": "7733dc29000823653f0932afa91a17b560195d21f0742fb896f76e32f24a48aa"
+    },
+    {
+      "path": "bukti/shared_save_all/gui_cbe_760x560.png",
+      "bytes": 22114,
+      "sha256": "d83a4f858f67f9127ffe3f9339388b8a6547eaa9f00f19bcefd669b4730e3c17"
+    },
+    {
+      "path": "bukti/shared_save_all/gui_cbe_880x650.png",
+      "bytes": 23503,
+      "sha256": "cde22c6c4e545255634d65277ef2e94fc91964fc906a5368ab3714e8751f9cfb"
+    },
+    {
+      "path": "bukti/shared_save_all/gui_face_760x560.png",
+      "bytes": 23341,
+      "sha256": "347ebacd08c52bfb4eb584b1b2bebd857bd5ad4ece04c8b1a3d70301d72adbfb"
+    },
+    {
+      "path": "bukti/shared_save_all/gui_face_880x650.png",
+      "bytes": 24839,
+      "sha256": "a780bcb64acc7dacbc8cba57c8669ab0a23292ae943f24a4452c819fe9338c28"
+    },
+    {
+      "path": "bukti/shared_save_all/gui_layout_cbe_760x560.json",
+      "bytes": 1855,
+      "sha256": "51db834129c431fbf344cdf0fd68b59a54a49cc9e0df9046564385b268e5223d"
+    },
+    {
+      "path": "bukti/shared_save_all/gui_layout_cbe_880x650.json",
+      "bytes": 1855,
+      "sha256": "d14b480c386184aa89e52edf035d04d4180b68628a0ebcc41b26dd369c5ccc3c"
+    },
+    {
+      "path": "bukti/shared_save_all/gui_layout_face_760x560.json",
+      "bytes": 1854,
+      "sha256": "7942a7bdd62a448fb4d62ff5d0e3239f9f2699d5dc6b541861db105b951f925d"
+    },
+    {
+      "path": "bukti/shared_save_all/gui_layout_face_880x650.json",
+      "bytes": 1854,
+      "sha256": "94686b178ac51b2a27917c462ede3c737b7c91ba037f67e4aaab9c0babb475ed"
+    },
+    {
+      "path": "bukti/shared_save_all/gui_layout_schoolpay_760x560.json",
+      "bytes": 1861,
+      "sha256": "ec8187048fc811c948c96ccfb482e17b1ba13d58f6dd78c1bc10184ae4684166"
+    },
+    {
+      "path": "bukti/shared_save_all/gui_layout_schoolpay_880x650.json",
+      "bytes": 1861,
+      "sha256": "a8ba6a9a5ba778f3bcdeb3cae3de625bca946546b6cdec6698819e55a2e5943f"
+    },
+    {
+      "path": "bukti/shared_save_all/gui_schoolpay_760x560.png",
+      "bytes": 22766,
+      "sha256": "cbcda7048c7b4d0bde8705e35b8c7342ec5bb009a1f533c5a082042f08c0b4dd"
+    },
+    {
+      "path": "bukti/shared_save_all/gui_schoolpay_880x650.png",
+      "bytes": 24222,
+      "sha256": "75d1195c0bafc0517a03e55d8a1d744b72d1d068af0e5d52be362c78ce31b8bd"
+    },
+    {
+      "path": "bukti/shared_save_all/gui_visual_probe.py",
+      "bytes": 6940,
+      "sha256": "4adf8803bf0f30b3cd761df85d3391f51b0e08765c0d556f50c1a11197087f85"
+    },
+    {
+      "path": "bukti/shared_save_all/gui_visual_report.json",
+      "bytes": 610,
+      "sha256": "600a8cad834cde2ce84535df35499fded20a0372e13b82a03daf1ecf3122d609"
+    },
+    {
       "path": "bukti/standalone/build.log",
-      "bytes": 7502,
-      "sha256": "c071cb56326b223c9810c21b20ceafc5c764a73131f178a6f50536e9020aee1b"
+      "bytes": 7504,
+      "sha256": "14d57cbc61d7db695392ef6f5dbf5137d3811a1f6d7f1bc2a6822fc89dcf35eb"
     },
     {
       "path": "bukti/standalone/build_manifest.json",
-      "bytes": 1249,
-      "sha256": "aecc15a74503fd4482cc2043e38626cae578d1b0f051977323f4323516584946"
+      "bytes": 1342,
+      "sha256": "1b537b251e6900469c7fa6629c9bcf9d0f35f6477e80a88b62ccd999c082a2f6"
     },
     {
       "path": "bukti/standalone/verification.json",
-      "bytes": 2901,
-      "sha256": "b76949a8987f89425a4e7f92083c2397a65df61a1addedaeb22d3d1b639fd4bb"
+      "bytes": 3268,
+      "sha256": "69a03cfe182d2fe3d2bf85c8e195a88cb72c27062e4c1a857b8457217a06d588"
     },
     {
       "path": "contoh/BACA.txt",
@@ -2187,6 +2272,11 @@
       "sha256": "c70d14b78c64ba530c043a1574b32f36c94f1ae0c40f266b576c0e0928e25021"
     },
     {
+      "path": "tests/test_batch_license.py",
+      "bytes": 7708,
+      "sha256": "51220f88e265765d8a2d1507d93f6db2c4fd010386c1ba400dd5c79ea8186008"
+    },
+    {
       "path": "tests/test_cbe_codec.py",
       "bytes": 3598,
       "sha256": "026f035a9eaadf2f41bdb9fc95628041d1ae9f85bc27372a8fb55e4378eb01e0"
@@ -2223,8 +2313,8 @@
     },
     {
       "path": "tests/test_provenance_compat.py",
-      "bytes": 2856,
-      "sha256": "375b0424d262233df81be3923860b6b095425c076a24bd7c5073fc2ca77f1a2f"
+      "bytes": 3019,
+      "sha256": "f97325ea307d3dbcd15b7179baef34b619a87247a5e1a073ada8b2e16bdc5165"
     },
     {
       "path": "tests/test_schoolpay_codec.py",
@@ -2243,8 +2333,8 @@
     },
     {
       "path": "tests/test_unified_gui.py",
-      "bytes": 9130,
-      "sha256": "d6ae802820da280e5fe02749983645a37d4b84c9455ede9d20bcdb11230dbb77"
+      "bytes": 19071,
+      "sha256": "01c8114023d8e1ebfe5ade86825b860fc3d14a21cd47992023932309a5ec072d"
     },
     {
       "path": "tests/fixtures/cbe-empty.enc",

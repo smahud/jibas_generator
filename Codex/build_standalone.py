@@ -37,7 +37,7 @@ def main():
                      ('pyinstaller', 'pyinstaller-hooks-contrib', 'cryptography')},
         'resources': ['schema.xml', 'schoolpay_schema.xml', 'cbe_schema.xml', 'format_profile.json'],
         'source_hashes': {name: hashlib.sha256((ROOT / name).read_bytes()).hexdigest() for name in
-            ('app.py', 'license_codec.py', 'schoolpay_codec.py', 'cbe_codec.py',
+            ('app.py', 'batch_license.py', 'license_codec.py', 'schoolpay_codec.py', 'cbe_codec.py',
              'build_tools/standalone_entry.py', 'build_tools/frozen_smoke.py', 'JIBAS-Generator-Codex.spec')},
     }
     (evidence / 'build_manifest.json').write_text(json.dumps(manifest, indent=2), encoding='utf-8')
