@@ -4,6 +4,7 @@ __pycache__/
 .pytest_cache/
 .venv/
 *.exe
+!/JIBAS-Generator-Codex.exe
 *.dll
 *.zip
 bukti/id_audit/mysql_sandbox/

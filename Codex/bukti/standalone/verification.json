@@ -1,0 +1,70 @@
+{
+  "ok": true,
+  "exit_code": 0,
+  "isolated_directory": "C:\\Users\\LAPTOP~1\\AppData\\Local\\Temp\\jibas-standalone-only-g5hme6uh",
+  "initial_files": [
+    "JIBAS-Generator-Codex.exe"
+  ],
+  "python_environment_removed": true,
+  "path_restricted_to_windows": "C:\\Windows\\System32;C:\\Windows",
+  "artifact_sha256": "6601fb1ae7d2816c09e8e039b7ee5a9dc6f1c4c07fa18f44bcfb902c6b1d75ae",
+  "report": {
+    "frozen": true,
+    "executable": "C:\\Users\\LAPTOP~1\\AppData\\Local\\Temp\\jibas-standalone-only-g5hme6uh\\JIBAS-Generator-Codex.exe",
+    "executable_sha256": "6601fb1ae7d2816c09e8e039b7ee5a9dc6f1c4c07fa18f44bcfb902c6b1d75ae",
+    "bundle": "C:\\Users\\Laptop Kantor - ASUS\\AppData\\Local\\Temp\\_MEI00002fd42",
+    "sys_path": [
+      "C:\\Users\\LAPTOP~1\\AppData\\Local\\Temp\\_MEI00002fd42\\base_library.zip",
+      "C:\\Users\\LAPTOP~1\\AppData\\Local\\Temp\\_MEI00002fd42\\python3.12\\lib-dynload",
+      "C:\\Users\\LAPTOP~1\\AppData\\Local\\Temp\\_MEI00002fd42"
+    ],
+    "tabs": [
+      "Absensi Wajah",
+      "SchoolPay",
+      "CBE Server"
+    ],
+    "cases": [
+      {
+        "product": "face",
+        "generated": true,
+        "inspected": true,
+        "verified": true,
+        "wrong_system_rejected": true,
+        "renewal_sequence": 2,
+        "client_id_preserved": true,
+        "module": "C:\\Users\\LAPTOP~1\\AppData\\Local\\Temp\\_MEI00002fd42\\license_codec.py"
+      },
+      {
+        "product": "schoolpay",
+        "generated": true,
+        "inspected": true,
+        "verified": true,
+        "wrong_system_rejected": true,
+        "renewal_sequence": 2,
+        "client_id_preserved": true,
+        "module": "C:\\Users\\LAPTOP~1\\AppData\\Local\\Temp\\_MEI00002fd42\\schoolpay_codec.py"
+      },
+      {
+        "product": "cbe",
+        "generated": true,
+        "inspected": true,
+        "verified": true,
+        "wrong_system_rejected": true,
+        "renewal_sequence": 2,
+        "client_id_preserved": true,
+        "module": "C:\\Users\\LAPTOP~1\\AppData\\Local\\Temp\\_MEI00002fd42\\cbe_codec.py"
+      }
+    ],
+    "resources": {
+      "schema.xml": "63952cfd0db50a581934fa3d366b48fa1ae0238687c0dfe3df74fb6abe5178c4",
+      "schoolpay_schema.xml": "1f433effb04941f495c27b8f4d4530a49c0acd8317199bdbc536c3f898062058",
+      "cbe_schema.xml": "129fe37ecaa184d6533791037a8b838b001edec52d986ec0564e83e49ad071b8",
+      "format_profile.json": "a987be94b8752c688f43d32dc49df424a3f3eee68b8833b75d0934e0fa14c974"
+    },
+    "tcl_library": "C:\\Users\\LAPTOP~1\\AppData\\Local\\Temp\\_MEI00002fd42\\_tcl_data",
+    "tk_library": "C:\\Users\\LAPTOP~1\\AppData\\Local\\Temp\\_MEI00002fd42\\_tk_data",
+    "cryptography_native": "C:\\Users\\LAPTOP~1\\AppData\\Local\\Temp\\_MEI00002fd42\\cryptography\\hazmat\\bindings\\_rust.pyd",
+    "ok": true,
+    "activation_proven": false
+  }
+}

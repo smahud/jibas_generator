@@ -1,9 +1,9 @@
 {
   "release": "Codex",
   "date": "2026-11-11",
-  "scope": "source + evidence; MANIFEST.json excluded from its own hashes",
+  "scope": "source + evidence + standalone executable; MANIFEST.json excluded from its own hashes",
   "excluded": [
-    "compiled executables",
+    "compiled executables except JIBAS-Generator-Codex.exe",
     "proprietary DLLs",
     "sandbox datadir",
     "temporary sandbox caches",
@@ -18,8 +18,8 @@
     },
     {
       "path": ".gitignore",
-      "bytes": 246,
-      "sha256": "4f01fef1f38dd2a23422333d94ab7c29ba22023d515ff511d8e0fe547a54577d"
+      "bytes": 274,
+      "sha256": "ab8e9e816b4da3a5a99187da5a8dd8d941358bee5d64718bf504b4e3f465f2a7"
     },
     {
       "path": "AGENT_GUIDE.md",
@@ -37,6 +37,16 @@
       "sha256": "1888977a3b3d075fcd6c9b8b449ba9f37762ee2b656258de14f2694f61e14d3f"
     },
     {
+      "path": "JIBAS-Generator-Codex.exe",
+      "bytes": 15479480,
+      "sha256": "6601fb1ae7d2816c09e8e039b7ee5a9dc6f1c4c07fa18f44bcfb902c6b1d75ae"
+    },
+    {
+      "path": "JIBAS-Generator-Codex.spec",
+      "bytes": 914,
+      "sha256": "2381cf239a2468f6c3d7f8fc84b4d7fb37a620e4d3439b71d7003826c3105141"
+    },
+    {
       "path": "Jalankan GUI.cmd",
       "bytes": 673,
       "sha256": "7bd687527821ad566367c71237de264e5f9cf7a9726b9706163f26b1ab272d63"
@@ -48,13 +58,18 @@
     },
     {
       "path": "README.md",
-      "bytes": 4307,
-      "sha256": "bfa73e72ef3df363b8b39ef0b2cadd3a0140ad486bae0547d6468640eb3430b6"
+      "bytes": 4652,
+      "sha256": "139f6edd339f0a2c51d444c5698f96431060d82e7f07d211fe9d444725138d1c"
     },
     {
       "path": "SCHOOLPAY.md",
       "bytes": 6601,
       "sha256": "2a19e59bc2a39264dac51eaee33efe6432a0c185948a49f0af19413ad6bc075c"
+    },
+    {
+      "path": "STANDALONE.md",
+      "bytes": 2785,
+      "sha256": "3fb21a6717e23b66058786a65f47ff83e82c1487d84705b665eb0f690a710063"
     },
     {
       "path": "TEMUAN.md",
@@ -63,13 +78,18 @@
     },
     {
       "path": "TEST_REPORT.md",
-      "bytes": 3403,
-      "sha256": "e1ab28e6a123b258a45648549a98f53f2adfb74aa05b60d86ab82b5bb5c62abb"
+      "bytes": 3776,
+      "sha256": "1439e29c5ba10fea28354476564e5f574fd759ac55d05a68b4a42785d0e2d2c4"
     },
     {
       "path": "app.py",
       "bytes": 17247,
       "sha256": "d161a249c01c72f116794f36085b9484b3777bdd09633e5b30bbab0197b8ff91"
+    },
+    {
+      "path": "build_standalone.py",
+      "bytes": 2301,
+      "sha256": "fb37bfe90ee4b68ee43645b1c33c52e510d9eeb845232339789700c62c2c7ec0"
     },
     {
       "path": "cbe_codec.py",
@@ -112,6 +132,11 @@
       "sha256": "05dc9efb7d35127238bf79b83cd4fae5039995c2f55871b15b66dc5ecfb80d28"
     },
     {
+      "path": "requirements-build.txt",
+      "bytes": 76,
+      "sha256": "5272b3012c6213e83d37c586fd8d88636aa520f654697dd28c0812b22929335b"
+    },
+    {
       "path": "requirements-dev.txt",
       "bytes": 30,
       "sha256": "d1f7a9a74d4999930cf88eba1fefc834281a91cbd10efb799ba3f72767e9c5b9"
@@ -145,6 +170,21 @@
       "path": "search_db.py",
       "bytes": 3419,
       "sha256": "c2bd7dd7647b13fb944219471846b47431e7b6321110343f72abc352a43b90aa"
+    },
+    {
+      "path": "build_tools/frozen_smoke.py",
+      "bytes": 4872,
+      "sha256": "33bd5d0cda6b0779c20592123a2112bb8b6baa1a406f735a9c22de71661cb872"
+    },
+    {
+      "path": "build_tools/standalone_entry.py",
+      "bytes": 285,
+      "sha256": "e6f1cb1d3538e24e997270d49b26d2ba31154b815585c2956f2851d8eb794b6b"
+    },
+    {
+      "path": "build_tools/verify_standalone.py",
+      "bytes": 2123,
+      "sha256": "5a08800ea2182952ea11973a20e4ca8a45a339efd9f79e3a9ecea05c4e878874"
     },
     {
       "path": "bukti/audit_lawas_vs_baru.json",
@@ -2007,6 +2047,21 @@
       "sha256": "77e91f4509119192563aea690af7b89d089003f5f8ab335e4323fe540216bd7d"
     },
     {
+      "path": "bukti/standalone/build.log",
+      "bytes": 7502,
+      "sha256": "c071cb56326b223c9810c21b20ceafc5c764a73131f178a6f50536e9020aee1b"
+    },
+    {
+      "path": "bukti/standalone/build_manifest.json",
+      "bytes": 1249,
+      "sha256": "aecc15a74503fd4482cc2043e38626cae578d1b0f051977323f4323516584946"
+    },
+    {
+      "path": "bukti/standalone/verification.json",
+      "bytes": 2901,
+      "sha256": "b76949a8987f89425a4e7f92083c2397a65df61a1addedaeb22d3d1b639fd4bb"
+    },
+    {
       "path": "contoh/BACA.txt",
       "bytes": 726,
       "sha256": "1b7f8f8a49eba417e16ffe8f630866cd223c0417714c2880a811874cbb565e19"
@@ -2078,8 +2133,8 @@
     },
     {
       "path": "riset/build_release.py",
-      "bytes": 2013,
-      "sha256": "813d6c3c9aa8e5b0a9aaede6189b6b3a98b4d575712787a7f750b482dfaade8b"
+      "bytes": 2210,
+      "sha256": "50612d69e3a886a1b3f6201a69fb63adcfd328e03e5f4dc587e6b672870e3ce8"
     },
     {
       "path": "riset/import_probe.cs",
