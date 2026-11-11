@@ -10,6 +10,10 @@ implementasinya:
 
 Tidak ada produk Python di root. Riwayat sebelum pemisahan tetap tersedia di Git.
 
+Direktori hasil Codex yang aktif adalah **Codex/**. Direktori lokal lama
+`JIBAS-License-Tool-Codex` dapat diarahkan ke implementasi ini dengan migrasi
+launcher yang dijelaskan pada [panduan Codex](Codex/README.md).
+
 ## Menjalankan
 
 Klik **Jalankan GUI.cmd** untuk Codex atau **Jalankan OpenCode.cmd** untuk OpenCode.

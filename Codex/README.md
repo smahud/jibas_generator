@@ -4,6 +4,11 @@ Satu aplikasi Python dengan tiga tab: **Absensi Wajah**, **SchoolPay**, dan
 **CBE Server**. Input Database ID dan System ID sepenuhnya manual. Menu koneksi
 database, tombol deteksi ID, dan input Sequence sudah dihapus.
 
+Direktori implementasi utama adalah **Codex**. Jika instalasi lokal masih memiliki
+`JIBAS-License-Tool-Codex`, jalankan `python -m riset.migrate_legacy_launchers`
+dari direktori ini untuk mengarahkan entry point lama ke aplikasi yang sama.
+File entry point lama dicadangkan dengan akhiran `.legacy-backup` sebelum diganti.
+
 ## Menjalankan
 
 Klik **Jalankan GUI.cmd** pada direktori ini, atau launcher yang sama di root
