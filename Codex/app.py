@@ -1,7 +1,7 @@
 """Manual-input desktop app for FACE, SchoolPay, and CBE license workflows.
 
-Tk operations stay on the main thread. Each tab owns its inputs, backend,
-background task queue, and results, so switching tabs does not mix products.
+Tk operations stay on the main thread. Tabs share customer and system inputs,
+while database IDs, files, backends, and results remain product-specific.
 """
 from __future__ import annotations
 
@@ -15,6 +15,11 @@ import queue
 import threading
 import tkinter as tk
 from tkinter import filedialog, messagebox, ttk
+
+import batch_license
+
+
+SHARED_FIELDS = ("system_id", "client_id", "client_name", "expires", "capacity")
 
 
 @dataclass(frozen=True)
@@ -113,8 +118,8 @@ class _Tooltip:
 
 
 class LicensePanel(ttk.Frame):
-    """A separate form and task queue for one product."""
-    def __init__(self, parent, product: Product, *, backend=None):
+    """A product form using its application's shared customer variables."""
+    def __init__(self, parent, product: Product, *, shared_inputs, save_all, backend=None):
         super().__init__(parent, padding=12)
         self.window = self.winfo_toplevel()
         self.product = product
@@ -128,9 +133,8 @@ class LicensePanel(ttk.Frame):
         # Surplus window height stays below the form; results remain six lines.
         self.rowconfigure(12, weight=1)
         self.inputs = {key: tk.StringVar(self) for key in (
-            "database_id", "system_id", "client_id", "client_name", "capacity",
-            "file", "previous_license")}
-        self.inputs["expires"] = tk.StringVar(self, value=(date.today() + timedelta(days=365)).isoformat())
+            "database_id", "file", "previous_license")}
+        self.inputs.update(shared_inputs)
         self.overwrite = tk.BooleanVar(self, value=False)
         self.status = tk.StringVar(self, value=f"Siap — {product.label}. Isi ID mesin tujuan secara manual.")
 
@@ -172,8 +176,11 @@ class LicensePanel(ttk.Frame):
         overwrite_box = ttk.Checkbutton(actions, text="Timpa berkas keluaran", variable=self.overwrite)
         overwrite_box.grid(row=0, column=2, sticky="w", padx=8)
         self._controls.append(overwrite_box)
-        self._button(actions, "Buat & simpan…", lambda: self.run_action("generate"),
-                     style="Accent.TButton").grid(row=0, column=3)
+        self.save_all_button = self._button(actions, "Save All", save_all)
+        self.save_all_button.grid(row=0, column=3, padx=(0, 6))
+        self.generate_button = self._button(actions, "Buat & simpan…", lambda: self.run_action("generate"),
+                                            style="Accent.TButton")
+        self.generate_button.grid(row=0, column=4)
         self.progress = ttk.Progressbar(self, mode="indeterminate")
         self.progress.grid(row=10, column=0, columnspan=4, sticky="ew", pady=(7, 0))
         ttk.Label(self, textvariable=self.status, style="Hint.TLabel", wraplength=790).grid(
@@ -239,10 +246,13 @@ class LicensePanel(ttk.Frame):
     def _load_backend(self):
         return self._backend if self._backend is not None else importlib.import_module(self.product.codec_module)
 
+    def snapshot(self):
+        return {key: variable.get().strip() for key, variable in self.inputs.items()}
+
     def run_action(self, action):
         if self.busy:
             return
-        values = {key: variable.get().strip() for key, variable in self.inputs.items()}
+        values = self.snapshot()
         if action == "generate" and not values["file"]:
             destination = filedialog.asksaveasfilename(parent=self.window,
                 title=f"Simpan lisensi {self.product.label}", initialfile=self.product.initial_file,
@@ -268,20 +278,25 @@ class LicensePanel(ttk.Frame):
                     self.show_result({"error": payload})
                     messagebox.showerror(self.product.label, payload, parent=self.window)
                 else:
-                    self.show_result(payload)
                     if kind == "generate":
-                        self.inputs["file"].set(str(payload.get("path", "")))
-                        valid = payload.get("verification", {}).get("valid")
-                        self.status.set("File lisensi dibuat; pemeriksaan offline berhasil."
-                                        if valid is True else "File dibuat. Periksa rincian sebelum diimpor.")
+                        self.apply_generated_result(payload)
                     elif kind == "verify":
+                        self.show_result(payload)
                         self.status.set("Pemeriksaan offline berhasil; aktivasi aplikasi belum dibuktikan."
                                         if payload.get("valid") is True else "Pemeriksaan belum lulus. Lihat hasil.")
                     else:
+                        self.show_result(payload)
                         self.status.set("Isi berkas berhasil dibaca. Periksa field dan status pada hasil.")
         except queue.Empty:
             pass
         self._poll_id = self.after(50, self._poll_events)
+
+    def apply_generated_result(self, result, *, path=None):
+        self.show_result(result)
+        self.inputs["file"].set(str(path if path is not None else result.get("path", "")))
+        valid = result.get("verification", {}).get("valid")
+        self.status.set("File lisensi dibuat; pemeriksaan offline berhasil."
+                        if valid is True else "File dibuat. Periksa rincian sebelum diimpor.")
 
     def close(self):
         self._closed = True
@@ -303,6 +318,8 @@ class LicensePanel(ttk.Frame):
         self._controls.clear()
         self.output = None
         self.progress = None
+        self.save_all_button = None
+        self.generate_button = None
 
 
 class LicenseApp(ttk.Frame):
@@ -310,6 +327,11 @@ class LicenseApp(ttk.Frame):
         super().__init__(window)
         self.window = window
         self._closed = False
+        self._batch_busy = False
+        self._batch_events = queue.Queue()
+        self._batch_poll_id = None
+        self.shared_inputs = {key: tk.StringVar(self) for key in SHARED_FIELDS}
+        self.shared_inputs["expires"].set((date.today() + timedelta(days=365)).isoformat())
         window.title("JIBAS — Generator Lisensi")
         screen_width, screen_height = window.winfo_screenwidth(), window.winfo_screenheight()
         width = min(880, max(1, screen_width - 40))
@@ -335,7 +357,8 @@ class LicenseApp(ttk.Frame):
         self.notebook.pack(fill="both", expand=True)
         self.panels = {}
         for product in PRODUCTS:
-            panel = LicensePanel(self.notebook, product, backend=(backends or {}).get(product.key))
+            panel = LicensePanel(self.notebook, product, shared_inputs=self.shared_inputs,
+                                 save_all=self.save_all, backend=(backends or {}).get(product.key))
             self.panels[product.key] = panel
             self.notebook.add(panel, text=product.label)
         window.bind("<Control-o>", lambda event: self.active_panel().choose_file())
@@ -344,15 +367,77 @@ class LicenseApp(ttk.Frame):
     def active_panel(self):
         return self.nametowidget(self.notebook.select())
 
+    def save_all(self):
+        """Validate one snapshot before choosing the three products' folder."""
+        if self._closed or self._batch_busy or any(panel.busy for panel in self.panels.values()):
+            return False
+        forms = [{"product": product.key, "label": product.label,
+                  "codec_module": product.codec_module, "filename": product.initial_file,
+                  "values": self.panels[product.key].snapshot(),
+                  "overwrite": self.panels[product.key].overwrite.get()}
+                 for product in PRODUCTS]
+        try:
+            forms = batch_license.preflight_forms(forms)
+        except ValueError as exc:
+            key = getattr(exc, "product", None)
+            panel = self.panels.get(key)
+            if panel is not None:
+                self.notebook.select(panel)
+                panel.status.set("Operasi belum berhasil. Periksa isian formulir.")
+            messagebox.showerror(panel.product.label if panel is not None else "Save All",
+                                 str(exc), parent=self.window)
+            return False
+        destination = filedialog.askdirectory(parent=self.window, title="Save All — pilih folder keluaran")
+        if not destination:
+            return False
+        self._batch_busy = True
+        for panel in self.panels.values():
+            panel._set_busy(True)
+            panel.status.set("Membuat dan menyimpan ketiga lisensi…")
+        backends = {key: panel._backend for key, panel in self.panels.items() if panel._backend is not None}
+        operation = partial(batch_license.generate_all, forms, destination, backends=backends)
+        # A transaction must finish or roll back even if its window is closed.
+        threading.Thread(target=_run_queued_task,
+            args=(self._batch_events, "generate_all", operation), daemon=False,
+            name="jibas-save-all").start()
+        self._batch_poll_id = self.after(50, self._poll_batch_events)
+        return True
+
+    def _poll_batch_events(self):
+        self._batch_poll_id = None
+        if self._closed:
+            return
+        try:
+            state, _kind, payload = self._batch_events.get_nowait()
+        except queue.Empty:
+            self._batch_poll_id = self.after(50, self._poll_batch_events)
+            return
+        self._batch_busy = False
+        for panel in self.panels.values():
+            panel._set_busy(False)
+        if state == "error" or payload.get("ok") is not True:
+            detail = payload if state == "error" else str(payload.get("error", "Penyimpanan ketiga lisensi belum berhasil."))
+            for panel in self.panels.values():
+                panel.status.set("Save All belum berhasil. Lihat rincian hasil.")
+                panel.show_result({"error": detail})
+            messagebox.showerror("Save All", detail, parent=self.window)
+            return
+        for key, panel in self.panels.items():
+            panel.apply_generated_result(payload["results"][key], path=payload["paths"][key])
+
     def close(self):
         if self._closed:
             return
         self._closed = True
+        if self._batch_poll_id is not None:
+            self.after_cancel(self._batch_poll_id)
+            self._batch_poll_id = None
         for panel in self.panels.values():
             panel.close()
         self.window.destroy()
         for panel in self.panels.values():
             panel.release_tk_references()
+        self.shared_inputs.clear()
         self.panels.clear()
         self.notebook = None
 

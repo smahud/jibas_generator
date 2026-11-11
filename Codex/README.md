@@ -41,7 +41,34 @@ untuk mengetahui urutan terpasang; aplikasi meminta file lama jika diperlukan.
 Tidak ada input urutan yang perlu diisi pengguna.
 
 **Hasil** tetap setinggi enam baris dengan scrollbar; memperbesar jendela tidak
-membuat kotak hasil memenuhi seluruh layar. Input, file, dan hasil tiap tab terpisah.
+membuat kotak hasil memenuhi seluruh layar. Database ID, file, dan hasil tiap tab terpisah.
+
+## Field bersama dan Save All
+
+System ID, Client ID, Nama klien, Berlaku sampai, dan Kapasitas terhubung pada
+ketiga tab. Mengetik, mengedit, atau menghapus salah satunya langsung mengubah
+field yang sama di tab lain. Nilai kapasitas dibagikan, sedangkan label/satuannya
+tetap wajah, vendor, atau klien sesuai produk.
+
+**Database ID tetap terpisah**. Lokasi berkas, lisensi lama, dan pilihan overwrite
+juga tetap milik tab masing-masing.
+
+Tombol **Save All**, tepat di kiri **Buat & simpan…**, membuat ketiga lisensi:
+
+1. Lengkapi Database ID tiap tab serta System ID, tanggal, dan kapasitas bersama.
+   Nama klien dan Client ID tetap opsional untuk lisensi baru.
+2. Klik Save All. Isian ketiga formulir diperiksa sebelum dialog folder dibuka.
+3. Pilih satu folder tujuan. Hasilnya `absensi-wajah.lic`, `schoolpay.lic`, dan
+   `cbe-server.lic`; lokasi berkas di tiap tab diperbarui setelah berhasil.
+
+Semua hasil dibuat dan diperiksa di staging dahulu. Kegagalan satu produk tidak
+menerbitkan hasil sebagian; kegagalan saat mengganti file memulihkan keluaran
+sebelumnya. File yang sudah ada memerlukan pilihan **Timpa berkas keluaran** pada
+tab terkait. Save All menonaktifkan kontrol ketiga tab selama proses berjalan.
+
+Untuk perpanjangan, pilih file lama masing-masing produk. Jika Client ID bersama
+diisi, nilainya harus cocok dengan file-file lama tersebut; bila dikosongkan,
+Client ID masing-masing diambil dari file lama. Sequence tetap otomatis.
 
 ## CLI dengan input manual
 

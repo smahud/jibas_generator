@@ -31,6 +31,10 @@ python -m pip install -r Codex/requirements.txt
 Perilaku aplikasi Codex terbaru:
 
 - Database ID dan System ID diisi manual pada ketiga tab.
+- System ID, Client ID, Nama klien, tanggal dan kapasitas terhubung dua arah
+  antar-tab. Database ID tetap terpisah sesuai produk.
+- **Save All** di kiri **Buat & simpan…** memvalidasi ketiga formulir, memilih
+  satu folder, dan menyimpan tiga lisensi; keluaran dipulihkan bila gagal.
 - Menu koneksi database serta tombol deteksi sudah dihapus.
 - Input Sequence sudah dihapus. Lisensi baru mulai1; perpanjangan memakai file
   lisensi lama untuk mempertahankan Client ID dan menaikkan urutan otomatis.
@@ -41,7 +45,9 @@ Sequence yang sedang terpasang. Hasil tidak dipasang ke instalasi JIBAS otomatis
 
 ## Validasi
 
-Codex: **120 tes lulus**, termasuk GUI manual, CLI tiga produk, dan codec.
+Codex: **153 tes lulus,1 dilewati**, termasuk sinkronisasi field, Save All,
+rollback, GUI manual, CLI tiga produk, dan codec. Executable terbaru juga diuji
+dari folder terisolasi untuk Save All lisensi baru dan perpanjangan.
 CBE Server26.5: **34 skenario /46 percobaan** importer dan loader asli sesuai
 ekspektasi. Seluruh13file instalasi CBE identik sebelum/sesudah pengujian.
 Penerimaan importer tidak membuktikan aktivasi runtime atau online.

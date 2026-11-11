@@ -1,6 +1,11 @@
 # Pengujian aplikasi terpadu — Windows, 11 November 2026
 
-Standalone: JIBAS-Generator-Codex.exe (Windows x64,15.479.480byte) lulus
+Pembaruan field bersama/Save All: **153 passed,1 skipped** (10.95 detik),
+warning finalizer Tk sebagai error. Termasuk25tes GUI dan21tes batch. Database ID
+tetap terpisah, semua field yang diminta terhubung, dan keluaran batch dipulihkan
+bila gagal. Layout enam scene lolos. Lihat SHARED_SAVE_ALL.md.
+
+Standalone: JIBAS-Generator-Codex.exe (Windows x64) lulus
 pemeriksaan terisolasi dengan hanya satu EXE dan tanpa environment Python.
 Ketiga produk diuji melalui panel Tk asli: buat, baca, verifikasi, mismatch
 System ID, perpanjangan dan verifikasi ulang. Resource/Tcl/Tk/native crypto

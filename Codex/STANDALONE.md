@@ -7,6 +7,7 @@ pendamping tidak perlu disalin atau diinstal terpisah.
 
 Semua ID tetap diisi manual dan Sequence tetap otomatis. Ini format aplikasi
 yang sama dengan versi Python; aturan dan batas validasi lisensi tidak berubah.
+Lima field bersama dan tombol Save All juga tersedia pada executable.
 
 ## Isi paket dan build ulang
 
@@ -34,8 +35,8 @@ ikut disimpan di repository. Log serta versi dependency berada pada
 
 ## Pemeriksaan executable yang benar-benar dihasilkan
 
-- Ukuran: **15.479.480byte** (sekitar14,8MiB).
-- SHA256: `6601fb1ae7d2816c09e8e039b7ee5a9dc6f1c4c07fa18f44bcfb902c6b1d75ae`.
+- Ukuran, SHA256 dan hash source untuk build terkini tercatat pada
+  `bukti/standalone/build_manifest.json`.
 - Salinan binary identik dijalankan dari folder sementara yang mula-mula hanya
   berisi file `.exe`. PATH dibatasi ke direktori Windows, environment Python/
   virtualenv/Tcl eksternal dihapus, tidak ada source/resource pendamping.
@@ -43,6 +44,9 @@ ikut disimpan di repository. Log serta versi dependency berada pada
   tidak muncul sebagai input.
 - Untuk setiap produk: generate baru Sequence1, inspect, verify, penolakan
   System ID berbeda, renewal Sequence2 dengan Client ID sama, verify renewal.
+- Edit/hapus lima field bersama diuji; Database ID dipastikan tetap berbeda.
+- Save All diuji sebelum pemilihan folder ketika tab CBE belum lengkap, lalu
+  berhasil membuat tiga lisensi baru dan tiga perpanjangan dengan Client ID tetap.
 - Tcl/Tk, native cryptography dan seluruh XML/JSON dibaca dari bundle sementara,
   bukan dari folder source atau instalasi Python host.
 
@@ -52,5 +56,5 @@ instalasi JIBAS aktif, atau layanan online; tidak membuktikan aktivasi penerbit.
 
 Untuk diagnosis build, executable juga menerima perintah developer
 `JIBAS-Generator-Codex.exe --self-check HASIL.json`. Perintah ini menjalankan
-alur UI dengan data sintetis dan menulis enam file lisensi uji di folder hasil.
+alur UI dengan data sintetis dan menulis file lisensi uji di folder hasil.
 Penggunaan biasa cukup membuka `.exe` tanpa argumen.

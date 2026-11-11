@@ -16,6 +16,7 @@ def run(output_dir):
     bundle = Path(sys._MEIPASS).resolve()
     errors = []
     original_error = app.messagebox.showerror
+    original_picker = app.filedialog.askdirectory
     app.messagebox.showerror = lambda *args, **kwargs: errors.append(str(args))
     root = tk.Tk()
     root.withdraw()
@@ -41,6 +42,20 @@ def run(output_dir):
     try:
         assert report['tabs'] == ['Absensi Wajah', 'SchoolPay', 'CBE Server']
         assert not hasattr(application, 'connection')
+        database_ids = {'face': 'V4YNE', 'schoolpay': '7VJM4', 'cbe': 'ABCDE'}
+        for key, value in database_ids.items():
+            application.panels[key].inputs['database_id'].set(value)
+        for field, value in {'system_id': 'DDCB4', 'client_id': 'SHARED-QA',
+                             'client_name': 'Shared QA', 'expires': '2030-12-31',
+                             'capacity': '100'}.items():
+            application.panels['schoolpay'].inputs[field].set(value)
+            assert all(panel.inputs[field].get() == value for panel in application.panels.values())
+            application.panels['cbe'].inputs[field].set('')
+            assert all(panel.inputs[field].get() == '' for panel in application.panels.values())
+            application.panels['face'].inputs[field].set(value)
+        assert {key: panel.inputs['database_id'].get() for key, panel in application.panels.items()} == database_ids
+        report['shared_fields_verified'] = list(app.SHARED_FIELDS)
+        report['database_ids_independent'] = True
         report['resources'] = {}
         for name in ('schema.xml', 'schoolpay_schema.xml', 'cbe_schema.xml', 'format_profile.json'):
             path = bundle / name
@@ -84,6 +99,59 @@ def run(output_dir):
             report['cases'].append({'product': key, 'generated': True, 'inspected': True,
                 'verified': True, 'wrong_system_rejected': True, 'renewal_sequence': 2,
                 'client_id_preserved': True, 'module': module.__file__})
+        destination = output_dir / 'save-all-new'
+        destination.mkdir()
+        picker_calls = []
+        def pick_folder(**kwargs):
+            picker_calls.append(str(destination))
+            return str(destination)
+        app.filedialog.askdirectory = pick_folder
+        for panel in application.panels.values():
+            panel.inputs['previous_license'].set('')
+        shared = application.shared_inputs
+        for field, value in {'client_id': '', 'client_name': 'Save All QA',
+                             'expires': '2032-12-31', 'capacity': '100',
+                             'system_id': 'DDCB4'}.items():
+            shared[field].set(value)
+        application.panels['cbe'].inputs['database_id'].set('')
+        assert application.save_all() is False
+        assert not picker_calls and not list(destination.iterdir()) and errors
+        errors.clear()
+        application.panels['cbe'].inputs['database_id'].set(database_ids['cbe'])
+
+        def save_all():
+            assert application.save_all() is True
+            assert all(panel.busy for panel in application.panels.values())
+            deadline = time.monotonic() + 25
+            while application._batch_busy and time.monotonic() < deadline:
+                root.update()
+                time.sleep(0.01)
+            assert not application._batch_busy and not errors, errors
+            assert all(not panel.busy for panel in application.panels.values())
+
+        save_all()
+        batch_clients = {}
+        for key, panel in application.panels.items():
+            result = json.loads(panel.output.get('1.0', 'end'))
+            target = destination / panel.product.initial_file
+            assert target.is_file() and Path(result['path']) == target
+            assert result['sequence'] == 1 and result['verification']['valid']
+            batch_clients[key] = result['client_id']
+            panel.inputs['previous_license'].set(str(target))
+        assert len(list(destination.glob('*.lic'))) == 3
+        destination = output_dir / 'save-all-renewal'
+        destination.mkdir()
+        shared['expires'].set('2033-12-31')
+        save_all()
+        for key, panel in application.panels.items():
+            result = json.loads(panel.output.get('1.0', 'end'))
+            assert result['sequence'] == 2 and result['client_id'] == batch_clients[key]
+            assert result['verification']['valid']
+        assert len(list(destination.glob('*.lic'))) == 3
+        assert len(picker_calls) == 2
+        report['save_all'] = {'preflight_before_picker': True, 'new_files': 3,
+                              'renewed_files': 3, 'client_ids_preserved': True,
+                              'all_panels_unlocked': True}
         rust = importlib.import_module('cryptography.hazmat.bindings._rust')
         assert Path(rust.__file__).resolve().is_relative_to(bundle)
         report['cryptography_native'] = rust.__file__
@@ -93,6 +161,7 @@ def run(output_dir):
     finally:
         application.close()
         app.messagebox.showerror = original_error
+        app.filedialog.askdirectory = original_picker
 
 
 def main(report_path):

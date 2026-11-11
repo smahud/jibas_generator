@@ -1,0 +1,30 @@
+{
+  "scenes": 6,
+  "passed": true,
+  "errors": [],
+  "output_pixels": [
+    102
+  ],
+  "screenshots": [
+    "gui_face_880x650.png",
+    "gui_schoolpay_880x650.png",
+    "gui_cbe_880x650.png",
+    "gui_face_760x560.png",
+    "gui_schoolpay_760x560.png",
+    "gui_cbe_760x560.png"
+  ],
+  "synthetic_values": {
+    "shared": {
+      "system_id": "DDCB4",
+      "client_id": "",
+      "client_name": "Contoh Sekolah",
+      "expires": "2030-12-31",
+      "capacity": "100"
+    },
+    "database_ids": {
+      "face": "V4YNE",
+      "schoolpay": "7VJM4",
+      "cbe": "ABCDE"
+    }
+  }
+}
