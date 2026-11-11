@@ -1,27 +1,30 @@
 {
   "ok": true,
   "exit_code": 0,
-  "isolated_directory": "C:\\Users\\LAPTOP~1\\AppData\\Local\\Temp\\jibas-standalone-only-ag6m8v08",
+  "isolated_directory": "C:\\Users\\LAPTOP~1\\AppData\\Local\\Temp\\jibas-standalone-only-6fruxot6",
   "initial_files": [
     "JIBAS-Generator-Codex.exe"
   ],
   "python_environment_removed": true,
   "path_restricted_to_windows": "C:\\Windows\\System32;C:\\Windows",
-  "artifact_sha256": "e9c10166aa09293915a51784bc3160f30fd979a93ae3e1f215fe004f07fb8ae5",
+  "artifact_sha256": "bc3d0d5bccf27f6ba522c19365a462360af7b00ffbe26f3726773c58b7d0ef6c",
   "report": {
     "frozen": true,
-    "executable": "C:\\Users\\LAPTOP~1\\AppData\\Local\\Temp\\jibas-standalone-only-ag6m8v08\\JIBAS-Generator-Codex.exe",
-    "executable_sha256": "e9c10166aa09293915a51784bc3160f30fd979a93ae3e1f215fe004f07fb8ae5",
-    "bundle": "C:\\Users\\Laptop Kantor - ASUS\\AppData\\Local\\Temp\\_MEI00002d902",
+    "executable": "C:\\Users\\LAPTOP~1\\AppData\\Local\\Temp\\jibas-standalone-only-6fruxot6\\JIBAS-Generator-Codex.exe",
+    "executable_sha256": "bc3d0d5bccf27f6ba522c19365a462360af7b00ffbe26f3726773c58b7d0ef6c",
+    "bundle": "C:\\Users\\Laptop Kantor - ASUS\\AppData\\Local\\Temp\\_MEI00002cc82",
     "sys_path": [
-      "C:\\Users\\LAPTOP~1\\AppData\\Local\\Temp\\_MEI00002d902\\base_library.zip",
-      "C:\\Users\\LAPTOP~1\\AppData\\Local\\Temp\\_MEI00002d902\\python3.12\\lib-dynload",
-      "C:\\Users\\LAPTOP~1\\AppData\\Local\\Temp\\_MEI00002d902"
+      "C:\\Users\\LAPTOP~1\\AppData\\Local\\Temp\\_MEI00002cc82\\base_library.zip",
+      "C:\\Users\\LAPTOP~1\\AppData\\Local\\Temp\\_MEI00002cc82\\python3.12\\lib-dynload",
+      "C:\\Users\\LAPTOP~1\\AppData\\Local\\Temp\\_MEI00002cc82"
     ],
     "tabs": [
       "Absensi Wajah",
+      "Absensi Finger",
       "SchoolPay",
-      "CBE Server"
+      "CBE Server",
+      "SJS",
+      "LetterStore"
     ],
     "cases": [
       {
@@ -29,32 +32,64 @@
         "generated": true,
         "inspected": true,
         "verified": true,
+        "module": "C:\\Users\\LAPTOP~1\\AppData\\Local\\Temp\\_MEI00002cc82\\license_codec.py",
+        "wrong_database_rejected": true,
         "wrong_system_rejected": true,
         "renewal_sequence": 2,
-        "client_id_preserved": true,
-        "module": "C:\\Users\\LAPTOP~1\\AppData\\Local\\Temp\\_MEI00002d902\\license_codec.py"
+        "client_id_preserved": true
+      },
+      {
+        "product": "fingerprint",
+        "generated": true,
+        "inspected": true,
+        "verified": true,
+        "module": "C:\\Users\\LAPTOP~1\\AppData\\Local\\Temp\\_MEI00002cc82\\fingerprint_codec.py",
+        "wrong_scanner_rejected": true,
+        "regenerated_without_renewal": true
       },
       {
         "product": "schoolpay",
         "generated": true,
         "inspected": true,
         "verified": true,
+        "module": "C:\\Users\\LAPTOP~1\\AppData\\Local\\Temp\\_MEI00002cc82\\schoolpay_codec.py",
+        "wrong_database_rejected": true,
         "wrong_system_rejected": true,
         "renewal_sequence": 2,
-        "client_id_preserved": true,
-        "module": "C:\\Users\\LAPTOP~1\\AppData\\Local\\Temp\\_MEI00002d902\\schoolpay_codec.py"
+        "client_id_preserved": true
       },
       {
         "product": "cbe",
         "generated": true,
         "inspected": true,
         "verified": true,
+        "module": "C:\\Users\\LAPTOP~1\\AppData\\Local\\Temp\\_MEI00002cc82\\cbe_codec.py",
+        "wrong_database_rejected": true,
         "wrong_system_rejected": true,
         "renewal_sequence": 2,
-        "client_id_preserved": true,
-        "module": "C:\\Users\\LAPTOP~1\\AppData\\Local\\Temp\\_MEI00002d902\\cbe_codec.py"
+        "client_id_preserved": true
+      },
+      {
+        "product": "sjs",
+        "generated": true,
+        "inspected": true,
+        "verified": true,
+        "module": "C:\\Users\\LAPTOP~1\\AppData\\Local\\Temp\\_MEI00002cc82\\sjs_codec.py",
+        "wrong_database_rejected": true,
+        "renewal_sequence": 2,
+        "client_id_preserved": true
+      },
+      {
+        "product": "letterstore",
+        "generated": true,
+        "inspected": true,
+        "verified": true,
+        "module": "C:\\Users\\LAPTOP~1\\AppData\\Local\\Temp\\_MEI00002cc82\\letterstore_codec.py",
+        "wrong_database_rejected": true,
+        "regenerated_without_renewal": true
       }
     ],
+    "sjs_fixture_kind": "synthetic statistics; no online registration",
     "shared_fields_verified": [
       "system_id",
       "client_id",
@@ -62,23 +97,71 @@
       "expires",
       "capacity"
     ],
+    "shared_field_owners": {
+      "system_id": [
+        "face",
+        "schoolpay",
+        "cbe"
+      ],
+      "client_id": [
+        "face",
+        "schoolpay",
+        "cbe"
+      ],
+      "client_name": [
+        "face",
+        "fingerprint",
+        "schoolpay",
+        "cbe",
+        "sjs",
+        "letterstore"
+      ],
+      "expires": [
+        "face",
+        "schoolpay",
+        "cbe",
+        "sjs"
+      ],
+      "capacity": [
+        "face",
+        "schoolpay",
+        "cbe",
+        "sjs"
+      ]
+    },
     "database_ids_independent": true,
+    "database_id_panel_count": 5,
     "resources": {
       "schema.xml": "63952cfd0db50a581934fa3d366b48fa1ae0238687c0dfe3df74fb6abe5178c4",
       "schoolpay_schema.xml": "1f433effb04941f495c27b8f4d4530a49c0acd8317199bdbc536c3f898062058",
       "cbe_schema.xml": "129fe37ecaa184d6533791037a8b838b001edec52d986ec0564e83e49ad071b8",
+      "fingerprint_schema.xml": "ba924e06ee92f3bd50d7527746dabd403daa0b4ed60589e27b74097dd5e6f067",
+      "sjs_schema.xml": "a853006b35b0bd77538a234831d38e9a6155c2e4b011b00e8cf96c7a2c274428",
+      "sjs_format.json": "3d6ea3f42bbe8d9595123e47aec52091bf9a8c81f84a9caf2b96713eebd57f7c",
       "format_profile.json": "a987be94b8752c688f43d32dc49df424a3f3eee68b8833b75d0934e0fa14c974"
     },
-    "tcl_library": "C:\\Users\\LAPTOP~1\\AppData\\Local\\Temp\\_MEI00002d902\\_tcl_data",
-    "tk_library": "C:\\Users\\LAPTOP~1\\AppData\\Local\\Temp\\_MEI00002d902\\_tk_data",
+    "tcl_library": "C:\\Users\\LAPTOP~1\\AppData\\Local\\Temp\\_MEI00002cc82\\_tcl_data",
+    "tk_library": "C:\\Users\\LAPTOP~1\\AppData\\Local\\Temp\\_MEI00002cc82\\_tk_data",
     "save_all": {
       "preflight_before_picker": true,
-      "new_files": 3,
-      "renewed_files": 3,
+      "new_files": 6,
+      "renewed_files": 4,
+      "regenerated_files": 2,
+      "second_folder_files": 6,
+      "renewed_products": [
+        "face",
+        "schoolpay",
+        "cbe",
+        "sjs"
+      ],
+      "regenerated_products": [
+        "fingerprint",
+        "letterstore"
+      ],
       "client_ids_preserved": true,
       "all_panels_unlocked": true
     },
-    "cryptography_native": "C:\\Users\\LAPTOP~1\\AppData\\Local\\Temp\\_MEI00002d902\\cryptography\\hazmat\\bindings\\_rust.pyd",
+    "cryptography_native": "C:\\Users\\LAPTOP~1\\AppData\\Local\\Temp\\_MEI00002cc82\\cryptography\\hazmat\\bindings\\_rust.pyd",
     "ok": true,
     "activation_proven": false
   }

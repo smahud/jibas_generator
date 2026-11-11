@@ -1,0 +1,26 @@
+{
+  "manager": {
+    "result": true,
+    "rows": 1,
+    "cache_exists": true,
+    "cache_reloaded": true,
+    "same_serial": true,
+    "wrong_serial": false
+  },
+  "client14": {
+    "result": true,
+    "rows": 1,
+    "cache_exists": true,
+    "cache_reloaded": true,
+    "same_serial": true,
+    "wrong_serial": false
+  },
+  "client16": {
+    "result": true,
+    "rows": 1,
+    "cache_exists": true,
+    "cache_reloaded": true,
+    "same_serial": true,
+    "wrong_serial": false
+  }
+}

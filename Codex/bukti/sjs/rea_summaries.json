@@ -1,0 +1,563 @@
+[
+  {
+    "evidence_id": "ev_065978867f16916e78202b6eb066864e4957a0961766afc738e9ebc3a914ed69",
+    "subject": {
+      "name": "JIBAS SJS - Sinkronisasi Jendela Sekolah 7.10",
+      "digest": {
+        "sha256": "14539b8ca58e06319c831e5bec9e80e868d568851d1bae0a52511f2842a35e7a"
+      },
+      "local_path": "C:\\Program Files (x86)\\YIM\\JIBAS SJS - Sinkronisasi Jendela Sekolah 7.10",
+      "format": "directory",
+      "architecture": null
+    },
+    "provider": {
+      "id": "rea-analysis-view",
+      "name": "REA analysis view projection",
+      "version": "1"
+    },
+    "analysis_profile": null,
+    "predicate_type": "rea.analysis-view",
+    "operation": "inspect_analysis_view",
+    "parameters": {
+      "parent_evidence_id": "ev_9cdb090b6a52a9623b586e57e53bec41305930e76341d4e0e3842f46c25337cc",
+      "view": {
+        "kind": "summary"
+      }
+    },
+    "raw_result": null,
+    "normalized_result": {
+      "kind": "summary",
+      "view": {
+        "kind": "summary"
+      },
+      "parent_evidence_id": "ev_9cdb090b6a52a9623b586e57e53bec41305930e76341d4e0e3842f46c25337cc",
+      "parent_operation": "inspect_desktop_application",
+      "parent_digest": "9cdb090b6a52a9623b586e57e53bec41305930e76341d4e0e3842f46c25337cc",
+      "view_digest": "9ee0ca5ba04e11fab5cc106a9d4d68ae43dbc7277b66f78305535b989191a2ae",
+      "artifact": {
+        "path": "C:\\Program Files (x86)\\YIM\\JIBAS SJS - Sinkronisasi Jendela Sekolah 7.10",
+        "sha256": "14539b8ca58e06319c831e5bec9e80e868d568851d1bae0a52511f2842a35e7a"
+      },
+      "coverage": {
+        "status": "complete-within-view",
+        "examined": 20,
+        "total": 20,
+        "next_offset": null,
+        "exhausted": true
+      },
+      "limitations": [
+        "Runtime candidates and component markers do not establish loaded code, execution, or build correspondence.",
+        "The directory SHA-256 commits only to retained paths, omission kinds, available filesystem metadata and read-range digests, not to every file's contents. Unread bytes are unknown.",
+        "Special-entry payloads are not read. Their paths and kinds are retained; other special-entry metadata is unavailable in this report.",
+        "Child symlinks are not followed. Executable section-embedded PCKs without a trailer and encrypted contents remain unexamined.",
+        "This is a sequence of stable entry observations, not an atomic snapshot of the entire directory.",
+        "Unity reference decoding stops after a witness in each Data/Managed directory; other assemblies' references are unexamined. Header facts remain per-file."
+      ],
+      "unknowns": [
+        "Runtime behavior and unread bytes remain unknown."
+      ],
+      "summary": {
+        "root": {
+          "path": "C:\\Program Files (x86)\\YIM\\JIBAS SJS - Sinkronisasi Jendela Sekolah 7.10",
+          "canonical_path": "C:\\Program Files (x86)\\YIM\\JIBAS SJS - Sinkronisasi Jendela Sekolah 7.10",
+          "namespace_id": "dsr_2039cdc7d29aa97c6ad473e60e85235fb7d06a63de09167d609a86e91528ca96",
+          "identity": {
+            "device": "3505467955",
+            "inode": "2251799813799594"
+          },
+          "snapshot_sha256": "14539b8ca58e06319c831e5bec9e80e868d568851d1bae0a52511f2842a35e7a",
+          "identity_scope": "examined-metadata-and-read-ranges"
+        },
+        "source_coverage": {
+          "status": "complete-within-scan",
+          "entries_examined": 20,
+          "files_probed": 13,
+          "bytes_read": 3952,
+          "symlinks_not_followed": 0,
+          "special_entries_omitted": 0,
+          "limits": {
+            "max_entries": 20000,
+            "max_probe_bytes": 8388608
+          }
+        },
+        "available_counts": {
+          "files": 20,
+          "omissions": 0,
+          "candidates": 1,
+          "components": 0,
+          "next_probes": 12
+        },
+        "probe_issues": {
+          "file_count": 0,
+          "issue_count": 0,
+          "preview": [],
+          "preview_truncated": false
+        },
+        "candidates": [
+          {
+            "candidate_id": "dsc_73bd901938dbeefcb77356738a76f67cb9bf71bf08157222f2b7e5e31cd95bec",
+            "family": "dotnet",
+            "confidence": "derived",
+            "rationale": "PE optional headers declare nonempty CLI directories; CLR execution and metadata validity remain unverified.",
+            "basis_file_count": 12,
+            "basis_path_preview": [
+              "MySql.Data.dll",
+              "Google.Apis.Core.dll"
+            ]
+          }
+        ],
+        "components": [],
+        "next_probe_groups": [
+          {
+            "operation": "inspect_managed_artifact",
+            "count": 12,
+            "example": {
+              "probe_id": "dsp_38b5ce8712d7ae347dc46a514817dc3e984fec3694229824e4fc1ec1c4f87341",
+              "operation": "inspect_managed_artifact",
+              "path": "C:\\Program Files (x86)\\YIM\\JIBAS SJS - Sinkronisasi Jendela Sekolah 7.10\\Google.Apis.Auth.dll",
+              "file_id": "dsf_1fe279d156f5bd8a73f48d156db7f653e6004a55d3912777767f6161077d1233",
+              "rationale": "Inspect the declared managed metadata and references.",
+              "confidence": "inferred"
+            }
+          }
+        ]
+      }
+    },
+    "confidence": "derived",
+    "authority": "shipped-artifact",
+    "environment": null,
+    "limitations": [
+      "Runtime candidates and component markers do not establish loaded code, execution, or build correspondence.",
+      "The directory SHA-256 commits only to retained paths, omission kinds, available filesystem metadata and read-range digests, not to every file's contents. Unread bytes are unknown.",
+      "Special-entry payloads are not read. Their paths and kinds are retained; other special-entry metadata is unavailable in this report.",
+      "Child symlinks are not followed. Executable section-embedded PCKs without a trailer and encrypted contents remain unexamined.",
+      "This is a sequence of stable entry observations, not an atomic snapshot of the entire directory.",
+      "Unity reference decoding stops after a witness in each Data/Managed directory; other assemblies' references are unexamined. Header facts remain per-file."
+    ],
+    "relationship_coverage": null,
+    "locations": [
+      {
+        "kind": "artifact-path",
+        "path": "C:\\Program Files (x86)\\YIM\\JIBAS SJS - Sinkronisasi Jendela Sekolah 7.10"
+      }
+    ],
+    "evidence_links": [
+      "ev_9cdb090b6a52a9623b586e57e53bec41305930e76341d4e0e3842f46c25337cc"
+    ]
+  },
+  {
+    "evidence_id": "ev_c45962c53a2d8943b18d4b53877cad13526889952fb3d57823ea2cf7cf650cda",
+    "subject": {
+      "name": "JsSync.exe",
+      "digest": {
+        "sha256": "6078efda305e292dabc2bd371c78f870fade17eff98f0c141e5aa565cb25c838"
+      },
+      "local_path": "C:\\Program Files (x86)\\YIM\\JIBAS SJS - Sinkronisasi Jendela Sekolah 7.10\\JsSync.exe",
+      "format": "pe",
+      "architecture": "x86"
+    },
+    "provider": {
+      "id": "rea-analysis-view",
+      "name": "REA analysis view projection",
+      "version": "1"
+    },
+    "analysis_profile": null,
+    "predicate_type": "rea.analysis-view",
+    "operation": "inspect_analysis_view",
+    "parameters": {
+      "parent_evidence_id": "ev_d2e69805a8a7c7b7923d363680176fd6380479a942658ce5f52aa30671ad35d0",
+      "view": {
+        "kind": "summary"
+      }
+    },
+    "raw_result": null,
+    "normalized_result": {
+      "kind": "summary",
+      "view": {
+        "kind": "summary"
+      },
+      "parent_evidence_id": "ev_d2e69805a8a7c7b7923d363680176fd6380479a942658ce5f52aa30671ad35d0",
+      "parent_operation": "inspect_managed_artifact",
+      "parent_digest": "d2e69805a8a7c7b7923d363680176fd6380479a942658ce5f52aa30671ad35d0",
+      "view_digest": "58b4b0747049d847a14fd0ba5a3f8acb2058264e4198a4b4c3a301933e0ad708",
+      "artifact": {
+        "path": "C:\\Program Files (x86)\\YIM\\JIBAS SJS - Sinkronisasi Jendela Sekolah 7.10\\JsSync.exe",
+        "sha256": "6078efda305e292dabc2bd371c78f870fade17eff98f0c141e5aa565cb25c838"
+      },
+      "coverage": {
+        "status": "complete-within-view",
+        "examined": 181,
+        "total": 181,
+        "next_offset": null,
+        "exhausted": true
+      },
+      "limitations": [
+        "Static inspection did not load the assembly, resolve dependencies through a CLR, decompile C#, or execute target code."
+      ],
+      "unknowns": [
+        "Collection counts and pages cover producer-returned rows; metadata completeness remains the original metadata status and coverage, not an absence claim about unreturned rows.",
+        "Metadata tokens are build-local coordinates bound to the recorded artifact SHA-256 and module MVID; this view does not load or execute the assembly."
+      ],
+      "summary": {
+        "artifact": {
+          "path": "C:\\Program Files (x86)\\YIM\\JIBAS SJS - Sinkronisasi Jendela Sekolah 7.10\\JsSync.exe",
+          "sha256": "6078efda305e292dabc2bd371c78f870fade17eff98f0c141e5aa565cb25c838",
+          "byte_length": 1832448,
+          "format": "pe"
+        },
+        "pe": {
+          "machine": 332,
+          "machine_hex": "0x014c",
+          "architecture": "x86",
+          "optional_header": "pe32",
+          "section_count": 3,
+          "characteristics": 302,
+          "cli": {
+            "header_offset": 520,
+            "header_size": 72,
+            "runtime_version": "2.5",
+            "flags": 131075,
+            "flag_names": [
+              "il-only",
+              "32-bit-required",
+              "32-bit-preferred"
+            ],
+            "entry_point": {
+              "kind": "metadata-token",
+              "value": "0x06001297"
+            },
+            "metadata_rva": 1402884,
+            "metadata_size": 432584,
+            "resources_rva": 852228,
+            "resources_size": 550656,
+            "strong_name_rva": 0,
+            "strong_name_size": 0,
+            "managed_native_header_rva": 0,
+            "managed_native_header_size": 0,
+            "ready_to_run_signature": false
+          }
+        },
+        "classification": {
+          "status": "managed",
+          "container": "pe",
+          "runtime_family": "dotnet-framework",
+          "implementation": "cil",
+          "managed_architecture": "anycpu-prefer-32",
+          "evidence": [
+            {
+              "code": "cli-header-observed",
+              "detail": "A file-backed PE CLI header and metadata root were admitted.",
+              "file_offset": 520
+            },
+            {
+              "code": "target-framework-observed",
+              "detail": "An assembly-level TargetFrameworkAttribute names .NET Framework.",
+              "file_offset": 1595026
+            },
+            {
+              "code": "managed-architecture-derived",
+              "detail": "Managed architecture anycpu-prefer-32 is derived from PE machine and CLI flags.",
+              "file_offset": 536
+            }
+          ]
+        },
+        "metadata": {
+          "status": "complete",
+          "version": "v4.0.30319",
+          "stream_names": [
+            "#Blob",
+            "#GUID",
+            "#Strings",
+            "#US",
+            "#~"
+          ],
+          "table_row_counts": {
+            "Module": 1,
+            "TypeRef": 607,
+            "TypeDef": 604,
+            "Field": 2744,
+            "MethodDef": 5329,
+            "Param": 7009,
+            "InterfaceImpl": 70,
+            "MemberRef": 2358,
+            "Constant": 32,
+            "CustomAttribute": 122,
+            "FieldMarshal": 7,
+            "ClassLayout": 7,
+            "StandAloneSig": 1132,
+            "PropertyMap": 14,
+            "Property": 49,
+            "MethodSemantics": 71,
+            "MethodImpl": 54,
+            "ModuleRef": 6,
+            "TypeSpec": 258,
+            "ImplMap": 29,
+            "FieldRVA": 10,
+            "Assembly": 1,
+            "AssemblyRef": 17,
+            "ManifestResource": 42,
+            "NestedClass": 166,
+            "GenericParam": 117,
+            "MethodSpec": 75,
+            "GenericParamConstraint": 1
+          }
+        },
+        "module": {
+          "name": "JsSync.exe",
+          "generation": 0,
+          "mvid": "8bab9291-3e99-4322-07e1-cc628baabb12",
+          "enc_id": null,
+          "enc_base_id": null,
+          "token": "0x00000001",
+          "row_offset": 1395448
+        },
+        "assembly": {
+          "name": "JsSync",
+          "version": "7.10.0.0",
+          "culture": null,
+          "flags": 0,
+          "hash_algorithm": 32772,
+          "public_key": {
+            "kind": "none",
+            "byte_length": 0,
+            "sha256": null,
+            "token": null
+          },
+          "token": "0x20000001",
+          "row_offset": 1600438
+        },
+        "target_frameworks": [
+          ".NETFramework,Version=v4.8"
+        ],
+        "coverage": {
+          "state": "complete",
+          "issues": []
+        },
+        "limitations": [
+          "Static inspection did not load the assembly, resolve dependencies through a CLR, decompile C#, or execute target code."
+        ],
+        "reported_counts": {
+          "references": 17,
+          "resources": 42,
+          "attributes": 122
+        },
+        "identity_scope": {
+          "token_identity": "build-local",
+          "requires_artifact_sha256": "6078efda305e292dabc2bd371c78f870fade17eff98f0c141e5aa565cb25c838",
+          "requires_mvid": "8bab9291-3e99-4322-07e1-cc628baabb12"
+        }
+      }
+    },
+    "confidence": "derived",
+    "authority": "shipped-artifact",
+    "environment": null,
+    "limitations": [
+      "Static inspection did not load the assembly, resolve dependencies through a CLR, decompile C#, or execute target code."
+    ],
+    "relationship_coverage": null,
+    "locations": [
+      {
+        "kind": "artifact-path",
+        "path": "C:\\Program Files (x86)\\YIM\\JIBAS SJS - Sinkronisasi Jendela Sekolah 7.10\\JsSync.exe"
+      }
+    ],
+    "evidence_links": [
+      "ev_d2e69805a8a7c7b7923d363680176fd6380479a942658ce5f52aa30671ad35d0"
+    ]
+  },
+  {
+    "evidence_id": "ev_3723de5bee7f20a41c1ea4584c18c76ae19d653a04143869bd26b80585d93c3a",
+    "subject": {
+      "name": "JsSync.exe",
+      "digest": {
+        "sha256": "6078efda305e292dabc2bd371c78f870fade17eff98f0c141e5aa565cb25c838"
+      },
+      "local_path": "C:\\Program Files (x86)\\YIM\\JIBAS SJS - Sinkronisasi Jendela Sekolah 7.10\\JsSync.exe",
+      "format": "pe",
+      "architecture": "x86"
+    },
+    "provider": {
+      "id": "rea-analysis-view",
+      "name": "REA analysis view projection",
+      "version": "1"
+    },
+    "analysis_profile": null,
+    "predicate_type": "rea.analysis-view",
+    "operation": "inspect_analysis_view",
+    "parameters": {
+      "parent_evidence_id": "ev_ce9c1a84cd429124a7c84027ce994c7839562e7693433d0748c9f8045bbdece9",
+      "view": {
+        "kind": "summary"
+      }
+    },
+    "raw_result": null,
+    "normalized_result": {
+      "kind": "summary",
+      "view": {
+        "kind": "summary"
+      },
+      "parent_evidence_id": "ev_ce9c1a84cd429124a7c84027ce994c7839562e7693433d0748c9f8045bbdece9",
+      "parent_operation": "inspect_managed_members",
+      "parent_digest": "ce9c1a84cd429124a7c84027ce994c7839562e7693433d0748c9f8045bbdece9",
+      "view_digest": "ad537885462d9982dc6e6f95c2defcbb74c0f6950debbc16cfc08c00ae2d11c5",
+      "artifact": {
+        "path": "C:\\Program Files (x86)\\YIM\\JIBAS SJS - Sinkronisasi Jendela Sekolah 7.10\\JsSync.exe",
+        "sha256": "6078efda305e292dabc2bd371c78f870fade17eff98f0c141e5aa565cb25c838"
+      },
+      "coverage": {
+        "status": "complete-within-view",
+        "examined": 3378,
+        "total": 3378,
+        "next_offset": null,
+        "exhausted": true
+      },
+      "limitations": [
+        "CIL instruction anchors are decoded from file-backed method bodies only; no target assembly is loaded or executed.",
+        "Exported types are reported from ExportedType rows as declared; forwarded types are not resolved in their implementing assemblies.",
+        "Member signatures decode ECMA-335 primitive, class, valuetype, generic instantiation, generic variable, pointer, byref, single-dimension and general array, function pointer including VARARG sentinels, custom modifier, and typed reference forms; class and valuetype operands keep their encoded TypeDefOrRefOrSpec values.",
+        "Metadata tokens are build-local coordinates and are only meaningful with the reported artifact SHA-256 and MVID.",
+        "Types, fields, methods, call edges, field accesses, and user strings cover only the selected declaring types; coverage describes that selection. Edge targets outside it keep their names but are not described.",
+        "User strings are the #US literals loaded by ldstr in the inspected method bodies, with their own coverage; instruction anchors and normalized CIL digests keep their build-local tokens."
+      ],
+      "unknowns": [
+        "Collection counts and pages cover producer-returned rows; member completeness remains the original coverage, not an absence claim about unreturned rows.",
+        "Exported types and member references cover the whole assembly; the other collections cover only the selected declaring types.",
+        "Metadata tokens are build-local coordinates bound to the recorded artifact SHA-256 and module MVID; this view does not load or execute the assembly."
+      ],
+      "summary": {
+        "signature_resolution": "type-names-v1",
+        "nesting_read": true,
+        "artifact": {
+          "path": "C:\\Program Files (x86)\\YIM\\JIBAS SJS - Sinkronisasi Jendela Sekolah 7.10\\JsSync.exe",
+          "sha256": "6078efda305e292dabc2bd371c78f870fade17eff98f0c141e5aa565cb25c838",
+          "byte_length": 1832448,
+          "format": "pe"
+        },
+        "module": {
+          "name": "JsSync.exe",
+          "generation": 0,
+          "mvid": "8bab9291-3e99-4322-07e1-cc628baabb12",
+          "enc_id": null,
+          "enc_base_id": null,
+          "token": "0x00000001",
+          "row_offset": 1395448
+        },
+        "assembly": {
+          "name": "JsSync",
+          "version": "7.10.0.0",
+          "culture": null,
+          "flags": 0,
+          "hash_algorithm": 32772,
+          "public_key": {
+            "kind": "none",
+            "byte_length": 0,
+            "sha256": null,
+            "token": null
+          },
+          "token": "0x20000001",
+          "row_offset": 1600438
+        },
+        "metadata": {
+          "status": "complete",
+          "version": "v4.0.30319",
+          "table_row_counts": {
+            "Module": 1,
+            "TypeRef": 607,
+            "TypeDef": 604,
+            "Field": 2744,
+            "MethodDef": 5329,
+            "Param": 7009,
+            "InterfaceImpl": 70,
+            "MemberRef": 2358,
+            "Constant": 32,
+            "CustomAttribute": 122,
+            "FieldMarshal": 7,
+            "ClassLayout": 7,
+            "StandAloneSig": 1132,
+            "PropertyMap": 14,
+            "Property": 49,
+            "MethodSemantics": 71,
+            "MethodImpl": 54,
+            "ModuleRef": 6,
+            "TypeSpec": 258,
+            "ImplMap": 29,
+            "FieldRVA": 10,
+            "Assembly": 1,
+            "AssemblyRef": 17,
+            "ManifestResource": 42,
+            "NestedClass": 166,
+            "GenericParam": 117,
+            "MethodSpec": 75,
+            "GenericParamConstraint": 1
+          }
+        },
+        "identity_scope": {
+          "token_identity": "build-local",
+          "requires_artifact_sha256": "6078efda305e292dabc2bd371c78f870fade17eff98f0c141e5aa565cb25c838",
+          "requires_mvid": "8bab9291-3e99-4322-07e1-cc628baabb12"
+        },
+        "selection": {
+          "type_names": [
+            "#=zYrgkbrfxOGX$LgQrdjhEMjusB3I2r8bFvQiEBdlMzIuby4l6AVkjGqM=",
+            "#=zcLBpsfhwQZL3iznsd2pmaq__ct93Y5xgq4wLWs4Mv5XQjEZ4zA==",
+            "#=zdwksX0mNm6W0c0inP_wwpRMB$kxaqOd6oF3iVu_o1Ugsox1ZNKNwDRY=",
+            "#=zf7wB7s0Ypm42MjctdWH_D4dyWQ8bBOcNRkNkG4xpL8fVb5FqXA=="
+          ],
+          "unmatched_type_names": []
+        },
+        "method_rows": {
+          "offset": 0,
+          "count": 5329,
+          "total": 5329
+        },
+        "coverage": {
+          "state": "complete",
+          "issues": []
+        },
+        "user_strings": {
+          "state": "complete",
+          "issues": []
+        },
+        "limitations": [
+          "Metadata tokens are build-local coordinates and are only meaningful with the reported artifact SHA-256 and MVID.",
+          "CIL instruction anchors are decoded from file-backed method bodies only; no target assembly is loaded or executed.",
+          "Exported types are reported from ExportedType rows as declared; forwarded types are not resolved in their implementing assemblies.",
+          "User strings are the #US literals loaded by ldstr in the inspected method bodies, with their own coverage; instruction anchors and normalized CIL digests keep their build-local tokens.",
+          "Member signatures decode ECMA-335 primitive, class, valuetype, generic instantiation, generic variable, pointer, byref, single-dimension and general array, function pointer including VARARG sentinels, custom modifier, and typed reference forms; class and valuetype operands keep their encoded TypeDefOrRefOrSpec values.",
+          "Types, fields, methods, call edges, field accesses, and user strings cover only the selected declaring types; coverage describes that selection. Edge targets outside it keep their names but are not described."
+        ],
+        "reported_counts": {
+          "types": 4,
+          "exported_types": 0,
+          "fields": 15,
+          "methods": 46,
+          "member_refs": 2358,
+          "call_edges": 861,
+          "field_accesses": 92,
+          "user_strings": 2
+        }
+      }
+    },
+    "confidence": "derived",
+    "authority": "shipped-artifact",
+    "environment": null,
+    "limitations": [
+      "CIL instruction anchors are decoded from file-backed method bodies only; no target assembly is loaded or executed.",
+      "Exported types are reported from ExportedType rows as declared; forwarded types are not resolved in their implementing assemblies.",
+      "Member signatures decode ECMA-335 primitive, class, valuetype, generic instantiation, generic variable, pointer, byref, single-dimension and general array, function pointer including VARARG sentinels, custom modifier, and typed reference forms; class and valuetype operands keep their encoded TypeDefOrRefOrSpec values.",
+      "Metadata tokens are build-local coordinates and are only meaningful with the reported artifact SHA-256 and MVID.",
+      "Types, fields, methods, call edges, field accesses, and user strings cover only the selected declaring types; coverage describes that selection. Edge targets outside it keep their names but are not described.",
+      "User strings are the #US literals loaded by ldstr in the inspected method bodies, with their own coverage; instruction anchors and normalized CIL digests keep their build-local tokens."
+    ],
+    "relationship_coverage": null,
+    "locations": [
+      {
+        "kind": "artifact-path",
+        "path": "C:\\Program Files (x86)\\YIM\\JIBAS SJS - Sinkronisasi Jendela Sekolah 7.10\\JsSync.exe"
+      }
+    ],
+    "evidence_links": [
+      "ev_ce9c1a84cd429124a7c84027ce994c7839562e7693433d0748c9f8045bbdece9"
+    ]
+  }
+]

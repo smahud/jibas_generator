@@ -1,12 +1,11 @@
-"""Manual-input desktop app for FACE, SchoolPay, and CBE license workflows.
+"""Manual-input desktop app with explicit capabilities for six JIBAS products.
 
 Tk operations stay on the main thread. Tabs share customer and system inputs,
 while database IDs, files, backends, and results remain product-specific.
 """
 from __future__ import annotations
 
-from dataclasses import dataclass
-from datetime import date, datetime, timedelta
+from datetime import date, timedelta
 from functools import partial
 import importlib
 import json
@@ -17,29 +16,8 @@ import tkinter as tk
 from tkinter import filedialog, messagebox, ttk
 
 import batch_license
-
-
-SHARED_FIELDS = ("system_id", "client_id", "client_name", "expires", "capacity")
-
-
-@dataclass(frozen=True)
-class Product:
-    key: str
-    label: str
-    subtitle: str
-    codec_module: str
-    capacity_label: str
-    initial_file: str
-
-
-PRODUCTS = (
-    Product("face", "Absensi Wajah", "Face Server 16.5 / Client FACE 16.10",
-            "license_codec", "Kapasitas wajah", "absensi-wajah.lic"),
-    Product("schoolpay", "SchoolPay", "SchoolPay Secure Server 10.5",
-            "schoolpay_codec", "Kapasitas vendor", "schoolpay.lic"),
-    Product("cbe", "CBE Server", "CBE Server 26.5",
-            "cbe_codec", "Kapasitas klien", "cbe-server.lic"),
-)
+from product_catalog import Product, PRODUCTS, SHARED_FIELDS
+from product_actions import generate_with_backend, verify_with_backend
 
 
 def _run_queued_task(events, kind, operation):
@@ -53,44 +31,28 @@ def _run_queued_task(events, kind, operation):
         events.put(("result", kind, result))
 
 
-def _run_product_action(module_name, backend, action, values, overwrite):
+def _run_product_action(product, backend, action, values, overwrite):
+    module_name = product.codec_module
     module = backend if backend is not None else importlib.import_module(module_name)
-    return run_backend_action(module, action, values, overwrite=overwrite)
+    return run_backend_action(module, action, values, overwrite=overwrite, product=product)
 
 
-def run_backend_action(backend, action: str, values: dict, *, overwrite=False) -> dict:
+def run_backend_action(backend, action: str, values: dict, *, overwrite=False, product=None) -> dict:
     """Execute a snapshot of a form without reading or writing Tk objects."""
     if action == "inspect":
         if not values["file"]:
             raise ValueError("Pilih berkas lisensi terlebih dahulu.")
         return backend.inspect_license(Path(values["file"]))
+    product = product or PRODUCTS[0]
     if action not in ("verify", "generate"):
         raise ValueError("Operasi tidak dikenal.")
-    if not values["database_id"] or not values["system_id"]:
-        raise ValueError("Isi Database ID dan System ID mesin tujuan secara manual.")
     if action == "verify":
         if not values["file"]:
             raise ValueError("Pilih berkas lisensi terlebih dahulu.")
-        return backend.verify_license(
-            Path(values["file"]), values["database_id"], values["system_id"],
-            client_id=values["client_id"] or None)
-    datetime.strptime(values["expires"], "%Y-%m-%d")
-    try:
-        capacity = int(values["capacity"])
-    except ValueError as exc:
-        raise ValueError("Kapasitas harus berupa bilangan bulat lebih dari nol.") from exc
-    if not 1 <= capacity <= 2_147_483_647:
-        raise ValueError("Kapasitas harus antara 1 dan 2147483647.")
-    if values["client_id"] and not values["previous_license"]:
-        raise ValueError("Untuk perpanjangan, pilih berkas lisensi lama agar urutan diperbarui otomatis.")
+        return verify_with_backend(backend, product, Path(values["file"]), values)
     if not values["file"]:
         raise ValueError("Pilih lokasi keluaran terlebih dahulu.")
-    return backend.generate_license(
-        database_id=values["database_id"], system_id=values["system_id"],
-        client_id=values["client_id"] or None, expires=values["expires"],
-        capacity=capacity, output_path=values["file"], client_name=values["client_name"],
-        previous_license_path=Path(values["previous_license"]) if values["previous_license"] else None,
-        sequence=None, overwrite=overwrite)
+    return generate_with_backend(backend, product, values, values["file"], overwrite)
 
 
 class _Tooltip:
@@ -131,10 +93,13 @@ class LicensePanel(ttk.Frame):
         self.columnconfigure(1, weight=1)
         self.columnconfigure(3, weight=1)
         # Surplus window height stays below the form; results remain six lines.
-        self.rowconfigure(12, weight=1)
-        self.inputs = {key: tk.StringVar(self) for key in (
-            "database_id", "file", "previous_license")}
-        self.inputs.update(shared_inputs)
+        self.inputs = {key: shared_inputs[key] if key in shared_inputs else tk.StringVar(self)
+                       for key in product.input_keys}
+        self.inputs["file"] = tk.StringVar(self)
+        if product.supports_renewal:
+            self.inputs["previous_license"] = tk.StringVar(self)
+        if product.kind == "fingerprint":
+            self.inputs["license_scope"].set("Manager + Client")
         self.overwrite = tk.BooleanVar(self, value=False)
         self.status = tk.StringVar(self, value=f"Siap — {product.label}. Isi ID mesin tujuan secara manual.")
 
@@ -142,22 +107,23 @@ class LicensePanel(ttk.Frame):
             row=0, column=0, columnspan=2, sticky="w", pady=(0, 6))
         ttk.Label(self, text=product.subtitle, style="Hint.TLabel").grid(
             row=0, column=2, columnspan=2, sticky="e")
-        self._field(1, 0, "Database ID", "database_id", "Database ID dari instalasi produk yang dipilih")
-        self._field(1, 2, "System ID", "system_id", "Isi System ID mesin tujuan secara manual")
-        self._field(2, 0, "Client ID", "client_id", "Kosongkan untuk lisensi baru; pertahankan untuk perpanjangan")
-        self._field(2, 2, "Nama klien", "client_name", "Opsional")
-        self._field(3, 0, "Berlaku sampai", "expires", "Format YYYY-MM-DD")
-        capacity_hint = ("Maksimum koneksi CBE Client bersamaan" if product.key == "cbe"
-                         else "Bilangan bulat lebih dari nol")
-        self._field(3, 2, product.capacity_label, "capacity", capacity_hint)
-        ttk.Label(self, text="Perpanjangan: pilih lisensi lama; Client ID dipertahankan, urutan naik otomatis.",
-                  style="Hint.TLabel").grid(row=4, column=0, columnspan=4, sticky="w", pady=(4, 5))
-        self._browse_row(5, "Lisensi lama", "previous_license", previous=True)
-        ttk.Separator(self).grid(row=6, column=0, columnspan=4, sticky="ew", pady=7)
-        self._browse_row(7, "Berkas lisensi", "file", previous=False)
+        hints = {"expires": "Format YYYY-MM-DD", "client_name": "Opsional",
+                 "capacity": "Bilangan bulat positif", "school_id": "School ID asli dari registrasi SJS; bukan System ID",
+                 "client_id": "Kosongkan untuk baru; pilih lisensi lama untuk perpanjangan"}
+        for row, fields in enumerate(product.fields, 1):
+            for index, (key, label) in enumerate(fields):
+                self._field(row, index * 2, label, key, hints.get(key, label), span=3 if len(fields) == 1 else 1)
+        row = len(product.fields) + 1
+        ttk.Label(self, text=product.hint, style="Hint.TLabel", wraplength=700).grid(
+            row=row, column=0, columnspan=4, sticky="w", pady=(4, 5))
+        if product.supports_renewal:
+            row += 1
+            self._browse_row(row, "Lisensi lama", "previous_license", previous=True)
+        ttk.Separator(self).grid(row=row+1, column=0, columnspan=4, sticky="ew", pady=7)
+        self._browse_row(row+2, "Berkas lisensi", "file", previous=False)
 
         output_frame = ttk.Frame(self)
-        output_frame.grid(row=8, column=0, columnspan=4, sticky="ew", pady=5)
+        output_frame.grid(row=row+3, column=0, columnspan=4, sticky="ew", pady=5)
         output_frame.columnconfigure(0, weight=1)
         ttk.Label(output_frame, text="Hasil", style="Hint.TLabel").grid(row=0, column=0, sticky="w")
         self.output = tk.Text(output_frame, wrap="word", height=6, state="disabled",
@@ -169,7 +135,7 @@ class LicensePanel(ttk.Frame):
         self.output.configure(yscrollcommand=scrollbar.set)
 
         actions = ttk.Frame(self)
-        actions.grid(row=9, column=0, columnspan=4, sticky="ew", pady=(3, 0))
+        actions.grid(row=row+4, column=0, columnspan=4, sticky="ew", pady=(3, 0))
         actions.columnconfigure(2, weight=1)
         self._button(actions, "Baca isi", lambda: self.run_action("inspect")).grid(row=0, column=0, padx=(0, 6))
         self._button(actions, "Periksa", lambda: self.run_action("verify")).grid(row=0, column=1)
@@ -182,9 +148,10 @@ class LicensePanel(ttk.Frame):
                                             style="Accent.TButton")
         self.generate_button.grid(row=0, column=4)
         self.progress = ttk.Progressbar(self, mode="indeterminate")
-        self.progress.grid(row=10, column=0, columnspan=4, sticky="ew", pady=(7, 0))
+        self.progress.grid(row=row+5, column=0, columnspan=4, sticky="ew", pady=(7, 0))
         ttk.Label(self, textvariable=self.status, style="Hint.TLabel", wraplength=790).grid(
-            row=11, column=0, columnspan=4, sticky="w", pady=(5, 0))
+            row=row+6, column=0, columnspan=4, sticky="w", pady=(5, 0))
+        self.rowconfigure(row+7, weight=1)
         self._poll_id = self.after(50, self._poll_events)
 
     def _button(self, parent, text, command, **kw):
@@ -192,10 +159,15 @@ class LicensePanel(ttk.Frame):
         self._controls.append(widget)
         return widget
 
-    def _field(self, row, column, label, key, hint):
-        ttk.Label(self, text=label, width=16, anchor="w").grid(row=row, column=column, sticky="w", pady=3)
-        entry = ttk.Entry(self, textvariable=self.inputs[key])
-        entry.grid(row=row, column=column + 1, sticky="ew", padx=(0, 12), pady=3)
+    def _field(self, row, column, label, key, hint, span=1):
+        label_width = 20 if key in ("scanner_serial", "registration_token") else 16
+        ttk.Label(self, text=label, width=label_width, anchor="w").grid(row=row, column=column, sticky="w", pady=3)
+        if key == "license_scope":
+            entry = ttk.Combobox(self, textvariable=self.inputs[key], state="readonly",
+                                values=("Manager + Client", "Manager", "Client"))
+        else:
+            entry = ttk.Entry(self, textvariable=self.inputs[key])
+        entry.grid(row=row, column=column + 1, columnspan=span, sticky="ew", padx=(0, 12), pady=3)
         self._controls.append(entry)
         _Tooltip(entry, hint)
 
@@ -214,7 +186,8 @@ class LicensePanel(ttk.Frame):
             filetypes=[("Berkas lisensi", "*.lic *.enc"), ("Semua berkas", "*.*")])
         if path:
             self.inputs["previous_license" if previous else "file"].set(path)
-            self.status.set("Lisensi lama dipilih; Client ID dan urutan diperbarui otomatis saat pembuatan."
+            identity = "School ID" if self.product.kind == "sjs" else "Client ID"
+            self.status.set(f"Lisensi lama dipilih; {identity} dipertahankan, urutan naik otomatis saat pembuatan."
                             if previous else "Berkas dipilih. Klik Baca isi atau Periksa.")
 
     def show_result(self, result):
@@ -261,7 +234,7 @@ class LicensePanel(ttk.Frame):
                 return
             values["file"] = destination
         overwrite = self.overwrite.get()
-        operation = partial(_run_product_action, self.product.codec_module, self._backend,
+        operation = partial(_run_product_action, self.product, self._backend,
                             action, values, overwrite)
         self._start_task(action, operation,
                          f"Memproses {self.product.label}…")
@@ -349,7 +322,7 @@ class LicenseApp(ttk.Frame):
         style.configure("Hint.TLabel", foreground="#637085", font=("Segoe UI", 8))
         style.configure("TEntry", padding=4, font=("Segoe UI", 9))
         style.configure("TButton", padding=(8, 5), font=("Segoe UI", 9))
-        style.configure("TNotebook.Tab", padding=(18, 8), font=("Segoe UI", 10))
+        style.configure("TNotebook.Tab", padding=(10, 8), font=("Segoe UI", 10))
         style.configure("Accent.TButton", foreground="white", background="#2463b4")
         style.map("Accent.TButton", background=[("active", "#194e91")])
         self.pack(fill="both", expand=True)
@@ -368,7 +341,7 @@ class LicenseApp(ttk.Frame):
         return self.nametowidget(self.notebook.select())
 
     def save_all(self):
-        """Validate one snapshot before choosing the three products' folder."""
+        """Validate every product before choosing the common output folder."""
         if self._closed or self._batch_busy or any(panel.busy for panel in self.panels.values()):
             return False
         forms = [{"product": product.key, "label": product.label,
@@ -393,7 +366,7 @@ class LicenseApp(ttk.Frame):
         self._batch_busy = True
         for panel in self.panels.values():
             panel._set_busy(True)
-            panel.status.set("Membuat dan menyimpan ketiga lisensi…")
+            panel.status.set("Membuat dan menyimpan semua lisensi…")
         backends = {key: panel._backend for key, panel in self.panels.items() if panel._backend is not None}
         operation = partial(batch_license.generate_all, forms, destination, backends=backends)
         # A transaction must finish or roll back even if its window is closed.
@@ -416,7 +389,7 @@ class LicenseApp(ttk.Frame):
         for panel in self.panels.values():
             panel._set_busy(False)
         if state == "error" or payload.get("ok") is not True:
-            detail = payload if state == "error" else str(payload.get("error", "Penyimpanan ketiga lisensi belum berhasil."))
+            detail = payload if state == "error" else str(payload.get("error", "Penyimpanan semua lisensi belum berhasil."))
             for panel in self.panels.values():
                 panel.status.set("Save All belum berhasil. Lihat rincian hasil.")
                 panel.show_result({"error": detail})

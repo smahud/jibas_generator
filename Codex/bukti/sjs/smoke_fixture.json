@@ -1,0 +1,11 @@
+{
+  "fixture_kind": "synthetic statistics; not a user registration or online-issued token",
+  "database_id": "AB123",
+  "registration_token": "97875YgYKBhQIBwgZCQsbCxkPFQ4UAAgJGw4FCBUFCBkLCRsVBBQJGwoZDBUDDQNl",
+  "school_id": "SCHOOL-EXISTING-001",
+  "client_name": "Synthetic test school",
+  "expires": "2030-12-31",
+  "capacity": 1,
+  "activation_proven": false,
+  "expected_local_file_valid": true
+}

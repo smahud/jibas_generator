@@ -13,6 +13,7 @@ import pytest
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 import app
+from product_actions import verify_with_backend
 
 
 @pytest.fixture(scope="module")
@@ -48,6 +49,22 @@ def values(file="synthetic.lic"):
                 capacity="20", expires="2030-12-31", file=file, previous_license="")
 
 
+SJS_FIXTURE = json.loads((Path(__file__).resolve().parents[1] / "bukti/sjs/smoke_fixture.json").read_text(encoding="utf-8"))
+
+
+def product_values(product, file="synthetic.lic"):
+    snapshot = values(file)
+    snapshot.update(database_id={"face": "V4YNE", "schoolpay": "7VJM4", "cbe": "ABCDE",
+                                 "sjs": "AB123", "letterstore": "LS123"}.get(product.key, "ABCDE"),
+                    system_id="DDCB4", scanner_serial="SYNTHETIC-SCANNER-001",
+                    license_scope="Manager + Client", registration_token=SJS_FIXTURE["registration_token"],
+                    school_id=SJS_FIXTURE["school_id"])
+    supported = set(product.input_keys) | {"file"}
+    if product.supports_renewal:
+        supported.add("previous_license")
+    return {key: value for key, value in snapshot.items() if key in supported}
+
+
 def widgets(root):
     yield root
     for child in root.winfo_children():
@@ -61,57 +78,89 @@ def field_entry(panel, key):
 
 
 def fill_batch_forms(gui):
-    for product, database_id in (("face", "V4YNE"), ("schoolpay", "7VJM4"), ("cbe", "ABCDE")):
-        snapshot = values(f"unused-{product}.lic")
-        snapshot.update(database_id=database_id, system_id="DDCB4")
+    for product in app.PRODUCTS:
+        snapshot = product_values(product, f"unused-{product.key}.lic")
         for key, value in snapshot.items():
-            gui.panels[product].inputs[key].set(value)
+            gui.panels[product.key].inputs[key].set(value)
 
 
-def test_three_tabs_keep_database_ids_and_file_controls_independent(gui):
+def test_six_tabs_keep_private_identity_and_file_controls_independent(gui):
     assert [gui.notebook.tab(tab, "text") for tab in gui.notebook.tabs()] == [
-        "Absensi Wajah", "SchoolPay", "CBE Server"]
-    for key, database_id in (("face", "V4YNE"), ("schoolpay", "7VJM4"), ("cbe", "ABCDE")):
+        "Absensi Wajah", "Absensi Finger", "SchoolPay", "CBE Server", "SJS", "LetterStore"]
+    assert list(gui.panels) == ["face", "fingerprint", "schoolpay", "cbe", "sjs", "letterstore"]
+    for product in app.PRODUCTS:
+        key = product.key
         panel = gui.panels[key]
-        panel.inputs["database_id"].set(database_id)
+        identity = "scanner_serial" if key == "fingerprint" else "database_id"
+        value = product_values(product)[identity]
+        panel.inputs[identity].set(value)
         gui.notebook.select(panel)
         assert gui.active_panel() is panel
-        assert panel.inputs["database_id"].get() == database_id
+        assert panel.inputs[identity].get() == value
         assert "sequence" not in panel.inputs
         panel.inputs["file"].set(f"{key}.lic")
-        panel.inputs["previous_license"].set(f"{key}-previous.lic")
+        if product.supports_renewal:
+            panel.inputs["previous_license"].set(f"{key}-previous.lic")
+        else:
+            assert "previous_license" not in panel.inputs
         panel.overwrite.set(key == "face")
     assert gui.panels["face"].inputs["database_id"].get() == "V4YNE"
     assert gui.panels["schoolpay"].inputs["database_id"].get() == "7VJM4"
     field_entry(gui.panels["cbe"], "database_id").delete(0, "end")
     for key, panel in gui.panels.items():
         assert panel.inputs["file"].get() == f"{key}.lic"
-        assert panel.inputs["previous_license"].get() == f"{key}-previous.lic"
+        if panel.product.supports_renewal:
+            assert panel.inputs["previous_license"].get() == f"{key}-previous.lic"
         assert panel.overwrite.get() is (key == "face")
     assert gui.panels["cbe"].inputs["database_id"].get() == ""
     assert gui.panels["face"].inputs["database_id"].get() == "V4YNE"
     assert gui.panels["schoolpay"].inputs["database_id"].get() == "7VJM4"
-    assert len({str(panel.inputs["database_id"]) for panel in gui.panels.values()}) == 3
+    assert len({str(panel.inputs["database_id"]) for panel in gui.panels.values() if "database_id" in panel.inputs}) == 5
 
 
-@pytest.mark.parametrize("source", ["face", "schoolpay", "cbe"])
+@pytest.mark.parametrize("source", ["face", "fingerprint", "schoolpay", "cbe", "sjs", "letterstore"])
 def test_shared_fields_update_edit_and_delete_immediately_from_every_tab(gui, source):
     panel = gui.panels[source]
     gui.notebook.select(panel)
     for key in app.SHARED_FIELDS:
+        if key not in panel.inputs:
+            continue
+        destinations = [destination for destination in gui.panels.values() if key in destination.inputs]
         entry = field_entry(panel, key)
         entry.delete(0, "end")
         entry.insert(0, f"{source}-{key}")
-        for destination in gui.panels.values():
+        for destination in destinations:
             assert destination.inputs[key] is gui.shared_inputs[key]
             assert field_entry(destination, key).get() == f"{source}-{key}"
         entry.delete(0, 3)
         entry.insert(0, "edited")
         edited = entry.get()
-        assert all(field_entry(destination, key).get() == edited for destination in gui.panels.values())
+        assert all(field_entry(destination, key).get() == edited for destination in destinations)
         entry.delete(0, "end")
-        assert all(field_entry(destination, key).get() == "" for destination in gui.panels.values())
+        assert all(field_entry(destination, key).get() == "" for destination in destinations)
         assert not gui.shared_inputs[key].trace_info()
+
+
+def test_shared_variables_exist_only_on_products_supporting_them(gui):
+    for product in app.PRODUCTS:
+        panel = gui.panels[product.key]
+        expected = set(product.input_keys) | {"file"}
+        if product.supports_renewal:
+            expected.add("previous_license")
+        assert set(panel.inputs) == expected
+        for key in app.SHARED_FIELDS:
+            if key in product.input_keys:
+                assert panel.inputs[key] is gui.shared_inputs[key]
+            else:
+                assert key not in panel.inputs
+        for key in set(product.input_keys) - set(app.SHARED_FIELDS):
+            assert panel.inputs[key] not in gui.shared_inputs.values()
+    sjs = gui.panels["sjs"]
+    assert "school_id" in sjs.inputs and "registration_token" in sjs.inputs
+    assert "system_id" not in sjs.inputs and "client_id" not in sjs.inputs
+    finger = gui.panels["fingerprint"]
+    assert set(finger.inputs) == {"scanner_serial", "license_scope", "client_name", "file"}
+    assert set(gui.panels["letterstore"].inputs) == {"database_id", "client_name", "file"}
 
 
 def test_each_save_all_button_is_directly_left_of_individual_save(gui):
@@ -138,7 +187,8 @@ def test_database_settings_and_detection_controls_are_removed(gui):
     for panel in gui.panels.values():
         assert not hasattr(panel, "_detect_db")
         assert not hasattr(panel, "_detect_sys")
-        assert "database_id" in panel.inputs and "system_id" in panel.inputs
+        assert ("system_id" in panel.inputs) is (panel.product.kind == "standard")
+        assert ("database_id" in panel.inputs) is (panel.product.kind != "fingerprint")
 
 
 def test_results_stay_six_lines_when_window_height_grows(gui):
@@ -155,7 +205,7 @@ def test_results_stay_six_lines_when_window_height_grows(gui):
     gui.window.withdraw()
 
 
-@pytest.mark.parametrize("key", ["face", "schoolpay", "cbe"])
+@pytest.mark.parametrize("key", ["face", "fingerprint", "schoolpay", "cbe", "sjs", "letterstore"])
 def test_dispatch_runs_backend_in_worker_and_applies_result_on_tk_thread(gui, key, monkeypatch):
     panel = gui.panels[key]
     main_thread = threading.get_ident()
@@ -175,7 +225,7 @@ def test_dispatch_runs_backend_in_worker_and_applies_result_on_tk_thread(gui, ke
         show_result(result)
 
     monkeypatch.setattr(panel, "show_result", observe_result)
-    for name, value in values().items():
+    for name, value in product_values(panel.product).items():
         panel.inputs[name].set(value)
     panel.run_action("generate")
     assert panel.busy
@@ -188,10 +238,23 @@ def test_dispatch_runs_backend_in_worker_and_applies_result_on_tk_thread(gui, ke
     allow_finish.set()
     pump(gui, lambda: not panel.busy)
     assert result_threads == [main_thread]
-    assert called[0][1]["capacity"] == 20
-    assert called[0][1]["client_id"] is None
-    assert called[0][1]["sequence"] is None
-    assert called[0][1]["previous_license_path"] is None
+    kwargs = called[0][1]
+    if panel.product.supports_renewal:
+        assert kwargs["capacity"] == 20
+        assert kwargs["sequence"] is None
+        assert kwargs["previous_license_path"] is None
+    else:
+        assert not {"capacity", "expires", "sequence", "previous_license_path"} & kwargs.keys()
+    if panel.product.kind == "standard":
+        assert kwargs["client_id"] is None
+    else:
+        assert not {"client_id", "system_id"} & kwargs.keys()
+    if key == "sjs":
+        assert kwargs["registration_token"] == SJS_FIXTURE["registration_token"]
+        assert kwargs["school_id"] == SJS_FIXTURE["school_id"]
+    elif key == "fingerprint":
+        assert kwargs["serial"] == "SYNTHETIC-SCANNER-001" and kwargs["license_scope"] == "both"
+        assert "database_id" not in kwargs
     assert key in panel.output.get("1.0", "end")
     for other_key, other in gui.panels.items():
         if other_key != key:
@@ -233,7 +296,7 @@ def test_save_all_rejects_invalid_shared_fields_before_folder_dialog(gui, field,
         assert "lisensi lama" in str(errors)
 
 
-def test_save_all_writes_three_real_fixed_files_and_applies_results_on_tk_thread(gui, tmp_path, monkeypatch):
+def test_save_all_writes_six_real_fixed_files_and_applies_results_on_tk_thread(gui, tmp_path, monkeypatch):
     fill_batch_forms(gui)
     dialogs, result_threads, errors = [], [], []
     main_thread = threading.get_ident()
@@ -262,15 +325,24 @@ def test_save_all_writes_three_real_fixed_files_and_applies_results_on_tk_thread
         assert Path(result["path"]) == target
         assert result["verification"]["valid"] is True
         codec = importlib.import_module(product.codec_module)
-        assert codec.verify_license(target, panel.inputs["database_id"].get(), "DDCB4")["valid"] is True
-        client_ids.append(codec.inspect_license(target)["fields"]["KlienId"])
+        assert verify_with_backend(codec, product, target, panel.snapshot(), for_import=True)["valid"] is True
+        fields = codec.inspect_license(target)["fields"]
+        if product.kind == "standard":
+            client_ids.append(fields["KlienId"])
+        elif product.kind == "sjs":
+            assert fields["SchoolId"] == SJS_FIXTURE["school_id"]
+            assert fields["DatabaseId"] == "AB123"
+        elif product.kind == "fingerprint":
+            assert fields["Seri"] == "SYNTHETIC-SCANNER-001" and fields["LicType"] == "CM"
+        else:
+            assert fields["Info3"] == "LS123" and fields["Klien"] == "SYNTHETIC"
         assert "berhasil" in panel.status.get()
         assert not panel.busy
         assert not panel.save_all_button.instate(["disabled"])
         assert int(panel.output.cget("height")) == 6
     assert len(set(client_ids)) == 3
     assert gui.shared_inputs["client_id"].get() == ""
-    assert result_threads == [main_thread] * 3
+    assert result_threads == [main_thread] * 6
 
 
 def test_failed_batch_unlocks_every_panel_and_uses_a_plain_snapshot(gui, tmp_path, monkeypatch):
@@ -374,14 +446,14 @@ def test_close_during_batch_leaves_non_daemon_transaction_running_without_tk(tk_
 
 
 @pytest.mark.parametrize("product,database_id", [
-    ("face", "V4YNE"), ("schoolpay", "7VJM4"), ("cbe", "ABCDE")])
+    ("face", "V4YNE"), ("schoolpay", "7VJM4"), ("cbe", "ABCDE"), ("sjs", "AB123")])
 def test_real_backend_new_and_renewal_sequences_are_automatic(gui, tmp_path, product, database_id):
     codec_name = next(item.codec_module for item in app.PRODUCTS if item.key == product)
     codec = importlib.import_module(codec_name)
     panel = gui.panels[product]
     first = tmp_path / f"{product}.lic"
-    snapshot = values(str(first))
-    snapshot.update(database_id=database_id, system_id="DDCB4")
+    snapshot = product_values(panel.product, str(first))
+    snapshot.update(database_id=database_id)
     for key, value in snapshot.items():
         panel.inputs[key].set(value)
     panel.run_action("generate")
@@ -399,7 +471,8 @@ def test_real_backend_new_and_renewal_sequences_are_automatic(gui, tmp_path, pro
     pump(gui, lambda: not panel.busy)
     renewed_fields = codec.inspect_license(renewed)["fields"]
     assert renewed_fields["Sequence"] == "2"
-    assert renewed_fields["KlienId"] == first_fields["KlienId"]
+    identity = "SchoolId" if product == "sjs" else "KlienId"
+    assert renewed_fields[identity] == first_fields[identity]
     assert "sequence" not in panel.inputs
 
 
@@ -445,7 +518,7 @@ def test_worker_keeps_plain_data_and_close_finalizes_variables_on_main_thread(mo
             for panel in application.panels.values():
                 panel.inputs["file"].set("synthetic.lic")
                 panel.run_action("inspect")
-            assert len(launched) == 3
+            assert len(launched) == 6
         else:
             fill_batch_forms(application)
             assert application.save_all() is True
@@ -456,8 +529,8 @@ def test_worker_keeps_plain_data_and_close_finalizes_variables_on_main_thread(mo
             assert task["target"].__closure__ is None
             assert_plain(task["args"])
         application.close()
-        # Each panel owns 3 inputs, status, and overwrite; the app owns 5 shared inputs.
-        assert len(finalized) >= 3 * 5 + len(app.SHARED_FIELDS)
+        # Every product owns file/status/overwrite; capability fields add more.
+        assert len(finalized) >= 6 * 3 + len(app.SHARED_FIELDS)
         assert set(finalized) == {main_thread}
         assert application.shared_inputs == {}
         assert application._batch_poll_id is None

@@ -1,0 +1,47 @@
+﻿METHOD 0x0x060002E9 #=qN$AdBotFUmPTj33H1zCZ9NhgBD76DCfRFaG8EyRnFcg=::Void #=z3oKv4HLC2LA3M_M_OQ==(Boolean)
+0000: ldarg.0       
+0001: ldfld        #=qN$AdBotFUmPTj33H1zCZ9NhgBD76DCfRFaG8EyRnFcg=::UInt32 #=zdXmwfPo= 0x04000095
+0006: stloc.0       
+0007: nop           
+0008: br.s         82 
+000A: ldarg.0       
+000B: ldflda       #=qN$AdBotFUmPTj33H1zCZ9NhgBD76DCfRFaG8EyRnFcg=::System.Nullable`1[System.UInt32] #=zB0044cg= 0x040000AA
+0010: call         System.Nullable`1[[System.UInt32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]::Boolean get_HasValue() 0x0A00016A
+0015: brfalse.s    67 
+0017: ldarg.0       
+0018: ldarg.0       
+0019: ldflda       #=qN$AdBotFUmPTj33H1zCZ9NhgBD76DCfRFaG8EyRnFcg=::System.Nullable`1[System.UInt32] #=zB0044cg= 0x040000AA
+001E: call         System.Nullable`1[[System.UInt32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]::UInt32 get_Value() 0x0A00016B
+0023: stfld        #=qN$AdBotFUmPTj33H1zCZ9NhgBD76DCfRFaG8EyRnFcg=::UInt32 #=zoZr$unw= 0x040000B1
+0028: ldarg.0       
+0029: ldarg.0       
+002A: ldfld        #=qN$AdBotFUmPTj33H1zCZ9NhgBD76DCfRFaG8EyRnFcg=::UInt32 #=zoZr$unw= 0x040000B1
+002F: conv.u8       
+0030: call         #=qN$AdBotFUmPTj33H1zCZ9NhgBD76DCfRFaG8EyRnFcg=::Void #=zgOMTjJqH5JCNaQsTp_HQ75lY$9eB0jZ81w==(Int64) 0x060002CA
+0035: ldarg.0       
+0036: ldflda       #=qN$AdBotFUmPTj33H1zCZ9NhgBD76DCfRFaG8EyRnFcg=::System.Nullable`1[System.UInt32] #=zB0044cg= 0x040000AA
+003B: initobj      ::System.Nullable`1[System.UInt32] 0x1B00001C
+0041: br.s         76 
+0043: ldarg.0       
+0044: ldfld        #=qN$AdBotFUmPTj33H1zCZ9NhgBD76DCfRFaG8EyRnFcg=::UInt32 #=zoZr$unw= 0x040000B1
+0049: ldloc.0       
+004A: bge.un.s     90 
+004C: ldarg.0       
+004D: call         #=qN$AdBotFUmPTj33H1zCZ9NhgBD76DCfRFaG8EyRnFcg=::Void #=zDHY0M9KtDmL0uLs5bQ==() 0x060002F9
+0052: ldarg.0       
+0053: ldfld        #=qN$AdBotFUmPTj33H1zCZ9NhgBD76DCfRFaG8EyRnFcg=::Boolean #=zWYJpO6A= 0x040000A7
+0058: brfalse.s    10 
+005A: leave.s      115 
+005C: stloc.1       
+005D: ldarg.0       
+005E: ldloc.1       
+005F: ldc.i4.0      
+0060: call         #=qN$AdBotFUmPTj33H1zCZ9NhgBD76DCfRFaG8EyRnFcg=::Void #=ziZSR7KHEj0OY5Mf4XQ$dlmW1u9fbukaLiQQJc0E=(System.Object, UInt32) 0x060002E4
+0065: ldarg.1       
+0066: brtrue.s     113 
+0068: ldarg.0       
+0069: ldc.i4.1      
+006A: call         #=qN$AdBotFUmPTj33H1zCZ9NhgBD76DCfRFaG8EyRnFcg=::Void #=z3oKv4HLC2LA3M_M_OQ==(Boolean) 0x060002E9
+006F: leave.s      115 
+0071: leave.s      7 
+0073: ret           

@@ -8,7 +8,10 @@ import json
 from pathlib import Path
 import sys
 
-PRODUCTS = {"face": "license_codec", "schoolpay": "schoolpay_codec", "cbe": "cbe_codec"}
+from product_catalog import PRODUCTS as PRODUCT_LIST, PRODUCT_BY_KEY
+from product_actions import generate_with_backend, verify_with_backend
+
+PRODUCTS = {item.key: item.codec_module for item in PRODUCT_LIST}
 
 
 def product_codec(product="face"):
@@ -35,25 +38,43 @@ def iso_date(value):
     return value
 
 
+def check_product_flags(args):
+    """Do not silently discard restrictions that a product cannot encode."""
+    product = PRODUCT_BY_KEY[args.product]
+    allowed = set(product.input_keys)
+    if product.supports_renewal:
+        allowed.add('previous_license')
+    for key in ('database_id', 'system_id', 'client_id', 'scanner_serial', 'license_scope',
+                'registration_token', 'school_id', 'expires', 'capacity', 'previous_license'):
+        value = getattr(args, key, None)
+        if value not in (None, '') and key not in allowed:
+            flag = '--serial' if key == 'scanner_serial' else '--' + key.replace('_', '-')
+            raise ValueError(f'{product.label} tidak menggunakan {flag}.')
+
+
 def build_parser():
-    parser = argparse.ArgumentParser(description="Lisensi Absensi Wajah, SchoolPay dan CBE Server; ID diisi manual.")
+    parser = argparse.ArgumentParser(description="Generator enam produk JIBAS; identitas diisi manual sesuai produk.")
     commands = parser.add_subparsers(dest="command", required=True)
     for command in ("inspect", "verify", "generate"):
         child = commands.add_parser(command)
         child.add_argument("--product", choices=tuple(PRODUCTS), default="face",
-                           help="face (bawaan), schoolpay, atau cbe.")
+                           help="Produk sesuai tab aplikasi; face adalah bawaan.")
         if command in ("inspect", "verify"):
             child.add_argument("file", type=Path, metavar="FILE")
         if command in ("verify", "generate"):
-            child.add_argument("--database-id", required=True)
-            child.add_argument("--system-id", required=True)
+            child.add_argument("--database-id", default="")
+            child.add_argument("--system-id", default="")
             child.add_argument("--client-id", default=None)
+            child.add_argument("--serial", dest="scanner_serial", default="", help="Nomor seri scanner Fingerprint.")
+            child.add_argument("--license-scope", choices=("both", "manager", "client"), default=None)
+            child.add_argument("--registration-token", default="", help="Token registrasi SJS asli.")
+            child.add_argument("--school-id", default="", help="School ID SJS asli; bukan System ID atau Client ID bersama.")
         if command == "verify":
             child.add_argument("--for-import", action="store_true",
                                help="Periksa syarat file impor produk selain pemeriksaan offline.")
         if command == "generate":
-            child.add_argument("--expires", required=True, type=iso_date, metavar="YYYY-MM-DD")
-            child.add_argument("--capacity", required=True, type=positive_int,
+            child.add_argument("--expires", default=None, type=iso_date, metavar="YYYY-MM-DD")
+            child.add_argument("--capacity", default=None, type=positive_int,
                                help="Wajah (face), vendor (schoolpay), koneksi klien (cbe).")
             child.add_argument("--client-name", default="")
             child.add_argument("--previous-license", type=Path, default=None,
@@ -81,22 +102,18 @@ def main(argv=None):
             outcomes.append(verification)
             ok = verification.get("ready") is True
         else:
+            check_product_flags(args)
             codec = product_codec(args.product)
             if args.command == "inspect":
                 result = codec.inspect_license(args.file)
                 ok = True
             elif args.command == "verify":
-                result = codec.verify_license(args.file, args.database_id.strip(), args.system_id.strip(),
-                    client_id=(args.client_id or "").strip() or None, for_import=args.for_import)
+                result = verify_with_backend(codec, PRODUCT_BY_KEY[args.product], args.file,
+                    vars(args), for_import=args.for_import)
                 ok = result.get("valid") is True
             else:
-                client_id = (args.client_id or "").strip() or None
-                if client_id and not args.previous_license:
-                    raise ValueError("Untuk perpanjangan, pilih file lisensi lama agar Sequence dihitung otomatis.")
-                result = codec.generate_license(database_id=args.database_id.strip(),
-                    system_id=args.system_id.strip(), client_id=client_id, expires=args.expires,
-                    capacity=args.capacity, output_path=args.out, client_name=args.client_name.strip(),
-                    previous_license_path=args.previous_license, sequence=None, overwrite=args.overwrite)
+                result = generate_with_backend(codec, PRODUCT_BY_KEY[args.product],
+                    vars(args), args.out, overwrite=args.overwrite)
                 ok = result.get("verification", {}).get("valid") is True
             outcomes.append(result)
         print(json.dumps({"ok": ok, "results": outcomes}, ensure_ascii=False, indent=2, default=str))

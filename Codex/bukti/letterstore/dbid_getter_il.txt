@@ -1,0 +1,27 @@
+﻿METHOD 0x0x06000A1B #=zz7$mjftj0kfWVc6xbTIgUOuwP_VMMygVYw==::System.String #=zWWsuAu4IdfIh()
+0000: call         #=z$9YY6rvMJ12iMXjuP$Ug5BF90FzqMgj$zA==+#=z8RwfdnI=::System.String #=zbViejZzttUgG() 0x0600051B
+0005: newobj       MySql.Data.MySqlClient.MySqlConnection::Void .ctor(System.String) 0x0A000243
+000A: stloc.0       
+000B: ldloc.0       
+000C: callvirt     System.Data.Common.DbConnection::Void Open() 0x0A000244
+0011: ldloc.0       
+0012: call         #=zz7$mjftj0kfWVc6xbTIgUOuwP_VMMygVYw==::System.String #=zWWsuAu4IdfIh(MySql.Data.MySqlClient.MySqlConnection) 0x06000A1C
+0017: stloc.1       
+0018: leave.s      70 
+001A: stloc.2       
+001B: ldc.i4       -2016171560 
+0020: call         #=qUTYeuEjgps5nRgWvd3l46kC3tZkwiv_$z4mciA_ejCg=::System.String #=z7hs2dzk=(Int32) 0x060003C2
+0025: ldloc.2       
+0026: callvirt     System.Exception::System.String get_Message() 0x0A00024D
+002B: ldloc.2       
+002C: call         #=zOkJ67zcCPKxooCgGv6RCD0IBdlbOcpnB3g==::Void #=z5FnJ10pknQlN(System.String, System.String, System.Exception) 0x06000696
+0031: ldsfld       System.String::System.String Empty 0x0A0000CA
+0036: stloc.1       
+0037: leave.s      70 
+0039: ldloc.0       
+003A: callvirt     System.Data.Common.DbConnection::Void Close() 0x0A00024E
+003F: ldloc.0       
+0040: callvirt     MySql.Data.MySqlClient.MySqlConnection::Void Dispose() 0x0A0004DA
+0045: endfinally    
+0046: ldloc.1       
+0047: ret           

@@ -1,6 +1,11 @@
 # Mulai dari sini
 
-Status2026-11-11: aplikasi terbaru mempunyai tiga tab manual (Face,SchoolPay,CBE).
+Status2026-11-11: aplikasi mempunyai enam tab manual: Face,Finger,SchoolPay,CBE,SJS,LetterStore.
+Baca ../SharedDocs/README.md dan dokumen produk dahulu. product_catalog.py menentukan
+field/capability; product_actions.py mengadaptasi validasi dan panggilan codec.
+Finger terikat serial scanner; LetterStore hanya DBID; SJS DBID+token+SchoolID asli.
+Jangan menghubungkan SchoolID/token/serial ke SystemID atau ClientID bersama.
+Nama dibagi semua tab, tanggal/kapasitas hanya produk yang mendukungnya.
 Semua koneksi/deteksi ID dan input Sequence sudah dihapus dari GUI/CLI publik.
 Urutan baru1 atau previous+1; client ID tanpa file lama harus ditolak jika urutan
 tidak diketahui. Pertahankan worker berisi data biasa dan cleanup Tk di main thread.

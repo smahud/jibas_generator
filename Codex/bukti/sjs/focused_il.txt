@@ -1,0 +1,1523 @@
+METHOD 0x06000927 #=z9hag6tYGZTt21UEzru4NgG81veF8Sm311ScgLfTTu2R8Sz9ZGfHYEH$IL8GwepM6vBaKOEo=::Void #=z8b2Kg9cPcdh9PSPqhg==(System.Object, System.EventArgs)
+0000: ldnull 
+0001: stloc.0 
+0002: ldarg.0 
+0003: call 0x0A00026A System.Windows.Forms.Cursors::System.Windows.Forms.Cursor get_WaitCursor()
+0008: callvirt 0x0A00026B System.Windows.Forms.Control::Void set_Cursor(System.Windows.Forms.Cursor)
+000D: ldarg.0 
+000E: call 0x06000922 #=z9hag6tYGZTt21UEzru4NgG81veF8Sm311ScgLfTTu2R8Sz9ZGfHYEH$IL8GwepM6vBaKOEo=::#=zJTvN7EqUkU68sIVEMvAVVS6ufa7yicLfJT_lvlsIL42q$L8ePhy9GLU= #=zcvPXz9Y=()
+0013: stloc.1 
+0014: ldloc.1 
+0015: callvirt 0x06000B48 #=zJTvN7EqUkU68sIVEMvAVVS6ufa7yicLfJT_lvlsIL42q$L8ePhy9GLU=::Int32 get_Value()
+001A: brtrue.s 16
+001C: ldarg.0 
+001D: call 0x0A000273 System.Windows.Forms.Cursors::System.Windows.Forms.Cursor get_Default()
+0022: callvirt 0x0A00026B System.Windows.Forms.Control::Void set_Cursor(System.Windows.Forms.Cursor)
+0027: leave 290
+002C: ldloc.1 
+002D: callvirt 0x06000B48 #=zJTvN7EqUkU68sIVEMvAVVS6ufa7yicLfJT_lvlsIL42q$L8ePhy9GLU=::Int32 get_Value()
+0032: ldc.i4.m1 
+0033: bne.un.s 42
+0035: ldarg.0 
+0036: call 0x0A000273 System.Windows.Forms.Cursors::System.Windows.Forms.Cursor get_Default()
+003B: callvirt 0x0A00026B System.Windows.Forms.Control::Void set_Cursor(System.Windows.Forms.Cursor)
+0040: ldc.i4 -1180991017
+0045: call 0x06000149 #=qOCqiJqBjiKliE8$axxQ1KsgfJu2flN0wkIKsdFcdCK4=::System.String #=zro7vDwY=(Int32) // Tidak dapat menghubungi basis data JIBAS:\r\n
+004A: ldloc.1 
+004B: callvirt 0x06000B4A #=zJTvN7EqUkU68sIVEMvAVVS6ufa7yicLfJT_lvlsIL42q$L8ePhy9GLU=::System.String get_Text()
+0050: call 0x0A000298 System.String::System.String Concat(System.String, System.String)
+0055: call 0x06000B55 #=zK4DuXTeJvIg1A6ON$3n2lOjv2zV9GlBn4ziJ0ssfOH8cwO5XTNdsv1A=::Void #=zI4bF41A=(System.String)
+005A: leave 239
+005F: ldarg.0 
+0060: ldfld 0x040004A0 #=z9hag6tYGZTt21UEzru4NgG81veF8Sm311ScgLfTTu2R8Sz9ZGfHYEH$IL8GwepM6vBaKOEo=::System.Windows.Forms.TextBox #=zmHpf$jfq3Zw0
+0065: callvirt 0x0A000267 System.Windows.Forms.Control::System.String get_Text()
+006A: callvirt 0x0A0001D9 System.String::System.String Trim()
+006F: stloc.3 
+0070: ldarg.0 
+0071: ldfld 0x04000499 #=z9hag6tYGZTt21UEzru4NgG81veF8Sm311ScgLfTTu2R8Sz9ZGfHYEH$IL8GwepM6vBaKOEo=::System.Windows.Forms.TextBox #=za73pcxasmrGs
+0076: callvirt 0x0A000267 System.Windows.Forms.Control::System.String get_Text()
+007B: callvirt 0x0A0001D9 System.String::System.String Trim()
+0080: stloc.s 4
+0082: ldarg.0 
+0083: ldfld 0x0400049E #=z9hag6tYGZTt21UEzru4NgG81veF8Sm311ScgLfTTu2R8Sz9ZGfHYEH$IL8GwepM6vBaKOEo=::System.Windows.Forms.TextBox #=zcc6UmADQ0Pjc
+0088: callvirt 0x0A000267 System.Windows.Forms.Control::System.String get_Text()
+008D: callvirt 0x0A0001D9 System.String::System.String Trim()
+0092: stloc.s 5
+0094: ldarg.0 
+0095: ldfld 0x0400049D #=z9hag6tYGZTt21UEzru4NgG81veF8Sm311ScgLfTTu2R8Sz9ZGfHYEH$IL8GwepM6vBaKOEo=::System.Windows.Forms.TextBox #=zmX6zZtAhqWV$
+009A: callvirt 0x0A000267 System.Windows.Forms.Control::System.String get_Text()
+009F: callvirt 0x0A0001D9 System.String::System.String Trim()
+00A4: stloc.s 6
+00A6: ldc.i4 -1180990305
+00AB: call 0x06000149 #=qOCqiJqBjiKliE8$axxQ1KsgfJu2flN0wkIKsdFcdCK4=::System.String #=zro7vDwY=(Int32) // Server={0};Port={1};User Id={2};Password={3};
+00B0: ldc.i4.4 
+00B1: newarr 0x0100012A ::System.Object
+00B6: dup 
+00B7: ldc.i4.0 
+00B8: ldloc.3 
+00B9: stelem.ref 
+00BA: dup 
+00BB: ldc.i4.1 
+00BC: ldloc.s 4
+00BE: stelem.ref 
+00BF: dup 
+00C0: ldc.i4.2 
+00C1: ldloc.s 5
+00C3: stelem.ref 
+00C4: dup 
+00C5: ldc.i4.3 
+00C6: ldloc.s 6
+00C8: stelem.ref 
+00C9: call 0x0A000408 System.String::System.String Format(System.String, System.Object[])
+00CE: newobj 0x0A000269 MySql.Data.MySqlClient.MySqlConnection::Void .ctor(System.String)
+00D3: stloc.0 
+00D4: ldloc.0 
+00D5: callvirt 0x0A00026C System.Data.Common.DbConnection::Void Open()
+00DA: ldloc.0 
+00DB: call 0x0600103F #=zdwksX0mNm6W0c0inP_wwpRMB$kxaqOd6oF3iVu_o1Ugsox1ZNKNwDRY=::System.String #=zXixO1v00p_FZ(MySql.Data.MySqlClient.MySqlConnection)
+00E0: stsfld 0x040007D6 #=zdwksX0mNm6W0c0inP_wwpXAsquHtNTgDfdvgEdtJIX0iUrsIwQ==+#=z8RwfdnI=::System.String #=zarDGVwA=
+00E5: ldarg.0 
+00E6: ldfld 0x040004A7 #=z9hag6tYGZTt21UEzru4NgG81veF8Sm311ScgLfTTu2R8Sz9ZGfHYEH$IL8GwepM6vBaKOEo=::System.Windows.Forms.TextBox #=zOJ_BJ5aeOG7c
+00EB: ldsfld 0x040007D6 #=zdwksX0mNm6W0c0inP_wwpXAsquHtNTgDfdvgEdtJIX0iUrsIwQ==+#=z8RwfdnI=::System.String #=zarDGVwA=
+00F0: callvirt 0x0A000266 System.Windows.Forms.Control::Void set_Text(System.String)
+00F5: ldarg.0 
+00F6: call 0x0A000273 System.Windows.Forms.Cursors::System.Windows.Forms.Cursor get_Default()
+00FB: callvirt 0x0A00026B System.Windows.Forms.Control::Void set_Cursor(System.Windows.Forms.Cursor)
+0100: leave.s 76
+0102: stloc.2 
+0103: ldarg.0 
+0104: call 0x0A000273 System.Windows.Forms.Cursors::System.Windows.Forms.Cursor get_Default()
+0109: callvirt 0x0A00026B System.Windows.Forms.Control::Void set_Cursor(System.Windows.Forms.Cursor)
+010E: call 0x0A000170 System.Reflection.MethodBase::System.Reflection.MethodBase GetCurrentMethod()
+0113: callvirt 0x0A0000DC System.Reflection.MemberInfo::System.Type get_DeclaringType()
+0118: callvirt 0x0A00002B System.Reflection.MemberInfo::System.String get_Name()
+011D: ldc.i4 -1180965277
+0122: call 0x06000149 #=qOCqiJqBjiKliE8$axxQ1KsgfJu2flN0wkIKsdFcdCK4=::System.String #=zro7vDwY=(Int32) // .
+0127: call 0x0A000170 System.Reflection.MethodBase::System.Reflection.MethodBase GetCurrentMethod()
+012C: callvirt 0x0A00002B System.Reflection.MemberInfo::System.String get_Name()
+0131: call 0x0A00015B System.String::System.String Concat(System.String, System.String, System.String)
+0136: ldloc.2 
+0137: callvirt 0x0A000259 System.Exception::System.String get_Message()
+013C: ldloc.2 
+013D: call 0x060012A9 #=zrTfzqyNV7gvHrCcbRxs0KuyNYYYzZLmlYeR8o73mWBi7VpBpbtDuW4Y=::Void #=zzH1TGbsYKFb3(System.String, System.String, System.Exception)
+0142: leave.s 10
+0144: ldloc.0 
+0145: brfalse.s 6
+0147: ldloc.0 
+0148: callvirt 0x0A000274 System.Data.Common.DbConnection::Void Close()
+014D: endfinally 
+014E: ret 
+METHOD 0x06000928 #=z9hag6tYGZTt21UEzru4NgG81veF8Sm311ScgLfTTu2R8Sz9ZGfHYEH$IL8GwepM6vBaKOEo=::Void #=zajrKxWqlPODRbTq3Mg==(System.Object, System.EventArgs)
+0000: ldnull 
+0001: stloc.0 
+0002: ldarg.0 
+0003: call 0x0A00026A System.Windows.Forms.Cursors::System.Windows.Forms.Cursor get_WaitCursor()
+0008: callvirt 0x0A00026B System.Windows.Forms.Control::Void set_Cursor(System.Windows.Forms.Cursor)
+000D: ldarg.0 
+000E: call 0x06000922 #=z9hag6tYGZTt21UEzru4NgG81veF8Sm311ScgLfTTu2R8Sz9ZGfHYEH$IL8GwepM6vBaKOEo=::#=zJTvN7EqUkU68sIVEMvAVVS6ufa7yicLfJT_lvlsIL42q$L8ePhy9GLU= #=zcvPXz9Y=()
+0013: stloc.1 
+0014: ldloc.1 
+0015: callvirt 0x06000B48 #=zJTvN7EqUkU68sIVEMvAVVS6ufa7yicLfJT_lvlsIL42q$L8ePhy9GLU=::Int32 get_Value()
+001A: brtrue.s 16
+001C: ldarg.0 
+001D: call 0x0A000273 System.Windows.Forms.Cursors::System.Windows.Forms.Cursor get_Default()
+0022: callvirt 0x0A00026B System.Windows.Forms.Control::Void set_Cursor(System.Windows.Forms.Cursor)
+0027: leave 280
+002C: ldloc.1 
+002D: callvirt 0x06000B48 #=zJTvN7EqUkU68sIVEMvAVVS6ufa7yicLfJT_lvlsIL42q$L8ePhy9GLU=::Int32 get_Value()
+0032: ldc.i4.m1 
+0033: bne.un.s 42
+0035: ldarg.0 
+0036: call 0x0A000273 System.Windows.Forms.Cursors::System.Windows.Forms.Cursor get_Default()
+003B: callvirt 0x0A00026B System.Windows.Forms.Control::Void set_Cursor(System.Windows.Forms.Cursor)
+0040: ldc.i4 -1180991017
+0045: call 0x06000149 #=qOCqiJqBjiKliE8$axxQ1KsgfJu2flN0wkIKsdFcdCK4=::System.String #=zro7vDwY=(Int32) // Tidak dapat menghubungi basis data JIBAS:\r\n
+004A: ldloc.1 
+004B: callvirt 0x06000B4A #=zJTvN7EqUkU68sIVEMvAVVS6ufa7yicLfJT_lvlsIL42q$L8ePhy9GLU=::System.String get_Text()
+0050: call 0x0A000298 System.String::System.String Concat(System.String, System.String)
+0055: call 0x06000B55 #=zK4DuXTeJvIg1A6ON$3n2lOjv2zV9GlBn4ziJ0ssfOH8cwO5XTNdsv1A=::Void #=zI4bF41A=(System.String)
+005A: leave 229
+005F: ldarg.0 
+0060: ldfld 0x040004A0 #=z9hag6tYGZTt21UEzru4NgG81veF8Sm311ScgLfTTu2R8Sz9ZGfHYEH$IL8GwepM6vBaKOEo=::System.Windows.Forms.TextBox #=zmHpf$jfq3Zw0
+0065: callvirt 0x0A000267 System.Windows.Forms.Control::System.String get_Text()
+006A: callvirt 0x0A0001D9 System.String::System.String Trim()
+006F: stloc.3 
+0070: ldarg.0 
+0071: ldfld 0x04000499 #=z9hag6tYGZTt21UEzru4NgG81veF8Sm311ScgLfTTu2R8Sz9ZGfHYEH$IL8GwepM6vBaKOEo=::System.Windows.Forms.TextBox #=za73pcxasmrGs
+0076: callvirt 0x0A000267 System.Windows.Forms.Control::System.String get_Text()
+007B: callvirt 0x0A0001D9 System.String::System.String Trim()
+0080: stloc.s 4
+0082: ldarg.0 
+0083: ldfld 0x0400049E #=z9hag6tYGZTt21UEzru4NgG81veF8Sm311ScgLfTTu2R8Sz9ZGfHYEH$IL8GwepM6vBaKOEo=::System.Windows.Forms.TextBox #=zcc6UmADQ0Pjc
+0088: callvirt 0x0A000267 System.Windows.Forms.Control::System.String get_Text()
+008D: callvirt 0x0A0001D9 System.String::System.String Trim()
+0092: stloc.s 5
+0094: ldarg.0 
+0095: ldfld 0x0400049D #=z9hag6tYGZTt21UEzru4NgG81veF8Sm311ScgLfTTu2R8Sz9ZGfHYEH$IL8GwepM6vBaKOEo=::System.Windows.Forms.TextBox #=zmX6zZtAhqWV$
+009A: callvirt 0x0A000267 System.Windows.Forms.Control::System.String get_Text()
+009F: callvirt 0x0A0001D9 System.String::System.String Trim()
+00A4: stloc.s 6
+00A6: ldc.i4 -1180990305
+00AB: call 0x06000149 #=qOCqiJqBjiKliE8$axxQ1KsgfJu2flN0wkIKsdFcdCK4=::System.String #=zro7vDwY=(Int32) // Server={0};Port={1};User Id={2};Password={3};
+00B0: ldc.i4.4 
+00B1: newarr 0x0100012A ::System.Object
+00B6: dup 
+00B7: ldc.i4.0 
+00B8: ldloc.3 
+00B9: stelem.ref 
+00BA: dup 
+00BB: ldc.i4.1 
+00BC: ldloc.s 4
+00BE: stelem.ref 
+00BF: dup 
+00C0: ldc.i4.2 
+00C1: ldloc.s 5
+00C3: stelem.ref 
+00C4: dup 
+00C5: ldc.i4.3 
+00C6: ldloc.s 6
+00C8: stelem.ref 
+00C9: call 0x0A000408 System.String::System.String Format(System.String, System.Object[])
+00CE: newobj 0x0A000269 MySql.Data.MySqlClient.MySqlConnection::Void .ctor(System.String)
+00D3: stloc.0 
+00D4: ldloc.0 
+00D5: callvirt 0x0A00026C System.Data.Common.DbConnection::Void Open()
+00DA: ldarg.0 
+00DB: ldfld 0x040004AD #=z9hag6tYGZTt21UEzru4NgG81veF8Sm311ScgLfTTu2R8Sz9ZGfHYEH$IL8GwepM6vBaKOEo=::System.Windows.Forms.TextBox #=zZ8uSIcyBFGak
+00E0: ldloc.0 
+00E1: call 0x0600103E #=zdwksX0mNm6W0c0inP_wwpRMB$kxaqOd6oF3iVu_o1Ugsox1ZNKNwDRY=::System.String #=zTorRM5EeZfsA(MySql.Data.MySqlClient.MySqlConnection)
+00E6: callvirt 0x0A000266 System.Windows.Forms.Control::Void set_Text(System.String)
+00EB: ldarg.0 
+00EC: call 0x0A000273 System.Windows.Forms.Cursors::System.Windows.Forms.Cursor get_Default()
+00F1: callvirt 0x0A00026B System.Windows.Forms.Control::Void set_Cursor(System.Windows.Forms.Cursor)
+00F6: leave.s 76
+00F8: stloc.2 
+00F9: ldarg.0 
+00FA: call 0x0A000273 System.Windows.Forms.Cursors::System.Windows.Forms.Cursor get_Default()
+00FF: callvirt 0x0A00026B System.Windows.Forms.Control::Void set_Cursor(System.Windows.Forms.Cursor)
+0104: call 0x0A000170 System.Reflection.MethodBase::System.Reflection.MethodBase GetCurrentMethod()
+0109: callvirt 0x0A0000DC System.Reflection.MemberInfo::System.Type get_DeclaringType()
+010E: callvirt 0x0A00002B System.Reflection.MemberInfo::System.String get_Name()
+0113: ldc.i4 -1180965277
+0118: call 0x06000149 #=qOCqiJqBjiKliE8$axxQ1KsgfJu2flN0wkIKsdFcdCK4=::System.String #=zro7vDwY=(Int32) // .
+011D: call 0x0A000170 System.Reflection.MethodBase::System.Reflection.MethodBase GetCurrentMethod()
+0122: callvirt 0x0A00002B System.Reflection.MemberInfo::System.String get_Name()
+0127: call 0x0A00015B System.String::System.String Concat(System.String, System.String, System.String)
+012C: ldloc.2 
+012D: callvirt 0x0A000259 System.Exception::System.String get_Message()
+0132: ldloc.2 
+0133: call 0x060012A9 #=zrTfzqyNV7gvHrCcbRxs0KuyNYYYzZLmlYeR8o73mWBi7VpBpbtDuW4Y=::Void #=zzH1TGbsYKFb3(System.String, System.String, System.Exception)
+0138: leave.s 10
+013A: ldloc.0 
+013B: brfalse.s 6
+013D: ldloc.0 
+013E: callvirt 0x0A000274 System.Data.Common.DbConnection::Void Close()
+0143: endfinally 
+0144: ret 
+METHOD 0x06000EB0 #=zYrgkbrfxOGX$LgQrdjhEMjusB3I2r8bFvQiEBdlMzIuby4l6AVkjGqM=::System.Data.DataTable #=zRA3lsso=()
+0000: ldsfld 0x04000703 #=zYrgkbrfxOGX$LgQrdjhEMjusB3I2r8bFvQiEBdlMzIuby4l6AVkjGqM=::System.Data.DataTable #=zy2WAhOQT5rh69LGMAA==
+0005: ret 
+METHOD 0x06000EB1 #=zYrgkbrfxOGX$LgQrdjhEMjusB3I2r8bFvQiEBdlMzIuby4l6AVkjGqM=::Void #=zeJ6sj_o=(System.Data.DataTable)
+0000: ldarg.0 
+0001: stsfld 0x04000703 #=zYrgkbrfxOGX$LgQrdjhEMjusB3I2r8bFvQiEBdlMzIuby4l6AVkjGqM=::System.Data.DataTable #=zy2WAhOQT5rh69LGMAA==
+0006: ret 
+METHOD 0x06000EB2 #=zYrgkbrfxOGX$LgQrdjhEMjusB3I2r8bFvQiEBdlMzIuby4l6AVkjGqM=::System.String #=z2dlhE93Bz$ma()
+0000: ldsfld 0x040003CA #=z5LBQMM4hvZ_9rXRst4smrpHnI2GjMCxK_KkU3xxSwMhhfdV7mg==+#=zZvz12Gk=::System.String #=zLPcOjaU=
+0005: ldc.i4 -1181038142
+000A: call 0x06000149 #=qOCqiJqBjiKliE8$axxQ1KsgfJu2flN0wkIKsdFcdCK4=::System.String #=zro7vDwY=(Int32) // license.enc
+000F: call 0x0A000415 System.IO.Path::System.String Combine(System.String, System.String)
+0014: ret 
+METHOD 0x06000EB3 #=zYrgkbrfxOGX$LgQrdjhEMjusB3I2r8bFvQiEBdlMzIuby4l6AVkjGqM=::Void #=zGEE6ZIo93yys()
+0000: ldc.i4 -1181038288
+0005: call 0x06000149 #=qOCqiJqBjiKliE8$axxQ1KsgfJu2flN0wkIKsdFcdCK4=::System.String #=zro7vDwY=(Int32) // JibasJsLicense
+000A: newobj 0x0A00070F System.Data.DataTable::Void .ctor(System.String)
+000F: call 0x06000EB1 #=zYrgkbrfxOGX$LgQrdjhEMjusB3I2r8bFvQiEBdlMzIuby4l6AVkjGqM=::Void #=zeJ6sj_o=(System.Data.DataTable)
+0014: call 0x06000EB0 #=zYrgkbrfxOGX$LgQrdjhEMjusB3I2r8bFvQiEBdlMzIuby4l6AVkjGqM=::System.Data.DataTable #=zRA3lsso=()
+0019: callvirt 0x0A000263 System.Data.DataTable::System.Data.DataColumnCollection get_Columns()
+001E: ldc.i4 -1181038299
+0023: call 0x06000149 #=qOCqiJqBjiKliE8$axxQ1KsgfJu2flN0wkIKsdFcdCK4=::System.String #=zro7vDwY=(Int32) // Versi
+0028: ldc.i4 -1180962355
+002D: call 0x06000149 #=qOCqiJqBjiKliE8$axxQ1KsgfJu2flN0wkIKsdFcdCK4=::System.String #=zro7vDwY=(Int32) // System.String
+0032: call 0x0A000032 System.Type::System.Type GetType(System.String)
+0037: callvirt 0x0A000264 System.Data.DataColumnCollection::System.Data.DataColumn Add(System.String, System.Type)
+003C: pop 
+003D: call 0x06000EB0 #=zYrgkbrfxOGX$LgQrdjhEMjusB3I2r8bFvQiEBdlMzIuby4l6AVkjGqM=::System.Data.DataTable #=zRA3lsso=()
+0042: callvirt 0x0A000263 System.Data.DataTable::System.Data.DataColumnCollection get_Columns()
+0047: ldc.i4 -1180984720
+004C: call 0x06000149 #=qOCqiJqBjiKliE8$axxQ1KsgfJu2flN0wkIKsdFcdCK4=::System.String #=zro7vDwY=(Int32) // SchoolId
+0051: ldc.i4 -1180962355
+0056: call 0x06000149 #=qOCqiJqBjiKliE8$axxQ1KsgfJu2flN0wkIKsdFcdCK4=::System.String #=zro7vDwY=(Int32) // System.String
+005B: call 0x0A000032 System.Type::System.Type GetType(System.String)
+0060: callvirt 0x0A000264 System.Data.DataColumnCollection::System.Data.DataColumn Add(System.String, System.Type)
+0065: pop 
+0066: call 0x06000EB0 #=zYrgkbrfxOGX$LgQrdjhEMjusB3I2r8bFvQiEBdlMzIuby4l6AVkjGqM=::System.Data.DataTable #=zRA3lsso=()
+006B: callvirt 0x0A000263 System.Data.DataTable::System.Data.DataColumnCollection get_Columns()
+0070: ldc.i4 -1180984733
+0075: call 0x06000149 #=qOCqiJqBjiKliE8$axxQ1KsgfJu2flN0wkIKsdFcdCK4=::System.String #=zro7vDwY=(Int32) // SchoolFullName
+007A: ldc.i4 -1180962355
+007F: call 0x06000149 #=qOCqiJqBjiKliE8$axxQ1KsgfJu2flN0wkIKsdFcdCK4=::System.String #=zro7vDwY=(Int32) // System.String
+0084: call 0x0A000032 System.Type::System.Type GetType(System.String)
+0089: callvirt 0x0A000264 System.Data.DataColumnCollection::System.Data.DataColumn Add(System.String, System.Type)
+008E: pop 
+008F: call 0x06000EB0 #=zYrgkbrfxOGX$LgQrdjhEMjusB3I2r8bFvQiEBdlMzIuby4l6AVkjGqM=::System.Data.DataTable #=zRA3lsso=()
+0094: callvirt 0x0A000263 System.Data.DataTable::System.Data.DataColumnCollection get_Columns()
+0099: ldc.i4 -1180984748
+009E: call 0x06000149 #=qOCqiJqBjiKliE8$axxQ1KsgfJu2flN0wkIKsdFcdCK4=::System.String #=zro7vDwY=(Int32) // SchoolName
+00A3: ldc.i4 -1180962355
+00A8: call 0x06000149 #=qOCqiJqBjiKliE8$axxQ1KsgfJu2flN0wkIKsdFcdCK4=::System.String #=zro7vDwY=(Int32) // System.String
+00AD: call 0x0A000032 System.Type::System.Type GetType(System.String)
+00B2: callvirt 0x0A000264 System.Data.DataColumnCollection::System.Data.DataColumn Add(System.String, System.Type)
+00B7: pop 
+00B8: call 0x06000EB0 #=zYrgkbrfxOGX$LgQrdjhEMjusB3I2r8bFvQiEBdlMzIuby4l6AVkjGqM=::System.Data.DataTable #=zRA3lsso=()
+00BD: callvirt 0x0A000263 System.Data.DataTable::System.Data.DataColumnCollection get_Columns()
+00C2: ldc.i4 -1180984763
+00C7: call 0x06000149 #=qOCqiJqBjiKliE8$axxQ1KsgfJu2flN0wkIKsdFcdCK4=::System.String #=zro7vDwY=(Int32) // GroupId
+00CC: ldc.i4 -1180962355
+00D1: call 0x06000149 #=qOCqiJqBjiKliE8$axxQ1KsgfJu2flN0wkIKsdFcdCK4=::System.String #=zro7vDwY=(Int32) // System.String
+00D6: call 0x0A000032 System.Type::System.Type GetType(System.String)
+00DB: callvirt 0x0A000264 System.Data.DataColumnCollection::System.Data.DataColumn Add(System.String, System.Type)
+00E0: pop 
+00E1: call 0x06000EB0 #=zYrgkbrfxOGX$LgQrdjhEMjusB3I2r8bFvQiEBdlMzIuby4l6AVkjGqM=::System.Data.DataTable #=zRA3lsso=()
+00E6: callvirt 0x0A000263 System.Data.DataTable::System.Data.DataColumnCollection get_Columns()
+00EB: ldc.i4 -1180984393
+00F0: call 0x06000149 #=qOCqiJqBjiKliE8$axxQ1KsgfJu2flN0wkIKsdFcdCK4=::System.String #=zro7vDwY=(Int32) // GroupName
+00F5: ldc.i4 -1180962355
+00FA: call 0x06000149 #=qOCqiJqBjiKliE8$axxQ1KsgfJu2flN0wkIKsdFcdCK4=::System.String #=zro7vDwY=(Int32) // System.String
+00FF: call 0x0A000032 System.Type::System.Type GetType(System.String)
+0104: callvirt 0x0A000264 System.Data.DataColumnCollection::System.Data.DataColumn Add(System.String, System.Type)
+0109: pop 
+010A: call 0x06000EB0 #=zYrgkbrfxOGX$LgQrdjhEMjusB3I2r8bFvQiEBdlMzIuby4l6AVkjGqM=::System.Data.DataTable #=zRA3lsso=()
+010F: callvirt 0x0A000263 System.Data.DataTable::System.Data.DataColumnCollection get_Columns()
+0114: ldc.i4 -1180984409
+0119: call 0x06000149 #=qOCqiJqBjiKliE8$axxQ1KsgfJu2flN0wkIKsdFcdCK4=::System.String #=zro7vDwY=(Int32) // DatabaseId
+011E: ldc.i4 -1180962355
+0123: call 0x06000149 #=qOCqiJqBjiKliE8$axxQ1KsgfJu2flN0wkIKsdFcdCK4=::System.String #=zro7vDwY=(Int32) // System.String
+0128: call 0x0A000032 System.Type::System.Type GetType(System.String)
+012D: callvirt 0x0A000264 System.Data.DataColumnCollection::System.Data.DataColumn Add(System.String, System.Type)
+0132: pop 
+0133: call 0x06000EB0 #=zYrgkbrfxOGX$LgQrdjhEMjusB3I2r8bFvQiEBdlMzIuby4l6AVkjGqM=::System.Data.DataTable #=zRA3lsso=()
+0138: callvirt 0x0A000263 System.Data.DataTable::System.Data.DataColumnCollection get_Columns()
+013D: ldc.i4 -1180984428
+0142: call 0x06000149 #=qOCqiJqBjiKliE8$axxQ1KsgfJu2flN0wkIKsdFcdCK4=::System.String #=zro7vDwY=(Int32) // MaxAgentConn
+0147: ldc.i4 -1180962355
+014C: call 0x06000149 #=qOCqiJqBjiKliE8$axxQ1KsgfJu2flN0wkIKsdFcdCK4=::System.String #=zro7vDwY=(Int32) // System.String
+0151: call 0x0A000032 System.Type::System.Type GetType(System.String)
+0156: callvirt 0x0A000264 System.Data.DataColumnCollection::System.Data.DataColumn Add(System.String, System.Type)
+015B: pop 
+015C: call 0x06000EB0 #=zYrgkbrfxOGX$LgQrdjhEMjusB3I2r8bFvQiEBdlMzIuby4l6AVkjGqM=::System.Data.DataTable #=zRA3lsso=()
+0161: callvirt 0x0A000263 System.Data.DataTable::System.Data.DataColumnCollection get_Columns()
+0166: ldc.i4 -1180982281
+016B: call 0x06000149 #=qOCqiJqBjiKliE8$axxQ1KsgfJu2flN0wkIKsdFcdCK4=::System.String #=zro7vDwY=(Int32) // Jenis
+0170: ldc.i4 -1180962355
+0175: call 0x06000149 #=qOCqiJqBjiKliE8$axxQ1KsgfJu2flN0wkIKsdFcdCK4=::System.String #=zro7vDwY=(Int32) // System.String
+017A: call 0x0A000032 System.Type::System.Type GetType(System.String)
+017F: callvirt 0x0A000264 System.Data.DataColumnCollection::System.Data.DataColumn Add(System.String, System.Type)
+0184: pop 
+0185: call 0x06000EB0 #=zYrgkbrfxOGX$LgQrdjhEMjusB3I2r8bFvQiEBdlMzIuby4l6AVkjGqM=::System.Data.DataTable #=zRA3lsso=()
+018A: callvirt 0x0A000263 System.Data.DataTable::System.Data.DataColumnCollection get_Columns()
+018F: ldc.i4 -1180984437
+0194: call 0x06000149 #=qOCqiJqBjiKliE8$axxQ1KsgfJu2flN0wkIKsdFcdCK4=::System.String #=zro7vDwY=(Int32) // LimitDate
+0199: ldc.i4 -1181038319
+019E: call 0x06000149 #=qOCqiJqBjiKliE8$axxQ1KsgfJu2flN0wkIKsdFcdCK4=::System.String #=zro7vDwY=(Int32) // System.DateTime
+01A3: call 0x0A000032 System.Type::System.Type GetType(System.String)
+01A8: callvirt 0x0A000264 System.Data.DataColumnCollection::System.Data.DataColumn Add(System.String, System.Type)
+01AD: pop 
+01AE: call 0x06000EB0 #=zYrgkbrfxOGX$LgQrdjhEMjusB3I2r8bFvQiEBdlMzIuby4l6AVkjGqM=::System.Data.DataTable #=zRA3lsso=()
+01B3: callvirt 0x0A000263 System.Data.DataTable::System.Data.DataColumnCollection get_Columns()
+01B8: ldc.i4 -1180984693
+01BD: call 0x06000149 #=qOCqiJqBjiKliE8$axxQ1KsgfJu2flN0wkIKsdFcdCK4=::System.String #=zro7vDwY=(Int32) // Sequence
+01C2: ldc.i4 -1180962490
+01C7: call 0x06000149 #=qOCqiJqBjiKliE8$axxQ1KsgfJu2flN0wkIKsdFcdCK4=::System.String #=zro7vDwY=(Int32) // System.Int32
+01CC: call 0x0A000032 System.Type::System.Type GetType(System.String)
+01D1: callvirt 0x0A000264 System.Data.DataColumnCollection::System.Data.DataColumn Add(System.String, System.Type)
+01D6: pop 
+01D7: call 0x06000EB0 #=zYrgkbrfxOGX$LgQrdjhEMjusB3I2r8bFvQiEBdlMzIuby4l6AVkjGqM=::System.Data.DataTable #=zRA3lsso=()
+01DC: callvirt 0x0A000263 System.Data.DataTable::System.Data.DataColumnCollection get_Columns()
+01E1: ldc.i4 -1181038325
+01E6: call 0x06000149 #=qOCqiJqBjiKliE8$axxQ1KsgfJu2flN0wkIKsdFcdCK4=::System.String #=zro7vDwY=(Int32) // Services
+01EB: ldc.i4 -1180962355
+01F0: call 0x06000149 #=qOCqiJqBjiKliE8$axxQ1KsgfJu2flN0wkIKsdFcdCK4=::System.String #=zro7vDwY=(Int32) // System.String
+01F5: call 0x0A000032 System.Type::System.Type GetType(System.String)
+01FA: callvirt 0x0A000264 System.Data.DataColumnCollection::System.Data.DataColumn Add(System.String, System.Type)
+01FF: pop 
+0200: ret 
+METHOD 0x06000EB4 #=zYrgkbrfxOGX$LgQrdjhEMjusB3I2r8bFvQiEBdlMzIuby4l6AVkjGqM=::Void #=zSh4Qds5dUjtL()
+0000: call 0x06000A52 #=zECTcFak2FJxa2_M50FvJNIJGfIQHLxooouSZXsgOly8mBdh9oA==::#=qtFUFhysyS8GLDTE$JDJ6nVj_5$vz_8i3vOXFuuHjoXk= #=zAvKznWbaZrnitjRpA7UkC763SDccXpa45xYelS7gvYJA9OGpYQ==()
+0005: call 0x06000A54 #=zECTcFak2FJxa2_M50FvJNIJGfIQHLxooouSZXsgOly8mBdh9oA==::System.IO.Stream #=zgrZWQiFF4oKHjCfL_TPAP_4oFtxULB2FqmSFqaw1E21sc4jQTA==()
+000A: ldstr "Za*9/\$i]W"
+000F: ldnull 
+0010: call 0x0600041F #=qtFUFhysyS8GLDTE$JDJ6nVj_5$vz_8i3vOXFuuHjoXk=::Void #=zCbqM6ZtaTM26PuZw0W3odJYD$f3EsZ5hhg==(System.IO.Stream, System.String, System.Object[])
+0015: ret 
+METHOD 0x06000EB5 #=zYrgkbrfxOGX$LgQrdjhEMjusB3I2r8bFvQiEBdlMzIuby4l6AVkjGqM=::Void #=z1Iufp$A=()
+0000: call 0x06000EB4 #=zYrgkbrfxOGX$LgQrdjhEMjusB3I2r8bFvQiEBdlMzIuby4l6AVkjGqM=::Void #=zSh4Qds5dUjtL()
+0005: call 0x06000EB3 #=zYrgkbrfxOGX$LgQrdjhEMjusB3I2r8bFvQiEBdlMzIuby4l6AVkjGqM=::Void #=zGEE6ZIo93yys()
+000A: call 0x06000EB2 #=zYrgkbrfxOGX$LgQrdjhEMjusB3I2r8bFvQiEBdlMzIuby4l6AVkjGqM=::System.String #=z2dlhE93Bz$ma()
+000F: call 0x0A00040E System.IO.File::Boolean Exists(System.String)
+0014: brtrue.s 5
+0016: call 0x06000EB6 #=zYrgkbrfxOGX$LgQrdjhEMjusB3I2r8bFvQiEBdlMzIuby4l6AVkjGqM=::Void #=zNGRrHBshnLQM()
+001B: call 0x06000EB8 #=zYrgkbrfxOGX$LgQrdjhEMjusB3I2r8bFvQiEBdlMzIuby4l6AVkjGqM=::Boolean #=zmWdwhXepvGfX()
+0020: brtrue.s 5
+0022: call 0x06000EB6 #=zYrgkbrfxOGX$LgQrdjhEMjusB3I2r8bFvQiEBdlMzIuby4l6AVkjGqM=::Void #=zNGRrHBshnLQM()
+0027: ret 
+METHOD 0x06000EB6 #=zYrgkbrfxOGX$LgQrdjhEMjusB3I2r8bFvQiEBdlMzIuby4l6AVkjGqM=::Void #=zNGRrHBshnLQM()
+0000: call 0x06000EB0 #=zYrgkbrfxOGX$LgQrdjhEMjusB3I2r8bFvQiEBdlMzIuby4l6AVkjGqM=::System.Data.DataTable #=zRA3lsso=()
+0005: callvirt 0x0A000710 System.Data.DataTable::System.Data.DataTable Clone()
+000A: dup 
+000B: callvirt 0x0A000250 System.Data.DataTable::System.Data.DataRowCollection get_Rows()
+0010: callvirt 0x0A00026D System.Data.DataRowCollection::Void Clear()
+0015: call 0x06000EB7 #=zYrgkbrfxOGX$LgQrdjhEMjusB3I2r8bFvQiEBdlMzIuby4l6AVkjGqM=::Void #=z9gYO2GPbOxST(System.Data.DataTable)
+001A: ret 
+METHOD 0x06000EB7 #=zYrgkbrfxOGX$LgQrdjhEMjusB3I2r8bFvQiEBdlMzIuby4l6AVkjGqM=::Void #=z9gYO2GPbOxST(System.Data.DataTable)
+0000: newobj 0x0A000711 System.IO.StringWriter::Void .ctor()
+0005: stloc.1 
+0006: ldarg.0 
+0007: ldloc.1 
+0008: ldc.i4.0 
+0009: callvirt 0x0A000712 System.Data.DataTable::Void WriteXml(System.IO.TextWriter, System.Data.XmlWriteMode)
+000E: ldloc.1 
+000F: callvirt 0x0A00008B System.Object::System.String ToString()
+0014: ldsfld 0x040003C8 #=z5LBQMM4hvZ_9rXRst4smrpHnI2GjMCxK_KkU3xxSwMhhfdV7mg==+#=zY$1KPUE=::System.String #=ztKLkvoY=
+0019: ldsfld 0x040003C9 #=z5LBQMM4hvZ_9rXRst4smrpHnI2GjMCxK_KkU3xxSwMhhfdV7mg==+#=zY$1KPUE=::System.String #=zM9BR36bsvFgG
+001E: call 0x06001083 #=zf7wB7s0Ypm42MjctdWH_D4dyWQ8bBOcNRkNkG4xpL8fVb5FqXA==::System.String #=zULcydqk=(System.String, System.String, System.String)
+0023: stloc.0 
+0024: leave.s 7
+0026: ldloc.1 
+0027: callvirt 0x0A000004 System.IDisposable::Void Dispose()
+002C: endfinally 
+002D: call 0x06000EB2 #=zYrgkbrfxOGX$LgQrdjhEMjusB3I2r8bFvQiEBdlMzIuby4l6AVkjGqM=::System.String #=z2dlhE93Bz$ma()
+0032: ldc.i4.0 
+0033: call 0x0A0004FE System.Text.Encoding::System.Text.Encoding get_ASCII()
+0038: newobj 0x0A000713 System.IO.StreamWriter::Void .ctor(System.String, Boolean, System.Text.Encoding)
+003D: stloc.2 
+003E: ldloc.2 
+003F: ldloc.0 
+0040: callvirt 0x0A00056A System.IO.TextWriter::Void WriteLine(System.String)
+0045: leave.s 7
+0047: ldloc.2 
+0048: callvirt 0x0A000004 System.IDisposable::Void Dispose()
+004D: endfinally 
+004E: ret 
+METHOD 0x06000EB8 #=zYrgkbrfxOGX$LgQrdjhEMjusB3I2r8bFvQiEBdlMzIuby4l6AVkjGqM=::Boolean #=zmWdwhXepvGfX()
+0000: call 0x06000EB2 #=zYrgkbrfxOGX$LgQrdjhEMjusB3I2r8bFvQiEBdlMzIuby4l6AVkjGqM=::System.String #=z2dlhE93Bz$ma()
+0005: call 0x0A0004FE System.Text.Encoding::System.Text.Encoding get_ASCII()
+000A: newobj 0x0A000714 System.IO.StreamReader::Void .ctor(System.String, System.Text.Encoding)
+000F: stloc.1 
+0010: ldloc.1 
+0011: callvirt 0x0A000715 System.IO.TextReader::System.String ReadLine()
+0016: stloc.0 
+0017: leave.s 7
+0019: ldloc.1 
+001A: callvirt 0x0A000004 System.IDisposable::Void Dispose()
+001F: endfinally 
+0020: ldloc.0 
+0021: ldsfld 0x040003C8 #=z5LBQMM4hvZ_9rXRst4smrpHnI2GjMCxK_KkU3xxSwMhhfdV7mg==+#=zY$1KPUE=::System.String #=ztKLkvoY=
+0026: ldsfld 0x040003C9 #=z5LBQMM4hvZ_9rXRst4smrpHnI2GjMCxK_KkU3xxSwMhhfdV7mg==+#=zY$1KPUE=::System.String #=zM9BR36bsvFgG
+002B: call 0x06001085 #=zf7wB7s0Ypm42MjctdWH_D4dyWQ8bBOcNRkNkG4xpL8fVb5FqXA==::System.String #=zldLpQkw=(System.String, System.String, System.String)
+0030: newobj 0x0A000716 System.IO.StringReader::Void .ctor(System.String)
+0035: stloc.2 
+0036: call 0x06000EB0 #=zYrgkbrfxOGX$LgQrdjhEMjusB3I2r8bFvQiEBdlMzIuby4l6AVkjGqM=::System.Data.DataTable #=zRA3lsso=()
+003B: ldloc.2 
+003C: callvirt 0x0A000717 System.Data.DataTable::System.Data.XmlReadMode ReadXml(System.IO.TextReader)
+0041: pop 
+0042: leave.s 7
+0044: ldloc.2 
+0045: callvirt 0x0A000004 System.IDisposable::Void Dispose()
+004A: endfinally 
+004B: call 0x06000EB0 #=zYrgkbrfxOGX$LgQrdjhEMjusB3I2r8bFvQiEBdlMzIuby4l6AVkjGqM=::System.Data.DataTable #=zRA3lsso=()
+0050: callvirt 0x0A000250 System.Data.DataTable::System.Data.DataRowCollection get_Rows()
+0055: callvirt 0x0A000251 System.Data.InternalDataCollectionBase::Int32 get_Count()
+005A: brtrue.s 7
+005C: ldc.i4.0 
+005D: stloc.3 
+005E: leave 362
+0063: call 0x06000EB0 #=zYrgkbrfxOGX$LgQrdjhEMjusB3I2r8bFvQiEBdlMzIuby4l6AVkjGqM=::System.Data.DataTable #=zRA3lsso=()
+0068: callvirt 0x0A000250 System.Data.DataTable::System.Data.DataRowCollection get_Rows()
+006D: ldc.i4.0 
+006E: callvirt 0x0A000252 System.Data.DataRowCollection::System.Data.DataRow get_Item(Int32)
+0073: ldc.i4.1 
+0074: stsfld 0x040007DB #=zdwksX0mNm6W0c0inP_wwpXAsquHtNTgDfdvgEdtJIX0iUrsIwQ==+#=zJXrq1HA=::Boolean #=zz7JBivM=
+0079: dup 
+007A: ldc.i4 -1180984763
+007F: call 0x06000149 #=qOCqiJqBjiKliE8$axxQ1KsgfJu2flN0wkIKsdFcdCK4=::System.String #=zro7vDwY=(Int32) // GroupId
+0084: callvirt 0x0A000270 System.Data.DataRow::System.Object get_Item(System.String)
+0089: callvirt 0x0A00008B System.Object::System.String ToString()
+008E: stsfld 0x040007DF #=zdwksX0mNm6W0c0inP_wwpXAsquHtNTgDfdvgEdtJIX0iUrsIwQ==+#=zJXrq1HA=::System.String #=z12N9B_M=
+0093: dup 
+0094: ldc.i4 -1180984393
+0099: call 0x06000149 #=qOCqiJqBjiKliE8$axxQ1KsgfJu2flN0wkIKsdFcdCK4=::System.String #=zro7vDwY=(Int32) // GroupName
+009E: callvirt 0x0A000270 System.Data.DataRow::System.Object get_Item(System.String)
+00A3: callvirt 0x0A00008B System.Object::System.String ToString()
+00A8: stsfld 0x040007E0 #=zdwksX0mNm6W0c0inP_wwpXAsquHtNTgDfdvgEdtJIX0iUrsIwQ==+#=zJXrq1HA=::System.String #=zHkthRuY=
+00AD: dup 
+00AE: ldc.i4 -1180984720
+00B3: call 0x06000149 #=qOCqiJqBjiKliE8$axxQ1KsgfJu2flN0wkIKsdFcdCK4=::System.String #=zro7vDwY=(Int32) // SchoolId
+00B8: callvirt 0x0A000270 System.Data.DataRow::System.Object get_Item(System.String)
+00BD: callvirt 0x0A00008B System.Object::System.String ToString()
+00C2: stsfld 0x040007DC #=zdwksX0mNm6W0c0inP_wwpXAsquHtNTgDfdvgEdtJIX0iUrsIwQ==+#=zJXrq1HA=::System.String #=zBq_lKwQhdTB2
+00C7: dup 
+00C8: ldc.i4 -1180984733
+00CD: call 0x06000149 #=qOCqiJqBjiKliE8$axxQ1KsgfJu2flN0wkIKsdFcdCK4=::System.String #=zro7vDwY=(Int32) // SchoolFullName
+00D2: callvirt 0x0A000270 System.Data.DataRow::System.Object get_Item(System.String)
+00D7: callvirt 0x0A00008B System.Object::System.String ToString()
+00DC: stsfld 0x040007DD #=zdwksX0mNm6W0c0inP_wwpXAsquHtNTgDfdvgEdtJIX0iUrsIwQ==+#=zJXrq1HA=::System.String #=zki2CJDvEcxhxv9vcSg==
+00E1: dup 
+00E2: ldc.i4 -1180984748
+00E7: call 0x06000149 #=qOCqiJqBjiKliE8$axxQ1KsgfJu2flN0wkIKsdFcdCK4=::System.String #=zro7vDwY=(Int32) // SchoolName
+00EC: callvirt 0x0A000270 System.Data.DataRow::System.Object get_Item(System.String)
+00F1: callvirt 0x0A00008B System.Object::System.String ToString()
+00F6: stsfld 0x040007DE #=zdwksX0mNm6W0c0inP_wwpXAsquHtNTgDfdvgEdtJIX0iUrsIwQ==+#=zJXrq1HA=::System.String #=z3Yg3$GbJTLk0
+00FB: dup 
+00FC: ldc.i4 -1180984409
+0101: call 0x06000149 #=qOCqiJqBjiKliE8$axxQ1KsgfJu2flN0wkIKsdFcdCK4=::System.String #=zro7vDwY=(Int32) // DatabaseId
+0106: callvirt 0x0A000270 System.Data.DataRow::System.Object get_Item(System.String)
+010B: callvirt 0x0A00008B System.Object::System.String ToString()
+0110: stsfld 0x040007E1 #=zdwksX0mNm6W0c0inP_wwpXAsquHtNTgDfdvgEdtJIX0iUrsIwQ==+#=zJXrq1HA=::System.String #=zRApenCs=
+0115: dup 
+0116: ldc.i4 -1181038299
+011B: call 0x06000149 #=qOCqiJqBjiKliE8$axxQ1KsgfJu2flN0wkIKsdFcdCK4=::System.String #=zro7vDwY=(Int32) // Versi
+0120: callvirt 0x0A000270 System.Data.DataRow::System.Object get_Item(System.String)
+0125: callvirt 0x0A00008B System.Object::System.String ToString()
+012A: stsfld 0x040007E2 #=zdwksX0mNm6W0c0inP_wwpXAsquHtNTgDfdvgEdtJIX0iUrsIwQ==+#=zJXrq1HA=::System.String #=zijDei_o=
+012F: dup 
+0130: ldc.i4 -1180984428
+0135: call 0x06000149 #=qOCqiJqBjiKliE8$axxQ1KsgfJu2flN0wkIKsdFcdCK4=::System.String #=zro7vDwY=(Int32) // MaxAgentConn
+013A: callvirt 0x0A000270 System.Data.DataRow::System.Object get_Item(System.String)
+013F: callvirt 0x0A00008B System.Object::System.String ToString()
+0144: call 0x0A0002DB System.Convert::Int32 ToInt32(System.String)
+0149: stsfld 0x040007E3 #=zdwksX0mNm6W0c0inP_wwpXAsquHtNTgDfdvgEdtJIX0iUrsIwQ==+#=zJXrq1HA=::Int32 #=zP_kQAC_1sRdg
+014E: ldsfld 0x040007E3 #=zdwksX0mNm6W0c0inP_wwpXAsquHtNTgDfdvgEdtJIX0iUrsIwQ==+#=zJXrq1HA=::Int32 #=zP_kQAC_1sRdg
+0153: stsfld 0x040007E4 #=zdwksX0mNm6W0c0inP_wwpXAsquHtNTgDfdvgEdtJIX0iUrsIwQ==+#=zJXrq1HA=::Int32 #=zzUDKLQVSHfiC
+0158: dup 
+0159: ldc.i4 -1180982281
+015E: call 0x06000149 #=qOCqiJqBjiKliE8$axxQ1KsgfJu2flN0wkIKsdFcdCK4=::System.String #=zro7vDwY=(Int32) // Jenis
+0163: callvirt 0x0A000270 System.Data.DataRow::System.Object get_Item(System.String)
+0168: callvirt 0x0A00008B System.Object::System.String ToString()
+016D: stsfld 0x040007E5 #=zdwksX0mNm6W0c0inP_wwpXAsquHtNTgDfdvgEdtJIX0iUrsIwQ==+#=zJXrq1HA=::System.String #=zcvbEwEhwKSm2
+0172: dup 
+0173: ldc.i4 -1180984437
+0178: call 0x06000149 #=qOCqiJqBjiKliE8$axxQ1KsgfJu2flN0wkIKsdFcdCK4=::System.String #=zro7vDwY=(Int32) // LimitDate
+017D: callvirt 0x0A000270 System.Data.DataRow::System.Object get_Item(System.String)
+0182: call 0x0A000718 System.Convert::System.DateTime ToDateTime(System.Object)
+0187: stsfld 0x040007E6 #=zdwksX0mNm6W0c0inP_wwpXAsquHtNTgDfdvgEdtJIX0iUrsIwQ==+#=zJXrq1HA=::System.DateTime #=z49vT_W6uEAmZ
+018C: dup 
+018D: ldc.i4 -1180984693
+0192: call 0x06000149 #=qOCqiJqBjiKliE8$axxQ1KsgfJu2flN0wkIKsdFcdCK4=::System.String #=zro7vDwY=(Int32) // Sequence
+0197: callvirt 0x0A000270 System.Data.DataRow::System.Object get_Item(System.String)
+019C: call 0x0A000130 System.Convert::Int32 ToInt32(System.Object)
+01A1: stsfld 0x040007E7 #=zdwksX0mNm6W0c0inP_wwpXAsquHtNTgDfdvgEdtJIX0iUrsIwQ==+#=zJXrq1HA=::Int32 #=z_5vfyp4=
+01A6: ldc.i4 -1181038325
+01AB: call 0x06000149 #=qOCqiJqBjiKliE8$axxQ1KsgfJu2flN0wkIKsdFcdCK4=::System.String #=zro7vDwY=(Int32) // Services
+01B0: callvirt 0x0A000270 System.Data.DataRow::System.Object get_Item(System.String)
+01B5: callvirt 0x0A00008B System.Object::System.String ToString()
+01BA: call 0x06000EB9 #=zYrgkbrfxOGX$LgQrdjhEMjusB3I2r8bFvQiEBdlMzIuby4l6AVkjGqM=::System.Collections.Generic.List`1[System.Collections.Generic.List`1[System.String]] #=zXM2IcjztASre(System.String)
+01BF: stsfld 0x040007E8 #=zdwksX0mNm6W0c0inP_wwpXAsquHtNTgDfdvgEdtJIX0iUrsIwQ==+#=zJXrq1HA=::System.Collections.Generic.List`1[System.Collections.Generic.List`1[System.String]] #=zmaGtrKZRVJES
+01C4: ldc.i4.1 
+01C5: stloc.3 
+01C6: leave.s 5
+01C8: pop 
+01C9: ldc.i4.0 
+01CA: stloc.3 
+01CB: leave.s 0
+01CD: ldloc.3 
+01CE: ret 
+METHOD 0x06000EB9 #=zYrgkbrfxOGX$LgQrdjhEMjusB3I2r8bFvQiEBdlMzIuby4l6AVkjGqM=::System.Collections.Generic.List`1[System.Collections.Generic.List`1[System.String]] #=zXM2IcjztASre(System.String)
+0000: ldarg.0 
+0001: call 0x2B000004 Newtonsoft.Json.JsonConvert::System.Collections.Generic.List`1[System.Collections.Generic.List`1[System.String]] DeserializeObject[List`1](System.String)
+0006: stloc.0 
+0007: leave.s 9
+0009: pop 
+000A: newobj 0x0A000404 System.Collections.Generic.List`1[System.Collections.Generic.List`1[System.String]]::Void .ctor()
+000F: stloc.0 
+0010: leave.s 0
+0012: ldloc.0 
+0013: ret 
+METHOD 0x06000EBA #=zYrgkbrfxOGX$LgQrdjhEMjusB3I2r8bFvQiEBdlMzIuby4l6AVkjGqM=::Boolean #=zzSohDKM=(System.String)
+0000: ldsfld 0x0A000086 System.String::System.String Empty
+0005: stloc.0 
+0006: ldarg.0 
+0007: call 0x0A0004FE System.Text.Encoding::System.Text.Encoding get_ASCII()
+000C: newobj 0x0A000714 System.IO.StreamReader::Void .ctor(System.String, System.Text.Encoding)
+0011: stloc.s 4
+0013: br.s 52
+0015: ldloc.s 4
+0017: callvirt 0x0A000715 System.IO.TextReader::System.String ReadLine()
+001C: callvirt 0x0A0001D9 System.String::System.String Trim()
+0021: stloc.s 5
+0023: ldloc.s 5
+0025: ldc.i4 -1181021924
+002A: call 0x06000149 #=qOCqiJqBjiKliE8$axxQ1KsgfJu2flN0wkIKsdFcdCK4=::System.String #=zro7vDwY=(Int32) // #
+002F: ldc.i4.4 
+0030: callvirt 0x0A0004DE System.String::Int32 IndexOf(System.String, System.StringComparison)
+0035: brfalse.s 18
+0037: ldloc.s 5
+0039: callvirt 0x0A000125 System.String::Int32 get_Length()
+003E: brfalse.s 9
+0040: ldloc.0 
+0041: ldloc.s 5
+0043: call 0x0A000298 System.String::System.String Concat(System.String, System.String)
+0048: stloc.0 
+0049: ldloc.s 4
+004B: callvirt 0x0A000719 System.IO.TextReader::Int32 Peek()
+0050: ldc.i4.0 
+0051: bge.s 194
+0053: leave.s 8
+0055: ldloc.s 4
+0057: callvirt 0x0A000004 System.IDisposable::Void Dispose()
+005C: endfinally 
+005D: ldloc.0 
+005E: ldsfld 0x040003C8 #=z5LBQMM4hvZ_9rXRst4smrpHnI2GjMCxK_KkU3xxSwMhhfdV7mg==+#=zY$1KPUE=::System.String #=ztKLkvoY=
+0063: ldsfld 0x040003C9 #=z5LBQMM4hvZ_9rXRst4smrpHnI2GjMCxK_KkU3xxSwMhhfdV7mg==+#=zY$1KPUE=::System.String #=zM9BR36bsvFgG
+0068: call 0x06001085 #=zf7wB7s0Ypm42MjctdWH_D4dyWQ8bBOcNRkNkG4xpL8fVb5FqXA==::System.String #=zldLpQkw=(System.String, System.String, System.String)
+006D: newobj 0x0A000262 System.Data.DataTable::Void .ctor()
+0072: stloc.1 
+0073: newobj 0x0A000716 System.IO.StringReader::Void .ctor(System.String)
+0078: stloc.s 6
+007A: ldloc.1 
+007B: ldloc.s 6
+007D: callvirt 0x0A000717 System.Data.DataTable::System.Data.XmlReadMode ReadXml(System.IO.TextReader)
+0082: pop 
+0083: leave.s 8
+0085: ldloc.s 6
+0087: callvirt 0x0A000004 System.IDisposable::Void Dispose()
+008C: endfinally 
+008D: ldloc.1 
+008E: callvirt 0x0A000250 System.Data.DataTable::System.Data.DataRowCollection get_Rows()
+0093: callvirt 0x0A000251 System.Data.InternalDataCollectionBase::Int32 get_Count()
+0098: brtrue.s 16
+009A: ldc.i4 -1181038214
+009F: call 0x06000149 #=qOCqiJqBjiKliE8$axxQ1KsgfJu2flN0wkIKsdFcdCK4=::System.String #=zro7vDwY=(Int32) // Empty Registration File?
+00A4: newobj 0x0A000172 System.Exception::Void .ctor(System.String)
+00A9: throw 
+00AA: ldloc.1 
+00AB: callvirt 0x0A000250 System.Data.DataTable::System.Data.DataRowCollection get_Rows()
+00B0: ldc.i4.0 
+00B1: callvirt 0x0A000252 System.Data.DataRowCollection::System.Data.DataRow get_Item(Int32)
+00B6: stloc.2 
+00B7: call 0x06000EB0 #=zYrgkbrfxOGX$LgQrdjhEMjusB3I2r8bFvQiEBdlMzIuby4l6AVkjGqM=::System.Data.DataTable #=zRA3lsso=()
+00BC: callvirt 0x0A000250 System.Data.DataTable::System.Data.DataRowCollection get_Rows()
+00C1: callvirt 0x0A000251 System.Data.InternalDataCollectionBase::Int32 get_Count()
+00C6: brtrue.s 73
+00C8: ldloc.2 
+00C9: ldc.i4 -1180984409
+00CE: call 0x06000149 #=qOCqiJqBjiKliE8$axxQ1KsgfJu2flN0wkIKsdFcdCK4=::System.String #=zro7vDwY=(Int32) // DatabaseId
+00D3: callvirt 0x0A000270 System.Data.DataRow::System.Object get_Item(System.String)
+00D8: callvirt 0x0A00008B System.Object::System.String ToString()
+00DD: stloc.s 7
+00DF: ldloc.s 7
+00E1: ldsfld 0x040007D6 #=zdwksX0mNm6W0c0inP_wwpXAsquHtNTgDfdvgEdtJIX0iUrsIwQ==+#=z8RwfdnI=::System.String #=zarDGVwA=
+00E6: call 0x0A0001C4 System.String::Boolean op_Inequality(System.String, System.String)
+00EB: brfalse 306
+00F0: ldc.i4 -1181038251
+00F5: call 0x06000149 #=qOCqiJqBjiKliE8$axxQ1KsgfJu2flN0wkIKsdFcdCK4=::System.String #=zro7vDwY=(Int32) // Database Id tidak sama dengan lisensi (
+00FA: ldloc.s 7
+00FC: ldc.i4 -1180965076
+0101: call 0x06000149 #=qOCqiJqBjiKliE8$axxQ1KsgfJu2flN0wkIKsdFcdCK4=::System.String #=zro7vDwY=(Int32) // )
+0106: call 0x0A00015B System.String::System.String Concat(System.String, System.String, System.String)
+010B: newobj 0x0A000172 System.Exception::Void .ctor(System.String)
+0110: throw 
+0111: ldloc.2 
+0112: ldc.i4 -1180984693
+0117: call 0x06000149 #=qOCqiJqBjiKliE8$axxQ1KsgfJu2flN0wkIKsdFcdCK4=::System.String #=zro7vDwY=(Int32) // Sequence
+011C: callvirt 0x0A000270 System.Data.DataRow::System.Object get_Item(System.String)
+0121: call 0x0A000130 System.Convert::Int32 ToInt32(System.Object)
+0126: dup 
+0127: ldsfld 0x040007E7 #=zdwksX0mNm6W0c0inP_wwpXAsquHtNTgDfdvgEdtJIX0iUrsIwQ==+#=zJXrq1HA=::Int32 #=z_5vfyp4=
+012C: bge.s 16
+012E: ldc.i4 -1181036889
+0133: call 0x06000149 #=qOCqiJqBjiKliE8$axxQ1KsgfJu2flN0wkIKsdFcdCK4=::System.String #=zro7vDwY=(Int32) // Sequence lisensi lebih kecil daripada lisensi yang terdaftar!
+0138: newobj 0x0A000172 System.Exception::Void .ctor(System.String)
+013D: throw 
+013E: ldsfld 0x040007E7 #=zdwksX0mNm6W0c0inP_wwpXAsquHtNTgDfdvgEdtJIX0iUrsIwQ==+#=zJXrq1HA=::Int32 #=z_5vfyp4=
+0143: bne.un.s 16
+0145: ldc.i4 -1181036821
+014A: call 0x06000149 #=qOCqiJqBjiKliE8$axxQ1KsgfJu2flN0wkIKsdFcdCK4=::System.String #=zro7vDwY=(Int32) // Sequence lisensi sama dengan lisensi yang terdaftar!
+014F: newobj 0x0A000172 System.Exception::Void .ctor(System.String)
+0154: throw 
+0155: ldloc.2 
+0156: ldc.i4 -1180984720
+015B: call 0x06000149 #=qOCqiJqBjiKliE8$axxQ1KsgfJu2flN0wkIKsdFcdCK4=::System.String #=zro7vDwY=(Int32) // SchoolId
+0160: callvirt 0x0A000270 System.Data.DataRow::System.Object get_Item(System.String)
+0165: callvirt 0x0A00008B System.Object::System.String ToString()
+016A: stloc.s 8
+016C: ldloc.s 8
+016E: ldsfld 0x040007DC #=zdwksX0mNm6W0c0inP_wwpXAsquHtNTgDfdvgEdtJIX0iUrsIwQ==+#=zJXrq1HA=::System.String #=zBq_lKwQhdTB2
+0173: callvirt 0x0A00025C System.String::Boolean Equals(System.String)
+0178: brtrue.s 33
+017A: ldc.i4 -1181037018
+017F: call 0x06000149 #=qOCqiJqBjiKliE8$axxQ1KsgfJu2flN0wkIKsdFcdCK4=::System.String #=zro7vDwY=(Int32) // Kode sekolah tidak sama dengan lisensi yang terdaftar (
+0184: ldloc.s 8
+0186: ldc.i4 -1180965076
+018B: call 0x06000149 #=qOCqiJqBjiKliE8$axxQ1KsgfJu2flN0wkIKsdFcdCK4=::System.String #=zro7vDwY=(Int32) // )
+0190: call 0x0A00015B System.String::System.String Concat(System.String, System.String, System.String)
+0195: newobj 0x0A000172 System.Exception::Void .ctor(System.String)
+019A: throw 
+019B: ldloc.2 
+019C: ldc.i4 -1180984409
+01A1: call 0x06000149 #=qOCqiJqBjiKliE8$axxQ1KsgfJu2flN0wkIKsdFcdCK4=::System.String #=zro7vDwY=(Int32) // DatabaseId
+01A6: callvirt 0x0A000270 System.Data.DataRow::System.Object get_Item(System.String)
+01AB: callvirt 0x0A00008B System.Object::System.String ToString()
+01B0: stloc.s 9
+01B2: ldloc.s 9
+01B4: ldsfld 0x040007D6 #=zdwksX0mNm6W0c0inP_wwpXAsquHtNTgDfdvgEdtJIX0iUrsIwQ==+#=z8RwfdnI=::System.String #=zarDGVwA=
+01B9: call 0x0A0001C4 System.String::Boolean op_Inequality(System.String, System.String)
+01BE: brfalse.s 33
+01C0: ldc.i4 -1181038251
+01C5: call 0x06000149 #=qOCqiJqBjiKliE8$axxQ1KsgfJu2flN0wkIKsdFcdCK4=::System.String #=zro7vDwY=(Int32) // Database Id tidak sama dengan lisensi (
+01CA: ldloc.s 9
+01CC: ldc.i4 -1181036960
+01D1: call 0x06000149 #=qOCqiJqBjiKliE8$axxQ1KsgfJu2flN0wkIKsdFcdCK4=::System.String #=zro7vDwY=(Int32) // )!
+01D6: call 0x0A00015B System.String::System.String Concat(System.String, System.String, System.String)
+01DB: newobj 0x0A000172 System.Exception::Void .ctor(System.String)
+01E0: throw 
+01E1: ldloc.2 
+01E2: ldc.i4 -1180984437
+01E7: call 0x06000149 #=qOCqiJqBjiKliE8$axxQ1KsgfJu2flN0wkIKsdFcdCK4=::System.String #=zro7vDwY=(Int32) // LimitDate
+01EC: callvirt 0x0A000270 System.Data.DataRow::System.Object get_Item(System.String)
+01F1: call 0x0A000718 System.Convert::System.DateTime ToDateTime(System.Object)
+01F6: ldsfld 0x040007D7 #=zdwksX0mNm6W0c0inP_wwpXAsquHtNTgDfdvgEdtJIX0iUrsIwQ==+#=z8RwfdnI=::System.DateTime #=zirTf7ymQmcaj
+01FB: call 0x0A00071A System.DateTime::Int32 Compare(System.DateTime, System.DateTime)
+0200: ldc.i4.0 
+0201: bge.s 16
+0203: ldc.i4 -1181036951
+0208: call 0x06000149 #=qOCqiJqBjiKliE8$axxQ1KsgfJu2flN0wkIKsdFcdCK4=::System.String #=zro7vDwY=(Int32) // Tanggal lisensi telah berakhir!
+020D: newobj 0x0A000172 System.Exception::Void .ctor(System.String)
+0212: throw 
+0213: call 0x06000EB0 #=zYrgkbrfxOGX$LgQrdjhEMjusB3I2r8bFvQiEBdlMzIuby4l6AVkjGqM=::System.Data.DataTable #=zRA3lsso=()
+0218: callvirt 0x0A000250 System.Data.DataTable::System.Data.DataRowCollection get_Rows()
+021D: callvirt 0x0A00026D System.Data.DataRowCollection::Void Clear()
+0222: ldc.i4.1 
+0223: stsfld 0x040007DB #=zdwksX0mNm6W0c0inP_wwpXAsquHtNTgDfdvgEdtJIX0iUrsIwQ==+#=zJXrq1HA=::Boolean #=zz7JBivM=
+0228: ldloc.2 
+0229: ldc.i4 -1180984763
+022E: call 0x06000149 #=qOCqiJqBjiKliE8$axxQ1KsgfJu2flN0wkIKsdFcdCK4=::System.String #=zro7vDwY=(Int32) // GroupId
+0233: callvirt 0x0A000270 System.Data.DataRow::System.Object get_Item(System.String)
+0238: callvirt 0x0A00008B System.Object::System.String ToString()
+023D: stsfld 0x040007DF #=zdwksX0mNm6W0c0inP_wwpXAsquHtNTgDfdvgEdtJIX0iUrsIwQ==+#=zJXrq1HA=::System.String #=z12N9B_M=
+0242: ldloc.2 
+0243: ldc.i4 -1180984393
+0248: call 0x06000149 #=qOCqiJqBjiKliE8$axxQ1KsgfJu2flN0wkIKsdFcdCK4=::System.String #=zro7vDwY=(Int32) // GroupName
+024D: callvirt 0x0A000270 System.Data.DataRow::System.Object get_Item(System.String)
+0252: callvirt 0x0A00008B System.Object::System.String ToString()
+0257: stsfld 0x040007E0 #=zdwksX0mNm6W0c0inP_wwpXAsquHtNTgDfdvgEdtJIX0iUrsIwQ==+#=zJXrq1HA=::System.String #=zHkthRuY=
+025C: ldloc.2 
+025D: ldc.i4 -1180984720
+0262: call 0x06000149 #=qOCqiJqBjiKliE8$axxQ1KsgfJu2flN0wkIKsdFcdCK4=::System.String #=zro7vDwY=(Int32) // SchoolId
+0267: callvirt 0x0A000270 System.Data.DataRow::System.Object get_Item(System.String)
+026C: callvirt 0x0A00008B System.Object::System.String ToString()
+0271: stsfld 0x040007DC #=zdwksX0mNm6W0c0inP_wwpXAsquHtNTgDfdvgEdtJIX0iUrsIwQ==+#=zJXrq1HA=::System.String #=zBq_lKwQhdTB2
+0276: ldloc.2 
+0277: ldc.i4 -1180984733
+027C: call 0x06000149 #=qOCqiJqBjiKliE8$axxQ1KsgfJu2flN0wkIKsdFcdCK4=::System.String #=zro7vDwY=(Int32) // SchoolFullName
+0281: callvirt 0x0A000270 System.Data.DataRow::System.Object get_Item(System.String)
+0286: callvirt 0x0A00008B System.Object::System.String ToString()
+028B: stsfld 0x040007DD #=zdwksX0mNm6W0c0inP_wwpXAsquHtNTgDfdvgEdtJIX0iUrsIwQ==+#=zJXrq1HA=::System.String #=zki2CJDvEcxhxv9vcSg==
+0290: ldloc.2 
+0291: ldc.i4 -1180984748
+0296: call 0x06000149 #=qOCqiJqBjiKliE8$axxQ1KsgfJu2flN0wkIKsdFcdCK4=::System.String #=zro7vDwY=(Int32) // SchoolName
+029B: callvirt 0x0A000270 System.Data.DataRow::System.Object get_Item(System.String)
+02A0: callvirt 0x0A00008B System.Object::System.String ToString()
+02A5: stsfld 0x040007DE #=zdwksX0mNm6W0c0inP_wwpXAsquHtNTgDfdvgEdtJIX0iUrsIwQ==+#=zJXrq1HA=::System.String #=z3Yg3$GbJTLk0
+02AA: ldloc.2 
+02AB: ldc.i4 -1180984409
+02B0: call 0x06000149 #=qOCqiJqBjiKliE8$axxQ1KsgfJu2flN0wkIKsdFcdCK4=::System.String #=zro7vDwY=(Int32) // DatabaseId
+02B5: callvirt 0x0A000270 System.Data.DataRow::System.Object get_Item(System.String)
+02BA: callvirt 0x0A00008B System.Object::System.String ToString()
+02BF: stsfld 0x040007E1 #=zdwksX0mNm6W0c0inP_wwpXAsquHtNTgDfdvgEdtJIX0iUrsIwQ==+#=zJXrq1HA=::System.String #=zRApenCs=
+02C4: ldloc.2 
+02C5: ldc.i4 -1181038299
+02CA: call 0x06000149 #=qOCqiJqBjiKliE8$axxQ1KsgfJu2flN0wkIKsdFcdCK4=::System.String #=zro7vDwY=(Int32) // Versi
+02CF: callvirt 0x0A000270 System.Data.DataRow::System.Object get_Item(System.String)
+02D4: callvirt 0x0A00008B System.Object::System.String ToString()
+02D9: stsfld 0x040007E2 #=zdwksX0mNm6W0c0inP_wwpXAsquHtNTgDfdvgEdtJIX0iUrsIwQ==+#=zJXrq1HA=::System.String #=zijDei_o=
+02DE: ldloc.2 
+02DF: ldc.i4 -1180984428
+02E4: call 0x06000149 #=qOCqiJqBjiKliE8$axxQ1KsgfJu2flN0wkIKsdFcdCK4=::System.String #=zro7vDwY=(Int32) // MaxAgentConn
+02E9: callvirt 0x0A000270 System.Data.DataRow::System.Object get_Item(System.String)
+02EE: callvirt 0x0A00008B System.Object::System.String ToString()
+02F3: call 0x0A0002DB System.Convert::Int32 ToInt32(System.String)
+02F8: stsfld 0x040007E3 #=zdwksX0mNm6W0c0inP_wwpXAsquHtNTgDfdvgEdtJIX0iUrsIwQ==+#=zJXrq1HA=::Int32 #=zP_kQAC_1sRdg
+02FD: ldsfld 0x040007E3 #=zdwksX0mNm6W0c0inP_wwpXAsquHtNTgDfdvgEdtJIX0iUrsIwQ==+#=zJXrq1HA=::Int32 #=zP_kQAC_1sRdg
+0302: stsfld 0x040007E4 #=zdwksX0mNm6W0c0inP_wwpXAsquHtNTgDfdvgEdtJIX0iUrsIwQ==+#=zJXrq1HA=::Int32 #=zzUDKLQVSHfiC
+0307: ldloc.2 
+0308: ldc.i4 -1180982281
+030D: call 0x06000149 #=qOCqiJqBjiKliE8$axxQ1KsgfJu2flN0wkIKsdFcdCK4=::System.String #=zro7vDwY=(Int32) // Jenis
+0312: callvirt 0x0A000270 System.Data.DataRow::System.Object get_Item(System.String)
+0317: callvirt 0x0A00008B System.Object::System.String ToString()
+031C: stsfld 0x040007E5 #=zdwksX0mNm6W0c0inP_wwpXAsquHtNTgDfdvgEdtJIX0iUrsIwQ==+#=zJXrq1HA=::System.String #=zcvbEwEhwKSm2
+0321: ldloc.2 
+0322: ldc.i4 -1180984437
+0327: call 0x06000149 #=qOCqiJqBjiKliE8$axxQ1KsgfJu2flN0wkIKsdFcdCK4=::System.String #=zro7vDwY=(Int32) // LimitDate
+032C: callvirt 0x0A000270 System.Data.DataRow::System.Object get_Item(System.String)
+0331: call 0x0A000718 System.Convert::System.DateTime ToDateTime(System.Object)
+0336: stsfld 0x040007E6 #=zdwksX0mNm6W0c0inP_wwpXAsquHtNTgDfdvgEdtJIX0iUrsIwQ==+#=zJXrq1HA=::System.DateTime #=z49vT_W6uEAmZ
+033B: ldloc.2 
+033C: ldc.i4 -1180984693
+0341: call 0x06000149 #=qOCqiJqBjiKliE8$axxQ1KsgfJu2flN0wkIKsdFcdCK4=::System.String #=zro7vDwY=(Int32) // Sequence
+0346: callvirt 0x0A000270 System.Data.DataRow::System.Object get_Item(System.String)
+034B: call 0x0A000130 System.Convert::Int32 ToInt32(System.Object)
+0350: stsfld 0x040007E7 #=zdwksX0mNm6W0c0inP_wwpXAsquHtNTgDfdvgEdtJIX0iUrsIwQ==+#=zJXrq1HA=::Int32 #=z_5vfyp4=
+0355: ldloc.2 
+0356: ldc.i4 -1181038325
+035B: call 0x06000149 #=qOCqiJqBjiKliE8$axxQ1KsgfJu2flN0wkIKsdFcdCK4=::System.String #=zro7vDwY=(Int32) // Services
+0360: callvirt 0x0A000270 System.Data.DataRow::System.Object get_Item(System.String)
+0365: callvirt 0x0A00008B System.Object::System.String ToString()
+036A: call 0x06000EB9 #=zYrgkbrfxOGX$LgQrdjhEMjusB3I2r8bFvQiEBdlMzIuby4l6AVkjGqM=::System.Collections.Generic.List`1[System.Collections.Generic.List`1[System.String]] #=zXM2IcjztASre(System.String)
+036F: stsfld 0x040007E8 #=zdwksX0mNm6W0c0inP_wwpXAsquHtNTgDfdvgEdtJIX0iUrsIwQ==+#=zJXrq1HA=::System.Collections.Generic.List`1[System.Collections.Generic.List`1[System.String]] #=zmaGtrKZRVJES
+0374: call 0x06000EB0 #=zYrgkbrfxOGX$LgQrdjhEMjusB3I2r8bFvQiEBdlMzIuby4l6AVkjGqM=::System.Data.DataTable #=zRA3lsso=()
+0379: callvirt 0x0A00026F System.Data.DataTable::System.Data.DataRow NewRow()
+037E: stloc.3 
+037F: ldloc.3 
+0380: ldc.i4 -1181038299
+0385: call 0x06000149 #=qOCqiJqBjiKliE8$axxQ1KsgfJu2flN0wkIKsdFcdCK4=::System.String #=zro7vDwY=(Int32) // Versi
+038A: ldloc.2 
+038B: ldc.i4 -1181038299
+0390: call 0x06000149 #=qOCqiJqBjiKliE8$axxQ1KsgfJu2flN0wkIKsdFcdCK4=::System.String #=zro7vDwY=(Int32) // Versi
+0395: callvirt 0x0A000270 System.Data.DataRow::System.Object get_Item(System.String)
+039A: callvirt 0x0A000271 System.Data.DataRow::Void set_Item(System.String, System.Object)
+039F: ldloc.3 
+03A0: ldc.i4 -1180984720
+03A5: call 0x06000149 #=qOCqiJqBjiKliE8$axxQ1KsgfJu2flN0wkIKsdFcdCK4=::System.String #=zro7vDwY=(Int32) // SchoolId
+03AA: ldloc.2 
+03AB: ldc.i4 -1180984720
+03B0: call 0x06000149 #=qOCqiJqBjiKliE8$axxQ1KsgfJu2flN0wkIKsdFcdCK4=::System.String #=zro7vDwY=(Int32) // SchoolId
+03B5: callvirt 0x0A000270 System.Data.DataRow::System.Object get_Item(System.String)
+03BA: callvirt 0x0A000271 System.Data.DataRow::Void set_Item(System.String, System.Object)
+03BF: ldloc.3 
+03C0: ldc.i4 -1180984733
+03C5: call 0x06000149 #=qOCqiJqBjiKliE8$axxQ1KsgfJu2flN0wkIKsdFcdCK4=::System.String #=zro7vDwY=(Int32) // SchoolFullName
+03CA: ldloc.2 
+03CB: ldc.i4 -1180984733
+03D0: call 0x06000149 #=qOCqiJqBjiKliE8$axxQ1KsgfJu2flN0wkIKsdFcdCK4=::System.String #=zro7vDwY=(Int32) // SchoolFullName
+03D5: callvirt 0x0A000270 System.Data.DataRow::System.Object get_Item(System.String)
+03DA: callvirt 0x0A000271 System.Data.DataRow::Void set_Item(System.String, System.Object)
+03DF: ldloc.3 
+03E0: ldc.i4 -1180984748
+03E5: call 0x06000149 #=qOCqiJqBjiKliE8$axxQ1KsgfJu2flN0wkIKsdFcdCK4=::System.String #=zro7vDwY=(Int32) // SchoolName
+03EA: ldloc.2 
+03EB: ldc.i4 -1180984748
+03F0: call 0x06000149 #=qOCqiJqBjiKliE8$axxQ1KsgfJu2flN0wkIKsdFcdCK4=::System.String #=zro7vDwY=(Int32) // SchoolName
+03F5: callvirt 0x0A000270 System.Data.DataRow::System.Object get_Item(System.String)
+03FA: callvirt 0x0A000271 System.Data.DataRow::Void set_Item(System.String, System.Object)
+03FF: ldloc.3 
+0400: ldc.i4 -1180984763
+0405: call 0x06000149 #=qOCqiJqBjiKliE8$axxQ1KsgfJu2flN0wkIKsdFcdCK4=::System.String #=zro7vDwY=(Int32) // GroupId
+040A: ldloc.2 
+040B: ldc.i4 -1180984763
+0410: call 0x06000149 #=qOCqiJqBjiKliE8$axxQ1KsgfJu2flN0wkIKsdFcdCK4=::System.String #=zro7vDwY=(Int32) // GroupId
+0415: callvirt 0x0A000270 System.Data.DataRow::System.Object get_Item(System.String)
+041A: callvirt 0x0A000271 System.Data.DataRow::Void set_Item(System.String, System.Object)
+041F: ldloc.3 
+0420: ldc.i4 -1180984393
+0425: call 0x06000149 #=qOCqiJqBjiKliE8$axxQ1KsgfJu2flN0wkIKsdFcdCK4=::System.String #=zro7vDwY=(Int32) // GroupName
+042A: ldloc.2 
+042B: ldc.i4 -1180984393
+0430: call 0x06000149 #=qOCqiJqBjiKliE8$axxQ1KsgfJu2flN0wkIKsdFcdCK4=::System.String #=zro7vDwY=(Int32) // GroupName
+0435: callvirt 0x0A000270 System.Data.DataRow::System.Object get_Item(System.String)
+043A: callvirt 0x0A000271 System.Data.DataRow::Void set_Item(System.String, System.Object)
+043F: ldloc.3 
+0440: ldc.i4 -1180984409
+0445: call 0x06000149 #=qOCqiJqBjiKliE8$axxQ1KsgfJu2flN0wkIKsdFcdCK4=::System.String #=zro7vDwY=(Int32) // DatabaseId
+044A: ldloc.2 
+044B: ldc.i4 -1180984409
+0450: call 0x06000149 #=qOCqiJqBjiKliE8$axxQ1KsgfJu2flN0wkIKsdFcdCK4=::System.String #=zro7vDwY=(Int32) // DatabaseId
+0455: callvirt 0x0A000270 System.Data.DataRow::System.Object get_Item(System.String)
+045A: callvirt 0x0A000271 System.Data.DataRow::Void set_Item(System.String, System.Object)
+045F: ldloc.3 
+0460: ldc.i4 -1180984428
+0465: call 0x06000149 #=qOCqiJqBjiKliE8$axxQ1KsgfJu2flN0wkIKsdFcdCK4=::System.String #=zro7vDwY=(Int32) // MaxAgentConn
+046A: ldloc.2 
+046B: ldc.i4 -1180984428
+0470: call 0x06000149 #=qOCqiJqBjiKliE8$axxQ1KsgfJu2flN0wkIKsdFcdCK4=::System.String #=zro7vDwY=(Int32) // MaxAgentConn
+0475: callvirt 0x0A000270 System.Data.DataRow::System.Object get_Item(System.String)
+047A: callvirt 0x0A000271 System.Data.DataRow::Void set_Item(System.String, System.Object)
+047F: ldloc.3 
+0480: ldc.i4 -1180982281
+0485: call 0x06000149 #=qOCqiJqBjiKliE8$axxQ1KsgfJu2flN0wkIKsdFcdCK4=::System.String #=zro7vDwY=(Int32) // Jenis
+048A: ldloc.2 
+048B: ldc.i4 -1180982281
+0490: call 0x06000149 #=qOCqiJqBjiKliE8$axxQ1KsgfJu2flN0wkIKsdFcdCK4=::System.String #=zro7vDwY=(Int32) // Jenis
+0495: callvirt 0x0A000270 System.Data.DataRow::System.Object get_Item(System.String)
+049A: callvirt 0x0A000271 System.Data.DataRow::Void set_Item(System.String, System.Object)
+049F: ldloc.3 
+04A0: ldc.i4 -1180984437
+04A5: call 0x06000149 #=qOCqiJqBjiKliE8$axxQ1KsgfJu2flN0wkIKsdFcdCK4=::System.String #=zro7vDwY=(Int32) // LimitDate
+04AA: ldloc.2 
+04AB: ldc.i4 -1180984437
+04B0: call 0x06000149 #=qOCqiJqBjiKliE8$axxQ1KsgfJu2flN0wkIKsdFcdCK4=::System.String #=zro7vDwY=(Int32) // LimitDate
+04B5: callvirt 0x0A000270 System.Data.DataRow::System.Object get_Item(System.String)
+04BA: callvirt 0x0A000271 System.Data.DataRow::Void set_Item(System.String, System.Object)
+04BF: ldloc.3 
+04C0: ldc.i4 -1180984693
+04C5: call 0x06000149 #=qOCqiJqBjiKliE8$axxQ1KsgfJu2flN0wkIKsdFcdCK4=::System.String #=zro7vDwY=(Int32) // Sequence
+04CA: ldloc.2 
+04CB: ldc.i4 -1180984693
+04D0: call 0x06000149 #=qOCqiJqBjiKliE8$axxQ1KsgfJu2flN0wkIKsdFcdCK4=::System.String #=zro7vDwY=(Int32) // Sequence
+04D5: callvirt 0x0A000270 System.Data.DataRow::System.Object get_Item(System.String)
+04DA: callvirt 0x0A000271 System.Data.DataRow::Void set_Item(System.String, System.Object)
+04DF: ldloc.3 
+04E0: ldc.i4 -1181038325
+04E5: call 0x06000149 #=qOCqiJqBjiKliE8$axxQ1KsgfJu2flN0wkIKsdFcdCK4=::System.String #=zro7vDwY=(Int32) // Services
+04EA: ldloc.2 
+04EB: ldc.i4 -1181038325
+04F0: call 0x06000149 #=qOCqiJqBjiKliE8$axxQ1KsgfJu2flN0wkIKsdFcdCK4=::System.String #=zro7vDwY=(Int32) // Services
+04F5: callvirt 0x0A000270 System.Data.DataRow::System.Object get_Item(System.String)
+04FA: callvirt 0x0A000271 System.Data.DataRow::Void set_Item(System.String, System.Object)
+04FF: call 0x06000EB0 #=zYrgkbrfxOGX$LgQrdjhEMjusB3I2r8bFvQiEBdlMzIuby4l6AVkjGqM=::System.Data.DataTable #=zRA3lsso=()
+0504: callvirt 0x0A000250 System.Data.DataTable::System.Data.DataRowCollection get_Rows()
+0509: ldloc.3 
+050A: callvirt 0x0A000272 System.Data.DataRowCollection::Void Add(System.Data.DataRow)
+050F: call 0x06000EB0 #=zYrgkbrfxOGX$LgQrdjhEMjusB3I2r8bFvQiEBdlMzIuby4l6AVkjGqM=::System.Data.DataTable #=zRA3lsso=()
+0514: call 0x06000EB7 #=zYrgkbrfxOGX$LgQrdjhEMjusB3I2r8bFvQiEBdlMzIuby4l6AVkjGqM=::Void #=z9gYO2GPbOxST(System.Data.DataTable)
+0519: ldc.i4.1 
+051A: ret 
+METHOD 0x06000EBB #=zYrgkbrfxOGX$LgQrdjhEMjusB3I2r8bFvQiEBdlMzIuby4l6AVkjGqM=::Void #=zkdhBgv$C$Bx$()
+0000: call 0x06000EB0 #=zYrgkbrfxOGX$LgQrdjhEMjusB3I2r8bFvQiEBdlMzIuby4l6AVkjGqM=::System.Data.DataTable #=zRA3lsso=()
+0005: callvirt 0x0A000250 System.Data.DataTable::System.Data.DataRowCollection get_Rows()
+000A: callvirt 0x0A00026D System.Data.DataRowCollection::Void Clear()
+000F: call 0x06001063 #=zdwksX0mNm6W0c0inP_wwpXAsquHtNTgDfdvgEdtJIX0iUrsIwQ==+#=zJXrq1HA=::Void #=zEIDbXI0=()
+0014: call 0x06000EB6 #=zYrgkbrfxOGX$LgQrdjhEMjusB3I2r8bFvQiEBdlMzIuby4l6AVkjGqM=::Void #=zNGRrHBshnLQM()
+0019: leave.s 55
+001B: stloc.0 
+001C: call 0x0A000170 System.Reflection.MethodBase::System.Reflection.MethodBase GetCurrentMethod()
+0021: callvirt 0x0A0000DC System.Reflection.MemberInfo::System.Type get_DeclaringType()
+0026: callvirt 0x0A00002B System.Reflection.MemberInfo::System.String get_Name()
+002B: ldc.i4 -1180965277
+0030: call 0x06000149 #=qOCqiJqBjiKliE8$axxQ1KsgfJu2flN0wkIKsdFcdCK4=::System.String #=zro7vDwY=(Int32) // .
+0035: call 0x0A000170 System.Reflection.MethodBase::System.Reflection.MethodBase GetCurrentMethod()
+003A: callvirt 0x0A00002B System.Reflection.MemberInfo::System.String get_Name()
+003F: call 0x0A00015B System.String::System.String Concat(System.String, System.String, System.String)
+0044: ldloc.0 
+0045: callvirt 0x0A000259 System.Exception::System.String get_Message()
+004A: ldloc.0 
+004B: call 0x060012A9 #=zrTfzqyNV7gvHrCcbRxs0KuyNYYYzZLmlYeR8o73mWBi7VpBpbtDuW4Y=::Void #=zzH1TGbsYKFb3(System.String, System.String, System.Exception)
+0050: leave.s 0
+0052: ret 
+METHOD 0x06000EBC #=zYrgkbrfxOGX$LgQrdjhEMjusB3I2r8bFvQiEBdlMzIuby4l6AVkjGqM=::#=zJTvN7EqUkU68sIVEMvAVVS6ufa7yicLfJT_lvlsIL42q$L8ePhy9GLU= #=zbvFetq2u2d4b()
+0000: ldsfld 0x040007DB #=zdwksX0mNm6W0c0inP_wwpXAsquHtNTgDfdvgEdtJIX0iUrsIwQ==+#=zJXrq1HA=::Boolean #=zz7JBivM=
+0005: brtrue.s 22
+0007: ldc.i4.m1 
+0008: ldc.i4 -1181036621
+000D: call 0x06000149 #=qOCqiJqBjiKliE8$axxQ1KsgfJu2flN0wkIKsdFcdCK4=::System.String #=zro7vDwY=(Int32) // Aplikasi belum berlisensi. Masukan lisensi di menu Konfigurasi > Lisensi
+0012: newobj 0x06000B46 #=zJTvN7EqUkU68sIVEMvAVVS6ufa7yicLfJT_lvlsIL42q$L8ePhy9GLU=::Void .ctor(Int32, System.String)
+0017: stloc.0 
+0018: leave 194
+001D: ldsfld 0x040007D6 #=zdwksX0mNm6W0c0inP_wwpXAsquHtNTgDfdvgEdtJIX0iUrsIwQ==+#=z8RwfdnI=::System.String #=zarDGVwA=
+0022: ldsfld 0x040007E1 #=zdwksX0mNm6W0c0inP_wwpXAsquHtNTgDfdvgEdtJIX0iUrsIwQ==+#=zJXrq1HA=::System.String #=zRApenCs=
+0027: callvirt 0x0A00025C System.String::Boolean Equals(System.String)
+002C: brtrue.s 75
+002E: ldc.i4.m1 
+002F: ldc.i4.5 
+0030: newarr 0x0100018B ::System.String
+0035: dup 
+0036: ldc.i4.0 
+0037: ldc.i4 -1181036574
+003C: call 0x06000149 #=qOCqiJqBjiKliE8$axxQ1KsgfJu2flN0wkIKsdFcdCK4=::System.String #=zro7vDwY=(Int32) // Database Id 
+0041: stelem.ref 
+0042: dup 
+0043: ldc.i4.1 
+0044: ldsfld 0x040007D6 #=zdwksX0mNm6W0c0inP_wwpXAsquHtNTgDfdvgEdtJIX0iUrsIwQ==+#=z8RwfdnI=::System.String #=zarDGVwA=
+0049: stelem.ref 
+004A: dup 
+004B: ldc.i4.2 
+004C: ldc.i4 -1181036591
+0051: call 0x06000149 #=qOCqiJqBjiKliE8$axxQ1KsgfJu2flN0wkIKsdFcdCK4=::System.String #=zro7vDwY=(Int32) //  tidak sesuai dengan lisensi (
+0056: stelem.ref 
+0057: dup 
+0058: ldc.i4.3 
+0059: ldsfld 0x040007E1 #=zdwksX0mNm6W0c0inP_wwpXAsquHtNTgDfdvgEdtJIX0iUrsIwQ==+#=zJXrq1HA=::System.String #=zRApenCs=
+005E: stelem.ref 
+005F: dup 
+0060: ldc.i4.4 
+0061: ldc.i4 -1181036742
+0066: call 0x06000149 #=qOCqiJqBjiKliE8$axxQ1KsgfJu2flN0wkIKsdFcdCK4=::System.String #=zro7vDwY=(Int32) // ). Hubungi admin sekolah
+006B: stelem.ref 
+006C: call 0x0A000152 System.String::System.String Concat(System.String[])
+0071: newobj 0x06000B46 #=zJTvN7EqUkU68sIVEMvAVVS6ufa7yicLfJT_lvlsIL42q$L8ePhy9GLU=::Void .ctor(Int32, System.String)
+0076: stloc.0 
+0077: leave.s 102
+0079: ldc.i4.1 
+007A: ldc.i4 -1180989598
+007F: call 0x06000149 #=qOCqiJqBjiKliE8$axxQ1KsgfJu2flN0wkIKsdFcdCK4=::System.String #=zro7vDwY=(Int32) // OK
+0084: newobj 0x06000B46 #=zJTvN7EqUkU68sIVEMvAVVS6ufa7yicLfJT_lvlsIL42q$L8ePhy9GLU=::Void .ctor(Int32, System.String)
+0089: stloc.0 
+008A: leave.s 83
+008C: stloc.1 
+008D: call 0x0A000170 System.Reflection.MethodBase::System.Reflection.MethodBase GetCurrentMethod()
+0092: callvirt 0x0A0000DC System.Reflection.MemberInfo::System.Type get_DeclaringType()
+0097: callvirt 0x0A00002B System.Reflection.MemberInfo::System.String get_Name()
+009C: ldc.i4 -1180965277
+00A1: call 0x06000149 #=qOCqiJqBjiKliE8$axxQ1KsgfJu2flN0wkIKsdFcdCK4=::System.String #=zro7vDwY=(Int32) // .
+00A6: call 0x0A000170 System.Reflection.MethodBase::System.Reflection.MethodBase GetCurrentMethod()
+00AB: callvirt 0x0A00002B System.Reflection.MemberInfo::System.String get_Name()
+00B0: call 0x0A00015B System.String::System.String Concat(System.String, System.String, System.String)
+00B5: ldloc.1 
+00B6: callvirt 0x0A000259 System.Exception::System.String get_Message()
+00BB: ldloc.1 
+00BC: call 0x060012AA #=zrTfzqyNV7gvHrCcbRxs0KuyNYYYzZLmlYeR8o73mWBi7VpBpbtDuW4Y=::Void #=zG690U8c=(System.String, System.String, System.Exception)
+00C1: ldc.i4.m1 
+00C2: ldc.i4 -1181036779
+00C7: call 0x06000149 #=qOCqiJqBjiKliE8$axxQ1KsgfJu2flN0wkIKsdFcdCK4=::System.String #=zro7vDwY=(Int32) // KESALAHAN APLIKASI:
+00CC: ldloc.1 
+00CD: callvirt 0x0A000259 System.Exception::System.String get_Message()
+00D2: call 0x0A000298 System.String::System.String Concat(System.String, System.String)
+00D7: newobj 0x06000B46 #=zJTvN7EqUkU68sIVEMvAVVS6ufa7yicLfJT_lvlsIL42q$L8ePhy9GLU=::Void .ctor(Int32, System.String)
+00DC: stloc.0 
+00DD: leave.s 0
+00DF: ldloc.0 
+00E0: ret 
+METHOD 0x06000FFA #=zcLBpsfhwQZL3iznsd2pmaq__ct93Y5xgq4wLWs4Mv5XQjEZ4zA==::System.String #=zCkNJML6wRxpI(System.String)
+0000: call 0x0A000303 System.Text.Encoding::System.Text.Encoding get_UTF8()
+0005: ldarg.0 
+0006: call 0x0A0000F1 System.Convert::Byte[] FromBase64String(System.String)
+000B: callvirt 0x0A000360 System.Text.Encoding::System.String GetString(Byte[])
+0010: ret 
+METHOD 0x06000FFB #=zcLBpsfhwQZL3iznsd2pmaq__ct93Y5xgq4wLWs4Mv5XQjEZ4zA==::System.String #=z8MUhnbzVQzBf(System.String)
+0000: call 0x0A000303 System.Text.Encoding::System.Text.Encoding get_UTF8()
+0005: ldarg.0 
+0006: callvirt 0x0A00012A System.Text.Encoding::Byte[] GetBytes(System.String)
+000B: call 0x0A000448 System.Convert::System.String ToBase64String(Byte[])
+0010: ret 
+METHOD 0x06000FFC #=zcLBpsfhwQZL3iznsd2pmaq__ct93Y5xgq4wLWs4Mv5XQjEZ4zA==::System.String #=zWQRlIAoovorF(System.String, Int32)
+0000: ldarga.s 1
+0002: call 0x0A0000CD System.Int32::System.String ToString()
+0007: stloc.1 
+0008: newobj 0x0A0000E0 System.Text.StringBuilder::Void .ctor()
+000D: stloc.2 
+000E: ldarg.0 
+000F: callvirt 0x0A000125 System.String::Int32 get_Length()
+0014: stloc.3 
+0015: ldloc.1 
+0016: callvirt 0x0A000125 System.String::Int32 get_Length()
+001B: stloc.s 4
+001D: ldc.i4.0 
+001E: stloc.0 
+001F: br.s 30
+0021: ldloc.2 
+0022: ldarg.0 
+0023: ldloc.0 
+0024: callvirt 0x0A000126 System.String::Char get_Chars(Int32)
+0029: ldloc.1 
+002A: ldloc.0 
+002B: ldloc.s 4
+002D: rem 
+002E: callvirt 0x0A000126 System.String::Char get_Chars(Int32)
+0033: xor 
+0034: conv.u2 
+0035: callvirt 0x0A0000E1 System.Text.StringBuilder::System.Text.StringBuilder Append(Char)
+003A: pop 
+003B: ldloc.0 
+003C: ldc.i4.1 
+003D: add 
+003E: stloc.0 
+003F: ldloc.0 
+0040: ldloc.3 
+0041: blt.s 222
+0043: ldloc.2 
+0044: callvirt 0x0A00008B System.Object::System.String ToString()
+0049: call 0x06000FFB #=zcLBpsfhwQZL3iznsd2pmaq__ct93Y5xgq4wLWs4Mv5XQjEZ4zA==::System.String #=z8MUhnbzVQzBf(System.String)
+004E: ret 
+METHOD 0x06000FFD #=zcLBpsfhwQZL3iznsd2pmaq__ct93Y5xgq4wLWs4Mv5XQjEZ4zA==::System.String #=zN7DSYC7DbXGe(System.String, System.String)
+0000: ldarg.0 
+0001: ldarg.1 
+0002: call 0x0A0002DB System.Convert::Int32 ToInt32(System.String)
+0007: call 0x06000FFE #=zcLBpsfhwQZL3iznsd2pmaq__ct93Y5xgq4wLWs4Mv5XQjEZ4zA==::System.String #=zN7DSYC7DbXGe(System.String, Int32)
+000C: ret 
+METHOD 0x06000FFE #=zcLBpsfhwQZL3iznsd2pmaq__ct93Y5xgq4wLWs4Mv5XQjEZ4zA==::System.String #=zN7DSYC7DbXGe(System.String, Int32)
+0000: ldarg.0 
+0001: call 0x06000FFA #=zcLBpsfhwQZL3iznsd2pmaq__ct93Y5xgq4wLWs4Mv5XQjEZ4zA==::System.String #=zCkNJML6wRxpI(System.String)
+0006: stloc.1 
+0007: ldarga.s 1
+0009: call 0x0A0000CD System.Int32::System.String ToString()
+000E: stloc.2 
+000F: newobj 0x0A0000E0 System.Text.StringBuilder::Void .ctor()
+0014: stloc.3 
+0015: ldloc.1 
+0016: callvirt 0x0A000125 System.String::Int32 get_Length()
+001B: stloc.s 4
+001D: ldloc.2 
+001E: callvirt 0x0A000125 System.String::Int32 get_Length()
+0023: stloc.s 5
+0025: ldc.i4.0 
+0026: stloc.0 
+0027: br.s 30
+0029: ldloc.3 
+002A: ldloc.1 
+002B: ldloc.0 
+002C: callvirt 0x0A000126 System.String::Char get_Chars(Int32)
+0031: ldloc.2 
+0032: ldloc.0 
+0033: ldloc.s 5
+0035: rem 
+0036: callvirt 0x0A000126 System.String::Char get_Chars(Int32)
+003B: xor 
+003C: conv.u2 
+003D: callvirt 0x0A0000E1 System.Text.StringBuilder::System.Text.StringBuilder Append(Char)
+0042: pop 
+0043: ldloc.0 
+0044: ldc.i4.1 
+0045: add 
+0046: stloc.0 
+0047: ldloc.0 
+0048: ldloc.s 4
+004A: blt.s 221
+004C: ldloc.3 
+004D: callvirt 0x0A00008B System.Object::System.String ToString()
+0052: ret 
+METHOD 0x06000FFF #=zcLBpsfhwQZL3iznsd2pmaq__ct93Y5xgq4wLWs4Mv5XQjEZ4zA==::System.Tuple`2[System.String,System.String] #=zPprSjeY=(System.String, Int32, Int32)
+0000: ldc.i4 1000
+0005: ldc.i4 9800
+000A: call 0x06000919 #=z9hag6tYGZTt21UEzru4NgCTv$_W8neoh$YI69g0E39pyDCMfMdisSys=::Int32 #=zfB7HpDwRMibi(Int32, Int32)
+000F: stloc.0 
+0010: ldarg.2 
+0011: ldloc.0 
+0012: add 
+0013: stloc.0 
+0014: ldarg.0 
+0015: ldloc.0 
+0016: call 0x06000FFC #=zcLBpsfhwQZL3iznsd2pmaq__ct93Y5xgq4wLWs4Mv5XQjEZ4zA==::System.String #=zWQRlIAoovorF(System.String, Int32)
+001B: stloc.1 
+001C: ldloc.0 
+001D: ldarg.1 
+001E: add 
+001F: stloc.0 
+0020: ldloca.s 0
+0022: call 0x0A0000CD System.Int32::System.String ToString()
+0027: ldloc.1 
+0028: newobj 0x0A00043E System.Tuple`2[System.String,System.String]::Void .ctor(System.String, System.String)
+002D: ret 
+METHOD 0x06000FF9 #=zcLBpsfhwQZL3iznsd2pmaq__ct93Y5xgq4wLWs4Mv5XQjEZ4zA==::Void .cctor()
+0000: ldc.i4.s 77
+0002: stsfld 0x04000784 #=zcLBpsfhwQZL3iznsd2pmaq__ct93Y5xgq4wLWs4Mv5XQjEZ4zA==::Int32 #=z7_1Htv9Uql5Z
+0007: ldc.i4.s 54
+0009: stsfld 0x04000785 #=zcLBpsfhwQZL3iznsd2pmaq__ct93Y5xgq4wLWs4Mv5XQjEZ4zA==::Int32 #=zUQPEJQ_YcSfO
+000E: ldc.i4.s 17
+0010: stsfld 0x04000786 #=zcLBpsfhwQZL3iznsd2pmaq__ct93Y5xgq4wLWs4Mv5XQjEZ4zA==::Int32 #=zN211P5p580wR
+0015: ldc.i4.s 45
+0017: stsfld 0x04000787 #=zcLBpsfhwQZL3iznsd2pmaq__ct93Y5xgq4wLWs4Mv5XQjEZ4zA==::Int32 #=zvmGSP5M=
+001C: ldc.i4.s 34
+001E: stsfld 0x04000788 #=zcLBpsfhwQZL3iznsd2pmaq__ct93Y5xgq4wLWs4Mv5XQjEZ4zA==::Int32 #=zX0RaKadxZvJv
+0023: ldc.i4.s 34
+0025: stsfld 0x04000789 #=zcLBpsfhwQZL3iznsd2pmaq__ct93Y5xgq4wLWs4Mv5XQjEZ4zA==::Int32 #=zx96E5h0=
+002A: ldc.i4.s 57
+002C: stsfld 0x0400078A #=zcLBpsfhwQZL3iznsd2pmaq__ct93Y5xgq4wLWs4Mv5XQjEZ4zA==::Int32 #=z2nhXVy6I95dQ
+0031: ret 
+METHOD 0x0600103E #=zdwksX0mNm6W0c0inP_wwpRMB$kxaqOd6oF3iVu_o1Ugsox1ZNKNwDRY=::System.String #=zTorRM5EeZfsA(MySql.Data.MySqlClient.MySqlConnection)
+0000: newobj 0x0A000288 MySql.Data.MySqlClient.MySqlCommand::Void .ctor()
+0005: dup 
+0006: ldarg.0 
+0007: callvirt 0x0A000289 MySql.Data.MySqlClient.MySqlCommand::Void set_Connection(MySql.Data.MySqlClient.MySqlConnection)
+000C: ldc.i4 -1181196799
+0011: call 0x06000149 #=qOCqiJqBjiKliE8$axxQ1KsgfJu2flN0wkIKsdFcdCK4=::System.String #=zro7vDwY=(Int32) // SELECT COUNT(replid) FROM jbsakad.siswa
+0016: stloc.0 
+0017: dup 
+0018: ldloc.0 
+0019: callvirt 0x0A00028A System.Data.Common.DbCommand::Void set_CommandText(System.String)
+001E: dup 
+001F: callvirt 0x0A0003F1 System.Data.Common.DbCommand::System.Object ExecuteScalar()
+0024: call 0x0A000130 System.Convert::Int32 ToInt32(System.Object)
+0029: stloc.s 5
+002B: ldc.i4 -1181196717
+0030: call 0x06000149 #=qOCqiJqBjiKliE8$axxQ1KsgfJu2flN0wkIKsdFcdCK4=::System.String #=zro7vDwY=(Int32) // SELECT COUNT(replid) FROM jbssdm.pegawai
+0035: stloc.0 
+0036: dup 
+0037: ldloc.0 
+0038: callvirt 0x0A00028A System.Data.Common.DbCommand::Void set_CommandText(System.String)
+003D: dup 
+003E: callvirt 0x0A0003F1 System.Data.Common.DbCommand::System.Object ExecuteScalar()
+0043: call 0x0A000130 System.Convert::Int32 ToInt32(System.Object)
+0048: stloc.s 6
+004A: ldc.i4 -1181196382
+004F: call 0x06000149 #=qOCqiJqBjiKliE8$axxQ1KsgfJu2flN0wkIKsdFcdCK4=::System.String #=zro7vDwY=(Int32) // SELECT COUNT(replid) FROM jbsakad.departemen
+0054: stloc.0 
+0055: dup 
+0056: ldloc.0 
+0057: callvirt 0x0A00028A System.Data.Common.DbCommand::Void set_CommandText(System.String)
+005C: dup 
+005D: callvirt 0x0A0003F1 System.Data.Common.DbCommand::System.Object ExecuteScalar()
+0062: call 0x0A000130 System.Convert::Int32 ToInt32(System.Object)
+0067: stloc.s 7
+0069: ldc.i4 -1181196303
+006E: call 0x06000149 #=qOCqiJqBjiKliE8$axxQ1KsgfJu2flN0wkIKsdFcdCK4=::System.String #=zro7vDwY=(Int32) // SELECT COUNT(replid) FROM jbsakad.kelas
+0073: stloc.0 
+0074: dup 
+0075: ldloc.0 
+0076: callvirt 0x0A00028A System.Data.Common.DbCommand::Void set_CommandText(System.String)
+007B: dup 
+007C: callvirt 0x0A0003F1 System.Data.Common.DbCommand::System.Object ExecuteScalar()
+0081: call 0x0A000130 System.Convert::Int32 ToInt32(System.Object)
+0086: stloc.s 8
+0088: ldc.i4 -1181196349
+008D: call 0x06000149 #=qOCqiJqBjiKliE8$axxQ1KsgfJu2flN0wkIKsdFcdCK4=::System.String #=zro7vDwY=(Int32) // SELECT COUNT(replid) FROM jbsakad.pelajaran
+0092: stloc.0 
+0093: dup 
+0094: ldloc.0 
+0095: callvirt 0x0A00028A System.Data.Common.DbCommand::Void set_CommandText(System.String)
+009A: dup 
+009B: callvirt 0x0A0003F1 System.Data.Common.DbCommand::System.Object ExecuteScalar()
+00A0: call 0x0A000130 System.Convert::Int32 ToInt32(System.Object)
+00A5: stloc.s 9
+00A7: ldc.i4 -1181196527
+00AC: call 0x06000149 #=qOCqiJqBjiKliE8$axxQ1KsgfJu2flN0wkIKsdFcdCK4=::System.String #=zro7vDwY=(Int32) // SELECT COUNT(replid) FROM jbsfina.rekakun
+00B1: stloc.0 
+00B2: dup 
+00B3: ldloc.0 
+00B4: callvirt 0x0A00028A System.Data.Common.DbCommand::Void set_CommandText(System.String)
+00B9: dup 
+00BA: callvirt 0x0A0003F1 System.Data.Common.DbCommand::System.Object ExecuteScalar()
+00BF: call 0x0A000130 System.Convert::Int32 ToInt32(System.Object)
+00C4: stloc.s 10
+00C6: ldc.i4 -1181196447
+00CB: call 0x06000149 #=qOCqiJqBjiKliE8$axxQ1KsgfJu2flN0wkIKsdFcdCK4=::System.String #=zro7vDwY=(Int32) // SELECT COUNT(replid) FROM jbsfina.jurnal
+00D0: stloc.0 
+00D1: dup 
+00D2: ldloc.0 
+00D3: callvirt 0x0A00028A System.Data.Common.DbCommand::Void set_CommandText(System.String)
+00D8: dup 
+00D9: callvirt 0x0A0003F1 System.Data.Common.DbCommand::System.Object ExecuteScalar()
+00DE: call 0x0A000130 System.Convert::Int32 ToInt32(System.Object)
+00E3: stloc.s 11
+00E5: ldc.i4 -1181197136
+00EA: call 0x06000149 #=qOCqiJqBjiKliE8$axxQ1KsgfJu2flN0wkIKsdFcdCK4=::System.String #=zro7vDwY=(Int32) // SELECT COUNT(replid) FROM jbsakad.nilaiujian
+00EF: stloc.0 
+00F0: dup 
+00F1: ldloc.0 
+00F2: callvirt 0x0A00028A System.Data.Common.DbCommand::Void set_CommandText(System.String)
+00F7: dup 
+00F8: callvirt 0x0A0003F1 System.Data.Common.DbCommand::System.Object ExecuteScalar()
+00FD: call 0x0A000130 System.Convert::Int32 ToInt32(System.Object)
+0102: stloc.s 12
+0104: ldc.i4 -1181197177
+0109: call 0x06000149 #=qOCqiJqBjiKliE8$axxQ1KsgfJu2flN0wkIKsdFcdCK4=::System.String #=zro7vDwY=(Int32) // SELECT COUNT(replid) FROM jbsakad.nap
+010E: stloc.0 
+010F: dup 
+0110: ldloc.0 
+0111: callvirt 0x0A00028A System.Data.Common.DbCommand::Void set_CommandText(System.String)
+0116: dup 
+0117: callvirt 0x0A0003F1 System.Data.Common.DbCommand::System.Object ExecuteScalar()
+011C: call 0x0A000130 System.Convert::Int32 ToInt32(System.Object)
+0121: stloc.s 13
+0123: ldc.i4 -1181197101
+0128: call 0x06000149 #=qOCqiJqBjiKliE8$axxQ1KsgfJu2flN0wkIKsdFcdCK4=::System.String #=zro7vDwY=(Int32) // SELECT IFNULL(DATEDIFF(NOW(), MAX(ts)), -1) FROM jbsakad.siswa
+012D: stloc.0 
+012E: dup 
+012F: ldloc.0 
+0130: callvirt 0x0A00028A System.Data.Common.DbCommand::Void set_CommandText(System.String)
+0135: dup 
+0136: callvirt 0x0A0003F1 System.Data.Common.DbCommand::System.Object ExecuteScalar()
+013B: call 0x0A000130 System.Convert::Int32 ToInt32(System.Object)
+0140: stloc.s 14
+0142: ldc.i4 -1181197292
+0147: call 0x06000149 #=qOCqiJqBjiKliE8$axxQ1KsgfJu2flN0wkIKsdFcdCK4=::System.String #=zro7vDwY=(Int32) // SELECT IFNULL(DATEDIFF(NOW(), MAX(ts)), -1) FROM jbsakad.nilaiujian
+014C: stloc.0 
+014D: dup 
+014E: ldloc.0 
+014F: callvirt 0x0A00028A System.Data.Common.DbCommand::Void set_CommandText(System.String)
+0154: dup 
+0155: callvirt 0x0A0003F1 System.Data.Common.DbCommand::System.Object ExecuteScalar()
+015A: call 0x0A000130 System.Convert::Int32 ToInt32(System.Object)
+015F: stloc.s 15
+0161: ldc.i4 -1181197246
+0166: call 0x06000149 #=qOCqiJqBjiKliE8$axxQ1KsgfJu2flN0wkIKsdFcdCK4=::System.String #=zro7vDwY=(Int32) // SELECT IFNULL(DATEDIFF(NOW(), MAX(ts)), -1) FROM jbsakad.nap
+016B: stloc.0 
+016C: dup 
+016D: ldloc.0 
+016E: callvirt 0x0A00028A System.Data.Common.DbCommand::Void set_CommandText(System.String)
+0173: dup 
+0174: callvirt 0x0A0003F1 System.Data.Common.DbCommand::System.Object ExecuteScalar()
+0179: call 0x0A000130 System.Convert::Int32 ToInt32(System.Object)
+017E: stloc.s 16
+0180: ldc.i4 -1181196927
+0185: call 0x06000149 #=qOCqiJqBjiKliE8$axxQ1KsgfJu2flN0wkIKsdFcdCK4=::System.String #=zro7vDwY=(Int32) // SELECT IFNULL(DATEDIFF(NOW(), MAX(ts)), -1) FROM jbsfina.jurnal
+018A: stloc.0 
+018B: dup 
+018C: ldloc.0 
+018D: callvirt 0x0A00028A System.Data.Common.DbCommand::Void set_CommandText(System.String)
+0192: callvirt 0x0A0003F1 System.Data.Common.DbCommand::System.Object ExecuteScalar()
+0197: call 0x0A000130 System.Convert::Int32 ToInt32(System.Object)
+019C: stloc.s 17
+019E: newobj 0x0A000556 System.Random::Void .ctor()
+01A3: stloc.1 
+01A4: newobj 0x0A0000A7 System.Collections.Generic.List`1[System.Int32]::Void .ctor()
+01A9: dup 
+01AA: ldloc.1 
+01AB: ldc.i4.s 100
+01AD: ldc.i4 999
+01B2: callvirt 0x0A0004C5 System.Random::Int32 Next(Int32, Int32)
+01B7: callvirt 0x0A0000AC System.Collections.Generic.List`1[System.Int32]::Void Add(Int32)
+01BC: dup 
+01BD: ldloc.s 5
+01BF: callvirt 0x0A0000AC System.Collections.Generic.List`1[System.Int32]::Void Add(Int32)
+01C4: dup 
+01C5: ldloc.s 6
+01C7: callvirt 0x0A0000AC System.Collections.Generic.List`1[System.Int32]::Void Add(Int32)
+01CC: dup 
+01CD: ldloc.s 7
+01CF: callvirt 0x0A0000AC System.Collections.Generic.List`1[System.Int32]::Void Add(Int32)
+01D4: dup 
+01D5: ldloc.s 8
+01D7: callvirt 0x0A0000AC System.Collections.Generic.List`1[System.Int32]::Void Add(Int32)
+01DC: dup 
+01DD: ldloc.s 9
+01DF: callvirt 0x0A0000AC System.Collections.Generic.List`1[System.Int32]::Void Add(Int32)
+01E4: dup 
+01E5: ldloc.s 12
+01E7: callvirt 0x0A0000AC System.Collections.Generic.List`1[System.Int32]::Void Add(Int32)
+01EC: dup 
+01ED: ldloc.s 13
+01EF: callvirt 0x0A0000AC System.Collections.Generic.List`1[System.Int32]::Void Add(Int32)
+01F4: dup 
+01F5: ldloc.s 10
+01F7: callvirt 0x0A0000AC System.Collections.Generic.List`1[System.Int32]::Void Add(Int32)
+01FC: dup 
+01FD: ldloc.s 11
+01FF: callvirt 0x0A0000AC System.Collections.Generic.List`1[System.Int32]::Void Add(Int32)
+0204: dup 
+0205: ldloc.s 14
+0207: callvirt 0x0A0000AC System.Collections.Generic.List`1[System.Int32]::Void Add(Int32)
+020C: dup 
+020D: ldloc.s 15
+020F: callvirt 0x0A0000AC System.Collections.Generic.List`1[System.Int32]::Void Add(Int32)
+0214: dup 
+0215: ldloc.s 16
+0217: callvirt 0x0A0000AC System.Collections.Generic.List`1[System.Int32]::Void Add(Int32)
+021C: dup 
+021D: ldloc.s 17
+021F: callvirt 0x0A0000AC System.Collections.Generic.List`1[System.Int32]::Void Add(Int32)
+0224: dup 
+0225: ldloc.1 
+0226: ldc.i4.s 100
+0228: ldc.i4 999
+022D: callvirt 0x0A0004C5 System.Random::Int32 Next(Int32, Int32)
+0232: callvirt 0x0A0000AC System.Collections.Generic.List`1[System.Int32]::Void Add(Int32)
+0237: call 0x0A00027F Newtonsoft.Json.JsonConvert::System.String SerializeObject(System.Object)
+023C: ldsfld 0x04000786 #=zcLBpsfhwQZL3iznsd2pmaq__ct93Y5xgq4wLWs4Mv5XQjEZ4zA==::Int32 #=zN211P5p580wR
+0241: ldc.i4 90000
+0246: call 0x06000FFF #=zcLBpsfhwQZL3iznsd2pmaq__ct93Y5xgq4wLWs4Mv5XQjEZ4zA==::System.Tuple`2[System.String,System.String] #=zPprSjeY=(System.String, Int32, Int32)
+024B: stloc.2 
+024C: ldloc.2 
+024D: callvirt 0x0A000442 System.Tuple`2[System.String,System.String]::System.String get_Item1()
+0252: ldloc.2 
+0253: callvirt 0x0A000443 System.Tuple`2[System.String,System.String]::System.String get_Item2()
+0258: call 0x0A000298 System.String::System.String Concat(System.String, System.String)
+025D: stloc.3 
+025E: leave.s 64
+0260: stloc.s 4
+0262: call 0x0A000170 System.Reflection.MethodBase::System.Reflection.MethodBase GetCurrentMethod()
+0267: callvirt 0x0A0000DC System.Reflection.MemberInfo::System.Type get_DeclaringType()
+026C: callvirt 0x0A00002B System.Reflection.MemberInfo::System.String get_Name()
+0271: ldc.i4 -1180965277
+0276: call 0x06000149 #=qOCqiJqBjiKliE8$axxQ1KsgfJu2flN0wkIKsdFcdCK4=::System.String #=zro7vDwY=(Int32) // .
+027B: call 0x0A000170 System.Reflection.MethodBase::System.Reflection.MethodBase GetCurrentMethod()
+0280: callvirt 0x0A00002B System.Reflection.MemberInfo::System.String get_Name()
+0285: call 0x0A00015B System.String::System.String Concat(System.String, System.String, System.String)
+028A: ldloc.s 4
+028C: callvirt 0x0A000259 System.Exception::System.String get_Message()
+0291: ldloc.s 4
+0293: call 0x060012AA #=zrTfzqyNV7gvHrCcbRxs0KuyNYYYzZLmlYeR8o73mWBi7VpBpbtDuW4Y=::Void #=zG690U8c=(System.String, System.String, System.Exception)
+0298: ldsfld 0x0A000086 System.String::System.String Empty
+029D: stloc.3 
+029E: leave.s 0
+02A0: ldloc.3 
+02A1: ret 
+METHOD 0x06001064 #=zdwksX0mNm6W0c0inP_wwpXAsquHtNTgDfdvgEdtJIX0iUrsIwQ==+#=zJXrq1HA=::System.String #=zsbixm6aRD_0B()
+0000: ldsfld 0x040007E4 #=zdwksX0mNm6W0c0inP_wwpXAsquHtNTgDfdvgEdtJIX0iUrsIwQ==+#=zJXrq1HA=::Int32 #=zzUDKLQVSHfiC
+0005: ldc.i4.1 
+0006: bne.un.s 11
+0008: ldc.i4 -1181015290
+000D: call 0x06000149 #=qOCqiJqBjiKliE8$axxQ1KsgfJu2flN0wkIKsdFcdCK4=::System.String #=zro7vDwY=(Int32) // Community Single Speed
+0012: ret 
+0013: ldsfld 0x040007E4 #=zdwksX0mNm6W0c0inP_wwpXAsquHtNTgDfdvgEdtJIX0iUrsIwQ==+#=zJXrq1HA=::Int32 #=zzUDKLQVSHfiC
+0018: ldc.i4.2 
+0019: bne.un.s 11
+001B: ldc.i4 -1181015197
+0020: call 0x06000149 #=qOCqiJqBjiKliE8$axxQ1KsgfJu2flN0wkIKsdFcdCK4=::System.String #=zro7vDwY=(Int32) // Extra Double Speed
+0025: ret 
+0026: ldsfld 0x040007E4 #=zdwksX0mNm6W0c0inP_wwpXAsquHtNTgDfdvgEdtJIX0iUrsIwQ==+#=zJXrq1HA=::Int32 #=zzUDKLQVSHfiC
+002B: ldc.i4.3 
+002C: bne.un.s 11
+002E: ldc.i4 -1181015208
+0033: call 0x06000149 #=qOCqiJqBjiKliE8$axxQ1KsgfJu2flN0wkIKsdFcdCK4=::System.String #=zro7vDwY=(Int32) // Extra Triple Speed
+0038: ret 
+0039: ldsfld 0x040007E4 #=zdwksX0mNm6W0c0inP_wwpXAsquHtNTgDfdvgEdtJIX0iUrsIwQ==+#=zJXrq1HA=::Int32 #=zzUDKLQVSHfiC
+003E: ldc.i4.4 
+003F: bne.un.s 11
+0041: ldc.i4 -1181015887
+0046: call 0x06000149 #=qOCqiJqBjiKliE8$axxQ1KsgfJu2flN0wkIKsdFcdCK4=::System.String #=zro7vDwY=(Int32) // Extra Quad Speed
+004B: ret 
+004C: ldc.i4 -1180960652
+0051: call 0x06000149 #=qOCqiJqBjiKliE8$axxQ1KsgfJu2flN0wkIKsdFcdCK4=::System.String #=zro7vDwY=(Int32) // -
+0056: ret 
+METHOD 0x06001081 #=zf7wB7s0Ypm42MjctdWH_D4dyWQ8bBOcNRkNkG4xpL8fVb5FqXA==::Void #=zYDnSac66Wez80kP9SA==(System.String, System.String)
+0000: newobj 0x0A0007AB System.Security.Cryptography.MD5CryptoServiceProvider::Void .ctor()
+0005: stloc.0 
+0006: newobj 0x0A0007AC System.Security.Cryptography.RijndaelManaged::Void .ctor()
+000B: stsfld 0x040007F7 #=zf7wB7s0Ypm42MjctdWH_D4dyWQ8bBOcNRkNkG4xpL8fVb5FqXA==::System.Security.Cryptography.Rijndael #=ztT6H50w=
+0010: ldsfld 0x040007F7 #=zf7wB7s0Ypm42MjctdWH_D4dyWQ8bBOcNRkNkG4xpL8fVb5FqXA==::System.Security.Cryptography.Rijndael #=ztT6H50w=
+0015: ldc.i4.1 
+0016: callvirt 0x0A000038 System.Security.Cryptography.SymmetricAlgorithm::Void set_Mode(System.Security.Cryptography.CipherMode)
+001B: ldsfld 0x040007F7 #=zf7wB7s0Ypm42MjctdWH_D4dyWQ8bBOcNRkNkG4xpL8fVb5FqXA==::System.Security.Cryptography.Rijndael #=ztT6H50w=
+0020: ldc.i4.2 
+0021: callvirt 0x0A000039 System.Security.Cryptography.SymmetricAlgorithm::Void set_Padding(System.Security.Cryptography.PaddingMode)
+0026: ldsfld 0x040007F7 #=zf7wB7s0Ypm42MjctdWH_D4dyWQ8bBOcNRkNkG4xpL8fVb5FqXA==::System.Security.Cryptography.Rijndael #=ztT6H50w=
+002B: ldloc.0 
+002C: call 0x0A0004FE System.Text.Encoding::System.Text.Encoding get_ASCII()
+0031: ldarg.0 
+0032: callvirt 0x0A00012A System.Text.Encoding::Byte[] GetBytes(System.String)
+0037: callvirt 0x0A0004FF System.Security.Cryptography.HashAlgorithm::Byte[] ComputeHash(Byte[])
+003C: callvirt 0x0A000213 System.Security.Cryptography.SymmetricAlgorithm::Void set_Key(Byte[])
+0041: ldsfld 0x040007F7 #=zf7wB7s0Ypm42MjctdWH_D4dyWQ8bBOcNRkNkG4xpL8fVb5FqXA==::System.Security.Cryptography.Rijndael #=ztT6H50w=
+0046: call 0x0A0004FE System.Text.Encoding::System.Text.Encoding get_ASCII()
+004B: ldarg.1 
+004C: callvirt 0x0A00012A System.Text.Encoding::Byte[] GetBytes(System.String)
+0051: callvirt 0x0A000214 System.Security.Cryptography.SymmetricAlgorithm::Void set_IV(Byte[])
+0056: ldsfld 0x040007F7 #=zf7wB7s0Ypm42MjctdWH_D4dyWQ8bBOcNRkNkG4xpL8fVb5FqXA==::System.Security.Cryptography.Rijndael #=ztT6H50w=
+005B: callvirt 0x0A000215 System.Security.Cryptography.SymmetricAlgorithm::System.Security.Cryptography.ICryptoTransform CreateEncryptor()
+0060: stsfld 0x040007F8 #=zf7wB7s0Ypm42MjctdWH_D4dyWQ8bBOcNRkNkG4xpL8fVb5FqXA==::System.Security.Cryptography.ICryptoTransform #=zj0S52qLuCojo5Bm7Sg==
+0065: ldsfld 0x040007F7 #=zf7wB7s0Ypm42MjctdWH_D4dyWQ8bBOcNRkNkG4xpL8fVb5FqXA==::System.Security.Cryptography.Rijndael #=ztT6H50w=
+006A: callvirt 0x0A000217 System.Security.Cryptography.SymmetricAlgorithm::System.Security.Cryptography.ICryptoTransform CreateDecryptor()
+006F: stsfld 0x040007F9 #=zf7wB7s0Ypm42MjctdWH_D4dyWQ8bBOcNRkNkG4xpL8fVb5FqXA==::System.Security.Cryptography.ICryptoTransform #=z70aRhbNYbL4jcKJE8g==
+0074: ldc.i4.0 
+0075: stsfld 0x040007FA #=zf7wB7s0Ypm42MjctdWH_D4dyWQ8bBOcNRkNkG4xpL8fVb5FqXA==::Boolean #=zrbj3MGrHUxA8
+007A: ret 
+METHOD 0x06001083 #=zf7wB7s0Ypm42MjctdWH_D4dyWQ8bBOcNRkNkG4xpL8fVb5FqXA==::System.String #=zULcydqk=(System.String, System.String, System.String)
+0000: ldsfld 0x040007FA #=zf7wB7s0Ypm42MjctdWH_D4dyWQ8bBOcNRkNkG4xpL8fVb5FqXA==::Boolean #=zrbj3MGrHUxA8
+0005: brtrue.s 7
+0007: ldarg.1 
+0008: ldarg.2 
+0009: call 0x06001081 #=zf7wB7s0Ypm42MjctdWH_D4dyWQ8bBOcNRkNkG4xpL8fVb5FqXA==::Void #=zYDnSac66Wez80kP9SA==(System.String, System.String)
+000E: call 0x0A0004FE System.Text.Encoding::System.Text.Encoding get_ASCII()
+0013: ldarg.0 
+0014: callvirt 0x0A00012A System.Text.Encoding::Byte[] GetBytes(System.String)
+0019: stloc.0 
+001A: ldsfld 0x040007F8 #=zf7wB7s0Ypm42MjctdWH_D4dyWQ8bBOcNRkNkG4xpL8fVb5FqXA==::System.Security.Cryptography.ICryptoTransform #=zj0S52qLuCojo5Bm7Sg==
+001F: ldloc.0 
+0020: ldc.i4.0 
+0021: ldloc.0 
+0022: ldlen 
+0023: conv.i4 
+0024: callvirt 0x0A000216 System.Security.Cryptography.ICryptoTransform::Byte[] TransformFinalBlock(Byte[], Int32, Int32)
+0029: stloc.0 
+002A: ldloc.0 
+002B: call 0x0A000448 System.Convert::System.String ToBase64String(Byte[])
+0030: ret 
+METHOD 0x06001085 #=zf7wB7s0Ypm42MjctdWH_D4dyWQ8bBOcNRkNkG4xpL8fVb5FqXA==::System.String #=zldLpQkw=(System.String, System.String, System.String)
+0000: ldc.i4.3 
+0001: newarr 0x0100012A ::System.Object
+0006: stloc.0 
+0007: ldloc.0 
+0008: ldc.i4.0 
+0009: ldarg.0 
+000A: stelem.ref 
+000B: ldloc.0 
+000C: ldc.i4.1 
+000D: ldarg.1 
+000E: stelem.ref 
+000F: ldloc.0 
+0010: ldc.i4.2 
+0011: ldarg.2 
+0012: stelem.ref 
+0013: call 0x06000A52 #=zECTcFak2FJxa2_M50FvJNIJGfIQHLxooouSZXsgOly8mBdh9oA==::#=qtFUFhysyS8GLDTE$JDJ6nVj_5$vz_8i3vOXFuuHjoXk= #=zAvKznWbaZrnitjRpA7UkC763SDccXpa45xYelS7gvYJA9OGpYQ==()
+0018: call 0x06000A54 #=zECTcFak2FJxa2_M50FvJNIJGfIQHLxooouSZXsgOly8mBdh9oA==::System.IO.Stream #=zgrZWQiFF4oKHjCfL_TPAP_4oFtxULB2FqmSFqaw1E21sc4jQTA==()
+001D: ldstr "Za)No\$i]V"
+0022: ldloc.0 
+0023: call 0x060002E5 #=qtFUFhysyS8GLDTE$JDJ6nVj_5$vz_8i3vOXFuuHjoXk=::System.Object #=zkvtZJCWIOijTulIlGJyrGy12XHnO(System.IO.Stream, System.String, System.Object[])
+0028: castclass 0x0100018B ::System.String
+002D: ret 
+METHOD 0x06001353 #=ztoplF7s0LY$AiPmUQZGxkuFQgMT2lQ52B1lC5R_kVcMM76GuCTlXxb9j$rBh::Void #=z36Bwf6kisNxy()
+0000: newobj 0x0A000280 Yim.Jibas.JendelaSekolah.Common.Data.JsUserRequest::Void .ctor()
+0005: dup 
+0006: ldsfld 0x040007DC #=zdwksX0mNm6W0c0inP_wwpXAsquHtNTgDfdvgEdtJIX0iUrsIwQ==+#=zJXrq1HA=::System.String #=zBq_lKwQhdTB2
+000B: stfld 0x0A000281 Yim.Jibas.JendelaSekolah.Common.Data.JsUserRequest::System.String SchoolId
+0010: dup 
+0011: ldsfld 0x040007DD #=zdwksX0mNm6W0c0inP_wwpXAsquHtNTgDfdvgEdtJIX0iUrsIwQ==+#=zJXrq1HA=::System.String #=zki2CJDvEcxhxv9vcSg==
+0016: stfld 0x0A000282 Yim.Jibas.JendelaSekolah.Common.Data.JsUserRequest::System.String SchoolName
+001B: dup 
+001C: ldc.i4.s 10
+001E: call 0x06000916 #=z9hag6tYGZTt21UEzru4NgCTv$_W8neoh$YI69g0E39pyDCMfMdisSys=::System.String #=zu0WlTRcy7djF(Int32)
+0023: stfld 0x0A000283 Yim.Jibas.JendelaSekolah.Common.Data.JsUserRequest::System.String DataId
+0028: dup 
+0029: ldsfld 0x040007F1 #=zdwksX0mNm6W0c0inP_wwpXAsquHtNTgDfdvgEdtJIX0iUrsIwQ==+#=zhpyaE7s=::System.String #=zJxG$Z8E=
+002E: stfld 0x0A000284 Yim.Jibas.JendelaSekolah.Common.Data.JsUserRequest::System.String SessionId
+0033: dup 
+0034: ldsfld 0x040007E4 #=zdwksX0mNm6W0c0inP_wwpXAsquHtNTgDfdvgEdtJIX0iUrsIwQ==+#=zJXrq1HA=::Int32 #=zzUDKLQVSHfiC
+0039: stfld 0x0A0008C7 Yim.Jibas.JendelaSekolah.Common.Data.JsUserRequest::Int32 MaxAgentConn
+003E: dup 
+003F: ldsfld 0x040007F0 #=zdwksX0mNm6W0c0inP_wwpXAsquHtNTgDfdvgEdtJIX0iUrsIwQ==+#=zhpyaE7s=::System.String #=zhYWAV9I=
+0044: stfld 0x0A0008C8 Yim.Jibas.JendelaSekolah.Common.Data.JsUserRequest::System.String ServerInstanceId
+0049: stloc.s 4
+004B: ldc.i4.s 101
+004D: ldc.i4 200
+0052: ldloc.s 4
+0054: ldc.i4.0 
+0055: ldc.i4.0 
+0056: ldc.i4.s 100
+0058: ldc.i4 -1181199684
+005D: call 0x06000149 #=qOCqiJqBjiKliE8$axxQ1KsgfJu2flN0wkIKsdFcdCK4=::System.String #=zro7vDwY=(Int32) // registration
+0062: ldnull 
+0063: ldnull 
+0064: newobj 0x0A000285 Yim.Jibas.JendelaSekolah.Common.Data.JsRequest::Void .ctor(Yim.Jibas.JendelaSekolah.Common.Data.JsProtocol, Yim.Jibas.JendelaSekolah.Common.Data.JsDirection, Yim.Jibas.JendelaSekolah.Common.Data.JsUserRequest, Int32, Int32, Int32, System.String, System.Object, System.Object)
+0069: stloc.s 5
+006B: ldarg.0 
+006C: ldfld 0x040009B8 #=ztoplF7s0LY$AiPmUQZGxkuFQgMT2lQ52B1lC5R_kVcMM76GuCTlXxb9j$rBh::System.Object #=zDagfkSQRdb0Y
+0071: stloc.2 
+0072: ldc.i4.0 
+0073: stloc.s 6
+0075: ldloc.2 
+0076: ldloca.s 6
+0078: call 0x0A000305 System.Threading.Monitor::Void Enter(System.Object, Boolean ByRef)
+007D: ldarg.0 
+007E: ldc.i4.0 
+007F: stfld 0x040009B6 #=ztoplF7s0LY$AiPmUQZGxkuFQgMT2lQ52B1lC5R_kVcMM76GuCTlXxb9j$rBh::Int32 #=zkyl4utjMvJuR
+0084: ldarg.0 
+0085: ldc.i4.0 
+0086: stfld 0x040009B7 #=ztoplF7s0LY$AiPmUQZGxkuFQgMT2lQ52B1lC5R_kVcMM76GuCTlXxb9j$rBh::Int32 #=z_c3aulYD6Eb$
+008B: leave.s 11
+008D: ldloc.s 6
+008F: brfalse.s 6
+0091: ldloc.2 
+0092: call 0x0A0000A3 System.Threading.Monitor::Void Exit(System.Object)
+0097: endfinally 
+0098: ldc.i4.0 
+0099: stloc.0 
+009A: br.s 47
+009C: ldarg.0 
+009D: ldfld 0x040009B2 #=ztoplF7s0LY$AiPmUQZGxkuFQgMT2lQ52B1lC5R_kVcMM76GuCTlXxb9j$rBh::#=zAzBBQqb83RDlEk2jaX$4s_dvfohDLoOsI8cHNdmZMG33 #=zsNNJan303Oqc
+00A2: ldloc.0 
+00A3: callvirt 0x06000991 #=zAzBBQqb83RDlEk2jaX$4s_dvfohDLoOsI8cHNdmZMG33::#=zMOawx_nDu4OSCq1DcSIkTJ2Ors6wI5zozaG8WXFwVILqgNcFd8cHjUY= #=zG25nlcE=(Int32)
+00A8: stloc.1 
+00A9: ldloc.1 
+00AA: brfalse.s 27
+00AC: ldloc.1 
+00AD: callvirt 0x06000858 #=z5Q5bCto4EUnen2LaMtcto1zsaO5L378AzaV1aEfJbpqWIVqL5ryAQnJJe9Rh::Boolean #=zSjfEFt$WZNpI()
+00B2: brfalse.s 19
+00B4: ldloc.1 
+00B5: ldloc.s 5
+00B7: ldsfld 0x04000395 #=z5LBQMM4hvZ_9rXRst4smrpHnI2GjMCxK_KkU3xxSwMhhfdV7mg==+#=z2yZHUAw=::Int32 #=zzwy45gd8qiJN
+00BC: ldarg.0 
+00BD: newobj 0x0600135A #=ztoplF7s0LY$AiPmUQZGxkuFQgMT2lQ52B1lC5R_kVcMM76GuCTlXxb9j$rBh+#=zO9KJhk6_yV46::Void .ctor(#=ztoplF7s0LY$AiPmUQZGxkuFQgMT2lQ52B1lC5R_kVcMM76GuCTlXxb9j$rBh)
+00C2: callvirt 0x06000C31 #=zMOawx_nDu4OSCq1DcSIkTJ2Ors6wI5zozaG8WXFwVILqgNcFd8cHjUY=::Void #=zNZElyxfNhhuQ(Yim.Jibas.JendelaSekolah.Common.Data.JsRequest, Int32, #=zW8H013jkXu9U0DjeZronsjvwcWME$W2dxD$_DLp3Ynad_Kjnnf6U4zI=)
+00C7: ldloc.0 
+00C8: ldc.i4.1 
+00C9: add 
+00CA: stloc.0 
+00CB: ldloc.0 
+00CC: ldarg.0 
+00CD: ldfld 0x040009B2 #=ztoplF7s0LY$AiPmUQZGxkuFQgMT2lQ52B1lC5R_kVcMM76GuCTlXxb9j$rBh::#=zAzBBQqb83RDlEk2jaX$4s_dvfohDLoOsI8cHNdmZMG33 #=zsNNJan303Oqc
+00D2: callvirt 0x06000992 #=zAzBBQqb83RDlEk2jaX$4s_dvfohDLoOsI8cHNdmZMG33::Int32 #=zQmSdhzw=()
+00D7: blt.s 195
+00D9: leave.s 55
+00DB: stloc.3 
+00DC: call 0x0A000170 System.Reflection.MethodBase::System.Reflection.MethodBase GetCurrentMethod()
+00E1: callvirt 0x0A0000DC System.Reflection.MemberInfo::System.Type get_DeclaringType()
+00E6: callvirt 0x0A00002B System.Reflection.MemberInfo::System.String get_Name()
+00EB: ldc.i4 -1180965277
+00F0: call 0x06000149 #=qOCqiJqBjiKliE8$axxQ1KsgfJu2flN0wkIKsdFcdCK4=::System.String #=zro7vDwY=(Int32) // .
+00F5: call 0x0A000170 System.Reflection.MethodBase::System.Reflection.MethodBase GetCurrentMethod()
+00FA: callvirt 0x0A00002B System.Reflection.MemberInfo::System.String get_Name()
+00FF: call 0x0A00015B System.String::System.String Concat(System.String, System.String, System.String)
+0104: ldloc.3 
+0105: callvirt 0x0A000259 System.Exception::System.String get_Message()
+010A: ldloc.3 
+010B: call 0x060012AA #=zrTfzqyNV7gvHrCcbRxs0KuyNYYYzZLmlYeR8o73mWBi7VpBpbtDuW4Y=::Void #=zG690U8c=(System.String, System.String, System.Exception)
+0110: leave.s 0
+0112: ret 

@@ -1,0 +1,180 @@
+﻿METHOD 0x0x06000A1C #=zz7$mjftj0kfWVc6xbTIgUOuwP_VMMygVYw==::System.String #=zWWsuAu4IdfIh(MySql.Data.MySqlClient.MySqlConnection)
+0000: ldsfld       System.String::System.String Empty 0x0A0000CA
+0005: stloc.0       
+0006: newobj       MySql.Data.MySqlClient.MySqlCommand::Void .ctor() 0x0A000246
+000B: dup           
+000C: ldarg.0       
+000D: callvirt     MySql.Data.MySqlClient.MySqlCommand::Void set_Connection(MySql.Data.MySqlClient.MySqlConnection) 0x0A000247
+0012: dup           
+0013: ldc.i4       -2016170167 
+0018: call         #=qUTYeuEjgps5nRgWvd3l46kC3tZkwiv_$z4mciA_ejCg=::System.String #=z7hs2dzk=(Int32) 0x060003C2
+001D: callvirt     System.Data.Common.DbCommand::Void set_CommandText(System.String) 0x0A000249
+0022: stloc.1       
+0023: ldloc.1       
+0024: callvirt     System.Data.Common.DbCommand::Int32 ExecuteNonQuery() 0x0A00024A
+0029: pop           
+002A: ldloc.1       
+002B: ldc.i4       -2016171527 
+0030: call         #=qUTYeuEjgps5nRgWvd3l46kC3tZkwiv_$z4mciA_ejCg=::System.String #=z7hs2dzk=(Int32) 0x060003C2
+0035: callvirt     System.Data.Common.DbCommand::Void set_CommandText(System.String) 0x0A000249
+003A: ldloc.1       
+003B: callvirt     System.Data.Common.DbCommand::System.Object ExecuteScalar() 0x0A000263
+0040: call         System.Convert::Int32 ToInt32(System.Object) 0x0A0000ED
+0045: brtrue.s     77 
+0047: ldsfld       System.String::System.String Empty 0x0A0000CA
+004C: ret           
+004D: ldarg.0       
+004E: call         #=zz7$mjftj0kfWVc6xbTIgUOuwP_VMMygVYw==::Void #=zg6WXI$0bpdJO(MySql.Data.MySqlClient.MySqlConnection) 0x06000A18
+0053: ldloc.1       
+0054: ldc.i4.4      
+0055: callvirt     System.Data.Common.DbCommand::Void set_CommandType(System.Data.CommandType) 0x0A000559
+005A: ldloc.1       
+005B: callvirt     MySql.Data.MySqlClient.MySqlCommand::MySql.Data.MySqlClient.MySqlParameterCollection get_Parameters() 0x0A00047D
+0060: ldc.i4       -2016170147 
+0065: call         #=qUTYeuEjgps5nRgWvd3l46kC3tZkwiv_$z4mciA_ejCg=::System.String #=z7hs2dzk=(Int32) 0x060003C2
+006A: ldc.i4       254 
+006F: callvirt     MySql.Data.MySqlClient.MySqlParameterCollection::MySql.Data.MySqlClient.MySqlParameter Add(System.String, MySql.Data.MySqlClient.MySqlDbType) 0x0A00047F
+0074: ldc.i4.2      
+0075: callvirt     System.Data.Common.DbParameter::Void set_Direction(System.Data.ParameterDirection) 0x0A00055A
+007A: ldloc.1       
+007B: callvirt     MySql.Data.MySqlClient.MySqlCommand::MySql.Data.MySqlClient.MySqlParameterCollection get_Parameters() 0x0A00047D
+0080: ldc.i4       -2016170134 
+0085: call         #=qUTYeuEjgps5nRgWvd3l46kC3tZkwiv_$z4mciA_ejCg=::System.String #=z7hs2dzk=(Int32) 0x060003C2
+008A: ldc.i4       254 
+008F: callvirt     MySql.Data.MySqlClient.MySqlParameterCollection::MySql.Data.MySqlClient.MySqlParameter Add(System.String, MySql.Data.MySqlClient.MySqlDbType) 0x0A00047F
+0094: ldc.i4.2      
+0095: callvirt     System.Data.Common.DbParameter::Void set_Direction(System.Data.ParameterDirection) 0x0A00055A
+009A: ldloc.1       
+009B: callvirt     MySql.Data.MySqlClient.MySqlCommand::MySql.Data.MySqlClient.MySqlParameterCollection get_Parameters() 0x0A00047D
+00A0: ldc.i4       -2016170121 
+00A5: call         #=qUTYeuEjgps5nRgWvd3l46kC3tZkwiv_$z4mciA_ejCg=::System.String #=z7hs2dzk=(Int32) 0x060003C2
+00AA: ldc.i4       254 
+00AF: callvirt     MySql.Data.MySqlClient.MySqlParameterCollection::MySql.Data.MySqlClient.MySqlParameter Add(System.String, MySql.Data.MySqlClient.MySqlDbType) 0x0A00047F
+00B4: ldc.i4.2      
+00B5: callvirt     System.Data.Common.DbParameter::Void set_Direction(System.Data.ParameterDirection) 0x0A00055A
+00BA: ldloc.1       
+00BB: callvirt     MySql.Data.MySqlClient.MySqlCommand::MySql.Data.MySqlClient.MySqlParameterCollection get_Parameters() 0x0A00047D
+00C0: ldc.i4       -2016170116 
+00C5: call         #=qUTYeuEjgps5nRgWvd3l46kC3tZkwiv_$z4mciA_ejCg=::System.String #=z7hs2dzk=(Int32) 0x060003C2
+00CA: ldc.i4       254 
+00CF: callvirt     MySql.Data.MySqlClient.MySqlParameterCollection::MySql.Data.MySqlClient.MySqlParameter Add(System.String, MySql.Data.MySqlClient.MySqlDbType) 0x0A00047F
+00D4: ldc.i4.2      
+00D5: callvirt     System.Data.Common.DbParameter::Void set_Direction(System.Data.ParameterDirection) 0x0A00055A
+00DA: ldloc.1       
+00DB: callvirt     MySql.Data.MySqlClient.MySqlCommand::MySql.Data.MySqlClient.MySqlParameterCollection get_Parameters() 0x0A00047D
+00E0: ldc.i4       -2016171895 
+00E5: call         #=qUTYeuEjgps5nRgWvd3l46kC3tZkwiv_$z4mciA_ejCg=::System.String #=z7hs2dzk=(Int32) 0x060003C2
+00EA: ldc.i4       254 
+00EF: callvirt     MySql.Data.MySqlClient.MySqlParameterCollection::MySql.Data.MySqlClient.MySqlParameter Add(System.String, MySql.Data.MySqlClient.MySqlDbType) 0x0A00047F
+00F4: ldc.i4.2      
+00F5: callvirt     System.Data.Common.DbParameter::Void set_Direction(System.Data.ParameterDirection) 0x0A00055A
+00FA: ldloc.1       
+00FB: callvirt     MySql.Data.MySqlClient.MySqlCommand::MySql.Data.MySqlClient.MySqlParameterCollection get_Parameters() 0x0A00047D
+0100: ldc.i4       -2016171882 
+0105: call         #=qUTYeuEjgps5nRgWvd3l46kC3tZkwiv_$z4mciA_ejCg=::System.String #=z7hs2dzk=(Int32) 0x060003C2
+010A: ldc.i4       254 
+010F: callvirt     MySql.Data.MySqlClient.MySqlParameterCollection::MySql.Data.MySqlClient.MySqlParameter Add(System.String, MySql.Data.MySqlClient.MySqlDbType) 0x0A00047F
+0114: ldc.i4.2      
+0115: callvirt     System.Data.Common.DbParameter::Void set_Direction(System.Data.ParameterDirection) 0x0A00055A
+011A: ldloc.1       
+011B: callvirt     MySql.Data.MySqlClient.MySqlCommand::MySql.Data.MySqlClient.MySqlParameterCollection get_Parameters() 0x0A00047D
+0120: ldc.i4       -2016171869 
+0125: call         #=qUTYeuEjgps5nRgWvd3l46kC3tZkwiv_$z4mciA_ejCg=::System.String #=z7hs2dzk=(Int32) 0x060003C2
+012A: ldc.i4       254 
+012F: callvirt     MySql.Data.MySqlClient.MySqlParameterCollection::MySql.Data.MySqlClient.MySqlParameter Add(System.String, MySql.Data.MySqlClient.MySqlDbType) 0x0A00047F
+0134: ldc.i4.2      
+0135: callvirt     System.Data.Common.DbParameter::Void set_Direction(System.Data.ParameterDirection) 0x0A00055A
+013A: ldloc.1       
+013B: callvirt     MySql.Data.MySqlClient.MySqlCommand::MySql.Data.MySqlClient.MySqlParameterCollection get_Parameters() 0x0A00047D
+0140: ldc.i4       -2016171864 
+0145: call         #=qUTYeuEjgps5nRgWvd3l46kC3tZkwiv_$z4mciA_ejCg=::System.String #=z7hs2dzk=(Int32) 0x060003C2
+014A: ldc.i4       254 
+014F: callvirt     MySql.Data.MySqlClient.MySqlParameterCollection::MySql.Data.MySqlClient.MySqlParameter Add(System.String, MySql.Data.MySqlClient.MySqlDbType) 0x0A00047F
+0154: ldc.i4.2      
+0155: callvirt     System.Data.Common.DbParameter::Void set_Direction(System.Data.ParameterDirection) 0x0A00055A
+015A: ldloc.1       
+015B: callvirt     MySql.Data.MySqlClient.MySqlCommand::MySql.Data.MySqlClient.MySqlParameterCollection get_Parameters() 0x0A00047D
+0160: ldc.i4       -2016171851 
+0165: call         #=qUTYeuEjgps5nRgWvd3l46kC3tZkwiv_$z4mciA_ejCg=::System.String #=z7hs2dzk=(Int32) 0x060003C2
+016A: ldc.i4       254 
+016F: callvirt     MySql.Data.MySqlClient.MySqlParameterCollection::MySql.Data.MySqlClient.MySqlParameter Add(System.String, MySql.Data.MySqlClient.MySqlDbType) 0x0A00047F
+0174: ldc.i4.2      
+0175: callvirt     System.Data.Common.DbParameter::Void set_Direction(System.Data.ParameterDirection) 0x0A00055A
+017A: ldloc.1       
+017B: ldc.i4       -2016171670 
+0180: call         #=qUTYeuEjgps5nRgWvd3l46kC3tZkwiv_$z4mciA_ejCg=::System.String #=z7hs2dzk=(Int32) 0x060003C2
+0185: call         #=zz7$mjftj0kfWVc6xbTIgUOuwP_VMMygVYw==::System.String[] #=zFwoIQcz2Zx5$(MySql.Data.MySqlClient.MySqlCommand, System.String) 0x06000A17
+018A: ldc.i4.2      
+018B: ldelem.ref    
+018C: call         #=zOE84ljk2so7A8BTQ8xEsIXBE8uJfQyyydA==::System.String #=z3hn8OnclHYBI(System.String) 0x06000694
+0191: stloc.2       
+0192: ldloc.0       
+0193: ldloc.2       
+0194: ldc.i4.s     30 
+0196: ldc.i4.1      
+0197: callvirt     System.String::System.String Substring(Int32, Int32) 0x0A000034
+019C: call         System.String::System.String Concat(System.String, System.String) 0x0A000236
+01A1: stloc.0       
+01A2: ldloc.1       
+01A3: ldc.i4       -2016171391 
+01A8: call         #=qUTYeuEjgps5nRgWvd3l46kC3tZkwiv_$z4mciA_ejCg=::System.String #=z7hs2dzk=(Int32) 0x060003C2
+01AD: call         #=zz7$mjftj0kfWVc6xbTIgUOuwP_VMMygVYw==::System.String[] #=zFwoIQcz2Zx5$(MySql.Data.MySqlClient.MySqlCommand, System.String) 0x06000A17
+01B2: ldc.i4.3      
+01B3: ldelem.ref    
+01B4: call         #=zOE84ljk2so7A8BTQ8xEsIXBE8uJfQyyydA==::System.String #=z3hn8OnclHYBI(System.String) 0x06000694
+01B9: stloc.2       
+01BA: ldloc.0       
+01BB: ldloc.2       
+01BC: ldc.i4.7      
+01BD: ldc.i4.1      
+01BE: callvirt     System.String::System.String Substring(Int32, Int32) 0x0A000034
+01C3: call         System.String::System.String Concat(System.String, System.String) 0x0A000236
+01C8: stloc.0       
+01C9: ldloc.1       
+01CA: ldc.i4       -2016171368 
+01CF: call         #=qUTYeuEjgps5nRgWvd3l46kC3tZkwiv_$z4mciA_ejCg=::System.String #=z7hs2dzk=(Int32) 0x060003C2
+01D4: call         #=zz7$mjftj0kfWVc6xbTIgUOuwP_VMMygVYw==::System.String[] #=zFwoIQcz2Zx5$(MySql.Data.MySqlClient.MySqlCommand, System.String) 0x06000A17
+01D9: ldc.i4.6      
+01DA: ldelem.ref    
+01DB: call         #=zOE84ljk2so7A8BTQ8xEsIXBE8uJfQyyydA==::System.String #=z3hn8OnclHYBI(System.String) 0x06000694
+01E0: stloc.2       
+01E1: ldloc.0       
+01E2: ldloc.2       
+01E3: ldc.i4.s     37 
+01E5: ldc.i4.1      
+01E6: callvirt     System.String::System.String Substring(Int32, Int32) 0x0A000034
+01EB: call         System.String::System.String Concat(System.String, System.String) 0x0A000236
+01F0: stloc.0       
+01F1: ldloc.1       
+01F2: ldc.i4       -2016171337 
+01F7: call         #=qUTYeuEjgps5nRgWvd3l46kC3tZkwiv_$z4mciA_ejCg=::System.String #=z7hs2dzk=(Int32) 0x060003C2
+01FC: call         #=zz7$mjftj0kfWVc6xbTIgUOuwP_VMMygVYw==::System.String[] #=zFwoIQcz2Zx5$(MySql.Data.MySqlClient.MySqlCommand, System.String) 0x06000A17
+0201: ldc.i4.6      
+0202: ldelem.ref    
+0203: call         #=zOE84ljk2so7A8BTQ8xEsIXBE8uJfQyyydA==::System.String #=z3hn8OnclHYBI(System.String) 0x06000694
+0208: stloc.2       
+0209: ldloc.0       
+020A: ldloc.2       
+020B: ldc.i4.s     12 
+020D: ldc.i4.1      
+020E: callvirt     System.String::System.String Substring(Int32, Int32) 0x0A000034
+0213: call         System.String::System.String Concat(System.String, System.String) 0x0A000236
+0218: stloc.0       
+0219: ldloc.1       
+021A: ldc.i4       -2016171314 
+021F: call         #=qUTYeuEjgps5nRgWvd3l46kC3tZkwiv_$z4mciA_ejCg=::System.String #=z7hs2dzk=(Int32) 0x060003C2
+0224: call         #=zz7$mjftj0kfWVc6xbTIgUOuwP_VMMygVYw==::System.String[] #=zFwoIQcz2Zx5$(MySql.Data.MySqlClient.MySqlCommand, System.String) 0x06000A17
+0229: ldc.i4.6      
+022A: ldelem.ref    
+022B: call         #=zOE84ljk2so7A8BTQ8xEsIXBE8uJfQyyydA==::System.String #=z3hn8OnclHYBI(System.String) 0x06000694
+0230: stloc.2       
+0231: ldloc.0       
+0232: ldloc.2       
+0233: ldc.i4.5      
+0234: ldc.i4.1      
+0235: callvirt     System.String::System.String Substring(Int32, Int32) 0x0A000034
+023A: call         System.String::System.String Concat(System.String, System.String) 0x0A000236
+023F: stloc.0       
+0240: ldloc.0       
+0241: callvirt     System.String::System.String ToUpper() 0x0A00055B
+0246: ret           

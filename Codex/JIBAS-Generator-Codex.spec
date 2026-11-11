@@ -2,11 +2,13 @@
 from pathlib import Path
 
 root = Path(SPECPATH)
-resources = ['schema.xml', 'schoolpay_schema.xml', 'cbe_schema.xml', 'format_profile.json']
+resources = ['schema.xml', 'schoolpay_schema.xml', 'cbe_schema.xml', 'format_profile.json',
+             'fingerprint_schema.xml', 'sjs_schema.xml', 'sjs_format.json']
 a = Analysis(
     [str(root / 'build_tools' / 'standalone_entry.py')],
     pathex=[str(root)], binaries=[], datas=[(str(root / name), '.') for name in resources],
-    hiddenimports=['license_codec', 'schoolpay_codec', 'cbe_codec'],
+    hiddenimports=['license_codec', 'schoolpay_codec', 'cbe_codec',
+                   'fingerprint_codec', 'letterstore_codec', 'sjs_codec'],
     hookspath=[], hooksconfig={}, runtime_hooks=[],
     excludes=['pymysql', 'id_detect', 'schoolpay_id_detect', 'pytest', 'PIL'],
     noarchive=False, optimize=0,

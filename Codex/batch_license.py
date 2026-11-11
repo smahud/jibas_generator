@@ -12,6 +12,7 @@ from pathlib import Path
 import re
 import shutil
 import tempfile
+from product_actions import product_for, normalize_values, generate_with_backend
 
 
 JAKARTA = timezone(timedelta(hours=7))
@@ -44,43 +45,7 @@ def _validate_form(form):
     if not isinstance(item.get("overwrite", False), bool):
         raise ValueError("Pilihan overwrite tidak valid.")
     item["overwrite"] = item.get("overwrite", False)
-    values = dict(item.get("values") or {})
-    for key, label, pattern, kind in (
-            ("database_id", "Database ID", r"[A-Z0-9]{5}", "huruf/angka"),
-            ("system_id", "System ID", r"[0-9A-F]{5}", "heksadesimal")):
-        value = str(values.get(key) or "").strip().upper()
-        if not re.fullmatch(pattern, value):
-            raise ValueError(f"{label} wajib diisi dengan 5 karakter {kind}.")
-        values[key] = value
-    expires = str(values.get("expires") or "").strip()
-    try:
-        if not re.fullmatch(r"[0-9]{4}-[0-9]{2}-[0-9]{2}", expires):
-            raise ValueError
-        expiry = datetime.strptime(expires, "%Y-%m-%d").date()
-    except ValueError as exc:
-        raise ValueError("Tanggal wajib diisi dengan format YYYY-MM-DD yang valid.") from exc
-    if expiry < datetime.now(JAKARTA).date():
-        raise ValueError("Tanggal kedaluwarsa sudah lewat.")
-    values["expires"] = expires
-    raw_capacity = values.get("capacity", "")
-    if isinstance(raw_capacity, bool) or not re.fullmatch(r"[0-9]+", str(raw_capacity).strip()):
-        raise ValueError("Kapasitas wajib berupa bilangan bulat antara 1 dan 2147483647.")
-    capacity = int(str(raw_capacity).strip())
-    if not 1 <= capacity <= 2_147_483_647:
-        raise ValueError("Kapasitas harus antara 1 dan 2147483647.")
-    values["capacity"] = capacity
-    client_id = str(values.get("client_id") or "").strip()
-    previous = str(values.get("previous_license") or "").strip()
-    if client_id and (client_id == "TRIAL" or not client_id.isascii() or not client_id.isprintable()):
-        raise ValueError("Client ID harus ASCII yang dapat dicetak dan bukan TRIAL.")
-    if client_id and not previous:
-        raise ValueError("Untuk perpanjangan, pilih berkas lisensi lama agar urutan diperbarui otomatis.")
-    if previous and not Path(previous).is_file():
-        raise ValueError("Berkas lisensi lama tidak ditemukan atau bukan berkas.")
-    values["client_id"] = client_id
-    values["client_name"] = str(values.get("client_name") or "").strip()
-    values["previous_license"] = previous
-    item["values"] = values
+    item["values"] = normalize_values(product_for(product), item.get("values") or {})
     return item
 
 
@@ -156,13 +121,8 @@ def generate_all(forms, output_dir, backends=None):
                 backend = (backends or {}).get(key)
                 if backend is None:
                     backend = importlib.import_module(item["codec_module"])
-                result = backend.generate_license(
-                    database_id=values["database_id"], system_id=values["system_id"],
-                    client_id=values["client_id"] or None, expires=values["expires"],
-                    capacity=values["capacity"], output_path=staged_outputs / item["filename"],
-                    client_name=values["client_name"],
-                    previous_license_path=Path(values["previous_license"]) if values["previous_license"] else None,
-                    sequence=None, overwrite=False)
+                result = generate_with_backend(backend, product_for(key), values,
+                    staged_outputs / item["filename"], overwrite=False)
                 if not (staged_outputs / item["filename"]).is_file():
                     raise ValueError("Codec tidak menghasilkan berkas lisensi.")
                 if result.get("verification", {}).get("valid") is not True:

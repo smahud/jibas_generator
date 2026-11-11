@@ -35,9 +35,12 @@ def main():
         'onefile': True, 'console': False, 'python': platform.python_version(),
         'packages': {name: version(name) for name in
                      ('pyinstaller', 'pyinstaller-hooks-contrib', 'cryptography')},
-        'resources': ['schema.xml', 'schoolpay_schema.xml', 'cbe_schema.xml', 'format_profile.json'],
+        'resources': ['schema.xml', 'schoolpay_schema.xml', 'cbe_schema.xml', 'format_profile.json',
+                      'fingerprint_schema.xml', 'sjs_schema.xml', 'sjs_format.json'],
         'source_hashes': {name: hashlib.sha256((ROOT / name).read_bytes()).hexdigest() for name in
             ('app.py', 'batch_license.py', 'license_codec.py', 'schoolpay_codec.py', 'cbe_codec.py',
+             'fingerprint_codec.py', 'letterstore_codec.py', 'sjs_codec.py',
+             'product_catalog.py', 'product_actions.py',
              'build_tools/standalone_entry.py', 'build_tools/frozen_smoke.py', 'JIBAS-Generator-Codex.spec')},
     }
     (evidence / 'build_manifest.json').write_text(json.dumps(manifest, indent=2), encoding='utf-8')

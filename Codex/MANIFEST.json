@@ -23,8 +23,8 @@
     },
     {
       "path": "AGENT_GUIDE.md",
-      "bytes": 2606,
-      "sha256": "c2739c9389669a2f45856c12bb3f9d44e576b36903b6f1b36978f8521ce2164d"
+      "bytes": 3022,
+      "sha256": "91a3798312999089c8829c612b78c47385d6667a75ffd4cd8f91d832c0794de3"
     },
     {
       "path": "Analisis.md",
@@ -38,13 +38,13 @@
     },
     {
       "path": "JIBAS-Generator-Codex.exe",
-      "bytes": 15491402,
-      "sha256": "e9c10166aa09293915a51784bc3160f30fd979a93ae3e1f215fe004f07fb8ae5"
+      "bytes": 15525423,
+      "sha256": "bc3d0d5bccf27f6ba522c19365a462360af7b00ffbe26f3726773c58b7d0ef6c"
     },
     {
       "path": "JIBAS-Generator-Codex.spec",
-      "bytes": 914,
-      "sha256": "2381cf239a2468f6c3d7f8fc84b4d7fb37a620e4d3439b71d7003826c3105141"
+      "bytes": 1064,
+      "sha256": "5182a8697ad5e790c9431fe7469da27e0bd7c78de19a86f17f7de08ef99ed434"
     },
     {
       "path": "Jalankan GUI.cmd",
@@ -58,8 +58,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 6114,
-      "sha256": "5edf6504aa5a68d2ae9ba82bbb9a1f73e49d8b4a26a017789ed869e4eae5f51e"
+      "bytes": 8043,
+      "sha256": "3bb0c2ae326b1bbf141a883cabef80b2d637a3e83cbfb6ee34f34a98c0de947d"
     },
     {
       "path": "SCHOOLPAY.md",
@@ -68,13 +68,13 @@
     },
     {
       "path": "SHARED_SAVE_ALL.md",
-      "bytes": 2375,
-      "sha256": "590b2968b339ca82bdf7d15909fc548432cdeba5858a1d0b87ed316cef6250b3"
+      "bytes": 2833,
+      "sha256": "a844052962638177f3266b09fb7508e7ccf5d223ec2c14a88cd6c653a7dfb29e"
     },
     {
       "path": "STANDALONE.md",
-      "bytes": 3071,
-      "sha256": "38d86193dcd2bc247ee09c930e2df0e0df0255ddb58ba6d9721908078b7df12f"
+      "bytes": 3415,
+      "sha256": "5360db0943aaf2c47411b849611b523f4097709c68890f134061bde93c0dd0d0"
     },
     {
       "path": "TEMUAN.md",
@@ -83,23 +83,23 @@
     },
     {
       "path": "TEST_REPORT.md",
-      "bytes": 4063,
-      "sha256": "43d64c032de966d8b6bfe95da2ab606aa80e1ce5e7174632898ff245ecf52189"
+      "bytes": 6154,
+      "sha256": "c18e80e8942d93588d4929ea414d47612d05cb6755b129ffefa87297ebf89598"
     },
     {
       "path": "app.py",
-      "bytes": 21341,
-      "sha256": "26f6555120dee7b1155d2b15c03ebbee85486c9f92e16dfd88dbdefee98dc99e"
+      "bytes": 20366,
+      "sha256": "3370ebdd1773ab639d4c798640984ba69736c87774299903961f95d17dbba62e"
     },
     {
       "path": "batch_license.py",
-      "bytes": 10155,
-      "sha256": "e30004dd2b6ffeba9073ea53a427662833bd746fb5ed9847d1f3f1bea4e1e7ec"
+      "bytes": 7811,
+      "sha256": "2387122a38a83ee7a669105a763a68fb5ec417225544ee4f8c4f13833204aa40"
     },
     {
       "path": "build_standalone.py",
-      "bytes": 2321,
-      "sha256": "a53e5c27fa6395fd0f91f16abb143978d2fff78e60ecb8a537cbbb4a3ad27b0e"
+      "bytes": 2540,
+      "sha256": "af15cd7f96dccb4c4fe0bab697be2db39c8d8155b273462f58acbb65f565d38a"
     },
     {
       "path": "cbe_codec.py",
@@ -118,13 +118,23 @@
     },
     {
       "path": "cli.py",
-      "bytes": 5205,
-      "sha256": "dfa0d85f6c8fdb89453f1a13197139e8440303f36f5a8179e65096ec945f3b05"
+      "bytes": 5995,
+      "sha256": "e5cd3bead89d06f8dd01e2386f44bd3152c505176bdcb1ccd2b14e7d394c26e7"
     },
     {
       "path": "dbid_recipe.py",
       "bytes": 1790,
       "sha256": "e3fb96316d0fccd1c4553d1ecc449da6447eb8c1fbd403515162e9922de19ef4"
+    },
+    {
+      "path": "fingerprint_codec.py",
+      "bytes": 7581,
+      "sha256": "3f66df172e5c1d85509a3898c0eb2a6cd647e97c1fc09200f1f2137be9dee920"
+    },
+    {
+      "path": "fingerprint_schema.xml",
+      "bytes": 1574,
+      "sha256": "ba924e06ee92f3bd50d7527746dabd403daa0b4ed60589e27b74097dd5e6f067"
     },
     {
       "path": "format_profile.json",
@@ -137,9 +147,24 @@
       "sha256": "17c4931f4944351fb248e7bec4597b2ce009b866a53ce70efc7608bc9e1e9a80"
     },
     {
+      "path": "letterstore_codec.py",
+      "bytes": 8649,
+      "sha256": "6ea730ea99ddb5ee4894545fce5209cbbf37deb3c8fcb479bca2a422c3e0c2bc"
+    },
+    {
       "path": "license_codec.py",
       "bytes": 26470,
       "sha256": "05dc9efb7d35127238bf79b83cd4fae5039995c2f55871b15b66dc5ecfb80d28"
+    },
+    {
+      "path": "product_actions.py",
+      "bytes": 6191,
+      "sha256": "3678b8d9cc63ab5ad668aaa852bfb532fd2aa6c6ae6c0c36869c277f9583e688"
+    },
+    {
+      "path": "product_catalog.py",
+      "bytes": 3085,
+      "sha256": "6a81f98738560bb16f95dafb07a11b96e1c47b2b8d7a57d1e566414d86542600"
     },
     {
       "path": "requirements-build.txt",
@@ -182,9 +207,24 @@
       "sha256": "c2bd7dd7647b13fb944219471846b47431e7b6321110343f72abc352a43b90aa"
     },
     {
+      "path": "sjs_codec.py",
+      "bytes": 14821,
+      "sha256": "fcc2425a4f936cdd1b48e49f69d4114546425b317b2493567286d7737f0faf49"
+    },
+    {
+      "path": "sjs_format.json",
+      "bytes": 89,
+      "sha256": "3d6ea3f42bbe8d9595123e47aec52091bf9a8c81f84a9caf2b96713eebd57f7c"
+    },
+    {
+      "path": "sjs_schema.xml",
+      "bytes": 1629,
+      "sha256": "a853006b35b0bd77538a234831d38e9a6155c2e4b011b00e8cf96c7a2c274428"
+    },
+    {
       "path": "build_tools/frozen_smoke.py",
-      "bytes": 8722,
-      "sha256": "845c70389248b56af7130d68c0dbb28227cdf4b159ebfcbbd2631b200bf8ea20"
+      "bytes": 13966,
+      "sha256": "4f37766385396fc4d29bace66b4e7562b619c6fd93607dff333de79ae6415673"
     },
     {
       "path": "build_tools/standalone_entry.py",
@@ -1157,6 +1197,281 @@
       "sha256": "500b1d6e1f72720a5e1a45167cbd0d1f3107688f47ee3ec632717421fc30a21d"
     },
     {
+      "path": "bukti/fingerprint/Finger16Probe.cs",
+      "bytes": 5497,
+      "sha256": "5e960df5f1351f4be02c52b6d7e29643a178c03af02754aa9191c0577e028c81"
+    },
+    {
+      "path": "bukti/fingerprint/Finger16TraceProbe.cs",
+      "bytes": 7758,
+      "sha256": "ee73ce442bb142f4d6e9028e9351fd8baba28f361a0f698dda61baa8b324b078"
+    },
+    {
+      "path": "bukti/fingerprint/FingerProbe.cs",
+      "bytes": 5496,
+      "sha256": "2402ebf2c259846d039ba3c78ca4ca51777d9e6ad753914209502bc978be197e"
+    },
+    {
+      "path": "bukti/fingerprint/FingerTraceProbe.cs",
+      "bytes": 7759,
+      "sha256": "8506a3c4f78d3dab4fe54c089ff38f9cc523cb0fe2cce8defd135e0c8a435c89"
+    },
+    {
+      "path": "bukti/fingerprint/candidate.lic",
+      "bytes": 2350,
+      "sha256": "7cb5ed00b1e795403592942dcdc5b5838ffc7e88c3402a6ca7e4a82469fb2d28"
+    },
+    {
+      "path": "bukti/fingerprint/candidate_C.lic",
+      "bytes": 2330,
+      "sha256": "f902e64f27599a711292bed363402e21a49921337f433b0c398d3c4ca1e9e835"
+    },
+    {
+      "path": "bukti/fingerprint/candidate_CLIENT.lic",
+      "bytes": 2350,
+      "sha256": "b1305cc1be46787eb67bccc2d148d49d081040752b4807688727d511a70dd215"
+    },
+    {
+      "path": "bukti/fingerprint/candidate_CM.lic",
+      "bytes": 2330,
+      "sha256": "b3d904b33fc3b22cc8b98de94f4b1014c2881f4fa4d96d383f8472c91e4eacb4"
+    },
+    {
+      "path": "bukti/fingerprint/candidate_CM_header.lic",
+      "bytes": 2363,
+      "sha256": "51d0807a63d7188e445e0123e390e6320b68569037b29019e495dd63b6d5e72a"
+    },
+    {
+      "path": "bukti/fingerprint/candidate_C_M.lic",
+      "bytes": 2350,
+      "sha256": "ba260553a487188b67d6498ede1faa4ea4fc363f885b5036798b909bc9c20a86"
+    },
+    {
+      "path": "bukti/fingerprint/candidate_M.lic",
+      "bytes": 2330,
+      "sha256": "ab9313a36b5593bb7b72e87f616affcab68e92632dedc4ea2cbecfaf35e37f26"
+    },
+    {
+      "path": "bukti/fingerprint/candidate_MANAGER.lic",
+      "bytes": 2350,
+      "sha256": "6beeade528651565902eda1d80864ede3f0740e052ea836dd35397916c3f0a61"
+    },
+    {
+      "path": "bukti/fingerprint/client14_CM_header_import.json",
+      "bytes": 5117,
+      "sha256": "b8cab50a24a6c4633d5c81d8fc199edc3bb12aa2664123c130b139f355b5cfad"
+    },
+    {
+      "path": "bukti/fingerprint/client14_C_trace.json",
+      "bytes": 80091,
+      "sha256": "e90f5f473af52dd8640d8e3fc964e4c67eb4ed1302f0f1b748e0ce18ce584eb0"
+    },
+    {
+      "path": "bukti/fingerprint/client14_C_validate.json",
+      "bytes": 2595,
+      "sha256": "f13be12116b1b5cd594518f452907dbce42bce90087468fe1e456f191474a627"
+    },
+    {
+      "path": "bukti/fingerprint/client14_candidate_import.json",
+      "bytes": 5927,
+      "sha256": "3da94dfc35cefa294ce75819cbc6491c3c0ff328d78bfd77da1dc608f0a78c62"
+    },
+    {
+      "path": "bukti/fingerprint/client14_candidate_trace.json",
+      "bytes": 69361,
+      "sha256": "223d2b8f889f5cacca2802c5f059ff7207f783ac24dfec3cf0b153c27a9480f9"
+    },
+    {
+      "path": "bukti/fingerprint/client14_empty_import.json",
+      "bytes": 5877,
+      "sha256": "1d727221c1a65b4d051941e0e3e114caf8270202a39b19d14caa43a629d61ebe"
+    },
+    {
+      "path": "bukti/fingerprint/client14_final_replay.json",
+      "bytes": 4611,
+      "sha256": "7c32e91f26a35c98e129a75911cde37c2ee80768b995e529d92f793fb2d269a7"
+    },
+    {
+      "path": "bukti/fingerprint/client14_format.json",
+      "bytes": 2520,
+      "sha256": "04e40bbce912e8cc5ab1518512c84ec3ba9812873fb6b7f6e53a676cab3b2e95"
+    },
+    {
+      "path": "bukti/fingerprint/client14_license_hits.txt",
+      "bytes": 53828,
+      "sha256": "05e30d4711ebc714a27cdef23e3a1234e84ce2a9017f2acea952c5a16d64af62"
+    },
+    {
+      "path": "bukti/fingerprint/client14_license_il.txt",
+      "bytes": 31320,
+      "sha256": "1d348f2af9847086be3a7ade0370cbe1c86b0cbd34daeb6e790f5028a3615188"
+    },
+    {
+      "path": "bukti/fingerprint/client14_renewal.json",
+      "bytes": 11566,
+      "sha256": "da32cd03460448fa03383102c1eccc326bf94b12650e05d5d021b8935c22c604"
+    },
+    {
+      "path": "bukti/fingerprint/client14_strings.txt",
+      "bytes": 135744,
+      "sha256": "b8609b798aa1e0298463f3ed7c2fe3dca96e21d40e85cbe896bccaae70e5a0cd"
+    },
+    {
+      "path": "bukti/fingerprint/client14_wrong_scope.json",
+      "bytes": 5478,
+      "sha256": "1000f7daa84577f73cd46befba06b16de88e7f88b510f7930051b3288cba6c2d"
+    },
+    {
+      "path": "bukti/fingerprint/client16_CM_header_import.json",
+      "bytes": 5109,
+      "sha256": "3a1824e90213567977638b62b3ff60d004183057bb804f78e9d65f1017d390f8"
+    },
+    {
+      "path": "bukti/fingerprint/client16_CM_import.json",
+      "bytes": 5895,
+      "sha256": "57711f87e0f4aae9e784c213c400a17d4af9dee68ed883144fc958557b5aec9a"
+    },
+    {
+      "path": "bukti/fingerprint/client16_CM_validate.json",
+      "bytes": 2627,
+      "sha256": "a3f295ce47b6e7be765d00e1a857832b3e7e452201a2ad6e955df43793506e1a"
+    },
+    {
+      "path": "bukti/fingerprint/client16_final_replay.json",
+      "bytes": 4603,
+      "sha256": "e5768f01a1eec68764983ca6fd31f92ae5151e478df06b40f703e3cab2455936"
+    },
+    {
+      "path": "bukti/fingerprint/client16_header_trace.json",
+      "bytes": 11996,
+      "sha256": "69dd6af65b7302e101cf85b4887072dd3a72396ad0bd6787d2e0347f1dace970"
+    },
+    {
+      "path": "bukti/fingerprint/client16_license_il.txt",
+      "bytes": 20222,
+      "sha256": "4c04c647a5fb574323c597891355d8438db7385a98b8ce0e448d2715cd7ee6c9"
+    },
+    {
+      "path": "bukti/fingerprint/client16_wrong_scope.json",
+      "bytes": 5467,
+      "sha256": "85fb4ea4ae17f93e4a2b979b31196834d908ef95ba13e1236e5056e91870ad95"
+    },
+    {
+      "path": "bukti/fingerprint/final_replay_summary.json",
+      "bytes": 509,
+      "sha256": "344274ce29992a78bd08d9a2fe5bda392f9eb4edc619adcd928977126a17fb71"
+    },
+    {
+      "path": "bukti/fingerprint/find_license.ps1",
+      "bytes": 641,
+      "sha256": "62dd7d7ed9b1eec0450c90d1fc951f49a10a126a416c4f77cd3191c7fde486fe"
+    },
+    {
+      "path": "bukti/fingerprint/finger_il.ps1",
+      "bytes": 3800,
+      "sha256": "89118d9b996280a63eb61ce299d4732be683a6191dd91fcac3e2d9f81708dcd8"
+    },
+    {
+      "path": "bukti/fingerprint/fingerprint_schema.xml",
+      "bytes": 1574,
+      "sha256": "ba924e06ee92f3bd50d7527746dabd403daa0b4ed60589e27b74097dd5e6f067"
+    },
+    {
+      "path": "bukti/fingerprint/generated_both.lic",
+      "bytes": 2447,
+      "sha256": "9a2acc2a59226fa8f617c1b7cb5d9b49b54a0888c1902cba9e62058b2080954d"
+    },
+    {
+      "path": "bukti/fingerprint/generated_client.lic",
+      "bytes": 2447,
+      "sha256": "f2b976ae52027a82141f31438c64aa949a112ddb70d5b699e03f802b08b13c78"
+    },
+    {
+      "path": "bukti/fingerprint/generated_manager.lic",
+      "bytes": 2447,
+      "sha256": "e94f39e35bf22e288e586f299fc423e79de44dd7a5ba8f9a82694cc5a40104cb"
+    },
+    {
+      "path": "bukti/fingerprint/inventory_after_final_replay.json",
+      "bytes": 2061,
+      "sha256": "d376f13e712fe7fd96aa863e196dca91ceaa338ca51ee73e9862aac6c9ca8400"
+    },
+    {
+      "path": "bukti/fingerprint/inventory_before_final_replay.json",
+      "bytes": 2061,
+      "sha256": "d376f13e712fe7fd96aa863e196dca91ceaa338ca51ee73e9862aac6c9ca8400"
+    },
+    {
+      "path": "bukti/fingerprint/live_integrity.json",
+      "bytes": 183,
+      "sha256": "a648540f4d85de9a83111eae00b51f88c6a807127d3ca3677274f1bfa17c730c"
+    },
+    {
+      "path": "bukti/fingerprint/manager_CM_header_import.json",
+      "bytes": 5110,
+      "sha256": "6a5f4f4f562967aeeab49e5cd06402c290e20892055b19450ecb9bb930eb3179"
+    },
+    {
+      "path": "bukti/fingerprint/manager_CM_validate.json",
+      "bytes": 2628,
+      "sha256": "7aaf4f21d6b1af4100460c2c5fe3527002a91d8fb0f84055ae359ebfb950d1fe"
+    },
+    {
+      "path": "bukti/fingerprint/manager_empty_import.json",
+      "bytes": 5877,
+      "sha256": "a67674b8e4bb7480962ea8d7d613653534564658777f9087d88b8ef8c082ec41"
+    },
+    {
+      "path": "bukti/fingerprint/manager_final_replay.json",
+      "bytes": 4604,
+      "sha256": "5a1c7490ead7533a0572d74dfa60549e05be0d3b5165b3ba4fd6f3e1bac52715"
+    },
+    {
+      "path": "bukti/fingerprint/manager_format.json",
+      "bytes": 2513,
+      "sha256": "9f860b91b6700f4fb264dd2172f080428df0eb027e28c435e16b0c95b62696ed"
+    },
+    {
+      "path": "bukti/fingerprint/manager_license_hits.txt",
+      "bytes": 572771,
+      "sha256": "2e897873fc41c2521fe577afcbce4c6194fd15348791e8080135f5b298f61415"
+    },
+    {
+      "path": "bukti/fingerprint/manager_license_il.txt",
+      "bytes": 95226,
+      "sha256": "e3f67d1e248926c9c4d5e48b4030f4da989dc6eaff7ce24549885e22628f8d19"
+    },
+    {
+      "path": "bukti/fingerprint/manager_strings.txt",
+      "bytes": 349876,
+      "sha256": "b666612562dd2576ef902a7c158f127df4ee638141de8809d59568a38cfe670a"
+    },
+    {
+      "path": "bukti/fingerprint/manager_types_import.json",
+      "bytes": 7701,
+      "sha256": "7020a7196316137276512e38ad6446b1732b2d5ba43b0a8cede089743ddf674a"
+    },
+    {
+      "path": "bukti/fingerprint/manager_wrong_scope.json",
+      "bytes": 5474,
+      "sha256": "bb6148c4fc51abedb138149915b1b645adfa82e6396a756d92cce30f21123e5f"
+    },
+    {
+      "path": "bukti/fingerprint/rea_identity_and_members.json",
+      "bytes": 36560,
+      "sha256": "9d6afc34e851a0739c9a7fcfe130320b487339b95907dd092cd462bef3431085"
+    },
+    {
+      "path": "bukti/fingerprint/run_replay.py",
+      "bytes": 3596,
+      "sha256": "641e7749c181f2830036acc1108d7245f1fcfb7eee31eb332cedfdc5778cefd2"
+    },
+    {
+      "path": "bukti/fingerprint/scope_rejection_summary.json",
+      "bytes": 350,
+      "sha256": "72f1832d957617b5d6a446a0728e3ede4c219ca03951e87e90e7918e933460a4"
+    },
+    {
       "path": "bukti/id_audit/599_il.txt",
       "bytes": 7201,
       "sha256": "a2e83e7629fdc36212c9706558189f1e9480f6f836835d9f0cfd238e7266a4f2"
@@ -1280,6 +1595,181 @@
       "path": "bukti/import_results/sysid_info1_ddcb4_accepted_by_importer.json",
       "bytes": 543,
       "sha256": "8faedce1b990719e6f767e8692d4be30ca617b3f335b9d49db4149df6ffc313a"
+    },
+    {
+      "path": "bukti/letterstore/LetterStoreImportProbe.cs",
+      "bytes": 2962,
+      "sha256": "facec281ef79da88e74bc1c08747e888b0d7dceabe6a686ce371a5b3cbbc82e4"
+    },
+    {
+      "path": "bukti/letterstore/LetterStoreProbe.cs",
+      "bytes": 1912,
+      "sha256": "4893b00a8e0be0365b546ad5a8352a316ec271ce4e7900ba3a2bcbf88fcbb6f6"
+    },
+    {
+      "path": "bukti/letterstore/VmDisasm.cs",
+      "bytes": 2707,
+      "sha256": "207af1644330038a62137918057989af6e3937b3f79d244f9a961d6bdb58753e"
+    },
+    {
+      "path": "bukti/letterstore/VmDump.cs",
+      "bytes": 1438,
+      "sha256": "987943c942dfb70b852928f3d597da8f3f150c1545710f0df1ec1e5b67517b2a"
+    },
+    {
+      "path": "bukti/letterstore/dbid_getter_il.txt",
+      "bytes": 1455,
+      "sha256": "d0bcb9db5ccca1b7a92ee3d81092d23852c9a952fbf691a25df27e5ade7bd5f9"
+    },
+    {
+      "path": "bukti/letterstore/dbid_getter_inner_il.txt",
+      "bytes": 11589,
+      "sha256": "6be41e65bb3631cff0003bf81d3b6ba690f9d1b197ba4d9fc5be57a06441727d"
+    },
+    {
+      "path": "bukti/letterstore/dbid_static_il.txt",
+      "bytes": 7533,
+      "sha256": "e612fab73b9cfbbb6ce2cf47307b74d43dc660b09b971dfc6d16a042cb925a18"
+    },
+    {
+      "path": "bukti/letterstore/format_probe.json",
+      "bytes": 142358,
+      "sha256": "af132f12e46e290e7061e7db02c91c8b25af478748a71ece0f931c3239be9296"
+    },
+    {
+      "path": "bukti/letterstore/import_cases.tsv",
+      "bytes": 522,
+      "sha256": "f02aefdd050ee51f44f25a472c3e09ac6ef0b706f863d4e7ed81448ed20c117f"
+    },
+    {
+      "path": "bukti/letterstore/letterstore_il.ps1",
+      "bytes": 3848,
+      "sha256": "225cfcdb574bac926d80df5f61e1f9dc615a28991b1b10a3350a099c2be68675"
+    },
+    {
+      "path": "bukti/letterstore/license_static_il.txt",
+      "bytes": 18913,
+      "sha256": "3f23494d4cfb81d39e947328ec684196103fe24594434167d11ee945fe4679e4"
+    },
+    {
+      "path": "bukti/letterstore/live_integrity.json",
+      "bytes": 654,
+      "sha256": "71439ca1fe4225c86720093cc94c9d553a71565576187eb8564329e720124738"
+    },
+    {
+      "path": "bukti/letterstore/original_import_results.json",
+      "bytes": 4150,
+      "sha256": "130b03e7ba36c5760f92498f03776a456056ad94d8654e079e599899a9f0aee3"
+    },
+    {
+      "path": "bukti/letterstore/original_schema.xml",
+      "bytes": 1417,
+      "sha256": "83dab14b90034bba9e3b149884d4c81f1306189d97cadd7ac390b9896c8e20a1"
+    },
+    {
+      "path": "bukti/letterstore/rea_artifact.json",
+      "bytes": 32475,
+      "sha256": "61f30fab7b60cdc98eedf69ddca653391977404e8d28ae2c1bb97d9d18d203a3"
+    },
+    {
+      "path": "bukti/letterstore/rea_license_members.json",
+      "bytes": 1120060,
+      "sha256": "ad93a2345356795d6066b8f4625ab5cb88783bff2c6714340ee3c07d12718aa9"
+    },
+    {
+      "path": "bukti/letterstore/run_oracle.py",
+      "bytes": 3511,
+      "sha256": "25feb980b52c15e02ddc549521041d5095875723e3494315b45acea6b6e24b60"
+    },
+    {
+      "path": "bukti/letterstore/string_ints.txt",
+      "bytes": 22254,
+      "sha256": "a6b5389f3185395a764c8d5198d09da09dc2e4a9df538efa7bc92591d175c723"
+    },
+    {
+      "path": "bukti/letterstore/virtual_ints.txt",
+      "bytes": 232,
+      "sha256": "098fe1235af8699dfef7c2388f184df157e676692ae4deac7c55885b7dfc0030"
+    },
+    {
+      "path": "bukti/letterstore/virtual_strings.json",
+      "bytes": 4505,
+      "sha256": "2bace08d34f8ac2eb9b314a4fa1658cdffe92a16a27a3cb4aa02a5b97c579e29"
+    },
+    {
+      "path": "bukti/letterstore/vm_activation_disasm.json",
+      "bytes": 940,
+      "sha256": "5d588416dbe8dc8f64a1c16106d8c22f5ef2e01aa75dbd842fb82d1986223428"
+    },
+    {
+      "path": "bukti/letterstore/vm_decode_il.txt",
+      "bytes": 4072,
+      "sha256": "d22f8ca2f488903c1d10428de28d15c3b686d8ec583b719451432b3b4c75c7f7"
+    },
+    {
+      "path": "bukti/letterstore/vm_dispatch_il.txt",
+      "bytes": 902,
+      "sha256": "da6524f143ac49da13c2120bc58b0df94344245beef9b891ed2da3256a196a12"
+    },
+    {
+      "path": "bukti/letterstore/vm_dispatch_loop_il.txt",
+      "bytes": 2593,
+      "sha256": "929b7187ecaffd04c1d71dfe4eb95fc604895f621cdc0fe0f77da2d6631dc1df"
+    },
+    {
+      "path": "bukti/letterstore/vm_import.json",
+      "bytes": 45023,
+      "sha256": "12bc541e5d3e6dd3d4d99b9130ef6fc004eef08e2a31048c9500998a4bc0f304"
+    },
+    {
+      "path": "bukti/letterstore/vm_import_disasm.json",
+      "bytes": 33641,
+      "sha256": "4f2745a007ae768e5af1bf6a1f4a7d5f9689b40909870ce562219e9c916b445b"
+    },
+    {
+      "path": "bukti/letterstore/vm_loop_il.txt",
+      "bytes": 9356,
+      "sha256": "904d84848dd83e0107a2cffe70002b253ea872486244986b54b1097ad7bf78bb"
+    },
+    {
+      "path": "bukti/letterstore/vm_operand_il.txt",
+      "bytes": 7499,
+      "sha256": "ce6ea3f9eec8ebff04e7dca1019a1f4dfbd9dbac8e118c6653222d5b41a46cc6"
+    },
+    {
+      "path": "bukti/letterstore/vm_verify_disasm.json",
+      "bytes": 2154,
+      "sha256": "fdf0fe698ed912ecb2a8608d8b1824e4272290932e7b5618d9c8a3fb6d7e9127"
+    },
+    {
+      "path": "bukti/letterstore/fixtures/12XYZ.lic",
+      "bytes": 1804,
+      "sha256": "e833fb96354bf3ef03ab05a1f3ff9b7c6343603287626d62bd5b162a8e04be28"
+    },
+    {
+      "path": "bukti/letterstore/fixtures/9Z8Y7.lic",
+      "bytes": 1804,
+      "sha256": "7aef17fbbfd93f520d90d5b861c67fca41cd219c648460bc1cda7f3c8a841912"
+    },
+    {
+      "path": "bukti/letterstore/fixtures/ABCDE.lic",
+      "bytes": 1804,
+      "sha256": "c22f7fe3b5ea010c39f360e04c7e6906520eda5f973e2e35349f2d131915dcd8"
+    },
+    {
+      "path": "bukti/letterstore/fixtures/empty.lic",
+      "bytes": 1474,
+      "sha256": "1b6308680b7817e1257d178188250ae7a4d3aeb03b0e380e6968d66d4461f8a2"
+    },
+    {
+      "path": "bukti/letterstore/fixtures/headerless.lic",
+      "bytes": 1774,
+      "sha256": "47c4d680cd667cf989030b9195024806e9807d74c3320e2b01f575193f1cdac5"
+    },
+    {
+      "path": "bukti/letterstore/fixtures/wrong_version.lic",
+      "bytes": 1804,
+      "sha256": "f44cac033899e5e479ef937b1c9bd261db7fa6f0a56c5c2b3629c839446109b2"
     },
     {
       "path": "bukti/schoolpay/FORMAT.md",
@@ -2058,93 +2548,228 @@
     },
     {
       "path": "bukti/shared_save_all/VISUAL_QA.md",
-      "bytes": 1436,
-      "sha256": "7733dc29000823653f0932afa91a17b560195d21f0742fb896f76e32f24a48aa"
+      "bytes": 2496,
+      "sha256": "82add850ba4184363111780e1eac300916e2a0cdb3fef55d8dc65e142d2995d7"
     },
     {
       "path": "bukti/shared_save_all/gui_cbe_760x560.png",
-      "bytes": 22114,
-      "sha256": "d83a4f858f67f9127ffe3f9339388b8a6547eaa9f00f19bcefd669b4730e3c17"
+      "bytes": 22632,
+      "sha256": "956d3bb96f6d1a5e5c9fd72cb1b1a44f0c685a75fb12e1a76550c56f41eaa49a"
     },
     {
       "path": "bukti/shared_save_all/gui_cbe_880x650.png",
-      "bytes": 23503,
-      "sha256": "cde22c6c4e545255634d65277ef2e94fc91964fc906a5368ab3714e8751f9cfb"
+      "bytes": 24031,
+      "sha256": "67f651263927479752def35a200f3e0f4d655829d6969268017651979b96f80b"
     },
     {
       "path": "bukti/shared_save_all/gui_face_760x560.png",
-      "bytes": 23341,
-      "sha256": "347ebacd08c52bfb4eb584b1b2bebd857bd5ad4ece04c8b1a3d70301d72adbfb"
+      "bytes": 22797,
+      "sha256": "e230dc5dd90b1a4a265e38797eb923aa29737f81c62da92a992bc8674a401eff"
     },
     {
       "path": "bukti/shared_save_all/gui_face_880x650.png",
-      "bytes": 24839,
-      "sha256": "a780bcb64acc7dacbc8cba57c8669ab0a23292ae943f24a4452c819fe9338c28"
+      "bytes": 25562,
+      "sha256": "eac75ccbe10b1642b1f6cfd9b83203197e97aff5d3414c59d955fec668e9d57b"
+    },
+    {
+      "path": "bukti/shared_save_all/gui_fingerprint_760x560.png",
+      "bytes": 21995,
+      "sha256": "3a69af9f0a2a57a7c9b0d65c9031f7a062304b472d3dc86f5d6fc823439bdcd2"
+    },
+    {
+      "path": "bukti/shared_save_all/gui_fingerprint_880x650.png",
+      "bytes": 23516,
+      "sha256": "97511ccb7f3b9baf7a2e799569c3b7b2ee78c0afacd47f3cb7fd5dc43f5d4c0e"
     },
     {
       "path": "bukti/shared_save_all/gui_layout_cbe_760x560.json",
-      "bytes": 1855,
-      "sha256": "51db834129c431fbf344cdf0fd68b59a54a49cc9e0df9046564385b268e5223d"
+      "bytes": 3270,
+      "sha256": "c667deec71a6f6ce401e3937b68758a270e8f3da42327155ecf812664ce6a6be"
     },
     {
       "path": "bukti/shared_save_all/gui_layout_cbe_880x650.json",
-      "bytes": 1855,
-      "sha256": "d14b480c386184aa89e52edf035d04d4180b68628a0ebcc41b26dd369c5ccc3c"
+      "bytes": 3270,
+      "sha256": "b1b81fd49984f1ab4541433149638da89b3678f0a6256d0810fe56c0f06d78c0"
     },
     {
       "path": "bukti/shared_save_all/gui_layout_face_760x560.json",
-      "bytes": 1854,
-      "sha256": "7942a7bdd62a448fb4d62ff5d0e3239f9f2699d5dc6b541861db105b951f925d"
+      "bytes": 3272,
+      "sha256": "d62c79ec9bd28c97b5339176027fe76d7719e6be5b88462ec9ffde08b3686d1b"
     },
     {
       "path": "bukti/shared_save_all/gui_layout_face_880x650.json",
-      "bytes": 1854,
-      "sha256": "94686b178ac51b2a27917c462ede3c737b7c91ba037f67e4aaab9c0babb475ed"
+      "bytes": 3272,
+      "sha256": "fdb8797ae7272dd97e9280e46a236a8b86fcbe3a0876920c3ff083c443719e31"
+    },
+    {
+      "path": "bukti/shared_save_all/gui_layout_fingerprint_760x560.json",
+      "bytes": 3189,
+      "sha256": "f674a3fa60486e4d7ef3b1826a009b93a472fddeaff5a3fe13e7ee56c5446e0a"
+    },
+    {
+      "path": "bukti/shared_save_all/gui_layout_fingerprint_880x650.json",
+      "bytes": 3189,
+      "sha256": "cfbd09b9777c4c30205989c048af32bfc3793660f353e1bf5bfb074881fac80d"
+    },
+    {
+      "path": "bukti/shared_save_all/gui_layout_letterstore_760x560.json",
+      "bytes": 3155,
+      "sha256": "b95df54034e963d6305f276d9564beb6980df517164abce82049dc5e0979c9dc"
+    },
+    {
+      "path": "bukti/shared_save_all/gui_layout_letterstore_880x650.json",
+      "bytes": 3155,
+      "sha256": "7dca4437fd7de581bd572eae394efd770f77b95de8e95e33e75f05e3e22442e4"
     },
     {
       "path": "bukti/shared_save_all/gui_layout_schoolpay_760x560.json",
-      "bytes": 1861,
-      "sha256": "ec8187048fc811c948c96ccfb482e17b1ba13d58f6dd78c1bc10184ae4684166"
+      "bytes": 3275,
+      "sha256": "b7834b98f53df4227c8db02b2cc20864e4e316557417db7f7af6527f946384af"
     },
     {
       "path": "bukti/shared_save_all/gui_layout_schoolpay_880x650.json",
-      "bytes": 1861,
-      "sha256": "a8ba6a9a5ba778f3bcdeb3cae3de625bca946546b6cdec6698819e55a2e5943f"
+      "bytes": 3275,
+      "sha256": "a89700178b62ef0aef2762f1e9c2932e43be1df5e9d4b1e3a78ff12d57ce6aaf"
+    },
+    {
+      "path": "bukti/shared_save_all/gui_layout_sjs_760x560.json",
+      "bytes": 3272,
+      "sha256": "466b91116036652be69438f4761750431c2c963ff7ccf17b43e5fd932261dd60"
+    },
+    {
+      "path": "bukti/shared_save_all/gui_layout_sjs_880x650.json",
+      "bytes": 3272,
+      "sha256": "040df60662e66ad4fea3e408b614e80f2121604036382c958789d9958f0c977e"
+    },
+    {
+      "path": "bukti/shared_save_all/gui_letterstore_760x560.png",
+      "bytes": 18550,
+      "sha256": "0c8e9b6a045535ec4e77a45b2ffe274396df184e1bb5b229af2ecc84c6ddaf59"
+    },
+    {
+      "path": "bukti/shared_save_all/gui_letterstore_880x650.png",
+      "bytes": 20046,
+      "sha256": "e13eaa7b106c04230efac8160172f06dcdfb771a315fcaf377edb5a8a00dc9ec"
     },
     {
       "path": "bukti/shared_save_all/gui_schoolpay_760x560.png",
-      "bytes": 22766,
-      "sha256": "cbcda7048c7b4d0bde8705e35b8c7342ec5bb009a1f533c5a082042f08c0b4dd"
+      "bytes": 23295,
+      "sha256": "e2729c7fca8886bf81dadd702d29d8ce7102af2c094ef60bf5a87522cfe4eb67"
     },
     {
       "path": "bukti/shared_save_all/gui_schoolpay_880x650.png",
-      "bytes": 24222,
-      "sha256": "75d1195c0bafc0517a03e55d8a1d744b72d1d068af0e5d52be362c78ce31b8bd"
+      "bytes": 24737,
+      "sha256": "27ad371fe04d897091dd0793cd9a937fc8f1c1d0b9b3aeecf943efef45cdd19f"
+    },
+    {
+      "path": "bukti/shared_save_all/gui_sjs_760x560.png",
+      "bytes": 23665,
+      "sha256": "b716e2b698cf7892f95ae71bb0c5df7b1172322edad0edcbb00bf2a936a71807"
+    },
+    {
+      "path": "bukti/shared_save_all/gui_sjs_880x650.png",
+      "bytes": 25056,
+      "sha256": "577aa1fdc7e5156e7a4ccdff61d78049cde23282a5069eb080ded655fb60c8a7"
     },
     {
       "path": "bukti/shared_save_all/gui_visual_probe.py",
-      "bytes": 6940,
-      "sha256": "4adf8803bf0f30b3cd761df85d3391f51b0e08765c0d556f50c1a11197087f85"
+      "bytes": 12463,
+      "sha256": "78bbaa0cade0c02cb7d005784f7dc1a582a8a25104847b16e7229e313b47d928"
     },
     {
       "path": "bukti/shared_save_all/gui_visual_report.json",
-      "bytes": 610,
-      "sha256": "600a8cad834cde2ce84535df35499fded20a0372e13b82a03daf1ecf3122d609"
+      "bytes": 865,
+      "sha256": "5b151d7091e31be7d4f73fc014392102b1db0b1bc96480251bf2cbb290427e6d"
+    },
+    {
+      "path": "bukti/sjs/IntSites.cs",
+      "bytes": 5546,
+      "sha256": "5a2df214199c845471a7584092f54f06785f3f33221e0ebb14804fa351710c21"
+    },
+    {
+      "path": "bukti/sjs/README.md",
+      "bytes": 1800,
+      "sha256": "94919c4f9d23fba3308f46d387467c751e8be72982fc840a4b1dbf556b1d8312"
+    },
+    {
+      "path": "bukti/sjs/SjsFormatProbe.cs",
+      "bytes": 1749,
+      "sha256": "8b8c8c80256cddff40902e73105712d987572b05bef78ad6fee35008116d7454"
+    },
+    {
+      "path": "bukti/sjs/SjsImportProbe.cs",
+      "bytes": 3082,
+      "sha256": "f87f0960bee7e1830da5861e83f9e4b2779102f9ed9b40d6e436f499ef553f1a"
+    },
+    {
+      "path": "bukti/sjs/SjsStaticProbe.cs",
+      "bytes": 2893,
+      "sha256": "8f8bf27a5123fb91e3e34f32dbef99009280fb30ca52e086b55aceed470582a3"
+    },
+    {
+      "path": "bukti/sjs/VmOracle.cs",
+      "bytes": 3299,
+      "sha256": "24bad38cddc0f8c5163f3b47aaad42fd253c7005c85ca1fcb9a192832bd263dd"
+    },
+    {
+      "path": "bukti/sjs/focused_il.txt",
+      "bytes": 90293,
+      "sha256": "0564de75201b7a19832ec00d5025771043da5b1e98c33b7b89b0904c820b5334"
+    },
+    {
+      "path": "bukti/sjs/format.json",
+      "bytes": 2840,
+      "sha256": "b19526c0148761935484794234d49db7e11bee704081897ebb031101a44a095c"
+    },
+    {
+      "path": "bukti/sjs/oracle_matrix.json",
+      "bytes": 14004,
+      "sha256": "c1b59007e0bcd854fbd2579740150c1dda21d5ceb1d48a082c20efb6f05c7edc"
+    },
+    {
+      "path": "bukti/sjs/rea_summaries.json",
+      "bytes": 23428,
+      "sha256": "fb3b6ad5e503a5902c3f015e1577a6f8320a2e9a551ba4c713cae6b7ba3e8cf6"
+    },
+    {
+      "path": "bukti/sjs/run_oracle.py",
+      "bytes": 4325,
+      "sha256": "f776597218cf69d56f1b4d3686b75b0efe5771133e6fcc93ac0636941665a7c7"
+    },
+    {
+      "path": "bukti/sjs/sjs_il.ps1",
+      "bytes": 3873,
+      "sha256": "7db4dbdc9d4173ca571fdf92c5ef72177d3576826307c00fd26f445029c43890"
+    },
+    {
+      "path": "bukti/sjs/smoke_fixture.json",
+      "bytes": 403,
+      "sha256": "523d9be93f68134a14764850295a4b2fab43057c0b49cb01888a7fa541d21152"
+    },
+    {
+      "path": "bukti/sjs/string_sites.tsv",
+      "bytes": 137712,
+      "sha256": "baeb0d4a73732221def34e6fa619ff86e947b5badceaec5a959becafc86728f9"
+    },
+    {
+      "path": "bukti/sjs/token_oracle.json",
+      "bytes": 594,
+      "sha256": "08269e768bf954ef4fffb2930ea1c7263e510682e895fd1d46af555976acb63b"
     },
     {
       "path": "bukti/standalone/build.log",
-      "bytes": 7504,
-      "sha256": "14d57cbc61d7db695392ef6f5dbf5137d3811a1f6d7f1bc2a6822fc89dcf35eb"
+      "bytes": 7665,
+      "sha256": "371126809e45f0b587bf9dc8c9053ffdf9329cacd7a81e313411d89c0a3a9178"
     },
     {
       "path": "bukti/standalone/build_manifest.json",
-      "bytes": 1342,
-      "sha256": "1b537b251e6900469c7fa6629c9bcf9d0f35f6477e80a88b62ccd999c082a2f6"
+      "bytes": 1893,
+      "sha256": "f9cb05260ed883dc2e931cb4dba3766450a0c98abb170e7e4f46fb0e022eb4ee"
     },
     {
       "path": "bukti/standalone/verification.json",
-      "bytes": 3268,
-      "sha256": "69a03cfe182d2fe3d2bf85c8e195a88cb72c27062e4c1a857b8457217a06d588"
+      "bytes": 5658,
+      "sha256": "95465febe473352e4cb3fce280bdfe1cae8c0723b90362bc6fc8496702d1b87a"
     },
     {
       "path": "contoh/BACA.txt",
@@ -2297,9 +2922,24 @@
       "sha256": "92566c22da5ea39213f38382ccf521bb22ef6e76d0335e9760267c877ef1510a"
     },
     {
+      "path": "tests/test_extended_products.py",
+      "bytes": 9221,
+      "sha256": "5275a2d2171a7c8c1ee0fc2a1e08c621d677b028890506007158204e68cca231"
+    },
+    {
+      "path": "tests/test_fingerprint_codec.py",
+      "bytes": 4609,
+      "sha256": "2ddff19ab3ec09cd8fb60ffcbf8d657244f2a80b72d69528274e6ac66b2ffb21"
+    },
+    {
       "path": "tests/test_id_detect.py",
       "bytes": 3476,
       "sha256": "98a9c5a64e9060915627c550cd5c270c61388c9501342b5efa206ced01ebc79a"
+    },
+    {
+      "path": "tests/test_letterstore_codec.py",
+      "bytes": 3936,
+      "sha256": "b263d5632b8209155edefff2973f332c4e39e45e67813bdbf466f1ba50a4ee19"
     },
     {
       "path": "tests/test_license_codec.py",
@@ -2327,14 +2967,19 @@
       "sha256": "a95bfc68ac210a8b4fc190e93cd451d30058af23c4dbca5d674d5b6d97577a6c"
     },
     {
+      "path": "tests/test_sjs_codec.py",
+      "bytes": 5233,
+      "sha256": "2c2120035b2850199f4592cddceece72f9d96cce683b17e2b449a6e776f9fd41"
+    },
+    {
       "path": "tests/test_unified_cli.py",
-      "bytes": 2574,
-      "sha256": "0cfd26573a16b66f6519b483a647ccf16c64e8795b24aa4603588baf2087a587"
+      "bytes": 4174,
+      "sha256": "a2cb014e44f2fb1bd2dd075c4114b04bc9f7f9411696b66fe197f96d16d0944b"
     },
     {
       "path": "tests/test_unified_gui.py",
-      "bytes": 19071,
-      "sha256": "01c8114023d8e1ebfe5ade86825b860fc3d14a21cd47992023932309a5ec072d"
+      "bytes": 22813,
+      "sha256": "225549643e1e8d45355bcad1e883c76a457e3d061012e1ba8fa168aa51955a13"
     },
     {
       "path": "tests/fixtures/cbe-empty.enc",

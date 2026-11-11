@@ -1,0 +1,58 @@
+﻿METHOD 0x0x060002EB #=qN$AdBotFUmPTj33H1zCZ9NhgBD76DCfRFaG8EyRnFcg=::Void #=zm6yOkh20abRqzH3E3gkDeD$vb7cP(System.IO.Stream, Int64, System.String)
+0000: ldarg.0       
+0001: call         #=qN$AdBotFUmPTj33H1zCZ9NhgBD76DCfRFaG8EyRnFcg=::Int32 #=zPOUSSaWtQ1TQ6IoYDrkhm1A=() 0x060002BA
+0006: stloc.0       
+0007: ldarg.1       
+0008: ldloc.0       
+0009: newobj       #=qGlWnWAmyrqISijfPZe5066jF$GrXMz3s$Alz_HI2Ikg=::Void .ctor(System.IO.Stream, Int32) 0x06000116
+000E: stloc.1       
+000F: ldarg.0       
+0010: ldloc.1       
+0011: newobj       #=quJebZBqdmKAGJzPWNHiupvhCedCUA85CEfVWAUrghqI=::Void .ctor(#=qb1fJXGFlTgmLKOMNxIA$qiwAg3PEFaGk7osBYly2m9M=) 0x060004C8
+0016: stfld        #=qN$AdBotFUmPTj33H1zCZ9NhgBD76DCfRFaG8EyRnFcg=::#=quJebZBqdmKAGJzPWNHiupvhCedCUA85CEfVWAUrghqI= #=zPBFjUcc= 0x040000B3
+001B: ldarg.3       
+001C: brfalse.s    41 
+001E: ldarg.0       
+001F: ldarg.3       
+0020: call         #=qN$AdBotFUmPTj33H1zCZ9NhgBD76DCfRFaG8EyRnFcg=::Int64 #=zbqux0WWmEsQCHdQG9K6rg$vauBxH_SEQEw==(System.String) 0x060001B7
+0025: starg        2 
+0029: ldarg.0       
+002A: ldfld        #=qN$AdBotFUmPTj33H1zCZ9NhgBD76DCfRFaG8EyRnFcg=::#=quJebZBqdmKAGJzPWNHiupvhCedCUA85CEfVWAUrghqI= #=zPBFjUcc= 0x040000B3
+002F: callvirt     #=quJebZBqdmKAGJzPWNHiupvhCedCUA85CEfVWAUrghqI=::#=qb1fJXGFlTgmLKOMNxIA$qiwAg3PEFaGk7osBYly2m9M= #=zCU$G1ogvopiEu_oX0xNT_ukJLGdlyZmMxQ==() 0x060004CA
+0034: stloc.2       
+0035: ldloc.2       
+0036: stloc.3       
+0037: ldloc.3       
+0038: call         System.Threading.Monitor::Void Enter(System.Object) 0x0A000082
+003D: ldloc.2       
+003E: ldarg.2       
+003F: ldc.i4.0      
+0040: callvirt     #=qb1fJXGFlTgmLKOMNxIA$qiwAg3PEFaGk7osBYly2m9M=::Int64 #=zLdJTLIqzMxKeOXC6ScsWdDwRarAfblOP4PfzN0tXiLVmnoK_LtvY9iy9i_I3mRQ0nxvgXKEL5aZ7(Int64, Int32) 0x06000427
+0045: pop           
+0046: ldarg.0       
+0047: ldarg.0       
+0048: ldfld        #=qN$AdBotFUmPTj33H1zCZ9NhgBD76DCfRFaG8EyRnFcg=::#=quJebZBqdmKAGJzPWNHiupvhCedCUA85CEfVWAUrghqI= #=zPBFjUcc= 0x040000B3
+004D: call         #=qN$AdBotFUmPTj33H1zCZ9NhgBD76DCfRFaG8EyRnFcg=::Void #=zsrjcIGV5QhZ0zmZ0HWHO$1k=(#=quJebZBqdmKAGJzPWNHiupvhCedCUA85CEfVWAUrghqI=) 0x06000244
+0052: ldarg.0       
+0053: ldarg.0       
+0054: ldarg.0       
+0055: ldfld        #=qN$AdBotFUmPTj33H1zCZ9NhgBD76DCfRFaG8EyRnFcg=::#=quJebZBqdmKAGJzPWNHiupvhCedCUA85CEfVWAUrghqI= #=zPBFjUcc= 0x040000B3
+005A: call         #=qN$AdBotFUmPTj33H1zCZ9NhgBD76DCfRFaG8EyRnFcg=::#=qVMg4aoCJLpGHLb02L1fDhropaOzatBz6422w10LfKI4= #=znrj3DTar__JHuWMqQPC_AuGdRKdgyhd0mg==(#=quJebZBqdmKAGJzPWNHiupvhCedCUA85CEfVWAUrghqI=) 0x06000230
+005F: stfld        #=qN$AdBotFUmPTj33H1zCZ9NhgBD76DCfRFaG8EyRnFcg=::#=qVMg4aoCJLpGHLb02L1fDhropaOzatBz6422w10LfKI4= #=zNtyIMX8= 0x04000091
+0064: ldarg.0       
+0065: ldarg.0       
+0066: ldfld        #=qN$AdBotFUmPTj33H1zCZ9NhgBD76DCfRFaG8EyRnFcg=::#=quJebZBqdmKAGJzPWNHiupvhCedCUA85CEfVWAUrghqI= #=zPBFjUcc= 0x040000B3
+006B: call         #=qN$AdBotFUmPTj33H1zCZ9NhgBD76DCfRFaG8EyRnFcg=::#=q8E4OPrPFurbA4dtDb_ESDs4Bs3ETOJbSvCqbnEAA5qo=[] #=z5hZUNwieAZz1rPXZrD3ldHIWJHT1ssZKHA==(#=quJebZBqdmKAGJzPWNHiupvhCedCUA85CEfVWAUrghqI=) 0x060002E3
+0070: stfld        #=qN$AdBotFUmPTj33H1zCZ9NhgBD76DCfRFaG8EyRnFcg=::#=q8E4OPrPFurbA4dtDb_ESDs4Bs3ETOJbSvCqbnEAA5qo=[] #=zq1bSU6s= 0x04000093
+0075: ldarg.0       
+0076: ldarg.0       
+0077: ldfld        #=qN$AdBotFUmPTj33H1zCZ9NhgBD76DCfRFaG8EyRnFcg=::#=quJebZBqdmKAGJzPWNHiupvhCedCUA85CEfVWAUrghqI= #=zPBFjUcc= 0x040000B3
+007C: call         #=qN$AdBotFUmPTj33H1zCZ9NhgBD76DCfRFaG8EyRnFcg=::Byte[] #=zf46YjC7hMhM7$UPGSjMyjxXYYINvrsAM8uJDcbA=(#=quJebZBqdmKAGJzPWNHiupvhCedCUA85CEfVWAUrghqI=) 0x06000203
+0081: stfld        #=qN$AdBotFUmPTj33H1zCZ9NhgBD76DCfRFaG8EyRnFcg=::Byte[] #=z82IbZBw= 0x0400009B
+0086: leave.s      143 
+0088: ldloc.3       
+0089: call         System.Threading.Monitor::Void Exit(System.Object) 0x0A000083
+008E: endfinally    
+008F: ldarg.0       
+0090: call         #=qN$AdBotFUmPTj33H1zCZ9NhgBD76DCfRFaG8EyRnFcg=::Void #=zAt9p89RZK2k_y_rKKSqOrUbnaG3O() 0x06000249
+0095: ret           
