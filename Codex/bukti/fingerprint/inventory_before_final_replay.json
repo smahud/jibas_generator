@@ -1,0 +1,63 @@
+{
+  "manager": {
+    "FaceFingerManager.exe": {
+      "sha256": "4f4eed686831b9a6db21a263df3c94f83010bfecb1cf35f7fc7d27ce144db546",
+      "size": 2266624,
+      "mtime_ns": 1785149034000000000
+    },
+    "license.enc": {
+      "sha256": "8e9053bae772c02128366bb37c6a1a6a9e2a408928c6eb740d251ec5038158bd",
+      "size": 2074,
+      "mtime_ns": 1737190030000000000
+    },
+    "config.ini": {
+      "sha256": "634f894bdd7139aa7c11bdc081b289bdad17fd82e435bdcf1f6dc07102befeb9",
+      "size": 579,
+      "mtime_ns": 1793170535907736700
+    },
+    "FaceFingerManager.exe.config": {
+      "sha256": "ff5ed5736c3716809b5051826bd71e6e8953e99db9bb4c47ecb344a7881f76ed",
+      "size": 3553,
+      "mtime_ns": 1769231260000000000
+    }
+  },
+  "client14": {
+    "Yim.Jibas.Sat.Fgr.Client.exe": {
+      "sha256": "34537e25e02637f902e4fc557d5b57d6551eeb931b56df96e7d8ee4821a8a8d5",
+      "size": 761344,
+      "mtime_ns": 1785144138000000000
+    },
+    "license.enc": {
+      "sha256": "8e9053bae772c02128366bb37c6a1a6a9e2a408928c6eb740d251ec5038158bd",
+      "size": 2074,
+      "mtime_ns": 1794387968364345900
+    },
+    "config.ini": {
+      "sha256": "e3ab0d750905bd76c2fccf6028d17d89f6241467f675ec99e197a32eabb0062e",
+      "size": 444,
+      "mtime_ns": 1785144138000000000
+    }
+  },
+  "client16": {
+    "FaceFgrClient.exe": {
+      "sha256": "6f5369df4d854c467d24fb067d8b79c573b35699c7b1ce7f19a310669f1ba546",
+      "size": 1154560,
+      "mtime_ns": 1787300642000000000
+    },
+    "licensefgr.enc": {
+      "sha256": "8e9053bae772c02128366bb37c6a1a6a9e2a408928c6eb740d251ec5038158bd",
+      "size": 2074,
+      "mtime_ns": 1766967780000000000
+    },
+    "config.ini": {
+      "sha256": "41242f2d70c35807ad283472dbc98c98d9b5ae7604749e822d6fb037753c3498",
+      "size": 580,
+      "mtime_ns": 1770039392000000000
+    },
+    "FaceFgrClient.exe.config": {
+      "sha256": "2cbdf9d86644aa5f0f330f195e87b24b01ba5b8b90218710e573185c1444566b",
+      "size": 2886,
+      "mtime_ns": 1781585642000000000
+    }
+  }
+}

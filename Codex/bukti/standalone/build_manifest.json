@@ -1,8 +1,8 @@
 {
   "file": "JIBAS-Generator-Codex.exe",
-  "bytes": 15491402,
-  "sha256": "e9c10166aa09293915a51784bc3160f30fd979a93ae3e1f215fe004f07fb8ae5",
-  "built_utc": "2026-11-11T09:13:15.628109+00:00",
+  "bytes": 15525423,
+  "sha256": "bc3d0d5bccf27f6ba522c19365a462360af7b00ffbe26f3726773c58b7d0ef6c",
+  "built_utc": "2026-11-11T13:36:05.460973+00:00",
   "architecture": "Windows x64",
   "onefile": true,
   "console": false,
@@ -16,16 +16,24 @@
     "schema.xml",
     "schoolpay_schema.xml",
     "cbe_schema.xml",
-    "format_profile.json"
+    "format_profile.json",
+    "fingerprint_schema.xml",
+    "sjs_schema.xml",
+    "sjs_format.json"
   ],
   "source_hashes": {
-    "app.py": "26f6555120dee7b1155d2b15c03ebbee85486c9f92e16dfd88dbdefee98dc99e",
-    "batch_license.py": "e30004dd2b6ffeba9073ea53a427662833bd746fb5ed9847d1f3f1bea4e1e7ec",
+    "app.py": "3370ebdd1773ab639d4c798640984ba69736c87774299903961f95d17dbba62e",
+    "batch_license.py": "2387122a38a83ee7a669105a763a68fb5ec417225544ee4f8c4f13833204aa40",
     "license_codec.py": "05dc9efb7d35127238bf79b83cd4fae5039995c2f55871b15b66dc5ecfb80d28",
     "schoolpay_codec.py": "01b32767ab74fdf6ac23e0caf26bf4df040ebb22c6f69030aa8dd477e212b428",
     "cbe_codec.py": "c9b8cbf6c6ec48aafacf980733c5685a9b078708c3b1b353a5423f29bdb6394f",
+    "fingerprint_codec.py": "3f66df172e5c1d85509a3898c0eb2a6cd647e97c1fc09200f1f2137be9dee920",
+    "letterstore_codec.py": "6ea730ea99ddb5ee4894545fce5209cbbf37deb3c8fcb479bca2a422c3e0c2bc",
+    "sjs_codec.py": "fcc2425a4f936cdd1b48e49f69d4114546425b317b2493567286d7737f0faf49",
+    "product_catalog.py": "6a81f98738560bb16f95dafb07a11b96e1c47b2b8d7a57d1e566414d86542600",
+    "product_actions.py": "3678b8d9cc63ab5ad668aaa852bfb532fd2aa6c6ae6c0c36869c277f9583e688",
     "build_tools/standalone_entry.py": "e6f1cb1d3538e24e997270d49b26d2ba31154b815585c2956f2851d8eb794b6b",
-    "build_tools/frozen_smoke.py": "845c70389248b56af7130d68c0dbb28227cdf4b159ebfcbbd2631b200bf8ea20",
-    "JIBAS-Generator-Codex.spec": "2381cf239a2468f6c3d7f8fc84b4d7fb37a620e4d3439b71d7003826c3105141"
+    "build_tools/frozen_smoke.py": "4f37766385396fc4d29bace66b4e7562b619c6fd93607dff333de79ae6415673",
+    "JIBAS-Generator-Codex.spec": "5182a8697ad5e790c9431fe7469da27e0bd7c78de19a86f17f7de08ef99ed434"
   }
 }

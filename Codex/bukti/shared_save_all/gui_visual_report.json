@@ -1,5 +1,5 @@
 {
-  "scenes": 6,
+  "scenes": 12,
   "passed": true,
   "errors": [],
   "output_pixels": [
@@ -7,11 +7,17 @@
   ],
   "screenshots": [
     "gui_face_880x650.png",
+    "gui_fingerprint_880x650.png",
     "gui_schoolpay_880x650.png",
     "gui_cbe_880x650.png",
+    "gui_sjs_880x650.png",
+    "gui_letterstore_880x650.png",
     "gui_face_760x560.png",
+    "gui_fingerprint_760x560.png",
     "gui_schoolpay_760x560.png",
-    "gui_cbe_760x560.png"
+    "gui_cbe_760x560.png",
+    "gui_sjs_760x560.png",
+    "gui_letterstore_760x560.png"
   ],
   "synthetic_values": {
     "shared": {
@@ -24,7 +30,9 @@
     "database_ids": {
       "face": "V4YNE",
       "schoolpay": "7VJM4",
-      "cbe": "ABCDE"
+      "cbe": "ABCDE",
+      "sjs": "SJS12",
+      "letterstore": "LS123"
     }
   }
 }

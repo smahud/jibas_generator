@@ -1,0 +1,14 @@
+{
+  "before": {
+    "LetterStore.exe": "1bdf678980b4ad985838a1b9ce2233550b3e00f49cd578b481dd01c5e5690915",
+    "license.enc": "1fc587e3b8e53bae07bfea899b51271b3f3e10b80cab993fcfe4b50e2120e74e",
+    "config.ini": "a4387fd086ce1fa8a79180c42816902a1a283f9ba93ea3151d83d6204aff2b09"
+  },
+  "after": {
+    "LetterStore.exe": "1bdf678980b4ad985838a1b9ce2233550b3e00f49cd578b481dd01c5e5690915",
+    "license.enc": "1fc587e3b8e53bae07bfea899b51271b3f3e10b80cab993fcfe4b50e2120e74e",
+    "config.ini": "a4387fd086ce1fa8a79180c42816902a1a283f9ba93ea3151d83d6204aff2b09"
+  },
+  "unchanged": true,
+  "scope": "LetterStore.exe, config.ini, license.enc"
+}

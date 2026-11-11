@@ -1,0 +1,153 @@
+{
+  "product": "sjs",
+  "size": [
+    880,
+    650
+  ],
+  "capture_mode": "desktop_client_region",
+  "screenshot_error": null,
+  "clipped_widgets": [],
+  "compressed_labels_or_buttons": [],
+  "clipped_label_text": [],
+  "overlapping_leaf_widgets": [],
+  "save_all": {
+    "widget": ".!licenseapp.!notebook.!licensepanel5.!frame2.!button3",
+    "class": "TButton",
+    "text": "Save All",
+    "bounds": [
+      662,
+      464,
+      88,
+      31
+    ],
+    "requested": [
+      88,
+      31
+    ]
+  },
+  "generate": {
+    "widget": ".!licenseapp.!notebook.!licensepanel5.!frame2.!button4",
+    "class": "TButton",
+    "text": "Buat & simpan\u2026",
+    "bounds": [
+      756,
+      464,
+      110,
+      31
+    ],
+    "requested": [
+      110,
+      31
+    ]
+  },
+  "save_all_immediately_left_of_generate": true,
+  "result_lines": 6,
+  "result_pixels": 102,
+  "result_scroll_range": [
+    0.0,
+    0.10909090909090909
+  ],
+  "shared_variable_identity": {
+    "system_id": true,
+    "client_id": true,
+    "client_name": true,
+    "expires": true,
+    "capacity": true
+  },
+  "shared_values": {
+    "system_id": {
+      "face": "DDCB4",
+      "schoolpay": "DDCB4",
+      "cbe": "DDCB4"
+    },
+    "client_id": {
+      "face": "",
+      "schoolpay": "",
+      "cbe": ""
+    },
+    "client_name": {
+      "face": "Contoh Sekolah",
+      "fingerprint": "Contoh Sekolah",
+      "schoolpay": "Contoh Sekolah",
+      "cbe": "Contoh Sekolah",
+      "sjs": "Contoh Sekolah",
+      "letterstore": "Contoh Sekolah"
+    },
+    "expires": {
+      "face": "2030-12-31",
+      "schoolpay": "2030-12-31",
+      "cbe": "2030-12-31",
+      "sjs": "2030-12-31"
+    },
+    "capacity": {
+      "face": "100",
+      "schoolpay": "100",
+      "cbe": "100",
+      "sjs": "100"
+    }
+  },
+  "shared_field_participants": {
+    "system_id": [
+      "face",
+      "schoolpay",
+      "cbe"
+    ],
+    "client_id": [
+      "face",
+      "schoolpay",
+      "cbe"
+    ],
+    "client_name": [
+      "face",
+      "fingerprint",
+      "schoolpay",
+      "cbe",
+      "sjs",
+      "letterstore"
+    ],
+    "expires": [
+      "face",
+      "schoolpay",
+      "cbe",
+      "sjs"
+    ],
+    "capacity": [
+      "face",
+      "schoolpay",
+      "cbe",
+      "sjs"
+    ]
+  },
+  "visible_input_fields": {
+    "database_id": true,
+    "school_id": true,
+    "registration_token": true,
+    "client_name": true,
+    "expires": true,
+    "capacity": true,
+    "file": true,
+    "previous_license": true
+  },
+  "field_rows": 4,
+  "status_text": "Siap \u2014 SJS. Isi ID mesin tujuan secara manual.",
+  "product_specific_inputs": {
+    "fingerprint": {
+      "scanner_serial": "SCANNER-QA-001",
+      "license_scope": "Manager + Client"
+    },
+    "sjs": {
+      "school_id": "SCHOOL-QA-001",
+      "registration_token": "REGISTRATION-TOKEN-QA-001"
+    }
+  },
+  "database_ids": {
+    "face": "V4YNE",
+    "schoolpay": "7VJM4",
+    "cbe": "ABCDE",
+    "sjs": "SJS12",
+    "letterstore": "LS123"
+  },
+  "database_id_variables_distinct": true,
+  "sequence_input": false,
+  "source": "Owned Tk QA window; synthetic values; exact client-region capture; no backend calls"
+}

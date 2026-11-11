@@ -1,7 +1,8 @@
 # Standalone Windows64-bit
 
 File **JIBAS-Generator-Codex.exe** pada direktori Codex adalah aplikasi GUI
-satu file dengan tab Absensi Wajah, SchoolPay dan CBE Server. Salin file `.exe`
+satu file dengan tab Absensi Wajah, Absensi Finger, SchoolPay, CBE Server,
+SJS dan LetterStore. Salin file `.exe`
 itu saja ke folder lain lalu jalankan. Python, file sumber, XML, JSON, dan DLL
 pendamping tidak perlu disalin atau diinstal terpisah.
 
@@ -11,10 +12,11 @@ Lima field bersama dan tombol Save All juga tersedia pada executable.
 
 ## Isi paket dan build ulang
 
-Python3.12 x64, Tk/Tcl, cryptography dan tiga codec dibundel menggunakan
+Python3.12 x64, Tk/Tcl, cryptography dan enam codec dibundel menggunakan
 PyInstaller6.22.3 dalam mode onefile/windowed. Build tanpa console dan tanpa UPX.
-Empat resource internal: schema.xml, schoolpay_schema.xml, cbe_schema.xml,
-format_profile.json. Modul detector dan PyMySQL tidak dibundel.
+Tujuh resource internal: schema.xml, schoolpay_schema.xml, cbe_schema.xml,
+format_profile.json, fingerprint_schema.xml, sjs_schema.xml, sjs_format.json.
+LetterStore membangun skema sendiri. Modul detector dan PyMySQL tidak dibundel.
 
 Lokasi resource tetap relatif ke `__file__`, sesuai
 [dokumentasi runtime PyInstaller](https://pyinstaller.org/en/stable/runtime-information.html).
@@ -40,13 +42,16 @@ ikut disimpan di repository. Log serta versi dependency berada pada
 - Salinan binary identik dijalankan dari folder sementara yang mula-mula hanya
   berisi file `.exe`. PATH dibatasi ke direktori Windows, environment Python/
   virtualenv/Tcl eksternal dihapus, tidak ada source/resource pendamping.
-- Ketiga tab Tk dibuat dan pemilihan produk diuji. Koneksi/deteksi/Sequence
+- Keenam tab Tk dibuat dan pemilihan produk diuji. Koneksi/deteksi/Sequence
   tidak muncul sebagai input.
-- Untuk setiap produk: generate baru Sequence1, inspect, verify, penolakan
-  System ID berbeda, renewal Sequence2 dengan Client ID sama, verify renewal.
-- Edit/hapus lima field bersama diuji; Database ID dipastikan tetap berbeda.
+- Untuk setiap produk: generate, inspect, verify, serta penolakan identitas salah.
+  Empat produk yang mendukung Sequence diuji baru1 dan perpanjangan2; Finger dan
+  LetterStore tidak diberi field perpanjangan fiktif.
+- Edit/hapus field bersama diuji hanya pada tab yang memakai field tersebut;
+  Database ID, serial, School ID dan Registration Token tetap terpisah.
 - Save All diuji sebelum pemilihan folder ketika tab CBE belum lengkap, lalu
-  berhasil membuat tiga lisensi baru dan tiga perpanjangan dengan Client ID tetap.
+  berhasil membuat enam lisensi baru dan satu batch berikutnya: empat perpanjangan
+  dengan identitas tetap serta dua hasil Finger/LetterStore yang dibuat ulang.
 - Tcl/Tk, native cryptography dan seluruh XML/JSON dibaca dari bundle sementara,
   bukan dari folder source atau instalasi Python host.
 

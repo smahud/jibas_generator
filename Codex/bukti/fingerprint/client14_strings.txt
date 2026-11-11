@@ -1,0 +1,1139 @@
+-510967977	Invalid block.
+-510968177	#=z_acMtrI=
+-510968140	#=zXlD0HTI=
+-510967831	#=z_acMtrI=
+-510967914	#=zXlD0HTI=
+-510967933	#=zWJRuOec=
+-510968014	data
+-510968001	#=zggRjAZg=
+-510969535	security transparent method '
+-510969499	'
+-510969626	security critical type '
+-510968427	Refanyval is not supported.
+-510969786	Localloc not supported.
+-510969760	EF-VM-0521
+-510969833	EF-VM-0522
+-510969850	<PrivateImplementationDetails><
+-510968958	.
+-510969816	Cannot load type '{0}'.
+-510969654	Unknown operand type.
+-510969058	Arglist is not supported.
+-510969379	The value is not finite real number.
+-510969987	get_HasValue
+-510970094	get_Value
+-510970110	GetValueOrDefault
+-510970054	GetExecutingAssembly
+-510969897	GetCallingAssembly
+-510969906	GetCurrentMethod
+-510969300	{0} {1}
+-510969122	, 
+-510969147	(
+-510969139	)
+-510969689	Object of type {0} cannot be converted to type {1}.
+-510969366	Initblk not supported.
+-510969491	security critical method '
+-510968980	Address
+-510969119	Cannot bind method: {0}.{1}
+-510969156	Refanytype is not supported.
+-510969209	Cpblk not supported.
+-510969099	.ctor
+-510969721	security critical field '
+-510969026	System.Security.SecurityCriticalAttribute
+-510968882	System.Security.SecuritySafeCriticalAttribute
+-510968950	A caller does not have the permissions required to access a resource.
+-510969467	Cpobj is not supported.
+-510968389	Attempt by 
+-510968407	 to access 
+-510968737	 failed.
+-510968760	Assembly '
+-510968705	' is marked with the AllowPartiallyTrustedCallersAttribute, and uses the level 2 security transparency model. Level 2 transparency causes all methods in AllowPartiallyTrustedCallers assemblies to become security transparent by default, which may be the cause of this exception.
+-510969881	Add
+-510969875	CompareExchange
+-510969977	Decrement
+-510969929	Exchange
+-510969952	Increment
+-510970288	Read
+-510969011	Mkrefany is not supported.
+-510969226	InitializeArray
+-510969240	Void InitializeArray(System.Array, System.RuntimeFieldHandle)
+-510969542	Unexpected value on the stack.
+-510969588	obj
+-510968501	Cannot create delegate for a method. Unsupported number of parameters: {0}.
+-510968519	Cannot create delegate for a method with parameters passed by reference.
+-510968342	Invoke
+-510970258	&
+-510970346	*
+-510970338	[]
+-510970363	,]
+-510970356	VM-3012
+-510970306	VM-3014
+-510968495	#=zXlD0HTI=
+-510968482	#=zWJRuOec=
+-510968028	#=z_acMtrI=
+-510967855	ArgumentNull_Buffer
+-510970179	RSAPUBLICBLOB
+-510970543	blob
+-510970275	System
+-510970296	Span`1
+-510970245	ReadOnlySpan`1
+-510968078	System.Security.SecurityRulesAttribute
+-510968163	RuleSet
+-510970328	Invalid key size.
+-510970176	#=z_acMtrI=
+-510970163	Invalid IV size.
+-510970138	#=zXlD0HTI=
+-510945498	SELECT text FROM jbssat.frruntext ORDER BY replid
+-510945282	RunTextImageCreator.Create()
+-510964778	terhubung
+-510964794	belum terhubung
+-510964744	Perangkat pemindai sidik jari tidak teregistrasi
+-510971481	RiwayatForm.ApplyTheme()
+-510971587	Microsoft Sans Serif
+-510971430	label1
+-510971840	Riwayat Aplikasi
+-510971493	btTutup
+-510971515	Tutup
+-510971208	Courier New
+-510971783	textBox1
+-510971798	textBox1.Text
+-510971394	pbClose
+-510971874	RiwayatForm
+-510971892	Riwayat 
+-510947794	Search Stopped By Other Thread
+-510947599	SearchWorker.Searching()
+-510977068	FormatSmsForm.ApplyTheme()
+-510977029	Format SMS Auto Send
+-510977136	tabControl3
+-510977146	tabPage1
+-510972782	Presensi Sekolah
+-510977097	txFormatSmsHadir
+-510977112	txFormatSmsTelat
+-510977471	label48
+-510977421	SMS Kehadiran
+-510977433	label9
+-510977518	SMS Keterlambatan
+-510977526	label49
+-510977484	SMS Kepulangan
+-510977489	txFormatSmsPulang
+-510977337	tabPage2
+-510972759	Presensi Kegiatan
+-510977296	txFormatSmsHadirAct
+-510977298	txFormatSmsTelatAct
+-510977404	label43
+-510977354	label44
+-510977376	label45
+-510977710	txFormatSmsPulangAct
+-510977713	label3
+-510977670	Format pesan SMS yang digunakan untuk pengiriman SMS AutoSend Kehadiran, Keterlambatan dan Kepulangan Siswa
+-510976560	label2
+-510977592	*) Gunakan JIBAS SPT Fingerprint Manager untuk mengubah konfigurasi ini.
+-510977607	FormatSmsForm
+-511048499	Inputan harus diisi!
+-511048470	Inputan harus berupa bilangan!
+-511048563	Nilai inputan harus berada di antara 0 - 23 !
+-511048895	Nilai inputan harus berada di antara 0 - 59 !
+-510974116	jibas
+-510974136	SELECT COUNT(*)\r\n                              FROM jbsuser.landlord\r\n                             WHERE password = md5('{0}')
+-510964815	Password salah!
+-510964821	SELECT departemen \r\n                          FROM jbsakad.departemen\r\n                         WHERE aktif = 1\r\n                         ORDER BY urutan
+-510965213	Administrator JIBAS
+-510965031	LoginManager.AdminLogin()
+-510964999	SELECT f.replid, f.userlevel, p.nama\r\n                              FROM jbssat.fruser f, jbssdm.pegawai p\r\n                             WHERE f.userid = p.nip \r\n                               AND p.aktif = 1\r\n                               AND f.userlevel IN (1,2)\r\n                               AND f.active = 1 \r\n                               AND f.userid = '{0}'\r\n                               AND f.password = md5('{1}')
+-510965304	NIP atau Password salah atau anda tidak berhak mengakses aplikasi ini!
+-510965317	SELECT departemen\r\n                          FROM jbssat.fruseraccess\r\n                         WHERE iduser = '{0}'
+-510965712	UPDATE jbssat.fruser SET lastlogin = NOW() WHERE replid = '{0}'
+-510965510	LoginManager.UserLogin()
+-510971218	:
+-510971562	 - 
+-510971556	PresenceListBox.OnDrawItem()
+-510945960	SearchManager.InitConnection
+-510963670	SELECT NOW()
+-510945923	[SearchManager:RefreshConnection]
+-510946043	SearchManager.CloseConnection()
+-510946001	Process Deactivated Fingerprint Data
+-510945804	SELECT replid\r\n                          FROM jbssat.frdata\r\n                         WHERE active = 0 \r\n                           AND verify = 1 \r\n                           AND (departemen IN ({0}) OR departemen IS NULL) \r\n                           AND replid IN ({1})
+-510946254	Process New Fingerprint Data
+-510946089	SELECT replid\r\n                          FROM jbssat.frdata\r\n                         WHERE active = 1 \r\n                           AND verify = 1 \r\n                           AND (departemen IN ({0}) OR departemen IS NULL) \r\n                           AND replid NOT IN ({1})
+-510973617	,
+-510971237	0
+-510946452	Check Update Fingerprint Data
+-510946512	SELECT COUNT(replid)\r\n                              FROM jbssat.frdata\r\n                             WHERE active = 1\r\n                               AND verify = 1 \r\n                               AND (departemen IN ({0}) OR departemen IS NULL)
+-510946389	Fingerprint database hasn't change
+-510946702	SearchManager.CheckRetrySearch()
+-510946789	SELECT replid, nis, nip, ownertype, template\r\n                          FROM jbssat.frdata\r\n                         WHERE replid IN ({0})
+-510946678	SELECT f.replid, f.nis, f.template\r\n                          FROM jbssat.frdata f\r\n                         WHERE f.departemen IN ({0})\r\n                           AND f.verify = 1\r\n                           AND f.active = 1
+-510946855	SELECT f.replid, f.nip, f.template\r\n                                   FROM jbssat.frdata f\r\n                                  WHERE f.nip IS NOT NULL\r\n                                    AND f.verify = 1\r\n                                    AND f.active = 1
+-510947218	SELECT f.replid, f.nis, f.template\r\n                          FROM jbssat.frdata f\r\n                         WHERE f.nis IN ({0})\r\n                           AND f.verify = 1\r\n                           AND f.active = 1
+-510947145	SELECT f.replid, f.nip, f.template\r\n                              FROM jbssat.frdata f\r\n                             WHERE f.nip IN ({0})\r\n                               AND f.verify = 1\r\n                               AND f.active = 1
+-510947389	SELECT IF(f.nip IS NULL, 0, 1), f.nis, f.nip, f.template\r\n                              FROM jbssat.frdata f\r\n                             WHERE replid = {0}
+-510947737	SearchManager.GetFingerData()
+-510962648	SEKOLAH
+-510947829	SearchManager.InitFingerData()
+-510976013	BasisDataForm.ApplyTheme()
+-510976110	BLUE
+-510976097	DARKBLUE
+-510976120	GREEN
+-510976076	DARKGREEN
+-510976092	BROWN
+-510976432	PURPLE
+-510976445	BasisDataForm.ShowConfig()
+-510976414	Tidak dapat menghubungi basis data JIBAS!
+-510976462	Konfigurasi basis data telah berubah. Silahkan login kembali.
+-510976266	BLACK
+-510976286	chAlwaysOnTop
+-510976362	Selalu fokus dan berada di atas aplikasi lain
+-510976342	groupBox1
+-510976678	Aplikasi
+-510976693	Black
+-510976649	Blue
+-510976644	Dark Blue
+-510976660	Green
+-510976744	Dark Green
+-510976753	Brown
+-510976709	Purple
+-510976730	cbTheme
+-510976573	Tema
+-510976568	chRunText
+-510976520	Aktifkan Running Text 
+-510976613	btSaveApplySound
+-510976223	Simpan dan Terapkan
+-510976628	chPlaySound
+-510976606	Mainkan suara ketika pendataan presensi
+-510976948	gbChPass
+-510976899	Ganti Password
+-510977008	lnChPass
+-510977023	gbDBConfig
+-510976976	Basis Data
+-510976985	label5
+-510976814	Konfigurasi basis data Sistem Informasi Sekolah JIBAS
+-510976786	txDBPort
+-510976865	btSaveApply
+-510976883	label26
+-510974865	Password
+-510976833	label27
+-510976855	User ID
+-510977189	txDBPassword
+-510977208	txDBUser
+-510977159	label29
+-510977173	Server
+-510977258	txDBServer
+-510977275	Basis Data && Aplikasi
+-510977248	BasisDataForm
+-511047971	{0} {1} {2}
+-510973577	 
+-510936514	Senin
+-510936534	Selasa
+-510936363	Rabu
+-510936382	Kamis
+-510936370	Jum'at
+-510936327	Sabtu
+-510936347	Minggu
+-511047949	Januari
+-511047939	Februari
+-511047954	Maret
+-511048038	April
+-511048058	Mei
+-511048052	Juni
+-511048007	Juli
+-511048026	Agustus
+-511048368	September
+-511048384	Oktober
+-511048334	Nopember
+-511048349	Desember
+-511048340	januari
+-511048418	agustus
+-511048440	oktober
+-511048390	februari
+-511048405	nopember
+-511048236	desember
+-511048251	maret
+-511048207	april
+-511048195	mei
+-511048213	juni
+-511048304	juli
+-511048291	september
+-511048307	:00:00
+-511048264	{0}:{1}:{2}
+-511048274	{0}:{1}
+-510972302	AutoSendSmsForm.ApplyTheme()
+-510972393	Departemen
+-510972410	AutoSend Kehadiran
+-510972355	AutoSend Keterlambatan
+-510972200	AutoSend Kepulangan
+-510972170	Pengirim
+-510972185	Kegiatan
+-510972272	SELECT departemen, asin, CONVERT(IF(info1 IS NULL, '0', info1), UNSIGNED INTEGER), \r\n                                   asout, pengirim\r\n                              FROM jbssat.frconfigassms\r\n                             WHERE departemen IN ({0})
+-510972470	AutoSendSmsForm.ShowConfigAsSms()
+-510972526	name
+-510972513	System.String
+-510972493	asin
+-510972488	System.Int32
+-510972499	aslate
+-510972840	asout
+-510972860	jam
+-510972814	kegiatan
+-510972829	kelompok
+-510972820	MASUK
+-510972904	AutoSendSmsForm.ShowActivityPresenceSchedule()
+-510972717	Konfigurasi Auto Send SMS
+-510972685	tabControl4
+-510972703	tabPage3
+-510972789	dgvConfigSms
+-510972744	tabPage4
+-510973119	dgvConfigSmsAct
+-510973061	label10
+-510973083	SMS akan dikirimkan melalui JIBAS SMS Gateway.
+-510973128	lnRefreshConfigSms
+-510972969	muat ulang...
+-510972981	label68
+-510972939	Konfigurasi pengiriman otomatis SMS laporan kehadiran, keterlambatan dan kepulangan siswa kepada orangtua siswa.
+-510973362	AutoSendSmsForm
+-510973344	Auto Send Sms 
+-510947694	ServerClockManager.Start()
+-510948261	Yim.Jibas.Sat.Fgr.Client.Properties.Resources
+-510948288	AcceptSound
+-510948234	AlreadySound
+-510948245	apptitle
+-510948332	apptitle2
+-510948348	btclose
+-510948298	btmaximize
+-510948315	btminimize
+-510948140	DeniedSound
+-510948150	DS_DIGIB
+-510948101	logo-aplikasi-finger-client
+-510948199	logo-aplikasi-grey
+-510948176	logo-jibas-2015-44
+-510948177	nousers
+-510948519	nousers2
+-510948534	supportware
+-510970860	UserInfoFactory.GetUserInfo()
+-510970824	SELECT nis, nip, ownertype, IF(departemen IS NULL, 'Pegawai', departemen), fingerpos\r\n                              FROM jbssat.frdata\r\n                             WHERE replid = {0}
+-510971014	SELECT s.nama, k.kelas, s.foto, DATE_FORMAT(NOW(), '%H:%i:%s')\r\n                                  FROM jbsakad.siswa s, jbsakad.kelas k \r\n                                 WHERE s.idkelas = k.replid\r\n                                   AND s.nis = '{0}'
+-510970969	SELECT p.nama, p.bagian, p.foto, DATE_FORMAT(NOW(), '%H:%i:%s')\r\n                                  FROM jbssdm.pegawai p\r\n                                 WHERE p.nip = '{0}'
+-510971142	MainForm:DisplayResult()
+-510971551	CatatanForm.ApplyTheme()
+-510971646	Waktu
+-510971634	Keterangan
+-510971451	Catatan Aplikasi
+-510971416	dgvLog
+-510971471	CatatanForm
+-510978136	ChPassForm.ApplyTheme()
+-510978486	Password lama tidak sesuai
+-510978455	Panjang password baru minimal 5 karakter
+-510978502	Password tidak sama
+-510978352	UPDATE jbsuser.landlord\r\n                               SET `password` = md5('{0}')
+-510978418	UPDATE jbssat.fruser\r\n                               SET `password` = md5('{0}')\r\n                             WHERE userid = '{1}'
+-510978764	Password telah berubah
+-510978601	ChPassForm.btChange_Click()
+-510978571	txPassword2
+-510975663	label4
+-510978581	Konfirmasi Password:
+-510978688	txPassword1
+-510978634	Password Baru:
+-510978647	txOldPassword
+-510978979	Password Lama:
+-510978960	txNip
+-510978948	btChange
+-510978963	Ganti
+-510979047	Label1
+-510979068	User:
+-510979024	ChPassForm
+-510965605	SELECT CURTIME(),    \r\n                               YEAR(NOW()), MONTH(NOW()), DAY(NOW()), \r\n                               HOUR(NOW()), MINUTE(NOW()),\r\n                               HOUR(NOW()) * 60 + MINUTE(NOW()),\r\n                               WEEKDAY(NOW())
+-510965959	PresenceManager.InitDbConnection()
+-510965824	ERROR
+-510965812	PresenceManager.RefreshDbConnection()
+-510965864	PresenceManager.CloseDbConnection()
+-510965850	SELECT nis, nip, ownertype, active, fingerpos\r\n                              FROM jbssat.frdata\r\n                             WHERE replid = '{0}'
+-510966051	Tidak ditemukan data sidik jari
+-510981693	nip
+-510981617	nis
+-510966041	SELECT s.nama, s.foto, k.kelas, s.idkelas, k.idtingkat, t.departemen, \r\n                                   IF(s.hportu IS NULL, '', TRIM(s.hportu)),\r\n                                   IF(s.info1 IS NULL, '', TRIM(s.info1)),\r\n                                   IF(s.info2 IS NULL, '', TRIM(s.info2)),\r\n                                   s.aktif \r\n                              FROM jbsakad.siswa s, jbsakad.kelas k, jbsakad.tingkat t\r\n                             WHERE s.idkelas = k.replid\r\n                               AND k.idtingkat = t.replid \r\n                               AND s.nis = '{0}'
+-510966388	SELECT nama, foto, bagian, 'NA', 'NA', 'Pegawai', 'HP', 'HP', 'HP', aktif\r\n                              FROM jbssdm.pegawai\r\n                             WHERE nip = '{0}'
+-510966745	Tidak ditemukan identitas siswa/pegawai
+-510966543	SELECT chatid\r\n                              FROM jbstgram.member\r\n                             WHERE nis = '{0}'\r\n                               AND aktif = 1
+-510966926	SELECT chatid\r\n                              FROM jbstgram.member\r\n                             WHERE nip = '{0}'\r\n                               AND aktif = 1
+-510966797	SELECT token\r\n                              FROM jbsjs.usertoken\r\n                             WHERE nis = '{0}'\r\n                               AND aktif = 1\r\n                               AND loggedin = 1
+-510967171	SELECT token\r\n                              FROM jbsjs.usertoken\r\n                             WHERE nip = '{0}'\r\n                               AND aktif = 1\r\n                               AND loggedin = 1
+-510967057	Status 
+-510967143	 TIDAK AKTIF!
+-510967155	Status sidik jari 
+-510967132	Tidak ada presensi kegiatan untuk 
+-510967437	SELECT COUNT(replid)\r\n                           FROM jbssat.frpresensikegiatan\r\n                          WHERE {0} = CURDATE()\r\n                            AND idkegiatan = {1}\r\n                            AND {2} = '{3}'
+-510967395	date_out
+-510967410	date_in
+-510967368	Presensi kegiatan untuk 
+-510967719	 telah didata sebelumnya
+-510967686	Jadwal pendataan presensi 
+-510967783	 untuk 
+-510967797	 belum dimulai
+-510967746	NULL
+-510967765	INSERT INTO jbssat.frpresensikegiatan \r\n                                   SET nis = '{0}', idkegiatan = {1}, \r\n                                       date_in = CURDATE(), time_in = CURTIME(), \r\n                                       active = 1, source = 'F',\r\n                                       smssent = {2}, info1 = {3}, frid_in = {4}
+-510935274	INSERT INTO jbssat.frpresensikegiatan \r\n                                   SET nip = '{0}', idkegiatan = {1}, \r\n                                       date_in = CURDATE(), time_in = CURTIME(), \r\n                                       active = 1, source = 'F', info1 = {2}, frid_in = {3}
+-510935467	UPDATE jbssat.frdata\r\n                               SET lastpresence = NOW()\r\n                             WHERE replid = {0}
+-510935336	SELECT replid, time_in\r\n                              FROM jbssat.frpresensikegiatan \r\n                             WHERE {0} = '{1}' \r\n                               AND date_in = CURDATE()\r\n                               AND time_out IS NULL
+-510935785	UPDATE jbssat.frpresensikegiatan \r\n                                   SET date_out = CURDATE(), time_out = CURTIME(), \r\n                                       active = 0, smssenthome = {0}, frid_out = {2} \r\n                                 WHERE replid = {1}
+-510935997	UPDATE jbssat.frdata\r\n                                   SET lastpresence = NOW()\r\n                                 WHERE replid = {0}
+-510935858	Presensi 
+-510935810	Tidak ditemukan data presensi masuk untuk siswa 
+-510935881	Tidak ditemukan data presensi masuk untuk pegawai 
+-510936242	PresenceManager.SaveActivityPresence()
+-510936295	   ERROR
+-510936310	PresenceManager.SaveSchoolPresence()
+-510936105	SELECT * \r\n                          FROM jbssat.frfreetime\r\n                         WHERE nip = '{0}'\r\n                           AND aktif = 1
+-510936145	senin
+-510936485	selasa
+-510936506	rabu
+-510936461	kamis
+-510936449	jumat
+-510936469	sabtu
+-510936553	minggu
+-510936574	SELECT WEEKDAY(NOW())
+-510936432	Tidak ada jadwal presensi untuk 
+-510936391	 di hari 
+-510936407	SELECT COUNT(replid) \r\n                          FROM jbssat.frpresence \r\n                         WHERE nip = '{0}' \r\n                           AND date_in = CURDATE()
+-510936609	UPDATE jbssat.frpresence \r\n                           SET active = 0 \r\n                         WHERE nip = '{0}'\r\n                           AND active = 1
+-510936995	INSERT INTO jbssat.frpresence \r\n                           SET nip = '{0}', date_in = CURDATE(), time_in = CURTIME(), \r\n                               active = 1, source = 'F', frid_in = {1}, info2 = 'FREETIME'
+-510936851	UPDATE jbssat.frdata\r\n                           SET lastpresence = NOW()\r\n                         WHERE replid = {0}
+-510937240	Presensi Sekolah (Waktu Bebas)
+-510937293	SELECT WEEKDAY(NOW()) AS wk, mintime0, mintime1, mintime2, mintime3, mintime4, mintime5, mintime6 \r\n                          FROM jbssat.frfreetime\r\n                         WHERE nip = '{0}'
+-510937174	wk
+-510937519	mintime0
+-510937534	mintime1
+-510937485	mintime2
+-510937476	mintime3
+-510937491	mintime4
+-510937570	mintime5
+-510937585	mintime6
+-510937544	SELECT replid, time_in, DATE_FORMAT(NOW(), '%H:%i:%s') \r\n                          FROM jbssat.frpresence \r\n                         WHERE nip = '{0}' \r\n                           AND active = 1
+-510937782	UPDATE jbssat.frpresence \r\n                                   SET date_out = CURDATE(), time_out = CURTIME(), \r\n                                       active = 0, smssenthome = 0, frid_out = {1} \r\n                                 WHERE replid = {0}
+-510937723	Belum dapat melakukan presensi pulang karena waktu kerja belum tercukupi (
+-510937996	 menit)
+-510938010	SELECT COUNT(replid)\r\n                              FROM jbssat.frpresence \r\n                             WHERE nip = '{0}'\r\n                               AND date_in = CURDATE()
+-510937960	Tidak ditemukan data presensi MASUK untuk 
+-510937937	Terima kasih, kehadiran 
+-510938296	 hari ini telah terdata
+-510938262	Belum ada jadwal pendataan presensi sekolah di hari 
+-510938329	 belum dimulai atau sudah berakhir!
+-510938163	DELETE FROM jbssat.frabsence\r\n                         WHERE {0} = '{1}'\r\n                           AND datenop = CURDATE() \r\n                           AND {2} IS NULL
+-510938527	idreportsisfoemp
+-510938598	idreportsisfo
+-510938610	SELECT COUNT(replid) \r\n                          FROM jbssat.frpresence \r\n                         WHERE {0} = '{1}' \r\n                           AND date_in = CURDATE()
+-510938436	UPDATE jbssat.frpresence \r\n                               SET active = 0 \r\n                             WHERE {0} = '{1}'\r\n                               AND active = 1
+-510938843	INSERT INTO jbssat.frpresence \r\n                                   SET nis = '{0}', departemen = '{1}', idtingkat = {2}, idkelas = {3}, \r\n                                       date_in = CURDATE(), time_in = CURTIME(), active = 1, source = 'F',\r\n                                       smssent = {4}, info1 = {5}, frid_in = {6}, info2 = 'FIXED'
+-510939073	INSERT INTO jbssat.frpresence \r\n                                   SET nip = '{0}', date_in = CURDATE(), time_in = CURTIME(), \r\n                                       active = 1, source = 'F', frid_in = {1}, info1 = {2}, info2 = 'FIXED'
+-510939274	SELECT replid, time_in\r\n                          FROM jbssat.frpresence \r\n                         WHERE {0} = '{1}' \r\n                           AND active = 1
+-510939140	UPDATE jbssat.frpresence \r\n                               SET date_out = CURDATE(), time_out = CURTIME(), \r\n                                   active = 0, smssenthome = {0}, frid_out = {2} \r\n                             WHERE replid = {1}
+-510939586	SELECT COUNT(replid)\r\n                              FROM jbssat.frpresence \r\n                             WHERE {0} = '{1}'\r\n                               AND date_in = CURDATE()
+-510939824	{NAMA}
+-510939837	{TANGGAL}
+-510939789	{BULAN}
+-510939779	{TAHUN}
+-510939793	{JAM_MASUK}
+-510939875	{JAM_PULANG}
+-510939854	INSERT INTO jbstgram.send\r\n                               SET msgdate = NOW(), destchatid = {0}, destname = '{1}', srcchatid = 0, msgtext = '{2}', msgtype = 1, msgsource = '{3}'
+-510940086	AS.OUT
+-510940043	SELECT LAST_INSERT_ID()
+-510940137	INSERT INTO jbstgram.sendhistory\r\n                               SET idsend = {0}, msgdate = NOW(), destchatid = {1}, destname = '{2}', srcchatid = 0, msgtext = '{3}', msgtype = 1, msgsource = '{4}'
+-510940350	INSERT INTO jbsjs.notif\r\n			               SET msgdate = NOW(), desttoken = '{0}', topicid = '',  msgtitle = '{1}', msgbody = '{2}', msgsource = '{3}'
+-510940163	Kepulangan
+-510940180	INSERT INTO jbsjs.notifmessage\r\n			               SET {0} = '{1}', topicid = null, message = '{2}', notifdate = NOW(), source = '{3}', title = '{4}'
+-510940663	INSERT INTO jbsjs.notifmessagehistory\r\n			               SET {0} = '{1}', topicid = null, message = '{2}', notifdate = NOW(), source = '{3}', title = '{4}'
+-510940497	SELECT COUNT(replid)\r\n                      FROM jbssms.smsgeninfo\r\n                     WHERE tanggal = '{0}-{1}-{2}'\r\n                       AND tipe = 0\r\n                       AND info LIKE '[AS.OUT.{3}]%'
+-510940680	INSERT INTO jbssms.smsgeninfo\r\n                         SET tanggal = '{0}-{1}-{2}', tipe = 0,\r\n                             info = '[AS.OUT.{3}] Pengiriman Otomatis SMS Kepulangan Siswa departemen {3}',\r\n                             pengirim = 'SPT.FGR.78.{3}'
+-510940956	SELECT replid\r\n                          FROM jbssms.smsgeninfo\r\n                         WHERE tanggal = '{0}-{1}-{2}'\r\n                           AND tipe = 0\r\n                           AND info LIKE '[AS.OUT.{3}]%'
+-510941392	INSERT INTO jbssms.outbox \r\n                       SET UpdatedInDB = NOW(), InsertIntoDB = NOW(), SendingDateTime = NOW(),\r\n                           Text = '{0}', DestinationNumber = '{1}', Coding = '8bit', UDH = NULL,\r\n                           Class = -1, TextDecoded = '', MultiPart = 'false', RelativeValidity = -1, SenderID = 'JIBAS.SPT.FGR', \r\n                           SendingTimeOut = '0000-00-00 00:00:00', DeliveryReport = 'default', CreatorID = 'JIBAS.SPT.FGR',\r\n                           idsmsgeninfo = '{2}', status = 0
+-510941529	INSERT INTO jbssms.outboxhistory\r\n                       SET InsertIntoDB = NOW(),\r\n                           SendingDateTime = NOW(),\r\n                           Text = '{0}',\r\n                           DestinationNumber = '{1}',\r\n                           idsmsgeninfo = '{2}',\r\n                           status = 0,\r\n                           SenderID = 'JIBAS.SPT.FGR'
+-510941811	{MENIT_TELAT}
+-510941791	INSERT INTO jbstgram.send\r\n		                       SET msgdate = NOW(), destchatid = {0}, destname = '{1}', srcchatid = 0, msgtext = '{2}', msgtype = 1, msgsource = '{3}'
+-510941961	AS.IN
+-510941981	INSERT INTO jbstgram.sendhistory\r\n		                       SET idsend = {0}, msgdate = NOW(), destchatid = {1}, destname = '{2}', srcchatid = 0, msgtext = '{3}', msgtype = 1, msgsource = '{4}'
+-510942428	INSERT INTO jbsjs.notif\r\n                           SET msgdate = NOW(), desttoken = '{0}', topicid = '',  msgtitle = '{1}', msgbody = '{2}', msgsource = '{3}'
+-510942642	Kehadiran
+-510942594	INSERT INTO jbsjs.notifmessage\r\n                           SET {0} = '{1}', topicid = null, message = '{2}', notifdate = NOW(), source = '{3}', title = '{4}'
+-510942590	INSERT INTO jbsjs.notifmessagehistory\r\n                           SET {0} = '{1}', topicid = null, message = '{2}', notifdate = NOW(), source = '{3}', title = '{4}'
+-510942929	SELECT COUNT(replid)\r\n                      FROM jbssms.smsgeninfo\r\n                     WHERE tanggal = '{0}-{1}-{2}'\r\n                       AND tipe = 0\r\n                       AND info LIKE '[AS.IN.{3}]%'
+-510943111	INSERT INTO jbssms.smsgeninfo\r\n                           SET tanggal = '{0}-{1}-{2}', tipe = 0,\r\n                               info = '[AS.IN.{3}] Pengiriman Otomatis SMS Kehadiran Siswa departemen {3}',\r\n                               pengirim = 'SPT.FGR.77.{3}'
+-510943383	SELECT replid\r\n                          FROM jbssms.smsgeninfo\r\n                         WHERE tanggal = '{0}-{1}-{2}'\r\n                           AND tipe = 0\r\n                           AND info LIKE '[AS.IN.{3}]%'
+-510943306	INSERT INTO jbssms.outbox \r\n                           SET UpdatedInDB = NOW(), InsertIntoDB = NOW(), SendingDateTime = NOW(),\r\n                               Text = '{0}', DestinationNumber = '{1}', Coding = '8bit', UDH = NULL,\r\n                               Class = -1, TextDecoded = '', MultiPart = 'false', RelativeValidity = -1, SenderID = 'JIBAS.SPT.FGR', \r\n                               SendingTimeOut = '0000-00-00 00:00:00', DeliveryReport = 'default', CreatorID = 'JIBAS.SPT.FGR',\r\n                               idsmsgeninfo = '{2}', status = 0
+-510943960	INSERT INTO jbssms.outboxhistory\r\n                           SET InsertIntoDB = NOW(),\r\n                               SendingDateTime = NOW(),\r\n                               Text = '{0}',\r\n                               DestinationNumber = '{1}',\r\n                               idsmsgeninfo = '{2}',\r\n                               status = 0,\r\n                               SenderID = 'JIBAS.SPT.FGR'
+-510944198	{KEGIATAN}
+-510944215	AS.OUT.ACT.
+-510944033	SELECT COUNT(replid)\r\n                      FROM jbssms.smsgeninfo\r\n                     WHERE tanggal = '{0}-{1}-{2}'\r\n                       AND tipe = 0\r\n                       AND info LIKE '[AS.OUT.ACT.{3}]%'
+-510944493	INSERT INTO jbssms.smsgeninfo\r\n                           SET tanggal = '{0}-{1}-{2}', tipe = 0,\r\n                               info = '[AS.OUT.ACT.{3}] Pengiriman otomatis SMS kepulangan siswa di kegiatan {4}',\r\n                               pengirim = 'SPT.FGR.ACT.78.{3}'
+-510944760	SELECT replid\r\n                          FROM jbssms.smsgeninfo\r\n                         WHERE tanggal = '{0}-{1}-{2}'\r\n                           AND tipe = 0\r\n                           AND info LIKE '[AS.OUT.ACT.{3}]%'
+-510944935	AS.IN.ACT.
+-510944952	SELECT COUNT(replid)\r\n                      FROM jbssms.smsgeninfo\r\n                     WHERE tanggal = '{0}-{1}-{2}'\r\n                       AND tipe = 0\r\n                       AND info LIKE '[AS.IN.ACT.{3}]%'
+-510944866	INSERT INTO jbssms.smsgeninfo\r\n                           SET tanggal = '{0}-{1}-{2}', \r\n                               tipe = 0,\r\n                               info = '[AS.IN.ACT.{3}] Pengiriman otomatis SMS kehadiran siswa di kegiatan {4}',\r\n                               pengirim = 'SPT.FGR.ACT.77.{3}'
+-510945131	SELECT replid\r\n                          FROM jbssms.smsgeninfo\r\n                         WHERE tanggal = '{0}-{1}-{2}'\r\n                           AND tipe = 0\r\n                           AND info LIKE '[AS.IN.ACT.{3}]%'
+-510979033	DaftarAnggotaForm.ApplyTheme()
+-510978870	Nama
+-510978825	NIS/NIP
+-510978847	Kelompok
+-510978926	Kelas
+-510978914	RekapBelum
+-510978931	nama
+-510978886	nomor
+-510978906	bagian
+-510979247	info
+-510979234	SELECT DISTINCT nip\r\n                          FROM jbssat.frdata\r\n                         WHERE ownertype = 1\r\n                           AND verify = 1\r\n                           AND active = 1
+-510979087	SELECT DISTINCT f.nip\r\n                          FROM jbssat.frdata f, jbssdm.pegawai p\r\n                         WHERE f.nip = p.nip\r\n                           AND f.verify = 1 AND f.active = 1 AND f.ownertype = 1\r\n                           AND p.aktif = 1 \r\n                           AND p.bagian = 'Akademik'
+-510979547	SELECT DISTINCT f.nip\r\n                          FROM jbssat.frdata f, jbssdm.pegawai p\r\n                         WHERE f.nip = p.nip\r\n                           AND f.verify = 1 AND f.active = 1 AND f.ownertype = 1\r\n                           AND p.aktif = 1 \r\n                           AND p.bagian = 'Non Akademik'
+-510979812	SELECT DISTINCT f.nip\r\n                          FROM jbssat.frdata f, jbssat.franggota a\r\n                         WHERE f.nip = a.nip\r\n                           AND f.verify = 1 AND f.active = 1 AND f.ownertype = 1\r\n                           AND a.aktif = 1 AND a.idkelompok = {0}
+-510980013	SELECT DISTINCT f.nip\r\n                          FROM jbssat.frdata f, jbssat.frpeserta p\r\n                         WHERE f.nip = p.nip\r\n                           AND f.verify = 1 AND f.active = 1 AND f.ownertype = 1\r\n                           AND p.aktif = 1 AND p.idkegiatan = {0}
+-510979843	'NODATA'
+-510979858	SELECT DISTINCT nis\r\n                          FROM jbssat.frdata\r\n                         WHERE ownertype = 0\r\n                           AND verify = 1\r\n                           AND active = 1
+-510980351	SELECT DISTINCT nis\r\n                          FROM jbssat.frdata\r\n                         WHERE ownertype = 0\r\n                           AND verify = 1\r\n                           AND active = 1\r\n                           AND departemen = '{0}'
+-510980177	SELECT DISTINCT f.nis\r\n                          FROM jbssat.frdata f, jbsakad.siswa s, jbsakad.kelas k\r\n                         WHERE f.ownertype = 0\r\n                           AND f.verify = 1\r\n                           AND f.active = 1\r\n                           AND f.nis = s.nis\r\n                           AND s.idkelas = k.replid\r\n                           AND k.idtingkat = {0}
+-510980431	SELECT DISTINCT f.nis\r\n                          FROM jbssat.frdata f, jbsakad.siswa s\r\n                         WHERE f.ownertype = 0\r\n                           AND f.verify = 1\r\n                           AND f.active = 1\r\n                           AND f.nis = s.nis\r\n                           AND s.idkelas = {0}
+-510980615	SELECT DISTINCT f.nis\r\n                          FROM jbssat.frdata f, jbssat.franggota a\r\n                         WHERE f.nis = a.nis\r\n                           AND f.verify = 1 AND f.active = 1 AND f.ownertype = 0\r\n                           AND a.aktif = 1 AND a.idkelompok = {0}
+-510981106	SELECT DISTINCT f.nis\r\n                          FROM jbssat.frdata f, jbssat.frpeserta p\r\n                         WHERE f.nis = p.nis\r\n                           AND f.verify = 1 AND f.active = 1 AND f.ownertype = 0\r\n                           AND p.aktif = 1 AND p.idkegiatan = {0}
+-510981283	SELECT DISTINCT d.nis, s.nama, t.departemen, k.kelas\r\n                                  FROM jbssat.frdata d\r\n                                 INNER JOIN jbsakad.siswa s\r\n                                    ON d.nis = s.nis\r\n                                   AND d.nis IN ({0})  \r\n                                   AND d.active = 1 \r\n                                   AND d.verify = 1\r\n                                   AND s.aktif = 1\r\n                                   AND s.alumni = 0  \r\n                                 INNER JOIN jbsakad.kelas k\r\n                                    ON s.idkelas = k.replid\r\n                                 INNER JOIN jbsakad.tingkat t\r\n                                    ON k.idtingkat = t.replid\r\n                                 ORDER BY s.nama
+-510981629	Siswa
+-510981579	departemen
+-510981596	kelas
+-510981424	SELECT DISTINCT d.nip, pg.nama, pg.bagian, '-' AS kelas\r\n                                  FROM jbssat.frdata d\r\n                                 INNER JOIN jbssdm.pegawai pg\r\n                                    ON d.nip = pg.nip\r\n                                   AND d.nip IN ({0}) \r\n                                   AND d.active = 1 \r\n                                   AND d.verify = 1\r\n                                   AND pg.aktif = 1 \r\n                                 ORDER BY pg.nama
+-510981679	Pegawai
+-510981687	DaftarAnggotaForm.ShowAnggota()
+-510981741	SELECT jenispeserta, idkelompok, iddepartemen,\r\n                               idtingkat, idkelas, kelompokpegawai, kegiatan\r\n                          FROM jbssat.frkegiatan\r\n                         WHERE replid = {0}
+-510982101	jenispeserta
+-510981928	iddepartemen
+-510981939	idtingkat
+-510981891	idkelas
+-510981905	idkelompok
+-510981986	Daftar Anggota
+-510981967	dgvAnggota
+-510981984	lbKegiatan
+-510982313	DaftarAnggotaForm
+-510948995	x2
+-510950554	System.Object
+-511048677	yyyy-MM-dd HH:mm:ss
+-511048655	-------- {0} {1} at {2} --------
+-511048486	{0} [{1}]: {2}
+-510963757	SELECT COUNT(replid)\r\n                                  FROM jbssat.frkegiatan\r\n                                 WHERE replid = {0}\r\n                                   AND aktif = 1
+-510964132	SELECT *\r\n                              FROM jbssat.frjadwalkegiatan\r\n                             WHERE hari = DAYOFWEEK(NOW())\r\n                               AND idkegiatan IN ({0})\r\n                             ORDER BY {1} ASC
+-510963987	mpulangaw
+-510964067	mmasukaw
+-510964082	idkegiatan
+-510964035	SELECT * \r\n                              FROM jbssat.frkegiatan\r\n                             WHERE replid = {0}
+-510964426	deskripsi
+-510984129	jeniswaktu
+-510984048	tglawal
+-510984062	tglakhir
+-510984146	masukaw
+-510983976	masukak
+-510983946	pulangaw
+-510983961	pulangak
+-510983990	telat
+-510964442	pulangstd
+-510964266	mmasukak
+-510964281	mpulangak
+-510964233	mtelat
+-510964254	mpulangstd
+-510964335	SELECT *\r\n                              FROM jbssat.frconfigassmsact\r\n                             WHERE idkegiatan = {0}
+-510964719	SELECT jenispeserta, idkelompok, iddepartemen,\r\n                                       idtingkat, idkelas, kelompokpegawai\r\n                                  FROM jbssat.frkegiatan\r\n                                 WHERE replid = {0}
+-510982423	PilihKegiatanForm.ApplyTheme()
+-510982516	Pilih
+-510982472	Peserta
+-510982486	Jumlah Peserta
+-510977939	Tanggal
+-510982819	Jadwal Pendataan Masuk
+-510982792	Batas Keterlambatan
+-510982890	Jadwal Pendataan Pulang
+-510982864	replid
+-510982877	pilih
+-510982865	peserta
+-510982695	npeserta
+-510982710	tanggal
+-510982668	jammasuk
+-510982683	jamtelat
+-510982762	jampulang
+-510982778	anggota
+-510982736	SELECT k.replid, k.kegiatan,  \r\n                               DATE_FORMAT(k.tglawal, '%d %b %Y') AS tglawal,\r\n                               DATE_FORMAT(k.tglakhir, '%d %b %Y') AS tglakhir,\r\n                               k.jenispeserta, k.idkelompok, k.iddepartemen,\r\n                               k.idtingkat, k.idkelas, k.kelompokpegawai, k.jeniswaktu,\r\n                               j.masukaw, j.masukak, j.telat, j.pulangaw, j.pulangak\r\n                          FROM jbssat.frkegiatan k, jbssat.frjadwalkegiatan j\r\n                         WHERE k.replid = j.idkegiatan\r\n                           AND (k.jeniswaktu = 1 OR (CURDATE() >= k.tglawal AND CURDATE() <= k.tglakhir))\r\n                           AND k.aktif = 1\r\n                           AND j.hari = DAYOFWEEK(NOW())\r\n                           AND k.departemen IN ({0}) \r\n                           {1}\r\n                         ORDER BY k.kegiatan
+-510983177	AND (j.mmasukaw <= HOUR(NOW()) * 60 + MINUTE(NOW()) AND j.mmasukak > HOUR(NOW()) * 60 + MINUTE(NOW()))
+-510983614	PULANG
+-510983603	AND (j.mpulangaw <= HOUR(NOW()) * 60 + MINUTE(NOW()) AND j.mpulangak > HOUR(NOW()) * 60 + MINUTE(NOW()))
+-510983458	SELECT k.replid, k.kegiatan,  \r\n                               DATE_FORMAT(k.tglawal, '%d %b %Y') AS tglawal,\r\n                               DATE_FORMAT(k.tglakhir, '%d %b %Y') AS tglakhir,\r\n                               k.jenispeserta, k.idkelompok, k.iddepartemen,\r\n                               k.idtingkat, k.idkelas, k.kelompokpegawai, k.jeniswaktu,\r\n                               j.masukaw, j.masukak, j.telat, j.pulangaw, j.pulangak\r\n                          FROM jbssat.frkegiatan k LEFT JOIN jbssat.frjadwalkegiatan j\r\n                            ON k.replid = j.idkegiatan \r\n                           AND j.hari = DAYOFWEEK(NOW())\r\n                         WHERE (k.jeniswaktu = 1 OR (CURDATE() >= k.tglawal AND CURDATE() <= k.tglakhir))\r\n                           AND k.aktif = 1\r\n                           AND k.departemen IN ({0}) \r\n                         ORDER BY k.kegiatan
+-510984137	-
+-510984013	Semua Siswa dan Pegawai
+-510984019	Semua Siswa
+-510951613	Semua Pegawai
+-510951561	Siswa 
+-510951582	SELECT t.tingkat, t.departemen\r\n                                  FROM jbssat.frkegiatan k, jbsakad.tingkat t\r\n                                 WHERE k.idtingkat = t.replid\r\n                                   AND k.replid = {0}
+-510951497	 tingkat 
+-510951513	SELECT kl.kelas, t.tingkat, t.departemen\r\n                                  FROM jbssat.frkegiatan k, jbsakad.kelas kl, jbsakad.tingkat t\r\n                                 WHERE k.idkelas = kl.replid\r\n                                   AND kl.idtingkat = t.replid\r\n                                   AND k.replid = {0}
+-510951806	 kelas 
+-510951796	Pegawai bagian Akademik
+-510951762	Pegawai bagian Non Akademik
+-510952116	SELECT kl.kelompok\r\n                                  FROM jbssat.frkegiatan k, jbssat.frkelompok kl\r\n                                 WHERE k.idkelompok = kl.replid\r\n                                   AND k.replid = {0}
+-510952048	Kelompok 
+-510952064	Lainnya
+-510952014	PilihKegiatanForm.ShowCurrentDateActivity()
+-510952384	SELECT COUNT(DISTINCT s.nis)\r\n                          FROM jbssat.frdata f, jbsakad.siswa s, jbsakad.kelas k, jbsakad.tahunajaran ta\r\n                         WHERE f.nis = s.nis\r\n                           AND s.idkelas = k.replid\r\n                           AND k.idtahunajaran = ta.replid \r\n                           AND ta.aktif = 1 \r\n                           AND f.active = 1 \r\n                           AND f.verify = 1\r\n                           AND s.aktif = 1
+-510952629	SELECT COUNT(DISTINCT p.nip)\r\n                          FROM jbssat.frdata f, jbssdm.pegawai p\r\n                         WHERE f.nip = p.nip\r\n                           AND f.active = 1 \r\n                           AND f.verify = 1\r\n                           AND p.aktif = 1
+-510952569	SELECT COUNT(DISTINCT s.nis)\r\n                          FROM jbssat.frdata f, jbsakad.siswa s, jbsakad.kelas k, jbsakad.tahunajaran ta\r\n                         WHERE f.nis = s.nis\r\n                           AND s.idkelas = k.replid\r\n                           AND k.idtahunajaran = ta.replid \r\n                           AND ta.aktif = 1 \r\n                           AND f.active = 1 \r\n                           AND f.verify = 1\r\n                           AND s.aktif = 1\r\n                           AND ta.departemen = '{0}'
+-510952797	SELECT k.idtingkat\r\n                          FROM jbssat.frkegiatan k\r\n                         WHERE k.replid = {0}
+-510953153	SELECT COUNT(DISTINCT s.nis)\r\n                          FROM jbssat.frdata f, jbsakad.siswa s, jbsakad.kelas k, jbsakad.tahunajaran ta\r\n                         WHERE f.nis = s.nis\r\n                           AND s.idkelas = k.replid\r\n                           AND k.idtahunajaran = ta.replid \r\n                           AND ta.aktif = 1 \r\n                           AND f.active = 1 \r\n                           AND f.verify = 1\r\n                           AND s.aktif = 1\r\n                           AND k.idtingkat = '{0}'
+-510953259	SELECT k.idkelas\r\n                          FROM jbssat.frkegiatan k\r\n                         WHERE k.replid = {0}
+-510953645	SELECT COUNT(DISTINCT s.nis)\r\n                          FROM jbssat.frdata f, jbsakad.siswa s, jbsakad.kelas k, jbsakad.tahunajaran ta\r\n                         WHERE f.nis = s.nis\r\n                           AND s.idkelas = k.replid\r\n                           AND k.idtahunajaran = ta.replid \r\n                           AND ta.aktif = 1 \r\n                           AND f.active = 1 \r\n                           AND f.verify = 1\r\n                           AND s.aktif = 1\r\n                           AND k.replid = {0}
+-510953914	SELECT COUNT(DISTINCT p.nip)\r\n                          FROM jbssat.frdata f, jbssdm.pegawai p\r\n                         WHERE f.nip = p.nip\r\n                           AND f.active = 1 \r\n                           AND f.verify = 1\r\n                           AND p.aktif = 1\r\n                           AND p.bagian = 'Akademik'
+-510953797	SELECT COUNT(DISTINCT p.nip)\r\n                          FROM jbssat.frdata f, jbssdm.pegawai p\r\n                         WHERE f.nip = p.nip\r\n                           AND f.active = 1 \r\n                           AND f.verify = 1\r\n                           AND p.aktif = 1\r\n                           AND p.bagian = 'Non Akademik'
+-510954093	SELECT k.idkelompok\r\n                          FROM jbssat.frkegiatan k\r\n                         WHERE k.replid = {0}
+-510954386	SELECT COUNT(a.replid)\r\n                          FROM jbssat.franggota a\r\n                         WHERE a.idkelompok = {0}
+-510954349	SELECT COUNT(ps.replid)\r\n                          FROM jbssat.frpeserta ps\r\n                         WHERE ps.idkegiatan = {0}
+-510954731	Anda perlu memilih minimal satu kegiatan!
+-510954715	Pilih Kegiatan
+-510954536	Kegiatan yang terjadwal saat ini
+-510954527	Semua kegiatan
+-510954604	cbStatus
+-510954619	lbInfo
+-510954576	Hanya menampilkan kegiatan yang aktif dan sesuai dengan jadwal pendataan yang telah ditentukan
+-510954981	lbActivityInfo
+-510954994	Dafter
+-510954951	btPilih
+-510954965	dgvActivity
+-510954791	PilihKegiatanForm
+-510954767	UnlockForm.ApplyTheme()
+-510954861	Password tidak sesuai!
+-510982294	txPassword
+-510954866	Password:
+-510982375	btLogin
+-510954818	Buka
+-510954837	Buka Aplikasi
+-510955169	UnlockForm
+-510948462	license.enc
+-510948480	JSL
+-510948466	Versi
+-510977970	Klien
+-510948422	Seri
+-510977838	KodeHw
+-510948441	KodeRs
+-510978009	KodeTx
+-510977827	LicType
+-510948782	Info1
+-510948770	Info2
+-510948790	Info3
+-510948746	{
+-510948738	}
+-510971261	Tahoma
+-510963356	MainManager.StartRunningText
+-510963447	FAILED TO START RUNNING TEXT 
+-510959765	KEGIATAN
+-510963411	Tidak dapat memulai pendataan presensi kegiatan karena kegiatan terpilih tidak ditemukan atau statusnya non aktif
+-510961598	UJI COBA
+-510963291	MainManager.StartManager()
+-510963644	MainManager.StopManager()
+-510961895	pm_info
+-510961909	pm_error
+-510963612	HH:mm:ss
+-510963691	Server={0};Port={1};User Id={2};Password={3}
+-510963489	SELECT COUNT(TABLE_SCHEMA)\r\n                              FROM `information_schema`.`TABLES`\r\n                             WHERE TABLE_SCHEMA IN ('jbsakad', 'jbssdm', 'jbssms')
+-510963896	Tidak ditemukan basis data Sistem Informasi Sekolah JIBAS di 
+-510963956	MainManager.TestDatabase()
+-510977619	LisensiForm.ApplyTheme()
+-510977926	Kode Transaksi
+-510978017	Kode Perangkat
+-510977998	Tipe Lisensi
+-510977841	LisensiForm.ShowRegistrationData()
+-510977898	Hanya JIBAS Administrator atau Manager yang bisa menambah Lisensi!
+-510978211	JIBAS SPT Fingerprint License|*.lic
+-510978197	Kode lisensi diterima
+-510978297	LisensiForm.btAddLicense_Click
+-510978262	Kode Lisensi
+-510978081	btAddLicense
+-510978100	Tambah Lisensi
+-510978073	openFileDialog1
+-510978151	dgvLicense
+-510978168	LisensiForm
+-510978114	Lisensi
+-510973413	AutoStartForm.ApplyTheme()
+-510973382	SELECT kegiatan\r\n                              FROM jbssat.frkegiatan\r\n                             WHERE replid = {0}
+-510973259	AutoSendSmsForm.GetActivityName()
+-510973603	Sekolah
+-510973569	Jam awal harus lebih kecil dari jam akhir!
+-510973682	Jadwal jam kehadiran dan kepulangan tidak boleh saling selang!
+-510973455	Jadwal jam tidak boleh saling selang dengan jam jadwal sebelumnya!
+-510973512	Anda harus menentukan minimal satu waktu jadwal jam!
+-510973835	Anda perlu menentukan minimal satu kegiatan untuk jadwal AutoStart!
+-510973917	Basis data belum terhubung. Atur kembali koneksi basis data di tab Konfigurasi.
+-510973803	Identitas login belum dimasukkan!
+-510973763	Password belum dimasukkan!
+-510973965	SELECT COUNT(*)\r\n                              FROM jbssat.fruser\r\n                             WHERE userid = '{0}'\r\n                               AND password = md5('{1}')
+-510974339	Password user tersebut tidak cocok atau belum ada akses menggunakan JIBAS SPT Fingerprint!
+-510974244	Konfigurasi telah disimpan. Untuk menerapkan perubahan, anda perlu menghidupkan ulang aplikasi!
+-510974298	AutoSendSmsForm.btAlSave_Click()
+-510974641	Jadwal Auto Start Pendataan Presensi
+-510974700	gbSchedule
+-510974709	label39
+-510974667	Login && Password
+-510974675	txMode3
+-510974497	label17
+-510974519	Login
+-510974475	txMode2
+-510974489	txAlLogin
+-510974569	txMode1
+-510974591	txAlPassword
+-510974538	btMode3
+-510974560	...
+-510974546	label46
+-510974888	Jenis Presensi
+-510974861	btMode2
+-510974851	label16
+-510974952	btMode1
+-510974966	label40
+-510974924	Isikan login dan password untuk menjalankan Auto Start
+-510974729	cbMode3
+-510974751	label42
+-510974829	Timer Auto Start
+-510974844	cbMode2
+-510974794	label14
+-510974816	Jam Pendataan Presensi Masuk
+-510975163	cbMode1
+-510975113	label12
+-510975135	Jam Pendataan Presensi Pulang
+-510975227	label32
+-510975177	3
+-510975169	label41
+-510975191	Mengatur kapan aplikasi akan aktif secara otomatis. Pengaturan jadwal presensi sekolah atau kegiatan dilakukan di aplikasi JIBAS SPT Fingerprint Manager.
+-510975415	label33
+-510975365	s.d
+-510975391	txAlInStartH
+-510975466	txAlOutEndM3
+-510975477	label13
+-510975435	label34
+-510975449	txAlInStartM
+-510975276	txAlOutEndH3
+-510975287	txAlInEndH
+-510975240	txAlOutStartM3
+-510975341	label11
+-510975331	label35
+-510975345	txAlInEndM
+-510975298	txAlOutStartH3
+-510975652	label36
+-510975666	txAlOutStartH
+-510975646	txAlInEndM3
+-510975728	label8
+-510975741	label37
+-510975731	txAlOutStartM
+-510975711	txAlInEndH3
+-510975529	txAlOutEndH
+-510975547	txAlInStartM3
+-510975495	label7
+-510975516	label38
+-510975594	txAlOutEndM
+-510975612	txAlInStartH3
+-510975560	label6
+-510975573	label19
+-510975915	2
+-510975907	label18
+-510975921	1
+-510975881	label23
+-510975903	txAlInStartH2
+-510975979	txAlOutEndM2
+-510975990	label31
+-510975948	label24
+-510975962	txAlInStartM2
+-510975782	txAlOutEndH2
+-510975793	txAlInEndH2
+-510975747	txAlOutStartM2
+-510975856	label30
+-510975870	label25
+-510975860	txAlInEndM2
+-510975838	txAlOutStartH2
+-510976171	label28
+-510976185	chAutoLogin
+-510976139	Otomatis mengaktifkan aplikasi untuk mendata presensi 
+-510976208	btAlSave
+-510976033	AutoStartForm
+-510967928	j7qhDgdc33wL8W3dxpdDuxnRugd1trLpM+8aLL+ir72vLxZcIKEGqCfk7XJkSQFdd/SlXu/xEUdXNmr6KxSevT6VVngacU0MsUpkGJ0EcKZMVKmTlIO2ED4py82TPdl6olqqmqDDNjLGplwtFulScmGf7RvdZDNyIw4nI8tJwf0=
+-510949020	KESALAHAN:\r\n\r\n
+-510949089	KONFIRMASI:\r\n\r\n
+-510949071	PERINGATAN:\r\n\r\n
+-510949077	INFORMASI:\r\n\r\n
+-510948898	PERHATIAN:\r\n\r\n
+-510948488	y1mjIb4s
+-510964567	DataManager.ExecuteNonQuery()
+-510964915	DataManager.ExecuteScalar()
+-510964973	DataManager.ExecuteTable()
+-510964942	DataManager.ExecuteBatchSql()
+-510955406	Server={0};Port={1};Protocol=TCP;User Id={2};Password={3};Database={4};Connection Timeout=3600;Allow User Variables=True;
+-511048616	: 
+-510950630	DatabaseCreator.ExecIgnore()
+-510950593	SELECT COUNT(*) \r\n                          FROM information_schema.COLUMNS \r\n                         WHERE TABLE_SCHEMA = 'jbssat' \r\n                           AND TABLE_NAME = 'frfreetime' \r\n                           AND COLUMN_NAME = 'mintime0'
+-510950816	ALTER TABLE `jbssat`.`frfreetime` \r\n                      ADD COLUMN `mintime0` INTEGER UNSIGNED NOT NULL DEFAULT 0 COMMENT 'mintime senin' AFTER `info3`,\r\n                      ADD COLUMN `mintime1` INTEGER UNSIGNED NOT NULL DEFAULT 0 AFTER `mintime0`,\r\n                      ADD COLUMN `mintime2` INTEGER UNSIGNED NOT NULL DEFAULT 0 AFTER `mintime1`,\r\n                      ADD COLUMN `mintime3` INTEGER UNSIGNED NOT NULL DEFAULT 0 AFTER `mintime2`,\r\n                      ADD COLUMN `mintime4` INTEGER UNSIGNED NOT NULL DEFAULT 0 AFTER `mintime3`,\r\n                      ADD COLUMN `mintime5` INTEGER UNSIGNED NOT NULL DEFAULT 0 AFTER `mintime4`,\r\n                      ADD COLUMN `mintime6` INTEGER UNSIGNED NOT NULL DEFAULT 0 AFTER `mintime5`
+-510951042	UPDATE jbssat.frfreetime SET mintime0 = mintime, mintime1 = mintime, mintime2 = mintime, mintime3 = mintime, mintime4 = mintime, mintime5 = mintime, mintime6 = mintime
+-510950919	SELECT COUNT(*) \r\n                          FROM information_schema.TABLES\r\n                         WHERE TABLE_SCHEMA = 'jbssat' \r\n                           AND TABLE_NAME = 'frfreetime'
+-510951421	CREATE TABLE  `jbssat`.`frfreetime` (\r\n                      `replid` int(10) unsigned NOT NULL AUTO_INCREMENT,\r\n                      `nip` varchar(30) CHARACTER SET utf8 NOT NULL,\r\n                      `aktif` tinyint(1) unsigned NOT NULL DEFAULT '1',\r\n                      `mintime` int(10) unsigned NOT NULL DEFAULT '1',\r\n                      `senin` tinyint(1) unsigned NOT NULL DEFAULT '0',\r\n                      `selasa` tinyint(1) unsigned NOT NULL DEFAULT '0',\r\n                      `rabu` tinyint(1) unsigned NOT NULL DEFAULT '0',\r\n                      `kamis` tinyint(1) unsigned NOT NULL DEFAULT '0',\r\n                      `jumat` tinyint(1) unsigned NOT NULL DEFAULT '0',\r\n                      `sabtu` tinyint(1) unsigned NOT NULL DEFAULT '0',\r\n                      `minggu` tinyint(1) unsigned NOT NULL DEFAULT '0',\r\n                      `keterangan` varchar(255) DEFAULT NULL,\r\n                      `info1` varchar(255) DEFAULT NULL,\r\n                      `info2` varchar(255) DEFAULT NULL,\r\n                      `info3` varchar(255) DEFAULT NULL,\r\n                      PRIMARY KEY (`replid`),\r\n                      KEY `FK_frfreetime_pegawai` (`nip`),\r\n                      CONSTRAINT `FK_frfreetime_pegawai` FOREIGN KEY (`nip`) REFERENCES `jbssdm`.`pegawai` (`nip`) ON UPDATE CASCADE\r\n                    ) ENGINE=InnoDB DEFAULT CHARSET=latin1
+-510919168	SELECT COUNT(*) \r\n                          FROM information_schema.TABLES\r\n                         WHERE TABLE_SCHEMA = 'jbssat' \r\n                           AND TABLE_NAME = 'frruntext'
+-510918997	CREATE TABLE  `jbssat`.`frruntext` (\r\n                     `replid` int(10) unsigned NOT NULL AUTO_INCREMENT,\r\n                     `text` varchar(255) NOT NULL,\r\n                     PRIMARY KEY (`replid`)\r\n                   ) ENGINE=InnoDB DEFAULT CHARSET=latin1
+-510919296	INSERT INTO `jbssat`.`frruntext` \r\n                       SET `text` = 'JIBAS Sistem Presensi Terpadu Fingerprint'
+-510919649	SELECT COUNT(*) \r\n                          FROM information_schema.COLUMNS \r\n                         WHERE TABLE_SCHEMA = 'jbssat' \r\n                           AND TABLE_NAME = 'frpresensikegiatan' \r\n                           AND COLUMN_NAME = 'frid_in'
+-510919864	ALTER TABLE `jbssat`.`frpresensikegiatan` \r\n                      ADD COLUMN `frid_in` INTEGER UNSIGNED AFTER `time_in`
+-510919734	ALTER TABLE `jbssat`.`frpresensikegiatan` \r\n                      ADD COLUMN `frid_out` INTEGER UNSIGNED AFTER `time_out`
+-510920118	SELECT nis \r\n                      FROM jbssat.frpresensikegiatan\r\n                     WHERE nis IS NOT NULL
+-510919970	SELECT replid \r\n                                 FROM jbssat.frdata \r\n                                WHERE nis = '{0}'\r\n                                ORDER BY replid ASC\r\n                                LIMIT 1
+-510920370	UPDATE jbssat.frpresensikegiatan \r\n                              SET frid_in = {0}\r\n                            WHERE nis = '{1}'
+-510920202	UPDATE jbssat.frpresensikegiatan \r\n                              SET frid_out = {0}\r\n                            WHERE nis = '{1}'\r\n                              AND date_out IS NOT NULL
+-510920681	SELECT nip \r\n                      FROM jbssat.frpresensikegiatan\r\n                     WHERE nip IS NOT NULL
+-510920469	SELECT replid \r\n                             FROM jbssat.frdata \r\n                            WHERE nip = '{0}'\r\n                            ORDER BY replid ASC\r\n                            LIMIT 1
+-510920944	UPDATE jbssat.frpresensikegiatan \r\n                          SET frid_in = {0}  \r\n                        WHERE nip = '{1}'
+-510920810	UPDATE jbssat.frpresensikegiatan \r\n                           SET frid_out = {0}  \r\n                         WHERE nip = '{1}'\r\n                           AND date_out IS NOT NULL
+-510921166	ALTER TABLE `jbssat`.`frpresensikegiatan` \r\n                      ADD CONSTRAINT `FK_frpresensikegiatan_frdata_in` \r\n                  FOREIGN KEY `FK_frpresensikegiatan_frdata_in` (`frid_in`)\r\n               REFERENCES `jbssat`.`frdata` (`replid`)\r\n                       ON DELETE RESTRICT\r\n                       ON UPDATE CASCADE
+-510921455	ALTER TABLE `jbssat`.`frpresensikegiatan` \r\n                      ADD CONSTRAINT `FK_frpresensikegiatan_frdata_out` \r\n                  FOREIGN KEY `FK_frpresensikegiatan_frdata_out` (`frid_out`)\r\n               REFERENCES `jbssat`.`frdata` (`replid`)\r\n                       ON DELETE RESTRICT\r\n                       ON UPDATE CASCADE
+-510921610	SELECT COUNT(*) \r\n                          FROM information_schema.COLUMNS \r\n                         WHERE TABLE_SCHEMA = 'jbssat' \r\n                           AND TABLE_NAME = 'frpresence' \r\n                           AND COLUMN_NAME = 'frid_in'
+-510921544	ALTER TABLE `jbssat`.`frpresence` \r\n                      ADD COLUMN `frid_in` INTEGER UNSIGNED AFTER `time_in`
+-510921934	ALTER TABLE `jbssat`.`frpresence` \r\n                      ADD COLUMN `frid_out` INTEGER UNSIGNED AFTER `time_out`
+-510921846	SELECT nis \r\n                      FROM jbssat.frpresence\r\n                     WHERE nis IS NOT NULL
+-510922218	UPDATE jbssat.frpresence \r\n                              SET frid_in = {0}\r\n                            WHERE nis = '{1}'
+-510922090	UPDATE jbssat.frpresence \r\n                               SET frid_out = {0} \r\n                             WHERE nis = '{1}'\r\n                               AND date_out IS NOT NULL
+-510922481	SELECT nip \r\n                      FROM jbssat.frpresence\r\n                     WHERE nip IS NOT NULL
+-510922341	UPDATE jbssat.frpresence \r\n                          SET frid_in = {0}\r\n                        WHERE nip = '{1}'
+-510922733	UPDATE jbssat.frpresence \r\n                           SET frid_out = {0}  \r\n                         WHERE nip = '{1}'\r\n                           AND date_out IS NOT NULL
+-510922624	ALTER TABLE `jbssat`.`frpresence` \r\n                      ADD CONSTRAINT `FK_frpresence_frdata_in` \r\n                  FOREIGN KEY `FK_frpresence_frdata_in` (`frid_in`)\r\n               REFERENCES `jbssat`.`frdata` (`replid`)\r\n                       ON DELETE RESTRICT\r\n                       ON UPDATE CASCADE
+-510922754	ALTER TABLE `jbssat`.`frpresence` \r\n                      ADD CONSTRAINT `FK_frpresence_frdata_out` \r\n                  FOREIGN KEY `FK_frpresence_frdata_out` (`frid_out`)\r\n               REFERENCES `jbssat`.`frdata` (`replid`)\r\n                       ON DELETE RESTRICT\r\n                       ON UPDATE CASCADE
+-510923045	SELECT COUNT(*) \r\n                          FROM information_schema.COLUMNS \r\n                         WHERE TABLE_SCHEMA = 'jbssat' \r\n                           AND TABLE_NAME = 'frjadwalsekolah' \r\n                           AND COLUMN_NAME = 'kelompok'
+-510923513	ALTER TABLE `jbssat`.`frjadwalsekolah` \r\n                      ADD COLUMN `kelompok` TINYINT(1) UNSIGNED NOT NULL \r\n                          DEFAULT 0 COMMENT '0 Siswa 1 Pegawai' AFTER `replid`
+-510923698	INSERT INTO jbssat.frjadwalsekolah \r\n                           (kelompok, pos, hari, masukaw, masukak, telat, pulangaw, pulangak, pulangstd, \r\n                            mmasukaw, mmasukak, mtelat, mpulangaw, mpulangak, mpulangstd, info1, info2, info3)\r\n                    SELECT 1, pos, hari, masukaw, masukak, telat, pulangaw, pulangak, pulangstd, \r\n                           mmasukaw, mmasukak, mtelat, mpulangaw, mpulangak, mpulangstd, info1, info2, info3\r\n                      FROM jbssat.frjadwalsekolah;
+-510923955	SELECT COUNT(*) \r\n                          FROM information_schema.COLUMNS \r\n                         WHERE TABLE_SCHEMA = 'jbssat' \r\n                           AND TABLE_NAME = 'frpresence' \r\n                           AND COLUMN_NAME = 'idpetugas'
+-510923851	ALTER TABLE `jbssat`.`frpresence` \r\n                      ADD COLUMN `idpetugas` VARCHAR(30) CHARACTER SET utf8 COLLATE utf8_general_ci \r\n                    AFTER `idreportsisfoemp`
+-510924048	ALTER TABLE `jbssat`.`frpresence` \r\n                      ADD CONSTRAINT `FK_frpresence_petugas` \r\n                  FOREIGN KEY `FK_frpresence_petugas` (`idpetugas`)\r\n               REFERENCES `jbssdm`.`pegawai` (`nip`)\r\n                       ON DELETE RESTRICT\r\n                       ON UPDATE CASCADE
+-510924334	SHOW TABLES FROM jbssat LIKE 'frjadwalsekolah'
+-510924315	CREATE TABLE  `jbssat`.`frjadwalsekolah` (\r\n                          `replid` int(10) unsigned NOT NULL AUTO_INCREMENT,\r\n                          `pos` tinyint(1) unsigned NOT NULL DEFAULT '0',\r\n                          `hari` tinyint(1) unsigned NOT NULL COMMENT '1 Minggu 2 Senin 7 Sabtu',\r\n                          `masukaw` varchar(7) NOT NULL,\r\n                          `masukak` varchar(7) NOT NULL,\r\n                          `telat` varchar(7) NOT NULL,\r\n                          `pulangaw` varchar(7) NOT NULL,\r\n                          `pulangak` varchar(7) NOT NULL,\r\n                          `pulangstd` varchar(7) NOT NULL,\r\n                          `mmasukaw` int(10) unsigned NOT NULL,\r\n                          `mmasukak` int(10) unsigned NOT NULL,\r\n                          `mtelat` int(10) unsigned NOT NULL,\r\n                          `mpulangaw` int(10) unsigned NOT NULL,\r\n                          `mpulangak` int(10) unsigned NOT NULL,\r\n                          `mpulangstd` int(10) unsigned NOT NULL,\r\n                          `info1` varchar(45) DEFAULT NULL,\r\n                          `info2` varchar(45) DEFAULT NULL,\r\n                          `info3` varchar(45) DEFAULT NULL,\r\n                          PRIMARY KEY (`replid`)\r\n                        ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+-510925045	SHOW TABLES FROM jbssat LIKE 'frpresensikegiatan'
+-510924861	CREATE TABLE  `jbssat`.`frother` (\r\n                          `nouser` varchar(10) NOT NULL,\r\n                          `nama` varchar(100) NOT NULL,\r\n                          `deskripsi` varchar(255) DEFAULT NULL,\r\n                          `aktif` tinyint(1) unsigned NOT NULL DEFAULT '1',\r\n                          `info1` varchar(45) DEFAULT NULL,\r\n                          `info2` varchar(45) DEFAULT NULL,\r\n                          `info3` varchar(45) DEFAULT NULL,\r\n                          PRIMARY KEY (`nouser`)\r\n                        ) ENGINE=InnoDB DEFAULT CHARSET=latin1
+-510925072	CREATE TABLE  `jbssat`.`frkelompok` (\r\n                          `replid` int(10) unsigned NOT NULL AUTO_INCREMENT,\r\n                          `kelompok` varchar(100) NOT NULL,\r\n                          `departemen` varchar(50) CHARACTER SET utf8 NOT NULL,\r\n                          `deskripsi` varchar(2555) DEFAULT NULL,\r\n                          `aktif` tinyint(1) unsigned NOT NULL DEFAULT '1',\r\n                          `info1` varchar(45) DEFAULT NULL,\r\n                          `info2` varchar(45) DEFAULT NULL,\r\n                          `info3` varchar(45) DEFAULT NULL,\r\n                          PRIMARY KEY (`replid`),\r\n                          KEY `FK_frkelompok_departemen` (`departemen`),\r\n                          CONSTRAINT `FK_frkelompok_departemen` FOREIGN KEY (`departemen`) REFERENCES `jbsakad`.`departemen` (`departemen`) ON UPDATE CASCADE\r\n                        ) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=latin1
+-510925821	CREATE TABLE  `jbssat`.`franggota` (\r\n                          `replid` int(10) unsigned NOT NULL AUTO_INCREMENT,\r\n                          `idkelompok` int(10) unsigned NOT NULL,\r\n                          `jenis` tinyint(1) unsigned NOT NULL COMMENT '0 Siswa, 1 Pegawai, 2 Other',\r\n                          `nis` varchar(30) CHARACTER SET utf8 DEFAULT NULL,\r\n                          `nip` varchar(30) CHARACTER SET utf8 DEFAULT NULL,\r\n                          `nouser` varchar(30) DEFAULT NULL,\r\n                          `aktif` tinyint(1) unsigned NOT NULL DEFAULT '1',\r\n                          `info1` varchar(45) DEFAULT NULL,\r\n                          `info2` varchar(45) DEFAULT NULL,\r\n                          `info3` varchar(45) DEFAULT NULL,\r\n                          PRIMARY KEY (`replid`),\r\n                          KEY `FK_franggota_frkelompok` (`idkelompok`),\r\n                          KEY `FK_franggota_siswa` (`nis`),\r\n                          KEY `FK_franggota_pegawai` (`nip`),\r\n                          CONSTRAINT `FK_franggota_frkelompok` FOREIGN KEY (`idkelompok`) REFERENCES `jbssat`.`frkelompok` (`replid`) ON DELETE CASCADE ON UPDATE CASCADE,\r\n                          CONSTRAINT `FK_franggota_pegawai` FOREIGN KEY (`nip`) REFERENCES `jbssdm`.`pegawai` (`nip`) ON UPDATE CASCADE,\r\n                          CONSTRAINT `FK_franggota_siswa` FOREIGN KEY (`nis`) REFERENCES `jbsakad`.`siswa` (`nis`) ON UPDATE CASCADE\r\n                        ) ENGINE=InnoDB DEFAULT CHARSET=latin1
+-510926134	CREATE TABLE  `jbssat`.`frkegiatan` (\r\n                          `replid` int(10) unsigned NOT NULL AUTO_INCREMENT,\r\n                          `kegiatan` varchar(100) NOT NULL,\r\n                          `departemen` varchar(50) CHARACTER SET utf8 NOT NULL,\r\n                          `deskripsi` varchar(255) DEFAULT NULL,\r\n                          `jeniswaktu` tinyint(1) unsigned NOT NULL DEFAULT '0' COMMENT '0 Berbatas Waktu, 1 Tidak Berbatas Waktu',\r\n                          `tglawal` date DEFAULT NULL,\r\n                          `tglakhir` date DEFAULT NULL,\r\n                          `aktif` tinyint(1) unsigned NOT NULL DEFAULT '1',\r\n                          `jenispeserta` tinyint(1) unsigned NOT NULL,\r\n                          `idkelompok` int(10) unsigned DEFAULT NULL,\r\n                          `iddepartemen` varchar(50) CHARACTER SET utf8 DEFAULT NULL,\r\n                          `idtingkat` int(10) unsigned DEFAULT NULL,\r\n                          `idkelas` int(10) unsigned DEFAULT NULL,\r\n                          `kelompokpegawai` tinyint(1) unsigned NOT NULL DEFAULT '0' COMMENT '0 Akademik, 1 Non Akademik',\r\n                          `info1` varchar(45) DEFAULT NULL,\r\n                          `info2` varchar(45) DEFAULT NULL,\r\n                          `info3` varchar(45) DEFAULT NULL,\r\n                          PRIMARY KEY (`replid`),\r\n                          KEY `FK_frkegiatan_kelompok` (`idkelompok`),\r\n                          KEY `FK_frkegiatan_departemen` (`iddepartemen`),\r\n                          KEY `FK_frkegiatan_tingkat` (`idtingkat`),\r\n                          KEY `FK_frkegiatan_kelas` (`idkelas`),\r\n                          KEY `FK_frkegiatan_departemenowner` (`departemen`),\r\n                          CONSTRAINT `FK_frkegiatan_departemen` FOREIGN KEY (`iddepartemen`) REFERENCES `jbsakad`.`departemen` (`departemen`) ON UPDATE CASCADE,\r\n                          CONSTRAINT `FK_frkegiatan_departemenowner` FOREIGN KEY (`departemen`) REFERENCES `jbsakad`.`departemen` (`departemen`) ON UPDATE CASCADE,\r\n                          CONSTRAINT `FK_frkegiatan_kelas` FOREIGN KEY (`idkelas`) REFERENCES `jbsakad`.`kelas` (`replid`) ON UPDATE CASCADE,\r\n                          CONSTRAINT `FK_frkegiatan_kelompok` FOREIGN KEY (`idkelompok`) REFERENCES `jbssat`.`frkelompok` (`replid`) ON UPDATE CASCADE,\r\n                          CONSTRAINT `FK_frkegiatan_tingkat` FOREIGN KEY (`idtingkat`) REFERENCES `jbsakad`.`tingkat` (`replid`) ON UPDATE CASCADE\r\n                        ) ENGINE=InnoDB DEFAULT CHARSET=latin1
+-510926883	CREATE TABLE  `jbssat`.`frpresensikegiatan` (\r\n                          `replid` int(10) unsigned NOT NULL AUTO_INCREMENT,\r\n                          `idkegiatan` int(10) unsigned NOT NULL,\r\n                          `nis` varchar(30) DEFAULT NULL,\r\n                          `nip` varchar(30) DEFAULT NULL,\r\n                          `nouser` varchar(30) CHARACTER SET latin1 DEFAULT NULL,\r\n                          `date_in` date NOT NULL,\r\n                          `time_in` varchar(10) NOT NULL,\r\n                          `date_out` date DEFAULT NULL,\r\n                          `time_out` varchar(10) DEFAULT NULL,\r\n                          `description` varchar(255) DEFAULT NULL,\r\n                          `active` tinyint(3) unsigned NOT NULL DEFAULT '0',\r\n                          `smssent` tinyint(1) unsigned DEFAULT '0',\r\n                          `smssenthome` tinyint(1) unsigned DEFAULT '0',\r\n                          `source` varchar(1) NOT NULL DEFAULT 'F',\r\n                          `info1` varchar(100) DEFAULT NULL,\r\n                          `info2` varchar(100) DEFAULT NULL,\r\n                          `info3` varchar(100) DEFAULT NULL,\r\n                          PRIMARY KEY (`replid`),\r\n                          KEY `FK_frpresensikegiatan_kegiatan` (`idkegiatan`),\r\n                          KEY `FK_frpresensikegiatan_siswa` (`nis`),\r\n                          KEY `FK_frpresensikegiatan_pegawai` (`nip`),\r\n                          KEY `FK_frpresensikegiatan_other` (`nouser`),\r\n                          CONSTRAINT `FK_frpresensikegiatan_kegiatan` FOREIGN KEY (`idkegiatan`) REFERENCES `jbssat`.`frkegiatan` (`replid`) ON UPDATE CASCADE,\r\n                          CONSTRAINT `FK_frpresensikegiatan_other` FOREIGN KEY (`nouser`) REFERENCES `jbssat`.`frother` (`nouser`) ON UPDATE NO ACTION,\r\n                          CONSTRAINT `FK_frpresensikegiatan_pegawai` FOREIGN KEY (`nip`) REFERENCES `jbssdm`.`pegawai` (`nip`) ON UPDATE CASCADE,\r\n                          CONSTRAINT `FK_frpresensikegiatan_siswa` FOREIGN KEY (`nis`) REFERENCES `jbsakad`.`siswa` (`nis`) ON UPDATE CASCADE\r\n                     ) ENGINE=InnoDB DEFAULT CHARSET=utf8
+-510927846	CREATE TABLE  `jbssat`.`frconfigassmsact` (\r\n                          `idkegiatan` int(10) unsigned NOT NULL,\r\n                          `asin` tinyint(1) unsigned NOT NULL DEFAULT '0',\r\n                          `aslate` tinyint(1) unsigned NOT NULL,\r\n                          `asout` tinyint(1) unsigned NOT NULL DEFAULT '0',\r\n                          `pengirim` varchar(45) NOT NULL,\r\n                          `info1` varchar(100) DEFAULT NULL,\r\n                          `info2` varchar(100) DEFAULT NULL,\r\n                          `info3` varchar(100) DEFAULT NULL,\r\n                          KEY `FK_frconfigassmsact_kegiatan` (`idkegiatan`),\r\n                          CONSTRAINT `FK_frconfigassmsact_kegiatan` FOREIGN KEY (`idkegiatan`) REFERENCES `jbssat`.`frkegiatan` (`replid`) ON DELETE CASCADE ON UPDATE CASCADE\r\n                        ) ENGINE=InnoDB DEFAULT CHARSET=utf8
+-510927980	CREATE TABLE  `jbssat`.`frjadwalkegiatan` (\r\n                          `replid` int(10) unsigned NOT NULL AUTO_INCREMENT,\r\n                          `idkegiatan` int(10) unsigned NOT NULL,\r\n                          `hari` tinyint(1) unsigned NOT NULL COMMENT '1 Minggu 2 Senin 7 Sabtu',\r\n                          `masukaw` varchar(7) NOT NULL,\r\n                          `masukak` varchar(7) NOT NULL,\r\n                          `telat` varchar(7) NOT NULL,\r\n                          `pulangaw` varchar(7) NOT NULL,\r\n                          `pulangak` varchar(7) NOT NULL,\r\n                          `pulangstd` varchar(7) NOT NULL,\r\n                          `mmasukaw` int(10) unsigned NOT NULL,\r\n                          `mmasukak` int(10) unsigned NOT NULL,\r\n                          `mtelat` int(10) unsigned NOT NULL,\r\n                          `mpulangaw` int(10) unsigned NOT NULL,\r\n                          `mpulangak` int(10) unsigned NOT NULL,\r\n                          `mpulangstd` int(10) unsigned NOT NULL,\r\n                          `info1` varchar(45) DEFAULT NULL,\r\n                          `info2` varchar(45) DEFAULT NULL,\r\n                          `info3` varchar(45) DEFAULT NULL,\r\n                          PRIMARY KEY (`replid`),\r\n                          KEY `FK_frjadwalkegiatan_kegiatan` (`idkegiatan`),\r\n                          CONSTRAINT `FK_frjadwalkegiatan_kegiatan` FOREIGN KEY (`idkegiatan`) REFERENCES `jbssat`.`frkegiatan` (`replid`) ON DELETE CASCADE ON UPDATE CASCADE\r\n                        ) ENGINE=InnoDB DEFAULT CHARSET=latin1
+-510928499	CREATE TABLE  `jbssat`.`frformatsmsact` (\r\n                          `smstype` varchar(10) NOT NULL,\r\n                          `smsformat` varchar(500) NOT NULL,\r\n                          `info1` varchar(100) DEFAULT NULL,\r\n                          `info2` varchar(100) DEFAULT NULL,\r\n                          `info3` varchar(100) DEFAULT NULL,\r\n                          PRIMARY KEY (`smstype`)\r\n                        ) ENGINE=InnoDB DEFAULT CHARSET=utf8
+-510928659	INSERT INTO `jbssat`.`frformatsmsact`\r\n                       SET smstype = 'MASUK',\r\n                           smsformat = 'Kami informasikan presensi {NAMA} di kegiatan {KEGIATAN} tanggal {TANGGAL}/{BULAN}/{TAHUN}, masuk jam {JAM_MASUK}'
+-510928955	INSERT INTO `jbssat`.`frformatsmsact`\r\n                       SET smstype = 'TELAT',\r\n                           smsformat = 'Kami informasikan presensi {NAMA} di kegiatan {KEGIATAN} tanggal {TANGGAL}/{BULAN}/{TAHUN}, masuk jam {JAM_MASUK}, terlambat {MENIT_TELAT} menit'
+-510929153	INSERT INTO `jbssat`.`frformatsmsact`\r\n                       SET smstype = 'PULANG',\r\n                           smsformat = 'Kami informasikan presensi {NAMA} di kegiatan {KEGIATAN} tanggal {TANGGAL}/{BULAN}/{TAHUN}, masuk jam {JAM_MASUK} pulang jam {JAM_PULANG}'
+-510929425	INSERT INTO `jbssat`.`frformatsmsact`\r\n                       SET smstype = 'TAKHADIR',\r\n                           smsformat = 'Kami informasikan bahwa siswa {NAMA} di kegiatan {KEGIATAN} tidak hadir di sekolah pada tanggal {TANGGAL}/{BULAN}/{TAHUN}'
+-510929683	CREATE TABLE  `jbssat`.`frpeserta` (\r\n                          `replid` int(10) unsigned NOT NULL AUTO_INCREMENT,\r\n                          `idkegiatan` int(10) unsigned NOT NULL,\r\n                          `nis` varchar(30) CHARACTER SET utf8 DEFAULT NULL,\r\n                          `nip` varchar(30) CHARACTER SET utf8 DEFAULT NULL,\r\n                          `nouser` varchar(10) DEFAULT NULL,\r\n                          `aktif` tinyint(1) unsigned NOT NULL DEFAULT '1',\r\n                          `info1` varchar(45) DEFAULT NULL,\r\n                          `info2` varchar(45) DEFAULT NULL,\r\n                          `info3` varchar(45) DEFAULT NULL,\r\n                          PRIMARY KEY (`replid`),\r\n                          KEY `FK_frpeserta_siswa` (`nis`),\r\n                          KEY `FK_frpeserta_pegawai` (`nip`),\r\n                          KEY `FK_frpeserta_frother` (`nouser`),\r\n                          KEY `FK_frpeserta_frkegiatan` (`idkegiatan`),\r\n                          CONSTRAINT `FK_frpeserta_frkegiatan` FOREIGN KEY (`idkegiatan`) REFERENCES `jbssat`.`frkegiatan` (`replid`) ON DELETE CASCADE ON UPDATE CASCADE,\r\n                          CONSTRAINT `FK_frpeserta_frother` FOREIGN KEY (`nouser`) REFERENCES `jbssat`.`frother` (`nouser`) ON UPDATE CASCADE,\r\n                          CONSTRAINT `FK_frpeserta_pegawai` FOREIGN KEY (`nip`) REFERENCES `jbssdm`.`pegawai` (`nip`) ON UPDATE CASCADE,\r\n                          CONSTRAINT `FK_frpeserta_siswa` FOREIGN KEY (`nis`) REFERENCES `jbsakad`.`siswa` (`nis`) ON UPDATE CASCADE\r\n                        ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+-510930263	SHOW DATABASES LIKE 'jbssat'
+-510930610	CREATE DATABASE `jbssat`
+-510930577	CREATE TABLE  `jbssat`.`frdata` (\r\n                          `replid` int(10) unsigned NOT NULL AUTO_INCREMENT,\r\n                          `ownertype` tinyint(1) unsigned NOT NULL COMMENT '0 = Siswa, 1 = Pegawai',\r\n                          `nis` varchar(30) DEFAULT NULL,\r\n                          `nip` varchar(30) DEFAULT NULL,\r\n                          `departemen` varchar(50) DEFAULT NULL,\r\n                          `template` blob NOT NULL,\r\n                          `image` mediumblob NOT NULL,\r\n                          `fingerpos` varchar(4) NOT NULL,\r\n                          `description` varchar(255) CHARACTER SET latin1 DEFAULT NULL,\r\n                          `lastpresence` datetime DEFAULT NULL,\r\n                          `active` tinyint(3) unsigned NOT NULL DEFAULT '1',\r\n                          `verify` tinyint(3) unsigned NOT NULL DEFAULT '0',\r\n                          `info1` varchar(100) DEFAULT NULL,\r\n                          `info2` varchar(100) DEFAULT NULL,\r\n                          `info3` varchar(100) DEFAULT NULL,\r\n                          PRIMARY KEY (`replid`),\r\n                          KEY `FK_frdata_siswa` (`nis`),\r\n                          KEY `FK_frdata_pegawai` (`nip`),\r\n                          KEY `FK_frdata_departemen` (`departemen`),\r\n                          KEY `IX_frdata` (`ownertype`,`nis`,`nip`,`departemen`),\r\n                          CONSTRAINT `FK_frdata_departemen` FOREIGN KEY (`departemen`) REFERENCES `jbsakad`.`departemen` (`departemen`) ON UPDATE CASCADE,\r\n                          CONSTRAINT `FK_frdata_pegawai` FOREIGN KEY (`nip`) REFERENCES `jbssdm`.`pegawai` (`nip`) ON UPDATE CASCADE,\r\n                          CONSTRAINT `FK_frdata_siswa` FOREIGN KEY (`nis`) REFERENCES `jbsakad`.`siswa` (`nis`) ON UPDATE CASCADE\r\n                        ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+-510931013	CREATE TABLE  `jbssat`.`frsisforeport` (\r\n                          `replid` int(10) unsigned NOT NULL AUTO_INCREMENT,\r\n                          `year` int(10) unsigned NOT NULL,\r\n                          `month` tinyint(3) unsigned NOT NULL,\r\n                          `startdate` tinyint(3) unsigned NOT NULL,\r\n                          `enddate` tinyint(3) unsigned NOT NULL,\r\n                          `h` int(10) unsigned NOT NULL,\r\n                          `i` int(10) unsigned NOT NULL,\r\n                          `s` int(10) unsigned NOT NULL,\r\n                          `c` int(10) unsigned NOT NULL,\r\n                          `a` int(10) unsigned NOT NULL,\r\n                          `departemen` varchar(45) NOT NULL,\r\n                          `idtingkat` int(10) unsigned NOT NULL,\r\n                          `info1` varchar(100) DEFAULT NULL,\r\n                          `info2` varchar(100) DEFAULT NULL,\r\n                          `info3` varchar(100) DEFAULT NULL,\r\n                          PRIMARY KEY (`replid`),\r\n                          KEY `FK_frsisforeport_departemen` (`departemen`),\r\n                          KEY `FK_frsisforeport_tingkat` (`idtingkat`),\r\n                          CONSTRAINT `FK_frsisforeport_departemen` FOREIGN KEY (`departemen`) REFERENCES `jbsakad`.`departemen` (`departemen`) ON UPDATE CASCADE,\r\n                          CONSTRAINT `FK_frsisforeport_tingkat` FOREIGN KEY (`idtingkat`) REFERENCES `jbsakad`.`tingkat` (`replid`) ON UPDATE CASCADE\r\n                        ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+-510931553	CREATE TABLE  `jbssat`.`frsisforeportemp` (\r\n                          `replid` int(10) unsigned NOT NULL AUTO_INCREMENT,\r\n                          `year` int(10) unsigned NOT NULL,\r\n                          `month` tinyint(3) unsigned NOT NULL,\r\n                          `startdate` tinyint(3) unsigned NOT NULL,\r\n                          `enddate` tinyint(3) unsigned NOT NULL,\r\n                          `h` int(10) unsigned NOT NULL,\r\n                          `i` int(10) unsigned NOT NULL,\r\n                          `s` int(10) unsigned NOT NULL,\r\n                          `c` int(10) unsigned NOT NULL,\r\n                          `a` int(10) unsigned NOT NULL,\r\n                          `info1` varchar(100) DEFAULT NULL,\r\n                          `info2` varchar(100) DEFAULT NULL,\r\n                          `info3` varchar(100) DEFAULT NULL,\r\n                          PRIMARY KEY (`replid`)\r\n                        ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+-510932134	CREATE TABLE  `jbssat`.`frpresence` (\r\n                          `replid` int(10) unsigned NOT NULL AUTO_INCREMENT,\r\n                          `nis` varchar(30) DEFAULT NULL,\r\n                          `nip` varchar(30) DEFAULT NULL,\r\n                          `departemen` varchar(50) DEFAULT NULL,\r\n                          `idtingkat` int(10) unsigned DEFAULT NULL,\r\n                          `idkelas` int(10) unsigned DEFAULT NULL,\r\n                          `date_in` date NOT NULL,\r\n                          `time_in` varchar(10) NOT NULL,\r\n                          `date_out` date DEFAULT NULL,\r\n                          `time_out` varchar(10) DEFAULT NULL,\r\n                          `description` varchar(255) DEFAULT NULL,\r\n                          `active` tinyint(3) unsigned NOT NULL DEFAULT '0',\r\n                          `smssent` tinyint(3) unsigned NOT NULL DEFAULT '0',\r\n                          `smssenthome` tinyint(3) unsigned NOT NULL DEFAULT '0',\r\n                          `source` varchar(2) NOT NULL DEFAULT 'F' COMMENT 'F -> Fingerprint, M -< Manual',\r\n                          `reportsisfo` tinyint(3) unsigned NOT NULL DEFAULT '0',\r\n                          `idreportsisfo` int(10) unsigned DEFAULT NULL,\r\n                          `idreportsisfoemp` int(10) unsigned DEFAULT NULL,\r\n                          `info1` varchar(100) DEFAULT NULL,\r\n                          `info2` varchar(100) DEFAULT NULL,\r\n                          `info3` varchar(100) DEFAULT NULL,\r\n                          PRIMARY KEY (`replid`),\r\n                          KEY `FK_frpresence_frsisforeport` (`idreportsisfo`),\r\n                          KEY `FK_frpresence_pegawai` (`nip`),\r\n                          KEY `IX_frpresence_date` (`nis`,`nip`,`date_in`,`smssent`,`smssenthome`,`reportsisfo`) USING BTREE,\r\n                          KEY `FK_frpresence_departemen` (`departemen`),\r\n                          KEY `FK_frpresence_frsisforeportemp` (`idreportsisfoemp`),\r\n                          KEY `FK_frpresence_tingkat` (`idtingkat`),\r\n                          KEY `FK_frpresence_kelas` (`idkelas`),\r\n                          CONSTRAINT `FK_frpresence_departemen` FOREIGN KEY (`departemen`) REFERENCES `jbsakad`.`departemen` (`departemen`) ON UPDATE CASCADE,\r\n                          CONSTRAINT `FK_frpresence_frsisforeport` FOREIGN KEY (`idreportsisfo`) REFERENCES `jbssat`.`frsisforeport` (`replid`) ON UPDATE CASCADE,\r\n                          CONSTRAINT `FK_frpresence_frsisforeportemp` FOREIGN KEY (`idreportsisfoemp`) REFERENCES `jbssat`.`frsisforeportemp` (`replid`) ON UPDATE CASCADE,\r\n                          CONSTRAINT `FK_frpresence_kelas` FOREIGN KEY (`idkelas`) REFERENCES `jbsakad`.`kelas` (`replid`) ON UPDATE CASCADE,\r\n                          CONSTRAINT `FK_frpresence_pegawai` FOREIGN KEY (`nip`) REFERENCES `jbssdm`.`pegawai` (`nip`) ON UPDATE CASCADE,\r\n                          CONSTRAINT `FK_frpresence_siswa` FOREIGN KEY (`nis`) REFERENCES `jbsakad`.`siswa` (`nis`) ON UPDATE CASCADE,\r\n                          CONSTRAINT `FK_frpresence_tingkat` FOREIGN KEY (`idtingkat`) REFERENCES `jbsakad`.`tingkat` (`replid`) ON UPDATE CASCADE\r\n                        ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+-510932836	CREATE TABLE  `jbssat`.`frabsence` (\r\n                          `replid` int(10) unsigned NOT NULL AUTO_INCREMENT,\r\n                          `nis` varchar(30) DEFAULT NULL,\r\n                          `nip` varchar(30) DEFAULT NULL,\r\n                          `departemen` varchar(50) DEFAULT NULL,\r\n                          `idtingkat` int(10) unsigned DEFAULT NULL,\r\n                          `idkelas` int(10) unsigned DEFAULT NULL,\r\n                          `datenop` date NOT NULL,\r\n                          `status` varchar(7) NOT NULL,\r\n                          `description` varchar(500) DEFAULT NULL,\r\n                          `idreportsisfo` int(10) unsigned DEFAULT NULL,\r\n                          `idreportsisfoemp` int(10) unsigned DEFAULT NULL,\r\n                          `info1` varchar(100) DEFAULT NULL,\r\n                          `info2` varchar(100) DEFAULT NULL,\r\n                          `info3` varchar(100) DEFAULT NULL,\r\n                          PRIMARY KEY (`replid`),\r\n                          KEY `FK_frabsence_siswa` (`nis`),\r\n                          KEY `FK_frabsence_pegawai` (`nip`),\r\n                          KEY `FK_frabsence_frsisforeport` (`idreportsisfo`),\r\n                          KEY `FK_frabsence_departemen` (`departemen`),\r\n                          KEY `FK_frabsence_frsisforeportemp` (`idreportsisfoemp`),\r\n                          KEY `FK_frabsence_tingkat` (`idtingkat`),\r\n                          KEY `FK_frabsence_kelas` (`idkelas`),\r\n                          KEY `IX_freabsence` (`datenop`,`nip`,`nis`) USING BTREE,\r\n                          CONSTRAINT `FK_frabsence_departemen` FOREIGN KEY (`departemen`) REFERENCES `jbsakad`.`departemen` (`departemen`) ON UPDATE CASCADE,\r\n                          CONSTRAINT `FK_frabsence_frsisforeport` FOREIGN KEY (`idreportsisfo`) REFERENCES `jbssat`.`frsisforeport` (`replid`) ON UPDATE CASCADE,\r\n                          CONSTRAINT `FK_frabsence_frsisforeportemp` FOREIGN KEY (`idreportsisfoemp`) REFERENCES `jbssat`.`frsisforeportemp` (`replid`) ON UPDATE CASCADE,\r\n                          CONSTRAINT `FK_frabsence_kelas` FOREIGN KEY (`idkelas`) REFERENCES `jbsakad`.`kelas` (`replid`) ON UPDATE CASCADE,\r\n                          CONSTRAINT `FK_frabsence_pegawai` FOREIGN KEY (`nip`) REFERENCES `jbssdm`.`pegawai` (`nip`) ON UPDATE CASCADE,\r\n                          CONSTRAINT `FK_frabsence_siswa` FOREIGN KEY (`nis`) REFERENCES `jbsakad`.`siswa` (`nis`) ON UPDATE CASCADE,\r\n                          CONSTRAINT `FK_frabsence_tingkat` FOREIGN KEY (`idtingkat`) REFERENCES `jbsakad`.`tingkat` (`replid`) ON UPDATE CASCADE\r\n                        ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+-510933612	CREATE TABLE  `jbssat`.`fruser` (\r\n                          `replid` int(10) unsigned NOT NULL AUTO_INCREMENT,\r\n                          `userid` varchar(45) NOT NULL,\r\n                          `password` varchar(255) CHARACTER SET latin1 NOT NULL,\r\n                          `userlevel` tinyint(1) unsigned NOT NULL COMMENT '1 -> Manager, 2 -> Client',\r\n                          `active` tinyint(1) unsigned NOT NULL DEFAULT '1',\r\n                          `lastlogin` datetime DEFAULT NULL,\r\n                          `info1` varchar(100) DEFAULT NULL,\r\n                          `info2` varchar(100) DEFAULT NULL,\r\n                          `info3` varchar(100) DEFAULT NULL,\r\n                          PRIMARY KEY (`replid`),\r\n                          KEY `FK_fruser_pegawai` (`userid`),\r\n                          CONSTRAINT `FK_fruser_pegawai` FOREIGN KEY (`userid`) REFERENCES `jbssdm`.`pegawai` (`nip`) ON UPDATE CASCADE\r\n                        ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+-510934048	CREATE TABLE  `jbssat`.`fruseraccess` (\r\n                          `replid` int(10) unsigned NOT NULL AUTO_INCREMENT,\r\n                          `iduser` int(10) unsigned NOT NULL,\r\n                          `departemen` varchar(45) NOT NULL,\r\n                          `info1` varchar(100) DEFAULT NULL,\r\n                          `info2` varchar(100) DEFAULT NULL,\r\n                          `info3` varchar(100) DEFAULT NULL,\r\n                          PRIMARY KEY (`replid`),\r\n                          KEY `FK_fruseraccess_fruser` (`iduser`),\r\n                          KEY `FK_fruseraccess_departemen` (`departemen`),\r\n                          CONSTRAINT `FK_fruseraccess_departemen` FOREIGN KEY (`departemen`) REFERENCES `jbsakad`.`departemen` (`departemen`) ON UPDATE CASCADE,\r\n                          CONSTRAINT `FK_fruseraccess_fruser` FOREIGN KEY (`iduser`) REFERENCES `jbssat`.`fruser` (`replid`) ON UPDATE CASCADE\r\n                        ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+-510934757	CREATE TABLE  `jbssat`.`frformatsms` (\r\n                          `smstype` varchar(10) NOT NULL,\r\n                          `smsformat` varchar(500) NOT NULL,\r\n                          `info1` varchar(100) DEFAULT NULL,\r\n                          `info2` varchar(100) DEFAULT NULL,\r\n                          `info3` varchar(100) DEFAULT NULL,\r\n                          PRIMARY KEY (`smstype`)\r\n                        ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+-510934922	INSERT INTO `jbssat`.`frformatsms`\r\n                           SET smstype = 'MASUK',\r\n                               smsformat = 'Kami informasikan presensi {NAMA} tanggal {TANGGAL}/{BULAN}/{TAHUN}, masuk jam {JAM_MASUK}'
+-510934862	INSERT INTO `jbssat`.`frformatsms`\r\n                           SET smstype = 'TELAT',\r\n                               smsformat = 'Kami informasikan presensi {NAMA} tanggal {TANGGAL}/{BULAN}/{TAHUN}, masuk jam {JAM_MASUK}, terlambat {MENIT_TELAT} menit'
+-511033453	INSERT INTO `jbssat`.`frformatsms`\r\n                           SET smstype = 'PULANG',\r\n                               smsformat = 'Kami informasikan presensi {NAMA} tanggal {TANGGAL}/{BULAN}/{TAHUN}, masuk jam {JAM_MASUK} pulang jam {JAM_PULANG}'
+-511033660	INSERT INTO `jbssat`.`frformatsms`\r\n                           SET smstype = 'TAKHADIR',\r\n                               smsformat = 'Kami informasikan bahwa siswa {NAMA} tidak hadir di sekolah pada tanggal {TANGGAL}/{BULAN}/{TAHUN}'
+-511034099	CREATE TABLE  `jbssat`.`frconfigassms` (\r\n                          `departemen` varchar(45) NOT NULL,\r\n                          `asin` tinyint(1) unsigned NOT NULL DEFAULT '0',\r\n                          `asout` tinyint(1) unsigned NOT NULL DEFAULT '0',\r\n                          `pengirim` varchar(45) NOT NULL,\r\n                          `info1` varchar(100) DEFAULT NULL,\r\n                          `info2` varchar(100) DEFAULT NULL,\r\n                          `info3` varchar(100) DEFAULT NULL,\r\n                          KEY `FK_frconfigassms_departemen` (`departemen`),\r\n                          CONSTRAINT `FK_frconfigassms_departemen` FOREIGN KEY (`departemen`) REFERENCES `jbsakad`.`departemen` (`departemen`) ON DELETE CASCADE ON UPDATE CASCADE\r\n                        ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+-511034212	ALTER TABLE `jbssms`.`smsgeninfo` \r\n                          ADD INDEX `IX_smsgeninfo`(`tipe`, `info`(50), `pengirim`);
+-511034595	CREATE TABLE  `jbssdm`.`presensi` (\r\n                          `replid` int(10) unsigned NOT NULL AUTO_INCREMENT,\r\n                          `nip` varchar(30) NOT NULL,\r\n                          `tanggal` date NOT NULL,\r\n                          `jammasuk` varchar(10) CHARACTER SET latin1 DEFAULT NULL,\r\n                          `jampulang` varchar(10) CHARACTER SET latin1 DEFAULT NULL,\r\n                          `jamwaktukerja` int(10) unsigned DEFAULT '0',\r\n                          `menitwaktukerja` int(10) unsigned DEFAULT '0',\r\n                          `status` tinyint(1) unsigned NOT NULL COMMENT '1 -> Hadir, 2 -> Izin, 3 -> Cuti, 4 ->Sakit, 5 ->Alpa',\r\n                          `keterangan` varchar(255) CHARACTER SET latin1 DEFAULT NULL,\r\n                          `source` varchar(45) DEFAULT 'MANUAL',\r\n                          `info1` varchar(100) DEFAULT NULL,\r\n                          `info2` varchar(100) DEFAULT NULL,\r\n                          `info3` varchar(100) DEFAULT NULL,\r\n                          PRIMARY KEY (`replid`),\r\n                          KEY `IX_presensi` (`nip`,`tanggal`,`status`),\r\n                          CONSTRAINT `FK_presensi_pegawai` FOREIGN KEY (`nip`) REFERENCES `jbssdm`.`pegawai` (`nip`) ON UPDATE CASCADE\r\n                        ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+-511034905	SHOW DATABASES LIKE 'jbstgram'
+-511034998	CREATE DATABASE `jbstgram`
+-511034967	USE `jbstgram`
+-511035300	CREATE TABLE  `jbstgram`.`send` (\r\n                          `replid` int(10) unsigned NOT NULL AUTO_INCREMENT,\r\n                          `msgdate` datetime NOT NULL,\r\n                          `destchatid` bigint(20) unsigned NOT NULL,\r\n                          `destname` varchar(255) NOT NULL,\r\n                          `srcchatid` bigint(20) unsigned NOT NULL,\r\n                          `msgtext` mediumtext,\r\n                          `msgdata` mediumblob,\r\n                          `msgfilename` varchar(255) DEFAULT NULL,\r\n                          `msgtype` tinyint(3) unsigned NOT NULL COMMENT '1 Text, 2 Object',\r\n                          `msgsource` varchar(50) NOT NULL,\r\n                          `isfetch` tinyint(3) unsigned NOT NULL DEFAULT '0',\r\n                          PRIMARY KEY (`replid`),\r\n                          KEY `IX_send` (`isfetch`,`msgdate`) USING BTREE\r\n                        ) ENGINE=InnoDB DEFAULT CHARSET=latin1
+-511035499	CREATE TABLE  `jbstgram`.`sendhistory` (\r\n                          `replid` int(10) unsigned NOT NULL AUTO_INCREMENT,\r\n                          `idsend` int(10) unsigned NOT NULL,\r\n                          `msgdate` datetime NOT NULL,\r\n                          `destchatid` bigint(20) unsigned NOT NULL,\r\n                          `destname` varchar(255) NOT NULL,\r\n                          `srcchatid` bigint(20) unsigned NOT NULL,\r\n                          `msgtext` mediumtext,\r\n                          `msgdata` mediumblob,\r\n                          `msgfilename` varchar(255) DEFAULT NULL,\r\n                          `msgtype` tinyint(3) unsigned NOT NULL COMMENT '1 Text, 2 Object',\r\n                          `msgsource` varchar(50) NOT NULL,\r\n                          PRIMARY KEY (`replid`),\r\n                          KEY `IX_sendhistory` (`msgdate`,`srcchatid`,`msgtype`,`msgsource`,`idsend`) USING BTREE\r\n                        ) ENGINE=InnoDB AUTO_INCREMENT=86 DEFAULT CHARSET=latin1
+-511035946	CREATE TABLE  `jbstgram`.`berita` (\r\n                          `replid` int(10) unsigned NOT NULL AUTO_INCREMENT,\r\n                          `tanggal` datetime NOT NULL,\r\n                          `berita` varchar(450) NOT NULL,\r\n                          `operator` varchar(30) CHARACTER SET utf8 NOT NULL,\r\n                          PRIMARY KEY (`replid`),\r\n                          KEY `FK_berita_pegawai` (`operator`),\r\n                          CONSTRAINT `FK_berita_pegawai` FOREIGN KEY (`operator`) REFERENCES `jbssdm`.`pegawai` (`nip`) ON UPDATE CASCADE\r\n                        ) ENGINE=InnoDB DEFAULT CHARSET=latin1
+-511036586	CREATE TABLE  `jbstgram`.`callback` (\r\n                          `replid` int(10) unsigned NOT NULL AUTO_INCREMENT,\r\n                          `action` varchar(20) NOT NULL,\r\n                          `userid` varchar(30) NOT NULL,\r\n                          `chatid` bigint(20) unsigned NOT NULL,\r\n                          `token` varchar(10) NOT NULL,\r\n                          PRIMARY KEY (`replid`),\r\n                          KEY `IX_callback` (`action`,`userid`,`chatid`,`token`) USING BTREE\r\n                        ) ENGINE=InnoDB DEFAULT CHARSET=latin1
+-511036819	CREATE TABLE  `jbstgram`.`kelompokalumni` (\r\n                          `replid` int(10) unsigned NOT NULL AUTO_INCREMENT,\r\n                          `kelompok` varchar(255) NOT NULL,\r\n                          `departemen` varchar(50) CHARACTER SET utf8 NOT NULL,\r\n                          PRIMARY KEY (`replid`) USING BTREE,\r\n                          KEY `FK_kelompokalumni_departemen` (`departemen`),\r\n                          CONSTRAINT `FK_kelompokalumni_departemen` FOREIGN KEY (`departemen`) REFERENCES `jbsakad`.`departemen` (`departemen`) ON UPDATE CASCADE\r\n                        ) ENGINE=InnoDB DEFAULT CHARSET=latin1
+-511036948	CREATE TABLE  `jbstgram`.`member` (\r\n                          `replid` int(10) unsigned NOT NULL AUTO_INCREMENT,\r\n                          `jenis` tinyint(3) unsigned NOT NULL COMMENT '1 Pegawai, 2 Siswa, 3 Calon Siswa, 4 Alumni',\r\n                          `nis` varchar(20) CHARACTER SET utf8 DEFAULT NULL,\r\n                          `nip` varchar(30) CHARACTER SET utf8 DEFAULT NULL,\r\n                          `nic` varchar(20) CHARACTER SET utf8 DEFAULT NULL,\r\n                          `kelompok` tinyint(3) unsigned NOT NULL DEFAULT '1' COMMENT '1 Sendiri, 2 Orangtua',\r\n                          `tgramname` varchar(255) NOT NULL,\r\n                          `chatid` bigint(20) unsigned NOT NULL,\r\n                          `aktif` tinyint(1) unsigned NOT NULL DEFAULT '1',\r\n                          `regdate` datetime NOT NULL,\r\n                          `lastlogin` datetime DEFAULT NULL,\r\n                          `keterangan` varchar(255) DEFAULT NULL,\r\n                          `idalumni` int(10) unsigned DEFAULT NULL,\r\n                          PRIMARY KEY (`replid`),\r\n                          KEY `FK_member_siswa` (`nis`),\r\n                          KEY `FK_member_pegawai` (`nip`),\r\n                          KEY `FK_member_calonsiswa` (`nic`),\r\n                          KEY `IX_member` (`jenis`,`kelompok`,`chatid`),\r\n                          KEY `FK_member_kelompokalumni` (`idalumni`),\r\n                          CONSTRAINT `FK_member_calonsiswa` FOREIGN KEY (`nic`) REFERENCES `jbsakad`.`calonsiswa` (`nopendaftaran`) ON UPDATE CASCADE,\r\n                          CONSTRAINT `FK_member_kelompokalumni` FOREIGN KEY (`idalumni`) REFERENCES `kelompokalumni` (`replid`) ON UPDATE CASCADE,\r\n                          CONSTRAINT `FK_member_pegawai` FOREIGN KEY (`nip`) REFERENCES `jbssdm`.`pegawai` (`nip`) ON UPDATE CASCADE,\r\n                          CONSTRAINT `FK_member_siswa` FOREIGN KEY (`nis`) REFERENCES `jbsakad`.`siswa` (`nis`) ON UPDATE CASCADE\r\n                        ) ENGINE=InnoDB DEFAULT CHARSET=latin1
+-511037752	CREATE TABLE  `jbstgram`.`kelompoktujuan` (\r\n                          `replid` int(10) unsigned NOT NULL AUTO_INCREMENT,\r\n                          `kelompok` varchar(100) NOT NULL,\r\n                          `departemen` varchar(50) CHARACTER SET utf8 NOT NULL,\r\n                          `deskripsi` varchar(2555) DEFAULT NULL,\r\n                          `aktif` tinyint(1) unsigned NOT NULL DEFAULT '1',\r\n                          `pemilik` varchar(30) CHARACTER SET utf8 NOT NULL,\r\n                          PRIMARY KEY (`replid`) USING BTREE,\r\n                          KEY `FK_kelompoktujuan_departemen` (`departemen`),\r\n                          KEY `FK_kelompoktujuan_pegawai` (`pemilik`),\r\n                          CONSTRAINT `FK_kelompoktujuan_departemen` FOREIGN KEY (`departemen`) REFERENCES `jbsakad`.`departemen` (`departemen`) ON UPDATE CASCADE,\r\n                          CONSTRAINT `FK_kelompoktujuan_pegawai` FOREIGN KEY (`pemilik`) REFERENCES `jbssdm`.`pegawai` (`nip`) ON UPDATE CASCADE\r\n                        ) ENGINE=InnoDB DEFAULT CHARSET=latin1
+-511038244	CREATE TABLE  `jbstgram`.`anggota` (\r\n                          `replid` int(10) unsigned NOT NULL AUTO_INCREMENT,\r\n                          `idkelompok` int(10) unsigned NOT NULL,\r\n                          `jenis` tinyint(1) unsigned NOT NULL COMMENT '0 Siswa, 1 Pegawai, 2 Other, 3 Calon Siswa',\r\n                          `nis` varchar(20) CHARACTER SET utf8 DEFAULT NULL,\r\n                          `nip` varchar(30) CHARACTER SET utf8 DEFAULT NULL,\r\n                          `nic` varchar(20) CHARACTER SET utf8 DEFAULT NULL,\r\n                          `nouser` varchar(30) DEFAULT NULL,\r\n                          `aktif` tinyint(1) unsigned NOT NULL DEFAULT '1',\r\n                          PRIMARY KEY (`replid`),\r\n                          KEY `FK_anggota_kelompokpeserta` (`idkelompok`),\r\n                          KEY `FK_anggota_siswa` (`nis`),\r\n                          KEY `FK_anggota_pegawai` (`nip`),\r\n                          KEY `FK_anggota_calonsiswa` (`nic`),\r\n                          CONSTRAINT `FK_anggota_calonsiswa` FOREIGN KEY (`nic`) REFERENCES `jbsakad`.`calonsiswa` (`nopendaftaran`) ON UPDATE CASCADE,\r\n                          CONSTRAINT `FK_anggota_kelompokpeserta` FOREIGN KEY (`idkelompok`) REFERENCES `kelompoktujuan` (`replid`) ON DELETE CASCADE ON UPDATE CASCADE,\r\n                          CONSTRAINT `FK_anggota_pegawai` FOREIGN KEY (`nip`) REFERENCES `jbssdm`.`pegawai` (`nip`) ON UPDATE CASCADE,\r\n                          CONSTRAINT `FK_anggota_siswa` FOREIGN KEY (`nis`) REFERENCES `jbsakad`.`siswa` (`nis`) ON UPDATE CASCADE\r\n                        ) ENGINE=InnoDB DEFAULT CHARSET=latin1 ROW_FORMAT=DYNAMIC
+-511038812	CREATE TABLE  `jbstgram`.`bantuan` (\r\n                        `replid` int(10) unsigned NOT NULL AUTO_INCREMENT,\r\n                        `bantuan` mediumtext NOT NULL,\r\n                        PRIMARY KEY (`replid`)\r\n                        ) ENGINE=InnoDB DEFAULT CHARSET=latin1
+-511039098	INSERT INTO jbstgram.bantuan \r\n                           SET bantuan = 'Terima kasih telah menggunakan {TGRAM_NAME}\r\n\r\nUntuk pertanyaan dan konsultasi mengenai ... silahkan hubungi\r\n1. \r\n2. \r\n3. \r\n\r\nUntuk informasi lebih lanjut, silahkan kunjungi situs kami di http://www.sekolah.id'
+-511039659	SHOW DATABASES LIKE 'jbsjs'
+-511039621	CREATE DATABASE `jbsjs`
+-511039723	USE `jbsjs`
+-511039733	CREATE TABLE  `jbsjs`.`kelompoktujuan` (\r\n                          `replid` int(10) unsigned NOT NULL AUTO_INCREMENT,\r\n                          `kelompok` varchar(100) NOT NULL,\r\n                          `departemen` varchar(50) CHARACTER SET utf8 NOT NULL,\r\n                          `deskripsi` varchar(2555) DEFAULT NULL,\r\n                          `aktif` tinyint(1) unsigned NOT NULL DEFAULT '1',\r\n                          `pemilik` varchar(30) CHARACTER SET utf8 DEFAULT NULL,\r\n                          PRIMARY KEY (`replid`) USING BTREE,\r\n                          KEY `FK_kelompoktujuan_departemen` (`departemen`),\r\n                          KEY `FK_kelompoktujuan_pegawai` (`pemilik`),\r\n                          CONSTRAINT `FK_kelompoktujuan_departemen` FOREIGN KEY (`departemen`) REFERENCES `jbsakad`.`departemen` (`departemen`) ON UPDATE CASCADE,\r\n                          CONSTRAINT `FK_kelompoktujuan_pegawai` FOREIGN KEY (`pemilik`) REFERENCES `jbssdm`.`pegawai` (`nip`) ON UPDATE CASCADE\r\n                        ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+-511040254	CREATE TABLE  `jbsjs`.`anggota` (\r\n                          `replid` int(10) unsigned NOT NULL AUTO_INCREMENT,\r\n                          `idkelompok` int(10) unsigned NOT NULL,\r\n                          `jenis` tinyint(1) unsigned NOT NULL COMMENT '0 Siswa, 1 Pegawai, 2 Other, 3 Calon Siswa',\r\n                          `nis` varchar(20) CHARACTER SET utf8 DEFAULT NULL,\r\n                          `nip` varchar(30) CHARACTER SET utf8 DEFAULT NULL,\r\n                          `nic` varchar(20) CHARACTER SET utf8 DEFAULT NULL,\r\n                          `nouser` varchar(30) DEFAULT NULL,\r\n                          `aktif` tinyint(1) unsigned NOT NULL DEFAULT '1',\r\n                          PRIMARY KEY (`replid`),\r\n                          KEY `FK_anggota_kelompokpeserta` (`idkelompok`),\r\n                          KEY `FK_anggota_siswa` (`nis`),\r\n                          KEY `FK_anggota_pegawai` (`nip`),\r\n                          KEY `FK_anggota_calonsiswa` (`nic`),\r\n                          CONSTRAINT `FK_anggota_calonsiswa` FOREIGN KEY (`nic`) REFERENCES `jbsakad`.`calonsiswa` (`nopendaftaran`) ON UPDATE CASCADE,\r\n                          CONSTRAINT `FK_anggota_kelompokpeserta` FOREIGN KEY (`idkelompok`) REFERENCES `kelompoktujuan` (`replid`) ON DELETE CASCADE ON UPDATE CASCADE,\r\n                          CONSTRAINT `FK_anggota_pegawai` FOREIGN KEY (`nip`) REFERENCES `jbssdm`.`pegawai` (`nip`) ON UPDATE CASCADE,\r\n                          CONSTRAINT `FK_anggota_siswa` FOREIGN KEY (`nis`) REFERENCES `jbsakad`.`siswa` (`nis`) ON UPDATE CASCADE\r\n                        ) ENGINE=InnoDB DEFAULT CHARSET=latin1 ROW_FORMAT=DYNAMIC;
+-511040539	CREATE TABLE  `jbsjs`.`bantuan` (\r\n                          `id` int(10) unsigned NOT NULL AUTO_INCREMENT,\r\n                          `bantuan` varchar(2000) NOT NULL,\r\n                          PRIMARY KEY (`id`)\r\n                        ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+-511040830	CREATE TABLE  `jbsjs`.`berita` (\r\n                          `id` int(10) unsigned NOT NULL AUTO_INCREMENT,\r\n                          `idberita` varchar(30) NOT NULL,\r\n                          `target` varchar(5) NOT NULL,\r\n                          `departemen` varchar(50) CHARACTER SET utf8 DEFAULT NULL,\r\n                          `idtingkat` int(10) unsigned DEFAULT NULL,\r\n                          `judul` varchar(255) NOT NULL,\r\n                          `deskripsi` varchar(2000) NOT NULL,\r\n                          `berita` mediumtext NOT NULL,\r\n                          `tgltayang` datetime NOT NULL,\r\n                          `penulis` varchar(30) CHARACTER SET utf8 DEFAULT NULL,\r\n                          `tglbuat` datetime NOT NULL,\r\n                          PRIMARY KEY (`id`),\r\n                          KEY `UX_berita` (`idberita`),\r\n                          KEY `FK_berita_departemen` (`departemen`),\r\n                          KEY `FK_berita_tingkat` (`idtingkat`),\r\n                          KEY `FK_berita_pegawai` (`penulis`),\r\n                          CONSTRAINT `FK_berita_departemen` FOREIGN KEY (`departemen`) REFERENCES `jbsakad`.`departemen` (`departemen`) ON UPDATE CASCADE,\r\n                          CONSTRAINT `FK_berita_pegawai` FOREIGN KEY (`penulis`) REFERENCES `jbssdm`.`pegawai` (`nip`) ON UPDATE CASCADE,\r\n                          CONSTRAINT `FK_berita_tingkat` FOREIGN KEY (`idtingkat`) REFERENCES `jbsakad`.`tingkat` (`replid`) ON UPDATE CASCADE\r\n                        ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+-511041404	CREATE TABLE  `jbsjs`.`beritaanggota` (\r\n                          `id` int(10) unsigned NOT NULL AUTO_INCREMENT,\r\n                          `idberita` varchar(30) NOT NULL,\r\n                          `jenis` tinyint(3) unsigned NOT NULL,\r\n                          `nis` varchar(20) CHARACTER SET utf8 DEFAULT NULL,\r\n                          `nip` varchar(30) CHARACTER SET utf8 DEFAULT NULL,\r\n                          `nic` varchar(20) CHARACTER SET utf8 DEFAULT NULL,\r\n                          PRIMARY KEY (`id`),\r\n                          KEY `FK_beritaanggota_berita` (`idberita`),\r\n                          KEY `FK_beritaanggota_siswa` (`nis`),\r\n                          KEY `FK_beritaanggota_pegawai` (`nip`),\r\n                          KEY `FK_beritaanggota_calonsiswa` (`nic`),\r\n                          CONSTRAINT `FK_beritaanggota_berita` FOREIGN KEY (`idberita`) REFERENCES `berita` (`idberita`) ON UPDATE CASCADE,\r\n                          CONSTRAINT `FK_beritaanggota_calonsiswa` FOREIGN KEY (`nic`) REFERENCES `jbsakad`.`calonsiswa` (`nopendaftaran`) ON UPDATE CASCADE,\r\n                          CONSTRAINT `FK_beritaanggota_pegawai` FOREIGN KEY (`nip`) REFERENCES `jbssdm`.`pegawai` (`nip`) ON UPDATE CASCADE,\r\n                          CONSTRAINT `FK_beritaanggota_siswa` FOREIGN KEY (`nis`) REFERENCES `jbsakad`.`siswa` (`nis`) ON UPDATE CASCADE\r\n                        ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+-511041857	CREATE TABLE  `jbsjs`.`beritakelas` (\r\n                          `id` int(10) unsigned NOT NULL AUTO_INCREMENT,\r\n                          `idberita` varchar(30) NOT NULL,\r\n                          `idkelas` int(10) unsigned NOT NULL,\r\n                          PRIMARY KEY (`id`),\r\n                          KEY `FK_beritakelas_berita` (`idberita`),\r\n                          KEY `FK_beritakelas_kelas` (`idkelas`),\r\n                          CONSTRAINT `FK_beritakelas_berita` FOREIGN KEY (`idberita`) REFERENCES `berita` (`idberita`) ON UPDATE CASCADE,\r\n                          CONSTRAINT `FK_beritakelas_kelas` FOREIGN KEY (`idkelas`) REFERENCES `jbsakad`.`kelas` (`replid`) ON UPDATE CASCADE\r\n                        ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+-511042550	CREATE TABLE  `jbsjs`.`beritakelompok` (\r\n                          `id` int(10) unsigned NOT NULL AUTO_INCREMENT,\r\n                          `idberita` varchar(30) NOT NULL,\r\n                          `idkelompok` int(10) unsigned NOT NULL,\r\n                          PRIMARY KEY (`id`),\r\n                          KEY `FK_beritakelompok_berita` (`idberita`),\r\n                          KEY `FK_beritakelompok_kelompoktujuan` (`idkelompok`),\r\n                          CONSTRAINT `FK_beritakelompok_berita` FOREIGN KEY (`idberita`) REFERENCES `berita` (`idberita`) ON UPDATE CASCADE,\r\n                          CONSTRAINT `FK_beritakelompok_kelompoktujuan` FOREIGN KEY (`idkelompok`) REFERENCES `kelompoktujuan` (`replid`) ON UPDATE CASCADE\r\n                        ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+-511042658	CREATE TABLE  `jbsjs`.`clientservice` (\r\n                          `id` int(10) unsigned NOT NULL AUTO_INCREMENT,\r\n                          `idservice` varchar(10) NOT NULL,\r\n                          `status` tinyint(3) unsigned NOT NULL,\r\n                          PRIMARY KEY (`id`),\r\n                          KEY `IX_clientservice` (`idservice`)\r\n                        ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+-511042916	CREATE TABLE  `jbsjs`.`jsuserinfo` (\r\n                          `id` int(10) unsigned NOT NULL AUTO_INCREMENT,\r\n                          `devid` varchar(20) NOT NULL,\r\n                          `devname` varchar(255) NOT NULL,\r\n                          `jsuserid` varchar(20) NOT NULL,\r\n                          `jsusername` varchar(255) NOT NULL,\r\n                          `jsusernik` varchar(25) NOT NULL,\r\n                          `jsuserrole` tinyint(3) unsigned NOT NULL,\r\n                          `jsuserphone` varchar(15) NOT NULL,\r\n                          `jsuseremail` varchar(255) NOT NULL,\r\n                          `jsuserbday` date NOT NULL,\r\n                          PRIMARY KEY (`id`),\r\n                          KEY `IX_jsuserinfo` (`devid`,`jsuserid`) USING BTREE\r\n                        ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+-511043457	CREATE TABLE  `jbsjs`.`notif` (\r\n                          `id` int(10) unsigned NOT NULL AUTO_INCREMENT,\r\n                          `msgdate` datetime NOT NULL,\r\n                          `desttoken` mediumtext NOT NULL,\r\n                          `topicid` varchar(255) NOT NULL,\r\n                          `msgtitle` varchar(255) NOT NULL,\r\n                          `msgbody` mediumtext,\r\n                          `msgsource` varchar(50) NOT NULL,\r\n                          `issending` tinyint(3) unsigned NOT NULL DEFAULT '0',\r\n                          `priority` tinyint(3) unsigned NOT NULL DEFAULT '1',\r\n                          PRIMARY KEY (`id`),\r\n                          KEY `IX_notif` (`msgdate`,`issending`,`priority`) USING BTREE\r\n                        ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COMMENT='FCM Notif Data';
+-511043605	CREATE TABLE  `jbsjs`.`notifmessage` (\r\n                          `id` int(10) unsigned NOT NULL AUTO_INCREMENT,\r\n                          `nis` varchar(20) CHARACTER SET utf8 DEFAULT NULL,\r\n                          `nip` varchar(30) CHARACTER SET utf8 DEFAULT NULL,\r\n                          `nic` varchar(20) CHARACTER SET utf8 DEFAULT NULL,\r\n                          `topicid` varchar(255) DEFAULT NULL,\r\n                          `title` varchar(100) NOT NULL,\r\n                          `message` varchar(1000) NOT NULL,\r\n                          `notifdate` datetime NOT NULL,\r\n                          `source` varchar(20) NOT NULL,\r\n                          `issending` tinyint(3) unsigned NOT NULL DEFAULT '0',\r\n                          `priority` tinyint(3) unsigned NOT NULL DEFAULT '1',\r\n                          PRIMARY KEY (`id`),\r\n                          KEY `FK_notifmessage_siswa` (`nis`),\r\n                          KEY `FK_notifmessage_pegawai` (`nip`),\r\n                          KEY `FK_notifmessage_calonsiswa` (`nic`),\r\n                          KEY `IX_notifmessage` (`notifdate`,`issending`,`priority`),\r\n                          CONSTRAINT `FK_notifmessage_calonsiswa` FOREIGN KEY (`nic`) REFERENCES `jbsakad`.`calonsiswa` (`nopendaftaran`) ON UPDATE CASCADE,\r\n                          CONSTRAINT `FK_notifmessage_pegawai` FOREIGN KEY (`nip`) REFERENCES `jbssdm`.`pegawai` (`nip`) ON UPDATE CASCADE,\r\n                          CONSTRAINT `FK_notifmessage_siswa` FOREIGN KEY (`nis`) REFERENCES `jbsakad`.`siswa` (`nis`) ON UPDATE CASCADE\r\n                        ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COMMENT='SchoolData Notif Message';
+-511044485	CREATE TABLE  `jbsjs`.`notifmessagehistory` (\r\n                          `id` int(10) unsigned NOT NULL AUTO_INCREMENT,\r\n                          `nis` varchar(20) CHARACTER SET utf8 DEFAULT NULL,\r\n                          `nip` varchar(30) CHARACTER SET utf8 DEFAULT NULL,\r\n                          `nic` varchar(20) CHARACTER SET utf8 DEFAULT NULL,\r\n                          `topicid` varchar(255) DEFAULT NULL,\r\n                          `title` varchar(100) NOT NULL,\r\n                          `message` varchar(1000) NOT NULL,\r\n                          `notifdate` datetime NOT NULL,\r\n                          `source` varchar(20) NOT NULL,\r\n                          PRIMARY KEY (`id`),\r\n                          KEY `FK_notifmessagehistory_siswa` (`nis`),\r\n                          KEY `FK_notifmessagehistory_pegawai` (`nip`),\r\n                          KEY `FK_notifmessagehistory_calonsiswa` (`nic`),\r\n                          KEY `IX_notifmessagehistory` (`topicid`,`source`,`notifdate`) USING BTREE,\r\n                          CONSTRAINT `FK_notifmessagehistory_calonsiswa` FOREIGN KEY (`nic`) REFERENCES `jbsakad`.`calonsiswa` (`nopendaftaran`) ON UPDATE CASCADE,\r\n                          CONSTRAINT `FK_notifmessagehistory_pegawai` FOREIGN KEY (`nip`) REFERENCES `jbssdm`.`pegawai` (`nip`) ON UPDATE CASCADE,\r\n                          CONSTRAINT `FK_notifmessagehistory_siswa` FOREIGN KEY (`nis`) REFERENCES `jbsakad`.`siswa` (`nis`) ON UPDATE CASCADE\r\n                        ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+-511045061	CREATE TABLE  `jbsjs`.`reqstatdaily` (\r\n                          `id` int(10) unsigned NOT NULL AUTO_INCREMENT,\r\n                          `reqdate` date NOT NULL,\r\n                          `counter` int(10) unsigned NOT NULL,\r\n                          PRIMARY KEY (`id`),\r\n                          UNIQUE KEY `UX_reqstatdaily` (`reqdate`)\r\n                        ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+-511045318	CREATE TABLE  `jbsjs`.`reqstatproto` (\r\n                          `id` int(10) unsigned NOT NULL AUTO_INCREMENT,\r\n                          `reqdate` date NOT NULL,\r\n                          `reqproto` int(10) unsigned NOT NULL,\r\n                          `counter` int(10) unsigned NOT NULL,\r\n                          PRIMARY KEY (`id`),\r\n                          UNIQUE KEY `UX_reqstat` (`reqdate`,`reqproto`)\r\n                        ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+-511045589	CREATE TABLE  `jbsjs`.`requestremoveaccess` (\r\n                          `id` int(10) unsigned NOT NULL AUTO_INCREMENT,\r\n                          `tanggal` datetime NOT NULL,\r\n                          `jibasid` varchar(50) NOT NULL,\r\n                          `devid` varchar(20) NOT NULL,\r\n                          `hp` varchar(45) NOT NULL,\r\n                          `alasan` varchar(255) NOT NULL,\r\n                          `bydevid` varchar(20) NOT NULL,\r\n                          `approve` tinyint(3) unsigned NOT NULL DEFAULT '0',\r\n                          `approvedate` datetime DEFAULT NULL,\r\n                          `approveby` varchar(30) DEFAULT NULL,\r\n                          `approvedesc` varchar(500) DEFAULT NULL,\r\n                          PRIMARY KEY (`id`),\r\n                          KEY `IX_requestremoveaccess` (`tanggal`,`approve`,`jibasid`,`devid`,`bydevid`) USING BTREE\r\n                        ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+-511046074	CREATE TABLE  `jbsjs`.`runtext` (\r\n                          `id` int(10) unsigned NOT NULL AUTO_INCREMENT,\r\n                          `idruntext` varchar(15) NOT NULL,\r\n                          `runtext` varchar(255) NOT NULL,\r\n                          `penulis` varchar(30) CHARACTER SET utf8 DEFAULT NULL,\r\n                          `tglbuat` datetime NOT NULL,\r\n                          `urutan` int(10) unsigned NOT NULL DEFAULT '0',\r\n                          PRIMARY KEY (`id`),\r\n                          KEY `FK_runtext_pegawai` (`penulis`),\r\n                          CONSTRAINT `FK_runtext_pegawai` FOREIGN KEY (`penulis`) REFERENCES `jbssdm`.`pegawai` (`nip`) ON UPDATE CASCADE\r\n                        ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+-511046145	CREATE TABLE  `jbsjs`.`splang00` (\r\n                          `tipe` varchar(20) NOT NULL,\r\n                          `nilai` varchar(100) NOT NULL,\r\n                          `keterangan` varchar(255) DEFAULT NULL,\r\n                          PRIMARY KEY (`tipe`)\r\n                        ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+-511046444	CREATE TABLE  `jbsjs`.`tentang` (\r\n                          `id` int(10) unsigned NOT NULL AUTO_INCREMENT,\r\n                          `tentang` mediumtext NOT NULL,\r\n                          PRIMARY KEY (`id`)\r\n                        ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+-511046899	CREATE TABLE  `jbsjs`.`useraccess` (\r\n                          `id` int(10) unsigned NOT NULL AUTO_INCREMENT,\r\n                          `jibasid` varchar(50) NOT NULL,\r\n                          `jibasidtype` tinyint(3) unsigned NOT NULL DEFAULT '2' COMMENT '1 Pegawai, 2 Siswa, 3 Calon Siswa',\r\n                          `nis` varchar(20) CHARACTER SET utf8 DEFAULT NULL,\r\n                          `nip` varchar(30) CHARACTER SET utf8 DEFAULT NULL,\r\n                          `nic` varchar(20) CHARACTER SET utf8 DEFAULT NULL,\r\n                          `regdate` datetime NOT NULL,\r\n                          `appname` varchar(45) NOT NULL,\r\n                          `appver` varchar(10) NOT NULL,\r\n                          `compver` varchar(10) NOT NULL,\r\n                          `devname` varchar(255) NOT NULL,\r\n                          `devaddr` varchar(255) NOT NULL,\r\n                          `devid` varchar(20) NOT NULL,\r\n                          `status` tinyint(3) unsigned NOT NULL DEFAULT '1',\r\n                          `statusdesc` varchar(255) NOT NULL,\r\n                          `loggedin` tinyint(3) unsigned NOT NULL DEFAULT '1',\r\n                          PRIMARY KEY (`id`),\r\n                          KEY `FK_useraccess_siswa` (`nis`),\r\n                          KEY `FK_useraccess_pegawai` (`nip`),\r\n                          KEY `FK_useraccess_calonsiswa` (`nic`),\r\n                          KEY `IX_useraccess` (`jibasid`,`devid`,`status`,`loggedin`) USING BTREE,\r\n                          CONSTRAINT `FK_useraccess_calonsiswa` FOREIGN KEY (`nic`) REFERENCES `jbsakad`.`calonsiswa` (`nopendaftaran`) ON UPDATE CASCADE,\r\n                          CONSTRAINT `FK_useraccess_pegawai` FOREIGN KEY (`nip`) REFERENCES `jbssdm`.`pegawai` (`nip`) ON UPDATE CASCADE,\r\n                          CONSTRAINT `FK_useraccess_siswa` FOREIGN KEY (`nis`) REFERENCES `jbsakad`.`siswa` (`nis`) ON UPDATE CASCADE\r\n                        ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+-511047562	CREATE TABLE  `jbsjs`.`usertoken` (\r\n                          `id` int(10) unsigned NOT NULL AUTO_INCREMENT,\r\n                          `jibasid` varchar(50) NOT NULL,\r\n                          `nis` varchar(20) CHARACTER SET utf8 DEFAULT NULL,\r\n                          `nip` varchar(30) CHARACTER SET utf8 DEFAULT NULL,\r\n                          `nic` varchar(20) CHARACTER SET utf8 DEFAULT NULL,\r\n                          `devid` varchar(20) NOT NULL,\r\n                          `token` varchar(255) NOT NULL,\r\n                          `lastuse` datetime NOT NULL,\r\n                          `aktif` tinyint(3) unsigned NOT NULL DEFAULT '1',\r\n                          `loggedin` tinyint(3) unsigned NOT NULL DEFAULT '1',\r\n                          PRIMARY KEY (`id`),\r\n                          KEY `FK_usertoken_siswa` (`nis`),\r\n                          KEY `FK_usertoken_pegawai` (`nip`),\r\n                          KEY `FK_usertokencalonsiswa` (`nic`),\r\n                          KEY `IX_usertoken` (`nis`,`nip`,`nic`,`devid`,`token`,`jibasid`,`aktif`,`loggedin`) USING BTREE,\r\n                          CONSTRAINT `FK_usertoken_calonsiswa` FOREIGN KEY (`nic`) REFERENCES `jbsakad`.`calonsiswa` (`nopendaftaran`) ON UPDATE CASCADE,\r\n                          CONSTRAINT `FK_usertoken_pegawai` FOREIGN KEY (`nip`) REFERENCES `jbssdm`.`pegawai` (`nip`) ON UPDATE CASCADE,\r\n                          CONSTRAINT `FK_usertoken_siswa` FOREIGN KEY (`nis`) REFERENCES `jbsakad`.`siswa` (`nis`) ON UPDATE CASCADE\r\n                        ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+-510945723	SELECT mmasukaw, mmasukak, mtelat, mpulangaw, mpulangak,\r\n                                   masukaw, masukak, telat, pulangaw, pulangak, kelompok\r\n                              FROM jbssat.frjadwalsekolah\r\n                             WHERE hari = DAYOFWEEK(NOW())\r\n                             ORDER BY pos
+-510945614	SchoolScheduleLoader.InitSchedule()
+-510955293	waktu
+-510955281	keterangan
+-510955362	Aplikasi JIBAS SPT Fingerprint Client telah berjalan!
+-510955686	not.logged.in
+-510955698	Basis data: belum terhubung
+-510955668	MainForm.MainForm_Load()
+-510955763	DpHost
+-510955720	PERINGATAN:\r\n\r\nService Biometric Authentication Service tidak berjalan.\r\nInstall driver DigitalPersona U.are.U 4500 terlebih dahulu.\r\nPastikan service tersebut aktif dan berjalan melalui Control Panel > Administrative Tools > Services.
+-510956018	Basis data: {0}@{1}:{2}
+-510955992	Versi: {0}.{1} - {2}
+-510955835	Perangkat: 
+-510955781	Sesi: -
+-510955803	Hak akses: -
+-510955878	Waktu server: -
+-510955892	Catatan aplikasi: -
+-510955862	MainForm.ShowConfig
+-510956224	logged.in
+-510956176	lock.app
+-510956191	unlock.app
+-510956272	Kunci Aplikasi
+-510956277	MULAI
+-510956233	Logout
+-510956254	Sesi: 
+-510956243	Hak akses: 
+-510956093	Versi: {0} - {1}
+-510956044	Perangkat: belum terhubung
+-510956133	00:00:00
+-510956156	MainForm.InitFontLbServerTime()
+-510956114	config.ini
+-510956451	File config.ini tidak ditemukan!
+-510956442	Tutup aplikasi?
+-510956520	SELECT COUNT(*) FROM jbssat.frformatsms WHERE smstype='MASUK'
+-510956324	Kami informasikan presensi {NAMA} tanggal {TANGGAL}/{BULAN}/{TAHUN}, masuk jam {JAM_MASUK}
+-510956381	INSERT INTO jbssat.frformatsms\r\n                               SET smstype = 'MASUK', smsformat = '
+-510956776	SELECT smsformat\r\n                              FROM jbssat.frformatsms\r\n                             WHERE smstype = 'MASUK'
+-510956644	SELECT COUNT(*) FROM jbssat.frformatsmsact WHERE smstype='MASUK'
+-510956987	Kami informasikan presensi {NAMA} di kegiatan {KEGIATAN} tanggal {TANGGAL}/{BULAN}/{TAHUN}, masuk jam {JAM_MASUK}
+-510956835	INSERT INTO jbssat.frformatsmsact\r\n                               SET smstype = 'MASUK', smsformat = '
+-510956866	SELECT smsformat\r\n                              FROM jbssat.frformatsmsact\r\n                             WHERE smstype = 'MASUK'
+-510957273	SELECT COUNT(*) FROM jbssat.frformatsms WHERE smstype='TELAT'
+-510957077	Kami informasikan presensi {NAMA} tanggal {TANGGAL}/{BULAN}/{TAHUN}, masuk jam {JAM_MASUK}, terlambat {MENIT_TELAT} menit
+-510957461	INSERT INTO jbssat.frformatsms\r\n                               SET smstype = 'TELAT', smsformat = '
+-510957376	SELECT smsformat\r\n                              FROM jbssat.frformatsms\r\n                             WHERE smstype = 'TELAT'
+-510957756	SELECT COUNT(*) FROM jbssat.frformatsmsact WHERE smstype='TELAT'
+-510957811	Kami informasikan presensi {NAMA} di kegiatan {KEGIATAN} tanggal {TANGGAL}/{BULAN}/{TAHUN}, masuk jam {JAM_MASUK}, terlambat {MENIT_TELAT} menit
+-510957658	INSERT INTO jbssat.frformatsmsact\r\n                               SET smstype = 'TELAT', smsformat = '
+-510958073	SELECT smsformat\r\n                              FROM jbssat.frformatsmsact\r\n                             WHERE smstype = 'TELAT'
+-510957944	SELECT COUNT(*) FROM jbssat.frformatsms WHERE smstype='PULANG'
+-510958221	Kami informasikan presensi {NAMA} tanggal {TANGGAL}/{BULAN}/{TAHUN}, masuk jam {JAM_MASUK} pulang jam {JAM_PULANG}
+-510958134	INSERT INTO jbssat.frformatsms\r\n                               SET smstype = 'PULANG', smsformat = '
+-510958170	SELECT smsformat\r\n                              FROM jbssat.frformatsms\r\n                             WHERE smstype = 'PULANG'
+-510958551	SELECT COUNT(*) FROM jbssat.frformatsmsact WHERE smstype='PULANG'
+-510958447	Kami informasikan presensi {NAMA} di kegiatan {KEGIATAN} tanggal {TANGGAL}/{BULAN}/{TAHUN}, masuk jam {JAM_MASUK} pulang jam {JAM_PULANG}
+-510958847	INSERT INTO jbssat.frformatsmsact\r\n                               SET smstype = 'PULANG', smsformat = '
+-510958623	SELECT smsformat\r\n                              FROM jbssat.frformatsmsact\r\n                             WHERE smstype = 'PULANG'
+-510958999	SELECT COUNT(*) FROM jbssat.frformatsms WHERE smstype='TAKHADIR'
+-510958894	INSERT INTO jbssat.frformatsms\r\n                               SET smstype = 'TAKHADIR', smsformat = 'Kami informasikan bahwa siswa {NAMA} tidak hadir di sekolah pada tanggal {TANGGAL}/{BULAN}/{TAHUN}'
+-510959358	SELECT COUNT(*) FROM jbssat.frformatsmsact WHERE smstype='TAKHADIR'
+-510959160	INSERT INTO jbssat.frformatsmsact\r\n                               SET smstype = 'TAKHADIR', smsformat = 'Kami informasikan bahwa siswa {NAMA} tidak hadir di kegiatan {KEGIATAN} pada tanggal {TANGGAL}/{BULAN}/{TAHUN}'
+-510959575	MainForm.InitFormatSms()
+-510959414	Pastikan service Biometric Authentication Service telah terpasang dan berjalan.
+-510959428	Atur kembali koneksi basis data di menu Konfigurasi.
+-510959751	Logout?
+-510959852	Anda perlu memilih minimal satu kegiatan untuk memulai pendataan presensi!
+-510959669	BERHENTI
+-510959628	MainFOrm.StartStopPresenceService()
+-510959742	Apakah anda akan menghentikan pendataan?
+-510960045	Kunci Aplikasi?
+-510960059	Bersihkan riwayat pendataan?
+-510960022	MainForm.ApplyTheme
+-510960128	dd MMMM yyyy HH:mm:ss
+-510960068	Catatan aplikasi: 
+-510959909	MainForm.ReportToLog
+-510959888	MainForm.ProcessTesting()
+-510959984	MainForm.ShowActivityPresenceSchedule()
+-510959966	Presensi Harian
+-510960300	MainForm.ShowSchoolPresenceSchedule()
+-510960288	TEST
+-510960275	Waktu server: 
+-510960384	MainForm.ShowPresenceTime()
+-510960346	Pendataan presensi kepulangan otomatis selesai
+-510960135	Gagal memulai pendataan presensi kepulangan otomatis menggunakan user 
+-510960220	Memulai pendataan presensi kepulangan otomatis menggunakan user 
+-510960531	Pendataan presensi kehadiran otomatis selesai
+-510960607	Gagal memulai pendataan presensi kehadiran otomatis menggunakan user 
+-510960403	Memulai pendataan presensi kehadiran otomatis menggunakan user 
+-510960809	SELECT COUNT(replid)\r\n                          FROM jbssat.frjadwalsekolah\r\n                         WHERE hari = DAYOFWEEK(NOW())
+-510960675	Tidak dapat memulai pendataan presensi sekolah karena belum ada jadwal pendataan di hari ini. Atur dahulu jadwal pendataan presensi sekolah di JIBAS SPT Manager!
+-510961051	Tidak ditemukan data kegiatan untuk memulai pendataan presensi!
+-510961105	SELECT k.replid\r\n                          FROM jbssat.frkegiatan k, jbssat.frjadwalkegiatan j\r\n                         WHERE k.replid = j.idkegiatan\r\n                           AND (k.jeniswaktu = 1 OR (CURDATE() >= k.tglawal AND CURDATE() <= k.tglakhir))\r\n                           AND k.aktif = 1\r\n                           AND j.hari = DAYOFWEEK(NOW())\r\n                           AND k.replid IN ({0})
+-510961364	Tidak dapat memulai pendataan presensi kegiatan karena status kegiatan non aktif atau berada diluar jadwal pendataan yang telah ditentukan!
+-510961549	MainForm.ShowTestPresenceInfo()
+-510961643	UJI COBA PRESENSI
+-510961651	SELAMAT JALAN
+-510961631	SELAMAT DATANG
+-510961452	 ms
+-510961470	Identitas sidik jari ditemukan dalam waktu 
+-510961520	Identitas sidik jari tidak ditemukan. Pencarian dilakukan dalam waktu 
+-510961853	notfound
+-510961844	Identitas Sidik Jari Tidak Ditemukan
+-510961868	MainForm.RestartClock()
+-510961706	SELECT COUNT(*) \r\n                                  FROM jbssat.frconfigassms \r\n                                 WHERE departemen = '{0}'
+-510962106	INSERT INTO jbssat.frconfigassms\r\n                               SET departemen = '{0}', asin = 0, asout = 0, pengirim = 'JIBAS SPT FGR',\r\n                                   info1 = '0', info2 = '00:00'
+-510961995	MainForm.InitConfigAutoSendSms()
+-510962338	MainForm.ShowConfigAsSms()
+-510962307	pnFooter
+-510962322	pnRunText
+-510962402	pnStatus
+-510962417	lbDbInfo
+-510962376	DB
+-510962393	lbNLog
+-510962222	NLOG
+-510962209	lbVerInfo
+-510962225	VER
+-510962187	lbServerTime
+-510962198	SVTM
+-510962281	lbDevices
+-510962297	DEV
+-510962291	lbUserAccess
+-510962270	ACC
+-510962264	lbUserLogin
+-510962594	USER
+-510982145	pnHeader
+-510962613	pcAppTitle
+-510962566	btLock
+-510962587	lbLogin
+-510982168	lbMenu
+-510982245	Menu
+-510962665	pbMinimize
+-510962682	pbMaximize
+-510962635	lbPresenceMode
+-510962470	lbPresenceType
+-510962483	cbPresenceType
+-510962464	cbPresenceMode
+-510962533	btPilihKegiatan
+-510962547	splitContainer1
+-510962521	pnUserInfo
+-510962858	pnUserId
+-510962873	lbUserId
+-510962832	USERID
+-510962845	lbUserName
+-510962926	USERNAME
+-510962941	pnPicFoto
+-510962893	pnInformationBox
+-510962908	lbInformationBox
+-510962723	Information Box
+-510962697	pcFoto
+-510962718	pcNoImages
+-510962799	pnWelcome
+-510962815	lbWelcome
+-510962767	pnServerTime
+-510962778	txPresenceTime
+-510963111	splitContainer2
+-510963085	lnClear
+-510963075	bersihkan
+-510963091	lsPresence
+-510963172	lbJadwal
+-510963187	Jadwal:
+-510963137	pcSchedule
+-510963154	pnPilihPresensi
+-510963008	Pendataan Presensi:
+-510962946	lbFingerCount
+-510963054	btStartStop
+-510963072	label60
+-510963022	Jumlah Sidik Jari: 
+-510963032	$this.Icon
+-510963361	MainForm
+-510963384	`
+-510982180	Login terlebih dahulu!
+-510982272	Konfigurasi
+-510982218	lbBasisData
+-510982236	lbAutoStart
+-510982566	Jadwal Auto Start
+-510982542	lbLisensi
+-510982558	lbAutoSendSms
+-510982634	Auto Send SMS
+-510982646	lbFormatSms
+-510982600	Informasi
+-510982616	lbCatatan
+-510982440	lbRiwayat
+-510982456	lbTentang
+-510971747	Tentang
+-510982408	MenuForm
+-510982321	LoginForm.ApplyTheme()
+-510982389	pictureBox1
+-510982343	LoginForm
+-510982359	Login Aplikasi
+-510971843	TentangForm.ApplyTheme()
+-510971682	http://www.jibas.net
+-510971653	http://www.indonesiamembaca.net
+-510971761	Arial
+-510971717	Label21
+-510971739	Jaringan Informasi Bersama Antar Sekolah
+-510972042	label20
+-510972064	Komunitas JIBAS dikelola oleh Yayasan Indonesia Membaca
+-510971250	Verdana
+-510972126	LinkLabel1
+-510971951	LinkLabel2
+-510971968	Label22
+-510971918	Yayasan Indonesia Membaca
+-510972014	pictureBox5
+-510972032	pictureBox4
+-510971978	PictureBox3.Image
+-510971986	PictureBox3
+-510972324	TentangForm
+-510948879	Configuration file (config.ini) not found!
+-510948762	#
+-510948992	=
+-510948984	DBSERVER
+-510948935	DBPORT
+-510948956	DBUSER
+-510949289	DBPASSWORD
+-510949306	PLAYSOUND
+-510949258	ALWAYSONTOP
+-510949276	RUNTEXT
+-510949354	THEME
+-510949374	AUTOLOGIN_ENABLE
+-510949317	AUTOLOGIN_LOGIN
+-510949331	AUTOLOGIN_PASSWORD
+-510949180	AUTOLOGIN_MODE
+-510949121	AUTOLOGIN_IDACTIVITY
+-510949228	AUTOLOGIN_INSTARTH
+-510949197	AUTOLOGIN_INSTARTM
+-510949206	AUTOLOGIN_INENDH
+-510949565	AUTOLOGIN_INENDM
+-510949516	AUTOLOGIN_OUTSTARTH
+-510949614	AUTOLOGIN_OUTSTARTM
+-510949624	AUTOLOGIN_OUTENDH
+-510949600	AUTOLOGIN_OUTENDM
+-510949416	AUTOLOGIN_MODE2
+-510949390	AUTOLOGIN_IDACTIVITY2
+-510949394	AUTOLOGIN_INSTARTH2
+-510949500	AUTOLOGIN_INSTARTM2
+-510949470	AUTOLOGIN_INENDH2
+-510949798	AUTOLOGIN_INENDM2
+-510949774	AUTOLOGIN_OUTSTARTH2
+-510949777	AUTOLOGIN_OUTSTARTM2
+-510949884	AUTOLOGIN_OUTENDH2
+-510949853	AUTOLOGIN_OUTENDM2
+-510949670	AUTOLOGIN_MODE3
+-510949684	AUTOLOGIN_IDACTIVITY3
+-510949656	AUTOLOGIN_INSTARTH3
+-510949754	AUTOLOGIN_INSTARTM3
+-510949700	AUTOLOGIN_INENDH3
+-510950060	AUTOLOGIN_INENDM3
+-510950068	AUTOLOGIN_OUTSTARTH3
+-510950039	AUTOLOGIN_OUTSTARTM3
+-510950138	AUTOLOGIN_OUTENDH3
+-510950083	AUTOLOGIN_OUTENDM3
+-510949932	#-----------------------------------------------------
+-510949993	# JIBAS SPT FINGERPRINT CLIENT CONFIGURATION          
+-510950318	# -- DATABASE -- 
+-510950326	DBSERVER = 
+-510950280	DBPORT = 
+-510950296	DBUSER = 
+-510950376	DBPASSWORD = 
+-510950388	# -- APPLICATION -- 
+-510950359	PLAYSOUND = 
+-510950178	ALWAYSONTOP = 
+-510950159	RUNTEXT = 
+-510950176	THEME = 
+-510950255	# -- AUTO LOGIN -- 
+-510950257	AUTOLOGIN_ENABLE = 
+-510950235	AUTOLOGIN_LOGIN = 
+-510950564	AUTOLOGIN_PASSWORD = 
+-510950536	 = 
+-510955278	{NODEPT}
+-511048633	ImageUtil.BlobToImage()
+-510945405	RunTextManager.ClearData()
+-510945374	RunTextManager.PlaceNewImage()

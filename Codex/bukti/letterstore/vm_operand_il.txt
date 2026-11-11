@@ -1,0 +1,139 @@
+﻿METHOD 0x0x060002BD #=qN$AdBotFUmPTj33H1zCZ9NhgBD76DCfRFaG8EyRnFcg=::#=qyQ6i5uCUfGtA2yGYURdZXn0tOLfnkcECtrQuammPNSg= #=zPZo7isAXsqqkCGL0Ccf3Dwr3Fxtj(#=quJebZBqdmKAGJzPWNHiupvhCedCUA85CEfVWAUrghqI=, Byte)
+0000: ldarg.2       
+0001: switch       277,123,149,309,97,245,149,213,65,181,181,63,97 
+003A: br           384 
+003F: ldnull        
+0040: ret           
+0041: ldarg.0       
+0042: ldarg.0       
+0043: ldfld        #=qN$AdBotFUmPTj33H1zCZ9NhgBD76DCfRFaG8EyRnFcg=::UInt32 #=zoZr$unw= 0x040000B1
+0048: ldc.i4.1      
+0049: add           
+004A: stfld        #=qN$AdBotFUmPTj33H1zCZ9NhgBD76DCfRFaG8EyRnFcg=::UInt32 #=zoZr$unw= 0x040000B1
+004F: newobj       #=qMYlsBjym4qtJItczsgvxb9cPW6OT3zOjSjHRTV9gMZk=::Void .ctor() 0x0600019D
+0054: dup           
+0055: ldarg.1       
+0056: callvirt     #=quJebZBqdmKAGJzPWNHiupvhCedCUA85CEfVWAUrghqI=::SByte #=zk6a9zX0viijyKa7igR4OJuPcPZQWVw0x3ilNfk4=() 0x060004D2
+005B: callvirt     #=qMYlsBjym4qtJItczsgvxb9cPW6OT3zOjSjHRTV9gMZk=::Void #=z0DDrqEGoyo21pEqe7e1SVg8XWGE5(SByte) 0x0600019F
+0060: ret           
+0061: ldarg.0       
+0062: ldarg.0       
+0063: ldfld        #=qN$AdBotFUmPTj33H1zCZ9NhgBD76DCfRFaG8EyRnFcg=::UInt32 #=zoZr$unw= 0x040000B1
+0068: ldc.i4.4      
+0069: add           
+006A: stfld        #=qN$AdBotFUmPTj33H1zCZ9NhgBD76DCfRFaG8EyRnFcg=::UInt32 #=zoZr$unw= 0x040000B1
+006F: ldarg.1       
+0070: callvirt     #=quJebZBqdmKAGJzPWNHiupvhCedCUA85CEfVWAUrghqI=::Int32 #=zUjRtMyt2eI6GVoipy_xIoA2HNMoT() 0x060004E0
+0075: newobj       #=qoy0fM_nqum52aEBsZ4F05JrdZHlkZkye8S4fYLaAH0I=::Void .ctor(Int32) 0x06000486
+007A: ret           
+007B: ldarg.0       
+007C: ldarg.0       
+007D: ldfld        #=qN$AdBotFUmPTj33H1zCZ9NhgBD76DCfRFaG8EyRnFcg=::UInt32 #=zoZr$unw= 0x040000B1
+0082: ldc.i4.8      
+0083: add           
+0084: stfld        #=qN$AdBotFUmPTj33H1zCZ9NhgBD76DCfRFaG8EyRnFcg=::UInt32 #=zoZr$unw= 0x040000B1
+0089: ldarg.1       
+008A: callvirt     #=quJebZBqdmKAGJzPWNHiupvhCedCUA85CEfVWAUrghqI=::Int64 #=zn_mxj2CDI25FSgt_Xe$uYrMMkl6ZKJeu3A==() 0x060004E2
+008F: newobj       #=qeYsjZWIAx72eO$MrBU$IbT2j5LFtBt_jiATmNDMUuKo=::Void .ctor(Int64) 0x06000436
+0094: ret           
+0095: ldarg.0       
+0096: ldarg.0       
+0097: ldfld        #=qN$AdBotFUmPTj33H1zCZ9NhgBD76DCfRFaG8EyRnFcg=::UInt32 #=zoZr$unw= 0x040000B1
+009C: ldc.i4.1      
+009D: add           
+009E: stfld        #=qN$AdBotFUmPTj33H1zCZ9NhgBD76DCfRFaG8EyRnFcg=::UInt32 #=zoZr$unw= 0x040000B1
+00A3: newobj       #=qEr8NQSxgeWU5gjaesmfrtWJs$0Fk7KoMmXWW0KZSt88=::Void .ctor() 0x060000F8
+00A8: dup           
+00A9: ldarg.1       
+00AA: callvirt     #=quJebZBqdmKAGJzPWNHiupvhCedCUA85CEfVWAUrghqI=::Byte #=znmD3p84Scw10y5EC4zqWzlZyf0cGXU9kqNOf0UQ=() 0x060004D1
+00AF: callvirt     #=qEr8NQSxgeWU5gjaesmfrtWJs$0Fk7KoMmXWW0KZSt88=::Void #=zcoWNxTQkZGrSIP$hhuqhWodbDz5BL2wlx6KCWZQ=(Byte) 0x060000FA
+00B4: ret           
+00B5: ldarg.0       
+00B6: ldarg.0       
+00B7: ldfld        #=qN$AdBotFUmPTj33H1zCZ9NhgBD76DCfRFaG8EyRnFcg=::UInt32 #=zoZr$unw= 0x040000B1
+00BC: ldc.i4.2      
+00BD: add           
+00BE: stfld        #=qN$AdBotFUmPTj33H1zCZ9NhgBD76DCfRFaG8EyRnFcg=::UInt32 #=zoZr$unw= 0x040000B1
+00C3: newobj       #=qEWhQQDwYn97lBSkGzbHfNes6jzKxLmdxDRjBu8uRxvc=::Void .ctor() 0x060000F1
+00C8: dup           
+00C9: ldarg.1       
+00CA: callvirt     #=quJebZBqdmKAGJzPWNHiupvhCedCUA85CEfVWAUrghqI=::UInt16 #=zzkZR3VKkrhzQIebhEVA2vkfoEw1xBqLCbzA0MZQ=() 0x060004E5
+00CF: callvirt     #=qEWhQQDwYn97lBSkGzbHfNes6jzKxLmdxDRjBu8uRxvc=::Void #=zC$1qBZBVaBUSuEGvq0RlFpcCxMB0(UInt16) 0x060000F3
+00D4: ret           
+00D5: ldarg.0       
+00D6: ldarg.0       
+00D7: ldfld        #=qN$AdBotFUmPTj33H1zCZ9NhgBD76DCfRFaG8EyRnFcg=::UInt32 #=zoZr$unw= 0x040000B1
+00DC: ldc.i4.4      
+00DD: add           
+00DE: stfld        #=qN$AdBotFUmPTj33H1zCZ9NhgBD76DCfRFaG8EyRnFcg=::UInt32 #=zoZr$unw= 0x040000B1
+00E3: newobj       #=q$tUWFHkmcH90LPFm_wW51sBBC4iS3m$UsMWOSBzk3ZY=::Void .ctor() 0x06000001
+00E8: dup           
+00E9: ldarg.1       
+00EA: callvirt     #=quJebZBqdmKAGJzPWNHiupvhCedCUA85CEfVWAUrghqI=::Single #=zA0Zs_H3Bat6aqWMhuHFebFKBqe5Y$3jC0A==() 0x060004E7
+00EF: callvirt     #=q$tUWFHkmcH90LPFm_wW51sBBC4iS3m$UsMWOSBzk3ZY=::Void #=z4KA5RY$dJu7RDSOYtsxfrT3SiRaVLxh1hZM2nZo=(Single) 0x06000003
+00F4: ret           
+00F5: ldarg.0       
+00F6: ldarg.0       
+00F7: ldfld        #=qN$AdBotFUmPTj33H1zCZ9NhgBD76DCfRFaG8EyRnFcg=::UInt32 #=zoZr$unw= 0x040000B1
+00FC: ldc.i4.8      
+00FD: add           
+00FE: stfld        #=qN$AdBotFUmPTj33H1zCZ9NhgBD76DCfRFaG8EyRnFcg=::UInt32 #=zoZr$unw= 0x040000B1
+0103: newobj       #=qDuwiIjDhSWdmoRP6$hBLZEC82g1v_VMpll$QEtz7AF0=::Void .ctor() 0x060000C2
+0108: dup           
+0109: ldarg.1       
+010A: callvirt     #=quJebZBqdmKAGJzPWNHiupvhCedCUA85CEfVWAUrghqI=::Double #=zPbyu4aRWaXw6fpcE627UKX3pk3Ep6iYXtg==() 0x060004E8
+010F: callvirt     #=qDuwiIjDhSWdmoRP6$hBLZEC82g1v_VMpll$QEtz7AF0=::Void #=zVicurk1iCiRTWtktv5$ihAO1jI$Q(Double) 0x060000C4
+0114: ret           
+0115: ldarg.0       
+0116: ldarg.0       
+0117: ldfld        #=qN$AdBotFUmPTj33H1zCZ9NhgBD76DCfRFaG8EyRnFcg=::UInt32 #=zoZr$unw= 0x040000B1
+011C: ldc.i4.4      
+011D: add           
+011E: stfld        #=qN$AdBotFUmPTj33H1zCZ9NhgBD76DCfRFaG8EyRnFcg=::UInt32 #=zoZr$unw= 0x040000B1
+0123: newobj       #=qVMg4aoCJLpGHLb02L1fDhlfHJ4qidFEDomhCdw73CbY=::Void .ctor() 0x060003D5
+0128: dup           
+0129: ldarg.1       
+012A: callvirt     #=quJebZBqdmKAGJzPWNHiupvhCedCUA85CEfVWAUrghqI=::UInt32 #=zvuscTeCeeCmXR6S2CZCFF7r49eYT() 0x060004E1
+012F: callvirt     #=qVMg4aoCJLpGHLb02L1fDhlfHJ4qidFEDomhCdw73CbY=::Void #=zOR4rdInEOSri5FmIlZfXdANLb58$7VDr6rfb3zGNDOUR(UInt32) 0x060003D7
+0134: ret           
+0135: ldarg.1       
+0136: callvirt     #=quJebZBqdmKAGJzPWNHiupvhCedCUA85CEfVWAUrghqI=::Int32 #=zUjRtMyt2eI6GVoipy_xIoA2HNMoT() 0x060004E0
+013B: stloc.0       
+013C: ldloc.0       
+013D: newarr       ::#=qoy0fM_nqum52aEBsZ4F05JrdZHlkZkye8S4fYLaAH0I= 0x0200008F
+0142: stloc.1       
+0143: ldc.i4.0      
+0144: stloc.2       
+0145: br.s         349 
+0147: ldloc.1       
+0148: ldloc.2       
+0149: ldarg.1       
+014A: callvirt     #=quJebZBqdmKAGJzPWNHiupvhCedCUA85CEfVWAUrghqI=::Int32 #=zUjRtMyt2eI6GVoipy_xIoA2HNMoT() 0x060004E0
+014F: newobj       #=qoy0fM_nqum52aEBsZ4F05JrdZHlkZkye8S4fYLaAH0I=::Void .ctor(Int32) 0x06000486
+0154: stelem       ::#=qoy0fM_nqum52aEBsZ4F05JrdZHlkZkye8S4fYLaAH0I= 0x0200008F
+0159: ldloc.2       
+015A: ldc.i4.1      
+015B: add           
+015C: stloc.2       
+015D: ldloc.2       
+015E: ldloc.0       
+015F: blt.s        327 
+0161: ldarg.0       
+0162: ldarg.0       
+0163: ldfld        #=qN$AdBotFUmPTj33H1zCZ9NhgBD76DCfRFaG8EyRnFcg=::UInt32 #=zoZr$unw= 0x040000B1
+0168: ldloc.0       
+0169: ldc.i4.1      
+016A: add           
+016B: ldc.i4.4      
+016C: mul           
+016D: add           
+016E: stfld        #=qN$AdBotFUmPTj33H1zCZ9NhgBD76DCfRFaG8EyRnFcg=::UInt32 #=zoZr$unw= 0x040000B1
+0173: newobj       #=qRMlt0_WczsFSLsbx109BdxujZ1nOs66uKos9cngjqVw=::Void .ctor() 0x060003A7
+0178: dup           
+0179: ldloc.1       
+017A: callvirt     #=qRMlt0_WczsFSLsbx109BdxujZ1nOs66uKos9cngjqVw=::Void #=z1e2L3OWEIDvSD5VQhEunv4C8GRZzCaHL_w==(System.Array) 0x060003A9
+017F: ret           
+0180: ldc.i4       -2016191718 
+0185: call         #=qUTYeuEjgps5nRgWvd3l46kC3tZkwiv_$z4mciA_ejCg=::System.String #=z7hs2dzk=(Int32) 0x060003C2
+018A: newobj       System.Exception::Void .ctor(System.String) 0x0A0000FC
+018F: throw         

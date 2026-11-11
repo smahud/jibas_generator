@@ -1,5 +1,39 @@
 # Pengujian aplikasi terpadu — Windows, 11 November 2026
 
+## Enam produk dan SharedDocs (pembaruan terkini)
+
+Hasil final: **240 passed,1 skipped dalam20.48detik**, Python3.12.14;
+`python -X utf8 -m pytest tests -q -W error::pytest.PytestUnraisableExceptionWarning`.
+Satu skip adalah cache FACE live yang tidak berisi row; fixture codec tetap diuji.
+
+EXE final: **15.525.423 byte**, SHA256
+`bc3d0d5bccf27f6ba522c19365a462360af7b00ffbe26f3726773c58b7d0ef6c`.
+Verifier terisolasi exit0: enam produk generate/inspect/verify, identitas salah
+ditolak, empat renewal otomatis dan dua regenerasi, Save All enam file baru
+serta batch kedua enam file. Hanya EXE disalin, environment Python/Tcl dihapus,
+PATH dibatasi Windows; resource/native crypto berasal dari bundle.
+
+Suite terbaru mencakup Absensi Wajah, Absensi Finger, SchoolPay, CBE Server,
+SJS dan LetterStore. Field bersama hanya terhubung pada produk yang mendukungnya;
+serial scanner, School ID/token, Database ID dan path tetap privat. CLI menolak
+opsi yang tidak dapat dikodekan produk, termasuk expiry Finger dan renewal
+LetterStore. Tes lama lifecycle Tk dan transaksi tiga produk tetap dipertahankan,
+ditambah Save All enam produk dengan rollback baru/overwrite pada kegagalan
+penggantian file terakhir. Detail mekanisme: [SharedDocs](../SharedDocs/README.md).
+
+Codec Face/SchoolPay/CBE tetap terpisah dan tidak diubah oleh penambahan ini.
+Tes codec baru: Finger15, LetterStore12, SJS23. Metode asli Finger diuji pada
+tiga build (impor/cache/match serial); LetterStore memakai tiga DBID positif,
+cache/flag dan impor kedua; SJS memiliki11kontrol importer/renewal serta encoder
+token asli. Binary/config/cache instalasi tetap utuh sesuai evidence masing-masing.
+
+Layout: **12 scene lulus**, enam tab pada880x650 dan760x560. Tidak ada widget,
+tombol, atau teks label terpotong maupun tumpang tindih. Hasil tetap6baris/102px.
+Screenshot dan pemeriksaan lebar font: `bukti/shared_save_all/gui_visual_report.json`.
+Standar kekuatan bukti dan reproduksi: [SharedDocs/EVIDENCE_AND_REPRO.md](../SharedDocs/EVIDENCE_AND_REPRO.md).
+
+Bagian berikut adalah catatan versi tiga tab dan pengujian historis.
+
 Pembaruan field bersama/Save All: **153 passed,1 skipped** (10.95 detik),
 warning finalizer Tk sebagai error. Termasuk25tes GUI dan21tes batch. Database ID
 tetap terpisah, semua field yang diminta terhubung, dan keluaran batch dipulihkan

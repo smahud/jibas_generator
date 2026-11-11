@@ -1,0 +1,66 @@
+﻿// Runs only format/path/cache/import methods in a fresh temporary sandbox.
+// Does not execute target Main, construct UI, or call database routines.
+using System;
+using System.IO;
+using System.Reflection;
+using System.Reflection.Emit;
+using System.Data;
+using System.Collections.Generic;
+using System.Web.Script.Serialization;
+public static class FingerProbe {
+ static Module m; static object Call(int t,params object[] a){return m.ResolveMethod(t).Invoke(null,a);}
+ static object Get(int t){return m.ResolveField(t).GetValue(null);}
+ static void Set(int t,object a){m.ResolveField(t).SetValue(null,a);}
+ static string Err(Exception e){while(e.InnerException!=null)e=e.InnerException;return e.ToString();}
+ public static int Main(string[] args){
+  bool manager=args[0]=="manager";
+  string source=manager?@"C:\Program Files\YIM\JIBAS Face & Fingerprint Manager 16.5":@"C:\Program Files\YIM\JIBAS Face & Fingerprint Client 16.10";
+  string name=manager?"FaceFingerManager.exe":"FaceFgrClient.exe";
+  string sandbox=Path.Combine(Path.GetTempPath(),"codex-fingerprint",Guid.NewGuid().ToString("N"));
+  Directory.CreateDirectory(sandbox);Environment.CurrentDirectory=sandbox;
+  File.Copy(Path.Combine(source,name),Path.Combine(sandbox,name));
+  AppDomain.CurrentDomain.AssemblyResolve+=delegate(object s,ResolveEventArgs e){string p=Path.Combine(source,new AssemblyName(e.Name).Name+".dll");return File.Exists(p)?Assembly.LoadFrom(p):null;};
+  var r=new Dictionary<string,object>{{"target",name},{"sandbox",sandbox},{"scope","Original path/init/schema/import methods only. No Main, UI, database, or network methods invoked."}};
+  try{
+   m=Assembly.LoadFile(Path.Combine(sandbox,name)).ManifestModule;r["mvid"]=m.ModuleVersionId.ToString();
+   int path=manager?0x06000B59:0x060008B9, init=manager?0x06000B5B:0x060008BC, schema=manager?0x06000B5A:0x060008BB;
+   Set(manager?0x04000505:0x04000369,sandbox);r["warm_path"]=Call(path);
+   Set(manager?0x04000505:0x04000369,sandbox);Call(init);Call(schema);
+   r["password"]=Get(manager?0x040004DE:0x04000366);r["iv"]=Get(manager?0x040004DF:0x04000367);
+   DataTable table=(DataTable)Get(manager?0x04000A56:0x0400054E);
+   using(var w=new StringWriter()){table.WriteXml(w,XmlWriteMode.WriteSchema);r["schema_xml"]=w.ToString();}
+   if(args[1]=="strings"){
+    int decoder=manager?0x06000033:0x06000348;
+    var vals=new Dictionary<int,string>();
+    var ops=new Dictionary<ushort,OpCode>();foreach(var f in typeof(OpCodes).GetFields(BindingFlags.Public|BindingFlags.Static)){OpCode o=(OpCode)f.GetValue(null);ops[unchecked((ushort)o.Value)]=o;}
+    foreach(var type in m.Assembly.GetTypes())foreach(var method in type.GetMethods(BindingFlags.Public|BindingFlags.NonPublic|BindingFlags.Static|BindingFlags.Instance|BindingFlags.DeclaredOnly)){
+     MethodBody body;try{body=method.GetMethodBody();}catch{continue;}if(body==null)continue;
+     byte[] il=body.GetILAsByteArray();int p=0,last=0;bool prev=false;
+     while(p<il.Length){ushort v=il[p++];if(v==254)v=(ushort)(65024+il[p++]);OpCode op=ops[v];int skip=0,value=0;
+      switch(op.OperandType){case OperandType.InlineNone:break;case OperandType.ShortInlineI:case OperandType.ShortInlineVar:case OperandType.ShortInlineBrTarget:skip=1;value=(sbyte)il[p];break;case OperandType.InlineVar:skip=2;break;case OperandType.InlineI8:case OperandType.InlineR:skip=8;break;case OperandType.InlineSwitch:skip=4+4*BitConverter.ToInt32(il,p);break;default:skip=4;value=BitConverter.ToInt32(il,p);break;}
+      if((op==OpCodes.Call||op==OpCodes.Callvirt)&&value==decoder&&prev&&!vals.ContainsKey(last))try{vals[last]=(string)Call(decoder,last);}catch(Exception ex){vals[last]="ERROR "+Err(ex);}
+      prev=op==OpCodes.Ldc_I4||op==OpCodes.Ldc_I4_S;last=value;p+=skip;
+     }
+    }
+    using(var w=new StreamWriter(args[2]))foreach(var kv in vals)w.WriteLine(kv.Key+"\t"+kv.Value.Replace("\r","\\r").Replace("\n","\\n"));r["decoded_strings"]=vals.Count;
+   } else if(args[1]=="import"){
+    int importer=manager?0x06000B60:0x060008C1;
+    var attempts=new List<Dictionary<string,object>>();
+    for(int i=2;i<args.Length;i++){
+     var q=new Dictionary<string,object>{{"input",Path.GetFullPath(args[i])}};
+     try{q["result"]=Call(importer,Path.GetFullPath(args[i]));}catch(Exception e){q["exception"]=Err(e);}
+     q["rows"]=table.Rows.Count;using(var w=new StringWriter()){table.WriteXml(w,XmlWriteMode.WriteSchema);q["xml"]=w.ToString();}
+     q["cache_exists"]=File.Exists(Path.Combine(sandbox,"licensefgr.enc")); if(q.ContainsKey("result") && (bool)q["result"]){string checkSerial=Convert.ToString(table.Rows[0]["Seri"]);table.Clear();q["cache_reloaded"]=Call(manager?0x06000B5F:0x060008C0);q["same_serial"]=Call(manager?0x06000B61:0x060008C2,checkSerial);q["wrong_serial"]=Call(manager?0x06000B61:0x060008C2,checkSerial+"-WRONG");} attempts.Add(q);
+    }r["attempts"]=attempts;
+   } else if(args[1]=="validate"){
+    if(args.Length>2){File.Copy(args[2],Path.Combine(sandbox,"licensefgr.enc"));r["loaded"]=Call(manager?0x06000B5F:0x060008C0);}
+    var checks=new List<Dictionary<string,object>>();for(int i=3;i<args.Length;i++){
+     var q=new Dictionary<string,object>{{"serial",args[i]}};try{q["result"]=Call(manager?0x06000B61:0x060008C2,args[i]);}catch(Exception e){q["exception"]=Err(e);}checks.Add(q);
+    }r["checks"]=checks;
+   }
+  }catch(Exception e){r["error"]=Err(e);}Console.WriteLine(new JavaScriptSerializer{MaxJsonLength=16777216}.Serialize(r));return r.ContainsKey("error")?1:0;
+ }
+}
+
+
+

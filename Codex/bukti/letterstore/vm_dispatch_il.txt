@@ -1,0 +1,15 @@
+﻿METHOD 0x0x0600027D #=qN$AdBotFUmPTj33H1zCZ9NhgBD76DCfRFaG8EyRnFcg=::System.Object #=zW3IGcu2tNpsR8PGFH1uxiIYbUrZG(System.IO.Stream, System.String, System.Object[], System.Type[], System.Type[], System.Object[])
+0000: ldarg.0       
+0001: ldarg.1       
+0002: stfld        #=qN$AdBotFUmPTj33H1zCZ9NhgBD76DCfRFaG8EyRnFcg=::System.IO.Stream #=zAiIsXEM= 0x040000A9
+0007: ldarg.0       
+0008: ldarg.1       
+0009: ldarg.2       
+000A: call         #=qN$AdBotFUmPTj33H1zCZ9NhgBD76DCfRFaG8EyRnFcg=::Void #=zUudybxDROfHMhIb0868IYYI=(System.IO.Stream, System.String) 0x06000260
+000F: ldarg.0       
+0010: ldarg.3       
+0011: ldarg.s      4 
+0013: ldarg.s      5 
+0015: ldarg.s      6 
+0017: call         #=qN$AdBotFUmPTj33H1zCZ9NhgBD76DCfRFaG8EyRnFcg=::System.Object #=z2V9YJwWT4Ednk4M_uub69mY=(System.Object[], System.Type[], System.Type[], System.Object[]) 0x06000224
+001C: ret           

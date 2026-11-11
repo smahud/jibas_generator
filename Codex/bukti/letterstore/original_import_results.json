@@ -1,0 +1,97 @@
+{
+  "artifact_sha256": "1bdf678980b4ad985838a1b9ce2233550b3e00f49cd578b481dd01c5e5690915",
+  "mvid": "9ee8d800-ba0c-4c48-1d5b-281c730e6bc2",
+  "importer_token": "0x06000916",
+  "cache_loader_token": "0x06000915",
+  "registration_flag_updater_token": "0x06000989",
+  "authority": "controlled replay: unmodified original methods; supplied current Database ID holder",
+  "scope": "Target Main/UI/DB getters/network not executed; all cache writes inside temporary sandbox",
+  "sandbox": "C:\\Users\\Laptop Kantor - ASUS\\AppData\\Local\\Temp\\codex-letterstore-import\\7af8c533922e46669bdbfc9ed36a6bf9",
+  "attempts": [
+    {
+      "database_id": "ABCDE",
+      "input_name": "ABCDE.lic",
+      "input_sha256": "c22f7fe3b5ea010c39f360e04c7e6906520eda5f973e2e35349f2d131915dcd8",
+      "accepted": true,
+      "registered_flag": true,
+      "loaded_database_id": "ABCDE",
+      "loaded_client_name": "Sekolah Uji",
+      "row_count": 1,
+      "cache_sha256": "f7803113c825fb629024e3e554eaf641635fe1e036c1ee15bed1dbed0596ffc6",
+      "duplicate_accepted": false,
+      "duplicate_exception": "Exception: Kode lisensi sudah dimasukkan!",
+      "cache_loader_returned": true,
+      "reloaded_registered_flag": true,
+      "wrong_runtime_id_registered_flag": false
+    },
+    {
+      "database_id": "12XYZ",
+      "input_name": "12XYZ.lic",
+      "input_sha256": "e833fb96354bf3ef03ab05a1f3ff9b7c6343603287626d62bd5b162a8e04be28",
+      "accepted": true,
+      "registered_flag": true,
+      "loaded_database_id": "12XYZ",
+      "loaded_client_name": "Sekolah Uji",
+      "row_count": 1,
+      "cache_sha256": "2a41e15b739298f08a13a87975c569160a3896135688a97234ae92e2cab72a38",
+      "duplicate_accepted": false,
+      "duplicate_exception": "Exception: Kode lisensi sudah dimasukkan!",
+      "cache_loader_returned": true,
+      "reloaded_registered_flag": true,
+      "wrong_runtime_id_registered_flag": false
+    },
+    {
+      "database_id": "9Z8Y7",
+      "input_name": "9Z8Y7.lic",
+      "input_sha256": "7aef17fbbfd93f520d90d5b861c67fca41cd219c648460bc1cda7f3c8a841912",
+      "accepted": true,
+      "registered_flag": true,
+      "loaded_database_id": "9Z8Y7",
+      "loaded_client_name": "Sekolah Uji",
+      "row_count": 1,
+      "cache_sha256": "5936fe22fb909c808a692ac8f53e455ab5a320f986d33c5648e548b6c2f93e42",
+      "duplicate_accepted": false,
+      "duplicate_exception": "Exception: Kode lisensi sudah dimasukkan!",
+      "cache_loader_returned": true,
+      "reloaded_registered_flag": true,
+      "wrong_runtime_id_registered_flag": false
+    },
+    {
+      "database_id": "ABCDE",
+      "input_name": "headerless.lic",
+      "input_sha256": "47c4d680cd667cf989030b9195024806e9807d74c3320e2b01f575193f1cdac5",
+      "accepted": true,
+      "registered_flag": true,
+      "loaded_database_id": "ABCDE",
+      "loaded_client_name": "Sekolah Uji",
+      "row_count": 1,
+      "cache_sha256": "f7803113c825fb629024e3e554eaf641635fe1e036c1ee15bed1dbed0596ffc6",
+      "duplicate_accepted": false,
+      "duplicate_exception": "Exception: Kode lisensi sudah dimasukkan!",
+      "cache_loader_returned": true,
+      "reloaded_registered_flag": true,
+      "wrong_runtime_id_registered_flag": false
+    },
+    {
+      "database_id": "QWERT",
+      "input_name": "ABCDE.lic",
+      "input_sha256": "c22f7fe3b5ea010c39f360e04c7e6906520eda5f973e2e35349f2d131915dcd8",
+      "accepted": false,
+      "exception": "Exception: Database Id tidak sama dengan lisensi"
+    },
+    {
+      "database_id": "ABCDE",
+      "input_name": "wrong_version.lic",
+      "input_sha256": "f44cac033899e5e479ef937b1c9bd261db7fa6f0a56c5c2b3629c839446109b2",
+      "accepted": false,
+      "exception": "Exception: Kode lisensi lama perlu diperbarui lagi. Kunjungi http://www.jibas.net untuk informasi lebih lanjut!"
+    },
+    {
+      "database_id": "ABCDE",
+      "input_name": "empty.lic",
+      "input_sha256": "1b6308680b7817e1257d178188250ae7a4d3aeb03b0e380e6968d66d4461f8a2",
+      "accepted": false,
+      "exception": "Exception: Empty Registration File?"
+    }
+  ]
+}

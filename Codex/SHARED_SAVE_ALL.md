@@ -1,3 +1,11 @@
+# Status terbaru: enam produk
+
+Dokumen ini menyimpan implementasi awal field bersama dan Save All tiga produk.
+Versi terkini menambah Finger, SJS dan LetterStore dengan capability per produk;
+Save All menghasilkan enam file. Hanya field yang relevan dibagi antar-tab.
+Lihat [README](README.md), [SharedDocs](../SharedDocs/APPLICATION.md), serta
+`bukti/shared_save_all/VISUAL_QA.md` untuk hasil12scene terkini.
+
 # Field bersama dan Save All — 11 November 2026
 
 System ID, Client ID, Nama klien, Berlaku sampai, dan Kapasitas memakai nilai

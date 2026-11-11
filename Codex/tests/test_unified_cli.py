@@ -53,3 +53,35 @@ def test_public_cli_is_manual_and_sequence_is_automatic():
         parser.parse_args(['generate', '--product', 'face', '--database-id', 'ABCDE',
                            '--system-id', '123AB', '--expires', '2030-12-31',
                            '--capacity', '10', '--out', 'file.lic', '--sequence', '10'])
+
+
+@pytest.mark.parametrize('product,identity,extra,wrong', [
+    ('fingerprint', ['--serial', 'SERIAL-TEST'], [], ['--serial', 'OTHER']),
+    ('letterstore', ['--database-id', 'ABCDE'], [], ['--database-id', 'ZZZZZ']),
+    ('sjs', ['--database-id', 'AB123'],
+     ['--registration-token', '97875YgYKBhQIBwgZCQsbCxkPFQ4UAAgJGw4FCBUFCBkLCRsVBBQJGwoZDBUDDQNl',
+      '--school-id', 'SCHOOL-EXISTING-001', '--expires', '2030-12-31', '--capacity', '2'],
+     ['--database-id', 'ZZZZZ']),
+])
+def test_extended_products_do_not_require_unrelated_system_id(tmp_path, product, identity, extra, wrong):
+    out = tmp_path / (product + '.lic')
+    code, result = call('generate', '--product', product, *identity, *extra, '--out', out)
+    assert code == 0 and result['ok']
+    assert call('inspect', '--product', product, out)[0] == 0
+    assert call('verify', '--product', product, out, *identity, '--for-import')[0] == 0
+    assert call('verify', '--product', product, out, *wrong)[0] == 1
+
+
+@pytest.mark.parametrize('product,extra', [
+    ('fingerprint', ['--expires', '2030-12-31']),
+    ('fingerprint', ['--capacity', '10']),
+    ('letterstore', ['--previous-license', 'old.lic']),
+    ('letterstore', ['--system-id', 'DDCB4']),
+    ('sjs', ['--client-id', 'SHARED-CLIENT']),
+])
+def test_cli_rejects_flags_that_product_cannot_encode(tmp_path, product, extra):
+    out = tmp_path / 'must-not-exist.lic'
+    code, result = call('generate', '--product', product, *extra, '--out', out)
+    assert code == 2 and result['ok'] is False
+    assert 'tidak menggunakan' in result['error']
+    assert not out.exists()

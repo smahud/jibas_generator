@@ -11,6 +11,7 @@ Urutan baca yang disarankan:
 3. [Bukti, reproduksi, dan batas kesimpulan](EVIDENCE_AND_REPRO.md).
 4. [Arsitektur GUI/batch/standalone](APPLICATION.md).
 5. Dokumen produk pada [products/](products/).
+6. [Status validasi terkini](VALIDATION.md).
 
 | Produk | Dokumen |
 |---|---|

@@ -1,10 +1,10 @@
-115 DEPRECATION: Running PyInstaller as admin is not necessary nor sensible. Run PyInstaller from a non-administrator terminal. PyInstaller 7.0 will block this.
-454 INFO: PyInstaller: 6.22.3, contrib hooks: 2026.10
-455 INFO: Python: 3.12.14
-504 INFO: Platform: Windows-10-10.0.19044-SP0
-504 INFO: Python environment: C:\Users\Laptop Kantor - ASUS\.cache\codex-runtimes\codex-primary-runtime\dependencies\python
-509 INFO: Removing temporary files and cleaning cache in C:\Users\Laptop Kantor - ASUS\AppData\Local\pyinstaller
-830 INFO: Module search paths (PYTHONPATH):
+93 DEPRECATION: Running PyInstaller as admin is not necessary nor sensible. Run PyInstaller from a non-administrator terminal. PyInstaller 7.0 will block this.
+278 INFO: PyInstaller: 6.22.3, contrib hooks: 2026.10
+279 INFO: Python: 3.12.14
+322 INFO: Platform: Windows-10-10.0.19044-SP0
+322 INFO: Python environment: C:\Users\Laptop Kantor - ASUS\.cache\codex-runtimes\codex-primary-runtime\dependencies\python
+326 INFO: Removing temporary files and cleaning cache in C:\Users\Laptop Kantor - ASUS\AppData\Local\pyinstaller
+329 INFO: Module search paths (PYTHONPATH):
 ['C:\\YIM\\JIBAS Generator\\Codex',
  'C:\\Users\\Laptop Kantor - '
  'ASUS\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python312.zip',
@@ -18,64 +18,67 @@
  'ASUS\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\Lib\\site-packages',
  'C:\\YIM\\JIBAS Generator\\Codex\\build_tools',
  'C:\\YIM\\JIBAS Generator\\Codex']
-4918 INFO: Appending 'datas' from .spec
-4920 INFO: checking Analysis
-4920 INFO: Building Analysis because Analysis-00.toc is non existent
-4920 INFO: Looking for Python shared library...
-4921 INFO: Using Python shared library: C:\Users\Laptop Kantor - ASUS\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\python312.dll
-4921 INFO: Running Analysis Analysis-00.toc
-4921 INFO: Target bytecode optimization level: 0
-4922 INFO: Initializing module dependency graph...
-4924 INFO: Initializing module graph hook caches...
-5102 INFO: Analyzing modules for base_library.zip ...
-8171 INFO: Processing standard module hook 'hook-encodings.py' from 'C:\\Users\\Laptop Kantor - ASUS\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\Lib\\site-packages\\PyInstaller\\hooks'
-9092 INFO: Processing standard module hook 'hook-math.py' from 'C:\\Users\\Laptop Kantor - ASUS\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\Lib\\site-packages\\PyInstaller\\hooks'
-9655 INFO: Processing standard module hook 'hook-heapq.py' from 'C:\\Users\\Laptop Kantor - ASUS\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\Lib\\site-packages\\PyInstaller\\hooks'
-12163 INFO: Processing standard module hook 'hook-pickle.py' from 'C:\\Users\\Laptop Kantor - ASUS\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\Lib\\site-packages\\PyInstaller\\hooks'
-15833 INFO: Caching module dependency graph...
-15987 INFO: Analyzing C:\YIM\JIBAS Generator\Codex\build_tools\standalone_entry.py
-16100 INFO: Processing pre-find-module-path hook 'hook-tkinter.py' from 'C:\\Users\\Laptop Kantor - ASUS\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\Lib\\site-packages\\PyInstaller\\hooks\\pre_find_module_path'
-16104 INFO: TclTkInfo: initializing cached Tcl/Tk info...
-17060 INFO: Processing standard module hook 'hook-_tkinter.py' from 'C:\\Users\\Laptop Kantor - ASUS\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\Lib\\site-packages\\PyInstaller\\hooks'
-17533 INFO: Analyzing hidden import 'license_codec'
-17731 INFO: Processing standard module hook 'hook-platform.py' from 'C:\\Users\\Laptop Kantor - ASUS\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\Lib\\site-packages\\PyInstaller\\hooks'
-17896 INFO: Processing standard module hook 'hook-xml.py' from 'C:\\Users\\Laptop Kantor - ASUS\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\Lib\\site-packages\\PyInstaller\\hooks'
-17950 INFO: Processing standard module hook 'hook-xml.etree.cElementTree.py' from 'C:\\Users\\Laptop Kantor - ASUS\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\Lib\\site-packages\\PyInstaller\\hooks'
-17957 INFO: Processing standard module hook 'hook-cryptography.py' from 'C:\\Users\\Laptop Kantor - ASUS\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\Lib\\site-packages\\_pyinstaller_hooks_contrib\\stdhooks'
-20931 INFO: hook-cryptography: cryptography does not seem to be using dynamically linked OpenSSL.
-21074 INFO: Analyzing hidden import 'schoolpay_codec'
-21115 INFO: Analyzing hidden import 'cbe_codec'
-21153 INFO: Processing module hooks (post-graph stage)...
-22789 INFO: Processing standard module hook 'hook-_tkinter.py' from 'C:\\Users\\Laptop Kantor - ASUS\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\Lib\\site-packages\\PyInstaller\\hooks'
-22842 INFO: Performing binary vs. data reclassification (936 entries)
-23338 INFO: Looking for ctypes DLLs
-23394 INFO: Analyzing run-time hooks ...
-23399 INFO: Including run-time hook 'pyi_rth_inspect.py' from 'C:\\Users\\Laptop Kantor - ASUS\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\Lib\\site-packages\\PyInstaller\\hooks\\rthooks'
-23413 INFO: Including run-time hook 'pyi_rth_cryptography_openssl.py' from 'C:\\Users\\Laptop Kantor - ASUS\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\Lib\\site-packages\\_pyinstaller_hooks_contrib\\rthooks'
-23417 INFO: Including run-time hook 'pyi_rth__tkinter.py' from 'C:\\Users\\Laptop Kantor - ASUS\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\Lib\\site-packages\\PyInstaller\\hooks\\rthooks'
-23564 INFO: Creating base_library.zip...
-23649 INFO: Looking for dynamic libraries
-24177 INFO: Extra DLL search directories (AddDllDirectory): []
-24178 INFO: Extra DLL search directories (PATH): []
-25279 INFO: Warnings written to C:\Users\LAPTOP~1\AppData\Local\Temp\jibas-standalone-build-78720hr7\JIBAS-Generator-Codex\warn-JIBAS-Generator-Codex.txt
-25367 INFO: Graph cross-reference written to C:\Users\LAPTOP~1\AppData\Local\Temp\jibas-standalone-build-78720hr7\JIBAS-Generator-Codex\xref-JIBAS-Generator-Codex.html
-25520 INFO: checking PYZ
-25521 INFO: Building PYZ because PYZ-00.toc is non existent
-25521 INFO: Building PYZ (ZlibArchive) C:\Users\LAPTOP~1\AppData\Local\Temp\jibas-standalone-build-78720hr7\JIBAS-Generator-Codex\PYZ-00.pyz
-26070 INFO: Building PYZ (ZlibArchive) C:\Users\LAPTOP~1\AppData\Local\Temp\jibas-standalone-build-78720hr7\JIBAS-Generator-Codex\PYZ-00.pyz completed successfully.
-26193 INFO: checking PKG
-26195 INFO: Building PKG because PKG-00.toc is non existent
-26195 INFO: Building PKG (CArchive) JIBAS-Generator-Codex.pkg
-36434 INFO: Building PKG (CArchive) JIBAS-Generator-Codex.pkg completed successfully.
-36526 INFO: Bootloader C:\Users\Laptop Kantor - ASUS\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\site-packages\PyInstaller\bootloader\Windows-64bit-intel\runw.exe
-36527 INFO: checking EXE
-36527 INFO: Building EXE because EXE-00.toc is non existent
-36527 INFO: Building EXE from EXE-00.toc
-36532 INFO: Copying bootloader EXE to C:\YIM\JIBAS Generator\Codex\JIBAS-Generator-Codex.exe
-36542 INFO: Copying icon to EXE
-36548 INFO: Copying 0 resources to EXE
-36548 INFO: Embedding manifest in EXE
-36553 INFO: Appending PKG archive to EXE
-36580 INFO: Fixing EXE headers
-36896 INFO: Building EXE from EXE-00.toc completed successfully.
-36978 INFO: Build complete! The results are available in: C:\YIM\JIBAS Generator\Codex
+1047 INFO: Appending 'datas' from .spec
+1048 INFO: checking Analysis
+1048 INFO: Building Analysis because Analysis-00.toc is non existent
+1048 INFO: Looking for Python shared library...
+1048 INFO: Using Python shared library: C:\Users\Laptop Kantor - ASUS\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\python312.dll
+1049 INFO: Running Analysis Analysis-00.toc
+1049 INFO: Target bytecode optimization level: 0
+1049 INFO: Initializing module dependency graph...
+1051 INFO: Initializing module graph hook caches...
+1093 INFO: Analyzing modules for base_library.zip ...
+2731 INFO: Processing standard module hook 'hook-heapq.py' from 'C:\\Users\\Laptop Kantor - ASUS\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\Lib\\site-packages\\PyInstaller\\hooks'
+2787 INFO: Processing standard module hook 'hook-encodings.py' from 'C:\\Users\\Laptop Kantor - ASUS\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\Lib\\site-packages\\PyInstaller\\hooks'
+4547 INFO: Processing standard module hook 'hook-math.py' from 'C:\\Users\\Laptop Kantor - ASUS\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\Lib\\site-packages\\PyInstaller\\hooks'
+7199 INFO: Processing standard module hook 'hook-pickle.py' from 'C:\\Users\\Laptop Kantor - ASUS\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\Lib\\site-packages\\PyInstaller\\hooks'
+10487 INFO: Caching module dependency graph...
+10601 INFO: Analyzing C:\YIM\JIBAS Generator\Codex\build_tools\standalone_entry.py
+10711 INFO: Processing pre-find-module-path hook 'hook-tkinter.py' from 'C:\\Users\\Laptop Kantor - ASUS\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\Lib\\site-packages\\PyInstaller\\hooks\\pre_find_module_path'
+10712 INFO: TclTkInfo: initializing cached Tcl/Tk info...
+11409 INFO: Processing standard module hook 'hook-_tkinter.py' from 'C:\\Users\\Laptop Kantor - ASUS\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\Lib\\site-packages\\PyInstaller\\hooks'
+11713 INFO: Analyzing hidden import 'license_codec'
+11878 INFO: Processing standard module hook 'hook-platform.py' from 'C:\\Users\\Laptop Kantor - ASUS\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\Lib\\site-packages\\PyInstaller\\hooks'
+12016 INFO: Processing standard module hook 'hook-xml.py' from 'C:\\Users\\Laptop Kantor - ASUS\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\Lib\\site-packages\\PyInstaller\\hooks'
+12063 INFO: Processing standard module hook 'hook-xml.etree.cElementTree.py' from 'C:\\Users\\Laptop Kantor - ASUS\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\Lib\\site-packages\\PyInstaller\\hooks'
+12069 INFO: Processing standard module hook 'hook-cryptography.py' from 'C:\\Users\\Laptop Kantor - ASUS\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\Lib\\site-packages\\_pyinstaller_hooks_contrib\\stdhooks'
+13888 INFO: hook-cryptography: cryptography does not seem to be using dynamically linked OpenSSL.
+13981 INFO: Analyzing hidden import 'schoolpay_codec'
+14011 INFO: Analyzing hidden import 'cbe_codec'
+14040 INFO: Analyzing hidden import 'fingerprint_codec'
+14060 INFO: Analyzing hidden import 'letterstore_codec'
+14083 INFO: Analyzing hidden import 'sjs_codec'
+14124 INFO: Processing module hooks (post-graph stage)...
+15043 INFO: Processing standard module hook 'hook-_tkinter.py' from 'C:\\Users\\Laptop Kantor - ASUS\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\Lib\\site-packages\\PyInstaller\\hooks'
+15075 INFO: Performing binary vs. data reclassification (939 entries)
+15250 INFO: Looking for ctypes DLLs
+15262 INFO: Analyzing run-time hooks ...
+15265 INFO: Including run-time hook 'pyi_rth_inspect.py' from 'C:\\Users\\Laptop Kantor - ASUS\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\Lib\\site-packages\\PyInstaller\\hooks\\rthooks'
+15271 INFO: Including run-time hook 'pyi_rth_cryptography_openssl.py' from 'C:\\Users\\Laptop Kantor - ASUS\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\Lib\\site-packages\\_pyinstaller_hooks_contrib\\rthooks'
+15273 INFO: Including run-time hook 'pyi_rth__tkinter.py' from 'C:\\Users\\Laptop Kantor - ASUS\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\Lib\\site-packages\\PyInstaller\\hooks\\rthooks'
+15353 INFO: Creating base_library.zip...
+15405 INFO: Looking for dynamic libraries
+15758 INFO: Extra DLL search directories (AddDllDirectory): []
+15759 INFO: Extra DLL search directories (PATH): []
+16464 INFO: Warnings written to C:\Users\LAPTOP~1\AppData\Local\Temp\jibas-standalone-build-gi6r33pq\JIBAS-Generator-Codex\warn-JIBAS-Generator-Codex.txt
+16528 INFO: Graph cross-reference written to C:\Users\LAPTOP~1\AppData\Local\Temp\jibas-standalone-build-gi6r33pq\JIBAS-Generator-Codex\xref-JIBAS-Generator-Codex.html
+16646 INFO: checking PYZ
+16646 INFO: Building PYZ because PYZ-00.toc is non existent
+16646 INFO: Building PYZ (ZlibArchive) C:\Users\LAPTOP~1\AppData\Local\Temp\jibas-standalone-build-gi6r33pq\JIBAS-Generator-Codex\PYZ-00.pyz
+17038 INFO: Building PYZ (ZlibArchive) C:\Users\LAPTOP~1\AppData\Local\Temp\jibas-standalone-build-gi6r33pq\JIBAS-Generator-Codex\PYZ-00.pyz completed successfully.
+17104 INFO: checking PKG
+17104 INFO: Building PKG because PKG-00.toc is non existent
+17104 INFO: Building PKG (CArchive) JIBAS-Generator-Codex.pkg
+26055 INFO: Building PKG (CArchive) JIBAS-Generator-Codex.pkg completed successfully.
+26127 INFO: Bootloader C:\Users\Laptop Kantor - ASUS\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\Lib\site-packages\PyInstaller\bootloader\Windows-64bit-intel\runw.exe
+26128 INFO: checking EXE
+26128 INFO: Building EXE because EXE-00.toc is non existent
+26128 INFO: Building EXE from EXE-00.toc
+26131 INFO: Copying bootloader EXE to C:\YIM\JIBAS Generator\Codex\JIBAS-Generator-Codex.exe
+26138 INFO: Copying icon to EXE
+26144 INFO: Copying 0 resources to EXE
+26145 INFO: Embedding manifest in EXE
+26151 INFO: Appending PKG archive to EXE
+26175 INFO: Fixing EXE headers
+26431 INFO: Building EXE from EXE-00.toc completed successfully.
+26502 INFO: Build complete! The results are available in: C:\YIM\JIBAS Generator\Codex

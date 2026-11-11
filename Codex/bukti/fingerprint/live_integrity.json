@@ -1,0 +1,9 @@
+{
+  "unchanged": true,
+  "scope": "Target EXE, existing config, and fingerprint cache bytes/size/mtime_ns",
+  "products": [
+    "manager",
+    "client14",
+    "client16"
+  ]
+}
